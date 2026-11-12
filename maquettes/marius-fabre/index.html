@@ -7,7 +7,7 @@
 <title>Marius Fabre — Proposition Neovera Studio</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Display&family=Archivo:ital,wdth,wght@0,62..125,300..800;1,62..125,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Display&family=Libre+Caslon+Text:ital@1&family=Archivo:ital,wdth,wght@0,62..125,300..800;1,62..125,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
 /* Architectural broadsheet on bone paper. The Marius Fabre navy (the colour of the boutiques) strikes across full-bleed sections; the olive green lives only in the soap itself. */
 :root{
@@ -35,7 +35,7 @@ button{font:inherit;color:inherit}
 :focus-visible{outline:2px solid var(--navy);outline-offset:3px}
 h1,h2,h3{margin:0;font-weight:500;letter-spacing:-.025em;line-height:.95;text-wrap:balance}
 h1,h2,.big,.tl .y,.step .n,.commit .k,.facts strong,.seal{font-family:var(--serif);font-weight:400!important;letter-spacing:-.01em!important;font-stretch:100%!important}
-.hero h1 em{font-style:italic}
+.hero h1 em{font-family:'Libre Caslon Text',Georgia,serif;font-style:italic;font-weight:400}
 p{margin:0}
 .mono{font-family:var(--mono);font-size:11px;letter-spacing:.08em;text-transform:uppercase}
 .wrap{padding:0 var(--gut)}
@@ -82,7 +82,8 @@ header.site{position:sticky;top:0;z-index:50;background:color-mix(in srgb,var(--
 .hlink{color:#fff;font-size:15px;text-decoration:underline;text-underline-offset:4px;cursor:pointer;align-self:center}
 .hero .meta .btn.solid{background:#fff;color:var(--ink);border-color:#fff}
 .hero .meta .btn.solid:hover{background:var(--navy);color:#fff;border-color:var(--navy)}
-html[lang=ja] .hero h1{font-size:clamp(40px,6.4vw,104px);line-height:1.08;letter-spacing:0}
+html[lang=ja] .hero h1{font-size:clamp(40px,6.4vw,104px);line-height:1.08;letter-spacing:0;word-break:keep-all;max-width:12em}
+html[lang=ja] .hero-in{grid-template-columns:1fr}
 @media (max-width:760px){.hero-in{grid-template-columns:1fr}.hero .meta{justify-items:start;text-align:left}}
 
 /* broadsheet facts row */
@@ -291,6 +292,25 @@ footer{background:var(--ink);color:#d9d6ce;padding:56px var(--gut) 40px}
 .toast{position:fixed;left:50%;bottom:24px;transform:translateX(-50%) translateY(120px);visibility:hidden;background:var(--ink);color:#fff;padding:12px 18px;z-index:90;transition:transform .3s;font-size:14px}
 .toast.on{transform:translateX(-50%);visibility:visible}
 @media (max-width:520px){.adv-b{bottom:20px;left:auto;right:16px}.adv{left:16px}}
+
+/* round 2 */
+.card .ph img.amb{object-fit:cover;padding:0;mix-blend-mode:normal}
+.card .ph img{padding:12%}
+.card .ph img.sc{transform:scale(1.35)}
+.card .add{background:none;color:var(--ink);border:0;border-bottom:1px solid var(--ink);padding:4px 0;font:500 14px var(--display)}
+@media (hover:hover){.card .add{opacity:.0;transition:opacity .25s}.card:hover .add,.card .add:focus{opacity:1}}
+@media(max-width:760px){.logo b{font-size:17px;white-space:nowrap;letter-spacing:.12em}.logo span{display:none}.topbar>*:nth-child(2){display:none}}
+.gifts .it{grid-template-columns:140px 1fr auto}
+.gifts .it img{width:140px;height:140px;background:none;padding:0}
+.gifts .it .mono,.card .pr,.pdp .price{font:500 16px var(--display)!important}
+.pdp .g{align-items:start;padding-top:48px}
+.pdp .g img{max-height:72vh}
+.pagehead h1{font-size:clamp(48px,6vw,96px)}
+.sh h2{font-size:clamp(36px,4.8vw,72px)}
+.tlw .sh{text-align:center}
+.strike{padding-bottom:clamp(40px,5vw,72px)}
+select{appearance:none;-webkit-appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6'%3E%3Cpath d='M1 1l4 4 4-4' fill='none' stroke='%23111' stroke-width='1.4'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 12px center;padding-right:30px}
+.on-navy select{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6'%3E%3Cpath d='M1 1l4 4 4-4' fill='none' stroke='%23fff' stroke-width='1.4'/%3E%3C/svg%3E")}
 </style>
 </head>
 <body>
@@ -329,7 +349,7 @@ footer{background:var(--ink);color:#d9d6ce;padding:56px var(--gut) 40px}
         <p class="mono" style="color:#e8e6df" data-i="h_sign">Marie et Julie Bousquet-Fabre · 4ᵉ génération</p>
         <p style="max-width:24em;color:#efede6" data-i="h_sub">Cuit au chaudron, coulé dans les mises, estampillé à la main. Le vrai savon de Marseille, sans colorant ni parfum ajouté.</p>
         <div style="display:flex;gap:18px;flex-wrap:wrap;align-items:center">
-          <button class="btn solid" data-add="p00" data-i="h_cta1">Le cube 72 % · 4,60 € — Ajouter</button>
+          <button class="btn solid" data-add="p00" data-i="h_cta1">Le cube 72 % — 4,60 €</button>
           <a class="hlink" data-go="home" data-anchor="visiter" data-i="h_cta2">Visiter la savonnerie →</a>
         </div>
       </div>
@@ -338,8 +358,8 @@ footer{background:var(--ink);color:#d9d6ce;padding:56px var(--gut) 40px}
 
   <div class="facts">
     <div><span class="mono">Fondée en</span><strong>1900</strong></div>
-    <div><span class="mono" data-i="f2">Générations</span><strong>4</strong></div>
-    <div><span class="mono" data-i="f3">Label d’État</span><strong>EPV · 2009</strong></div>
+    <div><span class="mono" data-i="f2">Huile de palme</span><strong>0 %</strong></div>
+    <div><span class="mono" data-i="f3">Savonniers</span><strong>45</strong></div>
     <div><span class="mono" data-i="f4">Pays</span><strong>40+</strong></div>
   </div>
 
@@ -368,7 +388,7 @@ footer{background:var(--ink);color:#d9d6ce;padding:56px var(--gut) 40px}
   <section class="blk" id="coffrets" style="padding-top:0">
     <div class="sh">
       <p class="mono" data-i="c_k">Noël 2026</p>
-      <div><h2 data-i="c_t">Offrir la Provence.</h2><p data-i="c_p">Des coffrets illustrés par Anna, la plus jeune des sœurs Fabre, prêts à offrir.</p></div>
+      <div><h2 data-i="c_t">Offrir la Provence.</h2><p data-i="c_p">Des coffrets illustrés par Anna, la plus jeune des sœurs Fabre, prêts à offrir.<br><b>Commandez avant le 18 décembre, livré pour Noël. Emballage offert.</b></p></div>
     </div>
     <div class="gifts">
       <figure><img src="img/a13.jpg" alt="Coffrets de Noël Marius Fabre près d’une cheminée"></figure>
@@ -379,7 +399,7 @@ footer{background:var(--ink);color:#d9d6ce;padding:56px var(--gut) 40px}
   <section class="blk" style="padding-top:0">
     <div class="sh">
       <p class="mono" data-i="g_k">Le geste</p>
-      <div><h2 data-i="g_t">Quatre gestes, depuis 1900.</h2><p data-i="g_p">Rien n’a changé dans l’atelier de l’avenue Paul-Bourret : le savon y est encore cuit, coulé, découpé et frappé comme au temps de Marius.</p></div>
+      <div><h2 data-i="g_t">Quatre gestes, un seul chaudron.</h2><p data-i="g_p">Rien n’a changé dans l’atelier de l’avenue Paul-Bourret : le savon y est encore cuit, coulé, découpé et frappé comme au temps de Marius.</p></div>
     </div>
     <div class="steps">
       <div class="step"><figure><img src="img/a12.jpg" alt="Pâte de savon coulée dans les mises"></figure><span class="n">01</span><h3 data-i="st1">La cuisson</h3><p data-i="st1p">Les huiles végétales cuisent plusieurs jours dans les chaudrons, sous l’œil du maître savonnier.</p></div>
@@ -402,7 +422,7 @@ footer{background:var(--ink);color:#d9d6ce;padding:56px var(--gut) 40px}
 
   <section class="blk" style="padding-top:0">
     <div class="sh">
-      <p class="mono" data-i="tl_k">1900 — 2023</p>
+      <p class="mono" data-i="tl_k">1900 — 2025</p>
       <div><h2 data-i="tl_t">Une histoire de famille.</h2></div>
       <a class="btn" data-go="house" data-i="tl_more">La maison</a>
     </div>
@@ -429,7 +449,7 @@ footer{background:var(--ink);color:#d9d6ce;padding:56px var(--gut) 40px}
         <p data-i="v_p">Les ateliers et le musée du savon de Marseille sont ouverts gratuitement, au cœur de l’usine de 1927. Réservez votre créneau en quelques secondes.</p>
         <form class="vform" id="visitForm">
           <div class="r">
-            <label><span class="mono" data-i="v_date">Date</span><input type="date" id="vDate" required></label>
+            <label><span class="mono" data-i="v_date">Date</span><input type="date" id="vDate" lang="fr" required></label>
             <label><span class="mono" data-i="v_hour">Créneau</span><select id="vHour"><option>9 h 30</option><option>11 h</option><option>14 h 30</option><option>16 h</option></select></label>
           </div>
           <div class="r">
@@ -455,13 +475,7 @@ footer{background:var(--ink);color:#d9d6ce;padding:56px var(--gut) 40px}
     </div>
   </section>
 
-  <section class="blk" style="padding-top:0">
-    <div class="commit">
-      <article><span class="k">0 %</span><h3 data-i="e1">d’huile de palme</h3><p data-i="e1p">Retirée de tous les produits de la maison depuis 2020.</p></article>
-      <article><span class="k">EPV</span><h3 data-i="e2">Entreprise du Patrimoine Vivant</h3><p data-i="e2p">Le label de l’État qui distingue les savoir-faire d’excellence, obtenu en 2009.</p></article>
-      <article><span class="k">45</span><h3 data-i="e3">savonniers et artisans</h3><p data-i="e3p">Une équipe salonaise, aux côtés de Marie et Julie Bousquet-Fabre.</p></article>
-    </div>
-  </section>
+  
 </div>
 
 <!-- SHOP -->
@@ -553,7 +567,7 @@ const PRODUCTS=[
 {id:'p01',n:"Savon de Marseille pour le linge, 400 g",p:4.70,c:'marseille',t:['linge'],d:"Sans huile de palme. Détache cols et poignets, lave le linge délicat."},
 {id:'p02',n:"Savon noir liquide à l’huile d’olive, 500 ml",p:9.90,c:'noir',t:['maison'],d:"Le nettoyant naturel de toute la maison : sols, vitres, plans de travail."},
 {id:'p03',n:"Copeaux de savon de Marseille, 750 g",p:18.20,c:'marseille',t:['linge'],d:"Pour une lessive maison, douce pour les peaux sensibles et les bébés."},
-{id:'p04',n:"Savon de Marseille 100 % huile d’olive, 150 g",p:4.20,c:'marseille',t:['peau'],d:"Le plus doux de la gamme, pour le visage et les peaux réactives."},
+{id:'p04',n:"Savon de Marseille 100 % huile d’olive, 150 g",p:4.20,c:'marseille',t:['peau'],d:"Le plus doux de la gamme, pour le visage et les peaux réactives."},
 {id:'p05',n:"Crème réparatrice pour les mains, 200 ml",p:16.20,c:'soins',t:['peau'],d:"À l’huile d’olive, pour les mains abîmées par le froid et le travail."},
 {id:'p06',n:"Savon de Marseille « à couper », 1 kg",p:20.90,c:'marseille',t:['maison','cadeau'],d:"La demi-barre d’atelier, à trancher selon vos besoins."},
 {id:'p07',n:"Savon de Marseille en barre, 2,5 kg",p:38.00,c:'marseille',t:['maison'],d:"La barre telle qu’elle sort des mises, pour les vrais connaisseurs."},
@@ -591,16 +605,18 @@ document.getElementById('burger').onclick=function(){const n=document.getElement
 
 /* cards */
 const BADGE={p00:'Best-seller',p11:'Édition 125 ans',p12:'Édition 125 ans',p13:'× Élysée',p03:'Lessive maison',p16:'Noël 2026',p17:'Noël 2026',p18:'Noël 2026'};
-function card(p){return `<article class="card" data-go="product" data-pid="${p.id}"><div class="ph">${BADGE[p.id]?`<span class="badge mono">${BADGE[p.id]}</span>`:''}<img loading="lazy" src="${img(p.id)}" alt="${p.n}"></div><div class="info"><span class="nm">${p.n}</span><div class="row"><span class="pr">${eur(p.p)}</span><button class="add" data-add="${p.id}">${T('add')}</button></div></div></article>`}
-function renderGrids(){document.getElementById('bestGrid').innerHTML=['p00','p04','p03','p02','p05','p09','p11','p21'].map(id=>card(P(id))).join('');
+const GN={p16:'Les essentiels de Provence',p17:'Rituel lavande',p18:'Rituel fleur d’oranger',p15:'Soin des mains'};
+const AMB=['p00','p07','p10','p20','p21','p22'],SMALL=['p04','p19','p01'];
+function card(p){return `<article class="card" data-go="product" data-pid="${p.id}"><div class="ph">${BADGE[p.id]?`<span class="badge mono">${BADGE[p.id]}</span>`:''}<img loading="lazy" class="${AMB.includes(p.id)?'amb':SMALL.includes(p.id)?'sc':''}" src="${img(p.id)}" alt="${p.n}"></div><div class="info"><span class="nm">${p.n}</span><div class="row"><span class="pr">${eur(p.p)}</span><button class="add" data-add="${p.id}">${T('add')}</button></div></div></article>`}
+function renderGrids(){document.getElementById('bestGrid').innerHTML=['p00','p04','p03','p02','p05','p09','p11','p23'].map(id=>card(P(id))).join('');
   const f=document.querySelector('#filters .on').dataset.f;document.getElementById('shopGrid').innerHTML=PRODUCTS.filter(p=>f==='all'||p.c===f).map(card).join('');
-  document.getElementById('giftList').innerHTML=['p16','p17','p18','p15'].map(id=>{const p=P(id);return `<div class="it" data-go="product" data-pid="${id}"><img src="${img(id)}" alt=""><div><b>${p.n}</b><br><span class="mono">${eur(p.p)}</span></div><button class="add" data-add="${id}">${T('add')}</button></div>`}).join('')}
+  document.getElementById('giftList').innerHTML=['p16','p17','p18','p15'].map(id=>{const p=P(id);return `<div class="it" data-go="product" data-pid="${id}"><img src="${img(id)}" alt=""><div><b>${GN[id]||p.n}</b><br><span class="mono">${eur(p.p)}</span></div><button class="add" data-add="${id}">${T('add')}</button></div>`}).join('')}
 document.getElementById('filters').onclick=e=>{const b=e.target.closest('button');if(!b)return;document.querySelectorAll('#filters button').forEach(x=>x.classList.toggle('on',x===b));renderGrids()};
 
-function renderPdp(id){const p=P(id)||PRODUCTS[0];const cat={marseille:'Savon de Marseille',noir:'Savon noir & maison',soins:'Soins',liquide:'Savon liquide',coffrets:'Coffrets'}[p.c];
-  document.getElementById('pdp').innerHTML=`<div class="g"><img src="${img(p.id)}" alt="${p.n}"></div><div class="d"><span class="mono">${cat} · Fabriqué à Salon-de-Provence</span><h1>${p.n}</h1><span class="price">${eur(p.p)}</span><p style="color:var(--ink-2);font-size:17px">${p.d}</p><div class="qty"><input type="number" min="1" value="1" id="q" aria-label="Quantité"><button class="btn solid" data-add="${p.id}" data-qty="1">${T('add_cart')}</button></div><p class="mono" style="color:var(--navy)">Fabriqué à Salon-de-Provence · Entreprise du Patrimoine Vivant</p><div class="tip"><b>Marius Conseil</b><span>${tipFor(p)}</span></div><div class="acc"><details open><summary>Fabrication</summary><p>Cuit au chaudron selon le procédé marseillais, coulé dans les mises, découpé puis séché à l’air libre, dans l’usine de la famille Fabre depuis 1927.</p></details><details><summary>Usages</summary><p>${p.d} ${tipFor(p)}</p></details><details><summary>Livraison et retours</summary><p>Livraison offerte dès 59 € d’achat. Satisfait ou remboursé pendant 15 jours.</p></details></div><ul><li><span>Fabrication</span><span>Savonnerie Marius Fabre, depuis 1900</span></li><li><span>Livraison</span><span>Offerte dès 59 €</span></li><li><span>Garantie</span><span>Satisfait ou remboursé 15 jours</span></li></ul></div>`;
+function renderPdp(id){window.__pid=id;const p=P(id)||PRODUCTS[0];const cat={marseille:'Savon de Marseille',noir:'Savon noir & maison',soins:'Soins',liquide:'Savon liquide',coffrets:'Coffrets'}[p.c];
+  document.getElementById('pdp').innerHTML=`<div class="g"><img src="${img(p.id)}" alt="${p.n}"></div><div class="d"><span class="mono">${cat} · Fabriqué à Salon-de-Provence</span><h1>${p.n}</h1><span class="price">${eur(p.p)}</span><p style="color:var(--ink-2);font-size:17px">${p.d}</p><div class="qty"><input type="number" min="1" value="1" id="q" aria-label="Quantité"><button class="btn solid" data-add="${p.id}" data-qty="1">${T('add_cart')}</button></div><p class="mono" style="color:var(--navy)">Livraison offerte dès 59 € · Expédié de Salon sous 48 h · Retours 30 jours</p><div class="tip"><b>Marius Conseil</b><span>${tipFor(p)}</span></div><div class="acc"><details open><summary>Fabrication</summary><p>Cuit au chaudron selon le procédé marseillais, coulé dans les mises, découpé puis séché à l’air libre, dans l’usine de la famille Fabre depuis 1927.</p></details><details><summary>Usages</summary><p>${p.d} ${tipFor(p)}</p></details><details><summary>Livraison et retours</summary><p>Livraison offerte dès 59 € d’achat. Satisfait ou remboursé pendant 15 jours.</p></details></div><ul><li><span>Fabrication</span><span>Savonnerie Marius Fabre, depuis 1900</span></li><li><span>Livraison</span><span>Offerte dès 59 €</span></li><li><span>Garantie</span><span>Satisfait ou remboursé 15 jours</span></li></ul></div>`;
   const x=PRODUCTS.filter(q=>q.id!==p.id&&q.t.some(t=>p.t.includes(t))).slice(0,4);document.getElementById('xGrid').innerHTML=x.map(card).join('')}
-function tipFor(p){const k=p.c==='coffrets'?'cadeau':p.t[0];if(k==='peau')return 'Pour les peaux sensibles, préférez le savon 100 % huile d’olive : le plus doux de la maison. Le cube 400 g se partage aussi entre la toilette, le linge et la maison.';if(k==='linge')return 'Pour une lessive maison : 2 cuillères de copeaux par machine, à 40 °C. Idéal pour le linge des bébés.';if(p.t.includes('maison'))return 'Diluez une cuillère de savon noir dans un seau d’eau chaude : sols, carrelage et tomettes retrouvent leur éclat.';if(p.c==='coffrets')return 'Livré dans son coffret illustré. Ajoutez un message : nous le glissons à l’intérieur.';return 'Pour les peaux sensibles, préférez le savon 100 % huile d’olive : le plus doux de la maison.'}
+function tipFor(p){const k=p.c==='coffrets'?'cadeau':p.t[0];if(k==='peau')return 'Le geste de la maison : un cube pour la toilette, un autre coupé en deux pour le linge. Il se garde des années, à l’air libre.';if(k==='linge')return 'Pour une lessive maison : 2 cuillères de copeaux par machine, à 40 °C. Idéal pour le linge des bébés.';if(p.t.includes('maison'))return 'Diluez une cuillère de savon noir dans un seau d’eau chaude : sols, carrelage et tomettes retrouvent leur éclat.';if(p.c==='coffrets')return 'Livré dans son coffret illustré. Ajoutez un message : nous le glissons à l’intérieur.';return 'Le geste de la maison : un cube pour la toilette, un autre coupé en deux pour le linge. Il se garde des années, à l’air libre.'}
 
 /* cart */
 function saveCart(){try{localStorage.setItem('mf_cart',JSON.stringify(cart))}catch(e){}renderCart()}
@@ -640,7 +656,7 @@ const FLOW={
 const log=document.getElementById('log'),chips=document.getElementById('chips'),adv=document.getElementById('adv'),advB=document.getElementById('advB');
 function say(t,w){const d=document.createElement('div');d.className='bub '+w;d.textContent=t;log.appendChild(d);log.scrollTop=log.scrollHeight}
 function recs(ids){ids.forEach(id=>{const p=P(id);const d=document.createElement('div');d.className='rec';d.innerHTML=`<img src="${img(id)}" alt=""><div>${p.n}<br><span class="mono">${eur(p.p)}</span></div><button class="add" data-add="${id}">${T('add')}</button>`;log.appendChild(d)});log.scrollTop=log.scrollHeight}
-function show(k){chips.innerHTML='';FLOW[k].c.forEach(c=>{const b=document.createElement('button');b.textContent=fq(c);b.onclick=()=>{say(fq(c),'me');setTimeout(()=>{say(ft(c),'bot');if(FLOW[c].r)recs(FLOW[c].r);if(FLOW[c].go){toggleAdv(false);go('home',{anchor:FLOW[c].go})}show(c)},300)};chips.appendChild(b)})}
+function show(k){chips.innerHTML='';FLOW[k].c.forEach(c=>{const b=document.createElement('button');b.textContent=fq(c);b.onclick=()=>{say(fq(c),'me');setTimeout(()=>{say(ft(c),'bot');if(FLOW[c].r)recs(FLOW[c].r.filter(id=>!(document.getElementById('v-product').classList.contains('on')&&id===window.__pid)));if(FLOW[c].go){toggleAdv(false);go('home',{anchor:FLOW[c].go})}show(c)},300)};chips.appendChild(b)})}
 let started=false;function toggleAdv(o){adv.classList.toggle('open',o);advB.setAttribute('aria-expanded',o);if(o&&!started){started=true;say(ft('start'),'bot');show('start')}}
 advB.onclick=()=>toggleAdv(!adv.classList.contains('open'));
 const heroEl=document.querySelector('.hero');if('IntersectionObserver' in window){new IntersectionObserver(es=>{const vis=es[0].isIntersecting&&document.getElementById('v-home').classList.contains('on');advB.classList.toggle('hid',vis&&!adv.classList.contains('open'))},{threshold:.35}).observe(heroEl)}
@@ -649,11 +665,11 @@ document.addEventListener('keydown',e=>{if(e.key==='Escape'){toggleAdv(false);op
 
 /* i18n (key strings) */
 const I18N={
-en:{adv_k:'Soap factory adviser',h_sign:'Marie & Julie Bousquet-Fabre · 4th generation',h_cta1:'The 72% cube · €4.60 — Add',h_cta2:'Visit the soap factory →',top2:'Free tours of the soap factory and museum · Salon-de-Provence',n_shop:'Shop',n_house:'The house',n_visit:'Visit',n_gift:'Gift sets',cart:'Basket',h_kicker:'Salon-de-Provence · Four generations · Living Heritage Company',h_title:'Soap makers<br>since 1900.',h_sub:'Cooked in the cauldron, poured into the vats, stamped by hand. True Marseille soap, with no added colour or fragrance.',h_cta2:'Visit the soap factory',f2:'Generations',f3:'State label',f4:'Countries',s_k:'The house number',s_t:'oil, and nothing to hide.',s_p:'Marius Fabre Marseille soap is cooked in the cauldron following the Marseille process, with plant oils sourced in France and Europe, palm-oil free since 2020. A four-generation recipe Japan has asked for since 1990.',s_cta:'The historic cube, €4.60',b_k:'The essentials',b_t:'What the house does best.',b_all:'Whole shop',g_k:'The craft',g_t:'Four gestures, since 1900.',g_p:'Nothing has changed in the workshop: soap is still cooked, poured, cut and stamped as in Marius’s day.',st1:'Cooking',st2:'Pouring',st3:'Cutting',st4:'Stamping',fi_k:'The film',fi_t:'Step inside the soap factory.',tl_t:'A family story.',tl_more:'The house',v_k:'Free tour',v_t:'Visit the soap factory and its museum.',v_p:'The workshops and the Marseille soap museum are open free of charge, inside the 1927 factory. Book your slot in seconds.',v_book:'Book for free',sh_k:'Our shops',sh_p:'And over 40 countries, from Japan to the United Kingdom.',c_t:'Give Provence.',e1:'palm oil',e2:'Living Heritage Company',sp_k:'The shop',sp_t:'True Marseille soap.',fa:'All',fm:'Marseille soap',fn:'Black soap & home',fs:'Body care',fl:'Liquid soap',fc:'Gift sets',back:'Back to the shop',x_t:'Often chosen together.',hs_t:'A family, a factory, a seal.',total:'Total',checkout:'Checkout',add:'Add',add_cart:'Add to basket',added:'Added',empty:'Your basket is empty.',ship_left:'{x} away from free delivery',ship_ok:'Free delivery unlocked',booked:'Booked: {d}, {h}, {n} people. A confirmation email is on its way.'},
-es:{adv_k:'Asesor de la jabonería',top2:'Visitas gratuitas a la jabonería y al museo',h_sign:'Marie y Julie Bousquet-Fabre · 4.ª generación',h_cta1:'El cubo 72 % · 4,60 € — Añadir',top1:'Envío gratis desde 59 €',n_shop:'Tienda',n_house:'La casa',n_visit:'Visitar',n_gift:'Cofres',cart:'Cesta',h_title:'Jaboneros<br>desde 1900.',h_sub:'Cocido en caldera, vertido en las balsas, sellado a mano. El auténtico jabón de Marsella.',h_cta2:'Visitar la jabonería',b_t:'Lo mejor de la casa.',g_t:'Cuatro gestos, desde 1900.',tl_t:'Una historia de familia.',v_t:'Visite la jabonería y su museo.',v_book:'Reservar gratis',c_t:'Regalar la Provenza.',sp_t:'El auténtico jabón de Marsella.',add:'Añadir',add_cart:'Añadir a la cesta',added:'Añadido',empty:'Su cesta está vacía.',ship_left:'Le faltan {x} para el envío gratis',ship_ok:'Envío gratis',booked:'Reservado: {d}, {h}, {n} personas.'},
-de:{adv_k:'Berater der Seifensiederei',top2:'Kostenlose Führungen durch Siederei und Museum',h_sign:'Marie & Julie Bousquet-Fabre · 4. Generation',h_cta1:'Der 72-%-Würfel · 4,60 € — Hinzufügen',top1:'Kostenloser Versand ab 59 €',n_shop:'Shop',n_house:'Das Haus',n_visit:'Besuchen',n_gift:'Geschenksets',cart:'Warenkorb',h_title:'Seifensieder<br>seit 1900.',h_sub:'Im Kessel gesotten, in Becken gegossen, von Hand gestempelt. Echte Marseiller Seife.',h_cta2:'Die Seifensiederei besuchen',b_t:'Das Beste des Hauses.',g_t:'Vier Handgriffe, seit 1900.',tl_t:'Eine Familiengeschichte.',v_t:'Besuchen Sie die Siederei und ihr Museum.',v_book:'Kostenlos buchen',c_t:'Die Provence verschenken.',sp_t:'Echte Marseiller Seife.',add:'Hinzufügen',add_cart:'In den Warenkorb',added:'Hinzugefügt',empty:'Ihr Warenkorb ist leer.',ship_left:'Noch {x} bis zum Gratisversand',ship_ok:'Gratisversand',booked:'Gebucht: {d}, {h}, {n} Personen.'},
-it:{adv_k:'Consulente del saponificio',top2:'Visite gratuite al saponificio e al museo',h_sign:'Marie e Julie Bousquet-Fabre · 4ª generazione',h_cta1:'Il cubo 72 % · 4,60 € — Aggiungi',top1:'Spedizione gratuita da 59 €',n_shop:'Negozio',n_house:'La casa',n_visit:'Visitare',n_gift:'Cofanetti',cart:'Carrello',h_title:'Saponai<br>dal 1900.',h_sub:'Cotto nel calderone, colato nelle vasche, timbrato a mano. Il vero sapone di Marsiglia.',h_cta2:'Visita il saponificio',b_t:'Il meglio della casa.',g_t:'Quattro gesti, dal 1900.',tl_t:'Una storia di famiglia.',v_t:'Visitate il saponificio e il suo museo.',v_book:'Prenota gratis',c_t:'Regalare la Provenza.',sp_t:'Il vero sapone di Marsiglia.',add:'Aggiungi',add_cart:'Aggiungi al carrello',added:'Aggiunto',empty:'Il carrello è vuoto.',ship_left:'Mancano {x} alla spedizione gratuita',ship_ok:'Spedizione gratuita',booked:'Prenotato: {d}, {h}, {n} persone.'},
-ja:{adv_k:'石鹸工房のコンシェルジュ',top2:'石鹸工場と博物館の無料見学・サロン＝ド＝プロヴァンス',h_sign:'マリー＆ジュリー・ブスケ＝ファーブル・4代目',h_cta1:'72％キューブ・4.60€ — 追加',top1:'59ユーロ以上で送料無料',n_shop:'ショップ',n_house:'メゾン',n_visit:'見学',n_gift:'ギフト',cart:'カート',h_kicker:'サロン＝ド＝プロヴァンス・4世代・無形文化財企業',h_title:'1900年から<br>石鹸づくり。',h_sub:'釜で炊き、型に流し、ひとつずつ手で刻印。本物のマルセイユ石鹸。',h_cta2:'工場を見学する',b_t:'メゾンの定番。',g_t:'1900年から変わらない4つの工程。',tl_t:'家族の物語。',v_t:'石鹸工場と博物館へ。',v_book:'無料で予約',c_t:'プロヴァンスを贈る。',sp_t:'本物のマルセイユ石鹸。',add:'追加',add_cart:'カートに入れる',added:'追加しました',empty:'カートは空です。',ship_left:'送料無料まであと{x}',ship_ok:'送料無料',booked:'予約完了：{d} {h}、{n}名様'}};
+en:{adv_k:'Soap factory adviser',h_sign:'Marie & Julie Bousquet-Fabre · 4th generation',h_cta1:'The 72% cube — €4.60',h_cta2:'Visit the soap factory →',top2:'Free tours of the soap factory and museum · Salon-de-Provence',n_shop:'Shop',n_house:'The house',n_visit:'Visit',n_gift:'Gift sets',cart:'Basket',h_kicker:'Salon-de-Provence · Four generations · Living Heritage Company',h_title:'Soap makers<br>since 1900.',h_sub:'Cooked in the cauldron, poured into the vats, stamped by hand. True Marseille soap, with no added colour or fragrance.',h_cta2:'Visit the soap factory',f2:'Palm oil',f3:'Soap makers',f4:'Countries',s_k:'The house number',s_t:'oil, and nothing to hide.',s_p:'Marius Fabre Marseille soap is cooked in the cauldron following the Marseille process, with plant oils sourced in France and Europe, palm-oil free since 2020. A four-generation recipe Japan has asked for since 1990.',s_cta:'The historic cube, €4.60',b_k:'The essentials',b_t:'What the house does best.',b_all:'Whole shop',g_k:'The craft',g_t:'Four gestures, one cauldron.',g_p:'Nothing has changed in the workshop: soap is still cooked, poured, cut and stamped as in Marius’s day.',st1:'Cooking',st2:'Pouring',st3:'Cutting',st4:'Stamping',fi_k:'The film',fi_t:'Step inside the soap factory.',tl_t:'A family story.',tl_more:'The house',v_k:'Free tour',v_t:'Visit the soap factory and its museum.',v_p:'The workshops and the Marseille soap museum are open free of charge, inside the 1927 factory. Book your slot in seconds.',v_book:'Book for free',sh_k:'Our shops',sh_p:'And over 40 countries, from Japan to the United Kingdom.',c_t:'Give Provence.',e1:'palm oil',e2:'Living Heritage Company',sp_k:'The shop',sp_t:'True Marseille soap.',fa:'All',fm:'Marseille soap',fn:'Black soap & home',fs:'Body care',fl:'Liquid soap',fc:'Gift sets',back:'Back to the shop',x_t:'Often chosen together.',hs_t:'A family, a factory, a seal.',total:'Total',checkout:'Checkout',add:'Add',add_cart:'Add to basket',added:'Added',empty:'Your basket is empty.',ship_left:'{x} away from free delivery',ship_ok:'Free delivery unlocked',booked:'Booked: {d}, {h}, {n} people. A confirmation email is on its way.'},
+es:{f2:'Aceite de palma',f3:'Jaboneros',adv_k:'Asesor de la jabonería',top2:'Visitas gratuitas a la jabonería y al museo',h_sign:'Marie y Julie Bousquet-Fabre · 4.ª generación',h_cta1:'El cubo 72 % — 4,60 €',top1:'Envío gratis desde 59 €',n_shop:'Tienda',n_house:'La casa',n_visit:'Visitar',n_gift:'Cofres',cart:'Cesta',h_title:'Jaboneros<br>desde 1900.',h_sub:'Cocido en caldera, vertido en las balsas, sellado a mano. El auténtico jabón de Marsella.',h_cta2:'Visitar la jabonería',b_t:'Lo mejor de la casa.',g_t:'Cuatro gestos, un solo caldero.',tl_t:'Una historia de familia.',v_t:'Visite la jabonería y su museo.',v_book:'Reservar gratis',c_t:'Regalar la Provenza.',sp_t:'El auténtico jabón de Marsella.',add:'Añadir',add_cart:'Añadir a la cesta',added:'Añadido',empty:'Su cesta está vacía.',ship_left:'Le faltan {x} para el envío gratis',ship_ok:'Envío gratis',booked:'Reservado: {d}, {h}, {n} personas.'},
+de:{f2:'Palmöl',f3:'Seifensieder',adv_k:'Berater der Seifensiederei',top2:'Kostenlose Führungen durch Siederei und Museum',h_sign:'Marie & Julie Bousquet-Fabre · 4. Generation',h_cta1:'Der 72-%-Würfel — 4,60 €',top1:'Kostenloser Versand ab 59 €',n_shop:'Shop',n_house:'Das Haus',n_visit:'Besuchen',n_gift:'Geschenksets',cart:'Warenkorb',h_title:'Seifensieder<br>seit 1900.',h_sub:'Im Kessel gesotten, in Becken gegossen, von Hand gestempelt. Echte Marseiller Seife.',h_cta2:'Die Seifensiederei besuchen',b_t:'Das Beste des Hauses.',g_t:'Vier Handgriffe, ein Kessel.',tl_t:'Eine Familiengeschichte.',v_t:'Besuchen Sie die Siederei und ihr Museum.',v_book:'Kostenlos buchen',c_t:'Die Provence verschenken.',sp_t:'Echte Marseiller Seife.',add:'Hinzufügen',add_cart:'In den Warenkorb',added:'Hinzugefügt',empty:'Ihr Warenkorb ist leer.',ship_left:'Noch {x} bis zum Gratisversand',ship_ok:'Gratisversand',booked:'Gebucht: {d}, {h}, {n} Personen.'},
+it:{f2:'Olio di palma',f3:'Saponai',adv_k:'Consulente del saponificio',top2:'Visite gratuite al saponificio e al museo',h_sign:'Marie e Julie Bousquet-Fabre · 4ª generazione',h_cta1:'Il cubo 72 % — 4,60 €',top1:'Spedizione gratuita da 59 €',n_shop:'Negozio',n_house:'La casa',n_visit:'Visitare',n_gift:'Cofanetti',cart:'Carrello',h_title:'Saponai<br>dal 1900.',h_sub:'Cotto nel calderone, colato nelle vasche, timbrato a mano. Il vero sapone di Marsiglia.',h_cta2:'Visita il saponificio',b_t:'Il meglio della casa.',g_t:'Quattro gesti, un solo calderone.',tl_t:'Una storia di famiglia.',v_t:'Visitate il saponificio e il suo museo.',v_book:'Prenota gratis',c_t:'Regalare la Provenza.',sp_t:'Il vero sapone di Marsiglia.',add:'Aggiungi',add_cart:'Aggiungi al carrello',added:'Aggiunto',empty:'Il carrello è vuoto.',ship_left:'Mancano {x} alla spedizione gratuita',ship_ok:'Spedizione gratuita',booked:'Prenotato: {d}, {h}, {n} persone.'},
+ja:{f2:'パーム油',f3:'石鹸職人',adv_k:'石鹸工房のコンシェルジュ',top2:'石鹸工場と博物館の無料見学・サロン＝ド＝プロヴァンス',h_sign:'マリー＆ジュリー・ブスケ＝ファーブル・4代目',h_cta1:'72％キューブ — 4.60€',top1:'59ユーロ以上で送料無料',n_shop:'ショップ',n_house:'メゾン',n_visit:'見学',n_gift:'ギフト',cart:'カート',h_kicker:'サロン＝ド＝プロヴァンス・4世代・無形文化財企業',h_title:'1900年から<br>石鹸づくり。',h_sub:'釜で炊き、型に流し、ひとつずつ手で刻印。本物のマルセイユ石鹸。',h_cta2:'工場を見学する',b_t:'メゾンの定番。',g_t:'4つの工程、ひとつの釜。',tl_t:'家族の物語。',v_t:'石鹸工場と博物館へ。',v_book:'無料で予約',c_t:'プロヴァンスを贈る。',sp_t:'本物のマルセイユ石鹸。',add:'追加',add_cart:'カートに入れる',added:'追加しました',empty:'カートは空です。',ship_left:'送料無料まであと{x}',ship_ok:'送料無料',booked:'予約完了：{d} {h}、{n}名様'}};
 const FR={add:'Ajouter',add_cart:'Ajouter au panier',added:'Ajouté',empty:'Votre panier est vide.',ship_left:'Plus que {x} pour la livraison offerte',ship_ok:'Livraison offerte',booked:'Réservé : {d}, {h}, {n} personnes. Un e-mail de confirmation vous est envoyé.'};
 let LANG='fr';const ORIG={};document.querySelectorAll('[data-i]').forEach(el=>ORIG[el.dataset.i]=ORIG[el.dataset.i]||el.innerHTML);
 function T(k){return (LANG!=='fr'&&I18N[LANG]&&I18N[LANG][k])||FR[k]||k}
