@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Marius Fabre — Proposition Neovera Studio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Display&family=Archivo:ital,wdth,wght@0,62..125,300..800;1,62..125,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+/* Architectural broadsheet on bone paper. The Marius Fabre navy (the colour of the boutiques) strikes across full-bleed sections; the olive green lives only in the soap itself. */
+:root{
+  --bone:#E7E4DC;
+  --paper:#F3F1EB;
+  --ink:#121212;
+  --ink-2:#5A5852;
+  --line:rgba(18,18,18,.16);
+  --navy:#1E3170;
+  --navy-deep:#14214D;
+  --on-navy:#ECEAE3;
+  --display:"Archivo","Helvetica Neue",Arial,sans-serif;
+  --serif:"Libre Caslon Display","Didot",Georgia,serif;
+  --mono:"JetBrains Mono",ui-monospace,Menlo,monospace;
+  --gut:clamp(16px,3.6vw,56px);
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}}
+body{margin:0;overflow-x:clip;background:var(--bone);color:var(--ink);font-family:var(--display);font-size:16px;line-height:1.55;-webkit-font-smoothing:antialiased}
+img,video{max-width:100%;display:block}
+a{color:inherit}
+button{font:inherit;color:inherit}
+:focus-visible{outline:2px solid var(--navy);outline-offset:3px}
+h1,h2,h3{margin:0;font-weight:500;letter-spacing:-.025em;line-height:.95;text-wrap:balance}
+h1,h2,.big,.tl .y,.step .n,.commit .k,.facts strong,.seal{font-family:var(--serif);font-weight:400!important;letter-spacing:-.01em!important;font-stretch:100%!important}
+.hero h1 em{font-style:italic}
+p{margin:0}
+.mono{font-family:var(--mono);font-size:11px;letter-spacing:.08em;text-transform:uppercase}
+.wrap{padding:0 var(--gut)}
+.btn{display:inline-flex;align-items:center;gap:10px;font:500 15px/1 var(--display);letter-spacing:.01em;padding:16px 28px;border:1px solid currentColor;background:transparent;cursor:pointer;text-decoration:none;transition:background .2s,color .2s}
+.btn.solid{background:var(--ink);color:var(--bone);border-color:var(--ink)}
+.btn.solid:hover{background:var(--navy);border-color:var(--navy)}
+.btn:not(.solid):hover{background:var(--ink);color:var(--bone)}
+.on-navy .btn:not(.solid):hover{background:var(--on-navy);color:var(--navy)}
+
+/* top bar */
+.topbar{background:var(--navy);color:var(--on-navy);display:flex;justify-content:space-between;gap:16px;padding:9px var(--gut);flex-wrap:wrap}
+header.site{position:sticky;top:0;z-index:50;background:color-mix(in srgb,var(--bone) 92%,transparent);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border-bottom:1px solid var(--ink)}
+.hd{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:16px;padding:14px var(--gut)}
+.logo{justify-self:center;text-align:center;text-decoration:none;line-height:1}
+.logo b{display:block;font-size:24px;font-weight:600;letter-spacing:.14em;font-stretch:110%}
+.logo span{display:block;margin-top:5px}
+.nav{display:flex;gap:22px;flex-wrap:wrap}
+.nav a{font-size:14px;text-decoration:none;cursor:pointer;padding:4px 0;border-bottom:1px solid transparent}
+.nav a:hover,.nav a.on{border-color:var(--ink)}
+.tools{justify-self:end;display:flex;align-items:center;gap:14px}
+.langsel{background:transparent;border:0;font:500 12px var(--mono);cursor:pointer;padding:6px}
+.lang button{background:none;border:0;padding:6px 7px;cursor:pointer;font:500 11px var(--mono)}
+.lang button.on{background:var(--ink);color:var(--bone)}
+.cartbtn{position:relative;background:none;border:0;padding:8px;cursor:pointer;display:grid;place-items:center}
+.pill{position:absolute;top:0;right:-4px;min-width:18px;height:18px;border-radius:9px;background:var(--navy);color:#fff;font:500 10px/18px var(--mono);text-align:center;padding:0 4px}
+.burger{display:none;background:none;border:1px solid var(--ink);padding:8px 10px;cursor:pointer}
+@media (max-width:980px){.nav{display:none}.burger{display:inline-block}.hd{grid-template-columns:auto 1fr auto}.logo{justify-self:start;text-align:left}
+  .nav.open{display:flex;flex-direction:column;position:absolute;left:0;right:0;top:100%;background:var(--bone);padding:16px var(--gut);border-bottom:1px solid var(--ink)}}
+
+/* views */
+.view{display:none}
+.view.on{display:block}
+
+/* hero */
+.hero{position:relative;height:min(86vh,820px);min-height:560px;overflow:hidden;background:#2a2a24;color:#fff}
+.hero video,.hero .poster{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.hero .poster{animation:kb 24s ease-in-out infinite alternate}
+@keyframes kb{from{transform:scale(1.02)}to{transform:scale(1.1) translate(-1%,-1%)}}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.15) 0%,rgba(0,0,0,0) 35%,rgba(0,0,0,.55) 100%)}
+.hero-in{position:absolute;inset:auto 0 0 0;z-index:2;padding:0 var(--gut) clamp(28px,5vw,64px);display:grid;grid-template-columns:1fr auto;gap:24px;align-items:end}
+.hero h1{font-size:clamp(56px,11vw,176px);font-weight:500;letter-spacing:-.045em;line-height:.86;font-stretch:92%}
+.hero .meta{display:grid;gap:14px;justify-items:end;text-align:right}
+.hero .meta .btn{color:#fff}
+.hlink{color:#fff;font-size:15px;text-decoration:underline;text-underline-offset:4px;cursor:pointer;align-self:center}
+.hero .meta .btn.solid{background:#fff;color:var(--ink);border-color:#fff}
+.hero .meta .btn.solid:hover{background:var(--navy);color:#fff;border-color:var(--navy)}
+html[lang=ja] .hero h1{font-size:clamp(40px,6.4vw,104px);line-height:1.08;letter-spacing:0}
+@media (max-width:760px){.hero-in{grid-template-columns:1fr}.hero .meta{justify-items:start;text-align:left}}
+
+/* broadsheet facts row */
+.facts{display:grid;grid-template-columns:repeat(4,1fr);border-bottom:1px solid var(--ink)}
+.facts div{padding:22px var(--gut) 22px 0;display:grid;gap:6px;border-right:1px solid var(--line)}
+.facts div:first-child{padding-left:var(--gut)}
+.facts div+div{padding-left:22px}
+.facts div:last-child{border-right:0}
+.facts strong{font-size:clamp(28px,3.4vw,46px);font-weight:500;letter-spacing:-.03em;line-height:1}
+@media (max-width:760px){.facts{grid-template-columns:1fr 1fr}.facts div{padding:18px var(--gut)!important;border-right:0;border-bottom:1px solid var(--line)}}
+
+/* section heads */
+section.blk{padding:clamp(48px,6.5vw,96px) 0}
+.sh{display:grid;grid-template-columns:220px 1fr auto;gap:clamp(16px,3vw,48px);align-items:end;margin-bottom:clamp(28px,4vw,52px);padding:0 var(--gut)}
+.sh h2{font-size:clamp(40px,6vw,92px);font-stretch:92%}
+.sh p{max-width:36em;color:var(--ink-2);margin-top:16px;font-size:17px}
+@media (max-width:860px){.sh{grid-template-columns:1fr}}
+
+/* navy strike */
+.on-navy{background:var(--navy);color:var(--on-navy)}
+.on-navy .mono{color:#AFB7D6}
+.strike{display:grid;grid-template-columns:1.15fr .85fr;gap:clamp(24px,4vw,64px);align-items:center;padding:clamp(56px,8vw,112px) var(--gut)}
+.strike .big{font-size:clamp(120px,22vw,340px);font-weight:500;letter-spacing:-.06em;line-height:.8;font-stretch:88%}
+.strike h2{font-size:clamp(30px,3.4vw,48px);margin:18px 0 18px}
+.strike p{color:#C9CEE2;max-width:34em;font-size:17px}
+.strike figure{margin:0;aspect-ratio:4/5;overflow:hidden}
+.strike figure img{width:100%;height:100%;object-fit:cover}
+@media (max-width:860px){.strike{grid-template-columns:1fr}}
+
+/* products */
+.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--ink);border-top:1px solid var(--ink);border-bottom:1px solid var(--ink)}
+.card{background:var(--bone);display:grid;grid-template-rows:auto 1fr;cursor:pointer;position:relative}
+.card .ph{background:#F7F6F2;aspect-ratio:1/1;overflow:hidden;position:relative}
+.badge{position:absolute;top:12px;left:12px;z-index:2;background:var(--navy);color:#fff;padding:5px 8px}
+.card .ph img{width:100%;height:100%;object-fit:contain;padding:8%;mix-blend-mode:multiply;transition:transform .5s}
+.card:hover .ph img{transform:scale(1.04)}
+.card .info{padding:16px 18px 18px;display:grid;gap:10px;align-content:space-between}
+.card .nm{font-size:15px;line-height:1.3}
+.card .row{display:flex;justify-content:space-between;align-items:center;gap:10px}
+.card .pr{font:500 16px var(--display);color:var(--ink)}
+.add{background:var(--ink);color:var(--bone);border:1px solid var(--ink);padding:11px 16px;cursor:pointer;font:500 13px var(--display)}
+.add:hover{background:var(--navy);border-color:var(--navy)}
+@media (max-width:1100px){.grid{grid-template-columns:repeat(3,1fr)}}
+@media (max-width:760px){.grid{grid-template-columns:repeat(2,1fr)}.card .info{padding:12px}.card .row{flex-direction:column;align-items:flex-start}}
+
+/* process */
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:clamp(12px,2vw,24px);padding:0 var(--gut)}
+.step figure{margin:0 0 14px;aspect-ratio:3/4;overflow:hidden;background:#cfcabd}
+.step figure img{width:100%;height:100%;object-fit:cover;filter:saturate(.9)}
+.step .n{font-size:64px;font-weight:500;letter-spacing:-.05em;line-height:.9}
+.step h3{font-size:22px;margin:8px 0 6px}
+.step p{color:var(--ink-2);font-size:15px}
+@media (max-width:860px){.steps{grid-template-columns:1fr 1fr}}
+
+/* timeline */
+.tlw{position:relative}
+.tlw::after{content:"";position:absolute;top:1px;right:0;bottom:1px;width:120px;background:linear-gradient(90deg,transparent,var(--bone));pointer-events:none}
+.tla{display:flex;gap:8px;padding:14px var(--gut) 0;justify-content:flex-end}
+.tla button{width:44px;height:44px;border:1px solid var(--ink);background:none;cursor:pointer;font-size:18px}
+.tla button:hover{background:var(--ink);color:var(--bone)}
+.tl{display:grid;grid-auto-flow:column;grid-auto-columns:minmax(260px,1fr);overflow-x:auto;border-top:1px solid var(--ink);border-bottom:1px solid var(--ink);scroll-snap-type:x mandatory}
+.tl article{padding:26px 22px 30px;border-right:1px solid var(--line);scroll-snap-align:start;display:grid;gap:10px;align-content:start}
+.tl .y{font-size:58px;font-weight:500;letter-spacing:-.05em;line-height:.9;font-stretch:90%}
+.tl h3{font-size:18px}
+.tl p{color:var(--ink-2);font-size:14.5px}
+
+/* film */
+.film{position:relative;margin:0 var(--gut);aspect-ratio:16/8;overflow:hidden;background:#000;cursor:pointer}
+.film img{width:100%;height:100%;object-fit:cover;opacity:.78}
+.film .play{position:absolute;inset:0;display:grid;place-items:center;color:#fff}
+.film .play span{display:grid;place-items:center;gap:14px;text-align:center}
+.film .play i{width:92px;height:92px;border-radius:50%;border:1px solid #fff;display:grid;place-items:center;font-style:normal;font-size:24px;transition:background .2s}
+.film:hover .play i{background:#fff;color:var(--ink)}
+.film iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+
+/* visit */
+.visit{display:grid;grid-template-columns:1fr 1fr;border-top:1px solid rgba(236,234,227,.3)}
+.visit>div{padding:clamp(40px,6vw,88px) var(--gut)}
+.visit>div+div{border-left:1px solid rgba(236,234,227,.3)}
+.visit h2{font-size:clamp(40px,5.4vw,84px);font-stretch:92%;margin:16px 0 20px}
+.visit p{color:#C9CEE2;max-width:32em}
+.vform{display:grid;gap:12px;margin-top:26px;max-width:460px}
+.vform .r{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.vform label{display:grid;gap:6px}
+.vform select,.vform input{font:15px var(--display);padding:12px;background:transparent;color:var(--on-navy);border:1px solid rgba(236,234,227,.45)}
+.vform select option{color:#000}
+.shops{display:grid;gap:0;border-top:1px solid rgba(236,234,227,.3)}
+.shops li{list-style:none;display:grid;grid-template-columns:1fr auto;gap:10px;padding:16px 0;border-bottom:1px solid rgba(236,234,227,.3)}
+.shops ul{padding:0;margin:0}
+.shops b{font-weight:500;font-size:18px}
+.shops span{color:#C9CEE2;font-size:14px}
+@media (max-width:860px){.visit{grid-template-columns:1fr}.visit>div+div{border-left:0;border-top:1px solid rgba(236,234,227,.3)}}
+
+/* gifts */
+.gifts{display:grid;grid-template-columns:1.1fr .9fr;gap:0;border-top:1px solid var(--ink);border-bottom:1px solid var(--ink)}
+.gifts figure{margin:0;min-height:520px;position:relative;overflow:hidden}
+.gifts figure img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.gifts .list{border-left:1px solid var(--ink);display:grid}
+.gifts .it{display:grid;grid-template-columns:120px 1fr auto;gap:16px;align-items:center;padding:14px 22px;border-bottom:1px solid var(--line);cursor:pointer}
+.gifts .it:last-child{border-bottom:0}
+.gifts .it img{width:120px;height:120px;object-fit:contain;background:#F7F6F2;padding:6px;mix-blend-mode:multiply}
+.gifts .it b{font-weight:500}
+@media (max-width:860px){.gifts{grid-template-columns:1fr}.gifts .list{border-left:0}.gifts figure{min-height:340px}}
+
+/* commitments */
+.commit{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--ink)}
+.commit article{padding:30px var(--gut) 34px;border-right:1px solid var(--line);display:grid;gap:12px;align-content:start}
+.commit article:last-child{border-right:0}
+.commit .k{font-size:44px;font-weight:500;letter-spacing:-.04em;line-height:.95}
+.commit p{color:var(--ink-2)}
+@media (max-width:860px){.commit{grid-template-columns:1fr}.commit article{border-right:0;border-bottom:1px solid var(--line)}}
+
+/* shop view */
+.filters{display:flex;gap:8px;flex-wrap:wrap;padding:0 var(--gut) 22px}
+.filters button{background:none;border:1px solid var(--ink);padding:9px 14px;cursor:pointer;font:500 13px var(--display)}
+.filters button.on{background:var(--ink);color:var(--bone)}
+.pagehead{padding:clamp(48px,7vw,96px) var(--gut) 28px;display:grid;gap:14px}
+.pagehead h1{font-size:clamp(56px,9vw,150px);font-stretch:90%;letter-spacing:-.05em}
+
+/* product view */
+.pdp{display:grid;grid-template-columns:1.1fr .9fr;border-top:1px solid var(--ink);border-bottom:1px solid var(--ink)}
+.pdp .g{background:#fff;display:grid;place-items:center;min-height:560px;border-right:1px solid var(--ink)}
+.pdp .g{background:#F7F6F2!important}
+.pdp .g img{max-height:680px;width:100%;object-fit:contain;padding:6%;mix-blend-mode:multiply}
+.acc{border-top:1px solid var(--line)}
+.acc details{border-bottom:1px solid var(--line)}
+.acc summary{cursor:pointer;padding:14px 0;font-weight:500;list-style:none;display:flex;justify-content:space-between}
+.acc summary::after{content:"+";font-family:var(--mono)}
+.acc details[open] summary::after{content:"−"}
+.acc p{padding:0 0 14px;color:var(--ink-2);font-size:15px}
+.pdp .d{padding:clamp(28px,4vw,56px) var(--gut);display:grid;gap:18px;align-content:start}
+.pdp h1{font-size:clamp(34px,3.8vw,56px);font-stretch:94%}
+.pdp .price{font:500 22px var(--mono)}
+.pdp .qty{display:flex;gap:10px;align-items:center}
+.pdp .qty input{width:64px;padding:12px;font:15px var(--mono);border:1px solid var(--ink);background:transparent;text-align:center}
+.pdp ul{margin:0;padding:0;border-top:1px solid var(--line)}
+.pdp li{list-style:none;padding:12px 0;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;gap:12px;font-size:14.5px}
+.pdp li span:first-child{color:var(--ink-2)}
+.tip{border:1px solid var(--navy);padding:16px;display:grid;gap:8px;background:var(--paper)}
+.tip b{font-weight:500;color:var(--navy)}
+@media (max-width:860px){.pdp{grid-template-columns:1fr}.pdp .g{border-right:0;border-bottom:1px solid var(--ink);min-height:360px}}
+
+/* house view */
+.house{display:grid;grid-template-columns:1fr 1fr;gap:0;border-top:1px solid var(--ink)}
+.house figure{margin:0;min-height:560px;position:relative;overflow:hidden}
+.house figure img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.house .t{padding:clamp(32px,5vw,72px) var(--gut);display:grid;gap:18px;align-content:center}
+.house .t h2{font-size:clamp(36px,4.6vw,72px);font-stretch:92%}
+.house .t p{color:var(--ink-2);font-size:17px;max-width:34em}
+@media (max-width:860px){.house{grid-template-columns:1fr}.house figure{min-height:320px}}
+
+/* footer */
+footer{background:var(--ink);color:#d9d6ce;padding:56px var(--gut) 40px}
+.ft{display:grid;grid-template-columns:1.3fr 1fr 1fr 1fr;gap:32px}
+.ft h4{margin:0 0 14px;font:500 11px var(--mono);letter-spacing:.1em;text-transform:uppercase;color:#8f8c84}
+.ft a{display:block;text-decoration:none;padding:4px 0;color:#d9d6ce}
+.ft a:hover{color:#fff}
+.social{display:flex;gap:10px;margin-top:18px}
+.social a{width:42px;height:42px;border:1px solid #55524b;display:grid;place-items:center;padding:0}
+.social a:hover{background:#fff;color:var(--ink)}
+.social svg{width:18px;height:18px}
+.nl{display:flex;margin-top:12px;border:1px solid #55524b}
+.nl input{flex:1;background:transparent;border:0;color:#fff;padding:12px;font:14px var(--display)}
+.nl button{background:#fff;color:var(--ink);border:0;padding:0 16px;cursor:pointer;font-weight:500}
+.fb{margin-top:44px;padding-top:18px;border-top:1px solid #33312c;display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;color:#8f8c84}
+.seal{font-size:12.4vw;font-weight:500;letter-spacing:-.05em;line-height:.8;color:#2a2925;margin-top:40px;font-stretch:88%;white-space:nowrap;overflow:hidden}
+.ft>*{min-width:0}
+.nl input{min-width:0}
+@media (max-width:860px){.ft{grid-template-columns:1fr 1fr}}
+@media (max-width:560px){.ft{grid-template-columns:1fr}}
+
+/* cart drawer */
+.drawer{position:fixed;top:0;right:0;bottom:0;width:min(420px,100%);background:var(--paper);border-left:1px solid var(--ink);z-index:80;transform:translateX(105%);transition:transform .3s;display:flex;flex-direction:column}
+.drawer.open{transform:none}
+.drawer header{display:flex;justify-content:space-between;align-items:center;padding:18px 20px;border-bottom:1px solid var(--ink)}
+.drawer .items{flex:1;overflow:auto;padding:8px 20px}
+.ci{display:grid;grid-template-columns:64px 1fr auto;gap:12px;align-items:center;padding:12px 0;border-bottom:1px solid var(--line);font-size:14px}
+.ci img{width:64px;height:64px;object-fit:cover;background:#fff}
+.drawer footer{background:transparent;color:inherit;padding:18px 20px;border-top:1px solid var(--ink);display:grid;gap:12px}
+.ship{height:4px;background:var(--line)}
+.ship i{display:block;height:100%;background:var(--navy);transition:width .3s}
+.scrim{position:fixed;inset:0;background:rgba(0,0,0,.35);z-index:70;display:none}
+.scrim.on{display:block}
+.x{background:none;border:0;font-size:24px;cursor:pointer;line-height:1}
+
+/* advisor */
+.adv-b{position:fixed;left:20px;bottom:20px;z-index:60;display:flex;align-items:center;gap:10px;background:var(--navy);color:#fff;border:0;border-radius:999px;padding:9px;cursor:pointer;box-shadow:0 8px 24px rgba(0,0,0,.2);font:500 14px var(--display);transition:opacity .3s,transform .3s,padding .2s}
+.adv-b span{max-width:0;overflow:hidden;white-space:nowrap;transition:max-width .3s}
+.adv-b:hover span,.adv-b:focus-visible span{max-width:160px;padding-right:8px}
+.adv-b.hid{opacity:0;transform:translateY(20px);pointer-events:none}
+.adv-b i{width:30px;height:30px;border-radius:50%;border:1px solid #fff;display:grid;place-items:center;font-style:normal;font-size:12px;font-family:var(--mono)}
+.adv{position:fixed;left:20px;bottom:84px;z-index:61;width:min(400px,calc(100vw - 32px));max-height:min(600px,calc(100vh - 120px));background:var(--paper);border:1px solid var(--ink);display:none;flex-direction:column;box-shadow:0 24px 70px rgba(0,0,0,.25)}
+.adv.open{display:flex}
+.adv header{background:var(--navy);color:#fff;padding:14px 16px;display:flex;justify-content:space-between;align-items:center}
+.adv header b{font-weight:500;font-size:18px}
+.adv header .x{color:#fff}
+.log{padding:14px;overflow:auto;display:grid;gap:10px;align-content:start;flex:1}
+.bub{max-width:90%;padding:10px 13px;font-size:14.5px;line-height:1.45}
+.bub.bot{background:var(--bone)}
+.bub.me{background:var(--ink);color:#fff;justify-self:end}
+.rec{display:grid;grid-template-columns:52px 1fr auto;gap:10px;align-items:center;background:#fff;border:1px solid var(--line);padding:8px;font-size:13.5px}
+.rec img{width:52px;height:52px;object-fit:cover}
+.chips{display:flex;flex-wrap:wrap;gap:6px;padding:0 14px 14px}
+.chips button{background:none;border:1px solid var(--ink);padding:7px 11px;cursor:pointer;font:500 12.5px var(--display)}
+.chips button:hover{background:var(--ink);color:#fff}
+.toast{position:fixed;left:50%;bottom:24px;transform:translateX(-50%) translateY(120px);visibility:hidden;background:var(--ink);color:#fff;padding:12px 18px;z-index:90;transition:transform .3s;font-size:14px}
+.toast.on{transform:translateX(-50%);visibility:visible}
+@media (max-width:520px){.adv-b{bottom:20px;left:auto;right:16px}.adv{left:16px}}
+</style>
+</head>
+<body>
+
+<div class="topbar mono"><span data-i="top1">Livraison offerte dès 59 € d’achat</span><span data-i="top2">Visites gratuites de la savonnerie et du musée · Salon-de-Provence</span></div>
+
+<header class="site">
+  <div class="hd">
+    <nav class="nav" id="nav" aria-label="Navigation principale">
+      <a data-go="shop" data-i="n_shop">La boutique</a>
+      <a data-go="house" data-i="n_house">La maison</a>
+      <a data-go="home" data-anchor="visiter" data-i="n_visit">Visiter</a>
+      <a data-go="home" data-anchor="coffrets" data-i="n_gift">Coffrets</a>
+    </nav>
+    <button class="burger" id="burger" aria-label="Menu" aria-expanded="false">☰</button>
+    <a class="logo" data-go="home" href="#accueil"><b>MARIUS FABRE</b><span class="mono">Savonnier depuis 1900</span></a>
+    <div class="tools">
+      <select class="langsel" id="lang" aria-label="Langue"><option value="fr">FR</option><option value="en">EN</option><option value="es">ES</option><option value="de">DE</option><option value="it">IT</option><option value="ja">日本語</option></select>
+      <button class="cartbtn" id="cartBtn" aria-label="Panier"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 8h14l-1.2 12H6.2z"/><path d="M9 8V6a3 3 0 016 0v2"/></svg><span class="pill" id="cartN">0</span></button>
+    </div>
+  </div>
+</header>
+
+<main>
+<!-- HOME -->
+<div class="view on" id="v-home">
+  <section class="hero" aria-label="Ouverture">
+    <img class="poster" src="img/h0.jpg" alt="Le chaudron de la savonnerie, pâte de savon à l’huile d’olive">
+    <video id="heroVid" muted loop playsinline autoplay preload="auto" poster="img/h0.jpg"><source src="img/hero.mp4" type="video/mp4"></video>
+    <div class="hero-in">
+      <div>
+        <p class="mono" style="margin-bottom:18px;color:#e8e6df" data-i="h_kicker">Salon-de-Provence · Quatre générations · Entreprise du Patrimoine Vivant</p>
+        <h1 data-i="h_title">Savonniers<br><em>depuis 1900.</em></h1>
+      </div>
+      <div class="meta">
+        <p class="mono" style="color:#e8e6df" data-i="h_sign">Marie et Julie Bousquet-Fabre · 4ᵉ génération</p>
+        <p style="max-width:24em;color:#efede6" data-i="h_sub">Cuit au chaudron, coulé dans les mises, estampillé à la main. Le vrai savon de Marseille, sans colorant ni parfum ajouté.</p>
+        <div style="display:flex;gap:18px;flex-wrap:wrap;align-items:center">
+          <button class="btn solid" data-add="p00" data-i="h_cta1">Le cube 72 % · 4,60 € — Ajouter</button>
+          <a class="hlink" data-go="home" data-anchor="visiter" data-i="h_cta2">Visiter la savonnerie →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="facts">
+    <div><span class="mono">Fondée en</span><strong>1900</strong></div>
+    <div><span class="mono" data-i="f2">Générations</span><strong>4</strong></div>
+    <div><span class="mono" data-i="f3">Label d’État</span><strong>EPV · 2009</strong></div>
+    <div><span class="mono" data-i="f4">Pays</span><strong>40+</strong></div>
+  </div>
+
+  <section class="on-navy">
+    <div class="strike">
+      <div>
+        <p class="mono" data-i="s_k">Le chiffre de la maison</p>
+        <div class="big">72%</div>
+        <h2 data-i="s_t">d’huile, et rien d’autre à cacher.</h2>
+        <p data-i="s_p">Le savon de Marseille Marius Fabre est cuit au chaudron selon le procédé marseillais, avec des huiles végétales sourcées en France et en Europe, sans huile de palme depuis 2020. Une recette de quatre générations, que le Japon nous réclame depuis 1990.</p>
+        <div style="margin-top:28px"><a class="btn" data-go="product" data-pid="p00" data-i="s_cta">Le cube historique, 4,60 €</a></div>
+      </div>
+      <figure><img src="img/h1.jpg" alt="Cube de savon de Marseille vert à l’huile d’olive, estampillé"></figure>
+    </div>
+  </section>
+
+  <section class="blk">
+    <div class="sh">
+      <p class="mono" data-i="b_k">Les incontournables</p>
+      <div><h2 data-i="b_t">Ce que la maison fait de mieux.</h2></div>
+      <a class="btn" data-go="shop" data-i="b_all">Toute la boutique</a>
+    </div>
+    <div class="grid" id="bestGrid"></div>
+  </section>
+
+  <section class="blk" id="coffrets" style="padding-top:0">
+    <div class="sh">
+      <p class="mono" data-i="c_k">Noël 2026</p>
+      <div><h2 data-i="c_t">Offrir la Provence.</h2><p data-i="c_p">Des coffrets illustrés par Anna, la plus jeune des sœurs Fabre, prêts à offrir.</p></div>
+    </div>
+    <div class="gifts">
+      <figure><img src="img/a13.jpg" alt="Coffrets de Noël Marius Fabre près d’une cheminée"></figure>
+      <div class="list" id="giftList"></div>
+    </div>
+  </section>
+
+  <section class="blk" style="padding-top:0">
+    <div class="sh">
+      <p class="mono" data-i="g_k">Le geste</p>
+      <div><h2 data-i="g_t">Quatre gestes, depuis 1900.</h2><p data-i="g_p">Rien n’a changé dans l’atelier de l’avenue Paul-Bourret : le savon y est encore cuit, coulé, découpé et frappé comme au temps de Marius.</p></div>
+    </div>
+    <div class="steps">
+      <div class="step"><figure><img src="img/a12.jpg" alt="Pâte de savon coulée dans les mises"></figure><span class="n">01</span><h3 data-i="st1">La cuisson</h3><p data-i="st1p">Les huiles végétales cuisent plusieurs jours dans les chaudrons, sous l’œil du maître savonnier.</p></div>
+      <div class="step"><figure><img src="img/a06.jpg" alt="Coulée du savon"></figure><span class="n">02</span><h3 data-i="st2">La coulée</h3><p data-i="st2p">La pâte est coulée dans les mises, ces grands bassins où elle sèche avant d’être tranchée.</p></div>
+      <div class="step"><figure><img src="img/a07.jpg" alt="Découpe des pains de savon"></figure><span class="n">03</span><h3 data-i="st3">La découpe</h3><p data-i="st3p">Les plaques sont découpées en barres, puis en cubes, et sèchent à l’air libre.</p></div>
+      <div class="step"><figure><img src="img/a11.jpg" alt="Estampillage d’un cube de savon"></figure><span class="n">04</span><h3 data-i="st4">L’estampille</h3><p data-i="st4p">Chaque cube est frappé à la main du sceau de la maison : la signature du vrai savon de Marseille.</p></div>
+    </div>
+  </section>
+
+  <section class="blk" style="padding-top:0">
+    <div class="sh">
+      <p class="mono" data-i="fi_k">Le film</p>
+      <div><h2 data-i="fi_t">Entrez dans la savonnerie.</h2></div>
+    </div>
+    <div class="film" id="film" role="button" tabindex="0" aria-label="Lire le film de la savonnerie">
+      <img src="img/h2.jpg" alt="Le hall de séchage de la savonnerie">
+      <div class="play"><span><i>▶</i><span class="mono" data-i="fi_play">La savonnerie Marius Fabre, une histoire de famille · 3 min</span></span></div>
+    </div>
+  </section>
+
+  <section class="blk" style="padding-top:0">
+    <div class="sh">
+      <p class="mono" data-i="tl_k">1900 — 2023</p>
+      <div><h2 data-i="tl_t">Une histoire de famille.</h2></div>
+      <a class="btn" data-go="house" data-i="tl_more">La maison</a>
+    </div>
+    <div class="tlw"><div class="tl" id="tl">
+      <article><span class="y">1900</span><h3>Marius, 22 ans</h3><p>Il crée sa savonnerie dans le hangar au fond de son jardin, à Salon-de-Provence : deux chaudrons et quelques mises.</p></article>
+      <article><span class="y">1914</span><h3>Marie prend le relais</h3><p>Marius mobilisé, son épouse dirige la fabrication et la vente pendant quatre ans.</p></article>
+      <article><span class="y">1927</span><h3>L’usine actuelle</h3><p>La savonnerie s’installe dans l’ancienne fabrique Couderc. Soixante-dix ouvriers y travaillent.</p></article>
+      <article><span class="y">1938</span><h3>Fernand</h3><p>Le fils aîné succède à son père à la veille de la guerre.</p></article>
+      <article><span class="y">1973</span><h3>Henri</h3><p>Le dernier fils de Marius reprend les rênes, après avoir grandi au milieu des mises.</p></article>
+      <article><span class="y">1990</span><h3>Le Japon</h3><p>Les premiers importateurs japonais, toujours fidèles plus de trente ans après.</p></article>
+      <article><span class="y">2000</span><h3>Le musée</h3><p>Pour son centenaire, la savonnerie ouvre le premier musée du savon de Marseille de la région.</p></article>
+      <article><span class="y">2011</span><h3>Julie et Marie</h3><p>Les arrière-petites-filles de Marius poursuivent l’aventure.</p></article>
+      <article><span class="y">2023</span><h3>Arles</h3><p>Quatrième boutique, après l’usine, le centre de Salon et le Marais à Paris.</p></article>
+      <article><span class="y">2025</span><h3>125 ans</h3><p>Une édition anniversaire, et la même recette, toujours cuite au chaudron.</p></article>
+    </div></div>
+    <div class="tla"><button aria-label="Précédent" onclick="document.getElementById('tl').scrollBy({left:-320,behavior:'smooth'})">‹</button><button aria-label="Suivant" onclick="document.getElementById('tl').scrollBy({left:320,behavior:'smooth'})">›</button></div>
+  </section>
+
+  <section class="on-navy" id="visiter">
+    <div class="visit">
+      <div>
+        <p class="mono" data-i="v_k">Visite gratuite</p>
+        <h2 data-i="v_t">Visitez la savonnerie, et son musée.</h2>
+        <p data-i="v_p">Les ateliers et le musée du savon de Marseille sont ouverts gratuitement, au cœur de l’usine de 1927. Réservez votre créneau en quelques secondes.</p>
+        <form class="vform" id="visitForm">
+          <div class="r">
+            <label><span class="mono" data-i="v_date">Date</span><input type="date" id="vDate" required></label>
+            <label><span class="mono" data-i="v_hour">Créneau</span><select id="vHour"><option>9 h 30</option><option>11 h</option><option>14 h 30</option><option>16 h</option></select></label>
+          </div>
+          <div class="r">
+            <label><span class="mono" data-i="v_people">Personnes</span><select id="vPeople"><option>1</option><option selected>2</option><option>3</option><option>4</option><option>5</option><option>6+</option></select></label>
+            <label><span class="mono" data-i="v_kind">Visite</span><select id="vKind"><option data-i="v_k1">Ateliers + musée</option><option data-i="v_k2">Ateliers de Marius (atelier enfant)</option></select></label>
+          </div>
+          <button class="btn" type="submit" style="justify-self:start" data-i="v_book">Réserver gratuitement</button>
+          <p class="mono" id="vMsg" aria-live="polite"></p>
+        </form>
+      </div>
+      <div>
+        <p class="mono" data-i="sh_k">Nos boutiques</p>
+        <div class="shops" style="margin-top:22px">
+          <ul>
+            <li><div><b>Salon-de-Provence · Boutique d’usine</b><br><span>148, avenue Paul-Bourret</span></div><span class="mono">Usine</span></li>
+            <li><div><b>Salon-de-Provence · Centre</b><br><span>33, place de l’Hôtel-de-Ville</span></div><span class="mono">2018</span></li>
+            <li><div><b>Paris · Le Marais</b><br><span>26, rue de Turenne</span></div><span class="mono">2017</span></li>
+            <li><div><b>Arles</b><br><span>11, rue du Palais</span></div><span class="mono">2023</span></li>
+          </ul>
+        </div>
+        <p style="margin-top:22px" data-i="sh_p">Et plus de 40 pays, du Japon au Royaume-Uni.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="blk" style="padding-top:0">
+    <div class="commit">
+      <article><span class="k">0 %</span><h3 data-i="e1">d’huile de palme</h3><p data-i="e1p">Retirée de tous les produits de la maison depuis 2020.</p></article>
+      <article><span class="k">EPV</span><h3 data-i="e2">Entreprise du Patrimoine Vivant</h3><p data-i="e2p">Le label de l’État qui distingue les savoir-faire d’excellence, obtenu en 2009.</p></article>
+      <article><span class="k">45</span><h3 data-i="e3">savonniers et artisans</h3><p data-i="e3p">Une équipe salonaise, aux côtés de Marie et Julie Bousquet-Fabre.</p></article>
+    </div>
+  </section>
+</div>
+
+<!-- SHOP -->
+<div class="view" id="v-shop">
+  <div class="pagehead"><p class="mono" data-i="sp_k">La boutique</p><h1 data-i="sp_t">Le vrai savon de Marseille.</h1></div>
+  <div class="filters" id="filters">
+    <button data-f="all" class="on" data-i="fa">Tout</button>
+    <button data-f="marseille" data-i="fm">Savon de Marseille</button>
+    <button data-f="noir" data-i="fn">Savon noir & maison</button>
+    <button data-f="soins" data-i="fs">Soins</button>
+    <button data-f="liquide" data-i="fl">Savon liquide</button>
+    <button data-f="coffrets" data-i="fc">Coffrets</button>
+  </div>
+  <div class="grid" id="shopGrid"></div>
+  <div style="height:80px"></div>
+</div>
+
+<!-- PRODUCT -->
+<div class="view" id="v-product">
+  <div class="pagehead" style="padding:22px var(--gut) 18px"><a class="mono" data-go="shop" style="cursor:pointer;text-decoration:none">← <span data-i="back">Retour à la boutique</span></a></div>
+  <div class="pdp" id="pdp"></div>
+  <section class="blk">
+    <div class="sh"><p class="mono" data-i="x_k">Avec ce produit</p><div><h2 data-i="x_t">Souvent choisis ensemble.</h2></div></div>
+    <div class="grid" id="xGrid"></div>
+  </section>
+</div>
+
+<!-- HOUSE -->
+<div class="view" id="v-house">
+  <div class="pagehead"><p class="mono" data-i="hs_k">La maison</p><h1 data-i="hs_t">Une famille, une usine, un sceau.</h1></div>
+  <div class="house">
+    <figure><img src="img/a08.jpg" alt="Le musée du savon de Marseille"></figure>
+    <div class="t"><p class="mono">Musée du savon de Marseille</p><h2>Le premier musée de la région, au cœur de l’usine.</h2><p>Ouvert en 2000 dans une ancienne salle de séchage, il retrace l’histoire du savon en Provence depuis le Moyen Âge : moules, presses, étiquettes, et la mémoire de quatre générations de savonniers.</p><a class="btn" data-go="home" data-anchor="visiter" style="justify-self:start">Réserver une visite</a></div>
+  </div>
+  <div class="house">
+    <div class="t"><p class="mono">Salon-de-Provence</p><h2>La capitale des huiles et du savon.</h2><p>En 1900, une quinzaine de savonneries animent la ville. Marius Fabre est aujourd’hui l’une des toutes dernières à fabriquer encore le savon de Marseille selon le procédé traditionnel, dans ses propres chaudrons.</p></div>
+    <figure><img src="img/a15.jpg" alt="Centre historique de Salon-de-Provence"></figure>
+  </div>
+  <div class="house">
+    <figure><img src="img/a00.jpg" alt="Boutique Marius Fabre, façade bleue"></figure>
+    <div class="t"><p class="mono">Les boutiques</p><h2>Le bleu Marius Fabre, de Salon au Marais.</h2><p>Quatre boutiques prolongent l’univers de la savonnerie : la boutique d’usine, le centre de Salon, Paris et Arles. Partout, le même savon, et la même façade bleue.</p></div>
+  </div>
+</div>
+</main>
+
+<footer>
+  <div class="ft">
+    <div>
+      <b style="font-size:22px;letter-spacing:.14em;font-weight:600">MARIUS FABRE</b>
+      <p style="margin-top:10px;color:#8f8c84;max-width:26em" data-i="ft_p">Savonnerie familiale depuis 1900. 148, avenue Paul-Bourret, 13300 Salon-de-Provence.</p>
+      <div class="social">
+        <a href="https://www.facebook.com/SavonnerieMariusFabre" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 9V7c0-.9.6-1 1-1h2V3h-3c-2.8 0-3.5 2-3.5 3.6V9H8v3h2.5v9H14v-9h2.7l.3-3z"/></svg></a>
+        <a href="http://instagram.com/savonneriemariusfabre" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg></a>
+        <a href="https://www.youtube.com/channel/UC4DntHxYlcjPVehXRFvdY9A" target="_blank" rel="noopener" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M22 8.2c-.2-1.5-1-2.5-2.5-2.7C17.3 5.2 12 5.2 12 5.2s-5.3 0-7.5.3C3 5.7 2.2 6.7 2 8.2 1.8 9.6 1.8 12 1.8 12s0 2.4.2 3.8c.2 1.5 1 2.5 2.5 2.7 2.2.3 7.5.3 7.5.3s5.3 0 7.5-.3c1.5-.2 2.3-1.2 2.5-2.7.2-1.4.2-3.8.2-3.8s0-2.4-.2-3.8zM10 15V9l5.2 3L10 15z"/></svg></a>
+        <a href="https://fr.linkedin.com/company/savonnerie-marius-fabre" target="_blank" rel="noopener" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M4.5 3.5a2 2 0 110 4 2 2 0 010-4zM3 9h3v12H3zM9 9h2.9v1.7c.4-.8 1.4-1.9 3.3-1.9 3.5 0 3.8 2.3 3.8 5.2V21h-3v-6.2c0-1.5 0-3.3-2-3.3s-2.3 1.6-2.3 3.2V21H9z"/></svg></a>
+      </div>
+    </div>
+    <div><h4 data-i="ft_shop">Boutique</h4><a data-go="shop">Savon de Marseille</a><a data-go="shop">Savon noir</a><a data-go="shop">Soins</a><a data-go="home" data-anchor="coffrets">Coffrets</a></div>
+    <div><h4 data-i="ft_house">La maison</h4><a data-go="house">Notre histoire</a><a data-go="home" data-anchor="visiter">Visiter la savonnerie</a><a data-go="house">Le musée</a><a data-go="house">Nos boutiques</a></div>
+    <div><h4>Newsletter</h4><p style="color:#8f8c84;font-size:14px" data-i="nl_p">Les nouveautés et les éditions limitées de la savonnerie.</p><form class="nl" onsubmit="event.preventDefault();toast('Merci, à très bientôt.')"><input type="email" placeholder="Votre e-mail" aria-label="Votre e-mail" required><button>OK</button></form></div>
+  </div>
+  <div class="seal" aria-hidden="true">MARIUS FABRE</div>
+  <div class="fb mono"><span>© Savonnerie Marius Fabre</span><span>Proposition de refonte — Neovera Studio · maquette non contractuelle</span></div>
+</footer>
+
+<div class="scrim" id="scrim"></div>
+<aside class="drawer" id="drawer" aria-label="Panier">
+  <header><b style="font-weight:500;font-size:18px" data-i="cart">Panier</b><button class="x" id="closeCart" aria-label="Fermer">×</button></header>
+  <div class="items" id="items"></div>
+  <footer>
+    <div class="mono" id="shipTxt"></div>
+    <div class="ship"><i id="shipBar" style="width:0"></i></div>
+    <div style="display:flex;justify-content:space-between;font-size:18px"><span data-i="total">Total</span><b id="total" style="font-weight:500">0,00 €</b></div>
+    <button class="btn solid" style="justify-content:center" onclick="toast('Paiement sécurisé — démonstration')" data-i="checkout">Commander</button>
+  </footer>
+</aside>
+
+<button class="adv-b" id="advB" aria-controls="adv" aria-expanded="false"><i>MF</i><span>Marius Conseil</span></button>
+<div class="adv" id="adv" role="dialog" aria-label="Marius Conseil">
+  <header><div><span class="mono" style="color:#AFB7D6" data-i="adv_k">Conseiller de la savonnerie</span><br><b>Marius Conseil</b></div><button class="x" id="advX" aria-label="Fermer">×</button></header>
+  <div class="log" id="log" aria-live="polite"></div>
+  <div class="chips" id="chips"></div>
+</div>
+<div class="toast" id="toast"></div>
+
+<script>
+const PRODUCTS=[
+{id:'p00',n:"Savon de Marseille à l’huile d’olive, 400 g",p:4.60,c:'marseille',t:['peau','maison','linge'],d:"Le cube historique, 72 % d’huile, cuit au chaudron et estampillé à la main."},
+{id:'p01',n:"Savon de Marseille pour le linge, 400 g",p:4.70,c:'marseille',t:['linge'],d:"Sans huile de palme. Détache cols et poignets, lave le linge délicat."},
+{id:'p02',n:"Savon noir liquide à l’huile d’olive, 500 ml",p:9.90,c:'noir',t:['maison'],d:"Le nettoyant naturel de toute la maison : sols, vitres, plans de travail."},
+{id:'p03',n:"Copeaux de savon de Marseille, 750 g",p:18.20,c:'marseille',t:['linge'],d:"Pour une lessive maison, douce pour les peaux sensibles et les bébés."},
+{id:'p04',n:"Savon de Marseille 100 % huile d’olive, 150 g",p:4.20,c:'marseille',t:['peau'],d:"Le plus doux de la gamme, pour le visage et les peaux réactives."},
+{id:'p05',n:"Crème réparatrice pour les mains, 200 ml",p:16.20,c:'soins',t:['peau'],d:"À l’huile d’olive, pour les mains abîmées par le froid et le travail."},
+{id:'p06',n:"Savon de Marseille « à couper », 1 kg",p:20.90,c:'marseille',t:['maison','cadeau'],d:"La demi-barre d’atelier, à trancher selon vos besoins."},
+{id:'p07',n:"Savon de Marseille en barre, 2,5 kg",p:38.00,c:'marseille',t:['maison'],d:"La barre telle qu’elle sort des mises, pour les vrais connaisseurs."},
+{id:'p08',n:"Savon de Marseille en coffret bois, 2,5 kg",p:49.00,c:'coffrets',t:['cadeau'],d:"La barre d’atelier dans son coffret, avec son fil à couper."},
+{id:'p09',n:"Coffret de 6 savons de Marseille, 400 g",p:25.20,c:'coffrets',t:['maison','cadeau'],d:"La réserve de la maison, dans la boîte illustrée de la savonnerie."},
+{id:'p10',n:"Coffret « Découverte du savon de Marseille »",p:26.00,c:'coffrets',t:['cadeau'],d:"Cube, copeaux, savon à l’ancienne : l’essentiel pour découvrir la maison."},
+{id:'p11',n:"Savon « cassable », édition 125 ans, 700 g",p:24.00,c:'marseille',t:['cadeau'],d:"Édition limitée anniversaire, à rompre carré par carré."},
+{id:'p12',n:"Savon « brosse », édition 125 ans, 200 g",p:14.00,c:'marseille',t:['linge','cadeau'],d:"Le savon et sa brosse en bois pour détacher le linge."},
+{id:'p13',n:"Marius Fabre × Élysée, coffret 4 savons",p:21.20,c:'coffrets',t:['cadeau'],d:"La collaboration avec la Présidence de la République, fabriquée en France."},
+{id:'p14',n:"Coffret Noël, trio de savonnettes",p:12.00,c:'coffrets',t:['cadeau','peau'],d:"Trois savonnettes parfumées dans un écrin illustré."},
+{id:'p15',n:"Coffret Noël « Soin des mains en Provence »",p:17.90,c:'coffrets',t:['cadeau','peau'],d:"Deux crèmes pour les mains au beurre de karité."},
+{id:'p16',n:"Coffret Noël « Les essentiels de Provence »",p:28.90,c:'coffrets',t:['cadeau','peau'],d:"Savon, crèmes et savonnette : le rituel complet."},
+{id:'p17',n:"Coffret Noël, Rituel « lavande »",p:24.60,c:'coffrets',t:['cadeau','peau'],d:"Savon liquide, crème et savonnette à la lavande."},
+{id:'p18',n:"Coffret Noël, Rituel « fleur d’oranger »",p:24.60,c:'coffrets',t:['cadeau','peau'],d:"Le rituel douceur à la fleur d’oranger."},
+{id:'p19',n:"Savonnette Coquelicot-Raisin, 150 g",p:7.00,c:'soins',t:['peau'],d:"Au beurre de karité, sans huile de palme."},
+{id:'p20',n:"Lait hydratant corps Coquelicot-Raisin, 500 ml",p:21.50,c:'soins',t:['peau'],d:"Un lait fondant qui nourrit sans graisser."},
+{id:'p21',n:"Savon liquide de Marseille Fleur d’oranger, 400 ml",p:11.70,c:'liquide',t:['peau'],d:"Pour les mains, au quotidien, avec son éco-recharge 1 L."},
+{id:'p22',n:"Savon noir pour le corps, 250 g",p:17.90,c:'soins',t:['peau'],d:"Le rituel du hammam : il prépare la peau au gommage."},
+{id:'p23',n:"Lessive aux copeaux, feuilles d’olivier, 1 L",p:14.60,c:'noir',t:['linge'],d:"La lessive liquide prête à l’emploi, aux copeaux de savon."}
+];
+
+const eur=n=>n.toFixed(2).replace('.',',')+' €';
+const img=id=>'img/'+id+'.jpg';
+const P=id=>PRODUCTS.find(x=>x.id===id);
+let cart={};try{cart=JSON.parse(localStorage.getItem('mf_cart')||'{}')}catch(e){}
+
+/* views */
+function go(v,opt={}){document.querySelectorAll('.view').forEach(x=>x.classList.toggle('on',x.id==='v-'+v));document.querySelectorAll('.nav a').forEach(a=>a.classList.toggle('on',a.dataset.go===v&&!a.dataset.anchor));
+  document.getElementById('nav').classList.remove('open');
+  if(v==='product')renderPdp(opt.pid);
+  if(opt.anchor){setTimeout(()=>document.getElementById(opt.anchor)?.scrollIntoView({behavior:'smooth'}),40)}else window.scrollTo({top:0});
+  try{history.replaceState(null,'','#'+({home:'accueil',shop:'boutique',house:'maison',product:'produit'}[v]||v))}catch(e){}}
+document.addEventListener('click',e=>{const a=e.target.closest('[data-go]');if(!a)return;e.preventDefault();go(a.dataset.go,{pid:a.dataset.pid,anchor:a.dataset.anchor})});
+document.getElementById('burger').onclick=function(){const n=document.getElementById('nav');n.classList.toggle('open');this.setAttribute('aria-expanded',n.classList.contains('open'))};
+
+/* cards */
+const BADGE={p00:'Best-seller',p11:'Édition 125 ans',p12:'Édition 125 ans',p13:'× Élysée',p03:'Lessive maison',p16:'Noël 2026',p17:'Noël 2026',p18:'Noël 2026'};
+function card(p){return `<article class="card" data-go="product" data-pid="${p.id}"><div class="ph">${BADGE[p.id]?`<span class="badge mono">${BADGE[p.id]}</span>`:''}<img loading="lazy" src="${img(p.id)}" alt="${p.n}"></div><div class="info"><span class="nm">${p.n}</span><div class="row"><span class="pr">${eur(p.p)}</span><button class="add" data-add="${p.id}">${T('add')}</button></div></div></article>`}
+function renderGrids(){document.getElementById('bestGrid').innerHTML=['p00','p04','p03','p02','p05','p09','p11','p21'].map(id=>card(P(id))).join('');
+  const f=document.querySelector('#filters .on').dataset.f;document.getElementById('shopGrid').innerHTML=PRODUCTS.filter(p=>f==='all'||p.c===f).map(card).join('');
+  document.getElementById('giftList').innerHTML=['p16','p17','p18','p15'].map(id=>{const p=P(id);return `<div class="it" data-go="product" data-pid="${id}"><img src="${img(id)}" alt=""><div><b>${p.n}</b><br><span class="mono">${eur(p.p)}</span></div><button class="add" data-add="${id}">${T('add')}</button></div>`}).join('')}
+document.getElementById('filters').onclick=e=>{const b=e.target.closest('button');if(!b)return;document.querySelectorAll('#filters button').forEach(x=>x.classList.toggle('on',x===b));renderGrids()};
+
+function renderPdp(id){const p=P(id)||PRODUCTS[0];const cat={marseille:'Savon de Marseille',noir:'Savon noir & maison',soins:'Soins',liquide:'Savon liquide',coffrets:'Coffrets'}[p.c];
+  document.getElementById('pdp').innerHTML=`<div class="g"><img src="${img(p.id)}" alt="${p.n}"></div><div class="d"><span class="mono">${cat} · Fabriqué à Salon-de-Provence</span><h1>${p.n}</h1><span class="price">${eur(p.p)}</span><p style="color:var(--ink-2);font-size:17px">${p.d}</p><div class="qty"><input type="number" min="1" value="1" id="q" aria-label="Quantité"><button class="btn solid" data-add="${p.id}" data-qty="1">${T('add_cart')}</button></div><p class="mono" style="color:var(--navy)">Fabriqué à Salon-de-Provence · Entreprise du Patrimoine Vivant</p><div class="tip"><b>Marius Conseil</b><span>${tipFor(p)}</span></div><div class="acc"><details open><summary>Fabrication</summary><p>Cuit au chaudron selon le procédé marseillais, coulé dans les mises, découpé puis séché à l’air libre, dans l’usine de la famille Fabre depuis 1927.</p></details><details><summary>Usages</summary><p>${p.d} ${tipFor(p)}</p></details><details><summary>Livraison et retours</summary><p>Livraison offerte dès 59 € d’achat. Satisfait ou remboursé pendant 15 jours.</p></details></div><ul><li><span>Fabrication</span><span>Savonnerie Marius Fabre, depuis 1900</span></li><li><span>Livraison</span><span>Offerte dès 59 €</span></li><li><span>Garantie</span><span>Satisfait ou remboursé 15 jours</span></li></ul></div>`;
+  const x=PRODUCTS.filter(q=>q.id!==p.id&&q.t.some(t=>p.t.includes(t))).slice(0,4);document.getElementById('xGrid').innerHTML=x.map(card).join('')}
+function tipFor(p){const k=p.c==='coffrets'?'cadeau':p.t[0];if(k==='peau')return 'Pour les peaux sensibles, préférez le savon 100 % huile d’olive : le plus doux de la maison. Le cube 400 g se partage aussi entre la toilette, le linge et la maison.';if(k==='linge')return 'Pour une lessive maison : 2 cuillères de copeaux par machine, à 40 °C. Idéal pour le linge des bébés.';if(p.t.includes('maison'))return 'Diluez une cuillère de savon noir dans un seau d’eau chaude : sols, carrelage et tomettes retrouvent leur éclat.';if(p.c==='coffrets')return 'Livré dans son coffret illustré. Ajoutez un message : nous le glissons à l’intérieur.';return 'Pour les peaux sensibles, préférez le savon 100 % huile d’olive : le plus doux de la maison.'}
+
+/* cart */
+function saveCart(){try{localStorage.setItem('mf_cart',JSON.stringify(cart))}catch(e){}renderCart()}
+function addCart(id,q=1){cart[id]=(cart[id]||0)+q;saveCart();toast(T('added')+' · '+P(id).n)}
+function renderCart(){const ids=Object.keys(cart).filter(k=>cart[k]>0);let tot=0,n=0;document.getElementById('items').innerHTML=ids.length?ids.map(id=>{const p=P(id);tot+=p.p*cart[id];n+=cart[id];return `<div class="ci"><img src="${img(id)}" alt=""><div>${p.n}<br><span class="mono">${cart[id]} × ${eur(p.p)}</span></div><button class="x" data-rm="${id}" aria-label="Retirer">−</button></div>`}).join(''):`<p style="padding:20px 0;color:var(--ink-2)">${T('empty')}</p>`;
+  document.getElementById('cartN').textContent=n;document.getElementById('total').textContent=eur(tot);const r=Math.max(0,59-tot);document.getElementById('shipTxt').textContent=r>0?T('ship_left').replace('{x}',eur(r)):T('ship_ok');document.getElementById('shipBar').style.width=Math.min(100,tot/59*100)+'%'}
+document.addEventListener('click',e=>{const a=e.target.closest('[data-add]');if(a){e.preventDefault();e.stopPropagation();const q=a.dataset.qty?parseInt(document.getElementById('q').value||1):1;addCart(a.dataset.add,q);return}const r=e.target.closest('[data-rm]');if(r){cart[r.dataset.rm]--;saveCart()}},true);
+const dr=document.getElementById('drawer'),sc=document.getElementById('scrim');
+function openCart(o){dr.classList.toggle('open',o);sc.classList.toggle('on',o)}
+document.getElementById('cartBtn').onclick=()=>openCart(true);document.getElementById('closeCart').onclick=()=>openCart(false);sc.onclick=()=>openCart(false);
+function toast(t){const el=document.getElementById('toast');el.textContent=t;el.classList.add('on');clearTimeout(el._t);el._t=setTimeout(()=>el.classList.remove('on'),2200)}
+
+/* film (the house's own video) */
+const film=document.getElementById('film');function playFilm(){if(film.querySelector('iframe'))return;film.insertAdjacentHTML('beforeend','<iframe src="https://www.youtube-nocookie.com/embed/oLXB2-RQezY?autoplay=1&rel=0" title="La savonnerie Marius Fabre, une histoire de famille" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe>')}
+film.onclick=playFilm;film.onkeydown=e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();playFilm()}};
+
+/* visit booking */
+const vd=document.getElementById('vDate');const t0=new Date();t0.setDate(t0.getDate()+3);vd.value=t0.toISOString().slice(0,10);vd.min=new Date().toISOString().slice(0,10);
+document.getElementById('visitForm').onsubmit=e=>{e.preventDefault();const d=new Date(vd.value).toLocaleDateString(LANG==='ja'?'ja-JP':LANG,{weekday:'long',day:'numeric',month:'long'});document.getElementById('vMsg').textContent=T('booked').replace('{d}',d).replace('{h}',document.getElementById('vHour').value).replace('{n}',document.getElementById('vPeople').value)};
+
+/* hero video fallback: the poster image stays animated if the video cannot play */
+const hv=document.getElementById('heroVid');hv.addEventListener('error',()=>hv.remove(),true);hv.querySelector('source').addEventListener('error',()=>hv.remove());
+
+/* advisor */
+const FLOW_I18N={
+ en:{start:'Hello, I am Marius Conseil. I can help you choose the right soap, find a gift or plan your visit. What are you looking for?',peau:['A soap for the skin','For washing, our 100% olive oil soap is the gentlest in the house, perfect for sensitive skin. For damaged hands, try the repairing cream.'],linge:['For laundry','Marseille soap flakes make a very gentle homemade detergent, ideal for babies’ clothes. For stains, rub with laundry soap before washing.'],maison:['For the home','Olive-oil black soap cleans everything: floors, windows, worktops. One spoonful in a bucket of hot water is enough.'],cadeau:['A gift idea','Our Christmas gift sets are illustrated by Anna Fabre. The full “Essentials of Provence” ritual is a sure hit; the 125th-anniversary edition will delight connoisseurs.'],visite:['Visit the soap factory','The tour of the workshops and the museum is free, in Salon-de-Provence. Let me take you to the booking form.'],vrai:['Spotting true Marseille soap','True Marseille soap is cooked in a cauldron from plant oils, with no colouring or fragrance. Ours carries the house stamp and its oil content.']},
+ ja:{start:'こんにちは、マリウス・コンセイユです。石鹸選び、ギフト探し、工場見学のご案内をいたします。何をお探しですか？',peau:['肌のための石鹸','洗顔・ボディには、メゾンで最もやさしいオリーブオイル100％石鹸がおすすめです。敏感肌にも。手荒れには修復ハンドクリームを。'],linge:['洗濯用','マルセイユ石鹸のフレークで、赤ちゃんの衣類にもやさしい手作り洗剤に。シミには洗う前に洗濯石鹸でこすってください。'],maison:['お家のお掃除','オリーブオイルの黒石鹸は床、窓、作業台まで万能。バケツのお湯にスプーン1杯で十分です。'],cadeau:['ギフトのアイデア','クリスマスギフトはアンナ・ファーブルのイラスト入り。「プロヴァンスのエッセンシャル」は間違いのない贈り物です。'],visite:['工場見学','サロン＝ド＝プロヴァンスの工房と博物館の見学は無料です。予約フォームへご案内します。'],vrai:['本物のマルセイユ石鹸の見分け方','本物は植物油を釜で炊き、着色料も香料も加えません。当社の石鹸にはメゾンの刻印と油分の表示があります。']}};
+const fq=k=>{const L=FLOW_I18N[LANG]||(LANG==='fr'?null:FLOW_I18N.en);return L?L[k][0]:FLOW[k].q};const ft=k=>{const L=FLOW_I18N[LANG]||(LANG==='fr'?null:FLOW_I18N.en);return L?(k==='start'?L.start:L[k][1]):FLOW[k].t};
+const FLOW={
+ start:{t:'Bonjour, je suis Marius Conseil. Je vous aide à choisir le bon savon, à trouver un cadeau ou à préparer votre visite. Que cherchez-vous ?',c:['peau','linge','maison','cadeau','visite','vrai']},
+ peau:{q:'Un savon pour la peau',t:'Pour la toilette, le savon 100 % huile d’olive est le plus doux de la maison, parfait pour les peaux sensibles. Pour les mains abîmées, la crème réparatrice fait des merveilles.',r:['p04','p00','p05'],c:['cadeau','linge']},
+ linge:{q:'Pour le linge',t:'Les copeaux de savon de Marseille font une lessive maison très douce, idéale pour le linge des bébés. Pour les taches, frottez avec le savon pour le linge avant le lavage.',r:['p03','p01','p23'],c:['maison','cadeau']},
+ maison:{q:'Pour la maison',t:'Le savon noir à l’huile d’olive nettoie tout : sols, vitres, plans de travail. Une cuillère dans un seau d’eau chaude suffit.',r:['p02','p06','p09'],c:['linge','peau']},
+ cadeau:{q:'Une idée cadeau',t:'Nos coffrets de Noël sont illustrés par Anna Fabre. Le rituel complet « Les essentiels de Provence » plaît à coup sûr ; l’édition « 125 ans » ravira les connaisseurs.',r:['p16','p17','p11'],c:['visite','peau']},
+ visite:{q:'Visiter la savonnerie',t:'La visite des ateliers et du musée est gratuite, avenue Paul-Bourret à Salon-de-Provence. Je vous emmène au formulaire de réservation.',go:'visiter',c:['cadeau','vrai']},
+ vrai:{q:'Reconnaître le vrai savon de Marseille',t:'Le vrai savon de Marseille est cuit au chaudron, sans colorant ni parfum, à partir d’huiles végétales. Le nôtre porte l’estampille de la maison et la mention de sa teneur en huile.',r:['p00'],c:['peau','linge']}};
+const log=document.getElementById('log'),chips=document.getElementById('chips'),adv=document.getElementById('adv'),advB=document.getElementById('advB');
+function say(t,w){const d=document.createElement('div');d.className='bub '+w;d.textContent=t;log.appendChild(d);log.scrollTop=log.scrollHeight}
+function recs(ids){ids.forEach(id=>{const p=P(id);const d=document.createElement('div');d.className='rec';d.innerHTML=`<img src="${img(id)}" alt=""><div>${p.n}<br><span class="mono">${eur(p.p)}</span></div><button class="add" data-add="${id}">${T('add')}</button>`;log.appendChild(d)});log.scrollTop=log.scrollHeight}
+function show(k){chips.innerHTML='';FLOW[k].c.forEach(c=>{const b=document.createElement('button');b.textContent=fq(c);b.onclick=()=>{say(fq(c),'me');setTimeout(()=>{say(ft(c),'bot');if(FLOW[c].r)recs(FLOW[c].r);if(FLOW[c].go){toggleAdv(false);go('home',{anchor:FLOW[c].go})}show(c)},300)};chips.appendChild(b)})}
+let started=false;function toggleAdv(o){adv.classList.toggle('open',o);advB.setAttribute('aria-expanded',o);if(o&&!started){started=true;say(ft('start'),'bot');show('start')}}
+advB.onclick=()=>toggleAdv(!adv.classList.contains('open'));
+const heroEl=document.querySelector('.hero');if('IntersectionObserver' in window){new IntersectionObserver(es=>{const vis=es[0].isIntersecting&&document.getElementById('v-home').classList.contains('on');advB.classList.toggle('hid',vis&&!adv.classList.contains('open'))},{threshold:.35}).observe(heroEl)}
+document.addEventListener('click',e=>{if(e.target.closest('[data-go]'))setTimeout(()=>{if(!document.getElementById('v-home').classList.contains('on'))advB.classList.remove('hid')},60)});document.getElementById('advX').onclick=()=>toggleAdv(false);
+document.addEventListener('keydown',e=>{if(e.key==='Escape'){toggleAdv(false);openCart(false)}});
+
+/* i18n (key strings) */
+const I18N={
+en:{adv_k:'Soap factory adviser',h_sign:'Marie & Julie Bousquet-Fabre · 4th generation',h_cta1:'The 72% cube · €4.60 — Add',h_cta2:'Visit the soap factory →',top2:'Free tours of the soap factory and museum · Salon-de-Provence',n_shop:'Shop',n_house:'The house',n_visit:'Visit',n_gift:'Gift sets',cart:'Basket',h_kicker:'Salon-de-Provence · Four generations · Living Heritage Company',h_title:'Soap makers<br>since 1900.',h_sub:'Cooked in the cauldron, poured into the vats, stamped by hand. True Marseille soap, with no added colour or fragrance.',h_cta2:'Visit the soap factory',f2:'Generations',f3:'State label',f4:'Countries',s_k:'The house number',s_t:'oil, and nothing to hide.',s_p:'Marius Fabre Marseille soap is cooked in the cauldron following the Marseille process, with plant oils sourced in France and Europe, palm-oil free since 2020. A four-generation recipe Japan has asked for since 1990.',s_cta:'The historic cube, €4.60',b_k:'The essentials',b_t:'What the house does best.',b_all:'Whole shop',g_k:'The craft',g_t:'Four gestures, since 1900.',g_p:'Nothing has changed in the workshop: soap is still cooked, poured, cut and stamped as in Marius’s day.',st1:'Cooking',st2:'Pouring',st3:'Cutting',st4:'Stamping',fi_k:'The film',fi_t:'Step inside the soap factory.',tl_t:'A family story.',tl_more:'The house',v_k:'Free tour',v_t:'Visit the soap factory and its museum.',v_p:'The workshops and the Marseille soap museum are open free of charge, inside the 1927 factory. Book your slot in seconds.',v_book:'Book for free',sh_k:'Our shops',sh_p:'And over 40 countries, from Japan to the United Kingdom.',c_t:'Give Provence.',e1:'palm oil',e2:'Living Heritage Company',sp_k:'The shop',sp_t:'True Marseille soap.',fa:'All',fm:'Marseille soap',fn:'Black soap & home',fs:'Body care',fl:'Liquid soap',fc:'Gift sets',back:'Back to the shop',x_t:'Often chosen together.',hs_t:'A family, a factory, a seal.',total:'Total',checkout:'Checkout',add:'Add',add_cart:'Add to basket',added:'Added',empty:'Your basket is empty.',ship_left:'{x} away from free delivery',ship_ok:'Free delivery unlocked',booked:'Booked: {d}, {h}, {n} people. A confirmation email is on its way.'},
+es:{adv_k:'Asesor de la jabonería',top2:'Visitas gratuitas a la jabonería y al museo',h_sign:'Marie y Julie Bousquet-Fabre · 4.ª generación',h_cta1:'El cubo 72 % · 4,60 € — Añadir',top1:'Envío gratis desde 59 €',n_shop:'Tienda',n_house:'La casa',n_visit:'Visitar',n_gift:'Cofres',cart:'Cesta',h_title:'Jaboneros<br>desde 1900.',h_sub:'Cocido en caldera, vertido en las balsas, sellado a mano. El auténtico jabón de Marsella.',h_cta2:'Visitar la jabonería',b_t:'Lo mejor de la casa.',g_t:'Cuatro gestos, desde 1900.',tl_t:'Una historia de familia.',v_t:'Visite la jabonería y su museo.',v_book:'Reservar gratis',c_t:'Regalar la Provenza.',sp_t:'El auténtico jabón de Marsella.',add:'Añadir',add_cart:'Añadir a la cesta',added:'Añadido',empty:'Su cesta está vacía.',ship_left:'Le faltan {x} para el envío gratis',ship_ok:'Envío gratis',booked:'Reservado: {d}, {h}, {n} personas.'},
+de:{adv_k:'Berater der Seifensiederei',top2:'Kostenlose Führungen durch Siederei und Museum',h_sign:'Marie & Julie Bousquet-Fabre · 4. Generation',h_cta1:'Der 72-%-Würfel · 4,60 € — Hinzufügen',top1:'Kostenloser Versand ab 59 €',n_shop:'Shop',n_house:'Das Haus',n_visit:'Besuchen',n_gift:'Geschenksets',cart:'Warenkorb',h_title:'Seifensieder<br>seit 1900.',h_sub:'Im Kessel gesotten, in Becken gegossen, von Hand gestempelt. Echte Marseiller Seife.',h_cta2:'Die Seifensiederei besuchen',b_t:'Das Beste des Hauses.',g_t:'Vier Handgriffe, seit 1900.',tl_t:'Eine Familiengeschichte.',v_t:'Besuchen Sie die Siederei und ihr Museum.',v_book:'Kostenlos buchen',c_t:'Die Provence verschenken.',sp_t:'Echte Marseiller Seife.',add:'Hinzufügen',add_cart:'In den Warenkorb',added:'Hinzugefügt',empty:'Ihr Warenkorb ist leer.',ship_left:'Noch {x} bis zum Gratisversand',ship_ok:'Gratisversand',booked:'Gebucht: {d}, {h}, {n} Personen.'},
+it:{adv_k:'Consulente del saponificio',top2:'Visite gratuite al saponificio e al museo',h_sign:'Marie e Julie Bousquet-Fabre · 4ª generazione',h_cta1:'Il cubo 72 % · 4,60 € — Aggiungi',top1:'Spedizione gratuita da 59 €',n_shop:'Negozio',n_house:'La casa',n_visit:'Visitare',n_gift:'Cofanetti',cart:'Carrello',h_title:'Saponai<br>dal 1900.',h_sub:'Cotto nel calderone, colato nelle vasche, timbrato a mano. Il vero sapone di Marsiglia.',h_cta2:'Visita il saponificio',b_t:'Il meglio della casa.',g_t:'Quattro gesti, dal 1900.',tl_t:'Una storia di famiglia.',v_t:'Visitate il saponificio e il suo museo.',v_book:'Prenota gratis',c_t:'Regalare la Provenza.',sp_t:'Il vero sapone di Marsiglia.',add:'Aggiungi',add_cart:'Aggiungi al carrello',added:'Aggiunto',empty:'Il carrello è vuoto.',ship_left:'Mancano {x} alla spedizione gratuita',ship_ok:'Spedizione gratuita',booked:'Prenotato: {d}, {h}, {n} persone.'},
+ja:{adv_k:'石鹸工房のコンシェルジュ',top2:'石鹸工場と博物館の無料見学・サロン＝ド＝プロヴァンス',h_sign:'マリー＆ジュリー・ブスケ＝ファーブル・4代目',h_cta1:'72％キューブ・4.60€ — 追加',top1:'59ユーロ以上で送料無料',n_shop:'ショップ',n_house:'メゾン',n_visit:'見学',n_gift:'ギフト',cart:'カート',h_kicker:'サロン＝ド＝プロヴァンス・4世代・無形文化財企業',h_title:'1900年から<br>石鹸づくり。',h_sub:'釜で炊き、型に流し、ひとつずつ手で刻印。本物のマルセイユ石鹸。',h_cta2:'工場を見学する',b_t:'メゾンの定番。',g_t:'1900年から変わらない4つの工程。',tl_t:'家族の物語。',v_t:'石鹸工場と博物館へ。',v_book:'無料で予約',c_t:'プロヴァンスを贈る。',sp_t:'本物のマルセイユ石鹸。',add:'追加',add_cart:'カートに入れる',added:'追加しました',empty:'カートは空です。',ship_left:'送料無料まであと{x}',ship_ok:'送料無料',booked:'予約完了：{d} {h}、{n}名様'}};
+const FR={add:'Ajouter',add_cart:'Ajouter au panier',added:'Ajouté',empty:'Votre panier est vide.',ship_left:'Plus que {x} pour la livraison offerte',ship_ok:'Livraison offerte',booked:'Réservé : {d}, {h}, {n} personnes. Un e-mail de confirmation vous est envoyé.'};
+let LANG='fr';const ORIG={};document.querySelectorAll('[data-i]').forEach(el=>ORIG[el.dataset.i]=ORIG[el.dataset.i]||el.innerHTML);
+function T(k){return (LANG!=='fr'&&I18N[LANG]&&I18N[LANG][k])||FR[k]||k}
+function setLang(l){LANG=l;document.documentElement.lang=l;document.querySelectorAll('[data-i]').forEach(el=>{const k=el.dataset.i;el.innerHTML=(l!=='fr'&&I18N[l]&&I18N[l][k])||ORIG[k]});document.getElementById('lang').value=l;started=false;log.innerHTML='';chips.innerHTML='';if(adv.classList.contains('open')){started=true;say(ft('start'),'bot');show('start')}
+  renderGrids();renderCart();if(document.getElementById('v-product').classList.contains('on'))renderPdp(document.querySelector('#pdp [data-add]')?.dataset.add)}
+document.getElementById('lang').onchange=e=>setLang(e.target.value);
+
+/* boot */
+renderGrids();renderCart();
+const h=location.hash.slice(1);if(h==='boutique')go('shop');else if(h==='maison')go('house');
+</script>
+</body>
+</html>
