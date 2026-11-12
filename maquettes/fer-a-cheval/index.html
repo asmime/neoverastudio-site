@@ -1,0 +1,696 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Fer à Cheval — Proposition Neovera Studio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@500;700;800&family=Newsreader:ital,opsz,wght@0,6..72,400;1,6..72,400;1,6..72,500&family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500;600&family=Noto+Sans+SC:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#141210;--ink2:#1D1A16;--line:#33302A;--paper:#ECE6DA;--mute:#B3AA9C;--kraft:#C59E73;--studio:#F1ECE3;--studio2:#E6DFD3;--dark:#141210}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--ink);color:var(--paper);font:400 16px/1.6 Inter,system-ui,sans-serif;overflow-x:clip;-webkit-font-smoothing:antialiased}
+html[lang=zh] body{font-family:'Noto Sans SC',Inter,sans-serif}
+a{color:inherit;text-decoration:none}
+button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
+img{display:block;max-width:100%}
+.disp{font-family:'Big Shoulders Display',Impact,sans-serif;font-weight:800;text-transform:uppercase;letter-spacing:.01em;line-height:.9}
+.disp em,.ser em,h2 em{font-family:Newsreader,Georgia,serif;font-style:italic;font-weight:400;text-transform:none;letter-spacing:-.01em}
+html[lang=zh] .disp,html[lang=zh] h2{font-family:'Noto Sans SC',sans-serif;font-weight:600;letter-spacing:0;line-height:1.15}
+html[lang=zh] .disp em,html[lang=zh] h2 em{font-family:'Noto Sans SC',sans-serif;font-style:normal;color:var(--kraft)}
+.mono{font:500 11.5px/1.4 'IBM Plex Mono',monospace;letter-spacing:.14em;text-transform:uppercase;color:var(--mute)}
+.wrap{max-width:1360px;margin:0 auto;padding:0 clamp(18px,4vw,56px)}
+/* top + header */
+.top{background:var(--kraft);color:#1A140D;display:flex;justify-content:space-between;gap:16px;padding:7px clamp(18px,4vw,56px);font:500 11px/1.3 'IBM Plex Mono',monospace;letter-spacing:.1em;text-transform:uppercase}
+header{position:sticky;top:0;z-index:50;background:rgba(20,18,16,.94);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.hd{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:20px;height:74px}
+.nav{display:flex;gap:22px;font-size:14px;white-space:nowrap}
+.nav a{opacity:.85;cursor:pointer}.nav a:hover{opacity:1;color:var(--kraft)}
+.navadv{color:var(--kraft)!important;opacity:1!important;display:inline-flex;align-items:center;gap:8px;font-weight:600}
+.navadv i{width:8px;height:8px;border-radius:50%;background:var(--kraft);box-shadow:0 0 0 0 rgba(197,158,115,.6);animation:pulse 2.2s infinite}
+@keyframes pulse{70%{box-shadow:0 0 0 9px rgba(197,158,115,0)}100%{box-shadow:0 0 0 0 rgba(197,158,115,0)}}
+.logo{text-align:center;cursor:pointer;line-height:1}
+.logo b{display:block;font-family:'Big Shoulders Display';font-weight:800;font-size:30px;letter-spacing:.16em}
+.logo span{font:500 9.5px 'IBM Plex Mono';letter-spacing:.3em;text-transform:uppercase;color:var(--kraft)}
+.hr{display:flex;justify-content:flex-end;align-items:center;gap:14px}
+.langsel{appearance:none;-webkit-appearance:none;background:transparent url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6'%3E%3Cpath d='M1 1l4 4 4-4' fill='none' stroke='%23ECE6DA' stroke-width='1.4'/%3E%3C/svg%3E") no-repeat right 12px center;color:var(--paper);border:1px solid var(--line);border-radius:999px;padding:8px 32px 8px 14px;font:500 13px Inter;cursor:pointer}
+.langsel option{color:#111}
+.cartb{position:relative;width:42px;height:42px;border:1px solid var(--line);border-radius:50%;display:grid;place-items:center}
+.cartb .pill{position:absolute;top:-4px;right:-4px;background:var(--kraft);color:#111;font:600 11px Inter;min-width:19px;height:19px;border-radius:10px;display:grid;place-items:center}
+.burger{display:none}
+/* views */
+.view{display:none}.view.on{display:block}
+/* hero */
+.hero{position:relative;height:min(92vh,880px);min-height:560px;overflow:hidden;border-bottom:1px solid var(--line)}
+.hero video,.hero .poster{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.hero:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(20,18,16,.72) 0%,rgba(20,18,16,.25) 55%,transparent 75%),linear-gradient(180deg,rgba(20,18,16,.35) 0%,rgba(20,18,16,.3) 40%,rgba(20,18,16,.92) 100%)}
+.hero-in .mono{text-shadow:0 1px 8px rgba(0,0,0,.6)}
+.hero-in{position:absolute;inset:auto 0 0 0;z-index:2;padding-bottom:clamp(36px,5vw,64px)}
+.hero h1+.hero-row{margin-top:0}
+.hero h1{font-size:clamp(64px,10.5vw,172px);margin:16px 0 20px}
+.hero h1 em{font-size:.8em;color:var(--kraft)}
+.hero-row{display:flex;flex-direction:column;align-items:flex-start;gap:26px}
+.hero-row p{max-width:560px;font-size:17px;color:#D8D0C2}
+.ctas{display:flex;gap:22px;align-items:center;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;gap:10px;background:var(--kraft);color:#16110B;padding:16px 26px;border-radius:999px;font-weight:600;font-size:15px;transition:transform .2s,background .2s}
+.btn:hover{transform:translateY(-2px);background:#D4B087}
+.lnk{border-bottom:1px solid currentColor;padding-bottom:2px;font-size:15px;cursor:pointer}
+/* facts */
+.facts{display:grid;grid-template-columns:repeat(4,1fr);border-bottom:1px solid var(--line)}
+.facts div{padding:30px clamp(18px,2.6vw,36px);border-right:1px solid var(--line)}
+.facts div:last-child{border-right:0}
+.facts strong{display:block;font-family:'Big Shoulders Display';font-weight:800;font-size:clamp(40px,4.6vw,64px);line-height:1;color:var(--paper);margin-bottom:10px}
+.facts span{font-size:14px;color:var(--mute);line-height:1.45;display:block;max-width:240px}
+/* sections */
+section.blk{padding:clamp(70px,9vw,130px) 0}
+.sh{display:flex;justify-content:space-between;align-items:flex-end;gap:30px;margin-bottom:46px;flex-wrap:wrap}
+h2{font-family:'Big Shoulders Display';font-weight:800;text-transform:uppercase;font-size:clamp(36px,4.4vw,64px);line-height:.95;max-width:900px}
+h2 em{color:var(--kraft);font-size:.86em}
+.monu{display:grid;grid-template-columns:1.25fr 1fr;gap:clamp(30px,5vw,80px);align-items:center}
+.monu figure{position:relative}
+.monu img{width:100%;aspect-ratio:16/10;object-fit:cover;filter:grayscale(.85) contrast(1.08) brightness(.9)}
+.monu figcaption{position:absolute;left:0;bottom:-28px;font:500 11px 'IBM Plex Mono';letter-spacing:.12em;text-transform:uppercase;color:var(--mute)}
+.monu p:not(.mono){font-family:Newsreader,Georgia,serif;font-size:21px;line-height:1.5;color:#D8D0C2;margin:26px 0 30px}
+html[lang=zh] .monu p:not(.mono){font-family:'Noto Sans SC';font-size:17px}
+/* 1856 */
+.c1856{background:var(--studio);color:var(--ink)}
+.c1856 .mono{color:#7D7466}
+.c1856 h2 em{color:#8A6A44}
+.c56{display:grid;grid-template-columns:1.1fr 1fr;gap:clamp(24px,4vw,60px);align-items:stretch}
+.c56 .big{background:#E9E3D8 center/cover;min-height:520px}
+/* product grid */
+.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.grid.g3{grid-template-columns:repeat(3,1fr)}
+.card{background:var(--studio);color:var(--ink);display:flex;flex-direction:column;cursor:pointer;transition:transform .25s}
+.card:hover{transform:translateY(-4px)}
+.card .ph{position:relative;aspect-ratio:1;background:var(--studio);overflow:hidden}
+.card .ph img{width:100%;height:100%;object-fit:contain;padding:9%;mix-blend-mode:multiply;transition:transform .5s}
+.card:hover .ph img{transform:scale(1.04)}
+.card .badge{position:absolute;top:0;left:0;z-index:2;font:500 10px 'IBM Plex Mono';letter-spacing:.12em;text-transform:uppercase;background:var(--kraft);color:#16110B;padding:6px 10px}
+.card[data-pid=p04] .ph img{object-fit:cover;padding:0;mix-blend-mode:normal;width:100%;height:100%}
+.card .info{padding:16px 18px 18px;display:flex;flex-direction:column;gap:10px;flex:1;border-top:1px solid #DDD5C7}
+.card .nm{font-size:15px;line-height:1.35;font-weight:500;flex:1}
+.card .row{display:flex;justify-content:space-between;align-items:center}
+.card .pr{font:700 21px 'Big Shoulders Display';letter-spacing:.02em}
+.card .add{font-size:13px;font-weight:600;border:1px solid var(--ink);border-radius:999px;padding:8px 14px;transition:.2s}
+.card .add:hover{background:var(--ink);color:var(--studio)}
+.c1856 .card{background:#FBF8F3}.c1856 .card .ph{background:#FBF8F3}
+/* steps */
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border-top:1px solid var(--line)}
+.step{padding:28px 26px 10px 0;border-right:1px solid var(--line);margin-right:26px}
+.step:last-child{border-right:0}
+.step .n{font:800 64px/1 'Big Shoulders Display';color:var(--kraft);margin-bottom:16px}
+.step h3{font:700 24px 'Big Shoulders Display';text-transform:uppercase;letter-spacing:.03em;margin-bottom:10px}
+html[lang=zh] .step h3{font-family:'Noto Sans SC'}
+.step p{color:var(--mute);font-size:15px}
+.gstrip{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-bottom:50px}
+.gstrip img{width:100%;aspect-ratio:3/4;object-fit:cover;filter:grayscale(1) contrast(1.1)}
+/* reviews */
+.revs{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.rev{border:1px solid var(--line);padding:30px}
+.rev q{display:block;font:italic 400 21px/1.45 Newsreader,Georgia,serif;quotes:none;margin-bottom:22px;color:var(--paper)}
+html[lang=zh] .rev q{font-family:'Noto Sans SC';font-style:normal;font-size:17px}
+.stars{color:var(--kraft);letter-spacing:3px;margin-bottom:14px}
+/* gifts */
+.xmas{background:var(--ink2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.xg{display:grid;grid-template-columns:1fr 2fr;gap:40px;align-items:start}
+.xg .xph{background:url(img/a07.jpg) center/cover;aspect-ratio:3/4}
+.xg>div:first-child{position:sticky;top:110px}
+.xg p.lead{color:#D8D0C2;margin:20px 0 26px;max-width:420px}
+/* visit */
+.visit{display:grid;grid-template-columns:1fr 1fr;gap:clamp(30px,5vw,80px);align-items:center}
+.visit .vimg{position:relative}
+.visit .vimg img{width:100%;aspect-ratio:4/3;object-fit:cover;filter:grayscale(.85) contrast(1.08) brightness(.9)}
+.visit form{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:30px}
+.visit label{display:flex;flex-direction:column;gap:7px;font:500 11px 'IBM Plex Mono';letter-spacing:.12em;text-transform:uppercase;color:var(--mute)}
+.visit select,.visit input{background:transparent;border:1px solid var(--line);color:var(--paper);padding:13px 14px;font:400 15px Inter;border-radius:0;appearance:none}
+.visit select option{color:#111}
+.visit .btn{grid-column:1/-1;justify-content:center}
+.visit .ok{grid-column:1/-1;color:var(--kraft);font-size:15px;display:none}
+.addr{margin-top:18px;font-size:14px;color:var(--mute)}
+/* labels + footer */
+.labels{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.labels div{padding:26px 24px;border-right:1px solid var(--line);font:600 15px 'Big Shoulders Display';letter-spacing:.06em;text-transform:uppercase;display:flex;gap:12px;align-items:center}
+.labels div:last-child{border-right:0}
+.labels i{width:30px;height:30px;border:1px solid var(--kraft);border-radius:50%;display:grid;place-items:center;font-style:normal;color:var(--kraft);font-size:13px;flex:none}
+footer{padding:70px 0 40px}
+.ft{display:grid;grid-template-columns:1.3fr 1fr 1.2fr 1fr;gap:40px}
+.ft>*{min-width:0}
+.ft .logo{text-align:left}
+.ft p{color:var(--mute);font-size:14px;margin-top:16px;max-width:380px}
+.ft h4{font:500 11px 'IBM Plex Mono';letter-spacing:.14em;text-transform:uppercase;color:var(--mute);margin-bottom:14px}
+.ft ul{list-style:none;display:grid;gap:8px;font-size:15px}
+.soc{display:flex;gap:10px}
+.soc a{width:42px;height:42px;border:1px solid var(--line);border-radius:50%;display:grid;place-items:center}
+.soc a:hover{border-color:var(--kraft);color:var(--kraft)}
+.mockline{margin-top:50px;padding-top:20px;border-top:1px solid var(--line);font:400 11px 'IBM Plex Mono';color:#6E675D;letter-spacing:.06em}
+/* shop */
+.pagehead{padding:60px 0 30px;border-bottom:1px solid var(--line);margin-bottom:30px}
+.pagehead h1{font-size:clamp(46px,6vw,96px)}
+.filters{display:flex;gap:10px;flex-wrap:wrap;margin:22px 0 0}
+.filters button{border:1px solid var(--line);border-radius:999px;padding:9px 16px;font-size:14px}
+.filters button.on{background:var(--kraft);border-color:var(--kraft);color:#16110B;font-weight:600}
+/* pdp */
+.pdp{display:grid;grid-template-columns:1.1fr 1fr;gap:clamp(30px,5vw,80px);padding:40px 0 80px}
+.pdp .g{background:var(--studio);aspect-ratio:1;display:grid;place-items:center}
+.pdp .g img{width:84%;height:84%;object-fit:contain;mix-blend-mode:multiply}
+.pdp h1{font-size:clamp(30px,3vw,44px);margin:14px 0 18px}
+html[lang=zh] .pdp h1{font-size:32px}
+.pdp .price{font:800 40px 'Big Shoulders Display';color:var(--kraft)}
+.pdp .desc{color:#D8D0C2;margin:20px 0 26px;font-size:17px}
+.qty{display:inline-flex;border:1px solid var(--line);border-radius:999px;margin-right:12px}
+.qty button{width:42px;height:50px}.qty span{width:30px;display:grid;place-items:center}
+.reass{margin-top:22px;font:500 12px 'IBM Plex Mono';letter-spacing:.08em;color:var(--kraft);text-transform:uppercase}
+details{border-top:1px solid var(--line);padding:16px 0}
+details:last-of-type{border-bottom:1px solid var(--line)}
+summary{cursor:pointer;font-weight:600;list-style:none;display:flex;justify-content:space-between}
+summary:after{content:"+";color:var(--kraft)}details[open] summary:after{content:"–"}
+details p{color:var(--mute);margin-top:10px;font-size:15px}
+.backl{display:inline-block;margin-top:34px;cursor:pointer;color:var(--mute)}
+/* house */
+.tl{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border-top:1px solid var(--line)}
+.tl div{padding:28px 24px 34px 0;border-bottom:1px solid var(--line)}
+.tl strong{display:block;font:800 54px/1 'Big Shoulders Display';color:var(--kraft);margin-bottom:12px}
+.tl p{color:#D8D0C2;font-size:15px;max-width:280px}
+.archive{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:60px 0}
+.archive img{width:100%;aspect-ratio:16/9;object-fit:cover;filter:grayscale(1) contrast(1.1)}
+/* cart drawer */
+.ovl{position:fixed;inset:0;background:rgba(0,0,0,.55);z-index:80;opacity:0;pointer-events:none;transition:.3s}
+.ovl.on{opacity:1;pointer-events:auto}
+.drawer{position:fixed;top:0;right:0;height:100%;width:min(420px,100%);background:var(--studio);color:var(--ink);z-index:90;transform:translateX(100%);transition:.35s;display:flex;flex-direction:column}
+.drawer.on{transform:none}
+.dh{display:flex;justify-content:space-between;align-items:center;padding:22px 24px;border-bottom:1px solid #DDD5C7}
+.dh b{font:800 26px 'Big Shoulders Display';text-transform:uppercase}
+.ship{padding:14px 24px;font-size:13.5px;background:#E9E2D5}
+.ship .bar{height:4px;background:#D8CFBF;margin-top:8px}.ship .bar i{display:block;height:100%;background:#8A6A44;transition:.3s}
+.items{flex:1;overflow:auto;padding:10px 24px}
+.it{display:grid;grid-template-columns:64px 1fr auto;gap:14px;align-items:center;padding:14px 0;border-bottom:1px solid #DDD5C7;font-size:14px}
+.it img{width:64px;height:64px;object-fit:contain;mix-blend-mode:multiply;background:#fff}
+.it .q{display:flex;gap:8px;align-items:center;margin-top:6px}.it .q button{width:24px;height:24px;border:1px solid #CFC6B6;border-radius:50%}
+.df{padding:20px 24px;border-top:1px solid #DDD5C7}
+.df .tot{display:flex;justify-content:space-between;font:800 24px 'Big Shoulders Display';margin-bottom:14px}
+.df .btn{width:100%;justify-content:center;background:var(--ink);color:var(--studio)}
+.toast{position:fixed;bottom:100px;left:50%;transform:translate(-50%,20px);background:var(--kraft);color:#16110B;padding:12px 22px;border-radius:999px;font-weight:600;z-index:120;opacity:0;pointer-events:none;transition:.3s}
+.toast.on{opacity:1;transform:translate(-50%,0)}
+/* advisor */
+.adv-b{position:fixed;right:22px;bottom:22px;z-index:70;display:flex;align-items:center;gap:12px;background:var(--kraft);color:#16110B;border-radius:999px;padding:8px 20px 8px 8px;box-shadow:0 12px 34px rgba(0,0,0,.45)}
+.adv-b i{width:40px;height:40px;border-radius:50%;background:#16110B;color:var(--kraft);display:grid;place-items:center;font:800 16px 'Big Shoulders Display';font-style:normal;position:relative}
+.adv-b i:after{content:"";position:absolute;inset:-3px;border-radius:50%;border:2px solid #16110B;opacity:.5;animation:ring 2.4s ease-out 4}
+@keyframes ring{to{inset:-12px;opacity:0}}
+.adv-b span{display:grid;text-align:left;line-height:1.15}.adv-b b{font-size:14px}.adv-b small{font-size:12px;opacity:.8}
+.adv-bub{position:fixed;right:22px;bottom:92px;z-index:71;max-width:290px;background:var(--studio);color:var(--ink);padding:16px 34px 16px 18px;font-size:14.5px;line-height:1.45;box-shadow:0 14px 34px rgba(0,0,0,.4);opacity:0;transform:translateY(8px);pointer-events:none;transition:.4s;cursor:pointer;border-left:3px solid var(--kraft)}
+.adv-bub.on{opacity:1;transform:none;pointer-events:auto}
+.adv-bub .x{position:absolute;top:4px;right:8px;font-size:20px}
+.adv{position:fixed;right:22px;bottom:22px;width:min(400px,calc(100% - 28px));height:min(620px,calc(100% - 120px));background:var(--studio);color:var(--ink);z-index:95;display:flex;flex-direction:column;box-shadow:0 20px 60px rgba(0,0,0,.5);opacity:0;transform:translateY(16px) scale(.98);pointer-events:none;transition:.3s}
+.adv.open{opacity:1;transform:none;pointer-events:auto}
+.adv-h{background:var(--ink);color:var(--paper);padding:18px 20px;display:flex;justify-content:space-between;align-items:center}
+.adv-h b{font:800 22px 'Big Shoulders Display';text-transform:uppercase;letter-spacing:.03em;display:block}
+.adv-h .mono{color:var(--kraft)}
+.log{flex:1;overflow:auto;padding:16px;display:flex;flex-direction:column;gap:10px}
+.bub{max-width:88%;padding:11px 14px;font-size:14.5px;line-height:1.5}
+.bub.bot{background:#E6DFD3}.bub.me{background:var(--ink);color:var(--paper);align-self:flex-end}
+.rec{display:grid;grid-template-columns:52px 1fr auto;gap:10px;align-items:center;background:#fff;padding:8px 10px;font-size:13.5px;line-height:1.3}
+.rec img{width:52px;height:52px;object-fit:contain}
+.rec .add{font-size:12.5px;font-weight:600;background:var(--ink);color:var(--studio);padding:7px 11px;border-radius:999px}
+.chips{display:flex;flex-wrap:wrap;gap:7px;padding:12px 16px 16px;border-top:1px solid #DDD5C7}
+.chips button{border:1px solid #BFB4A2;border-radius:999px;padding:8px 12px;font-size:13px}
+.chips button:hover{background:var(--ink);color:var(--paper)}
+/* responsive */
+@media(max-width:1000px){.grid{grid-template-columns:repeat(2,1fr)}.facts{grid-template-columns:1fr 1fr}.facts div:nth-child(2){border-right:0}.facts div:nth-child(-n+2){border-bottom:1px solid var(--line)}.steps,.tl{grid-template-columns:1fr 1fr}.labels{grid-template-columns:1fr 1fr}.labels div:nth-child(2){border-right:0}.labels div:nth-child(-n+2){border-bottom:1px solid var(--line)}}
+@media(max-width:760px){
+.top span:last-child{display:none}
+.hd{grid-template-columns:auto 1fr auto;height:62px}
+.nav{display:none}.burger{display:grid;width:40px;height:40px;place-items:center;border:1px solid var(--line);border-radius:50%}
+.logo b{font-size:19px;letter-spacing:.1em;white-space:nowrap}.logo span{display:none}
+.hero-in .mono{font-size:10px;letter-spacing:.08em}.ctas{flex-direction:column;align-items:flex-start;gap:16px}
+.langsel{padding:7px 26px 7px 10px;font-size:12px;max-width:104px}
+.nav.open{display:flex;flex-direction:column;position:absolute;top:62px;left:0;right:0;background:var(--ink);padding:20px;border-bottom:1px solid var(--line);gap:16px;font-size:17px}
+.hero{height:88vh}.hero p{font-size:15.5px}
+.monu,.c56,.visit,.xg,.pdp,.ft,.archive{grid-template-columns:1fr}
+.c56 .big{min-height:300px}
+.grid,.grid.g3{grid-template-columns:1fr 1fr;gap:10px}
+.card .info{padding:12px}.card .nm{font-size:13.5px}.card .pr{font-size:18px}.card .add{padding:7px 10px;font-size:12px}
+.steps,.tl,.revs{grid-template-columns:1fr}.step{border-right:0;margin-right:0;border-bottom:1px solid var(--line)}
+.gstrip{grid-template-columns:1fr 1fr}
+.visit form{grid-template-columns:1fr}
+.adv-b{right:14px;bottom:14px}.adv-b small{display:none}
+.adv-bub{right:14px;bottom:80px;max-width:250px}
+.adv{right:8px;bottom:8px;height:calc(100% - 90px)}
+}
+@media(max-width:760px){.langsel{max-width:64px;padding:6px 20px 6px 8px;background-position:right 6px center}.hr{gap:8px}.adv-b span{display:none}.adv-b{padding:6px}}
+.adv-b{transition:opacity .35s,transform .35s}.adv-b.hid{opacity:0;transform:translateY(20px);pointer-events:none}
+#v-shop,#v-product{padding-bottom:90px}
+.rev{display:flex;flex-direction:column}.rev .mono{margin-top:auto}
+.revhead{display:flex;align-items:baseline;gap:18px;margin:-10px 0 34px}.revhead b{font:800 clamp(70px,9vw,120px)/.9 'Big Shoulders Display';color:var(--kraft)}
+.thumbs{display:flex;gap:8px;margin-top:10px}.thumbs img{width:76px;height:76px;object-fit:cover;cursor:pointer;opacity:.6;border:1px solid var(--line)}.thumbs img.on,.thumbs img:hover{opacity:1;border-color:var(--kraft)}
+.pdp .g img.cov{width:100%;height:100%;object-fit:cover;mix-blend-mode:normal}
+.labels b{font:500 12px 'IBM Plex Mono';color:var(--kraft);letter-spacing:.1em}
+.nl{display:flex;margin-top:12px;max-width:340px}.nl input{flex:1;min-width:0;background:transparent;border:1px solid var(--line);color:var(--paper);padding:11px 12px;font:14px Inter}.nl button{background:var(--kraft);color:#16110B;border:0;padding:0 16px;font:600 13px Inter;cursor:pointer}
+.revhead b{white-space:nowrap}
+@media(max-width:760px){.revhead{flex-wrap:wrap;gap:8px}.gstrip{grid-template-columns:repeat(4,1fr);gap:6px;margin-bottom:28px}.gstrip img{aspect-ratio:2/3}.labels div{padding:18px 14px;font-size:13px;line-height:1.2;gap:8px}}
+.adv-b.mini span{display:none}.adv-b.mini{padding:6px}
+</style>
+</head>
+<body>
+<div class="top"><span data-i="top1"></span><span data-i="top2"></span></div>
+<header><div class="wrap hd">
+  <nav class="nav" id="nav">
+    <a data-go="shop" data-i="n_shop"></a>
+    <a data-go="house" data-i="n_house"></a>
+    <a data-go="home" data-anchor="visiter" data-i="n_visit"></a>
+    <a data-go="home" data-anchor="coffrets" data-i="n_gift"></a>
+    <a class="navadv" onclick="toggleAdv(true)"><i></i><span data-i="n_adv"></span></a>
+  </nav>
+  <button class="burger" aria-label="Menu" onclick="document.getElementById('nav').classList.toggle('open')"><svg width="18" height="12"><path d="M0 1h18M0 6h18M0 11h18" stroke="#ECE6DA" stroke-width="1.5"/></svg></button>
+  <div class="logo" data-go="home"><b>FER À CHEVAL</b><span data-i="tag"></span></div>
+  <div class="hr">
+    <select class="langsel" id="lang" aria-label="Langue"></select>
+    <button class="cartb" aria-label="Panier" onclick="openCart()"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 8h14l-1 12H6L5 8Z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg><span class="pill" id="cartN">0</span></button>
+  </div>
+</div></header>
+
+<main>
+<!-- HOME -->
+<div class="view on" id="v-home">
+  <section class="hero">
+    <img class="poster" src="img/hero.jpg" alt="">
+    <video autoplay muted loop playsinline poster="img/hero.jpg"><source src="img/hero.mp4" type="video/mp4"></video>
+    <div class="hero-in wrap">
+      <p class="mono" style="color:var(--kraft)" data-i="h_k"></p>
+      <h1 class="disp" data-i="h_t"></h1>
+      <div class="hero-row">
+        <p data-i="h_p"></p>
+        <div class="ctas"><a class="btn" data-go="home" data-anchor="c1856" data-i="h_c1"></a><a class="lnk" data-go="home" data-anchor="visiter" data-i="h_c2"></a></div>
+      </div>
+    </div>
+  </section>
+  <div class="facts">
+    <div><strong>1856</strong><span data-i="f1"></span></div>
+    <div><strong data-i="f2s"></strong><span data-i="f2"></span></div>
+    <div><strong>12 005</strong><span data-i="f3"></span></div>
+    <div><strong>EPV</strong><span data-i="f4"></span></div>
+  </div>
+
+  <section class="blk xmas" id="coffrets"><div class="wrap xg">
+    <div><div class="xph"></div></div>
+    <div><p class="mono" data-i="x_k"></p><h2 style="margin-top:12px;font-size:clamp(46px,6vw,96px)" data-i="x_t"></h2><p class="lead" data-i="x_p"></p><div class="grid" id="gGift" style="grid-template-columns:repeat(2,1fr)"></div></div>
+  </div></section>
+
+  <section class="blk c1856" id="c1856"><div class="wrap">
+    <div class="sh"><div><p class="mono" data-i="c_k"></p><h2 style="margin-top:12px" data-i="c_t"></h2></div></div>
+    <div class="c56"><div class="big" style="background-image:url(img/a00.jpg)"></div><div class="grid g3" id="g1856" style="grid-template-columns:1fr;gap:12px"></div></div>
+  </div></section>
+
+  <section class="blk"><div class="wrap monu">
+    <figure><img src="img/a06.jpg" alt="" data-ia="m_k"><figcaption>Chemin de Sainte-Marthe · 13014</figcaption></figure>
+    <div><p class="mono" data-i="m_k"></p><h2 style="margin-top:14px" data-i="m_t"></h2><p data-i="m_p"></p><a class="lnk" data-go="house" data-i="m_cta"></a></div>
+  </div></section>
+
+
+
+  <section class="blk"><div class="wrap">
+    <div class="sh"><div><p class="mono" data-i="b_k"></p><h2 style="margin-top:12px" data-i="b_t"></h2></div><a class="lnk" data-go="shop" data-i="all"></a></div>
+    <div class="grid" id="gBest"></div>
+  </div></section>
+
+  <section class="blk" style="padding-top:0"><div class="wrap">
+    <div class="sh"><div><p class="mono" data-i="g_k"></p><h2 style="margin-top:12px" data-i="g_t"></h2></div></div>
+    <div class="gstrip"><img src="img/a14l.jpg" alt=""><img src="img/a14r.jpg" alt=""><img src="img/a20.jpg" alt=""><img src="img/a15.jpg" alt=""></div>
+    <div class="steps">
+      <div class="step"><div class="n">01</div><h3 data-i="s1"></h3><p data-i="s1p"></p></div>
+      <div class="step"><div class="n">02</div><h3 data-i="s2"></h3><p data-i="s2p"></p></div>
+      <div class="step"><div class="n">03</div><h3 data-i="s3"></h3><p data-i="s3p"></p></div>
+      <div class="step"><div class="n">04</div><h3 data-i="s4"></h3><p data-i="s4p"></p></div>
+    </div>
+  </div></section>
+
+
+
+  <section class="blk"><div class="wrap">
+    <div class="sh"><div><p class="mono" data-i="r_k"></p><h2 style="margin-top:12px" data-i="r_t"></h2></div></div>
+    <div class="revhead"><b>12 005</b><span class="mono" data-i="r_head"></span></div>
+    <div class="revs">
+      <div class="rev"><div class="stars">★★★★★</div><q data-i="rv1"></q><p class="mono" data-i="rv1n"></p></div>
+      <div class="rev"><div class="stars">★★★★★</div><q data-i="rv2"></q><p class="mono" data-i="rv2n"></p></div>
+      <div class="rev"><div class="stars">★★★★★</div><q data-i="rv3"></q><p class="mono" data-i="rv3n"></p></div>
+    </div>
+  </div></section>
+
+
+
+  <section class="blk" id="visiter" style="background:var(--ink2);border-top:1px solid var(--line)"><div class="wrap visit">
+    <div class="vimg"><img src="img/a13.jpg" alt="" data-ia="p_vis"></div>
+    <div>
+      <p class="mono" style="color:var(--kraft)" data-i="v_k"></p>
+      <h2 style="margin-top:12px;font-size:clamp(46px,6vw,96px)" data-i="v_t"></h2>
+      <p style="color:#D8D0C2;margin-top:20px;font-size:17px" data-i="v_p"></p>
+      <form id="vForm" onsubmit="return book(event)">
+        <label><span data-i="v_date"></span><select id="vDate"></select></label>
+        <label><span data-i="v_ppl"></span><select id="vPpl"><option>1</option><option selected>2</option><option>3</option><option>4</option><option>5</option><option>6</option></select></label>
+        <button class="btn" type="submit" data-i="v_book"></button>
+        <p class="ok" id="vOk"></p>
+      </form>
+      <p class="addr" data-i="v_addr"></p>
+    </div>
+  </div></section>
+</div>
+
+<!-- SHOP -->
+<div class="view" id="v-shop"><div class="wrap">
+  <div class="pagehead"><p class="mono" data-i="sp_k"></p><h1 class="disp" style="margin-top:12px" data-i="sp_t"></h1>
+    <div class="filters" id="filters">
+      <button data-f="all" class="on" data-i="fa"></button><button data-f="marseille" data-i="fm"></button><button data-f="liquide" data-i="fl"></button><button data-f="soin" data-i="fs"></button><button data-f="maison" data-i="fh"></button><button data-f="coffret" data-i="fc"></button>
+    </div></div>
+  <div class="grid" id="gShop" style="padding-bottom:90px"></div>
+</div></div>
+
+<!-- PRODUCT -->
+<div class="view" id="v-product"><div class="wrap">
+  <a class="backl" data-go="shop" data-i="back"></a>
+  <div class="pdp" id="pdp"></div>
+  <div style="padding-bottom:90px"><p class="mono" style="margin-bottom:24px" data-i="xs"></p><div class="grid" id="gX"></div></div>
+</div></div>
+
+<!-- HOUSE -->
+<div class="view" id="v-house"><div class="wrap">
+  <div class="pagehead"><p class="mono" data-i="hs_k"></p><h1 class="disp" style="margin-top:12px" data-i="hs_t"></h1></div>
+  <div class="archive"><img src="img/a13.jpg" alt=""><img src="img/a14r.jpg" alt="" style="object-position:center 30%"></div>
+  <div class="tl">
+    <div><strong>1688</strong><p data-i="t1688"></p></div><div><strong>1850</strong><p data-i="t1850"></p></div><div><strong>1856</strong><p data-i="t1856"></p></div><div><strong>1953</strong><p data-i="t1953"></p></div>
+    <div><strong>2013</strong><p data-i="t2013"></p></div><div><strong>2019</strong><p data-i="t2019"></p></div><div><strong>2021</strong><p data-i="t2021"></p></div><div><strong>2026</strong><p data-i="t2026"></p></div>
+  </div>
+  <div style="padding:70px 0 90px;display:flex;gap:22px;flex-wrap:wrap"><a class="btn" data-go="home" data-anchor="visiter" data-i="v_book"></a><a class="lnk" data-go="shop" data-i="all" style="align-self:center"></a></div>
+</div></div>
+</main>
+
+<div class="labels">
+  <div><b>01</b><span data-i="lb1"></span></div><div><b>02</b><span data-i="lb2"></span></div><div><b>03</b><span data-i="lb3"></span></div><div><b>04</b><span data-i="lb4"></span></div>
+</div>
+<footer><div class="wrap">
+  <div class="ft">
+    <div><div class="logo"><b>FER À CHEVAL</b><span data-i="tag"></span></div><p data-i="ft_p"></p></div>
+    <div><h4 data-i="ft_c"></h4><ul><li><a href="mailto:serviceclient@savon-de-marseille.com">serviceclient@savon-de-marseille.com</a></li><li><a data-go="home" data-anchor="visiter" data-i="n_visit"></a></li><li><a data-go="house" data-i="n_house"></a></li></ul></div>
+    <div><h4 data-i="ft_h"></h4><ul><li><a data-i="ft_h1"></a></li><li><a data-i="ft_h2"></a></li><li><a data-i="ft_h3"></a></li></ul><h4 data-i="ft_nl" style="margin-top:26px"></h4><form class="nl" onsubmit="event.preventDefault();toast(t('ft_nlok'));this.reset()"><input type="email" required data-ip="ft_nlph"><button data-i="ft_nlb"></button></form></div>
+    <div><h4 data-i="ft_f"></h4><div class="soc">
+      <a href="https://www.facebook.com/savonnerieferacheval/" target="_blank" rel="noopener" aria-label="Facebook"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M14 8h3V4h-3c-2.8 0-4.5 1.8-4.5 4.6V11H7v4h2.5v9h4v-9h3l.5-4h-3.5V8.8c0-.5.3-.8.5-.8Z"/></svg></a>
+      <a href="https://www.instagram.com/savonnerieferacheval/" target="_blank" rel="noopener" aria-label="Instagram"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".8" fill="currentColor"/></svg></a>
+      <a href="https://www.linkedin.com/company/ncdsm/" target="_blank" rel="noopener" aria-label="LinkedIn"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M4 9h4v12H4zM6 3a2.2 2.2 0 1 1 0 4.4A2.2 2.2 0 0 1 6 3Zm5 6h3.8v1.7c.6-1 1.9-2 3.9-2 4 0 4.3 2.7 4.3 6V21h-4v-5.6c0-1.4 0-3.2-2-3.2s-2.2 1.5-2.2 3.1V21H11z"/></svg></a>
+    </div></div>
+  </div>
+  <p class="mockline" data-i="mock"></p>
+</div></footer>
+
+<div class="ovl" id="ovl" onclick="closeCart()"></div>
+<aside class="drawer" id="drawer">
+  <div class="dh"><b data-i="cart"></b><button onclick="closeCart()" style="font-size:26px" aria-label="Fermer">×</button></div>
+  <div class="ship" id="ship"></div>
+  <div class="items" id="items"></div>
+  <div class="df"><div class="tot"><span data-i="total"></span><span id="tot"></span></div><button class="btn" data-i="checkout"></button></div>
+</aside>
+<div class="toast" id="toast"></div>
+
+<button class="adv-b" id="advB" onclick="toggleAdv()"><i>FC</i><span><b data-i="n_adv"></b><small data-i="adv_tag"></small></span></button>
+<div class="adv-bub" id="advBub"><button class="x" onclick="event.stopPropagation();this.parentNode.remove()" aria-label="Fermer">×</button><span data-i="adv_bub"></span></div>
+<div class="adv" id="adv">
+  <div class="adv-h"><div><span class="mono" data-i="adv_k"></span><b data-i="n_adv"></b></div><button onclick="toggleAdv(false)" style="font-size:26px" aria-label="Fermer">×</button></div>
+  <div class="log" id="log"></div>
+  <div class="chips" id="chips"></div>
+</div>
+
+<script>
+const PRODUCTS=[
+{id:'p00',p:4.95,c:'marseille',t:['peau','maison','linge'],b:'best',
+n:{fr:"Savon de Marseille cube pur olive, 300 g",en:"Pure olive Marseille soap cube, 300 g",es:"Cubo de jabón de Marsella puro oliva, 300 g",de:"Marseiller Seifenwürfel reines Olivenöl, 300 g",it:"Cubo di sapone di Marsiglia puro oliva, 300 g",zh:"纯橄榄油马赛皂方块，300克"},
+d:{fr:"Le cube historique : 100 % huile d'olive, cuit au chaudron selon l'Édit de Colbert de 1688. Certifié Cosmos Natural.",en:"The historic cube: 100% olive oil, cauldron-cooked according to Colbert's Edict of 1688. Cosmos Natural certified.",es:"El cubo histórico: 100 % aceite de oliva, cocido en caldero según el Edicto de Colbert de 1688. Certificado Cosmos Natural.",de:"Der historische Würfel: 100 % Olivenöl, im Kessel gesiedet nach dem Edikt von Colbert von 1688. Zertifiziert Cosmos Natural.",it:"Il cubo storico: 100% olio d'oliva, cotto nel calderone secondo l'Editto di Colbert del 1688. Certificato Cosmos Natural.",zh:"经典方块皂：100%橄榄油，依照1688年科尔贝尔法令在大锅中熬制。Cosmos Natural认证。"}},
+{id:'p01',p:8.90,c:'marseille',t:['maison','linge','peau'],
+n:{fr:"Savon de Marseille cube pur olive, 600 g",en:"Pure olive Marseille soap cube, 600 g",es:"Cubo de jabón de Marsella puro oliva, 600 g",de:"Marseiller Seifenwürfel reines Olivenöl, 600 g",it:"Cubo di sapone di Marsiglia puro oliva, 600 g",zh:"纯橄榄油马赛皂方块，600克"},
+d:{fr:"Le grand cube, pour la maison, le linge et toute la famille. Le même savon pur olive, en format généreux.",en:"The large cube, for the home, laundry and the whole family. The same pure olive soap, in a generous size.",es:"El cubo grande, para la casa, la ropa y toda la familia. El mismo jabón puro oliva, en formato generoso.",de:"Der große Würfel für Haushalt, Wäsche und die ganze Familie. Dieselbe reine Olivenseife im großzügigen Format.",it:"Il cubo grande, per la casa, il bucato e tutta la famiglia. Lo stesso sapone puro oliva, in formato generoso.",zh:"大块装，适用于家居、衣物和全家。同样的纯橄榄油皂，大份量。"}},
+{id:'p02',p:4.95,c:'marseille',t:['peau','cadeau'],b:'1856',
+n:{fr:"Collection 1856 — Savon pur olive, 150 g",en:"1856 Collection — Pure olive soap, 150 g",es:"Colección 1856 — Jabón puro oliva, 150 g",de:"Kollektion 1856 — Seife reines Olivenöl, 150 g",it:"Collezione 1856 — Sapone puro oliva, 150 g",zh:"1856系列 — 纯橄榄油皂，150克"},
+d:{fr:"Pour les 170 ans de la maison, notre pur olive dans un étui imaginé pour la Collection 1856.",en:"For the house's 170th anniversary, our pure olive soap in a case designed for the 1856 Collection.",es:"Para los 170 años de la casa, nuestro puro oliva en un estuche creado para la Colección 1856.",de:"Zum 170-jährigen Jubiläum: unsere reine Olivenseife im Etui der Kollektion 1856.",it:"Per i 170 anni della maison, il nostro puro oliva in un astuccio pensato per la Collezione 1856.",zh:"为庆祝品牌170周年，纯橄榄油皂配以1856系列专属礼盒。"}},
+{id:'p03',p:16.95,c:'liquide',t:['peau','cadeau'],b:'1856',
+n:{fr:"Collection 1856 — Savon liquide Miel & Amande, 375 ml",en:"1856 Collection — Honey & Almond liquid soap, 375 ml",es:"Colección 1856 — Jabón líquido Miel y Almendra, 375 ml",de:"Kollektion 1856 — Flüssigseife Honig & Mandel, 375 ml",it:"Collezione 1856 — Sapone liquido Miele & Mandorla, 375 ml",zh:"1856系列 — 蜂蜜杏仁液体皂，375毫升"},
+d:{fr:"Notre savon liquide iconique, dans un flacon de verre sérigraphié en édition limitée.",en:"Our iconic liquid soap, in a limited-edition screen-printed glass bottle.",es:"Nuestro icónico jabón líquido, en un frasco de vidrio serigrafiado de edición limitada.",de:"Unsere ikonische Flüssigseife in einer limitierten, siebbedruckten Glasflasche.",it:"Il nostro iconico sapone liquido, in un flacone di vetro serigrafato in edizione limitata.",zh:"经典液体皂，限量版丝印玻璃瓶装。"}},
+{id:'p04',p:20.00,c:'coffret',t:['cadeau'],b:'1856',
+n:{fr:"Collection 1856 — L'assortiment liquide et solide",en:"1856 Collection — Liquid & solid set",es:"Colección 1856 — Conjunto líquido y sólido",de:"Kollektion 1856 — Set flüssig & fest",it:"Collezione 1856 — Assortimento liquido e solido",zh:"1856系列 — 液体与固体皂套装"},
+d:{fr:"Le flacon sérigraphié et la savonnette 150 g réunis : le cadeau des 170 ans.",en:"The screen-printed bottle and the 150 g bar together: the 170th-anniversary gift.",es:"El frasco serigrafiado y la pastilla de 150 g juntos: el regalo de los 170 años.",de:"Siebbedruckte Flasche und 150-g-Seife vereint: das Geschenk zum 170. Jubiläum.",it:"Il flacone serigrafato e la saponetta da 150 g insieme: il regalo dei 170 anni.",zh:"丝印瓶装液体皂与150克香皂组合：170周年纪念礼物。"}},
+{id:'p05',p:12.90,c:'liquide',t:['peau'],b:'best',
+n:{fr:"Savon liquide de Marseille à l'huile d'olive, 500 ml",en:"Olive oil liquid Marseille soap, 500 ml",es:"Jabón líquido de Marsella de aceite de oliva, 500 ml",de:"Marseiller Flüssigseife mit Olivenöl, 500 ml",it:"Sapone liquido di Marsiglia all'olio d'oliva, 500 ml",zh:"橄榄油马赛液体皂，500毫升"},
+d:{fr:"Pour les mains et le corps, une mousse légère et un parfum naturel d'olive. Formule hypoallergénique.",en:"For hands and body, a light lather and a natural olive scent. Hypoallergenic formula.",es:"Para manos y cuerpo, espuma ligera y aroma natural de oliva. Fórmula hipoalergénica.",de:"Für Hände und Körper, leichter Schaum und natürlicher Olivenduft. Hypoallergene Formel.",it:"Per mani e corpo, schiuma leggera e profumo naturale d'oliva. Formula ipoallergenica.",zh:"适用于手部和身体，泡沫轻盈，天然橄榄清香。低敏配方。"}},
+{id:'p06',p:29.90,c:'marseille',t:['maison','linge'],
+n:{fr:"Barre de savon de Marseille pur olive, 2 kg",en:"Pure olive Marseille soap bar, 2 kg",es:"Barra de jabón de Marsella puro oliva, 2 kg",de:"Marseiller Seifenriegel reines Olivenöl, 2 kg",it:"Barra di sapone di Marsiglia puro oliva, 2 kg",zh:"纯橄榄油马赛皂长条，2公斤"},
+d:{fr:"La barre telle qu'elle sort de la savonnerie, à trancher selon vos besoins.",en:"The bar just as it leaves the soap factory, to slice as you need.",es:"La barra tal como sale de la jabonería, para cortar según sus necesidades.",de:"Der Riegel, wie er aus der Siederei kommt, nach Bedarf zu schneiden.",it:"La barra così come esce dal saponificio, da tagliare secondo le esigenze.",zh:"刚出厂的整条皂，可按需切分。"}},
+{id:'p07',p:14.90,c:'maison',t:['linge'],b:'best',
+n:{fr:"Copeaux de savon de Marseille pur olive, 750 g",en:"Pure olive Marseille soap flakes, 750 g",es:"Virutas de jabón de Marsella puro oliva, 750 g",de:"Marseiller Seifenflocken reines Olivenöl, 750 g",it:"Scaglie di sapone di Marsiglia puro oliva, 750 g",zh:"纯橄榄油马赛皂片，750克"},
+d:{fr:"Pour une lessive maison hypoallergénique, douce pour le linge de toute la famille, bébés compris.",en:"For a hypoallergenic homemade detergent, gentle on the whole family's laundry, babies included.",es:"Para un detergente casero hipoalergénico, suave con la ropa de toda la familia, bebés incluidos.",de:"Für ein hypoallergenes selbstgemachtes Waschmittel, sanft zur Wäsche der ganzen Familie, auch für Babys.",it:"Per un detersivo fatto in casa ipoallergenico, delicato sul bucato di tutta la famiglia, neonati compresi.",zh:"自制低敏洗衣液的理想原料，温和呵护全家衣物，婴儿亦适用。"}},
+{id:'p08',p:4.70,c:'marseille',t:['peau','cadeau'],
+n:{fr:"Tranche de savon de Marseille pur olive, 125 g",en:"Pure olive Marseille soap slice, 125 g",es:"Loncha de jabón de Marsella puro oliva, 125 g",de:"Marseiller Seifenscheibe reines Olivenöl, 125 g",it:"Fetta di sapone di Marsiglia puro oliva, 125 g",zh:"纯橄榄油马赛皂切片，125克"},
+d:{fr:"Estampillée sur les deux faces, avec sa corde : elle sèche sans porte-savon.",en:"Stamped on both sides, with its rope: it dries without a soap dish.",es:"Sellada por ambas caras, con su cordón: se seca sin jabonera.",de:"Beidseitig gestempelt, mit Kordel: trocknet ohne Seifenschale.",it:"Timbrata su entrambi i lati, con il suo cordino: si asciuga senza portasapone.",zh:"双面压印，附挂绳：无需皂托即可晾干。"}},
+{id:'p09',p:6.70,c:'marseille',t:['cadeau','peau'],
+n:{fr:"La Cigale de Marseille pur olive — Monochromic, 95 g",en:"The Marseille Cicada, pure olive — Monochromic, 95 g",es:"La Cigarra de Marsella puro oliva — Monochromic, 95 g",de:"Die Marseiller Zikade, reines Olivenöl — Monochromic, 95 g",it:"La Cicala di Marsiglia puro oliva — Monochromic, 95 g",zh:"马赛蝉形纯橄榄油皂 — Monochromic联名，95克"},
+d:{fr:"L'emblématique cigale revisitée avec l'artiste marseillais Monochromic.",en:"The emblematic cicada, reimagined with Marseille artist Monochromic.",es:"La emblemática cigarra, reinterpretada con el artista marsellés Monochromic.",de:"Die ikonische Zikade, neu interpretiert mit dem Marseiller Künstler Monochromic.",it:"L'emblematica cicala reinterpretata con l'artista marsigliese Monochromic.",zh:"与马赛艺术家Monochromic合作重新演绎的标志性蝉。"}},
+{id:'p10',p:39.90,c:'coffret',t:['cadeau'],
+n:{fr:"Coffret Calypso — porte-savon & savon, Monochromic",en:"Calypso set — soap dish & soap, Monochromic",es:"Estuche Calypso — jabonera y jabón, Monochromic",de:"Set Calypso — Seifenschale & Seife, Monochromic",it:"Cofanetto Calypso — portasapone & sapone, Monochromic",zh:"Calypso礼盒 — 皂托与香皂，Monochromic联名"},
+d:{fr:"Un porte-savon en céramique en forme de coquillage et son savon parfumé, hommage à la Méditerranée.",en:"A shell-shaped ceramic soap dish and its scented soap, a tribute to the Mediterranean.",es:"Una jabonera de cerámica en forma de concha y su jabón perfumado, homenaje al Mediterráneo.",de:"Eine Keramik-Seifenschale in Muschelform mit Duftseife, eine Hommage an das Mittelmeer.",it:"Un portasapone in ceramica a forma di conchiglia e il suo sapone profumato, omaggio al Mediterraneo.",zh:"贝壳造型陶瓷皂托搭配香皂，致敬地中海。"}},
+{id:'p11',p:24.50,c:'coffret',t:['cadeau','peau'],b:'best',
+n:{fr:"Coffret 100 % pur olive",en:"100% pure olive gift set",es:"Estuche 100 % puro oliva",de:"Set 100 % reines Olivenöl",it:"Cofanetto 100% puro oliva",zh:"100%纯橄榄油礼盒"},
+d:{fr:"L'authentique savon de Marseille sous toutes ses formes : cube, savonnette et savon liquide.",en:"Authentic Marseille soap in every form: cube, bar and liquid soap.",es:"El auténtico jabón de Marsella en todas sus formas: cubo, pastilla y jabón líquido.",de:"Echte Marseiller Seife in allen Formen: Würfel, Stück und Flüssigseife.",it:"L'autentico sapone di Marsiglia in tutte le sue forme: cubo, saponetta e sapone liquido.",zh:"正宗马赛皂的全部形态：方块皂、香皂与液体皂。"}},
+{id:'p12',p:24.90,c:'coffret',t:['cadeau'],b:'noel',
+n:{fr:"Coffret de Noël — Rituel Fleur d'oranger",en:"Christmas set — Orange blossom ritual",es:"Estuche de Navidad — Ritual Flor de azahar",de:"Weihnachtsset — Ritual Orangenblüte",it:"Cofanetto di Natale — Rituale Fiori d'arancio",zh:"圣诞礼盒 — 橙花仪式"},
+d:{fr:"Savon liquide, savon doux et boîte de voyage, dans une pochette en édition limitée.",en:"Liquid soap, gentle soap and travel tin, in a limited-edition pouch.",es:"Jabón líquido, jabón suave y caja de viaje, en una bolsa de edición limitada.",de:"Flüssigseife, milde Seife und Reisedose in einer limitierten Geschenktasche.",it:"Sapone liquido, sapone delicato e scatola da viaggio, in una pochette in edizione limitata.",zh:"液体皂、温和香皂与旅行皂盒，限量版礼袋包装。"}},
+{id:'p13',p:19.90,c:'coffret',t:['cadeau'],b:'noel',
+n:{fr:"Coffret de Noël — Rituel Miel & Amande",en:"Christmas set — Honey & Almond ritual",es:"Estuche de Navidad — Ritual Miel y Almendra",de:"Weihnachtsset — Ritual Honig & Mandel",it:"Cofanetto di Natale — Rituale Miele & Mandorla",zh:"圣诞礼盒 — 蜂蜜杏仁仪式"},
+d:{fr:"Savon liquide, savon doux et tranche à corde, prêts à glisser sous le sapin.",en:"Liquid soap, gentle soap and rope slice, ready to slip under the tree.",es:"Jabón líquido, jabón suave y loncha con cordón, listos para poner bajo el árbol.",de:"Flüssigseife, milde Seife und Seifenscheibe mit Kordel, bereit für den Gabentisch.",it:"Sapone liquido, sapone delicato e fetta con cordino, pronti sotto l'albero.",zh:"液体皂、温和香皂与挂绳皂片，可直接放在圣诞树下。"}},
+{id:'p14',p:13.95,c:'liquide',t:['peau'],
+n:{fr:"Savon liquide de Marseille Pétales de rose, 500 ml",en:"Rose petal liquid Marseille soap, 500 ml",es:"Jabón líquido de Marsella Pétalos de rosa, 500 ml",de:"Marseiller Flüssigseife Rosenblüten, 500 ml",it:"Sapone liquido di Marsiglia Petali di rosa, 500 ml",zh:"玫瑰花瓣马赛液体皂，500毫升"},
+d:{fr:"Cuit au chaudron, surgras, à l'huile d'argan : une mousse onctueuse et un parfum de rose tendre.",en:"Cauldron-cooked, superfatted, with argan oil: a creamy lather and a tender rose scent.",es:"Cocido en caldero, sobreengrasado, con aceite de argán: espuma untuosa y aroma de rosa.",de:"Im Kessel gesiedet, rückfettend, mit Arganöl: cremiger Schaum und zarter Rosenduft.",it:"Cotto nel calderone, surgrassato, all'olio di argan: schiuma cremosa e delicato profumo di rosa.",zh:"大锅熬制，富脂配方，含摩洛哥坚果油：泡沫绵密，玫瑰清香。"}},
+{id:'p15',p:13.95,c:'liquide',t:['peau'],
+n:{fr:"Savon liquide de Marseille Fleur d'oranger, 500 ml",en:"Orange blossom liquid Marseille soap, 500 ml",es:"Jabón líquido de Marsella Flor de azahar, 500 ml",de:"Marseiller Flüssigseife Orangenblüte, 500 ml",it:"Sapone liquido di Marsiglia Fiori d'arancio, 500 ml",zh:"橙花马赛液体皂，500毫升"},
+d:{fr:"À l'huile d'amande douce, un parfum floral et réconfortant. 98 % d'ingrédients d'origine naturelle.",en:"With sweet almond oil, a floral, comforting scent. 98% ingredients of natural origin.",es:"Con aceite de almendra dulce, un aroma floral y reconfortante. 98 % de ingredientes de origen natural.",de:"Mit Süßmandelöl, ein blumiger, wohltuender Duft. 98 % Inhaltsstoffe natürlichen Ursprungs.",it:"All'olio di mandorle dolci, un profumo floreale e confortante. 98% di ingredienti di origine naturale.",zh:"含甜杏仁油，花香温暖。98%天然来源成分。"}},
+{id:'p16',p:5.65,c:'soin',t:['peau','cadeau'],
+n:{fr:"Savon doux parfumé Embruns & Cédrat, 125 g",en:"Sea spray & Citron gentle scented soap, 125 g",es:"Jabón suave perfumado Brisa marina y Cidra, 125 g",de:"Milde Duftseife Gischt & Zedratzitrone, 125 g",it:"Sapone delicato profumato Brezza marina & Cedro, 125 g",zh:"海风香橼温和香皂，125克"},
+d:{fr:"Surgras au beurre de karité et à l'huile d'amande douce, des notes marines et vivifiantes.",en:"Superfatted with shea butter and sweet almond oil, with fresh marine notes.",es:"Sobreengrasado con manteca de karité y aceite de almendra dulce, notas marinas y vivificantes.",de:"Rückfettend mit Sheabutter und Süßmandelöl, frische maritime Noten.",it:"Surgrassato al burro di karité e olio di mandorle dolci, note marine e vivificanti.",zh:"富含乳木果油与甜杏仁油，清新海洋香调。"}},
+{id:'p17',p:5.65,c:'soin',t:['peau','cadeau'],
+n:{fr:"Savon doux parfumé Lavande vivifiante, 125 g",en:"Invigorating lavender gentle scented soap, 125 g",es:"Jabón suave perfumado Lavanda vivificante, 125 g",de:"Milde Duftseife belebender Lavendel, 125 g",it:"Sapone delicato profumato Lavanda vivificante, 125 g",zh:"活力薰衣草温和香皂，125克"},
+d:{fr:"La lavande mariée à la fraîcheur de la bergamote, pour tous les types de peau.",en:"Lavender paired with fresh bergamot, for all skin types.",es:"La lavanda unida a la frescura de la bergamota, para todo tipo de piel.",de:"Lavendel mit frischer Bergamotte, für alle Hauttypen.",it:"La lavanda unita alla freschezza del bergamotto, per tutti i tipi di pelle.",zh:"薰衣草搭配清新佛手柑，适合所有肤质。"}},
+{id:'p18',p:11.50,c:'maison',t:['maison'],
+n:{fr:"Savon noir liquide, 1 L",en:"Liquid black soap, 1 L",es:"Jabón negro líquido, 1 L",de:"Flüssige schwarze Seife, 1 L",it:"Sapone nero liquido, 1 L",zh:"液体黑皂，1升"},
+d:{fr:"Le nettoyant tout-en-un de la maison : sols, surfaces, détachage. Concentré et économique.",en:"The all-in-one home cleaner: floors, surfaces, stain removal. Concentrated and economical.",es:"El limpiador todo en uno de la casa: suelos, superficies, quitamanchas. Concentrado y económico.",de:"Der Allzweckreiniger fürs Haus: Böden, Flächen, Fleckentfernung. Konzentriert und sparsam.",it:"Il detergente tuttofare della casa: pavimenti, superfici, smacchiatura. Concentrato ed economico.",zh:"家居全能清洁剂：地面、台面、去渍。浓缩经济。"}},
+{id:'p19',p:11.90,c:'maison',t:['maison','linge'],
+n:{fr:"Savon noir mou à l'huile d'olive, 500 g",en:"Olive oil soft black soap, 500 g",es:"Jabón negro blando de aceite de oliva, 500 g",de:"Weiche schwarze Seife mit Olivenöl, 500 g",it:"Sapone nero morbido all'olio d'oliva, 500 g",zh:"橄榄油软质黑皂，500克"},
+d:{fr:"Une petite dose suffit pour nettoyer, dégraisser et faire briller la maison et le jardin.",en:"A small amount cleans, degreases and shines the home and garden.",es:"Basta una pequeña dosis para limpiar, desengrasar y dar brillo a la casa y el jardín.",de:"Eine kleine Menge reinigt, entfettet und lässt Haus und Garten glänzen.",it:"Basta una piccola dose per pulire, sgrassare e far brillare casa e giardino.",zh:"少量即可清洁、去油，让居家与花园焕然一新。"}},
+{id:'p20',p:13.55,c:'maison',t:['linge'],
+n:{fr:"Lessive liquide concentrée au savon de Marseille, 1 L",en:"Concentrated Marseille soap laundry liquid, 1 L",es:"Detergente líquido concentrado de jabón de Marsella, 1 L",de:"Konzentriertes Flüssigwaschmittel mit Marseiller Seife, 1 L",it:"Detersivo liquido concentrato al sapone di Marsiglia, 1 L",zh:"马赛皂浓缩洗衣液，1升"},
+d:{fr:"20 lavages, efficace à basse température, respectueuse des couleurs. 99 % d'origine naturelle.",en:"20 washes, effective at low temperature, gentle on colours. 99% natural origin.",es:"20 lavados, eficaz a baja temperatura, respeta los colores. 99 % de origen natural.",de:"20 Wäschen, wirksam bei niedriger Temperatur, farbschonend. 99 % natürlichen Ursprungs.",it:"20 lavaggi, efficace a bassa temperatura, rispetta i colori. 99% di origine naturale.",zh:"可洗20次，低温高效，呵护色彩。99%天然来源。"}},
+{id:'p21',p:5.90,c:'maison',t:['maison'],
+n:{fr:"Savon solide vaisselle, 225 g",en:"Solid dish soap, 225 g",es:"Jabón sólido para vajilla, 225 g",de:"Feste Spülseife, 225 g",it:"Sapone solido per piatti, 225 g",zh:"固体洗碗皂，225克"},
+d:{fr:"Savon de Marseille cuit au chaudron et bicarbonate : l'alternative économique au liquide vaisselle.",en:"Cauldron-cooked Marseille soap with bicarbonate: the economical alternative to washing-up liquid.",es:"Jabón de Marsella cocido en caldero con bicarbonato: la alternativa económica al lavavajillas líquido.",de:"Im Kessel gesiedete Marseiller Seife mit Natron: die sparsame Alternative zum Spülmittel.",it:"Sapone di Marsiglia cotto nel calderone con bicarbonato: l'alternativa economica al detersivo liquido.",zh:"大锅熬制马赛皂加小苏打：洗洁精的经济替代品。"}},
+{id:'p22',p:15.50,c:'soin',t:['peau'],
+n:{fr:"Crème corps nourrissante, 200 ml",en:"Nourishing body cream, 200 ml",es:"Crema corporal nutritiva, 200 ml",de:"Nährende Körpercreme, 200 ml",it:"Crema corpo nutriente, 200 ml",zh:"滋养身体乳霜，200毫升"},
+d:{fr:"Huile d'olive bio et beurre de karité bio : une peau satinée, sans film gras.",en:"Organic olive oil and organic shea butter: satin-soft skin, no greasy film.",es:"Aceite de oliva bio y manteca de karité bio: piel satinada, sin película grasa.",de:"Bio-Olivenöl und Bio-Sheabutter: seidige Haut ohne Fettfilm.",it:"Olio d'oliva bio e burro di karité bio: pelle satinata, senza film grasso.",zh:"有机橄榄油与有机乳木果油：肌肤丝滑，不油腻。"}},
+{id:'p23',p:12.90,c:'soin',t:['peau'],
+n:{fr:"Shampoing doux solide, 100 g",en:"Gentle solid shampoo, 100 g",es:"Champú suave sólido, 100 g",de:"Milde feste Haarseife, 100 g",it:"Shampoo delicato solido, 100 g",zh:"温和固体洗发皂，100克"},
+d:{fr:"À l'huile d'olive et au karité bio, pour les cheveux de toute la famille. Sans silicones.",en:"With olive oil and organic shea, for the whole family's hair. Silicone-free.",es:"Con aceite de oliva y karité bio, para el cabello de toda la familia. Sin siliconas.",de:"Mit Olivenöl und Bio-Shea, für das Haar der ganzen Familie. Ohne Silikone.",it:"All'olio d'oliva e karité bio, per i capelli di tutta la famiglia. Senza siliconi.",zh:"含橄榄油与有机乳木果，适合全家发质。不含硅油。"}}
+];
+
+const LANGS={fr:'Français',en:'English',es:'Español',de:'Deutsch',it:'Italiano',zh:'中文'};
+const I={
+top1:{fr:"Livraison offerte en point relais dès 39 €",en:"Free pickup-point delivery from €39",es:"Envío gratis a punto de recogida desde 39 €",de:"Kostenlose Lieferung an Abholstellen ab 39 €",it:"Consegna gratuita al punto di ritiro da 39 €",zh:"满39欧元免费配送至自提点"},
+top2:{fr:"Visite gratuite de la savonnerie chaque mercredi à 14 h",en:"Free tour of the soap factory every Wednesday at 2 pm",es:"Visita gratuita a la jabonería cada miércoles a las 14 h",de:"Kostenlose Führung jeden Mittwoch um 14 Uhr",it:"Visita gratuita al saponificio ogni mercoledì alle 14",zh:"每周三14点免费参观皂厂"},
+tag:{fr:"Savonnerie · Marseille · 1856",en:"Soap factory · Marseille · 1856",es:"Jabonería · Marsella · 1856",de:"Seifensiederei · Marseille · 1856",it:"Saponificio · Marsiglia · 1856",zh:"皂厂 · 马赛 · 1856"},
+n_shop:{fr:"Boutique",en:"Shop",es:"Tienda",de:"Shop",it:"Negozio",zh:"商店"},
+n_house:{fr:"La savonnerie",en:"The soap factory",es:"La jabonería",de:"Die Siederei",it:"Il saponificio",zh:"皂厂"},
+n_visit:{fr:"Visiter",en:"Visit",es:"Visitar",de:"Besuchen",it:"Visitare",zh:"参观"},
+n_gift:{fr:"Coffrets",en:"Gift sets",es:"Estuches",de:"Geschenksets",it:"Cofanetti",zh:"礼盒"},
+n_adv:{fr:"Fer à Cheval Conseil",en:"Fer à Cheval Advice",es:"Consejo Fer à Cheval",de:"Fer à Cheval Beratung",it:"Consiglio Fer à Cheval",zh:"Fer à Cheval 顾问"},
+lang:{fr:"Langue",en:"Language",es:"Idioma",de:"Sprache",it:"Lingua",zh:"语言"},
+h_k:{fr:"Marseille · 1856 – 2026 · Monument historique",en:"Marseille · 1856 – 2026 · Historic monument",es:"Marsella · 1856 – 2026 · Monumento histórico",de:"Marseille · 1856 – 2026 · Denkmalgeschützt",it:"Marsiglia · 1856 – 2026 · Monumento storico",zh:"马赛 · 1856 – 2026 · 历史古迹"},
+h_t:{fr:"170 ans<br><em>au chaudron.</em>",en:"170 years<br><em>in the cauldron.</em>",es:"170 años<br><em>en el caldero.</em>",de:"170 Jahre<br><em>im Kessel.</em>",it:"170 anni<br><em>nel calderone.</em>",zh:"170年<br><em>大锅熬制。</em>"},
+h_p:{fr:"La plus ancienne savonnerie de Marseille encore en activité. Notre savon y est toujours cuit au chaudron, selon l'Édit de Colbert de 1688.",en:"The oldest soap factory in Marseille still in operation. Our soap is still cooked in the cauldron, following Colbert's Edict of 1688.",es:"La jabonería más antigua de Marsella aún en activo. Nuestro jabón se sigue cociendo en caldero, según el Edicto de Colbert de 1688.",de:"Die älteste noch aktive Seifensiederei Marseilles. Unsere Seife wird noch immer im Kessel gesiedet, nach dem Edikt von Colbert von 1688.",it:"Il più antico saponificio di Marsiglia ancora in attività. Il nostro sapone è ancora cotto nel calderone, secondo l'Editto di Colbert del 1688.",zh:"马赛至今仍在运营的最古老皂厂。我们的皂依然按照1688年科尔贝尔法令，在大锅中熬制。"},
+h_c1:{fr: "Découvrir la Collection 1856", en: "Discover the 1856 Collection", es: "Descubrir la Colección 1856", de: "Die Kollektion 1856 entdecken", it: "Scoprire la Collezione 1856", zh: "探索1856系列"},
+f2s:{fr: "Seule", en: "Only", es: "Única", de: "Einzige", it: "Unica", zh: "唯一"},
+r_head:{fr:"avis publiés<br>sur savon-de-marseille.com",en:"reviews published<br>on savon-de-marseille.com",es:"opiniones publicadas<br>en savon-de-marseille.com",de:"Bewertungen<br>auf savon-de-marseille.com",it:"recensioni pubblicate<br>su savon-de-marseille.com",zh:"条评价<br>来自 savon-de-marseille.com"},
+ft_h:{fr: "Aide", en: "Help", es: "Ayuda", de: "Hilfe", it: "Aiuto", zh: "帮助"},
+ft_h1:{fr: "Livraison & retours", en: "Delivery & returns", es: "Envíos y devoluciones", de: "Versand & Rückgabe", it: "Spedizioni e resi", zh: "配送与退货"},
+ft_h2:{fr: "Conditions générales de vente", en: "Terms of sale", es: "Condiciones generales de venta", de: "AGB", it: "Condizioni generali di vendita", zh: "销售条款"},
+ft_h3:{fr: "Mentions légales", en: "Legal notice", es: "Aviso legal", de: "Impressum", it: "Note legali", zh: "法律声明"},
+ft_nl:{fr: "La lettre de la savonnerie — une fois par saison", en: "The soap factory letter — once a season", es: "La carta de la jabonería — una vez por temporada", de: "Der Brief der Siederei — einmal pro Saison", it: "La lettera del saponificio — una volta a stagione", zh: "皂厂季刊 — 每季一封"},
+ft_nlph:{fr: "Votre e-mail", en: "Your email", es: "Su e-mail", de: "Ihre E-Mail", it: "La vostra e-mail", zh: "您的邮箱"},
+ft_nlb:{fr: "S'inscrire", en: "Subscribe", es: "Suscribirse", de: "Anmelden", it: "Iscriversi", zh: "订阅"},
+ft_nlok:{fr: "Merci, à la saison prochaine.", en: "Thank you — see you next season.", es: "Gracias, hasta la próxima temporada.", de: "Danke — bis zur nächsten Saison.", it: "Grazie, alla prossima stagione.", zh: "谢谢，下季见。"},
+h_c2:{fr:"Visiter la savonnerie →",en:"Visit the soap factory →",es:"Visitar la jabonería →",de:"Die Siederei besuchen →",it:"Visitare il saponificio →",zh:"参观皂厂 →"},
+f1:{fr:"Fondation de la savonnerie",en:"Soap factory founded",es:"Fundación de la jabonería",de:"Gründung der Siederei",it:"Fondazione del saponificio",zh:"皂厂创立"},
+f2:{fr:"savonnerie de Marseille inscrite aux Monuments historiques",en:"soap factory in Marseille listed as a historic monument",es:"jabonería de Marsella inscrita como monumento histórico",de:"denkmalgeschützte Seifensiederei Marseilles",it:"saponificio di Marsiglia iscritto ai monumenti storici",zh:"列入历史古迹的马赛皂厂"},
+f3:{fr:"avis clients",en:"customer reviews",es:"opiniones de clientes",de:"Kundenbewertungen",it:"recensioni dei clienti",zh:"顾客评价"},
+f4:{fr:"Entreprise du Patrimoine Vivant",en:"Living Heritage Company",es:"Empresa del Patrimonio Vivo",de:"Unternehmen des lebendigen Kulturerbes",it:"Impresa del Patrimonio Vivente",zh:"法国活遗产企业"},
+m_k:{fr:"Le monument",en:"The monument",es:"El monumento",de:"Das Denkmal",it:"Il monumento",zh:"古迹"},
+m_t:{fr:"Une savonnerie classée, <em>qui fume encore.</em>",en:"A listed soap factory, <em>still steaming.</em>",es:"Una jabonería catalogada, <em>que aún humea.</em>",de:"Eine denkmalgeschützte Siederei, <em>die noch dampft.</em>",it:"Un saponificio vincolato, <em>che fuma ancora.</em>",zh:"一座列级皂厂，<em>炉火依旧。</em>"},
+m_p:{fr:"Le bâtiment des chaudrons, conservé sur trois niveaux avec ses dispositifs anciens, est inscrit aux Monuments historiques. La seule savonnerie de Marseille à l'être : la nôtre.",en:"The cauldron building, preserved on three levels with its original equipment, is listed as a historic monument. The only soap factory in Marseille to be listed: ours.",es:"El edificio de los calderos, conservado en tres niveles con sus antiguos dispositivos, está inscrito como monumento histórico. La única jabonería de Marsella que lo está: la nuestra.",de:"Das Kesselhaus, auf drei Ebenen mit seinen alten Anlagen erhalten, steht unter Denkmalschutz. Die einzige Seifensiederei Marseilles mit diesem Status: unsere.",it:"L'edificio dei calderoni, conservato su tre livelli con i suoi antichi impianti, è iscritto ai monumenti storici. L'unico saponificio di Marsiglia ad esserlo: il nostro.",zh:"保留了三层古老设备的熬皂车间已列入法国历史古迹。马赛唯一获此殊荣的皂厂：就是我们。"},
+m_cta:{fr:"L'histoire de la maison →",en:"The story of the house →",es:"La historia de la casa →",de:"Die Geschichte des Hauses →",it:"La storia della maison →",zh:"品牌故事 →"},
+c_k:{fr:"Collection 1856 · Édition limitée",en:"1856 Collection · Limited edition",es:"Colección 1856 · Edición limitada",de:"Kollektion 1856 · Limitierte Edition",it:"Collezione 1856 · Edizione limitata",zh:"1856系列 · 限量版"},
+c_t:{fr:"Pour nos 170 ans, <em>le pur olive en habit de fête.</em>",en:"For our 170th year, <em>pure olive dressed up.</em>",es:"Por nuestros 170 años, <em>el puro oliva de gala.</em>",de:"Zu unserem 170. Jubiläum: <em>reines Olivenöl im Festkleid.</em>",it:"Per i nostri 170 anni, <em>il puro oliva in abito da festa.</em>",zh:"170周年之际，<em>纯橄榄皂盛装登场。</em>"},
+b_k:{fr:"Les essentiels",en:"The essentials",es:"Lo esencial",de:"Die Klassiker",it:"Gli essenziali",zh:"经典之选"},
+b_t:{fr:"Ce que Marseille nous achète depuis 1856.",en:"What Marseille has bought from us since 1856.",es:"Lo que Marsella nos compra desde 1856.",de:"Was Marseille seit 1856 bei uns kauft.",it:"Ciò che Marsiglia ci compra dal 1856.",zh:"马赛人自1856年以来的心头好。"},
+all:{fr:"Toute la boutique →",en:"Shop all →",es:"Toda la tienda →",de:"Zum ganzen Shop →",it:"Tutto il negozio →",zh:"查看全部 →"},
+g_k:{fr:"Le geste",en:"The craft",es:"El oficio",de:"Das Handwerk",it:"Il gesto",zh:"工艺"},
+g_t:{fr:"Quatre gestes, <em>inchangés depuis 1688.</em>",en:"Four gestures, <em>unchanged since 1688.</em>",es:"Cuatro gestos, <em>sin cambios desde 1688.</em>",de:"Vier Handgriffe, <em>unverändert seit 1688.</em>",it:"Quattro gesti, <em>invariati dal 1688.</em>",zh:"四道工序，<em>自1688年未曾改变。</em>"},
+s1:{fr:"La cuisson",en:"Cooking",es:"La cocción",de:"Das Sieden",it:"La cottura",zh:"熬煮"},
+s1p:{fr:"Les huiles végétales cuisent plusieurs jours au chaudron, sous l'œil du maître savonnier.",en:"Plant oils cook for several days in the cauldron, watched over by the master soap maker.",es:"Los aceites vegetales se cuecen varios días en el caldero, bajo la mirada del maestro jabonero.",de:"Pflanzenöle sieden mehrere Tage im Kessel, unter dem Blick des Seifensiedermeisters.",it:"Gli oli vegetali cuociono per giorni nel calderone, sotto lo sguardo del mastro saponaio.",zh:"植物油在大锅中熬煮数日，由制皂大师全程看守。"},
+s2:{fr:"Le lavage",en:"Washing",es:"El lavado",de:"Das Waschen",it:"Il lavaggio",zh:"洗涤"},
+s2p:{fr:"La pâte est lavée à l'eau salée pour la débarrasser de ses impuretés : c'est la méthode marseillaise.",en:"The paste is washed with salt water to rid it of impurities: the Marseille method.",es:"La pasta se lava con agua salada para eliminar sus impurezas: el método marsellés.",de:"Die Masse wird mit Salzwasser gewaschen, um Unreinheiten zu entfernen: die Marseiller Methode.",it:"La pasta viene lavata con acqua salata per eliminarne le impurità: il metodo marsigliese.",zh:"用盐水洗涤皂基以去除杂质：这正是马赛工艺。"},
+s3:{fr:"La découpe",en:"Cutting",es:"El corte",de:"Das Schneiden",it:"Il taglio",zh:"切割"},
+s3p:{fr:"Coulée puis séchée, la pâte est tranchée en barres, puis en cubes.",en:"Poured and dried, the paste is sliced into bars, then cubes.",es:"Vertida y secada, la pasta se corta en barras y luego en cubos.",de:"Gegossen und getrocknet, wird die Masse in Riegel und dann in Würfel geschnitten.",it:"Colata e asciugata, la pasta viene tagliata in barre, poi in cubi.",zh:"浇注晾干后，皂基被切成长条，再切成方块。"},
+s4:{fr:"L'estampille",en:"The stamp",es:"El sello",de:"Der Stempel",it:"Il timbro",zh:"压印"},
+s4p:{fr:"Chaque cube reçoit le fer à cheval de la maison : la signature du vrai savon de Marseille.",en:"Each cube receives the house horseshoe: the signature of true Marseille soap.",es:"Cada cubo recibe la herradura de la casa: la firma del auténtico jabón de Marsella.",de:"Jeder Würfel erhält das Hufeisen des Hauses: die Signatur echter Marseiller Seife.",it:"Ogni cubo riceve il ferro di cavallo della maison: la firma del vero sapone di Marsiglia.",zh:"每块皂都压上品牌马蹄印：正宗马赛皂的标志。"},
+r_k:{fr:"Avis clients",en:"Customer reviews",es:"Opiniones",de:"Kundenstimmen",it:"Recensioni",zh:"顾客评价"},
+r_t:{fr:"Ils en parlent mieux que nous.",en:"They say it better than we do.",es:"Ellos lo dicen mejor que nosotros.",de:"Sie sagen es besser als wir.",it:"Lo dicono meglio di noi.",zh:"顾客比我们说得更好。"},
+r_src:{fr:"Avis publiés sur savon-de-marseille.com",en:"Reviews published on savon-de-marseille.com",es:"Opiniones publicadas en savon-de-marseille.com",de:"Bewertungen auf savon-de-marseille.com",it:"Recensioni pubblicate su savon-de-marseille.com",zh:"评价来自 savon-de-marseille.com"},
+x_k:{fr:"Noël 2026",en:"Christmas 2026",es:"Navidad 2026",de:"Weihnachten 2026",it:"Natale 2026",zh:"2026圣诞"},
+x_t:{fr:"Offrir Marseille.",en:"Give Marseille.",es:"Regalar Marsella.",de:"Marseille verschenken.",it:"Regalare Marsiglia.",zh:"把马赛送给你。"},
+x_p:{fr:"Des coffrets prêts à offrir, en édition limitée. Commandez <strong style=\"color:var(--kraft)\">avant le 16 décembre</strong> pour une livraison avant Noël.",en:"Ready-to-give limited-edition sets. Order <strong style=\"color:var(--kraft)\">before 16 December</strong> for delivery before Christmas.",es:"Estuches listos para regalar, en edición limitada. Pida <strong style=\"color:var(--kraft)\">antes del 16 de diciembre</strong> para recibirlo antes de Navidad.",de:"Geschenkfertige Sets in limitierter Auflage. <strong style=\"color:var(--kraft)\">Bis 16. Dezember</strong> bestellen, vor Weihnachten geliefert.",it:"Cofanetti pronti da regalare, in edizione limitata. Ordinate <strong style=\"color:var(--kraft)\">entro il 16 dicembre</strong> per la consegna prima di Natale.",zh:"限量版礼盒，即买即送。<strong style=\"color:var(--kraft)\">12月16日前</strong>下单，圣诞前送达。"},
+h2_k:{fr:"Maison & linge",en:"Home & laundry",es:"Hogar y ropa",de:"Haushalt & Wäsche",it:"Casa & bucato",zh:"家居与衣物"},
+h2_t:{fr:"Le savon de Marseille <em>fait aussi le ménage.</em>",en:"Marseille soap <em>does the housework too.</em>",es:"El jabón de Marsella <em>también limpia la casa.</em>",de:"Marseiller Seife <em>macht auch den Haushalt.</em>",it:"Il sapone di Marsiglia <em>fa anche le pulizie.</em>",zh:"马赛皂<em>也能打理家务。</em>"},
+v_k:{fr:"Visite gratuite",en:"Free tour",es:"Visita gratuita",de:"Kostenlose Führung",it:"Visita gratuita",zh:"免费参观"},
+v_t:{fr:"Entrez dans le monument.",en:"Step inside the monument.",es:"Entre en el monumento.",de:"Treten Sie ein ins Denkmal.",it:"Entrate nel monumento.",zh:"走进这座古迹。"},
+v_p:{fr:"Chaque mercredi à 14 h, nos maîtres savonniers vous ouvrent les portes de la plus ancienne savonnerie de Marseille : les chaudrons, la salle de découpe, puis la boutique d'usine. Gratuit, sur inscription.",en:"Every Wednesday at 2 pm, our master soap makers open the doors of Marseille's oldest soap factory: the cauldrons, the cutting room, then the factory shop. Free, booking required.",es:"Cada miércoles a las 14 h, nuestros maestros jaboneros le abren las puertas de la jabonería más antigua de Marsella: los calderos, la sala de corte y la tienda de fábrica. Gratis, con inscripción.",de:"Jeden Mittwoch um 14 Uhr öffnen unsere Seifensiedermeister die älteste Siederei Marseilles: Kessel, Schneideraum, dann der Fabrikladen. Kostenlos, mit Anmeldung.",it:"Ogni mercoledì alle 14, i nostri mastri saponai aprono le porte del più antico saponificio di Marsiglia: i calderoni, la sala di taglio, poi lo spaccio. Gratis, su prenotazione.",zh:"每周三14点，制皂大师为您开启马赛最古老皂厂的大门：大锅车间、切割间与工厂商店。免费，需预约。"},
+v_date:{fr:"Mercredi",en:"Wednesday",es:"Miércoles",de:"Mittwoch",it:"Mercoledì",zh:"周三"},
+v_ppl:{fr:"Personnes",en:"Guests",es:"Personas",de:"Personen",it:"Persone",zh:"人数"},
+v_book:{fr:"Réserver gratuitement",en:"Book for free",es:"Reservar gratis",de:"Kostenlos buchen",it:"Prenota gratis",zh:"免费预约"},
+v_addr:{fr:"66, chemin de Sainte-Marthe · 13014 Marseille · Boutique d'usine ouverte tous les jours",en:"66, chemin de Sainte-Marthe · 13014 Marseille · Factory shop open every day",es:"66, chemin de Sainte-Marthe · 13014 Marsella · Tienda de fábrica abierta todos los días",de:"66, chemin de Sainte-Marthe · 13014 Marseille · Fabrikladen täglich geöffnet",it:"66, chemin de Sainte-Marthe · 13014 Marsiglia · Spaccio aperto tutti i giorni",zh:"66, chemin de Sainte-Marthe · 13014 马赛 · 工厂商店每日营业"},
+sp_k:{fr:"La boutique",en:"The shop",es:"La tienda",de:"Der Shop",it:"Il negozio",zh:"商店"},
+sp_t:{fr:"Le vrai savon de Marseille.",en:"True Marseille soap.",es:"El auténtico jabón de Marsella.",de:"Echte Marseiller Seife.",it:"Il vero sapone di Marsiglia.",zh:"正宗马赛皂。"},
+fa:{fr:"Tout",en:"All",es:"Todo",de:"Alle",it:"Tutto",zh:"全部"},
+fm:{fr:"Savon de Marseille",en:"Marseille soap",es:"Jabón de Marsella",de:"Marseiller Seife",it:"Sapone di Marsiglia",zh:"马赛皂"},
+fl:{fr:"Savons liquides",en:"Liquid soaps",es:"Jabones líquidos",de:"Flüssigseifen",it:"Saponi liquidi",zh:"液体皂"},
+fs:{fr:"Soins",en:"Body care",es:"Cuidados",de:"Pflege",it:"Cura del corpo",zh:"护理"},
+fh:{fr:"Maison & linge",en:"Home & laundry",es:"Hogar y ropa",de:"Haushalt & Wäsche",it:"Casa & bucato",zh:"家居与衣物"},
+fc:{fr:"Coffrets",en:"Gift sets",es:"Estuches",de:"Geschenksets",it:"Cofanetti",zh:"礼盒"},
+back:{fr:"← Retour à la boutique",en:"← Back to the shop",es:"← Volver a la tienda",de:"← Zurück zum Shop",it:"← Torna al negozio",zh:"← 返回商店"},
+add:{fr:"Ajouter",en:"Add",es:"Añadir",de:"Hinzufügen",it:"Aggiungi",zh:"加入"},
+add_cart:{fr:"Ajouter au panier",en:"Add to basket",es:"Añadir a la cesta",de:"In den Warenkorb",it:"Aggiungi al carrello",zh:"加入购物车"},
+added:{fr:"Ajouté au panier",en:"Added to basket",es:"Añadido a la cesta",de:"Zum Warenkorb hinzugefügt",it:"Aggiunto al carrello",zh:"已加入购物车"},
+acc1:{fr:"Fabrication",en:"How it's made",es:"Fabricación",de:"Herstellung",it:"Produzione",zh:"制作"},
+acc1p:{fr:"Cuit au chaudron dans notre savonnerie du 14ᵉ arrondissement de Marseille, selon la méthode marseillaise transmise depuis 1856.",en:"Cauldron-cooked in our soap factory in Marseille's 14th district, using the Marseille method handed down since 1856.",es:"Cocido en caldero en nuestra jabonería del distrito 14 de Marsella, según el método marsellés transmitido desde 1856.",de:"Im Kessel gesiedet in unserer Siederei im 14. Bezirk von Marseille, nach der seit 1856 überlieferten Marseiller Methode.",it:"Cotto nel calderone nel nostro saponificio del 14° arrondissement di Marsiglia, secondo il metodo marsigliese tramandato dal 1856.",zh:"在马赛第14区的皂厂中以大锅熬制，沿用自1856年传承的马赛工艺。"},
+acc2:{fr:"Livraison & retours",en:"Delivery & returns",es:"Envío y devoluciones",de:"Lieferung & Rückgabe",it:"Consegna & resi",zh:"配送与退货"},
+acc2p:{fr:"Expédié depuis Marseille. Livraison offerte en point relais dès 39 €. Retrait gratuit à la boutique d'usine.",en:"Shipped from Marseille. Free pickup-point delivery from €39. Free collection at the factory shop.",es:"Enviado desde Marsella. Envío gratis a punto de recogida desde 39 €. Recogida gratuita en la tienda de fábrica.",de:"Versand aus Marseille. Kostenlose Lieferung an Abholstellen ab 39 €. Kostenlose Abholung im Fabrikladen.",it:"Spedito da Marsiglia. Consegna gratuita al punto di ritiro da 39 €. Ritiro gratuito allo spaccio.",zh:"从马赛发货。满39欧元免费配送至自提点。可在工厂商店免费自取。"},
+pdp_r:{fr:"Fabriqué à Marseille depuis 1856 · Entreprise du Patrimoine Vivant",en:"Made in Marseille since 1856 · Living Heritage Company",es:"Fabricado en Marsella desde 1856 · Empresa del Patrimonio Vivo",de:"Hergestellt in Marseille seit 1856 · Lebendiges Kulturerbe",it:"Prodotto a Marsiglia dal 1856 · Patrimonio Vivente",zh:"自1856年马赛制造 · 法国活遗产企业"},
+xs:{fr:"Souvent choisis ensemble",en:"Often chosen together",es:"Se eligen juntos a menudo",de:"Oft zusammen gewählt",it:"Spesso scelti insieme",zh:"常一起购买"},
+hs_k:{fr:"La savonnerie",en:"The soap factory",es:"La jabonería",de:"Die Siederei",it:"Il saponificio",zh:"皂厂"},
+hs_t:{fr:"Une ville, <em>un chaudron, 170 ans.</em>",en:"One city, <em>one cauldron, 170 years.</em>",es:"Una ciudad, <em>un caldero, 170 años.</em>",de:"Eine Stadt, <em>ein Kessel, 170 Jahre.</em>",it:"Una città, <em>un calderone, 170 anni.</em>",zh:"一座城，<em>一口锅，170年。</em>"},
+t1688:{fr:"L'Édit de Colbert fixe la recette du savon de Marseille : huiles végétales, cuisson au chaudron.",en:"Colbert's Edict sets the Marseille soap recipe: plant oils, cauldron cooking.",es:"El Edicto de Colbert fija la receta del jabón de Marsella: aceites vegetales, cocción en caldero.",de:"Das Edikt von Colbert legt das Rezept fest: Pflanzenöle, Sieden im Kessel.",it:"L'Editto di Colbert fissa la ricetta: oli vegetali, cottura nel calderone.",zh:"科尔贝尔法令确立马赛皂配方：植物油，大锅熬制。"},
+t1850:{fr:"Au chemin de Sainte-Marthe, une fabrique de bougies s'installe.",en:"A candle works opens on chemin de Sainte-Marthe.",es:"En el chemin de Sainte-Marthe se instala una fábrica de velas.",de:"Am chemin de Sainte-Marthe entsteht eine Kerzenfabrik.",it:"In chemin de Sainte-Marthe si insedia una fabbrica di candele.",zh:"一家蜡烛工坊落户圣玛尔特路。"},
+t1856:{fr:"Elle devient savonnerie. Le premier chaudron est allumé.",en:"It becomes a soap factory. The first cauldron is lit.",es:"Se convierte en jabonería. Se enciende el primer caldero.",de:"Sie wird zur Seifensiederei. Der erste Kessel wird angefeuert.",it:"Diventa saponificio. Si accende il primo calderone.",zh:"工坊改为皂厂，第一口大锅点火。"},
+t1953:{fr:"La savonnerie prend le nom de Fer à Cheval, porte-bonheur de la maison.",en:"The factory takes the name Fer à Cheval, the house's lucky charm.",es:"La jabonería toma el nombre de Fer à Cheval, amuleto de la casa.",de:"Die Siederei nimmt den Namen Fer à Cheval an, Glücksbringer des Hauses.",it:"Il saponificio prende il nome Fer à Cheval, portafortuna della maison.",zh:"皂厂更名为Fer à Cheval（马蹄铁），寓意好运。"},
+t2013:{fr:"Raphaël et Yannick Seghin reprennent la savonnerie et lui donnent un nouveau souffle.",en:"Raphaël and Yannick Seghin take over the factory and breathe new life into it.",es:"Raphaël y Yannick Seghin retoman la jabonería y le dan un nuevo impulso.",de:"Raphaël und Yannick Seghin übernehmen die Siederei und geben ihr neuen Schwung.",it:"Raphaël e Yannick Seghin rilevano il saponificio e gli danno nuovo slancio.",zh:"Raphaël与Yannick Seghin兄弟接手皂厂，注入新活力。"},
+t2019:{fr:"Inscription aux Monuments historiques : la seule savonnerie de Marseille.",en:"Listed as a historic monument: the only soap factory in Marseille.",es:"Inscripción como monumento histórico: la única jabonería de Marsella.",de:"Denkmalschutz: die einzige Seifensiederei Marseilles.",it:"Iscrizione ai monumenti storici: l'unico saponificio di Marsiglia.",zh:"列入历史古迹：马赛唯一一家皂厂。"},
+t2021:{fr:"Partenaire officiel de l'équipe de France de football pour l'Euro.",en:"Official partner of the French football team for the Euro.",es:"Socio oficial de la selección francesa de fútbol para la Eurocopa.",de:"Offizieller Partner der französischen Fußballnationalmannschaft zur EM.",it:"Partner ufficiale della nazionale francese di calcio per gli Europei.",zh:"法国国家足球队欧洲杯官方合作伙伴。"},
+t2026:{fr:"170 ans. La Collection 1856 célèbre la date fondatrice.",en:"170 years. The 1856 Collection celebrates the founding date.",es:"170 años. La Colección 1856 celebra la fecha fundacional.",de:"170 Jahre. Die Kollektion 1856 feiert das Gründungsdatum.",it:"170 anni. La Collezione 1856 celebra la data fondativa.",zh:"170周年。1856系列致敬创立之年。"},
+lb1:{fr:"Entreprise du Patrimoine Vivant",en:"Living Heritage Company",es:"Empresa del Patrimonio Vivo",de:"Lebendiges Kulturerbe",it:"Impresa del Patrimonio Vivente",zh:"法国活遗产企业"},
+lb2:{fr:"Membre fondateur de l'UPSM",en:"Founding member of the UPSM",es:"Miembro fundador de la UPSM",de:"Gründungsmitglied der UPSM",it:"Membro fondatore dell'UPSM",zh:"马赛皂专业联盟创始成员"},
+lb3:{fr:"Origine France Garantie",en:"Origine France Garantie",es:"Origine France Garantie",de:"Origine France Garantie",it:"Origine France Garantie",zh:"法国原产认证"},
+lb4:{fr:"Monument historique",en:"Historic monument",es:"Monumento histórico",de:"Baudenkmal",it:"Monumento storico",zh:"历史古迹"},
+ft_p:{fr:"La plus ancienne savonnerie de Marseille encore en activité. 66, chemin de Sainte-Marthe, 13014 Marseille.",en:"The oldest soap factory in Marseille still in operation. 66, chemin de Sainte-Marthe, 13014 Marseille.",es:"La jabonería más antigua de Marsella aún en activo. 66, chemin de Sainte-Marthe, 13014 Marsella.",de:"Die älteste noch aktive Seifensiederei Marseilles. 66, chemin de Sainte-Marthe, 13014 Marseille.",it:"Il più antico saponificio di Marsiglia ancora in attività. 66, chemin de Sainte-Marthe, 13014 Marsiglia.",zh:"马赛至今仍在运营的最古老皂厂。66, chemin de Sainte-Marthe, 13014 马赛。"},
+ft_c:{fr:"Service client",en:"Customer service",es:"Atención al cliente",de:"Kundenservice",it:"Servizio clienti",zh:"客户服务"},
+ft_f:{fr:"Suivez la savonnerie",en:"Follow the soap factory",es:"Siga la jabonería",de:"Folgen Sie der Siederei",it:"Seguite il saponificio",zh:"关注皂厂"},
+mock:{fr:"Proposition de refonte — Neovera Studio · maquette non contractuelle",en:"Redesign proposal — Neovera Studio · non-contractual mock-up",es:"Propuesta de rediseño — Neovera Studio · maqueta no contractual",de:"Redesign-Vorschlag — Neovera Studio · unverbindlicher Entwurf",it:"Proposta di restyling — Neovera Studio · bozza non contrattuale",zh:"网站改版提案 — Neovera Studio · 非合同示意稿"},
+cart:{fr:"Panier",en:"Basket",es:"Cesta",de:"Warenkorb",it:"Carrello",zh:"购物车"},
+empty:{fr:"Votre panier est vide.",en:"Your basket is empty.",es:"Su cesta está vacía.",de:"Ihr Warenkorb ist leer.",it:"Il carrello è vuoto.",zh:"购物车为空。"},
+ship_left:{fr:"Plus que {x} pour la livraison offerte en point relais",en:"Only {x} more for free pickup-point delivery",es:"Solo {x} más para el envío gratis",de:"Nur noch {x} bis zur kostenlosen Lieferung",it:"Ancora {x} per la consegna gratuita",zh:"再购{x}即可免费配送"},
+ship_ok:{fr:"Livraison offerte en point relais",en:"Free pickup-point delivery",es:"Envío gratis a punto de recogida",de:"Kostenlose Lieferung an Abholstelle",it:"Consegna gratuita al punto di ritiro",zh:"免费配送至自提点"},
+total:{fr:"Total",en:"Total",es:"Total",de:"Summe",it:"Totale",zh:"合计"},
+checkout:{fr:"Commander",en:"Checkout",es:"Pedir",de:"Bestellen",it:"Ordina",zh:"结算"},
+booked:{fr:"C'est noté : mercredi {d} à 14 h, {n} personne(s). Un e-mail de confirmation vous sera envoyé.",en:"Booked: Wednesday {d} at 2 pm, {n} guest(s). A confirmation email will follow.",es:"Reservado: miércoles {d} a las 14 h, {n} persona(s). Recibirá un correo de confirmación.",de:"Gebucht: Mittwoch {d} um 14 Uhr, {n} Person(en). Eine Bestätigung folgt per E-Mail.",it:"Prenotato: mercoledì {d} alle 14, {n} persona/e. Riceverete un'e-mail di conferma.",zh:"已预约：周三{d} 14点，{n}人。确认邮件将随后发送。"},
+adv_tag:{fr:"Je vous aide à choisir",en:"Let me help you choose",es:"Le ayudo a elegir",de:"Ich helfe Ihnen beim Wählen",it:"La aiuto a scegliere",zh:"帮您挑选"},
+adv_bub:{fr:"Bonjour ! Pour la peau, le linge, la maison ou un cadeau ? Je vous guide en 30 secondes.",en:"Hello! For skin, laundry, the home or a gift? I'll guide you in 30 seconds.",es:"¡Hola! ¿Para la piel, la ropa, la casa o un regalo? Le guío en 30 segundos.",de:"Hallo! Für Haut, Wäsche, Haushalt oder ein Geschenk? Ich berate Sie in 30 Sekunden.",it:"Buongiorno! Per la pelle, il bucato, la casa o un regalo? La guido in 30 secondi.",zh:"您好！护肤、洗衣、家居还是送礼？30秒为您推荐。"},
+adv_k:{fr:"Le conseiller de la savonnerie",en:"The soap factory's adviser",es:"El asesor de la jabonería",de:"Der Berater der Siederei",it:"Il consulente del saponificio",zh:"皂厂顾问"},
+close:{fr:"Fermer",en:"Close",es:"Cerrar",de:"Schließen",it:"Chiudi",zh:"关闭"}
+};
+const FLOW={
+start:{fr:"Bonjour, je suis le conseiller Fer à Cheval. Dites-moi ce que vous cherchez, je vous recommande le bon savon.",en:"Hello, I'm the Fer à Cheval adviser. Tell me what you're looking for and I'll recommend the right soap.",es:"Hola, soy el asesor de Fer à Cheval. Dígame qué busca y le recomiendo el jabón adecuado.",de:"Hallo, ich bin der Fer-à-Cheval-Berater. Sagen Sie mir, was Sie suchen, und ich empfehle die richtige Seife.",it:"Buongiorno, sono il consulente Fer à Cheval. Mi dica cosa cerca e le consiglio il sapone giusto.",zh:"您好，我是Fer à Cheval顾问。告诉我您的需求，我为您推荐合适的皂。"},
+q:{
+peau:{fr:"Pour ma peau",en:"For my skin",es:"Para mi piel",de:"Für meine Haut",it:"Per la mia pelle",zh:"护肤"},
+sens:{fr:"Peau sensible ou intolérante",en:"Sensitive or intolerant skin",es:"Piel sensible o intolerante",de:"Empfindliche Haut",it:"Pelle sensibile o intollerante",zh:"敏感肌"},
+linge:{fr:"Pour le linge",en:"For laundry",es:"Para la ropa",de:"Für die Wäsche",it:"Per il bucato",zh:"洗衣"},
+maison:{fr:"Pour la maison",en:"For the home",es:"Para la casa",de:"Für den Haushalt",it:"Per la casa",zh:"家居清洁"},
+cadeau:{fr:"Une idée cadeau",en:"A gift idea",es:"Una idea de regalo",de:"Eine Geschenkidee",it:"Un'idea regalo",zh:"送礼推荐"},
+visite:{fr:"Visiter la savonnerie",en:"Visit the soap factory",es:"Visitar la jabonería",de:"Die Siederei besuchen",it:"Visitare il saponificio",zh:"参观皂厂"},
+vrai:{fr:"Reconnaître le vrai savon de Marseille",en:"Spot true Marseille soap",es:"Reconocer el auténtico jabón de Marsella",de:"Echte Marseiller Seife erkennen",it:"Riconoscere il vero sapone di Marsiglia",zh:"如何辨认正宗马赛皂"}},
+a:{
+peau:{fr:"Pour la toilette, le cube pur olive est notre classique. Si vous aimez les parfums, nos savons doux surgras au karité sont très appréciés.",en:"For washing, the pure olive cube is our classic. If you like fragrance, our superfatted shea gentle soaps are much loved.",es:"Para el aseo, el cubo puro oliva es nuestro clásico. Si le gustan los perfumes, nuestros jabones suaves sobreengrasados con karité son muy apreciados.",de:"Für die Körperpflege ist der Olivenwürfel unser Klassiker. Wer Duft mag: unsere rückfettenden Sheabutter-Seifen sind sehr beliebt.",it:"Per la toilette, il cubo puro oliva è il nostro classico. Se ama i profumi, i saponi delicati surgrassati al karité sono molto apprezzati.",zh:"日常洁肤首选纯橄榄方块皂。若喜欢香氛，富含乳木果油的温和香皂广受好评。"},
+sens:{fr:"Pour les peaux qui réagissent à tout, choisissez le pur olive : 100 % huile d'olive, sans parfum ni additif, certifié Cosmos Natural.",en:"For skin that reacts to everything, choose pure olive: 100% olive oil, no fragrance or additives, Cosmos Natural certified.",es:"Para pieles que reaccionan a todo, elija el puro oliva: 100 % aceite de oliva, sin perfume ni aditivos, certificado Cosmos Natural.",de:"Für Haut, die auf alles reagiert: reines Olivenöl, ohne Duft und Zusätze, Cosmos-Natural-zertifiziert.",it:"Per le pelli che reagiscono a tutto, scegliete il puro oliva: 100% olio d'oliva, senza profumo né additivi, certificato Cosmos Natural.",zh:"对一切都敏感的肌肤，请选择纯橄榄皂：100%橄榄油，无香精无添加，Cosmos Natural认证。"},
+linge:{fr:"Pour une lessive maison très douce, prenez nos copeaux pur olive. Pour aller au plus simple, la lessive liquide concentrée fait 20 lavages.",en:"For a very gentle homemade detergent, take our pure olive flakes. For the simplest option, the concentrated liquid does 20 washes.",es:"Para un detergente casero muy suave, elija nuestras virutas puro oliva. Para lo más sencillo, el detergente líquido concentrado rinde 20 lavados.",de:"Für ein sehr sanftes Waschmittel: unsere Olivenflocken. Am einfachsten: das Flüssigkonzentrat für 20 Wäschen.",it:"Per un detersivo fatto in casa delicatissimo, le nostre scaglie puro oliva. Per la soluzione più semplice, il liquido concentrato fa 20 lavaggi.",zh:"想自制温和洗衣液，选纯橄榄皂片；想省事，浓缩洗衣液可洗20次。"},
+maison:{fr:"Le savon noir nettoie tout : sols, surfaces, taches. Pour la vaisselle, essayez notre savon solide au bicarbonate.",en:"Black soap cleans everything: floors, surfaces, stains. For dishes, try our solid soap with bicarbonate.",es:"El jabón negro lo limpia todo: suelos, superficies, manchas. Para la vajilla, pruebe nuestro jabón sólido con bicarbonato.",de:"Schwarze Seife reinigt alles: Böden, Flächen, Flecken. Fürs Geschirr: unsere feste Seife mit Natron.",it:"Il sapone nero pulisce tutto: pavimenti, superfici, macchie. Per i piatti, provate il nostro sapone solido al bicarbonato.",zh:"黑皂万能：地面、台面、污渍。洗碗可试试含小苏打的固体皂。"},
+cadeau:{fr:"Pour Noël, nos coffrets en édition limitée sont prêts à offrir. Pour les 170 ans, l'assortiment Collection 1856 est notre coup de cœur.",en:"For Christmas, our limited-edition sets are ready to give. For the 170th anniversary, the 1856 Collection set is our favourite.",es:"Para Navidad, nuestros estuches de edición limitada están listos para regalar. Para los 170 años, el conjunto Colección 1856 es nuestro favorito.",de:"Zu Weihnachten sind unsere limitierten Sets geschenkfertig. Zum 170. Jubiläum ist das Set der Kollektion 1856 unser Favorit.",it:"Per Natale, i nostri cofanetti in edizione limitata sono pronti da regalare. Per i 170 anni, l'assortimento Collezione 1856 è il nostro preferito.",zh:"圣诞限量礼盒即买即送。170周年之际，1856系列套装是我们的首推。"},
+visite:{fr:"La visite est gratuite chaque mercredi à 14 h, au 66 chemin de Sainte-Marthe. Je vous emmène au formulaire de réservation.",en:"The tour is free every Wednesday at 2 pm, at 66 chemin de Sainte-Marthe. Let me take you to the booking form.",es:"La visita es gratuita cada miércoles a las 14 h, en el 66 chemin de Sainte-Marthe. Le llevo al formulario de reserva.",de:"Die Führung ist jeden Mittwoch um 14 Uhr kostenlos, 66 chemin de Sainte-Marthe. Ich bringe Sie zum Buchungsformular.",it:"La visita è gratuita ogni mercoledì alle 14, al 66 chemin de Sainte-Marthe. La porto al modulo di prenotazione.",zh:"每周三14点免费参观，地址：66 chemin de Sainte-Marthe。我带您前往预约表单。"},
+vrai:{fr:"Le vrai savon de Marseille vient de la région marseillaise, est cuit au chaudron à partir d'huiles végétales, sans parfum ni colorant. Le nôtre porte l'estampille Fer à Cheval.",en:"True Marseille soap comes from the Marseille region and is cauldron-cooked from plant oils, with no fragrance or colouring. Ours carries the Fer à Cheval stamp.",es:"El auténtico jabón de Marsella procede de la región marsellesa y se cuece en caldero con aceites vegetales, sin perfume ni colorante. El nuestro lleva el sello Fer à Cheval.",de:"Echte Marseiller Seife stammt aus der Region Marseille, wird im Kessel aus Pflanzenölen gesiedet, ohne Duft- und Farbstoffe. Unsere trägt den Fer-à-Cheval-Stempel.",it:"Il vero sapone di Marsiglia viene dalla regione marsigliese ed è cotto nel calderone con oli vegetali, senza profumi né coloranti. Il nostro porta il timbro Fer à Cheval.",zh:"正宗马赛皂产自马赛地区，以植物油在大锅中熬制，不含香精与色素。我们的皂都压有Fer à Cheval印记。"}},
+r:{peau:['p00','p16','p22'],sens:['p00','p08','p05'],linge:['p07','p20','p06'],maison:['p18','p21','p19'],cadeau:['p04','p12','p11'],vrai:['p00','p01']},
+next:{start:['peau','sens','linge','maison','cadeau','visite','vrai'],peau:['sens','cadeau'],sens:['linge','vrai'],linge:['maison','cadeau'],maison:['linge','vrai'],cadeau:['visite','peau'],visite:['cadeau','vrai'],vrai:['peau','visite']}
+};
+Object.assign(I,{
+rv1:{fr:"« Depuis plus de 4 ans c'est adopté, et j'ai même converti plusieurs personnes de mon entourage. »",en:"“Adopted for more than 4 years, and I've even converted several people around me.”",es:"«Adoptado desde hace más de 4 años, e incluso he convencido a varias personas de mi entorno.»",de:"„Seit über 4 Jahren im Einsatz, und ich habe sogar einige Menschen in meinem Umfeld überzeugt.“",it:"«Adottato da più di 4 anni, e ho persino convertito diverse persone intorno a me.»",zh:"“用了四年多，还让身边好几个人也爱上了它。”"},
+rv1n:{fr:"Fiona · Barre pur olive 4 kg",en:"Fiona · Pure olive bar 4 kg",es:"Fiona · Barra puro oliva 4 kg",de:"Fiona · Olivenriegel 4 kg",it:"Fiona · Barra puro oliva 4 kg",zh:"Fiona · 纯橄榄长条皂 4公斤"},
+rv2:{fr:"« Les produits Fer à Cheval sont de très bonne qualité. La commande est toujours envoyée rapidement. »",en:"“Fer à Cheval products are of very good quality. Orders always ship quickly.”",es:"«Los productos Fer à Cheval son de muy buena calidad. El pedido siempre se envía rápido.»",de:"„Die Produkte von Fer à Cheval sind von sehr guter Qualität. Bestellungen werden immer schnell verschickt.“",it:"«I prodotti Fer à Cheval sono di ottima qualità. L'ordine viene sempre spedito rapidamente.»",zh:"“Fer à Cheval的产品品质很好，订单总是发货迅速。”"},
+rv2n:{fr:"Stéphane L. · Savonnette pur olive",en:"Stéphane L. · Pure olive bar",es:"Stéphane L. · Pastilla puro oliva",de:"Stéphane L. · Olivenseife",it:"Stéphane L. · Saponetta puro oliva",zh:"Stéphane L. · 纯橄榄香皂"},
+rv3:{fr:"« Je ne sais plus combien d'années j'achète chez vous. »",en:"“I no longer know how many years I've been buying from you.”",es:"«Ya no sé cuántos años llevo comprándoles.»",de:"„Ich weiß nicht mehr, seit wie vielen Jahren ich bei Ihnen kaufe.“",it:"«Non so più da quanti anni compro da voi.»",zh:"“我已经记不清在你们这里买了多少年了。”"},
+rv3n:{fr:"Fabrice H. · Savonnette végétale",en:"Fabrice H. · Vegetable bar",es:"Fabrice H. · Pastilla vegetal",de:"Fabrice H. · Pflanzenseife",it:"Fabrice H. · Saponetta vegetale",zh:"Fabrice H. · 植物香皂"},
+p_vis:{fr:"Boutique d'usine, chemin de Sainte-Marthe",en:"Factory shop, chemin de Sainte-Marthe",es:"Tienda de fábrica, chemin de Sainte-Marthe",de:"Fabrikladen, chemin de Sainte-Marthe",it:"Spaccio, chemin de Sainte-Marthe",zh:"圣玛尔特路工厂商店"}
+});
+
+let LANG='fr';
+const P=id=>PRODUCTS.find(p=>p.id===id);
+const img=id=>'img/'+id+'.jpg';
+const t=k=>(I[k]&&(I[k][LANG]||I[k].fr))||k;
+const nm=p=>p.n[LANG]||p.n.fr, ds=p=>p.d[LANG]||p.d.fr;
+const eur=v=>LANG==='fr'||LANG==='es'||LANG==='de'||LANG==='it'?v.toFixed(2).replace('.',',')+' €':'€'+v.toFixed(2);
+const BADGE={best:{fr:'Le n°1 depuis 1856',en:'No. 1 since 1856',es:'El n.º 1 desde 1856',de:'Die Nr. 1 seit 1856',it:'Il n. 1 dal 1856',zh:'1856年以来的首选'},'1856':{fr:'170 ans',en:'170 years',es:'170 años',de:'170 Jahre',it:'170 anni',zh:'170周年'},noel:{fr:'Noël',en:'Christmas',es:'Navidad',de:'Weihnachten',it:'Natale',zh:'圣诞'}};
+function card(p){return `<article class="card" data-pid="${p.id}"><div class="ph">${(p.b&&(p.b!=='best'||p.id==='p00'))?`<span class="badge">${BADGE[p.b][LANG]}</span>`:''}<img loading="eager" src="${img(p.id)}" alt="${nm(p)}"></div><div class="info"><div class="nm">${nm(p)}</div><div class="row"><span class="pr">${eur(p.p)}</span><button class="add" data-add="${p.id}">${t('add')}</button></div></div></article>`}
+let FILTER='all';
+function renderGrids(){
+  g1856.innerHTML=['p02','p03','p04'].map(id=>card(P(id))).join('').replace(/class="card"/g,'class="card" style="flex-direction:row"').replace(/class="ph"/g,'class="ph" style="width:38%;flex:none"');
+  gBest.innerHTML=['p00','p05','p07','p01'].map(id=>card(P(id))).join('');
+  gGift.innerHTML=['p12','p13','p10','p11'].map(id=>card(P(id))).join('');
+  
+  gShop.innerHTML=PRODUCTS.filter(p=>FILTER==='all'||p.c===FILTER).map(card).join('');
+}
+filters.onclick=e=>{const b=e.target.closest('button');if(!b)return;FILTER=b.dataset.f;[...filters.children].forEach(x=>x.classList.toggle('on',x===b));renderGrids()};
+let CUR='p00',QTY=1;
+function renderPdp(id){CUR=id;QTY=1;const p=P(id);const GAL={p00:["a17","a19"],p01:["a19","a17"],p06:["a21"],p07:["a23"],p02:["a25","a26"],p03:["a26","a28"],p04:["a25","a28"]}[id]||[];pdp.innerHTML=`<div><div class="g"><img id="pdpI" src="${img(id)}" alt="${nm(p)}"></div>${GAL.length?`<div class="thumbs"><img class="on" src="${img(id)}" alt="" onclick="pv(this,0)">${GAL.map(g=>`<img src="img/${g}.jpg" alt="" onclick="pv(this,1)">`).join("")}</div>`:""}</div><div><p class="mono">${t('tag')}</p><h1 class="disp">${nm(p)}</h1><div class="price">${eur(p.p)}</div><p class="desc">${ds(p)}</p><div style="display:flex;align-items:center;flex-wrap:wrap;gap:10px"><span class="qty"><button onclick="q(-1)">−</button><span id="qv">1</span><button onclick="q(1)">+</button></span><button class="btn" onclick="addCart(CUR,QTY)">${t('add_cart')}</button></div><p class="reass">${t('pdp_r')}</p><div style="margin-top:28px"><details open><summary>${t('acc1')}</summary><p>${t('acc1p')}</p></details><details><summary>${t('acc2')}</summary><p>${t('acc2p')}</p></details></div></div>`;
+  gX.innerHTML=PRODUCTS.filter(x=>x.id!==id&&(x.c===p.c||x.t.some(k=>p.t.includes(k)))).slice(0,4).map(card).join('')}
+function q(d){QTY=Math.max(1,QTY+d);qv.textContent=QTY}
+function pv(el,c){const m=document.getElementById("pdpI");m.src=el.src;m.classList.toggle("cov",!!c);el.parentNode.querySelectorAll("img").forEach(x=>x.classList.toggle("on",x===el))}
+function go(v,o={}){document.querySelectorAll('.view').forEach(x=>x.classList.toggle('on',x.id==='v-'+v));nav.classList.remove('open');if(v==='product')renderPdp(o.pid);if(o.anchor){setTimeout(()=>document.getElementById(o.anchor)?.scrollIntoView({behavior:'smooth'}),40)}else scrollTo({top:0,behavior:'instant'})}
+document.addEventListener('click',e=>{const a=e.target.closest('[data-add]');if(a){e.stopPropagation();addCart(a.dataset.add,1);return}const g=e.target.closest('[data-go]');if(g){e.preventDefault();go(g.dataset.go,{anchor:g.dataset.anchor});return}const c=e.target.closest('.card');if(c){go('product',{pid:c.dataset.pid})}});
+/* cart */
+let CART={};try{CART=JSON.parse(localStorage.getItem('fac_cart')||'{}')}catch(e){}
+function save(){try{localStorage.setItem('fac_cart',JSON.stringify(CART))}catch(e){}}
+function addCart(id,n){CART[id]=(CART[id]||0)+n;save();renderCart();toast(t('added'))}
+function setQ(id,d){CART[id]=(CART[id]||0)+d;if(CART[id]<=0)delete CART[id];save();renderCart()}
+function renderCart(){const ids=Object.keys(CART);let tot=0,n=0;items.innerHTML=ids.length?ids.map(id=>{const p=P(id);tot+=p.p*CART[id];n+=CART[id];return `<div class="it"><img src="${img(id)}" alt=""><div>${nm(p)}<div class="q"><button onclick="setQ('${id}',-1)">−</button>${CART[id]}<button onclick="setQ('${id}',1)">+</button></div></div><b>${eur(p.p*CART[id])}</b></div>`}).join(''):`<p style="padding:30px 0;color:#7D7466">${t('empty')}</p>`;ids.forEach(id=>{});cartN.textContent=n;document.getElementById('tot').textContent=eur(tot);const left=39-tot;ship.innerHTML=(left>0?t('ship_left').replace('{x}',eur(left)):t('ship_ok'))+`<div class="bar"><i style="width:${Math.min(100,tot/39*100)}%"></i></div>`}
+function openCart(){drawer.classList.add('on');ovl.classList.add('on')}
+function closeCart(){drawer.classList.remove('on');ovl.classList.remove('on')}
+let tT;function toast(m){toastEl.textContent=m;toastEl.classList.add('on');clearTimeout(tT);tT=setTimeout(()=>toastEl.classList.remove('on'),1800)}
+const toastEl=document.getElementById('toast');
+/* visit */
+function weds(){const o=[];const d=new Date();d.setDate(d.getDate()+((3-d.getDay()+7)%7||7));for(let i=0;i<8;i++){o.push(new Date(d));d.setDate(d.getDate()+7)}return o}
+function renderWeds(){const loc={fr:'fr-FR',en:'en-GB',es:'es-ES',de:'de-DE',it:'it-IT',zh:'zh-CN'}[LANG];vDate.innerHTML=weds().map(d=>`<option>${d.toLocaleDateString(loc,{day:'numeric',month:'long'})}</option>`).join('')}
+function book(e){e.preventDefault();vOk.textContent=t('booked').replace('{d}',vDate.value).replace('{n}',vPpl.value);vOk.style.display='block';return false}
+/* advisor */
+const adv=document.getElementById('adv'),advB=document.getElementById('advB');let started=false;
+addEventListener('scroll',()=>advB.classList.toggle('mini',scrollY>300),{passive:true});
+if(innerWidth<761){const ho=new IntersectionObserver(e=>{const h=e[0].isIntersecting&&document.getElementById('v-home').classList.contains('on');advB.classList.toggle('hid',h)},{threshold:.35});ho.observe(document.querySelector('.hero'))}
+function say(x,w){const d=document.createElement('div');d.className='bub '+w;d.textContent=x;log.appendChild(d);log.scrollTop=log.scrollHeight}
+function recs(ids){ids.forEach(id=>{const p=P(id);const d=document.createElement('div');d.className='rec';d.innerHTML=`<img src="${img(id)}" alt=""><div>${nm(p)}<br><b>${eur(p.p)}</b></div><button class="add" data-add="${id}">${t('add')}</button>`;log.appendChild(d)});log.scrollTop=log.scrollHeight}
+function chipsFor(k){chips.innerHTML='';FLOW.next[k].forEach(c=>{const b=document.createElement('button');b.textContent=FLOW.q[c][LANG];b.onclick=()=>{say(FLOW.q[c][LANG],'me');setTimeout(()=>{say(FLOW.a[c][LANG],'bot');if(FLOW.r[c])recs(FLOW.r[c]);if(c==='visite')setTimeout(()=>{toggleAdv(false);go('home',{anchor:'visiter'})},1400);chipsFor(c)},350)};chips.appendChild(b)})}
+function startAdv(){log.innerHTML='';say(FLOW.start[LANG],'bot');chipsFor('start');started=true}
+function toggleAdv(o){const open=o===undefined?!adv.classList.contains('open'):o;adv.classList.toggle('open',open);advB.style.display=open?'none':'flex';document.getElementById('advBub')?.remove();if(open&&!started)startAdv()}
+(function(){const b=document.getElementById('advBub');let s=null;try{s=sessionStorage.getItem('facbub')}catch(e){}if(!s)setTimeout(()=>{if(document.body.contains(b)&&!adv.classList.contains('open')){b.classList.add('on');try{sessionStorage.setItem('facbub','1')}catch(e){}setTimeout(()=>b.remove(),10000)}},4000);b.addEventListener('click',()=>toggleAdv(true))})();
+/* i18n */
+function setLang(l){LANG=l;document.documentElement.lang=l;document.querySelectorAll('[data-i]').forEach(el=>{el.innerHTML=t(el.dataset.i)});document.querySelectorAll('[data-ia]').forEach(el=>el.alt=t(el.dataset.ia));document.querySelectorAll('[data-ip]').forEach(el=>el.placeholder=t(el.dataset.ip));if(innerWidth<761)[...lang.options].forEach(o=>o.textContent=o.value.toUpperCase());lang.setAttribute('aria-label',t('lang'));renderGrids();renderCart();renderWeds();if(document.getElementById('v-product').classList.contains('on'))renderPdp(CUR);if(started)startAdv();try{localStorage.setItem('fac_lang',l)}catch(e){}}
+lang.innerHTML=Object.entries(LANGS).map(([k,v])=>`<option value="${k}">${v}</option>`).join('');
+lang.onchange=e=>setLang(e.target.value);
+let L0='fr';try{L0=localStorage.getItem('fac_lang')||'fr'}catch(e){}lang.value=L0;setLang(L0);
+</script>
+</body>
+</html>
