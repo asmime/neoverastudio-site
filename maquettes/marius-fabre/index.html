@@ -56,7 +56,7 @@ header.site{position:sticky;top:0;z-index:50;background:color-mix(in srgb,var(--
 .nav a{font-size:14px;text-decoration:none;cursor:pointer;padding:4px 0;border-bottom:1px solid transparent}
 .nav a:hover,.nav a.on{border-color:var(--ink)}
 .tools{justify-self:end;display:flex;align-items:center;gap:14px}
-.langsel{background:transparent;border:0;font:500 12px var(--mono);cursor:pointer;padding:6px}
+.langsel{background-color:transparent;border:1px solid var(--ink);border-radius:999px;font:500 13px var(--display);cursor:pointer;padding:7px 30px 7px 14px}
 .lang button{background:none;border:0;padding:6px 7px;cursor:pointer;font:500 11px var(--mono)}
 .lang button.on{background:var(--ink);color:var(--bone)}
 .cartbtn{position:relative;background:none;border:0;padding:8px;cursor:pointer;display:grid;place-items:center}
@@ -342,7 +342,7 @@ select{appearance:none;-webkit-appearance:none;background-image:url("data:image/
     <button class="burger" id="burger" aria-label="Menu" aria-expanded="false">☰</button>
     <a class="logo" data-go="home" href="#accueil"><b>MARIUS FABRE</b><span class="mono">Savonnier depuis 1900</span></a>
     <div class="tools">
-      <select class="langsel" id="lang" aria-label="Langue"><option value="fr">FR</option><option value="en">EN</option><option value="es">ES</option><option value="de">DE</option><option value="it">IT</option><option value="ja">日本語</option></select>
+      <select class="langsel" id="lang" aria-label="Langue"><option value="fr">Français</option><option value="en">English</option><option value="es">Español</option><option value="de">Deutsch</option><option value="it">Italiano</option><option value="ja">日本語</option></select>
       <button class="cartbtn" id="cartBtn" aria-label="Panier"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 8h14l-1.2 12H6.2z"/><path d="M9 8V6a3 3 0 016 0v2"/></svg><span class="pill" id="cartN">0</span></button>
     </div>
   </div>
@@ -679,6 +679,120 @@ document.addEventListener('click',e=>{if(e.target.closest('[data-go]'))setTimeou
 document.addEventListener('keydown',e=>{if(e.key==='Escape'){toggleAdv(false);openCart(false)}});
 
 /* i18n (key strings) */
+const EN_FULL={
+top1:'Free delivery on orders over €59',
+top2:'Free tours of the soap factory and museum · Salon-de-Provence',
+n_shop:'Shop',n_house:'Our story',n_visit:'Visit',n_gift:'Gift sets',n_adv:'Marius Conseil',
+h_kicker:'Salon-de-Provence · Four generations · Living Heritage Company',
+h_title:'Soap makers<br><em>since 1900.</em>',
+h_sign:'Marie & Julie Bousquet-Fabre · 4th generation',
+h_sub:'Cooked in the cauldron, poured into the mises, stamped by hand. True Marseille soap, with no colouring and no added fragrance.',
+h_cta1:'The 72% cube — €4.60',h_cta2:'Visit the soap factory →',
+f2:'Palm oil',f3:'Soap makers',f4:'Countries',
+s_k:'The house figure',s_t:'oil, and nothing else to hide.',
+s_p:'Marius Fabre Marseille soap is cooked in the cauldron following the traditional Marseille process, with plant oils sourced in France and Europe, palm-oil free since 2020. A four-generation recipe that Japan has been asking for since 1990.',
+s_cta:'The historic cube, €4.60',
+b_k:'The essentials',b_t:'What the house does best.',b_all:'Shop all',
+c_k:'Christmas 2026',c_t:'Give a piece of Provence.',
+c_p:'Gift sets illustrated by Anna, the youngest of the Fabre sisters, ready to give.<br><b>Order before 18 December for Christmas delivery. Gift wrapping included.</b>',
+g_k:'The craft',g_t:'Four gestures, one cauldron.',
+g_p:'Nothing has changed in the avenue Paul-Bourret workshop: the soap is still cooked, poured, cut and stamped as in Marius’s day.',
+st1:'Cooking',st1p:'The plant oils cook for several days in the cauldrons, under the eye of the master soap maker.',
+st2:'Pouring',st2p:'The paste is poured into the mises, large basins where it dries before being sliced.',
+st3:'Cutting',st3p:'The slabs are cut into bars, then cubes, and dry in the open air.',
+st4:'The stamp',st4p:'Each cube is stamped by hand with the house seal: the signature of true Marseille soap.',
+fi_k:'The film',fi_t:'Step inside the soap factory.',fi_play:'The Marius Fabre soap factory, a family story · 3 min',
+tl_k:'1900 — 2025',tl_t:'A family story.',tl_more:'Our story',
+v_k:'Free tour',v_t:'Visit the soap factory and its museum.',
+v_p:'The workshops and the Marseille soap museum are open free of charge, at the heart of the 1927 factory. Book your slot in a few seconds.',
+v_date:'Date',v_hour:'Time',v_people:'Guests',v_kind:'Tour',v_k1:'Workshops + museum',v_k2:'Marius’s workshops (children’s workshop)',v_book:'Book for free',
+sh_k:'Our shops',sh_p:'And more than 40 countries, from Japan to the United Kingdom.',
+sp_k:'The shop',sp_t:'True Marseille soap.',
+fa:'All',fm:'Marseille soap',fn:'Black soap & home',fs:'Body care',fl:'Liquid soap',fc:'Gift sets',
+back:'Back to the shop',x_k:'With this product',x_t:'Often chosen together.',
+hs_k:'Our story',hs_t:'One family, one factory, one seal.',
+ft_p:'Family soap factory since 1900. 148, avenue Paul-Bourret, 13300 Salon-de-Provence, France.',
+ft_shop:'Shop',ft_house:'Our story',nl_p:'New products and limited editions from the soap factory.',
+cart:'Basket',total:'Total',checkout:'Checkout',
+adv_tag:'Let me help you choose',adv_bub:'Hello! Soap for skin, laundry or a gift? I’ll guide you in 30 seconds.',adv_k:'Soap factory adviser'
+};
+const TXEN={
+"Ajouter":"Add","Ajouter au panier":"Add to basket","Ateliers + musée":"Workshops + museum","Ateliers de Marius (atelier enfant)":"Marius’s workshops (children’s workshop)",
+"Boutique Marius Fabre, façade bleue":"Marius Fabre shop, blue shopfront","Centre historique de Salon-de-Provence":"Historic centre of Salon-de-Provence",
+"Coffrets":"Gift sets","Coffrets de Noël Marius Fabre près d’une cheminée":"Marius Fabre Christmas gift sets by a fireplace",
+"Coulée du savon":"Pouring the soap","Cube de savon de Marseille vert à l’huile d’olive, estampillé":"Stamped green olive-oil Marseille soap cube",
+"Cuit au chaudron selon le procédé marseillais, coulé dans les mises, découpé puis séché à l’air libre, dans l’usine de la famille Fabre depuis 1927.":"Cooked in the cauldron using the Marseille process, poured into the mises, cut and air-dried, in the Fabre family factory since 1927.",
+"Diluez une cuillère de savon noir dans un seau d’eau chaude : sols, carrelage et tomettes retrouvent leur éclat.":"Dilute a spoonful of black soap in a bucket of hot water: floors, tiles and terracotta regain their shine.",
+"Découpe des pains de savon":"Cutting the soap slabs",
+"En 1900, une quinzaine de savonneries animent la ville. Marius Fabre est aujourd’hui l’une des toutes dernières à fabriquer encore le savon de Marseille selon le procédé traditionnel, dans ses propres chaudrons.":"In 1900, some fifteen soap factories brought the town to life. Today Marius Fabre is one of the very last still making Marseille soap by the traditional process, in its own cauldrons.",
+"Estampillage d’un cube de savon":"Stamping a soap cube","Fabrication":"How it’s made","Fermer":"Close","Fondée en":"Founded","Garantie":"Guarantee",
+"Il crée sa savonnerie dans le hangar au fond de son jardin, à Salon-de-Provence : deux chaudrons et quelques mises.":"He sets up his soap works in the shed at the bottom of his garden in Salon-de-Provence: two cauldrons and a few mises.",
+"Julie et Marie":"Julie and Marie","La capitale des huiles et du savon.":"The capital of oil and soap.",
+"La savonnerie s’installe dans l’ancienne fabrique Couderc. Soixante-dix ouvriers y travaillent.":"The soap factory moves into the former Couderc works. Seventy people work there.",
+"Langue":"Language","Le Japon":"Japan","Le bleu Marius Fabre, de Salon au Marais.":"Marius Fabre blue, from Salon to the Marais.",
+"Le chaudron de la savonnerie, pâte de savon à l’huile d’olive":"The soap factory cauldron, olive-oil soap paste",
+"Le dernier fils de Marius reprend les rênes, après avoir grandi au milieu des mises.":"Marius’s youngest son takes the helm, having grown up among the mises.",
+"Le fils aîné succède à son père à la veille de la guerre.":"The eldest son succeeds his father on the eve of the war.",
+"Le geste de la maison : un cube pour la toilette, un autre coupé en deux pour le linge. Il se garde des années, à l’air libre.":"The house way: one cube for washing, another cut in half for laundry. It keeps for years in the open air.",
+"Le hall de séchage de la savonnerie":"The soap factory drying hall","Le musée":"The museum","Le musée du savon de Marseille":"The Marseille soap museum",
+"Le premier musée de la région, au cœur de l’usine.":"The region’s first museum, at the heart of the factory.",
+"Les arrière-petites-filles de Marius poursuivent l’aventure.":"Marius’s great-granddaughters carry on the story.",
+"Les boutiques":"The shops","Les essentiels de Provence":"Essentials of Provence",
+"Les premiers importateurs japonais, toujours fidèles plus de trente ans après.":"The first Japanese importers, still loyal more than thirty years on.",
+"Lessive maison":"Homemade laundry","Lire le film de la savonnerie":"Play the soap factory film","Livraison":"Delivery","Livraison et retours":"Delivery and returns",
+"Livraison offerte dès 59 € d’achat. Satisfait ou remboursé pendant 15 jours.":"Free delivery on orders over €59. 15-day money-back guarantee.",
+"Livraison offerte dès 59 € · Expédié de Salon sous 48 h · Retours 30 jours":"Free delivery over €59 · Shipped from Salon within 48 h · 30-day returns",
+"Livré dans son coffret illustré. Ajoutez un message : nous le glissons à l’intérieur.":"Delivered in its illustrated box. Add a message and we’ll slip it inside.",
+"L’usine actuelle":"Today’s factory","Marie prend le relais":"Marie takes over","Marius, 22 ans":"Marius, aged 22",
+"Marius mobilisé, son épouse dirige la fabrication et la vente pendant quatre ans.":"With Marius called up, his wife runs production and sales for four years.",
+"Menu":"Menu","Musée du savon de Marseille":"Marseille Soap Museum","Navigation principale":"Main navigation","Newsletter":"Newsletter",
+"Nos boutiques":"Our shops","Notre histoire":"Our story","Noël 2026":"Christmas 2026","Offerte dès 59 €":"Free over €59",
+"Ouvert en 2000 dans une ancienne salle de séchage, il retrace l’histoire du savon en Provence depuis le Moyen Âge : moules, presses, étiquettes, et la mémoire de quatre générations de savonniers.":"Opened in 2000 in a former drying room, it traces the history of soap in Provence since the Middle Ages: moulds, presses, labels, and the memory of four generations of soap makers.",
+"Ouverture":"Opened","Panier":"Basket","Paris · Le Marais":"Paris · Le Marais",
+"Pour son centenaire, la savonnerie ouvre le premier musée du savon de Marseille de la région.":"For its centenary, the soap factory opens the region’s first Marseille soap museum.",
+"Pour une lessive maison : 2 cuillères de copeaux par machine, à 40 °C. Idéal pour le linge des bébés.":"For homemade laundry: 2 spoonfuls of flakes per wash, at 40 °C. Ideal for babies’ clothes.",
+"Proposition de refonte — Neovera Studio · maquette non contractuelle":"Redesign proposal — Neovera Studio · non-contractual mock-up",
+"Précédent":"Previous","Pâte de savon coulée dans les mises":"Soap paste poured into the mises","Quantité":"Quantity",
+"Quatre boutiques prolongent l’univers de la savonnerie : la boutique d’usine, le centre de Salon, Paris et Arles. Partout, le même savon, et la même façade bleue.":"Four shops extend the world of the soap factory: the factory shop, central Salon, Paris and Arles. Everywhere, the same soap and the same blue shopfront.",
+"Quatrième boutique, après l’usine, le centre de Salon et le Marais à Paris.":"Fourth shop, after the factory, central Salon and the Marais in Paris.",
+"Rituel fleur d’oranger":"Orange blossom ritual","Rituel lavande":"Lavender ritual","Réserver une visite":"Book a tour",
+"Salon-de-Provence · Boutique d’usine":"Salon-de-Provence · Factory shop","Salon-de-Provence · Centre":"Salon-de-Provence · Town centre",
+"Satisfait ou remboursé 15 jours":"15-day money-back guarantee","Savon de Marseille":"Marseille soap","Savon noir":"Black soap",
+"Savonnerie Marius Fabre, depuis 1900":"Marius Fabre soap factory, since 1900","Savonnier depuis 1900":"Soap maker since 1900",
+"Soin des mains":"Hand care","Soins":"Body care","Suivant":"Next",
+"Une édition anniversaire, et la même recette, toujours cuite au chaudron.":"An anniversary edition, and the same recipe, still cooked in the cauldron.",
+"Usages":"Uses","Usine":"Factory","Visiter la savonnerie":"Visit the soap factory","Votre e-mail":"Your email","Votre panier est vide.":"Your basket is empty.",
+"© Savonnerie Marius Fabre":"© Savonnerie Marius Fabre","Édition 125 ans":"125th anniversary edition","125 ans":"125 years","Best-seller":"Best-seller","Lessive maison ":"Homemade laundry",
+"Coffrets · Fabriqué à Salon-de-Provence":"Gift sets · Made in Salon-de-Provence","Savon de Marseille · Fabriqué à Salon-de-Provence":"Marseille soap · Made in Salon-de-Provence",
+"Savon noir & maison · Fabriqué à Salon-de-Provence":"Black soap & home · Made in Salon-de-Provence","Soins · Fabriqué à Salon-de-Provence":"Body care · Made in Salon-de-Provence",
+"Savon liquide · Fabriqué à Salon-de-Provence":"Liquid soap · Made in Salon-de-Provence",
+"Savon de Marseille à l’huile d’olive, 400 g":"Olive-oil Marseille soap, 400 g","Le cube historique, 72 % d’huile, cuit au chaudron et estampillé à la main.":"The historic cube, 72% oil, cooked in the cauldron and stamped by hand.",
+"Savon de Marseille pour le linge, 400 g":"Marseille laundry soap, 400 g","Sans huile de palme. Détache cols et poignets, lave le linge délicat.":"Palm-oil free. Lifts stains from collars and cuffs, washes delicates.",
+"Savon noir liquide à l’huile d’olive, 500 ml":"Olive-oil liquid black soap, 500 ml","Le nettoyant naturel de toute la maison : sols, vitres, plans de travail.":"The natural cleaner for the whole home: floors, windows, worktops.",
+"Copeaux de savon de Marseille, 750 g":"Marseille soap flakes, 750 g","Pour une lessive maison, douce pour les peaux sensibles et les bébés.":"For homemade laundry detergent, gentle on sensitive skin and babies.",
+"Savon de Marseille 100 % huile d’olive, 150 g":"100% olive-oil Marseille soap, 150 g","Savon de Marseille 100 % huile d’olive, 150 g":"100% olive-oil Marseille soap, 150 g","Le plus doux de la gamme, pour le visage et les peaux réactives.":"The gentlest in the range, for the face and reactive skin.",
+"Crème réparatrice pour les mains, 200 ml":"Repairing hand cream, 200 ml","À l’huile d’olive, pour les mains abîmées par le froid et le travail.":"With olive oil, for hands damaged by cold and work.",
+"Savon de Marseille « à couper », 1 kg":"“Cut-your-own” Marseille soap, 1 kg","La demi-barre d’atelier, à trancher selon vos besoins.":"The workshop half-bar, to slice as you need.",
+"Savon de Marseille en barre, 2,5 kg":"Marseille soap bar, 2.5 kg","La barre telle qu’elle sort des mises, pour les vrais connaisseurs.":"The bar just as it leaves the mises, for true connoisseurs.",
+"Savon de Marseille en coffret bois, 2,5 kg":"Marseille soap in a wooden box, 2.5 kg","La barre d’atelier dans son coffret, avec son fil à couper.":"The workshop bar in its box, with its cutting wire.",
+"Coffret de 6 savons de Marseille, 400 g":"Box of 6 Marseille soaps, 400 g","La réserve de la maison, dans la boîte illustrée de la savonnerie.":"The household supply, in the soap factory’s illustrated box.",
+"Coffret « Découverte du savon de Marseille »":"“Discover Marseille soap” gift set","Cube, copeaux, savon à l’ancienne : l’essentiel pour découvrir la maison.":"Cube, flakes, old-style soap: everything to discover the house.",
+"Savon « cassable », édition 125 ans, 700 g":"“Breakable” soap, 125th anniversary edition, 700 g","Édition limitée anniversaire, à rompre carré par carré.":"Limited anniversary edition, to break off square by square.",
+"Savon « brosse », édition 125 ans, 200 g":"Soap & brush, 125th anniversary edition, 200 g","Le savon et sa brosse en bois pour détacher le linge.":"The soap and its wooden brush for lifting laundry stains.",
+"Marius Fabre × Élysée, coffret 4 savons":"Marius Fabre × Élysée, set of 4 soaps","La collaboration avec la Présidence de la République, fabriquée en France.":"The collaboration with the French Presidency, made in France.",
+"Coffret Noël, trio de savonnettes":"Christmas set, trio of soaps","Trois savonnettes parfumées dans un écrin illustré.":"Three scented soaps in an illustrated case.",
+"Coffret Noël « Soin des mains en Provence »":"Christmas set “Hand care in Provence”","Deux crèmes pour les mains au beurre de karité.":"Two shea-butter hand creams.",
+"Coffret Noël « Les essentiels de Provence »":"Christmas set “Essentials of Provence”","Savon, crèmes et savonnette : le rituel complet.":"Soap, creams and bar: the complete ritual.",
+"Coffret Noël, Rituel « lavande »":"Christmas set, Lavender ritual","Savon liquide, crème et savonnette à la lavande.":"Lavender liquid soap, cream and bar.",
+"Coffret Noël, Rituel « fleur d’oranger »":"Christmas set, Orange blossom ritual","Le rituel douceur à la fleur d’oranger.":"The gentle orange-blossom ritual.",
+"Savonnette Coquelicot-Raisin, 150 g":"Poppy-Grape soap bar, 150 g","Au beurre de karité, sans huile de palme.":"With shea butter, palm-oil free.",
+"Lait hydratant corps Coquelicot-Raisin, 500 ml":"Poppy-Grape body lotion, 500 ml","Un lait fondant qui nourrit sans graisser.":"A melting lotion that nourishes without greasiness.",
+"Savon liquide de Marseille Fleur d’oranger, 400 ml":"Orange-blossom liquid Marseille soap, 400 ml","Pour les mains, au quotidien, avec son éco-recharge 1 L.":"For everyday hand washing, with its 1 L eco-refill.",
+"Savon noir pour le corps, 250 g":"Black body soap, 250 g","Le rituel du hammam : il prépare la peau au gommage.":"The hammam ritual: it prepares the skin for exfoliation.",
+"Lessive aux copeaux, feuilles d’olivier, 1 L":"Soap-flake laundry liquid, olive leaf, 1 L","La lessive liquide prête à l’emploi, aux copeaux de savon.":"Ready-to-use liquid laundry detergent made with soap flakes.",
+"× Élysée":"× Élysée","Marius Fabre × Élysée":"Marius Fabre × Élysée"
+};
+
 const I18N={
 en:{n_adv:'Marius Conseil',adv_tag:'Let me help you choose',adv_bub:'Hello! Soap for skin, laundry or a gift? I’ll guide you in 30 seconds.',adv_k:'Soap factory adviser',h_sign:'Marie & Julie Bousquet-Fabre · 4th generation',h_cta1:'The 72% cube — €4.60',h_cta2:'Visit the soap factory →',top2:'Free tours of the soap factory and museum · Salon-de-Provence',n_shop:'Shop',n_house:'The house',n_visit:'Visit',n_gift:'Gift sets',cart:'Basket',h_kicker:'Salon-de-Provence · Four generations · Living Heritage Company',h_title:'Soap makers<br>since 1900.',h_sub:'Cooked in the cauldron, poured into the vats, stamped by hand. True Marseille soap, with no added colour or fragrance.',h_cta2:'Visit the soap factory',f2:'Palm oil',f3:'Soap makers',f4:'Countries',s_k:'The house number',s_t:'oil, and nothing to hide.',s_p:'Marius Fabre Marseille soap is cooked in the cauldron following the Marseille process, with plant oils sourced in France and Europe, palm-oil free since 2020. A four-generation recipe Japan has asked for since 1990.',s_cta:'The historic cube, €4.60',b_k:'The essentials',b_t:'What the house does best.',b_all:'Whole shop',g_k:'The craft',g_t:'Four gestures, one cauldron.',g_p:'Nothing has changed in the workshop: soap is still cooked, poured, cut and stamped as in Marius’s day.',st1:'Cooking',st2:'Pouring',st3:'Cutting',st4:'Stamping',fi_k:'The film',fi_t:'Step inside the soap factory.',tl_t:'A family story.',tl_more:'The house',v_k:'Free tour',v_t:'Visit the soap factory and its museum.',v_p:'The workshops and the Marseille soap museum are open free of charge, inside the 1927 factory. Book your slot in seconds.',v_book:'Book for free',sh_k:'Our shops',sh_p:'And over 40 countries, from Japan to the United Kingdom.',c_t:'Give Provence.',e1:'palm oil',e2:'Living Heritage Company',sp_k:'The shop',sp_t:'True Marseille soap.',fa:'All',fm:'Marseille soap',fn:'Black soap & home',fs:'Body care',fl:'Liquid soap',fc:'Gift sets',back:'Back to the shop',x_t:'Often chosen together.',hs_t:'A family, a factory, a seal.',total:'Total',checkout:'Checkout',add:'Add',add_cart:'Add to basket',added:'Added',empty:'Your basket is empty.',ship_left:'{x} away from free delivery',ship_ok:'Free delivery unlocked',booked:'Booked: {d}, {h}, {n} people. A confirmation email is on its way.'},
 es:{n_adv:'Marius Conseil',adv_tag:'Le ayudo a elegir',adv_bub:'¡Hola! ¿Jabón para la piel, la ropa o un regalo? Le guío en 30 segundos.',f2:'Aceite de palma',f3:'Jaboneros',adv_k:'Asesor de la jabonería',top2:'Visitas gratuitas a la jabonería y al museo',h_sign:'Marie y Julie Bousquet-Fabre · 4.ª generación',h_cta1:'El cubo 72 % — 4,60 €',top1:'Envío gratis desde 59 €',n_shop:'Tienda',n_house:'La casa',n_visit:'Visitar',n_gift:'Cofres',cart:'Cesta',h_title:'Jaboneros<br>desde 1900.',h_sub:'Cocido en caldera, vertido en las balsas, sellado a mano. El auténtico jabón de Marsella.',h_cta2:'Visitar la jabonería',b_t:'Lo mejor de la casa.',g_t:'Cuatro gestos, un solo caldero.',tl_t:'Una historia de familia.',v_t:'Visite la jabonería y su museo.',v_book:'Reservar gratis',c_t:'Regalar la Provenza.',sp_t:'El auténtico jabón de Marsella.',add:'Añadir',add_cart:'Añadir a la cesta',added:'Añadido',empty:'Su cesta está vacía.',ship_left:'Le faltan {x} para el envío gratis',ship_ok:'Envío gratis',booked:'Reservado: {d}, {h}, {n} personas.'},
@@ -687,10 +801,20 @@ it:{n_adv:'Marius Conseil',adv_tag:'La aiuto a scegliere',adv_bub:'Buongiorno! S
 ja:{n_adv:'マリウス・コンセイユ',adv_tag:'石鹸選びをお手伝い',adv_bub:'こんにちは！肌用、洗濯用、ギフト？30秒でご案内します。',f2:'パーム油',f3:'石鹸職人',adv_k:'石鹸工房のコンシェルジュ',top2:'石鹸工場と博物館の無料見学・サロン＝ド＝プロヴァンス',h_sign:'マリー＆ジュリー・ブスケ＝ファーブル・4代目',h_cta1:'72％キューブ — 4.60€',top1:'59ユーロ以上で送料無料',n_shop:'ショップ',n_house:'メゾン',n_visit:'見学',n_gift:'ギフト',cart:'カート',h_kicker:'サロン＝ド＝プロヴァンス・4世代・無形文化財企業',h_title:'1900年から<br>石鹸づくり。',h_sub:'釜で炊き、型に流し、ひとつずつ手で刻印。本物のマルセイユ石鹸。',h_cta2:'工場を見学する',b_t:'メゾンの定番。',g_t:'4つの工程、ひとつの釜。',tl_t:'家族の物語。',v_t:'石鹸工場と博物館へ。',v_book:'無料で予約',c_t:'プロヴァンスを贈る。',sp_t:'本物のマルセイユ石鹸。',add:'追加',add_cart:'カートに入れる',added:'追加しました',empty:'カートは空です。',ship_left:'送料無料まであと{x}',ship_ok:'送料無料',booked:'予約完了：{d} {h}、{n}名様'}};
 const FR={add:'Ajouter',add_cart:'Ajouter au panier',added:'Ajouté',empty:'Votre panier est vide.',ship_left:'Plus que {x} pour la livraison offerte',ship_ok:'Livraison offerte',booked:'Réservé : {d}, {h}, {n} personnes. Un e-mail de confirmation vous est envoyé.'};
 let LANG='fr';const ORIG={};document.querySelectorAll('[data-i]').forEach(el=>ORIG[el.dataset.i]=ORIG[el.dataset.i]||el.innerHTML);
-function T(k){return (LANG!=='fr'&&I18N[LANG]&&I18N[LANG][k])||FR[k]||k}
-function setLang(l){LANG=l;document.documentElement.lang=l;document.querySelectorAll('[data-i]').forEach(el=>{const k=el.dataset.i;el.innerHTML=(l!=='fr'&&I18N[l]&&I18N[l][k])||ORIG[k]});document.getElementById('lang').value=l;started=false;log.innerHTML='';chips.innerHTML='';if(adv.classList.contains('open')){started=true;say(ft('start'),'bot');show('start')}
+function T(k){return (LANG!=='fr'&&((I18N[LANG]&&I18N[LANG][k])||(I18N.en&&I18N.en[k])))||FR[k]||k}
+function setLang(l){LANG=l;document.documentElement.lang=l;document.querySelectorAll('[data-i]').forEach(el=>{const k=el.dataset.i;el.innerHTML=(l!=='fr'&&((I18N[l]&&I18N[l][k])||I18N.en[k]))||ORIG[k]});document.getElementById('lang').value=l;started=false;log.innerHTML='';chips.innerHTML='';if(adv.classList.contains('open')){started=true;say(ft('start'),'bot');show('start')}
   renderGrids();renderCart();if(document.getElementById('v-product').classList.contains('on'))renderPdp(document.querySelector('#pdp [data-add]')?.dataset.add)}
-document.getElementById('lang').onchange=e=>setLang(e.target.value);
+I18N.en=Object.assign({},I18N.en||{},EN_FULL);
+const TXN=new WeakMap();
+function trs(t){if(TXEN[t])return TXEN[t];const tt=t.trim();if(TXEN[tt])return t.replace(tt,TXEN[tt]);const parts=tt.split(/(?<=[.!?])\s+/);if(parts.length>1){if(parts.every(x=>TXEN[x]))return parts.map(x=>TXEN[x]).join(' ')}let r=tt,hit=false;for(const k of TXK){if(r.includes(k)){r=r.split(k).join(TXEN[k]);hit=true}}return hit?r:null}
+const TXK=Object.keys(TXEN).filter(k=>k.length>25).sort((a,b)=>b.length-a.length);
+function txNode(n){if(n.nodeType===3){const o=TXN.has(n)?TXN.get(n):n.nodeValue;if(!TXN.has(n))TXN.set(n,o);if(LANG==='fr'){if(n.nodeValue!==o)n.nodeValue=o;return}const v=o.replace(/\s+/g,' ');const r=trs(v)||trs(o);if(r&&n.nodeValue!==r)n.nodeValue=r;return}
+ if(n.nodeType!==1||n.tagName==='SCRIPT'||n.tagName==='STYLE')return;
+ ['alt','placeholder','aria-label'].forEach(a=>{if(!n.hasAttribute(a))return;const k='__o'+a;if(n[k]===undefined)n[k]=n.getAttribute(a);const v=LANG==='fr'?n[k]:(TXEN[n[k]]||n[k]);if(n.getAttribute(a)!==v)n.setAttribute(a,v)});
+ n.childNodes.forEach(txNode)}
+let txBusy=false;function txAll(){if(txBusy)return;txBusy=true;txNode(document.body);txBusy=false}
+new MutationObserver(ms=>{if(LANG==='fr'||txBusy)return;txBusy=true;ms.forEach(m=>{m.addedNodes.forEach(txNode);if(m.type==='characterData')txNode(m.target)});txBusy=false}).observe(document.body,{childList:true,subtree:true,characterData:true});
+document.getElementById('lang').onchange=e=>{setLang(e.target.value);txAll()};
 
 /* boot */
 renderGrids();renderCart();
