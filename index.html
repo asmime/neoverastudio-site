@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Neovera Studio</title>
+<meta name="description" content="Neovera Studio — refonte premium de sites internet pour maisons artisanales, patrimoniales et e-commerce. Maquette offerte, paiement à la validation.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,500;1,6..96,400;1,6..96,500&family=Instrument+Sans:wght@400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+/* Layout idea: a mineral, gallery-like page; one bold moment = the drag slider "Aujourd'hui / Demain". Verdigris is the only accent. */
+:root{
+  --paper:#ECEEEA;
+  --paper-2:#E2E6E1;
+  --ink:#111A1F;
+  --ink-2:#4F5A5F;
+  --line:rgba(17,26,31,.14);
+  --accent:#1E6B5D;
+  --accent-soft:#D3E1DC;
+  --night:#0F171B;
+  --display:"Bodoni Moda","Didot","Bodoni 72",Georgia,serif;
+  --body:"Instrument Sans","Helvetica Neue",Arial,sans-serif;
+  --mono:"DM Mono",ui-monospace,Menlo,monospace;
+  --gut:clamp(18px,4.5vw,64px);
+  --max:1240px;
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--body);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:2px}
+h1,h2,h3{font-family:var(--display);font-weight:400;line-height:1.05;margin:0;text-wrap:balance;letter-spacing:-.01em}
+p{margin:0}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 var(--gut)}
+.label{font-family:var(--mono);font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-2)}
+.btn{display:inline-flex;align-items:center;gap:.6em;font:500 15px/1 var(--body);padding:15px 22px;border-radius:999px;border:1px solid var(--ink);background:var(--ink);color:var(--paper);text-decoration:none;cursor:pointer;transition:background .25s,color .25s,transform .25s}
+.btn:hover{background:var(--accent);border-color:var(--accent)}
+.btn.ghost{background:transparent;color:var(--ink)}
+.btn.ghost:hover{background:var(--ink);color:var(--paper)}
+.btn .arr{transition:transform .25s}
+.btn:hover .arr{transform:translateX(3px)}
+
+/* Header */
+header.top{position:sticky;top:0;z-index:40;background:color-mix(in srgb,var(--paper) 88%,transparent);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:20px;height:68px}
+.brand{display:flex;align-items:baseline;gap:.45em;text-decoration:none}
+.brand b{font-family:var(--display);font-weight:500;font-size:24px;letter-spacing:.01em}
+.brand b i{font-style:italic;color:var(--accent)}
+.brand span{font-family:var(--mono);font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--ink-2)}
+nav.main{display:flex;gap:26px}
+nav.main a{font-size:14.5px;text-decoration:none;color:var(--ink-2);transition:color .2s}
+nav.main a:hover{color:var(--ink)}
+.top .btn{padding:11px 18px;font-size:14px}
+@media (max-width:900px){nav.main{display:none}}
+
+/* Hero */
+.hero{padding:clamp(48px,8vw,110px) 0 clamp(40px,6vw,80px)}
+.hero .wrap{display:grid;grid-template-columns:1.15fr .85fr;gap:clamp(32px,5vw,80px);align-items:end}
+.hero h1{font-size:clamp(46px,7.4vw,108px);line-height:.98}
+.hero h1 em{font-style:italic;color:var(--accent)}
+.hero .lede{max-width:34em;margin-top:28px;font-size:clamp(17px,1.5vw,20px);color:var(--ink-2)}
+.hero .ctas{display:flex;flex-wrap:wrap;gap:12px;margin-top:34px}
+.hero figure{margin:0;position:relative;border-radius:4px;overflow:hidden;aspect-ratio:4/5;background:var(--paper-2)}
+.hero figure img{width:100%;height:100%;object-fit:cover;animation:drift 22s ease-in-out infinite alternate}
+@keyframes drift{from{transform:scale(1.02)}to{transform:scale(1.09) translate(-1.5%,-1%)}}
+.hero figcaption{position:absolute;left:14px;bottom:14px;right:14px;display:flex;justify-content:space-between;font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:#fff;text-shadow:0 1px 8px rgba(0,0,0,.4)}
+.promises{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--ink);margin-top:clamp(48px,6vw,80px)}
+.promises div{padding:20px 22px 0 0;display:grid;gap:6px}
+.promises div+div{padding-left:22px;border-left:1px solid var(--line)}
+.promises strong{font-family:var(--display);font-size:22px;font-weight:400}
+.promises span{font-size:14.5px;color:var(--ink-2)}
+@media (max-width:860px){.hero .wrap{grid-template-columns:1fr}.hero figure{aspect-ratio:4/3}.promises{grid-template-columns:1fr}.promises div+div{padding-left:0;border-left:0;border-top:1px solid var(--line);margin-top:18px}}
+
+/* Section shells */
+section{padding:clamp(72px,10vw,140px) 0}
+.sec-head{display:grid;grid-template-columns:200px 1fr;gap:clamp(20px,4vw,60px);margin-bottom:clamp(40px,5vw,70px)}
+.sec-head h2{font-size:clamp(36px,4.6vw,64px);max-width:15em}
+.sec-head h2 em{font-style:italic;color:var(--accent)}
+.sec-head p{margin-top:20px;max-width:38em;color:var(--ink-2);font-size:18px}
+@media (max-width:760px){.sec-head{grid-template-columns:1fr}}
+
+/* Slider */
+.compare-sec{background:var(--night);color:#E8ECE9}
+.compare-sec .label{color:#9AA7A3}
+.compare-sec .sec-head p{color:#B4BFBB}
+.compare-sec h2 em{color:#7FC1B1}
+.compare{position:relative;border-radius:6px;overflow:hidden;aspect-ratio:16/9.6;user-select:none;touch-action:pan-y;box-shadow:0 30px 80px rgba(0,0,0,.45)}
+.compare .pane{position:absolute;inset:0;overflow:hidden}
+.compare .after{clip-path:inset(0 0 0 var(--pos,50%))}
+.compare .handle{position:absolute;top:0;bottom:0;left:var(--pos,50%);width:2px;background:#fff;transform:translateX(-1px);pointer-events:none}
+.compare .knob{position:absolute;top:50%;left:var(--pos,50%);width:54px;height:54px;border-radius:50%;background:#fff;color:var(--ink);transform:translate(-50%,-50%);display:grid;place-items:center;font:500 16px var(--mono);box-shadow:0 6px 24px rgba(0,0,0,.35);cursor:ew-resize;border:0}
+.compare .tag{position:absolute;bottom:14px;font-family:var(--mono);font-size:11px;letter-spacing:.16em;text-transform:uppercase;padding:7px 11px;border-radius:999px;background:rgba(0,0,0,.55);color:#fff;z-index:3;pointer-events:none}
+.compare .tag.l{left:14px}.compare .tag.r{right:14px;background:var(--accent)}
+.compare input[type=range]{position:absolute;inset:0;width:100%;height:100%;opacity:0;cursor:ew-resize;z-index:4;margin:0}
+.compare-note{margin-top:18px;font-size:14px;color:#9AA7A3;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+
+/* "Old" fictional site */
+.old{background:#fff;font-family:Arial,Helvetica,sans-serif;color:#333;height:100%;font-size:clamp(7px,1vw,13px)}
+.old .ob{background:#3b5998;color:#fff;padding:.8em 1.2em;display:flex;justify-content:space-between;font-size:.9em}
+.old .oh{display:flex;align-items:center;gap:1em;padding:1em 1.2em;border-bottom:3px solid #c00}
+.old .oh b{font-family:"Times New Roman",serif;font-size:2.1em;color:#7a2a8a}
+.old .on{display:flex;gap:.3em;padding:.4em 1.2em;background:#eee;flex-wrap:wrap}
+.old .on span{background:#ddd;border:1px solid #bbb;padding:.3em .7em;font-size:.85em;color:#00c;text-decoration:underline}
+.old .opromo{margin:1em 1.2em;padding:1em;background:#ff0;border:2px dashed #f00;color:#c00;font-weight:bold;text-align:center;font-size:1.1em}
+.old .og{display:grid;grid-template-columns:repeat(4,1fr);gap:.8em;padding:0 1.2em}
+.old .og div{border:1px solid #ccc;padding:.5em;text-align:center;font-size:.85em}
+.old .og i{display:block;aspect-ratio:1;background:#d9d4c7 repeating-linear-gradient(45deg,#d9d4c7 0 6px,#cfc9bb 6px 12px);margin-bottom:.4em}
+.old .og u{color:#00c}
+.old .ot{padding:1em 1.2em;font-size:.82em;line-height:1.4;color:#555}
+
+/* "New" fictional site */
+.new{height:100%;background:#F1EFEA;color:#1B1F1E;display:grid;grid-template-rows:auto 1fr;font-family:var(--body);font-size:clamp(7px,1vw,13px)}
+.new .nh{display:flex;flex-direction:row-reverse;justify-content:space-between;align-items:center;padding:1.3em 2.2em;font-size:.95em}
+.new .nh b{font-family:var(--display);font-size:1.7em;font-weight:500;letter-spacing:.06em}
+.new .nh nav{display:flex;gap:1.6em;color:#555}
+.new .nh .cart{border:1px solid #1B1F1E;border-radius:99px;padding:.35em .9em}
+.new .nb{display:grid;grid-template-columns:1fr 1fr;align-items:stretch}
+.new .nb .ni{order:-1}
+.new .nt{padding:2.2em 2.2em 2.2em;display:flex;flex-direction:column;justify-content:center;gap:1.1em}
+.new .nt small{font-family:var(--mono);letter-spacing:.2em;text-transform:uppercase;font-size:.75em;color:#6b6f6a}
+.new .nt h3{font-size:3.6em;line-height:1}
+.new .nt h3 i{color:#8a6a3a}
+.new .nt p{color:#5b5f5a;max-width:24em}
+.new .nt .row{display:flex;gap:.8em;margin-top:.4em}
+.new .nt .row span{background:#1B1F1E;color:#F1EFEA;border-radius:99px;padding:.7em 1.2em;font-size:.9em}
+.new .nt .row span+span{background:transparent;color:#1B1F1E;border:1px solid #1B1F1E}
+.new .ni{background:url("img/1.jpg") center/cover,#cfc8bb;position:relative}
+.new .chat{position:absolute;left:1.4em;bottom:3.6em;background:#fff;border-radius:1em;padding:.8em 1em;font-size:.85em;box-shadow:0 8px 24px rgba(0,0,0,.18);max-width:15em}
+.new .chat b{display:block;font-family:var(--display);font-size:1.15em;margin-bottom:.2em}
+
+/* Constat */
+.facts{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border-top:1px solid var(--line)}
+.facts article{padding:32px 28px 8px 0;display:grid;gap:14px;align-content:start}
+.facts article+article{padding-left:28px;border-left:1px solid var(--line)}
+.facts .n{font-family:var(--display);font-size:62px;line-height:1;color:var(--accent);font-style:italic}
+.facts h3{font-size:26px}
+.facts p{color:var(--ink-2);font-size:16px}
+@media (max-width:860px){.facts{grid-template-columns:1fr}.facts article+article{padding-left:0;border-left:0;border-top:1px solid var(--line)}}
+
+/* Services */
+.services{background:var(--paper-2)}
+.svc{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line)}
+.svc article{background:var(--paper-2);padding:34px 30px 38px;display:grid;gap:14px;align-content:start;transition:background .3s}
+.svc article:hover{background:var(--paper)}
+.svc .k{font-family:var(--mono);font-size:12px;color:var(--accent);letter-spacing:.1em}
+.svc h3{font-size:27px}
+.svc p{color:var(--ink-2);font-size:15.5px}
+@media (max-width:980px){.svc{grid-template-columns:1fr 1fr}}
+@media (max-width:620px){.svc{grid-template-columns:1fr}}
+
+/* Method */
+.steps{padding:0;margin:0;display:grid;grid-template-columns:repeat(4,1fr);gap:clamp(16px,2vw,28px);counter-reset:s}
+.steps li{list-style:none;border-top:2px solid var(--ink);padding-top:22px;display:grid;gap:12px;align-content:start}
+.steps .when{font-family:var(--mono);font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--accent)}
+.steps h3{font-size:28px}
+.steps p{color:var(--ink-2);font-size:15.5px}
+.steps ol{padding:0;margin:0;display:contents}
+.method-media{display:grid;grid-template-columns:1.4fr 1fr;gap:clamp(16px,2vw,28px);margin-top:clamp(48px,6vw,80px)}
+.method-media figure{margin:0;border-radius:4px;overflow:hidden;background:var(--paper-2);position:relative}
+.method-media figure.fill{min-height:320px}
+.method-media figure.fill img{position:absolute;inset:0}
+.method-media figure img{width:100%;height:100%;object-fit:cover}
+.method-media .tall{aspect-ratio:4/5}
+.method-media .wide{aspect-ratio:auto}
+@media (max-width:980px){.steps{grid-template-columns:1fr 1fr}}
+@media (max-width:620px){.steps{grid-template-columns:1fr}.method-media{grid-template-columns:1fr}}
+
+/* Commitments */
+.commit{background:var(--accent);color:#F2F6F4}
+.commit .label{color:#BFD8D0}
+.commit .sec-head p{color:#D5E6E0}
+.commit h2 em{color:#fff}
+.cards{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:rgba(255,255,255,.22);border:1px solid rgba(255,255,255,.22)}
+.cards article{background:var(--accent);padding:36px 32px;display:grid;gap:12px;align-content:start}
+.cards h3{font-size:clamp(26px,2.6vw,34px)}
+.cards p{color:#DCEAE5;font-size:16px;max-width:32em}
+@media (max-width:760px){.cards{grid-template-columns:1fr}}
+
+/* For whom */
+.trades{display:flex;flex-wrap:wrap;gap:10px 12px}
+.trades span{font-family:var(--display);font-size:clamp(22px,2.6vw,34px);padding:6px 20px 10px;border:1px solid var(--line);border-radius:999px;transition:background .25s,color .25s,border-color .25s}
+.trades span:hover{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+.trades span:nth-child(3n+2){font-style:italic}
+
+/* Founder */
+.founder .wrap{display:grid;grid-template-columns:.8fr 1.2fr;gap:clamp(32px,6vw,100px);align-items:start}
+.portrait{position:sticky;top:100px;display:grid;gap:18px}
+.mono{aspect-ratio:4/5;background:var(--night);color:#E8ECE9;border-radius:4px;display:grid;place-items:center;position:relative;overflow:hidden}
+.mono b{font-family:var(--display);font-size:clamp(90px,12vw,170px);font-weight:400;font-style:italic;line-height:1}
+.mono small{position:absolute;bottom:16px;left:18px;font-family:var(--mono);font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:#9AA7A3}
+.founder h2{font-size:clamp(38px,4.6vw,62px)}
+.founder .role{margin-top:10px;font-family:var(--mono);font-size:13px;letter-spacing:.12em;text-transform:uppercase;color:var(--accent)}
+.founder .intro{margin-top:26px;font-size:19px;color:var(--ink-2);max-width:34em}
+.cv{margin-top:40px;border-top:1px solid var(--ink)}
+.cv li{list-style:none;display:grid;grid-template-columns:190px 1fr;gap:20px;padding:18px 0;border-bottom:1px solid var(--line)}
+.cv ul{padding:0;margin:0}
+.cv .what{font-family:var(--mono);font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-2);padding-top:4px}
+.cv strong{font-weight:600;display:block}
+.cv span{color:var(--ink-2);font-size:15.5px}
+.network{margin-top:40px;padding:28px 30px;background:var(--paper-2);border-radius:4px;display:grid;gap:10px}
+.network h3{font-size:26px}
+.network p{color:var(--ink-2);font-size:16px}
+@media (max-width:860px){.founder .wrap{grid-template-columns:1fr}.portrait{position:static;max-width:360px}.cv li{grid-template-columns:1fr;gap:4px}}
+
+/* FAQ */
+.faq{max-width:900px}
+.faq details{border-bottom:1px solid var(--line)}
+.faq details:first-child{border-top:1px solid var(--ink)}
+.faq summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;gap:24px;padding:24px 0;font-family:var(--display);font-size:clamp(21px,2.2vw,27px)}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";font-family:var(--mono);font-size:22px;color:var(--accent);transition:transform .25s}
+.faq details[open] summary::after{transform:rotate(45deg)}
+.faq details p{padding:0 0 26px;color:var(--ink-2);max-width:40em}
+
+/* Contact */
+.contact{background:var(--night);color:#E8ECE9}
+.contact .label{color:#9AA7A3}
+.contact .wrap{display:grid;grid-template-columns:1fr 1fr;gap:clamp(32px,6vw,90px)}
+.contact h2{font-size:clamp(42px,6vw,86px)}
+.contact h2 em{color:#7FC1B1;font-style:italic}
+.contact .lede{margin-top:24px;color:#B4BFBB;font-size:18px;max-width:30em}
+.mail{margin-top:34px;display:flex;flex-wrap:wrap;align-items:center;gap:14px}
+.mail a{font-family:var(--display);font-size:clamp(24px,2.8vw,36px);text-decoration:none;border-bottom:1px solid #7FC1B1}
+.mail button{font:500 13px var(--mono);letter-spacing:.08em;text-transform:uppercase;background:transparent;color:#E8ECE9;border:1px solid rgba(255,255,255,.35);border-radius:999px;padding:9px 14px;cursor:pointer}
+.mail button:hover{border-color:#fff}
+.small-note{margin-top:22px;font-size:14px;color:#8E9B97}
+form.msg{display:grid;gap:14px}
+.f{display:grid;gap:6px}
+.f label{font-family:var(--mono);font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;color:#9AA7A3}
+.f input,.f textarea{font:16px var(--body);color:#fff;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.2);border-radius:4px;padding:13px 14px}
+.f input:focus,.f textarea:focus{outline:none;border-color:#7FC1B1;background:rgba(255,255,255,.08)}
+.f textarea{min-height:130px;resize:vertical}
+.row2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+form.msg .btn{background:#E8ECE9;color:var(--ink);border-color:#E8ECE9;justify-self:start}
+form.msg .btn:hover{background:#7FC1B1;border-color:#7FC1B1}
+.form-status{font-size:14px;color:#B4D9CE;min-height:1.4em}
+@media (max-width:860px){.contact .wrap{grid-template-columns:1fr}.row2{grid-template-columns:1fr}}
+
+/* Footer */
+footer{background:var(--night);color:#9AA7A3;border-top:1px solid rgba(255,255,255,.1);padding:40px 0 60px;font-size:14px}
+footer .wrap{display:grid;gap:26px}
+.foot-row{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;align-items:baseline}
+.foot-row .brand b{color:#E8ECE9}
+.foot-row .brand b i{color:#7FC1B1}
+footer details summary{cursor:pointer;font-family:var(--mono);font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:#C9D2CF}
+.legal{margin-top:18px;display:grid;grid-template-columns:repeat(3,1fr);gap:24px;line-height:1.55}
+.legal h4{margin:0 0 6px;font:600 13px var(--body);color:#E8ECE9;letter-spacing:.02em}
+@media (max-width:860px){.legal{grid-template-columns:1fr}}
+
+/* Advisor */
+.adv-btn{position:fixed;right:20px;bottom:20px;z-index:60;display:flex;align-items:center;gap:10px;background:var(--ink);color:var(--paper);border:0;border-radius:999px;padding:12px 18px 12px 12px;font:500 14.5px var(--body);cursor:pointer;box-shadow:0 10px 30px rgba(0,0,0,.25)}
+.adv-btn i{width:30px;height:30px;border-radius:50%;background:var(--accent);display:grid;place-items:center;font-style:normal;font-family:var(--display);font-size:17px}
+.adv{position:fixed;right:20px;bottom:84px;z-index:61;width:min(380px,calc(100vw - 32px));max-height:min(560px,calc(100vh - 120px));background:var(--paper);color:var(--ink);border:1px solid var(--line);border-radius:14px;box-shadow:0 24px 70px rgba(0,0,0,.28);display:none;flex-direction:column;overflow:hidden}
+.adv.open{display:flex}
+.adv header{padding:16px 18px;background:var(--ink);color:var(--paper);display:flex;justify-content:space-between;align-items:center}
+.adv header b{font-family:var(--display);font-weight:400;font-size:21px}
+.adv header small{display:block;font-family:var(--mono);font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:#9AA7A3}
+.adv header button{background:none;border:0;color:var(--paper);font-size:22px;cursor:pointer;line-height:1}
+.adv .log{padding:16px;overflow:auto;display:grid;gap:10px;align-content:start;flex:1}
+.bub{max-width:88%;padding:11px 14px;border-radius:12px;font-size:14.5px;line-height:1.5}
+.bub.bot{background:var(--paper-2);border-top-left-radius:3px}
+.bub.me{background:var(--accent);color:#fff;justify-self:end;border-top-right-radius:3px}
+.chips{display:flex;flex-wrap:wrap;gap:8px;padding:0 16px 16px}
+.chips button{font:500 13px var(--body);border:1px solid var(--line);background:#fff;border-radius:999px;padding:8px 12px;cursor:pointer;color:var(--ink)}
+.chips button:hover{border-color:var(--accent);color:var(--accent)}
+@media (max-width:520px){.adv-btn span{display:none}.adv-btn{padding:12px}}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="Neovera Studio, retour en haut"><b>Neo<i>vera</i></b><span>Studio</span></a>
+    <nav class="main" aria-label="Navigation principale">
+      <a href="#demonstration">Démonstration</a>
+      <a href="#prestations">Prestations</a>
+      <a href="#demarche">Démarche</a>
+      <a href="#engagements">Engagements</a>
+      <a href="#studio">Le studio</a>
+    </nav>
+    <a class="btn" href="#contact">Écrire au studio <span class="arr" aria-hidden="true">→</span></a>
+  </div>
+</header>
+
+<main id="top">
+
+<section class="hero" aria-labelledby="h-hero">
+  <div class="wrap">
+    <div>
+      <p class="label">Refonte premium de sites internet</p>
+      <h1 id="h-hero" style="margin-top:22px">Votre maison a une histoire. Votre site doit <em>la raconter.</em></h1>
+      <p class="lede">Neovera Studio redessine les sites des maisons artisanales, patrimoniales et e-commerce. Nous gardons votre boutique, vos clients et votre référencement, et nous donnons à votre site l'élégance et l'efficacité de votre savoir-faire.</p>
+      <div class="ctas">
+        <a class="btn" href="#contact">Demander ma maquette offerte <span class="arr" aria-hidden="true">→</span></a>
+        <a class="btn ghost" href="#demonstration">Voir la démonstration</a>
+      </div>
+    </div>
+    <figure>
+      <img src="img/0.jpg" alt="Webdesigner travaillant sur un site élégant, dans un atelier en pierre" width="1024" height="1280">
+      <figcaption><span>Savoir-faire</span><span>Mis en scène</span></figcaption>
+    </figure>
+  </div>
+  <div class="wrap">
+    <div class="promises">
+      <div><strong>Maquette offerte</strong><span>Vous voyez votre futur site avant de vous engager.</span></div>
+      <div><strong>Rien à régler avant la fin</strong><span>Le paiement intervient une fois le site validé par vous.</span></div>
+      <div><strong>Votre site reste le vôtre</strong><span>Plateforme, commandes, clients et référencement conservés.</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="compare-sec" id="demonstration" aria-labelledby="h-demo">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="label">Démonstration</p>
+      <div>
+        <h2 id="h-demo">Même maison, mêmes produits. <em>Une tout autre perception.</em></h2>
+        <p>Faites glisser le curseur pour passer d'un site vieillissant à sa refonte. Seuls changent l'habillage et les fonctionnalités : le contenu, lui, est celui de la maison.</p>
+      </div>
+    </div>
+    <div class="compare" id="compare" style="--pos:50%">
+      <div class="pane before" aria-hidden="true">
+        <div class="old">
+          <div class="ob"><span>Bienvenue sur notre site !!!</span><span>Tél. — Nous contacter</span></div>
+          <div class="oh"><b>Savonnerie d'Aurèle</b><span>Depuis 1902 — Produits naturels de qualité</span></div>
+          <div class="on"><span>Accueil</span><span>Nos produits</span><span>Promotions</span><span>Qui sommes-nous</span><span>Plan d'accès</span><span>Livre d'or</span><span>Contact</span></div>
+          <div class="opromo">★ PROMO : -10 % AVEC LE CODE AURELE10 ★ LIVRAISON OFFERTE DÈS 80 € ★</div>
+          <div class="og">
+            <div><i></i>Savon lavande 100g<br><u>Ajouter</u></div>
+            <div><i></i>Savon olive 100g<br><u>Ajouter</u></div>
+            <div><i></i>Coffret découverte<br><u>Ajouter</u></div>
+            <div><i></i>Savon miel 100g<br><u>Ajouter</u></div>
+          </div>
+          <p class="ot">Notre savonnerie fabrique des savons depuis plus d'un siècle. Cliquez ici pour en savoir plus sur notre histoire. Site optimisé pour Internet Explorer 1024×768.</p>
+        </div>
+      </div>
+      <div class="pane after" aria-hidden="true">
+        <div class="new">
+          <div class="nh"><b>AURÈLE</b><nav><span>La maison</span><span>Savons</span><span>Coffrets</span><span>Visiter</span></nav><span class="cart">Panier · 2</span></div>
+          <div class="nb">
+            <div class="nt">
+              <small>Savonnerie · Depuis 1902</small>
+              <h3>Quatre générations, <i>un seul geste.</i></h3>
+              <p>Savons cuits au chaudron, séchés six semaines à l'air libre, comme au premier jour.</p>
+              <div class="row"><span>Découvrir les savons</span><span>Composer un coffret</span></div>
+            </div>
+            <div class="ni"><div class="chat"><b>Aurèle Conseil</b>Quel savon pour une peau sensible ? Je vous guide.</div></div>
+          </div>
+        </div>
+      </div>
+      <span class="tag l">Aujourd'hui</span><span class="tag r">Demain</span>
+      <div class="handle"></div>
+      <span class="knob" aria-hidden="true">⟷</span>
+      <label class="sr" for="cmp" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)">Comparer avant et après la refonte</label>
+      <input id="cmp" type="range" min="0" max="100" value="50">
+    </div>
+    <p class="compare-note"><span>Démonstration réalisée sur une maison fictive.</span><span>Les maquettes de nos clients restent confidentielles.</span></p>
+  </div>
+</section>
+
+<section id="constat" aria-labelledby="h-constat">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="label">Le constat</p>
+      <div>
+        <h2 id="h-constat">Beaucoup de grandes maisons ont encore <em>un petit site.</em></h2>
+        <p>Votre site est souvent le premier contact d'un client avec votre maison. S'il ne reflète pas votre valeur, c'est la concurrence qui en profite.</p>
+      </div>
+    </div>
+    <div class="facts">
+      <article><span class="n">i.</span><h3>La perception</h3><p>En quelques secondes, un visiteur juge la qualité de vos produits à celle de votre site. Un habillage daté fait douter d'un savoir-faire pourtant exceptionnel.</p></article>
+      <article><span class="n">ii.</span><h3>Le mobile</h3><p>La plupart des visites se font sur téléphone. Un parcours d'achat pensé d'abord pour le mobile, court et rassurant, transforme davantage.</p></article>
+      <article><span class="n">iii.</span><h3>L'international</h3><p>Votre clientèle étrangère vous cherche aussi en ligne. Un site en plusieurs langues lui ouvre la porte de votre maison.</p></article>
+    </div>
+  </div>
+</section>
+
+<section class="services" id="prestations" aria-labelledby="h-svc">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="label">Prestations</p>
+      <div>
+        <h2 id="h-svc">Un site premium qui <em>vend</em>, aux exigences de 2026&#8209;2027.</h2>
+        <p>Chaque refonte part de l'ADN de votre maison : votre histoire, vos produits, vos clients.</p>
+      </div>
+    </div>
+    <div class="svc">
+      <article><span class="k">01</span><h3>Refonte sur votre plateforme</h3><p>Shopify, WooCommerce, PrestaShop ou autre : nous modernisons votre site existant, sans migration risquée. Historique, commandes, clients et produits restent en place.</p></article>
+      <article><span class="k">02</span><h3>Direction artistique</h3><p>Typographie, mise en page, photographie et images d'ambiance : un univers à la hauteur de votre patrimoine, dès la première seconde.</p></article>
+      <article><span class="k">03</span><h3>Conseiller intelligent</h3><p>« [Votre maison] Conseil », un assistant qui guide vos clients vers le bon produit, répond à leurs questions et ajoute au panier, jour et nuit.</p></article>
+      <article><span class="k">04</span><h3>Site multilingue</h3><p>Français, anglais, allemand, espagnol, italien… pour accueillir votre clientèle internationale dans sa langue.</p></article>
+      <article><span class="k">05</span><h3>Référencement naturel</h3><p>Notre spécialité : structure, contenus et performances pensés pour Google, en préservant le référencement que vous avez déjà acquis.</p></article>
+      <article><span class="k">06</span><h3>Parcours d'achat</h3><p>Fiches produits soignées, coffrets et produits complémentaires mis en avant, réservations de visites ou de dégustations : tout est fait pour augmenter le panier.</p></article>
+    </div>
+  </div>
+</section>
+
+<section id="demarche" aria-labelledby="h-method">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="label">Démarche</p>
+      <div>
+        <h2 id="h-method">Vous voyez d'abord. <em>Vous décidez ensuite.</em></h2>
+        <p>Une démarche simple, en quatre temps, où rien ne vous engage avant d'avoir vu votre futur site.</p>
+      </div>
+    </div>
+    <ol class="steps">
+      <li><span class="when">Temps 1</span><h3>Diagnostic</h3><p>Nous étudions votre site actuel, vos produits et vos clients, et relevons ce qui freine vos ventes.</p></li>
+      <li><span class="when">Temps 2</span><h3>Maquette offerte</h3><p>Nous imaginons votre site de demain avec vos vrais produits, vos prix et vos photos. Vous la parcourez, et la partagez avec votre équipe.</p></li>
+      <li><span class="when">Temps 3</span><h3>Ajustements</h3><p>La maquette n'est pas figée : nous intégrons vos remarques, vos nouvelles images, vos produits et vos vidéos.</p></li>
+      <li><span class="when">Temps 4</span><h3>Mise en ligne</h3><p>Nous installons et paramétrons le nouveau site. Vous le validez, et seulement alors vous réglez la prestation.</p></li>
+    </ol>
+    <div class="method-media">
+      <figure class="tall" style="aspect-ratio:16/10"><img src="img/1.jpg" alt="Atelier en pierre aux étagères chargées d'objets artisanaux, baigné de lumière" width="1536" height="864"></figure>
+      <figure class="fill"><img src="img/3.jpg" alt="Main tenant un téléphone affichant une page produit élégante" width="1024" height="1280"></figure>
+    </div>
+  </div>
+</section>
+
+<section class="commit" id="engagements" aria-labelledby="h-commit">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="label">Engagements</p>
+      <div>
+        <h2 id="h-commit">Zéro risque. <em>Toute notre exigence.</em></h2>
+        <p>Nos engagements sont simples, et écrits noir sur blanc.</p>
+      </div>
+    </div>
+    <div class="cards">
+      <article><h3>Votre site reste le vôtre</h3><p>Votre boutique est conservée telle quelle : historique, commandes, clients, produits et référencement restent intégralement en place. Seuls changent l'habillage et les fonctionnalités.</p></article>
+      <article><h3>Paiement à la fin</h3><p>Vous ne réglez rien avant la fin de la mission : le paiement intervient une fois votre nouveau site installé, paramétré, pleinement fonctionnel, et validé par vous.</p></article>
+      <article><h3>Une proposition à votre image</h3><p>Toutes les modifications que vous souhaitez sont prises en compte, jusqu'à ce que le site vous ressemble vraiment.</p></article>
+      <article><h3>Un avis qui compte : celui de votre équipe</h3><p>Vos collaborateurs au contact des clients savent ce que ceux-ci attendent. Leurs retours font partie de la démarche.</p></article>
+    </div>
+  </div>
+</section>
+
+<section id="pour-qui" aria-labelledby="h-who">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="label">Pour qui</p>
+      <div>
+        <h2 id="h-who">Les maisons qui ont <em>un savoir-faire</em> à transmettre.</h2>
+        <p>Entreprises du Patrimoine Vivant, maisons familiales, artisans d'art et e-commerçants exigeants, partout en France.</p>
+      </div>
+    </div>
+    <div class="trades">
+      <span>Savonneries</span><span>Parfumeurs</span><span>Huileries</span><span>Confiseurs</span><span>Chocolatiers</span><span>Distilleries</span><span>Domaines viticoles</span><span>Hôtels de charme</span><span>Arts de la table</span><span>Linge de maison</span><span>Coutellerie</span><span>Cristal &amp; faïence</span><span>Matériaux anciens</span><span>Artisans d'art</span>
+    </div>
+  </div>
+</section>
+
+<section class="founder" id="studio" aria-labelledby="h-founder" style="background:var(--paper-2)">
+  <div class="wrap">
+    <div class="portrait">
+      <div class="mono"><b>EN</b><small>Fondateur · Marseille</small></div>
+      <figure style="margin:0;border-radius:4px;overflow:hidden;aspect-ratio:4/5"><img src="img/2.jpg" alt="Bureau de studio avec maquettes imprimées, nuancier et tablette" width="1024" height="1280" style="width:100%;height:100%;object-fit:cover"></figure>
+    </div>
+    <div>
+      <p class="label">Le studio</p>
+      <h2 id="h-founder" style="margin-top:18px">Elhadji Ndong</h2>
+      <p class="role">Fondateur de Neovera Studio</p>
+      <p class="intro">Webdesigner spécialisé en référencement, formé à la gestion et à l'administration des entreprises, Elhadji Ndong conçoit des sites qui allient la beauté et la performance. Son double regard, créatif et gestionnaire, lui permet de comprendre votre maison autant que vos clients.</p>
+      <div class="cv">
+        <ul>
+          <li><span class="what">Design</span><div><strong>Webdesigner diplômé</strong><span>École Image, Nîmes</span></div></li>
+          <li><span class="what">Spécialisation</span><div><strong>Référencement de sites internet</strong><span>Visibilité sur Google et performance des sites</span></div></li>
+          <li><span class="what">Formation</span><div><strong>Responsable du centre de formation Performaplus</strong><span>Formations professionnelles courtes en langues et en informatique</span></div></li>
+          <li><span class="what">Gestion</span><div><strong>DESS CAAE — Certificat d'aptitude à l'administration des entreprises</strong><span>Université de Reims Champagne-Ardenne, Châlons-en-Champagne</span></div></li>
+          <li><span class="what">Management</span><div><strong>Licence et maîtrise, option Management des politiques locales</strong><span>Institut d'urbanisme de Grenoble, Université Pierre-Mendès-France</span></div></li>
+          <li><span class="what">Ressources humaines</span><div><strong>DEUST Gestion du personnel et relations sociales en entreprise</strong><span>Université Pierre-Mendès-France, Grenoble</span></div></li>
+        </ul>
+      </div>
+      <div class="network">
+        <p class="label">Agences et professionnels du web</p>
+        <h3>Le référencement, aussi en sous-traitance</h3>
+        <p>Neovera Studio met également son expertise en référencement au service d'autres agences et professionnels du web, en sous-traitance, avec la même exigence que pour ses propres clients.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="questions" aria-labelledby="h-faq">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="label">Questions</p>
+      <div><h2 id="h-faq">Ce que l'on nous <em>demande souvent.</em></h2></div>
+    </div>
+    <div class="faq">
+      <details><summary>Faut-il changer de plateforme ?</summary><p>Non. Nous travaillons sur votre plateforme actuelle (Shopify, WooCommerce, PrestaShop…). Vos commandes, vos clients, vos produits et votre référencement restent en place.</p></details>
+      <details><summary>La maquette m'engage-t-elle ?</summary><p>Non. La maquette est offerte. Vous la parcourez, vous la partagez avec votre équipe, et vous décidez ensuite, en toute liberté.</p></details>
+      <details><summary>Quand dois-je payer ?</summary><p>À la fin de la mission seulement, une fois votre nouveau site installé, paramétré, pleinement fonctionnel et validé par vous.</p></details>
+      <details><summary>Mon référencement sera-t-il préservé ?</summary><p>Oui, c'est notre spécialité. Les adresses de vos pages et vos contenus sont repris avec soin, et la structure du nouveau site est pensée pour améliorer votre visibilité.</p></details>
+      <details><summary>Pouvez-vous ajouter des langues ou un conseiller intelligent ?</summary><p>Oui. Chaque refonte peut inclure plusieurs langues et « [Votre maison] Conseil », un conseiller qui guide vos clients vers le bon produit.</p></details>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact" aria-labelledby="h-contact">
+  <div class="wrap">
+    <div>
+      <p class="label">Contact</p>
+      <h2 id="h-contact" style="margin-top:20px">Parlons de <em>votre maison.</em></h2>
+      <p class="lede">Indiquez-nous l'adresse de votre site : nous vous répondons par écrit, avec nos premières observations.</p>
+      <div class="mail">
+        <a href="mailto:contact@neoverastudio.fr">contact@neoverastudio.fr</a>
+        <button type="button" id="copyMail">Copier l'adresse</button>
+      </div>
+      <p class="small-note" id="copyStatus" aria-live="polite">Neovera Studio · Marseille · Missions partout en France</p>
+    </div>
+    <form class="msg" id="msgForm" novalidate>
+      <div class="row2">
+        <div class="f"><label for="fName">Nom</label><input id="fName" name="name" autocomplete="name" required></div>
+        <div class="f"><label for="fHouse">Maison</label><input id="fHouse" name="house" autocomplete="organization"></div>
+      </div>
+      <div class="row2">
+        <div class="f"><label for="fMail">E-mail</label><input id="fMail" name="email" type="email" autocomplete="email" required></div>
+        <div class="f"><label for="fSite">Site actuel</label><input id="fSite" name="site" placeholder="www.votremaison.fr"></div>
+      </div>
+      <div class="f"><label for="fMsg">Votre message</label><textarea id="fMsg" name="message" placeholder="Votre projet, vos attentes…"></textarea></div>
+      <button class="btn" type="submit">Préparer mon message <span class="arr" aria-hidden="true">→</span></button>
+      <p class="form-status" id="formStatus" aria-live="polite"></p>
+    </form>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-row">
+      <a class="brand" href="#top"><b>Neo<i>vera</i></b><span style="color:#9AA7A3">Studio</span></a>
+      <span>Refonte premium de sites internet pour maisons artisanales, patrimoniales et e-commerce</span>
+    </div>
+    <details>
+      <summary>Mentions légales</summary>
+      <div class="legal">
+        <div><h4>Éditeur du site</h4>Neovera Studio — Elhadji Ndong, micro-entrepreneur<br>110, boulevard de Paris, 13003 Marseille<br>SIRET : 449 613 686 00038<br>TVA non applicable, article 293 B du CGI<br>Contact : contact@neoverastudio.fr<br>Directeur de la publication : Elhadji Ndong</div>
+        <div><h4>Hébergement</h4>OVH SAS<br>2, rue Kellermann, 59100 Roubaix, France<br><br><h4>Propriété intellectuelle</h4>Textes, visuels et maquettes de ce site sont la propriété de Neovera Studio. Toute reproduction sans autorisation est interdite.</div>
+        <div><h4>Données personnelles</h4>Ce site ne dépose aucun cookie de suivi. Les informations que vous nous adressez par e-mail servent uniquement à vous répondre et ne sont jamais cédées. Vous pouvez demander leur suppression à tout moment à contact@neoverastudio.fr.</div>
+      </div>
+    </details>
+    <span>© <span id="yr">2026</span> Neovera Studio</span>
+  </div>
+</footer>
+
+<button class="adv-btn" id="advBtn" type="button" aria-controls="adv" aria-expanded="false"><i>N</i><span>Neovera Conseil</span></button>
+<div class="adv" id="adv" role="dialog" aria-label="Neovera Conseil">
+  <header><div><small>Conseiller du studio</small><b>Neovera Conseil</b></div><button type="button" id="advClose" aria-label="Fermer le conseiller">×</button></header>
+  <div class="log" id="advLog" aria-live="polite"></div>
+  <div class="chips" id="advChips"></div>
+</div>
+
+<script>
+(function(){
+  // Slider
+  var cmp=document.getElementById('compare'),r=document.getElementById('cmp');
+  function setPos(v){cmp.style.setProperty('--pos',v+'%')}
+  r.addEventListener('input',function(){setPos(r.value)});
+  // gentle intro sweep
+  var reduce=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if(!reduce){var t0=null;function sweep(ts){if(!t0)t0=ts;var p=(ts-t0)/2200;if(p>1){setPos(50);r.value=50;return}var v=50+Math.sin(p*Math.PI*2)*18*(1-p);setPos(v.toFixed(2));requestAnimationFrame(sweep)}
+    if('IntersectionObserver' in window){var io=new IntersectionObserver(function(e){if(e[0].isIntersecting){requestAnimationFrame(sweep);io.disconnect()}},{threshold:.5});io.observe(cmp)}}
+
+  // Copy mail
+  var mail='contact@neoverastudio.fr';
+  document.getElementById('copyMail').addEventListener('click',function(){
+    var s=document.getElementById('copyStatus');
+    try{navigator.clipboard.writeText(mail).then(function(){s.textContent='Adresse copiée : '+mail},function(){s.textContent='Notre adresse : '+mail})}catch(e){s.textContent='Notre adresse : '+mail}
+  });
+
+  // Form -> mail draft
+  document.getElementById('msgForm').addEventListener('submit',function(e){
+    e.preventDefault();
+    var g=function(id){return document.getElementById(id).value.trim()};
+    var st=document.getElementById('formStatus');
+    if(!g('fName')||!/^\S+@\S+\.\S+$/.test(g('fMail'))){st.textContent='Indiquez votre nom et une adresse e-mail valide.';return}
+    var subject='Projet de refonte'+(g('fHouse')?' — '+g('fHouse'):'');
+    var body='Nom : '+g('fName')+'\nMaison : '+g('fHouse')+'\nE-mail : '+g('fMail')+'\nSite actuel : '+g('fSite')+'\n\n'+g('fMsg');
+    st.textContent='Votre messagerie s\'ouvre avec le message prêt à envoyer. Si rien ne s\'ouvre, écrivez-nous à '+mail+'.';
+    window.location.href='mailto:'+mail+'?subject='+encodeURIComponent(subject)+'&body='+encodeURIComponent(body);
+  });
+
+  // Advisor
+  var adv=document.getElementById('adv'),btn=document.getElementById('advBtn'),log=document.getElementById('advLog'),chips=document.getElementById('advChips');
+  var A={
+    start:{t:"Bonjour, je suis Neovera Conseil. Je réponds à vos questions sur la refonte de votre site. Que souhaitez-vous savoir ?",c:['maquette','plateforme','paiement','seo','delai','contact']},
+    maquette:{q:"Comment se passe la maquette ?",t:"Nous étudions votre site, puis nous imaginons votre site de demain avec vos vrais produits, vos prix et vos photos. Elle est offerte et ne vous engage à rien. Vous pouvez la partager avec votre équipe.",c:['paiement','plateforme','contact']},
+    plateforme:{q:"Je garde ma boutique actuelle ?",t:"Oui. Nous travaillons sur votre plateforme (Shopify, WooCommerce, PrestaShop…). Historique, commandes, clients, produits et référencement restent en place. Seuls changent l'habillage et les fonctionnalités.",c:['seo','maquette','contact']},
+    paiement:{q:"Quand faut-il payer ?",t:"À la fin de la mission seulement : une fois votre nouveau site installé, paramétré, pleinement fonctionnel, et validé par vous.",c:['maquette','delai','contact']},
+    seo:{q:"Et mon référencement ?",t:"C'est notre spécialité. Vos pages et vos contenus sont repris avec soin, et la structure du nouveau site est pensée pour améliorer votre visibilité sur Google.",c:['plateforme','contact']},
+    delai:{q:"Combien de temps cela prend-il ?",t:"Le calendrier dépend de l'ampleur de votre site. Il est fixé avec vous après validation de la maquette, et vous savez toujours où en est le projet.",c:['maquette','contact']},
+    contact:{q:"Je veux être contacté",t:"Avec plaisir. Écrivez-nous à contact@neoverastudio.fr en indiquant l'adresse de votre site : nous vous répondons par écrit avec nos premières observations.",c:['maquette','paiement']}
+  };
+  function bub(txt,who){var d=document.createElement('div');d.className='bub '+who;d.textContent=txt;log.appendChild(d);log.scrollTop=log.scrollHeight}
+  function show(k){var n=A[k];chips.innerHTML='';n.c.forEach(function(c){var b=document.createElement('button');b.type='button';b.textContent=A[c].q;b.addEventListener('click',function(){bub(A[c].q,'me');setTimeout(function(){bub(A[c].t,'bot');show(c);if(c==='contact'){var go=document.createElement('button');go.type='button';go.textContent='Aller au formulaire';go.addEventListener('click',function(){toggle(false);document.getElementById('contact').scrollIntoView({behavior:reduce?'auto':'smooth'})});chips.prepend(go)}},350)});chips.appendChild(b)})}
+  var started=false;
+  function toggle(open){adv.classList.toggle('open',open);btn.setAttribute('aria-expanded',open);if(open&&!started){started=true;bub(A.start.t,'bot');show('start')}}
+  btn.addEventListener('click',function(){toggle(!adv.classList.contains('open'))});
+  document.getElementById('advClose').addEventListener('click',function(){toggle(false)});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape')toggle(false)});
+  document.getElementById('yr').textContent=new Date().getFullYear();
+})();
+</script>
+</body>
+</html>
