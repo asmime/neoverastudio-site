@@ -19,15 +19,16 @@ img,video{display:block;max-width:100%}button{font:inherit;cursor:pointer;border
 .top{background:var(--ink);color:#EDE8DF;font-size:12.5px;letter-spacing:.04em;text-align:center;padding:9px var(--g)}
 .top b{color:#fff;font-weight:600;cursor:pointer;border-bottom:1px solid var(--verm)}
 header{position:sticky;top:0;z-index:40;background:rgba(247,245,240,.94);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
-.hd{display:flex;align-items:center;gap:22px;height:74px}
+.hd{display:flex;align-items:center;gap:18px;height:74px;max-width:1600px}.hd.nolab .lsel .lg{display:none}
 .logo{display:flex;flex-direction:column;line-height:1;cursor:pointer;flex:none}
 .logo small{font:600 9.5px/1 var(--sans);letter-spacing:.42em;text-transform:uppercase;color:var(--mute);margin-left:2px}
 .logo span{font:500 27px/1.1 var(--serif);letter-spacing:.02em}
 .logo span i{color:var(--verm);font-style:normal}
-nav.mn{display:flex;gap:20px;margin-left:12px;flex:1;flex-wrap:nowrap}
+nav.mn{display:flex;gap:clamp(12px,1.2vw,20px);margin-left:8px;flex:1 1 auto;min-width:0;flex-wrap:nowrap}
 nav.mn a{font-size:13px;font-weight:500;letter-spacing:.02em;text-decoration:none;cursor:pointer;white-space:nowrap;padding:6px 0;border-bottom:1px solid transparent}
 nav.mn a:hover,nav.mn a.on{border-color:var(--verm)}
-.hr{display:flex;align-items:center;gap:10px;margin-left:auto}
+.hr{display:flex;align-items:center;gap:10px;margin-left:auto;flex:none}
+.hd.compact nav.mn{display:none}.hd.compact .burger{display:block}.hd.compact .lsel .lg{display:none}
 .lsel{display:flex;align-items:center;gap:6px;border:1px solid var(--ink);padding:6px 10px;font-size:13px;font-weight:600}
 .lsel select{border:0;background:transparent;font:600 13px var(--sans);color:var(--ink);cursor:pointer}
 .cartb{position:relative;border:1px solid var(--ink);padding:7px 14px;font-size:13px;font-weight:600;background:var(--ink);color:#fff}
@@ -839,7 +840,9 @@ const eur=v=>v.toLocaleString(lang==='en'?'en-GB':lang,{minimumFractionDigits:v%
 const P=id=>PRODUCTS.find(p=>p.id===id);
 const NAV=[['shop','m_wines'],['estate','m_estate'],['approach','m_approach'],['visit','m_visit'],['beyond','m_beyond'],['news','m_news'],['contact','m_contact'],['adv','m_adv']];
 function track(e){try{window.nvTrack&&nvTrack(e)}catch(x){}}
-function navs(){const h=NAV.map(([v,k])=>`<a data-go="${v}" class="${v===view?'on':''}" onclick="${v==='adv'?'openAdv()':`go('${v}')`}">${t(k)}</a>`).join('');document.getElementById('mn').innerHTML=h;document.getElementById('mnl').innerHTML=h}
+function fitNav(){const h=document.querySelector('.hd');h.classList.remove('compact','nolab');const bad=()=>{const c=document.querySelector('.cartb').getBoundingClientRect(),n=document.getElementById('mn'),s=document.querySelector('.lsel').getBoundingClientRect();return innerWidth>1060&&(c.right>innerWidth-8||n.scrollWidth>n.clientWidth+1||n.getBoundingClientRect().right>s.left-8)};if(bad())h.classList.add('nolab');if(bad())h.classList.add('compact');return;const c=document.querySelector('.cartb').getBoundingClientRect(),n=document.getElementById('mn'),s=document.querySelector('.lsel').getBoundingClientRect();if(innerWidth>1060&&(c.right>innerWidth-8||n.scrollWidth>n.clientWidth+1||n.getBoundingClientRect().right>s.left-8))h.classList.add('compact')}
+addEventListener('resize',()=>fitNav());
+function navs(){const h=NAV.map(([v,k])=>`<a data-go="${v}" class="${v===view?'on':''}" onclick="${v==='adv'?'openAdv()':`go('${v}')`}">${t(k)}</a>`).join('');document.getElementById('mn').innerHTML=h;document.getElementById('mnl').innerHTML=h;requestAnimationFrame(fitNav)}
 function apply(){document.documentElement.lang=lang;document.querySelectorAll('[data-i]').forEach(e=>e.innerHTML=t(e.dataset.i));document.querySelectorAll('[data-ia]').forEach(e=>e.alt=t(e.dataset.ia));navs();render()}
 function lazy(){document.querySelectorAll('img[data-src]').forEach(i=>{if(!i.src){i.loading='lazy';i.src=img(i.dataset.src)}})}
 function badges(p){const b=[];if(p.g!=='oeno')b.push(['bd_bio','']);if(['reserve-rose','reserve-blanc','prestige-rouge','magnum-reserve-rose','magnum-reserve-blanc'].includes(p.id))b.push(['bd_med','m']);if(p.gp==='enkhelis'||p.g==='enkhelis')b.push(['bd_vv','']);if(['jeroboam','mathusalem'].includes(p.id))b.push(['bd_rare','m']);return `<div class="badges">${b.map(([k,c])=>`<i class="${c}">${t(k)}</i>`).join('')}</div>`}
