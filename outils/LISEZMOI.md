@@ -11,6 +11,7 @@ Dossier non accessible depuis le web (`.htaccess` : accès refusé). À utiliser
 | Fichier autonome | `autonome.py <build> <sortie.html>` | Intègre les images (convention `const img=id=>'img/'+id+'.jpg';`). Alerte au-delà de 25 Mo. |
 | Image du mail | `avant-apres.py avant.png apres.png sortie.jpg --nom "Prospect"` | Image « Aujourd'hui / Demain ». |
 | Publication | `publier.sh <build> <nom>` | Copie dans `maquettes/<nom>/`, ajoute le suivi des visites, vérifie le noindex et pousse sur GitHub. Le webhook met en ligne chez OVH en moins d'une minute. Vérifier ensuite `https://maquettes.neoverastudio.fr/<nom>/?moi`. |
+| Envoi du mail | `envoi-mail.js` | Envoie un mail depuis contact@neoverastudio.fr par le webmail OVH, à exécuter dans le navigateur intégré sur https://mail.ovh.net/modern/. L'image avant/après est intégrée au corps du mail, et achimime et as.asgraal sont en copie cachée. Si la session a expiré, on demande la connexion à l'utilisateur, sans jamais saisir de mot de passe. |
 | Suivi des visites | `suivi-visites.html` | Script de mesure (ajouté automatiquement par `publier.sh`). Les statistiques sont décrites dans le doc projet `claude/outils-automatisation.md`. |
 
 Pour tout ouvrir ou vérifier soi-même, toujours ajouter `?moi` à l'adresse, afin de ne pas compter ses propres visites.

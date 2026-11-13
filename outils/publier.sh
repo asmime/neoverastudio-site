@@ -1,11 +1,12 @@
 #!/usr/bin/env bash
 # Publie une maquette : build/ → maquettes/<nom>/ du dépôt, ajoute le suivi des visites et vérifie le noindex, puis push
 # (le webhook GitHub → OVH met en ligne en moins d'une minute). Vérifier ensuite https://maquettes.neoverastudio.fr/<nom>/?moi
-# Usage : publier.sh <build_dir> <nom-du-prospect> ["message de commit"]
-set -e; B=$1; N=$2; MSG=${3:-"Maquette $N"}; R=/home/claude/neoverastudio-site; O=$(cd "$(dirname "$0")" && pwd)
+# Usage : publier.sh <build_dir> <nom-du-prospect> ["message de commit"] [avant-apres.jpg]
+# (l'image avant/après est publiée en maquettes/<nom>/avant-apres.jpg pour être intégrée au mail par envoi-mail.js)
+set -e; B=$1; N=$2; MSG=${3:-"Maquette $N"}; AA=${4:-}; R=/home/claude/neoverastudio-site; O=$(cd "$(dirname "$0")" && pwd)
 [ -d "$R/.git" ] || git clone -q https://github.com/asmime/neoverastudio-site.git "$R"
 cd "$R"; git pull -q --rebase origin main || true
-rm -rf "maquettes/$N"; mkdir -p "maquettes/$N"; cp -r "$B"/. "maquettes/$N/"
+rm -rf "maquettes/$N"; mkdir -p "maquettes/$N"; cp -r "$B"/. "maquettes/$N/"; [ -n "$AA" ] && cp "$AA" "maquettes/$N/avant-apres.jpg"
 python3 - "maquettes/$N/index.html" "$O/suivi-visites.html" <<'PY'
 import sys; f, sn = sys.argv[1], open(sys.argv[2]).read(); s = open(f).read()
 if 'id="nv-track"' not in s: i = s.rfind('</body>'); s = s[:i] + sn + s[i:]
