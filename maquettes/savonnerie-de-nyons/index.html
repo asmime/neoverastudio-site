@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>La Savonnerie de Nyons — Proposition Neovera Studio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT@0,9..144,500..900,100;1,9..144,500..900,100&family=Instrument+Sans:wght@400;500;600;700&family=Noto+Sans+SC:wght@400;700;900&display=swap" rel="stylesheet">
+<style>
+:root{--cream:#F5ECD7;--cream2:#EFE3C6;--paper:#FBF6EA;--forest:#1E3A2B;--forest2:#2C4C3A;--red:#D23F2A;--mustard:#E9B44C;--ink:#1B231D;--mute:#5E6A5F;--line:rgba(30,58,43,.16);
+--c-provence:#DCD3F0;--c-voyage:#CFE2EE;--c-metiers:#F6DFC2;--c-souvenir:#F4CFC9;--c-soin:#E2EDD9;--c-coffret:#F3E3A8;--c-maison:#D9E6E2}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--cream);color:var(--ink);font:400 16px/1.6 'Instrument Sans',system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+html[lang=zh] body{font-family:'Noto Sans SC','Instrument Sans',sans-serif}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none;cursor:pointer}
+button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
+.wrap{max-width:1320px;margin:0 auto;padding:0 clamp(18px,4vw,48px)}
+.k{font:600 12px/1.4 'Instrument Sans';letter-spacing:.14em;text-transform:uppercase;color:var(--red)}
+.disp,h2{font-family:'Fraunces',Georgia,serif;font-variation-settings:'SOFT' 100,'opsz' 144;font-weight:850;line-height:.92;letter-spacing:-.02em;color:var(--forest)}
+.disp em,h2 em{font-style:italic;font-weight:600;color:var(--red)}
+html[lang=zh] .disp,html[lang=zh] h2{font-family:'Noto Sans SC';font-weight:900;line-height:1.15;letter-spacing:0}
+html[lang=zh] .disp em,html[lang=zh] h2 em{font-style:normal;font-weight:900}
+h2{font-size:clamp(40px,5.6vw,80px)}
+.lead{font-size:clamp(17px,1.4vw,20px);line-height:1.55;color:#33413A;max-width:560px}
+.btn{display:inline-flex;align-items:center;gap:10px;background:var(--forest);color:var(--cream);padding:16px 28px;border-radius:999px;font:600 15px 'Instrument Sans';transition:.2s}
+.btn:hover{background:var(--red)}
+.btn.alt{background:transparent;color:var(--forest);box-shadow:inset 0 0 0 2px var(--forest)}
+.btn.alt:hover{background:var(--forest);color:var(--cream)}
+/* top/header */
+.top{background:var(--forest);color:var(--cream);text-align:center;font:500 13px 'Instrument Sans';padding:9px 16px}
+header{position:sticky;top:0;z-index:50;background:rgba(245,236,215,.95);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.hd{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;height:88px;gap:20px}
+.hd nav{display:flex;gap:28px;font:600 14.5px 'Instrument Sans';white-space:nowrap}
+.hd nav a:hover{color:var(--red)}
+.logo{text-align:center;line-height:.9;color:var(--red)}
+.logo small{display:block;font:italic 600 15px 'Fraunces';color:var(--red)}
+.logo b{display:block;font:900 30px 'Fraunces';font-variation-settings:'SOFT' 100;letter-spacing:.01em;text-transform:uppercase}
+.logo span{display:block;font:italic 700 17px 'Fraunces';color:var(--forest)}
+.hr{display:flex;justify-content:flex-end;align-items:center;gap:14px}
+.navadv{display:inline-flex;align-items:center;gap:8px;font:600 14px 'Instrument Sans';color:var(--forest);white-space:nowrap;border-bottom:2px solid var(--mustard)}
+.langsel{appearance:none;-webkit-appearance:none;background:var(--paper) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6'%3E%3Cpath d='M1 1l4 4 4-4' fill='none' stroke='%231E3A2B' stroke-width='1.6'/%3E%3C/svg%3E") no-repeat right 12px center;border:1.5px solid var(--forest);border-radius:999px;padding:8px 30px 8px 14px;font:600 13px 'Instrument Sans';color:var(--forest);cursor:pointer}
+.cartb{position:relative;width:44px;height:44px;background:var(--forest);color:var(--cream);border-radius:50%;display:grid;place-items:center}
+.pill{position:absolute;top:-4px;right:-4px;background:var(--red);color:#fff;font:700 11px 'Instrument Sans';min-width:20px;height:20px;border-radius:10px;display:grid;place-items:center;padding:0 5px;border:2px solid var(--cream)}
+.burger{display:none}
+.view{display:none}.view.on{display:block}
+section.blk{padding:clamp(70px,9vw,130px) 0}
+/* hero */
+.hero{padding:clamp(40px,5vw,70px) 0 30px}
+.hg{display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(30px,5vw,80px);align-items:center}
+.hero h1{font-size:clamp(54px,7vw,112px);line-height:.92;margin:20px 0 26px}
+.hreass{margin-top:18px;font:600 14px 'Instrument Sans';color:var(--mute)}
+.ctas{display:flex;gap:14px;flex-wrap:wrap;margin-top:34px}
+.tin{position:relative;border-radius:42px;padding:18px;background:linear-gradient(145deg,#b9ad8f,#efe6cc 30%,#a89c7e 70%,#e6dcc0);box-shadow:inset 0 2px 0 rgba(255,255,255,.7),inset 0 -3px 6px rgba(0,0,0,.18),0 40px 70px -25px rgba(30,58,43,.5)}
+.tin .in{position:relative;border-radius:30px;overflow:hidden;aspect-ratio:4/5;background:var(--forest);box-shadow:inset 0 0 0 3px rgba(0,0,0,.12)}
+.tin .in:after{content:"";position:absolute;inset:0;background:linear-gradient(115deg,transparent 40%,rgba(255,255,255,.18) 50%,transparent 60%),radial-gradient(ellipse at 50% 0,rgba(0,0,0,.18),transparent 40%);pointer-events:none;z-index:1;box-shadow:inset 0 6px 14px rgba(0,0,0,.25)}
+.hg>div:last-child{max-width:470px;justify-self:end;width:100%}
+.tin video,.tin img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.stamp{position:absolute;left:-34px;top:40px;width:128px;height:128px;border-radius:50%;background:var(--red);color:var(--cream);display:grid;place-items:center;text-align:center;font:italic 800 17px/1.05 'Fraunces';transform:rotate(-12deg);box-shadow:0 10px 24px rgba(210,63,42,.35);z-index:2}
+.stamp b{display:block;font:900 30px 'Fraunces';font-style:normal}
+.stamp:before{content:"";position:absolute;inset:6px;border:1.5px dashed rgba(245,236,215,.7);border-radius:50%}
+.cap{margin-top:14px;text-align:center;font:600 12px 'Instrument Sans';letter-spacing:.14em;text-transform:uppercase;color:var(--mute)}
+/* marquee */
+.mq{overflow:hidden;padding:30px 0 10px}
+.mq .row{background:var(--cream);display:flex;gap:18px;width:max-content;animation:mq 60s linear infinite}
+.mq .row.r2{animation-direction:reverse;margin-top:18px;animation-duration:70s}
+.mq img{width:130px;height:130px;object-fit:contain;transition:transform .3s}
+.mq img:hover{transform:rotate(-4deg) scale(1.06)}
+@keyframes mq{to{transform:translateX(-50%)}}
+@media (prefers-reduced-motion:reduce){.mq .row{animation:none}}
+/* facts */
+.facts{background:var(--forest);color:var(--cream)}
+.facts .wrap{display:grid;grid-template-columns:repeat(4,1fr)}
+.facts .wrap{gap:18px;padding-top:34px;padding-bottom:34px}
+.facts div div{background:var(--cream);color:var(--forest);border-radius:16px;padding:26px 24px;text-align:center;box-shadow:inset 0 0 0 5px var(--cream),inset 0 0 0 7px var(--red),0 10px 20px rgba(0,0,0,.2)}
+.facts strong{display:block;font:900 clamp(40px,4vw,58px)/1 'Fraunces';font-variation-settings:'SOFT' 100;color:var(--red);margin-bottom:8px}
+.facts span{display:block;font:600 14px 'Instrument Sans';color:var(--forest);margin:0 auto;max-width:220px}
+/* section head */
+.sh{display:flex;justify-content:space-between;align-items:flex-end;gap:30px;margin-bottom:40px}
+.sh h2{margin-top:14px}
+/* crate */
+.chips{display:flex;gap:8px;flex-wrap:wrap}
+.chips button{border:1.5px solid var(--forest);border-radius:999px;padding:9px 16px;font:600 14px 'Instrument Sans';color:var(--forest)}
+.chips button.on,.chips button:hover{background:var(--forest);color:var(--cream)}
+.crate{display:flex;gap:0;overflow-x:auto;perspective:1400px;padding:50px clamp(18px,4vw,48px) 0;scrollbar-width:thin}
+.crate .tc{position:relative;flex:0 0 clamp(230px,22vw,290px);margin-left:-90px;cursor:pointer;transform:rotateY(22deg);transform-origin:left center;transition:transform .45s cubic-bezier(.2,.8,.2,1),margin .45s;z-index:1}
+.crate .tc:first-child{margin-left:0}
+.crate .tc:hover,.crate .tc:focus-within{transform:rotateY(0) translateY(-18px);margin-right:90px;z-index:3}
+.crate .tc .ph{box-shadow:-10px 0 24px rgba(30,58,43,.18)}
+.shelf{margin-top:-6px;height:12px;background:var(--forest);border-radius:4px;margin:0 clamp(18px,4vw,48px);box-shadow:0 10px 20px -8px rgba(30,58,43,.5)}
+.crate .tc h3,.crate .tc .row{position:absolute;left:0;right:0}.crate .tc h3{top:calc(100% + 6px)}.crate .tc .row{top:calc(100% + 38px)}
+.crate .tc .row,.crate .tc h3{opacity:.0;transition:opacity .3s}.crate .tc:hover .row,.crate .tc:hover h3,.crate .tc:focus-within .row,.crate .tc:focus-within h3{opacity:1}
+.crate .tc .lbl{position:absolute;left:10px;top:-34px;font:700 12px 'Instrument Sans';color:var(--forest);white-space:nowrap;transform:rotate(-4deg);background:var(--paper);padding:4px 10px;border-radius:999px;box-shadow:0 4px 10px rgba(0,0,0,.08)}
+.tc .ph{border-radius:24px;aspect-ratio:1;display:grid;place-items:center;overflow:hidden}
+.tc .ph img{width:86%;height:86%;object-fit:contain;filter:drop-shadow(0 18px 18px rgba(30,58,43,.22))}
+.tc h3{font:800 22px/1.1 'Fraunces';font-variation-settings:'SOFT' 100;color:var(--forest);margin:16px 4px 6px}
+html[lang=zh] .tc h3{font-family:'Noto Sans SC';font-weight:700;font-size:18px}
+.tc .row{display:flex;justify-content:space-between;align-items:center;margin:0 4px}
+.crate-nav{display:flex;gap:10px}
+.crate-nav button{width:48px;height:48px;border-radius:50%;border:1.5px solid var(--forest);font-size:20px;color:var(--forest)}
+.crate-nav button:hover{background:var(--forest);color:var(--cream)}
+/* cards */
+.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:22px}
+.card{display:flex;flex-direction:column;cursor:pointer}
+.card .ph{position:relative;border-radius:22px;aspect-ratio:1;display:grid;place-items:center;overflow:hidden}
+.card .ph img{width:82%;height:82%;object-fit:contain;transition:transform .4s}
+.card:hover .ph img{transform:scale(1.05) rotate(-2deg)}
+.badge{position:absolute;top:14px;left:14px;font:700 11px 'Instrument Sans';letter-spacing:.08em;text-transform:uppercase;background:var(--red);color:var(--cream);padding:6px 11px;border-radius:999px}
+.badge.fav{background:var(--mustard);color:var(--forest)}.badge.sig{background:var(--forest)}
+.info{padding:14px 4px 0;flex:1;display:flex;flex-direction:column}
+.nm{font:600 16.5px/1.35 'Instrument Sans';color:var(--ink)}
+.row2{display:flex;justify-content:space-between;align-items:center;margin-top:auto;padding-top:10px}
+.pr{font:800 18px 'Fraunces';color:var(--forest)}
+.pr s{font:500 14px 'Instrument Sans';color:var(--mute);margin-left:6px}
+.add{background:var(--forest);color:var(--cream);font:600 13px 'Instrument Sans';padding:8px 15px;border-radius:999px}
+.add:hover{background:var(--red)}
+/* builder */
+.builder{background:var(--paper);border-radius:40px;padding:clamp(28px,4vw,60px)}
+.bg{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);grid-template-areas:'head pick' 'box pick';column-gap:clamp(30px,4vw,60px);row-gap:0;align-items:start}.bhead{grid-area:head}.bg .pick{grid-area:pick;align-self:center}.bbox{grid-area:box}
+.slots{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:30px 0 22px;background:var(--forest);padding:18px;border-radius:28px;box-shadow:inset 0 8px 20px rgba(0,0,0,.35)}
+.slot{aspect-ratio:1;border:2px dashed rgba(245,236,215,.3);border-radius:18px;display:grid;place-items:center;position:relative;font:600 13px 'Instrument Sans';color:#D9DCCB;background:#2a4a38}
+.slot img{width:84%;height:84%;object-fit:contain}
+.slot.on{border-style:solid;border-color:var(--mustard);background:var(--paper)}
+.slot button{position:absolute;top:6px;right:6px;width:26px;height:26px;border-radius:50%;background:var(--forest);color:var(--cream);font-size:14px}
+.btot{display:flex;justify-content:space-between;gap:12px;align-items:center;font:800 26px 'Fraunces';color:var(--forest);margin-bottom:18px}
+.bact{display:flex;gap:12px;flex-wrap:wrap}
+.bact .btn[disabled]{opacity:.6;pointer-events:none}
+.bprog{font:600 14px 'Instrument Sans';color:var(--mute);margin:-8px 0 16px}
+.pick button span{position:absolute;left:6px;right:6px;bottom:6px;font:600 11px/1.2 'Instrument Sans';color:var(--forest);background:rgba(251,246,234,.92);border-radius:8px;padding:3px 4px;opacity:0;transition:.2s}
+.pick button:hover span{opacity:1}
+.pick{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.pick button{border-radius:18px;aspect-ratio:1;display:grid;place-items:center;transition:.2s;position:relative}
+.pick button img{width:82%;height:82%;object-fit:contain}
+.pick button:hover{transform:translateY(-4px)}
+.pick button.sel:after{content:"✓";position:absolute;top:6px;right:8px;width:24px;height:24px;border-radius:50%;background:var(--red);color:#fff;font:700 13px/24px 'Instrument Sans';text-align:center}
+/* xmas */
+.xmas{background:var(--red);color:var(--cream)}
+.xmas .k{color:var(--mustard)}
+.xmas h2{color:var(--cream)}.xmas h2 em{color:var(--mustard)}
+.xmas .lead{color:#FBE3DC}
+.xg{display:grid;grid-template-columns:1fr 1.5fr;gap:clamp(30px,4vw,60px);align-items:end}
+.xmas .grid{align-content:center}
+.xg .xi{position:relative}.tag{position:absolute;top:22px;right:-8px;background:var(--mustard);color:var(--forest);font:700 13px 'Instrument Sans';padding:8px 16px;border-radius:6px;transform:rotate(-6deg);box-shadow:0 6px 14px rgba(0,0,0,.2);z-index:2}
+section.blk.xmas{padding-bottom:90px}
+.xmas .xbtn{background:var(--cream);color:var(--red);margin-top:26px}
+.xg .xi{border-radius:30px;overflow:visible;aspect-ratio:4/5}.xg .xi img{border-radius:30px}
+.xg .xi img{width:100%;height:100%;object-fit:cover}
+.xmas .grid{grid-template-columns:repeat(3,1fr)}
+.xmas .nm{color:var(--cream)}.xmas .pr{color:var(--cream)}
+.xmas .add{background:var(--cream);color:var(--red)}
+/* reviews */
+.revwrap{margin-top:28px}
+.revs{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.rev{background:var(--paper);border-radius:22px;padding:16px;display:grid;grid-template-columns:96px 1fr;gap:20px;align-items:center;cursor:pointer}
+.rev img{width:96px;height:96px;object-fit:contain;background:var(--c-soin);border-radius:18px;padding:6px}
+.stars{color:var(--mustard);font-size:18px;letter-spacing:2px}
+.rev b{display:block;font:800 19px/1.2 'Fraunces';color:var(--forest);margin:4px 0}
+.rev span{font-size:13.5px;color:var(--mute)}
+.src{margin-top:18px;font-size:13px;color:var(--mute)}
+/* origins */
+.og{display:grid;grid-template-columns:1fr 1fr;gap:clamp(30px,5vw,80px);align-items:center}
+.og .oi{position:relative;border-radius:200px 200px 30px 30px;overflow:hidden;aspect-ratio:4/5}
+.og .oi img{width:100%;height:100%;object-fit:cover}
+.og .yr{position:absolute;bottom:24px;left:24px;background:var(--cream);color:var(--forest);font:900 46px 'Fraunces';padding:6px 20px;border-radius:999px}
+.steps{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:34px}
+.steps div{background:var(--paper);border-radius:20px;padding:20px}
+.steps b{display:inline-grid;place-items:center;width:30px;height:30px;border-radius:50%;background:var(--forest);color:var(--cream);font:700 13px 'Instrument Sans';margin-bottom:10px}
+.steps h3{font:800 20px 'Fraunces';color:var(--forest);margin-bottom:4px}
+html[lang=zh] .steps h3{font-family:'Noto Sans SC';font-size:17px}
+.steps p{font-size:14px;color:var(--mute)}
+/* visit */
+.visit{background:var(--forest);color:var(--cream);border-radius:40px;overflow:hidden;display:grid;grid-template-columns:1fr 1fr}
+.visit .vi img{width:100%;height:100%;object-fit:cover;min-height:420px}
+.visit .vt{padding:clamp(30px,5vw,70px)}
+.visit h2{color:var(--cream)}.visit h2 em{color:var(--mustard)}
+.visit .lead{color:#D9DCCB;margin-top:20px}
+.addr{margin-top:20px;font:600 14px 'Instrument Sans';color:var(--mustard)}
+form.vf{display:grid;grid-template-columns:1fr 1.4fr;gap:10px;margin-top:26px}
+.vf select,.vf input{background:rgba(245,236,215,.08);border:1.5px solid rgba(245,236,215,.35);border-radius:14px;padding:13px 14px;font:500 14px 'Instrument Sans';color:var(--cream)}
+.vf select option{color:var(--ink)}
+.vf input::placeholder{color:#B9C0B0}
+.vf .btn{grid-column:1/-1;justify-content:center;background:var(--mustard);color:var(--forest)}
+.vf .btn:hover{background:var(--cream)}
+.ok{display:none;margin-top:14px;padding:14px 16px;background:rgba(245,236,215,.1);border-radius:14px;font-size:14px}
+/* footer */
+footer{background:var(--forest);color:#D9DCCB;padding:80px 0 30px;margin-top:clamp(70px,9vw,130px)}
+.ft{display:grid;grid-template-columns:1.3fr 1fr 1fr 1.2fr;gap:40px}
+.ft .logo{text-align:left;color:var(--mustard)}.ft .logo small,.ft .logo b{color:var(--mustard)}.ft .logo span{color:var(--cream)}
+.ft p{font-size:14px;margin-top:18px;max-width:330px}
+.ft h4{font:700 12px 'Instrument Sans';letter-spacing:.14em;text-transform:uppercase;color:var(--mustard);margin-bottom:16px}
+.ft ul{list-style:none;display:grid;gap:9px;font-size:14.5px}
+.ft a:hover{color:var(--cream)}
+.soc{display:flex;gap:10px}
+.soc a{width:42px;height:42px;border-radius:50%;background:rgba(245,236,215,.1);display:grid;place-items:center}
+.soc a:hover{background:var(--mustard);color:var(--forest)}
+.nl{display:flex;margin-top:12px;max-width:340px}.nl input{flex:1;min-width:0;background:rgba(245,236,215,.08);border:1.5px solid rgba(245,236,215,.3);border-right:0;color:var(--cream);padding:12px 14px;font:14px 'Instrument Sans';border-radius:999px 0 0 999px}.nl button{background:var(--mustard);color:var(--forest);padding:0 18px;font:700 13px 'Instrument Sans';border-radius:0 999px 999px 0}
+.legal{margin-top:60px;padding-top:22px;border-top:1px solid rgba(245,236,215,.14);font-size:12.5px;color:#A9B3A4;display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+/* shop */
+.filters{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:34px}
+.filters button{border:1.5px solid var(--forest);border-radius:999px;padding:9px 16px;font:600 14px 'Instrument Sans';color:var(--forest)}
+.filters button.on{background:var(--forest);color:var(--cream)}
+/* pdp */
+.pdp{display:grid;grid-template-columns:1.05fr 1fr;gap:clamp(30px,5vw,80px);padding:30px 0 80px}
+.pdp .g{border-radius:32px;aspect-ratio:1;display:grid;place-items:center}
+.pdp .g{position:relative}.pdp .g img{position:relative;z-index:1;width:84%;height:84%;object-fit:contain}
+.pdp .g:after{content:"";position:absolute;bottom:10%;left:22%;right:22%;height:30px;background:radial-gradient(rgba(30,58,43,.28),transparent 70%);filter:blur(6px)}
+.thumbs{display:flex;gap:10px;margin-top:12px}.thumbs img{width:84px;height:84px;object-fit:contain;background:var(--paper);border-radius:16px;cursor:pointer;opacity:.6;padding:4px;border:2px solid transparent}.thumbs img.on{opacity:1;border-color:var(--forest)}
+.pdp h1{font-size:clamp(36px,3.6vw,56px);margin:14px 0 16px}
+.pdp .price{font:900 34px 'Fraunces';color:var(--forest)}
+.pdp .price s{font:500 18px 'Instrument Sans';color:var(--mute);margin-left:10px}
+.pdp .desc{margin:20px 0 26px}
+.qty{display:inline-flex;align-items:center;border:1.5px solid var(--forest);border-radius:999px}.qty button{width:42px;height:48px;font-size:18px}.qty span{min-width:26px;text-align:center;font-weight:700}
+.reass{margin-top:20px;font:600 14px 'Instrument Sans';color:var(--red)}
+
+.ups{display:block;margin-top:18px;background:var(--paper);border:1.5px dashed var(--forest);border-radius:16px;padding:14px 16px;font:600 15px 'Instrument Sans';color:var(--forest)}.ups:hover{background:var(--c-coffret)}
+.prate{margin-top:6px;color:var(--mustard);font:600 14px 'Instrument Sans'}
+details{border-top:1px solid var(--line);padding:16px 0}details:last-child{border-bottom:1px solid var(--line)}
+summary{cursor:pointer;font:700 15px 'Instrument Sans';list-style:none;display:flex;justify-content:space-between;color:var(--forest)}
+summary:after{content:"+"}details[open] summary:after{content:"−"}
+details p{margin-top:10px;font-size:15px;color:#33413A}
+.backl{display:inline-block;margin-top:30px;font:600 14px 'Instrument Sans';color:var(--mute)}
+/* house */
+.hh{display:grid;grid-template-columns:1fr 1fr;gap:clamp(30px,5vw,80px);align-items:end;padding:60px 0 50px}
+.hh h1{font-size:clamp(56px,7vw,110px);margin-top:16px}
+.hpics{display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:16px;margin-bottom:90px}
+.hpics img{width:100%;height:100%;aspect-ratio:3/4;object-fit:cover;border-radius:26px}
+.hpics img:first-child{aspect-ratio:auto}
+/* cart */
+.ovl{position:fixed;inset:0;background:rgba(27,35,29,.45);opacity:0;pointer-events:none;transition:.3s;z-index:90}.ovl.on{opacity:1;pointer-events:auto}
+.drawer{position:fixed;top:0;right:0;height:100%;width:min(440px,100%);background:var(--cream);z-index:95;transform:translateX(100%);transition:.35s;display:flex;flex-direction:column}.drawer.on{transform:none}
+.dh{display:flex;justify-content:space-between;align-items:center;padding:24px;border-bottom:1px solid var(--line)}.dh h3{font:900 28px 'Fraunces';color:var(--forest)}
+.items{flex:1;overflow:auto;padding:0 24px}
+.it{display:grid;grid-template-columns:64px 1fr auto;gap:14px;align-items:center;padding:16px 0;border-bottom:1px solid var(--line);font-size:14px}
+.it img{width:64px;height:64px;object-fit:contain;background:var(--paper);border-radius:14px}
+.q{display:flex;gap:10px;align-items:center;margin-top:6px}.q button{width:26px;height:26px;border:1.5px solid var(--forest);border-radius:50%}
+.df{padding:24px;border-top:1px solid var(--line)}
+.shipt{font-size:13.5px}.bar{height:5px;background:var(--cream2);border-radius:5px;margin:10px 0 18px;overflow:hidden}.bar i{display:block;height:100%;background:var(--red)}
+.tot{display:flex;justify-content:space-between;font:900 20px 'Fraunces';color:var(--forest);margin-bottom:16px}
+.df .btn{width:100%;justify-content:center}
+.toast{position:fixed;bottom:110px;left:50%;transform:translate(-50%,20px);background:var(--forest);color:var(--cream);padding:12px 22px;border-radius:999px;font:600 14px 'Instrument Sans';z-index:120;opacity:0;pointer-events:none;transition:.3s}.toast.on{opacity:1;transform:translate(-50%,0)}
+/* advisor */
+.adv-b{position:fixed;right:22px;bottom:22px;z-index:70;display:flex;align-items:center;gap:12px;background:var(--red);color:var(--cream);border-radius:999px;padding:7px 22px 7px 7px;box-shadow:0 16px 34px rgba(210,63,42,.35);transition:opacity .3s,transform .3s}
+.adv-b i{width:44px;height:44px;border-radius:50%;background:var(--cream);display:grid;place-items:center;font-style:normal}
+.adv-b i svg{width:24px}
+.adv-b b{display:block;font:700 14px 'Instrument Sans'}
+.adv-b small{display:block;font-size:12px;color:#FBE3DC}
+.adv-b.mini span{display:none}.adv-b.mini{padding:7px}
+.bubble{position:fixed;right:22px;bottom:96px;z-index:71;max-width:290px;background:var(--paper);border:1.5px solid var(--forest);padding:14px 16px;border-radius:18px 18px 4px 18px;font-size:14px;box-shadow:0 10px 30px rgba(0,0,0,.12);opacity:0;transform:translateY(10px);transition:.4s;pointer-events:none;cursor:pointer}.bubble.on{opacity:1;transform:none;pointer-events:auto}
+.adv{position:fixed;right:22px;bottom:22px;z-index:96;width:min(390px,calc(100% - 44px));height:min(610px,calc(100% - 44px));background:var(--cream);border-radius:26px;box-shadow:0 30px 70px rgba(27,35,29,.35);display:none;flex-direction:column;overflow:hidden}.adv.open{display:flex}
+.ah{background:var(--red);color:var(--cream);padding:16px 18px;display:flex;align-items:center;gap:12px}
+.ah i{width:40px;height:40px;border-radius:50%;background:var(--cream);display:grid;place-items:center;flex:none}.ah i svg{width:22px}
+.ah b{display:block;font:700 15px 'Instrument Sans'}.ah small{font-size:12px;color:#FBE3DC}
+.ah button{margin-left:auto;font-size:22px;color:var(--cream)}
+.log{flex:1;overflow:auto;padding:16px;display:flex;flex-direction:column;gap:10px}
+.bub{max-width:88%;padding:11px 14px;border-radius:16px;font-size:14px;line-height:1.5}
+.bub.bot{background:var(--paper);border-bottom-left-radius:4px}
+.bub.me{align-self:flex-end;background:var(--forest);color:var(--cream);border-bottom-right-radius:4px}
+.rec{display:grid;grid-template-columns:54px 1fr auto;gap:10px;align-items:center;background:#fff;border-radius:14px;padding:8px;font-size:13px}
+.rec img{width:54px;height:54px;object-fit:contain}
+.achips{display:flex;flex-wrap:wrap;gap:6px;padding:12px 16px 16px;border-top:1px solid var(--line)}
+.achips button{border:1.5px solid var(--forest);border-radius:999px;padding:7px 12px;font:600 13px 'Instrument Sans';color:var(--forest)}
+.achips button:hover{background:var(--forest);color:var(--cream)}
+@media(max-width:1100px){.hd nav{gap:18px}.hd nav a.opt{display:none}.navadv{display:none}}
+@media(max-width:1000px){.grid{grid-template-columns:repeat(2,1fr)}.facts .wrap{grid-template-columns:1fr 1fr}.facts div div:nth-child(2){border-right:0}.revs{grid-template-columns:1fr}.ft{grid-template-columns:1fr 1fr}.pick{grid-template-columns:repeat(4,1fr)}}
+@media(max-width:500px){.steps{grid-template-columns:1fr}}
+@media(max-width:820px){
+.top{font-size:12px}
+.hd{grid-template-columns:auto 1fr auto;height:72px;gap:8px}.hd nav{display:none}.burger{display:grid;width:40px;height:40px;place-items:center}
+.hd nav.open{display:flex;flex-direction:column;position:absolute;top:72px;left:0;right:0;background:var(--cream);padding:24px;gap:18px;border-bottom:1px solid var(--line)}
+.logo small,.logo span{font-size:12px}.logo b{font-size:21px}
+.langsel{max-width:64px;padding:7px 22px 7px 10px;background-position:right 8px center}.hr{gap:8px}
+.hg,.bg,.xg,.og,.visit,.pdp,.hh{grid-template-columns:1fr}
+.stamp{left:auto;right:-6px;top:-24px;width:96px;height:96px;font-size:13px}.stamp b{font-size:22px}
+.mq img{width:110px;height:110px}
+.facts div div{padding:28px 18px}
+.xmas .grid{grid-template-columns:1fr 1fr}
+.xg .xi{aspect-ratio:16/10}
+.slots{gap:10px}
+.pick{grid-template-columns:repeat(4,1fr);gap:8px}
+.rev{grid-template-columns:72px 1fr}.rev img{width:72px;height:72px}
+.visit .vi img{min-height:240px;max-height:300px}
+form.vf{grid-template-columns:1fr}
+.ft{grid-template-columns:1fr}
+.hpics{grid-template-columns:1fr 1fr}.hpics img:first-child{grid-column:1/-1;aspect-ratio:16/10}
+.adv-b span{display:none}.adv-b{padding:7px;right:16px;bottom:16px}
+.grid{gap:14px}
+#v-shop,#v-product{padding-bottom:90px}
+.chips{flex-wrap:nowrap;overflow-x:auto;padding-bottom:6px}.chips button{flex:none}
+.crate .tc{flex-basis:220px;margin-left:14px;transform:none}.crate .tc:first-child{margin-left:0}.crate .tc:hover,.crate .tc:focus-within{transform:none;margin-right:0}.crate .tc .row,.crate .tc h3{opacity:1;position:static}.crate{padding-top:44px}#boites{padding-bottom:40px!important}
+.pdp .buy{position:sticky;bottom:0;background:var(--cream);padding:12px 0;z-index:5}
+.bubble{bottom:84px}
+.bg{grid-template-columns:1fr;grid-template-areas:'head' 'pick' 'box';row-gap:20px}.bbox{position:sticky;bottom:10px;background:var(--paper);border-radius:22px;padding:10px;z-index:4;box-shadow:0 -10px 24px rgba(0,0,0,.1);display:grid;grid-template-columns:auto 1fr;column-gap:12px;align-items:center}.bbox .slots{margin:0;padding:6px;gap:6px;grid-template-columns:repeat(3,52px);justify-content:start;border-radius:16px;grid-row:1/3}.bbox .slot{font-size:0;border-radius:12px}.bbox .slot button{width:18px;height:18px;font-size:11px;top:2px;right:2px}.bbox .btot{font-size:18px;margin:0}.bbox .bprog{margin:0;font-size:12px}.bbox .bact{grid-column:1/-1;flex-wrap:nowrap;margin-top:8px}.bbox .bact .btn{padding:11px 14px;font-size:14px}.bbox .bact .btn:first-child{flex:1;justify-content:center}.bbox .btn.alt{box-shadow:none;padding:11px 6px;text-decoration:underline}
+.revs{grid-template-columns:1fr}
+}
+.tc .ph img,.card .ph img,.pick button img,.slot img,.mq img,.pdp .g img,.rev img,.it img,.rec img,.thumbs img{mix-blend-mode:multiply}
+.tc .ph img{filter:none}
+html[lang=zh] .hero h1{font-size:clamp(48px,5.4vw,84px)}html[lang=zh] .disp em{white-space:nowrap}
+#btot{white-space:nowrap}
+</style>
+</head>
+<body>
+<div class="top" data-i="top"></div>
+<header><div class="wrap hd">
+  <div style="display:flex;align-items:center;gap:10px;min-width:0">
+    <button class="burger" aria-label="Menu" onclick="nav.classList.toggle('open')"><svg width="22" height="14" viewBox="0 0 22 14"><path d="M0 1h22M0 7h22M0 13h22" stroke="currentColor" stroke-width="1.8"/></svg></button>
+    <nav id="nav"><a data-go="home" data-anchor="boites" data-i="n_box"></a><a data-go="home" data-anchor="coffret" data-i="n_gift"></a><a data-go="shop" data-i="n_shop"></a><a class="opt" data-go="house" data-i="n_house"></a></nav>
+  </div>
+  <a class="logo" data-go="home"><small>La</small><b>Savonnerie</b><span>de Nyons</span></a>
+  <div class="hr">
+    <a class="navadv" onclick="toggleAdv(true)" data-i="n_adv"></a>
+    <select class="langsel" id="lang"></select>
+    <button class="cartb" aria-label="Panier" onclick="openCart()"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M5 8h14l-1 12H6L5 8Z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg><span class="pill" id="cartN">0</span></button>
+  </div>
+</div></header>
+
+<main>
+<div class="view on" id="v-home">
+  <section class="hero"><div class="wrap hg">
+    <div>
+      <p class="k" data-i="h_k"></p>
+      <h1 class="disp" data-i="h_t"></h1>
+      <p class="lead" data-i="h_p"></p>
+      <div class="ctas"><a class="btn" data-go="home" data-anchor="boites" data-i="h_c1"></a><a class="btn alt" data-go="home" data-anchor="coffret" data-i="h_c2"></a></div><p class="hreass" data-i="h_r"></p>
+    </div>
+    <div style="position:relative">
+      <div class="stamp"><span>Nyons<b>1592</b></span></div>
+      <div class="tin"><div class="in"><img src="img/hero.jpg" alt=""><video autoplay muted loop playsinline poster="img/hero.jpg"><source src="img/hero.mp4" type="video/mp4"></video></div></div>
+      <p class="cap" data-i="h_cap"></p>
+    </div>
+  </div></section>
+  <div class="mq" aria-hidden="true"><div class="row" id="mq1"></div></div>
+
+  <div class="facts" style="margin-top:20px"><div class="wrap">
+    <div><strong>1592</strong><span data-i="f1"></span></div>
+    <div><strong>200 000</strong><span data-i="f2"></span></div>
+    <div><strong>125</strong><span data-i="f3"></span></div>
+    <div><strong>200 m²</strong><span data-i="f4"></span></div>
+  </div></div>
+
+  <section class="blk" id="boites" style="padding-bottom:90px">
+    <div class="wrap sh"><div><p class="k" data-i="c_k"></p><h2 data-i="c_t"></h2><p class="lead" style="margin-top:20px" data-i="c_p"></p></div>
+      <div class="crate-nav"><button aria-label="Précédent" onclick="crate.scrollBy({left:-340,behavior:'smooth'})">←</button><button aria-label="Suivant" onclick="crate.scrollBy({left:340,behavior:'smooth'})">→</button></div></div>
+    <div class="wrap"><div class="chips" id="themes">
+      <button class="on" data-t="all" data-i="th_all"></button><button data-t="provence" data-i="th_provence"></button><button data-t="voyage" data-i="th_voyage"></button><button data-t="metiers" data-i="th_metiers"></button><button data-t="souvenir" data-i="th_souvenir"></button>
+    </div></div>
+    <div class="crate" id="crate"></div><div class="shelf"></div>
+  </section>
+
+  <section class="blk" id="coffret" style="padding-top:40px"><div class="wrap"><div class="builder bg">
+    <div class="bhead"><p class="k" data-i="g_k"></p><h2 style="margin-top:14px;font-size:clamp(36px,4.4vw,62px)" data-i="g_t"></h2><p class="lead" style="margin-top:18px" data-i="g_p"></p></div>
+    <div class="pick" id="pick"></div>
+    <div class="bbox">
+      <div class="slots" id="slots"></div>
+      <div class="btot"><span data-i="total"></span><span id="btot">0</span></div><p class="bprog" id="bprog"></p>
+      <div class="bact"><button class="btn" id="badd" onclick="addSet()" data-i="g_add"></button><button class="btn alt" onclick="resetSet()" data-i="g_reset"></button></div>
+    </div>
+  </div>
+  <div class="revwrap"><p class="k" style="margin-bottom:14px" data-i="r_k"></p>
+    <div class="revs">
+      <div class="rev" data-pid="p18"><img src="img/p18.jpg" alt=""><div><div class="stars">★★★★★</div><b data-i="r1"></b><span data-i="r1n"></span></div></div>
+      <div class="rev" style="cursor:default"><img src="img/a09.jpg" alt="" style="object-fit:cover;padding:0"><div><div class="stars">★★★★☆</div><b data-i="r2"></b><span data-i="r2n"></span></div></div>
+      <div class="rev" data-pid="p23"><img src="img/p23.jpg" alt=""><div><div class="stars">★★★★★</div><b data-i="r3"></b><span data-i="r3n"></span></div></div>
+    </div>
+  </div></section>
+
+  <section class="blk xmas"><div class="wrap xg">
+    <div><p class="k" data-i="x_k"></p><h2 style="margin-top:14px" data-i="x_t"></h2><p class="lead" style="margin:20px 0 28px" data-i="x_p"></p><div class="xi"><span class="tag" data-i="x_tag"></span><img src="img/a12.jpg" alt=""></div></div>
+    <div style="display:flex;flex-direction:column;justify-content:flex-end"><div class="grid" id="gX"></div><a class="btn xbtn" style="align-self:flex-start" data-go="home" data-anchor="coffret" data-i="x_cta"></a></div>
+  </div></section>
+
+
+  <section class="blk" style="padding-top:clamp(70px,8vw,110px)"><div class="wrap og">
+    <div class="oi"><img src="img/a02.jpg" alt=""><span class="yr">1592</span></div>
+    <div><p class="k" data-i="o_k"></p><h2 style="margin-top:14px;font-size:clamp(38px,4.6vw,66px)" data-i="o_t"></h2><p class="lead" style="margin-top:20px" data-i="o_p"></p>
+      <div class="steps"><div><b>1</b><h3 data-i="s1"></h3><p data-i="s1p"></p></div><div><b>2</b><h3 data-i="s2"></h3><p data-i="s2p"></p></div><div><b>3</b><h3 data-i="s3"></h3><p data-i="s3p"></p></div><div><b>4</b><h3 data-i="s4"></h3><p data-i="s4p"></p></div></div>
+      <a class="btn alt" style="margin-top:26px" data-go="house" data-i="o_more"></a>
+    </div>
+  </div></section>
+
+  <section id="visiter"><div class="wrap"><div class="visit">
+    <div class="vi"><img src="img/a06.jpg" alt=""></div>
+    <div class="vt"><p class="k" style="color:var(--mustard)" data-i="v_k"></p><h2 style="margin-top:14px" data-i="v_t"></h2><p class="lead" data-i="v_p"></p><p class="addr" data-i="v_addr"></p>
+      <form class="vf" onsubmit="return visit(event)"><select id="vType"><option data-i="v_ind"></option><option data-i="v_grp"></option></select><input type="email" required data-ip="v_mail"><button class="btn" type="submit" data-i="v_cta"></button></form>
+      <div class="ok" id="vOk"></div>
+    </div>
+  </div></div></section>
+</div>
+
+<div class="view" id="v-shop"><div class="wrap" style="padding-top:60px;padding-bottom:100px">
+  <p class="k" data-i="sh_k"></p><h2 style="margin:14px 0 36px" data-i="sh_t"></h2>
+  <div class="filters" id="filters"><button class="on" data-f="all" data-i="f_all"></button><button data-f="tin" data-i="f_tin"></button><button data-f="soin" data-i="f_soin"></button><button data-f="coffret" data-i="f_coffret"></button><button data-f="maison" data-i="f_maison"></button></div>
+  <div class="grid" id="gShop"></div>
+</div></div>
+
+<div class="view" id="v-product"><div class="wrap">
+  <a class="backl" data-go="shop" data-i="back"></a>
+  <div class="pdp" id="pdp"></div>
+  <p class="k" data-i="also"></p><div class="grid" id="gA" style="margin:24px 0 110px"></div>
+</div></div>
+
+<div class="view" id="v-house"><div class="wrap">
+  <div class="hh"><div><p class="k" data-i="hs_k"></p><h1 class="disp" data-i="hs_t"></h1></div><p class="lead" data-i="hs_p"></p></div>
+  <div class="hpics"><img src="img/a02.jpg" alt=""><img src="img/a05.jpg" alt=""><img src="img/a13.jpg" alt=""></div>
+  <div class="og" style="margin-bottom:110px">
+    <div><p class="k" data-i="o_k"></p><h2 style="margin-top:14px;font-size:clamp(38px,4.6vw,66px)" data-i="o_t"></h2><p class="lead" style="margin-top:20px" data-i="o_p"></p></div>
+    <div class="steps" style="margin-top:0"><div><b>1</b><h3 data-i="s1"></h3><p data-i="s1p"></p></div><div><b>2</b><h3 data-i="s2"></h3><p data-i="s2p"></p></div><div><b>3</b><h3 data-i="s3"></h3><p data-i="s3p"></p></div><div><b>4</b><h3 data-i="s4"></h3><p data-i="s4p"></p></div><div><b>✓</b><h3 data-i="e1"></h3><p data-i="e1p"></p></div><div><b>✓</b><h3 data-i="e2"></h3><p data-i="e2p"></p></div></div>
+  </div>
+  <div style="display:flex;gap:14px;flex-wrap:wrap;padding-bottom:40px"><a class="btn" data-go="home" data-anchor="boites" data-i="h_c1"></a><a class="btn alt" data-go="home" data-anchor="visiter" data-i="v_cta"></a></div>
+</div></div>
+</main>
+
+<footer><div class="wrap">
+  <div class="ft">
+    <div><div class="logo"><small>La</small><b>Savonnerie</b><span>de Nyons</span></div><p data-i="ft_p"></p></div>
+    <div><h4 data-i="ft_c"></h4><ul><li><a href="mailto:contact@lasavonneriedenyons.com">contact@lasavonneriedenyons.com</a></li><li data-i="v_addr"></li><li><a data-go="house" data-i="n_house"></a></li></ul></div>
+    <div><h4 data-i="ft_h"></h4><ul><li><a data-i="ft_h1"></a></li><li><a data-i="ft_h2"></a></li><li><a data-i="ft_h3"></a></li></ul><h4 style="margin-top:26px" data-i="ft_nl"></h4><form class="nl" onsubmit="event.preventDefault();toast(t('ft_nlok'));this.reset()"><input type="email" required data-ip="ft_nlph"><button data-i="ft_nlb"></button></form></div>
+    <div><h4 data-i="ft_f"></h4><div class="soc">
+      <a href="https://www.instagram.com/lasavonneriedenyons/" target="_blank" rel="noopener" aria-label="Instagram"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".8" fill="currentColor"/></svg></a>
+      <a href="https://www.facebook.com/p/La-Savonnerie-de-Nyons-100063860748402/" target="_blank" rel="noopener" aria-label="Facebook"><svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M14 8h3V4h-3c-2.8 0-4.5 1.8-4.5 4.6V11H7v4h2.5v9h4v-9h3l.5-4h-3.5V8.8c0-.5.3-.8.5-.8Z"/></svg></a>
+      <a href="https://www.tiktok.com/@lasavonneriedenyons" target="_blank" rel="noopener" aria-label="TikTok"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M16.5 3c.4 2.3 1.9 3.9 4.2 4.1v3.3c-1.5.1-2.9-.4-4.2-1.2v6.3a6 6 0 1 1-6-6c.3 0 .7 0 1 .1v3.4a2.7 2.7 0 1 0 1.8 2.5V3h3.2Z"/></svg></a>
+    </div></div>
+  </div>
+  <div class="legal"><span>© La Savonnerie de Nyons</span><span data-i="mock"></span></div>
+</div></footer>
+
+<div class="ovl" id="ovl" onclick="closeCart()"></div>
+<aside class="drawer" id="drawer"><div class="dh"><h3 data-i="cart"></h3><button onclick="closeCart()" style="font-size:24px">×</button></div><div class="items" id="items"></div><div class="df"><div class="shipt" id="ship"></div><div class="tot"><span data-i="total"></span><span id="tot"></span></div><button class="btn" onclick="toast(t('co_demo'))" data-i="checkout"></button></div></aside>
+<div class="toast" id="toast"></div>
+<div class="bubble" id="advBub" data-i="adv_bub"></div>
+<button class="adv-b" id="advB" onclick="toggleAdv()"><i><svg viewBox="0 0 24 24" fill="none" stroke="#D23F2A" stroke-width="1.6"><rect x="4" y="6" width="16" height="12" rx="3"/><path d="M8 10h8M8 14h5"/></svg></i><span><b data-i="n_adv"></b><small data-i="adv_tag"></small></span></button>
+<div class="adv" id="adv"><div class="ah"><i><svg viewBox="0 0 24 24" fill="none" stroke="#D23F2A" stroke-width="1.6"><rect x="4" y="6" width="16" height="12" rx="3"/><path d="M8 10h8M8 14h5"/></svg></i><div><b data-i="n_adv"></b><small data-i="adv_k"></small></div><button onclick="toggleAdv(false)" aria-label="Fermer">×</button></div><div class="log" id="log"></div><div class="achips" id="achips"></div></div>
+
+<script>
+const PRODUCTS=[{"id": "p00", "p": 6, "c": "provence", "tin": 1, "n": {"fr": "Boîte métal Champs de lavande & savon", "en": "Lavender fields metal tin & soap", "es": "Caja metálica Campos de lavanda y jabón", "de": "Blechdose Lavendelfelder & Seife", "it": "Scatola in metallo Campi di lavanda e sapone", "zh": "薰衣草田铁盒香皂"}, "t": {"fr": "Champs de lavande", "en": "Lavender fields", "es": "Campos de lavanda", "de": "Lavendelfelder", "it": "Campi di lavanda", "zh": "薰衣草田"}, "d": {"fr": "Une boîte en métal illustrée dans le style des réclames d'autrefois, et son savon pur végétal à l'huile d'olive. Une fois le savon terminé, la boîte se garde, se collectionne et se réutilise.", "en": "A metal tin illustrated in the style of old-time advertising, with its pure vegetable olive-oil soap. Once the soap is used up, the tin is kept, collected and reused.", "es": "Una caja de metal ilustrada al estilo de los anuncios de antaño, con su jabón puro vegetal de aceite de oliva. Cuando se acaba el jabón, la caja se guarda, se colecciona y se reutiliza.", "de": "Eine im Stil alter Reklame illustrierte Blechdose mit rein pflanzlicher Olivenölseife. Ist die Seife aufgebraucht, wird die Dose aufbewahrt, gesammelt und wiederverwendet.", "it": "Una scatola in metallo illustrata nello stile della pubblicità d'altri tempi, con il suo sapone puro vegetale all'olio d'oliva. Finito il sapone, la scatola si conserva, si colleziona e si riutilizza.", "zh": "复古广告风格插画铁盒，内装纯植物橄榄油香皂。香皂用完后，铁盒可珍藏、收集、再利用。"}, "b": "sig"}, {"id": "p01", "p": 6, "c": "provence", "tin": 1, "n": {"fr": "Boîte métal La cueillette de la lavande & savon", "en": "The lavender harvest metal tin & soap", "es": "Caja metálica La cosecha de lavanda y jabón", "de": "Blechdose Die Lavendelernte & Seife", "it": "Scatola in metallo La raccolta della lavanda e sapone", "zh": "薰衣草采收铁盒香皂"}, "t": {"fr": "La cueillette de la lavande", "en": "The lavender harvest", "es": "La cosecha de lavanda", "de": "Die Lavendelernte", "it": "La raccolta della lavanda", "zh": "薰衣草采收"}, "d": {"fr": "Une boîte en métal illustrée dans le style des réclames d'autrefois, et son savon pur végétal à l'huile d'olive. Une fois le savon terminé, la boîte se garde, se collectionne et se réutilise.", "en": "A metal tin illustrated in the style of old-time advertising, with its pure vegetable olive-oil soap. Once the soap is used up, the tin is kept, collected and reused.", "es": "Una caja de metal ilustrada al estilo de los anuncios de antaño, con su jabón puro vegetal de aceite de oliva. Cuando se acaba el jabón, la caja se guarda, se colecciona y se reutiliza.", "de": "Eine im Stil alter Reklame illustrierte Blechdose mit rein pflanzlicher Olivenölseife. Ist die Seife aufgebraucht, wird die Dose aufbewahrt, gesammelt und wiederverwendet.", "it": "Una scatola in metallo illustrata nello stile della pubblicità d'altri tempi, con il suo sapone puro vegetale all'olio d'oliva. Finito il sapone, la scatola si conserva, si colleziona e si riutilizza.", "zh": "复古广告风格插画铁盒，内装纯植物橄榄油香皂。香皂用完后，铁盒可珍藏、收集、再利用。"}}, {"id": "p02", "p": 6, "c": "voyage", "tin": 1, "n": {"fr": "Boîte métal Côte d'Azur & savon", "en": "Côte d'Azur metal tin & soap", "es": "Caja metálica Costa Azul y jabón", "de": "Blechdose Côte d'Azur & Seife", "it": "Scatola in metallo Costa Azzurra e sapone", "zh": "蔚蓝海岸铁盒香皂"}, "t": {"fr": "Côte d'Azur", "en": "Côte d'Azur", "es": "Costa Azul", "de": "Côte d'Azur", "it": "Costa Azzurra", "zh": "蔚蓝海岸"}, "d": {"fr": "Une boîte en métal illustrée dans le style des réclames d'autrefois, et son savon pur végétal à l'huile d'olive. Une fois le savon terminé, la boîte se garde, se collectionne et se réutilise.", "en": "A metal tin illustrated in the style of old-time advertising, with its pure vegetable olive-oil soap. Once the soap is used up, the tin is kept, collected and reused.", "es": "Una caja de metal ilustrada al estilo de los anuncios de antaño, con su jabón puro vegetal de aceite de oliva. Cuando se acaba el jabón, la caja se guarda, se colecciona y se reutiliza.", "de": "Eine im Stil alter Reklame illustrierte Blechdose mit rein pflanzlicher Olivenölseife. Ist die Seife aufgebraucht, wird die Dose aufbewahrt, gesammelt und wiederverwendet.", "it": "Una scatola in metallo illustrata nello stile della pubblicità d'altri tempi, con il suo sapone puro vegetale all'olio d'oliva. Finito il sapone, la scatola si conserva, si colleziona e si riutilizza.", "zh": "复古广告风格插画铁盒，内装纯植物橄榄油香皂。香皂用完后，铁盒可珍藏、收集、再利用。"}}, {"id": "p03", "p": 6, "c": "voyage", "tin": 1, "n": {"fr": "Boîte métal Montmartre & savon", "en": "Montmartre metal tin & soap", "es": "Caja metálica Montmartre y jabón", "de": "Blechdose Montmartre & Seife", "it": "Scatola in metallo Montmartre e sapone", "zh": "蒙马特铁盒香皂"}, "t": {"fr": "Montmartre", "en": "Montmartre", "es": "Montmartre", "de": "Montmartre", "it": "Montmartre", "zh": "蒙马特"}, "d": {"fr": "Une boîte en métal illustrée dans le style des réclames d'autrefois, et son savon pur végétal à l'huile d'olive. Une fois le savon terminé, la boîte se garde, se collectionne et se réutilise.", "en": "A metal tin illustrated in the style of old-time advertising, with its pure vegetable olive-oil soap. Once the soap is used up, the tin is kept, collected and reused.", "es": "Una caja de metal ilustrada al estilo de los anuncios de antaño, con su jabón puro vegetal de aceite de oliva. Cuando se acaba el jabón, la caja se guarda, se colecciona y se reutiliza.", "de": "Eine im Stil alter Reklame illustrierte Blechdose mit rein pflanzlicher Olivenölseife. Ist die Seife aufgebraucht, wird die Dose aufbewahrt, gesammelt und wiederverwendet.", "it": "Una scatola in metallo illustrata nello stile della pubblicità d'altri tempi, con il suo sapone puro vegetale all'olio d'oliva. Finito il sapone, la scatola si conserva, si colleziona e si riutilizza.", "zh": "复古广告风格插画铁盒，内装纯植物橄榄油香皂。香皂用完后，铁盒可珍藏、收集、再利用。"}}, {"id": "p04", "p": 6, "c": "voyage", "tin": 1, "n": {"fr": "Boîte métal La Seine & savon", "en": "The Seine metal tin & soap", "es": "Caja metálica El Sena y jabón", "de": "Blechdose Die Seine & Seife", "it": "Scatola in metallo La Senna e sapone", "zh": "塞纳河铁盒香皂"}, "t": {"fr": "La Seine", "en": "The Seine", "es": "El Sena", "de": "Die Seine", "it": "La Senna", "zh": "塞纳河"}, "d": {"fr": "Une boîte en métal illustrée dans le style des réclames d'autrefois, et son savon pur végétal à l'huile d'olive. Une fois le savon terminé, la boîte se garde, se collectionne et se réutilise.", "en": "A metal tin illustrated in the style of old-time advertising, with its pure vegetable olive-oil soap. Once the soap is used up, the tin is kept, collected and reused.", "es": "Una caja de metal ilustrada al estilo de los anuncios de antaño, con su jabón puro vegetal de aceite de oliva. Cuando se acaba el jabón, la caja se guarda, se colecciona y se reutiliza.", "de": "Eine im Stil alter Reklame illustrierte Blechdose mit rein pflanzlicher Olivenölseife. Ist die Seife aufgebraucht, wird die Dose aufbewahrt, gesammelt und wiederverwendet.", "it": "Una scatola in metallo illustrata nello stile della pubblicità d'altri tempi, con il suo sapone puro vegetale all'olio d'oliva. Finito il sapone, la scatola si conserva, si colleziona e si riutilizza.", "zh": "复古广告风格插画铁盒，内装纯植物橄榄油香皂。香皂用完后，铁盒可珍藏、收集、再利用。"}}, {"id": "p05", "p": 6, "c": "voyage", "tin": 1, "n": {"fr": "Boîte métal Le Métropolitain & savon", "en": "Le Métropolitain metal tin & soap", "es": "Caja metálica Le Métropolitain y jabón", "de": "Blechdose Le Métropolitain & Seife", "it": "Scatola in metallo Le Métropolitain e sapone", "zh": "巴黎地铁铁盒香皂"}, "t": {"fr": "Le Métropolitain", "en": "Le Métropolitain", "es": "Le Métropolitain", "de": "Le Métropolitain", "it": "Le Métropolitain", "zh": "巴黎地铁"}, "d": {"fr": "Une boîte en métal illustrée dans le style des réclames d'autrefois, et son savon pur végétal à l'huile d'olive. Une fois le savon terminé, la boîte se garde, se collectionne et se réutilise.", "en": "A metal tin illustrated in the style of old-time advertising, with its pure vegetable olive-oil soap. Once the soap is used up, the tin is kept, collected and reused.", "es": "Una caja de metal ilustrada al estilo de los anuncios de antaño, con su jabón puro vegetal de aceite de oliva. Cuando se acaba el jabón, la caja se guarda, se colecciona y se reutiliza.", "de": "Eine im Stil alter Reklame illustrierte Blechdose mit rein pflanzlicher Olivenölseife. Ist die Seife aufgebraucht, wird die Dose aufbewahrt, gesammelt und wiederverwendet.", "it": "Una scatola in metallo illustrata nello stile della pubblicità d'altri tempi, con il suo sapone puro vegetale all'olio d'oliva. Finito il sapone, la scatola si conserva, si colleziona e si riutilizza.", "zh": "复古广告风格插画铁盒，内装纯植物橄榄油香皂。香皂用完后，铁盒可珍藏、收集、再利用。"}}, {"id": "p06", "p": 6, "c": "souvenir", "tin": 1, "n": {"fr": "Boîte métal Le bain & savon", "en": "Bath time metal tin & soap", "es": "Caja metálica El baño y jabón", "de": "Blechdose Das Bad & Seife", "it": "Scatola in metallo Il bagno e sapone", "zh": "沐浴时光铁盒香皂"}, "t": {"fr": "Le bain", "en": "Bath time", "es": "El baño", "de": "Das Bad", "it": "Il bagno", "zh": "沐浴时光"}, "d": {"fr": "Une boîte en métal illustrée dans le style des réclames d'autrefois, et son savon pur végétal à l'huile d'olive. Une fois le savon terminé, la boîte se garde, se collectionne et se réutilise.", "en": "A metal tin illustrated in the style of old-time advertising, with its pure vegetable olive-oil soap. Once the soap is used up, the tin is kept, collected and reused.", "es": "Una caja de metal ilustrada al estilo de los anuncios de antaño, con su jabón puro vegetal de aceite de oliva. Cuando se acaba el jabón, la caja se guarda, se colecciona y se reutiliza.", "de": "Eine im Stil alter Reklame illustrierte Blechdose mit rein pflanzlicher Olivenölseife. Ist die Seife aufgebraucht, wird die Dose aufbewahrt, gesammelt und wiederverwendet.", "it": "Una scatola in metallo illustrata nello stile della pubblicità d'altri tempi, con il suo sapone puro vegetale all'olio d'oliva. Finito il sapone, la scatola si conserva, si colleziona e si riutilizza.", "zh": "复古广告风格插画铁盒，内装纯植物橄榄油香皂。香皂用完后，铁盒可珍藏、收集、再利用。"}}, {"id": "p07", "p": 6, "c": "souvenir", "tin": 1, "n": {"fr": "Boîte métal Chat roux & savon", "en": "Ginger cat metal tin & soap", "es": "Caja metálica Gato pelirrojo y jabón", "de": "Blechdose Rote Katze & Seife", "it": "Scatola in metallo Gatto rosso e sapone", "zh": "橘猫铁盒香皂"}, "t": {"fr": "Chat roux", "en": "Ginger cat", "es": "Gato pelirrojo", "de": "Rote Katze", "it": "Gatto rosso", "zh": "橘猫"}, "d": {"fr": "Une boîte en métal illustrée dans le style des réclames d'autrefois, et son savon pur végétal à l'huile d'olive. Une fois le savon terminé, la boîte se garde, se collectionne et se réutilise.", "en": "A metal tin illustrated in the style of old-time advertising, with its pure vegetable olive-oil soap. Once the soap is used up, the tin is kept, collected and reused.", "es": "Una caja de metal ilustrada al estilo de los anuncios de antaño, con su jabón puro vegetal de aceite de oliva. Cuando se acaba el jabón, la caja se guarda, se colecciona y se reutiliza.", "de": "Eine im Stil alter Reklame illustrierte Blechdose mit rein pflanzlicher Olivenölseife. Ist die Seife aufgebraucht, wird die Dose aufbewahrt, gesammelt und wiederverwendet.", "it": "Una scatola in metallo illustrata nello stile della pubblicità d'altri tempi, con il suo sapone puro vegetale all'olio d'oliva. Finito il sapone, la scatola si conserva, si colleziona e si riutilizza.", "zh": "复古广告风格插画铁盒，内装纯植物橄榄油香皂。香皂用完后，铁盒可珍藏、收集、再利用。"}}, {"id": "p08", "p": 6, "c": "souvenir", "tin": 1, "n": {"fr": "Boîte métal Chien westie & savon", "en": "Westie dog metal tin & soap", "es": "Caja metálica Perro westie y jabón", "de": "Blechdose Westie-Hund & Seife", "it": "Scatola in metallo Cane westie e sapone", "zh": "西高地梗铁盒香皂"}, "t": {"fr": "Chien westie", "en": "Westie dog", "es": "Perro westie", "de": "Westie-Hund", "it": "Cane westie", "zh": "西高地梗"}, "d": {"fr": "Une boîte en métal illustrée dans le style des réclames d'autrefois, et son savon pur végétal à l'huile d'olive. Une fois le savon terminé, la boîte se garde, se collectionne et se réutilise.", "en": "A metal tin illustrated in the style of old-time advertising, with its pure vegetable olive-oil soap. Once the soap is used up, the tin is kept, collected and reused.", "es": "Una caja de metal ilustrada al estilo de los anuncios de antaño, con su jabón puro vegetal de aceite de oliva. Cuando se acaba el jabón, la caja se guarda, se colecciona y se reutiliza.", "de": "Eine im Stil alter Reklame illustrierte Blechdose mit rein pflanzlicher Olivenölseife. Ist die Seife aufgebraucht, wird die Dose aufbewahrt, gesammelt und wiederverwendet.", "it": "Una scatola in metallo illustrata nello stile della pubblicità d'altri tempi, con il suo sapone puro vegetale all'olio d'oliva. Finito il sapone, la scatola si conserva, si colleziona e si riutilizza.", "zh": "复古广告风格插画铁盒，内装纯植物橄榄油香皂。香皂用完后，铁盒可珍藏、收集、再利用。"}}, {"id": "p09", "p": 6, "c": "voyage", "tin": 1, "n": {"fr": "Boîte métal Le Mont-Saint-Michel & savon", "en": "Mont-Saint-Michel metal tin & soap", "es": "Caja metálica El Monte Saint-Michel y jabón", "de": "Blechdose Mont-Saint-Michel & Seife", "it": "Scatola in metallo Mont-Saint-Michel e sapone", "zh": "圣米歇尔山铁盒香皂"}, "t": {"fr": "Le Mont-Saint-Michel", "en": "Mont-Saint-Michel", "es": "El Monte Saint-Michel", "de": "Mont-Saint-Michel", "it": "Mont-Saint-Michel", "zh": "圣米歇尔山"}, "d": {"fr": "Une boîte en métal illustrée dans le style des réclames d'autrefois, et son savon pur végétal à l'huile d'olive. Une fois le savon terminé, la boîte se garde, se collectionne et se réutilise. Parfum : fleur de coton.", "en": "A metal tin illustrated in the style of old-time advertising, with its pure vegetable olive-oil soap. Once the soap is used up, the tin is kept, collected and reused. Scent: cotton flower.", "es": "Una caja de metal ilustrada al estilo de los anuncios de antaño, con su jabón puro vegetal de aceite de oliva. Cuando se acaba el jabón, la caja se guarda, se colecciona y se reutiliza. Perfume: flor de algodón.", "de": "Eine im Stil alter Reklame illustrierte Blechdose mit rein pflanzlicher Olivenölseife. Ist die Seife aufgebraucht, wird die Dose aufbewahrt, gesammelt und wiederverwendet. Duft: Baumwollblüte.", "it": "Una scatola in metallo illustrata nello stile della pubblicità d'altri tempi, con il suo sapone puro vegetale all'olio d'oliva. Finito il sapone, la scatola si conserva, si colleziona e si riutilizza. Profumo: fiore di cotone.", "zh": "复古广告风格插画铁盒，内装纯植物橄榄油香皂。香皂用完后，铁盒可珍藏、收集、再利用。 香型：棉花。"}}, {"id": "p10", "p": 6, "c": "voyage", "tin": 1, "n": {"fr": "Boîte métal La Bigouden & savon", "en": "La Bigouden metal tin & soap", "es": "Caja metálica La Bigouden y jabón", "de": "Blechdose La Bigouden & Seife", "it": "Scatola in metallo La Bigouden e sapone", "zh": "比古登铁盒香皂"}, "t": {"fr": "La Bigouden", "en": "La Bigouden", "es": "La Bigouden", "de": "La Bigouden", "it": "La Bigouden", "zh": "比古登"}, "d": {"fr": "Une boîte en métal illustrée dans le style des réclames d'autrefois, et son savon pur végétal à l'huile d'olive. Une fois le savon terminé, la boîte se garde, se collectionne et se réutilise. Parfum : fleur de coton.", "en": "A metal tin illustrated in the style of old-time advertising, with its pure vegetable olive-oil soap. Once the soap is used up, the tin is kept, collected and reused. Scent: cotton flower.", "es": "Una caja de metal ilustrada al estilo de los anuncios de antaño, con su jabón puro vegetal de aceite de oliva. Cuando se acaba el jabón, la caja se guarda, se colecciona y se reutiliza. Perfume: flor de algodón.", "de": "Eine im Stil alter Reklame illustrierte Blechdose mit rein pflanzlicher Olivenölseife. Ist die Seife aufgebraucht, wird die Dose aufbewahrt, gesammelt und wiederverwendet. Duft: Baumwollblüte.", "it": "Una scatola in metallo illustrata nello stile della pubblicità d'altri tempi, con il suo sapone puro vegetale all'olio d'oliva. Finito il sapone, la scatola si conserva, si colleziona e si riutilizza. Profumo: fiore di cotone.", "zh": "复古广告风格插画铁盒，内装纯植物橄榄油香皂。香皂用完后，铁盒可珍藏、收集、再利用。 香型：棉花。"}}, {"id": "p11", "p": 8, "c": "provence", "tin": 1, "n": {"fr": "Boîte métal Paysage provençal & savon", "en": "Provençal landscape metal tin & soap", "es": "Caja metálica Paisaje provenzal y jabón", "de": "Blechdose Provenzalische Landschaft & Seife", "it": "Scatola in metallo Paesaggio provenzale e sapone", "zh": "普罗旺斯风景铁盒香皂"}, "t": {"fr": "Paysage provençal", "en": "Provençal landscape", "es": "Paisaje provenzal", "de": "Provenzalische Landschaft", "it": "Paesaggio provenzale", "zh": "普罗旺斯风景"}, "d": {"fr": "Une boîte en métal illustrée dans le style des réclames d'autrefois, et son savon pur végétal à l'huile d'olive. Une fois le savon terminé, la boîte se garde, se collectionne et se réutilise. Parfum : lavande, 200 g.", "en": "A metal tin illustrated in the style of old-time advertising, with its pure vegetable olive-oil soap. Once the soap is used up, the tin is kept, collected and reused. Scent: lavender, 200 g.", "es": "Una caja de metal ilustrada al estilo de los anuncios de antaño, con su jabón puro vegetal de aceite de oliva. Cuando se acaba el jabón, la caja se guarda, se colecciona y se reutiliza. Perfume: lavanda, 200 g.", "de": "Eine im Stil alter Reklame illustrierte Blechdose mit rein pflanzlicher Olivenölseife. Ist die Seife aufgebraucht, wird die Dose aufbewahrt, gesammelt und wiederverwendet. Duft: Lavendel, 200 g.", "it": "Una scatola in metallo illustrata nello stile della pubblicità d'altri tempi, con il suo sapone puro vegetale all'olio d'oliva. Finito il sapone, la scatola si conserva, si colleziona e si riutilizza. Profumo: lavanda, 200 g.", "zh": "复古广告风格插画铁盒，内装纯植物橄榄油香皂。香皂用完后，铁盒可珍藏、收集、再利用。 香型：薰衣草，200克。"}}, {"id": "p12", "p": 8, "c": "souvenir", "tin": 1, "n": {"fr": "Boîte métal L'école & savon", "en": "The schoolroom metal tin & soap", "es": "Caja metálica La escuela y jabón", "de": "Blechdose Die Schule & Seife", "it": "Scatola in metallo La scuola e sapone", "zh": "旧时课堂铁盒香皂"}, "t": {"fr": "L'école", "en": "The schoolroom", "es": "La escuela", "de": "Die Schule", "it": "La scuola", "zh": "旧时课堂"}, "d": {"fr": "Une boîte en métal illustrée dans le style des réclames d'autrefois, et son savon pur végétal à l'huile d'olive. Une fois le savon terminé, la boîte se garde, se collectionne et se réutilise. Parfum : verveine, 200 g.", "en": "A metal tin illustrated in the style of old-time advertising, with its pure vegetable olive-oil soap. Once the soap is used up, the tin is kept, collected and reused. Scent: verbena, 200 g.", "es": "Una caja de metal ilustrada al estilo de los anuncios de antaño, con su jabón puro vegetal de aceite de oliva. Cuando se acaba el jabón, la caja se guarda, se colecciona y se reutiliza. Perfume: verbena, 200 g.", "de": "Eine im Stil alter Reklame illustrierte Blechdose mit rein pflanzlicher Olivenölseife. Ist die Seife aufgebraucht, wird die Dose aufbewahrt, gesammelt und wiederverwendet. Duft: Verbene, 200 g.", "it": "Una scatola in metallo illustrata nello stile della pubblicità d'altri tempi, con il suo sapone puro vegetale all'olio d'oliva. Finito il sapone, la scatola si conserva, si colleziona e si riutilizza. Profumo: verbena, 200 g.", "zh": "复古广告风格插画铁盒，内装纯植物橄榄油香皂。香皂用完后，铁盒可珍藏、收集、再利用。 香型：马鞭草，200克。"}}, {"id": "p13", "p": 6, "c": "metiers", "tin": 1, "n": {"fr": "Boîte métal Le boulanger & savon", "en": "The baker metal tin & soap", "es": "Caja metálica El panadero y jabón", "de": "Blechdose Der Bäcker & Seife", "it": "Scatola in metallo Il fornaio e sapone", "zh": "面包师铁盒香皂"}, "t": {"fr": "Le boulanger", "en": "The baker", "es": "El panadero", "de": "Der Bäcker", "it": "Il fornaio", "zh": "面包师"}, "d": {"fr": "Une boîte en métal illustrée dans le style des réclames d'autrefois, et son savon pur végétal à l'huile d'olive. Une fois le savon terminé, la boîte se garde, se collectionne et se réutilise. Parfum : fleur de coton.", "en": "A metal tin illustrated in the style of old-time advertising, with its pure vegetable olive-oil soap. Once the soap is used up, the tin is kept, collected and reused. Scent: cotton flower.", "es": "Una caja de metal ilustrada al estilo de los anuncios de antaño, con su jabón puro vegetal de aceite de oliva. Cuando se acaba el jabón, la caja se guarda, se colecciona y se reutiliza. Perfume: flor de algodón.", "de": "Eine im Stil alter Reklame illustrierte Blechdose mit rein pflanzlicher Olivenölseife. Ist die Seife aufgebraucht, wird die Dose aufbewahrt, gesammelt und wiederverwendet. Duft: Baumwollblüte.", "it": "Una scatola in metallo illustrata nello stile della pubblicità d'altri tempi, con il suo sapone puro vegetale all'olio d'oliva. Finito il sapone, la scatola si conserva, si colleziona e si riutilizza. Profumo: fiore di cotone.", "zh": "复古广告风格插画铁盒，内装纯植物橄榄油香皂。香皂用完后，铁盒可珍藏、收集、再利用。 香型：棉花。"}}, {"id": "p14", "p": 6, "c": "metiers", "tin": 1, "n": {"fr": "Boîte métal Le barbier & savon", "en": "The barber metal tin & soap", "es": "Caja metálica El barbero y jabón", "de": "Blechdose Der Barbier & Seife", "it": "Scatola in metallo Il barbiere e sapone", "zh": "理发师铁盒香皂"}, "t": {"fr": "Le barbier", "en": "The barber", "es": "El barbero", "de": "Der Barbier", "it": "Il barbiere", "zh": "理发师"}, "d": {"fr": "Une boîte en métal illustrée dans le style des réclames d'autrefois, et son savon pur végétal à l'huile d'olive. Une fois le savon terminé, la boîte se garde, se collectionne et se réutilise. Parfum : verveine.", "en": "A metal tin illustrated in the style of old-time advertising, with its pure vegetable olive-oil soap. Once the soap is used up, the tin is kept, collected and reused. Scent: verbena.", "es": "Una caja de metal ilustrada al estilo de los anuncios de antaño, con su jabón puro vegetal de aceite de oliva. Cuando se acaba el jabón, la caja se guarda, se colecciona y se reutiliza. Perfume: verbena.", "de": "Eine im Stil alter Reklame illustrierte Blechdose mit rein pflanzlicher Olivenölseife. Ist die Seife aufgebraucht, wird die Dose aufbewahrt, gesammelt und wiederverwendet. Duft: Verbene.", "it": "Una scatola in metallo illustrata nello stile della pubblicità d'altri tempi, con il suo sapone puro vegetale all'olio d'oliva. Finito il sapone, la scatola si conserva, si colleziona e si riutilizza. Profumo: verbena.", "zh": "复古广告风格插画铁盒，内装纯植物橄榄油香皂。香皂用完后，铁盒可珍藏、收集、再利用。 香型：马鞭草。"}}, {"id": "p15", "p": 6.9, "c": "metiers", "tin": 1, "n": {"fr": "Boîte métal Le jardinier & savon", "en": "The gardener metal tin & soap", "es": "Caja metálica El jardinero y jabón", "de": "Blechdose Der Gärtner & Seife", "it": "Scatola in metallo Il giardiniere e sapone", "zh": "园丁铁盒香皂"}, "t": {"fr": "Le jardinier", "en": "The gardener", "es": "El jardinero", "de": "Der Gärtner", "it": "Il giardiniere", "zh": "园丁"}, "d": {"fr": "Une boîte en métal illustrée dans le style des réclames d'autrefois, et son savon pur végétal à l'huile d'olive. Une fois le savon terminé, la boîte se garde, se collectionne et se réutilise.", "en": "A metal tin illustrated in the style of old-time advertising, with its pure vegetable olive-oil soap. Once the soap is used up, the tin is kept, collected and reused.", "es": "Una caja de metal ilustrada al estilo de los anuncios de antaño, con su jabón puro vegetal de aceite de oliva. Cuando se acaba el jabón, la caja se guarda, se colecciona y se reutiliza.", "de": "Eine im Stil alter Reklame illustrierte Blechdose mit rein pflanzlicher Olivenölseife. Ist die Seife aufgebraucht, wird die Dose aufbewahrt, gesammelt und wiederverwendet.", "it": "Una scatola in metallo illustrata nello stile della pubblicità d'altri tempi, con il suo sapone puro vegetale all'olio d'oliva. Finito il sapone, la scatola si conserva, si colleziona e si riutilizza.", "zh": "复古广告风格插画铁盒，内装纯植物橄榄油香皂。香皂用完后，铁盒可珍藏、收集、再利用。"}}, {"id": "p16", "p": 9.6, "c": "coffret", "b": "noel", "n": {"fr": "Fourreau de 3 savons de Noël, 100 g", "en": "Sleeve of 3 Christmas soaps, 100 g", "es": "Funda de 3 jabones de Navidad, 100 g", "de": "Hülle mit 3 Weihnachtsseifen, 100 g", "it": "Astuccio di 3 saponi di Natale, 100 g", "zh": "三块圣诞香皂套装，100克"}, "d": {"fr": "Pomme cannelle, vanille et orange cannelle : le trio gourmand des fêtes, 97 % d'ingrédients d'origine naturelle.", "en": "Apple cinnamon, vanilla and orange cinnamon: the festive gourmand trio, 97% ingredients of natural origin.", "es": "Manzana canela, vainilla y naranja canela: el trío goloso de las fiestas, 97 % de ingredientes de origen natural.", "de": "Apfel-Zimt, Vanille und Orange-Zimt: das festliche Trio, 97 % Inhaltsstoffe natürlichen Ursprungs.", "it": "Mela cannella, vaniglia e arancia cannella: il trio goloso delle feste, 97 % di ingredienti di origine naturale.", "zh": "苹果肉桂、香草、橙子肉桂：节日美味三重奏，97%天然来源成分。"}}, {"id": "p17", "p": 21, "r": 26.25, "c": "soin", "n": {"fr": "Pack automne, 3 savons à la corde 200 g", "en": "Autumn pack, 3 rope soaps 200 g", "es": "Pack otoño, 3 jabones con cuerda 200 g", "de": "Herbst-Set, 3 Seifen am Seil 200 g", "it": "Pack autunno, 3 saponi con corda 200 g", "zh": "秋季套装：3块挂绳皂 200克"}, "d": {"fr": "Trois savons à suspendre dans la douche, à composer soi-même, dont deux gommages doux.", "en": "Three soaps to hang in the shower, to choose yourself, including two gentle scrubs.", "es": "Tres jabones para colgar en la ducha, a elegir, entre ellos dos exfoliantes suaves.", "de": "Drei Seifen zum Aufhängen in der Dusche, frei kombinierbar, darunter zwei sanfte Peelings.", "it": "Tre saponi da appendere nella doccia, da comporre, di cui due scrub delicati.", "zh": "三块可挂在淋浴间的香皂，自由搭配，含两款温和磨砂皂。"}}, {"id": "p18", "p": 8.75, "c": "soin", "b": "fav", "n": {"fr": "Savon à la corde au lait bio d'ânesse, 200 g", "en": "Organic donkey milk rope soap, 200 g", "es": "Jabón con cuerda de leche de burra bio, 200 g", "de": "Seife am Seil mit Bio-Eselsmilch, 200 g", "it": "Sapone con corda al latte d'asina bio, 200 g", "zh": "有机驴奶挂绳皂 200克"}, "d": {"fr": "Le savon qui se suspend dans la douche et dure plus longtemps : noté 4,9/5 par les clients.", "en": "The soap that hangs in the shower and lasts longer: rated 4.9/5 by customers.", "es": "El jabón que se cuelga en la ducha y dura más: valorado 4,9/5 por los clientes.", "de": "Die Seife, die in der Dusche hängt und länger hält: von Kunden mit 4,9/5 bewertet.", "it": "Il sapone che si appende nella doccia e dura di più: valutato 4,9/5 dai clienti.", "zh": "可挂在淋浴间、更耐用的香皂：顾客评分4.9/5。"}}, {"id": "p19", "p": 27.5, "c": "coffret", "n": {"fr": "Coffret au lait bio d'ânesse", "en": "Organic donkey milk gift box", "es": "Estuche de leche de burra bio", "de": "Geschenkbox mit Bio-Eselsmilch", "it": "Cofanetto al latte d'asina bio", "zh": "有机驴奶礼盒"}, "d": {"fr": "Trois soins de la collection réunis dans une boîte illustrée, à offrir ou à s'offrir.", "en": "Three care products from the collection in an illustrated box, to give or to keep.", "es": "Tres cuidados de la colección en una caja ilustrada, para regalar o regalarse.", "de": "Drei Pflegeprodukte der Kollektion in einer illustrierten Box, zum Verschenken oder Behalten.", "it": "Tre trattamenti della collezione riuniti in una scatola illustrata, da regalare o regalarsi.", "zh": "三款系列护理品装于插画礼盒，送人自用皆宜。"}}, {"id": "p20", "p": 6.5, "c": "soin", "n": {"fr": "Crème mains La Belle Provence, 30 ml", "en": "La Belle Provence hand cream, 30 ml", "es": "Crema de manos La Belle Provence, 30 ml", "de": "Handcreme La Belle Provence, 30 ml", "it": "Crema mani La Belle Provence, 30 ml", "zh": "美丽普罗旺斯护手霜 30毫升"}, "d": {"fr": "Sept senteurs de Provence, parfums de Grasse, au beurre de karité bio et à l'aloe vera bio.", "en": "Seven Provence scents from Grasse, with organic shea butter and organic aloe vera.", "es": "Siete aromas de Provenza de Grasse, con manteca de karité y aloe vera bio.", "de": "Sieben Provence-Düfte aus Grasse, mit Bio-Sheabutter und Bio-Aloe-vera.", "it": "Sette profumi di Provenza da Grasse, con burro di karité e aloe vera bio.", "zh": "七种来自格拉斯的普罗旺斯香氛，含有机乳木果油与有机芦荟。"}}, {"id": "p21", "p": 29.9, "c": "maison", "n": {"fr": "Support mural en laiton et savon rotatif", "en": "Brass wall holder and rotating soap", "es": "Soporte mural de latón y jabón rotativo", "de": "Wandhalter aus Messing mit Drehseife", "it": "Supporto da parete in ottone e sapone rotante", "zh": "黄铜壁挂架与旋转皂"}, "d": {"fr": "L'authentique porte-savon rotatif des écoles d'autrefois, prêt à installer, avec un savon de 260 g.", "en": "The authentic rotating soap holder of old-time schools, ready to install, with a 260 g soap.", "es": "El auténtico portajabón rotativo de las escuelas de antaño, listo para instalar, con un jabón de 260 g.", "de": "Der echte Drehseifenhalter alter Schulen, montagefertig, mit 260-g-Seife.", "it": "L'autentico portasapone rotante delle scuole d'un tempo, pronto da installare, con sapone da 260 g.", "zh": "旧时学校的经典旋转皂架，即装即用，附260克香皂。"}}, {"id": "p22", "p": 6.9, "c": "metiers", "tin": 1, "n": {"fr": "Boîte métal & savon au fiel de bœuf", "en": "Metal tin & ox-gall soap", "es": "Caja metálica y jabón de hiel de buey", "de": "Blechdose & Gallseife", "it": "Scatola in metallo e sapone al fiele di bue", "zh": "牛胆汁去渍皂铁盒"}, "t": {"fr": "Fiel de bœuf", "en": "Ox gall", "es": "Hiel de buey", "de": "Gallseife", "it": "Fiele di bue", "zh": "牛胆汁"}, "d": {"fr": "Le savon détachant de grand-mère, 100 g, dans sa boîte illustrée « C'est tout neuf ! ».", "en": "Grandma's stain-removing soap, 100 g, in its illustrated tin.", "es": "El jabón quitamanchas de la abuela, 100 g, en su caja ilustrada.", "de": "Omas Fleckenseife, 100 g, in ihrer illustrierten Dose.", "it": "Il sapone smacchiante della nonna, 100 g, nella sua scatola illustrata.", "zh": "祖母的去渍皂，100克，装于插画铁盒。"}}, {"id": "p23", "p": 9.6, "c": "coffret", "n": {"fr": "Fourreau de 3 savons bleu, 100 g", "en": "Blue sleeve of 3 soaps, 100 g", "es": "Funda azul de 3 jabones, 100 g", "de": "Blaue Hülle mit 3 Seifen, 100 g", "it": "Astuccio blu di 3 saponi, 100 g", "zh": "蓝色三块香皂套装，100克"}, "d": {"fr": "Marine, jasmin et musc blanc : trois savons traditionnels dans un fourreau fleuri.", "en": "Marine, jasmine and white musk: three traditional soaps in a floral sleeve.", "es": "Marina, jazmín y almizcle blanco: tres jabones tradicionales en una funda floral.", "de": "Marine, Jasmin und weißer Moschus: drei traditionelle Seifen in einer floralen Hülle.", "it": "Marina, gelsomino e muschio bianco: tre saponi tradizionali in un astuccio fiorito.", "zh": "海洋、茉莉、白麝香：三块传统香皂，花卉外套。"}}];
+
+const LANGS={fr:'Français',en:'English',es:'Español',de:'Deutsch',it:'Italiano',zh:'中文'};
+const I={
+h_r:{fr:"Dès 6 € la boîte · livraison offerte dès 49 €",en:"From €6 a tin · free delivery from €49",es:"Desde 6 € la caja · envío gratis desde 49 €",de:"Ab 6 € pro Dose · kostenloser Versand ab 49 €",it:"Da 6 € la scatola · spedizione gratuita da 49 €",zh:"每只铁盒6欧元起 · 满49欧元免运费"},
+g_more:{fr:"Choisissez encore {n} boîte(s)",en:"Choose {n} more tin(s)",es:"Elija {n} caja(s) más",de:"Noch {n} Dose(n) wählen",it:"Scegliete ancora {n} scatola/e",zh:"还需选择{n}只铁盒"},
+g_prog:{fr:"{n}/3 boîtes · dès 6,00 € la boîte",en:"{n}/3 tins · from €6.00 a tin",es:"{n}/3 cajas · desde 6,00 € la caja",de:"{n}/3 Dosen · ab 6,00 € pro Dose",it:"{n}/3 scatole · da 6,00 € la scatola",zh:"已选{n}/3只 · 每只6.00欧元起"},
+x_tag:{fr:"Préparé à Nyons",en:"Packed in Nyons",es:"Preparado en Nyons",de:"In Nyons gepackt",it:"Preparato a Nyons",zh:"尼永打包"},
+x_cta:{fr:"Composer un coffret de Noël",en:"Build a Christmas set",es:"Componer un estuche de Navidad",de:"Weihnachtsset zusammenstellen",it:"Comporre un cofanetto di Natale",zh:"自选圣诞礼盒"},
+up_t:{fr:"Faites-en un coffret : ajoutez 2 boîtes",en:"Make it a gift set: add 2 tins",es:"Conviértalo en estuche: añada 2 cajas",de:"Machen Sie ein Set daraus: 2 Dosen dazu",it:"Fatene un cofanetto: aggiungete 2 scatole",zh:"组成礼盒：再加2只铁盒"},
+lang:{fr:"Langue",en:"Language",es:"Idioma",de:"Sprache",it:"Lingua",zh:"语言"},
+top:{fr:"Fabriqué à Nyons · parfums de Grasse · livraison offerte dès 49 €",en:"Made in Nyons · scents from Grasse · free delivery from €49",es:"Hecho en Nyons · perfumes de Grasse · envío gratis desde 49 €",de:"Hergestellt in Nyons · Düfte aus Grasse · kostenloser Versand ab 49 €",it:"Prodotto a Nyons · profumi di Grasse · spedizione gratuita da 49 €",zh:"尼永制造 · 格拉斯香氛 · 满49欧元免运费"},
+n_box:{fr:"Les boîtes",en:"The tins",es:"Las cajas",de:"Die Dosen",it:"Le scatole",zh:"铁盒"},
+n_shop:{fr:"Boutique",en:"Shop",es:"Tienda",de:"Shop",it:"Negozio",zh:"商店"},
+n_gift:{fr:"Coffret à composer",en:"Build a gift set",es:"Estuche a componer",de:"Set zusammenstellen",it:"Cofanetto da comporre",zh:"自选礼盒"},
+n_house:{fr:"Nyons, depuis 1592",en:"Nyons, since 1592",es:"Nyons, desde 1592",de:"Nyons, seit 1592",it:"Nyons, dal 1592",zh:"尼永，始于1592"},
+n_adv:{fr:"Nyons Conseil",en:"Nyons Conseil",es:"Nyons Conseil",de:"Nyons Conseil",it:"Nyons Conseil",zh:"尼永顾问"},
+adv_tag:{fr:"Je vous aide à choisir",en:"I'll help you choose",es:"Le ayudo a elegir",de:"Ich helfe bei der Wahl",it:"La aiuto a scegliere",zh:"帮您挑选"},
+adv_bub:{fr:"Une boîte à offrir, une peau sensible, un souvenir de Provence ? Je vous guide.",en:"A tin to give, sensitive skin, a souvenir of Provence? I'll guide you.",es:"¿Una caja para regalar, piel sensible, un recuerdo de Provenza? Le guío.",de:"Eine Dose zum Verschenken, empfindliche Haut, ein Provence-Souvenir? Ich helfe.",it:"Una scatola da regalare, pelle sensibile, un ricordo di Provenza? La guido.",zh:"送礼铁盒、敏感肌、普罗旺斯纪念品？我来为您推荐。"},
+adv_k:{fr:"Conseiller de la savonnerie · en ligne",en:"Soap works adviser · online",es:"Asesor de la jabonería · en línea",de:"Berater der Seifenmanufaktur · online",it:"Consulente del saponificio · online",zh:"皂坊顾问 · 在线"},
+h_k:{fr:"La Savonnerie de Nyons · Drôme provençale",en:"La Savonnerie de Nyons · Drôme provençale",es:"La Savonnerie de Nyons · Drôme provenzal",de:"La Savonnerie de Nyons · Provenzalische Drôme",it:"La Savonnerie de Nyons · Drôme provenzale",zh:"尼永皂坊 · 普罗旺斯德龙"},
+h_t:{fr:"Chaque boîte raconte<br><em>une histoire.</em>",en:"Every tin tells<br><em>a story.</em>",es:"Cada caja cuenta<br><em>una historia.</em>",de:"Jede Dose erzählt<br><em>eine Geschichte.</em>",it:"Ogni scatola racconta<br><em>una storia.</em>",zh:"每只铁盒<br><em>都有一个故事。</em>"},
+h_p:{fr:"Des savons à l'huile d'olive fabriqués à Nyons, parfumés à Grasse, glissés dans des boîtes illustrées comme les réclames d'autrefois. On les offre, on les garde, on les collectionne.",en:"Olive-oil soaps made in Nyons, scented in Grasse, tucked into tins illustrated like old-time advertising. You give them, keep them, collect them.",es:"Jabones de aceite de oliva hechos en Nyons, perfumados en Grasse, en cajas ilustradas como los anuncios de antaño. Se regalan, se guardan, se coleccionan.",de:"Olivenölseifen aus Nyons, beduftet in Grasse, in Dosen, die wie alte Reklame illustriert sind. Man verschenkt, behält und sammelt sie.",it:"Saponi all'olio d'oliva prodotti a Nyons, profumati a Grasse, in scatole illustrate come le pubblicità d'altri tempi. Si regalano, si conservano, si collezionano.",zh:"尼永制造的橄榄油香皂，格拉斯调香，装入复古广告风插画铁盒。可赠送，可珍藏，可收集。"},
+h_c1:{fr:"Choisir ma boîte",en:"Choose my tin",es:"Elegir mi caja",de:"Meine Dose wählen",it:"Scegliere la mia scatola",zh:"挑选铁盒"},
+h_c2:{fr:"Composer un coffret",en:"Build a gift set",es:"Componer un estuche",de:"Ein Set zusammenstellen",it:"Comporre un cofanetto",zh:"自选礼盒"},
+h_cap:{fr:"Fabriqué à Nyons",en:"Made in Nyons",es:"Hecho en Nyons",de:"Hergestellt in Nyons",it:"Prodotto a Nyons",zh:"尼永制造"},
+f1:{fr:"premières traces savonnières à Nyons",en:"first traces of soap making in Nyons",es:"primeras huellas jaboneras en Nyons",de:"erste Spuren der Seifensiederei in Nyons",it:"prime tracce di saponeria a Nyons",zh:"尼永最早的制皂遗迹"},
+f2:{fr:"oliviers dans le paysage nyonsais",en:"olive trees in the Nyons landscape",es:"olivos en el paisaje de Nyons",de:"Olivenbäume rund um Nyons",it:"ulivi nel paesaggio di Nyons",zh:"株橄榄树遍布尼永"},
+f3:{fr:"boîtes illustrées à collectionner",en:"illustrated tins to collect",es:"cajas ilustradas para coleccionar",de:"illustrierte Sammeldosen",it:"scatole illustrate da collezionare",zh:"款插画铁盒可收藏"},
+f4:{fr:"de boutique ouverte au public à Nyons",en:"shop open to the public in Nyons",es:"de tienda abierta al público en Nyons",de:"Laden in Nyons, für alle geöffnet",it:"di negozio aperto al pubblico a Nyons",zh:"尼永对外开放的门店"},
+c_k:{fr:"Le bac à boîtes",en:"The tin crate",es:"El cajón de cajas",de:"Die Dosenkiste",it:"La cassetta delle scatole",zh:"铁盒货箱"},
+c_t:{fr:"Feuilletez<br><em>la collection.</em>",en:"Flip through<br><em>the collection.</em>",es:"Hojee<br><em>la colección.</em>",de:"Blättern Sie<br><em>durch die Sammlung.</em>",it:"Sfogliate<br><em>la collezione.</em>",zh:"翻阅<br><em>整个系列。</em>"},
+c_p:{fr:"Comme chez le disquaire : on fait défiler, on s'arrête sur l'illustration qui rappelle un souvenir, et on l'emporte.",en:"Like at the record shop: flip through, stop at the illustration that brings back a memory, and take it home.",es:"Como en la tienda de discos: se pasan, uno se detiene en la ilustración que evoca un recuerdo y se la lleva.",de:"Wie im Plattenladen: durchblättern, bei der Illustration verweilen, die eine Erinnerung weckt, und mitnehmen.",it:"Come dal negozio di dischi: si sfoglia, ci si ferma sull'illustrazione che evoca un ricordo e la si porta via.",zh:"就像在唱片店：翻一翻，停在唤起回忆的插画前，然后带走它。"},
+th_all:{fr:"Toutes",en:"All",es:"Todas",de:"Alle",it:"Tutte",zh:"全部"},
+th_provence:{fr:"Provence",en:"Provence",es:"Provenza",de:"Provence",it:"Provenza",zh:"普罗旺斯"},
+th_voyage:{fr:"Voyage en France",en:"Travels in France",es:"Viaje por Francia",de:"Reise durch Frankreich",it:"Viaggio in Francia",zh:"法国之旅"},
+th_metiers:{fr:"Les métiers",en:"The trades",es:"Los oficios",de:"Die Berufe",it:"I mestieri",zh:"手艺人"},
+th_souvenir:{fr:"Souvenirs d'enfance",en:"Childhood memories",es:"Recuerdos de infancia",de:"Kindheitserinnerungen",it:"Ricordi d'infanzia",zh:"童年回忆"},
+add:{fr:"Ajouter",en:"Add",es:"Añadir",de:"Hinzufügen",it:"Aggiungi",zh:"加入"},
+add_cart:{fr:"Ajouter au panier",en:"Add to cart",es:"Añadir a la cesta",de:"In den Warenkorb",it:"Aggiungi al carrello",zh:"加入购物车"},
+added:{fr:"Ajouté au panier",en:"Added to cart",es:"Añadido a la cesta",de:"Zum Warenkorb hinzugefügt",it:"Aggiunto al carrello",zh:"已加入购物车"},
+g_k:{fr:"Le coffret à composer",en:"Build your gift set",es:"El estuche a componer",de:"Das Set zum Zusammenstellen",it:"Il cofanetto da comporre",zh:"自选礼盒"},
+g_t:{fr:"Trois boîtes,<br><em>un cadeau qui vous ressemble.</em>",en:"Three tins,<br><em>a gift that feels like you.</em>",es:"Tres cajas,<br><em>un regalo a su imagen.</em>",de:"Drei Dosen,<br><em>ein Geschenk wie Sie.</em>",it:"Tre scatole,<br><em>un regalo che vi somiglia.</em>",zh:"三只铁盒，<br><em>一份专属心意。</em>"},
+g_p:{fr:"Touchez trois boîtes pour remplir le coffret. Nous préparons le colis à Nyons.",en:"Tap three tins to fill the set. We pack it in Nyons.",es:"Toque tres cajas para llenar el estuche. Lo preparamos en Nyons.",de:"Tippen Sie drei Dosen an, um das Set zu füllen. Wir packen es in Nyons.",it:"Toccate tre scatole per riempire il cofanetto. Lo prepariamo a Nyons.",zh:"点选三只铁盒填满礼盒，我们在尼永为您打包。"},
+g_slot:{fr:"Boîte",en:"Tin",es:"Caja",de:"Dose",it:"Scatola",zh:"铁盒"},
+g_add:{fr:"Ajouter le coffret",en:"Add the set",es:"Añadir el estuche",de:"Set hinzufügen",it:"Aggiungi il cofanetto",zh:"加入礼盒"},
+g_reset:{fr:"Recommencer",en:"Start over",es:"Empezar de nuevo",de:"Neu beginnen",it:"Ricominciare",zh:"重新选择"},
+g_full:{fr:"Coffret complet",en:"Set complete",es:"Estuche completo",de:"Set vollständig",it:"Cofanetto completo",zh:"礼盒已满"},
+x_k:{fr:"Noël à Nyons",en:"Christmas in Nyons",es:"Navidad en Nyons",de:"Weihnachten in Nyons",it:"Natale a Nyons",zh:"尼永的圣诞"},
+x_t:{fr:"Des cadeaux<br><em>qui se gardent.</em>",en:"Gifts<br><em>that are kept.</em>",es:"Regalos<br><em>que se guardan.</em>",de:"Geschenke,<br><em>die bleiben.</em>",it:"Regali<br><em>che si conservano.</em>",zh:"值得珍藏的<br><em>礼物。</em>"},
+x_p:{fr:"Les savons gourmands des fêtes, le coffret au lait d'ânesse, les fourreaux prêts à offrir.",en:"The festive gourmand soaps, the donkey milk gift box, the ready-to-give sleeves.",es:"Los jabones golosos de las fiestas, el estuche de leche de burra, las fundas listas para regalar.",de:"Die festlichen Seifen, die Eselsmilch-Box, die geschenkfertigen Hüllen.",it:"I saponi golosi delle feste, il cofanetto al latte d'asina, gli astucci pronti da regalare.",zh:"节日美味香皂、驴奶礼盒、即送香皂套装。"},
+r_k:{fr:"Les plus aimés",en:"Most loved",es:"Los más queridos",de:"Am beliebtesten",it:"I più amati",zh:"最受喜爱"},
+r_t:{fr:"Vos favoris,<br><em>notés par nos clients.</em>",en:"Your favourites,<br><em>rated by our customers.</em>",es:"Sus favoritos,<br><em>valorados por nuestros clientes.</em>",de:"Ihre Favoriten,<br><em>von Kunden bewertet.</em>",it:"I vostri preferiti,<br><em>valutati dai clienti.</em>",zh:"您的最爱，<br><em>顾客亲评。</em>"},
+r1:{fr:"Savon à la corde au lait bio d'ânesse",en:"Organic donkey milk rope soap",es:"Jabón con cuerda de leche de burra bio",de:"Seife am Seil mit Bio-Eselsmilch",it:"Sapone con corda al latte d'asina bio",zh:"有机驴奶挂绳皂"},
+r1n:{fr:"4,88 / 5 · 8 avis",en:"4.88 / 5 · 8 reviews",es:"4,88 / 5 · 8 opiniones",de:"4,88 / 5 · 8 Bewertungen",it:"4,88 / 5 · 8 recensioni",zh:"4.88 / 5 · 8条评价"},
+r2:{fr:"Gel douche au lait bio d'ânesse",en:"Organic donkey milk shower gel",es:"Gel de ducha de leche de burra bio",de:"Duschgel mit Bio-Eselsmilch",it:"Gel doccia al latte d'asina bio",zh:"有机驴奶沐浴露"},
+r2n:{fr:"4,75 / 5 · 4 avis",en:"4.75 / 5 · 4 reviews",es:"4,75 / 5 · 4 opiniones",de:"4,75 / 5 · 4 Bewertungen",it:"4,75 / 5 · 4 recensioni",zh:"4.75 / 5 · 4条评价"},
+r3:{fr:"Fourreau de 3 savons bleu",en:"Blue sleeve of 3 soaps",es:"Funda azul de 3 jabones",de:"Blaue Hülle mit 3 Seifen",it:"Astuccio blu di 3 saponi",zh:"蓝色三块香皂套装"},
+r3n:{fr:"5 / 5 · 3 avis",en:"5 / 5 · 3 reviews",es:"5 / 5 · 3 opiniones",de:"5 / 5 · 3 Bewertungen",it:"5 / 5 · 3 recensioni",zh:"5 / 5 · 3条评价"},
+r_src:{fr:"Notes publiées sur lasavonneriedenyons.com",en:"Ratings published on lasavonneriedenyons.com",es:"Valoraciones publicadas en lasavonneriedenyons.com",de:"Bewertungen auf lasavonneriedenyons.com",it:"Valutazioni pubblicate su lasavonneriedenyons.com",zh:"评分来自 lasavonneriedenyons.com"},
+o_k:{fr:"Nyons, berceau du savon",en:"Nyons, cradle of soap",es:"Nyons, cuna del jabón",de:"Nyons, Wiege der Seife",it:"Nyons, culla del sapone",zh:"尼永，香皂的摇篮"},
+o_t:{fr:"Ici, l'olivier<br><em>écrit l'histoire depuis 1592.</em>",en:"Here, the olive tree<br><em>has written history since 1592.</em>",es:"Aquí, el olivo<br><em>escribe la historia desde 1592.</em>",de:"Hier schreibt der Olivenbaum<br><em>seit 1592 Geschichte.</em>",it:"Qui l'ulivo<br><em>scrive la storia dal 1592.</em>",zh:"在这里，橄榄树<br><em>自1592年书写历史。</em>"},
+o_p:{fr:"C'est à Nyons que furent découverts les vestiges de la plus ancienne savonnerie de France. Entre 200 000 oliviers, notre équipe imagine, compose et fabrique des savons qui prolongent cette histoire.",en:"Nyons is where the remains of France's oldest soap works were discovered. Among 200,000 olive trees, our team imagines, composes and makes soaps that carry this story forward.",es:"En Nyons se descubrieron los vestigios de la jabonería más antigua de Francia. Entre 200 000 olivos, nuestro equipo imagina, compone y fabrica jabones que prolongan esta historia.",de:"In Nyons wurden die Überreste der ältesten Seifensiederei Frankreichs entdeckt. Zwischen 200 000 Olivenbäumen erdenkt, komponiert und fertigt unser Team Seifen, die diese Geschichte fortschreiben.",it:"È a Nyons che furono scoperti i resti del più antico saponificio di Francia. Tra 200 000 ulivi, il nostro team immagina, compone e produce saponi che prolungano questa storia.",zh:"法国最古老皂坊的遗迹正是在尼永发现的。在20万株橄榄树之间，我们的团队构思、调配并制作香皂，延续这段历史。"},
+o_more:{fr:"Notre histoire",en:"Our story",es:"Nuestra historia",de:"Unsere Geschichte",it:"La nostra storia",zh:"我们的故事"},
+s1:{fr:"Imaginer",en:"Imagine",es:"Imaginar",de:"Erdenken",it:"Immaginare",zh:"构思"},
+s1p:{fr:"Observer les usages et dessiner des collections qui ont une personnalité.",en:"Observe how people live and draw collections with personality.",es:"Observar los usos y dibujar colecciones con personalidad.",de:"Gewohnheiten beobachten und Kollektionen mit Charakter entwerfen.",it:"Osservare le abitudini e disegnare collezioni con personalità.",zh:"观察生活习惯，设计有个性的系列。"},
+s2:{fr:"Composer",en:"Compose",es:"Componer",de:"Komponieren",it:"Comporre",zh:"调配"},
+s2p:{fr:"Choisir avec soin les matières, les couleurs et les parfums de Grasse.",en:"Carefully choose materials, colours and Grasse scents.",es:"Elegir con cuidado materias, colores y perfumes de Grasse.",de:"Materialien, Farben und Düfte aus Grasse sorgfältig wählen.",it:"Scegliere con cura materie, colori e profumi di Grasse.",zh:"精选原料、色彩与格拉斯香氛。"},
+s3:{fr:"Fabriquer",en:"Make",es:"Fabricar",de:"Herstellen",it:"Produrre",zh:"制作"},
+s3p:{fr:"Donner vie à chaque création dans notre savonnerie de Nyons.",en:"Bring each creation to life in our Nyons soap works.",es:"Dar vida a cada creación en nuestra jabonería de Nyons.",de:"Jede Kreation in unserer Manufaktur in Nyons entstehen lassen.",it:"Dare vita a ogni creazione nel nostro saponificio di Nyons.",zh:"在尼永皂坊赋予每件作品生命。"},
+s4:{fr:"Partager",en:"Share",es:"Compartir",de:"Teilen",it:"Condividere",zh:"分享"},
+s4p:{fr:"Faire voyager le savoir-faire provençal en France et à travers le monde.",en:"Take Provençal know-how across France and the world.",es:"Llevar el saber hacer provenzal por Francia y el mundo.",de:"Provenzalisches Können in Frankreich und der Welt verbreiten.",it:"Far viaggiare il saper fare provenzale in Francia e nel mondo.",zh:"让普罗旺斯工艺走遍法国与世界。"},
+v_k:{fr:"La boutique de la savonnerie",en:"The soap works shop",es:"La tienda de la jabonería",de:"Der Laden der Manufaktur",it:"Il negozio del saponificio",zh:"皂坊门店"},
+v_t:{fr:"Venez sentir<br><em>à Nyons.</em>",en:"Come and smell<br><em>in Nyons.</em>",es:"Venga a oler<br><em>a Nyons.</em>",de:"Kommen Sie<br><em>nach Nyons.</em>",it:"Venite a sentire<br><em>a Nyons.</em>",zh:"来尼永<br><em>闻一闻。</em>"},
+v_p:{fr:"200 m² de boutique où découvrir l'histoire du savon et toute la collection. Accès en fauteuil, parking pour voitures et autocars, accueil des groupes jusqu'à 20 personnes.",en:"A 200 m² shop to discover the history of soap and the whole collection. Wheelchair access, car and coach parking, groups of up to 20 welcome.",es:"200 m² de tienda para descubrir la historia del jabón y toda la colección. Acceso en silla de ruedas, aparcamiento para coches y autocares, grupos de hasta 20 personas.",de:"200 m² Laden, um die Geschichte der Seife und die ganze Kollektion zu entdecken. Rollstuhlgerecht, Parkplatz für Autos und Busse, Gruppen bis 20 Personen.",it:"200 m² di negozio per scoprire la storia del sapone e tutta la collezione. Accesso in sedia a rotelle, parcheggio per auto e pullman, gruppi fino a 20 persone.",zh:"200平方米门店，了解香皂历史与全系列产品。无障碍通行，设汽车与大巴停车场，可接待20人以内团体。"},
+v_addr:{fr:"70, rue Félix Maurent · ZA Les Laurons II · 26110 Nyons",en:"70 rue Félix Maurent · ZA Les Laurons II · 26110 Nyons, France",es:"70, rue Félix Maurent · ZA Les Laurons II · 26110 Nyons, Francia",de:"70, rue Félix Maurent · ZA Les Laurons II · 26110 Nyons, Frankreich",it:"70, rue Félix Maurent · ZA Les Laurons II · 26110 Nyons, Francia",zh:"法国尼永 26110 · 费利克斯·莫朗街70号"},
+v_cta:{fr:"Préparer ma visite",en:"Plan my visit",es:"Preparar mi visita",de:"Besuch planen",it:"Preparare la visita",zh:"规划参观"},
+v_ok:{fr:"Notre équipe vous répond à contact@lasavonneriedenyons.com pour organiser votre venue.",en:"Our team will reply from contact@lasavonneriedenyons.com to arrange your visit.",es:"Nuestro equipo le responderá desde contact@lasavonneriedenyons.com para organizar su visita.",de:"Unser Team antwortet von contact@lasavonneriedenyons.com, um Ihren Besuch zu planen.",it:"Il nostro team risponderà da contact@lasavonneriedenyons.com per organizzare la visita.",zh:"我们的团队将通过 contact@lasavonneriedenyons.com 回复，为您安排参观。"},
+v_grp:{fr:"Groupe (jusqu'à 20)",en:"Group (up to 20)",es:"Grupo (hasta 20)",de:"Gruppe (bis 20)",it:"Gruppo (fino a 20)",zh:"团体（20人以内）"},
+v_ind:{fr:"Particulier",en:"Individual",es:"Particular",de:"Privat",it:"Privato",zh:"个人"},
+v_mail:{fr:"Votre e-mail",en:"Your email",es:"Su e-mail",de:"Ihre E-Mail",it:"La vostra e-mail",zh:"您的邮箱"},
+sh_k:{fr:"La boutique",en:"The shop",es:"La tienda",de:"Der Shop",it:"Il negozio",zh:"商店"},
+sh_t:{fr:"Toute l'étagère.",en:"The whole shelf.",es:"Toda la estantería.",de:"Das ganze Regal.",it:"Tutto lo scaffale.",zh:"整面货架。"},
+f_all:{fr:"Tout",en:"All",es:"Todo",de:"Alle",it:"Tutto",zh:"全部"},
+f_tin:{fr:"Boîtes illustrées",en:"Illustrated tins",es:"Cajas ilustradas",de:"Illustrierte Dosen",it:"Scatole illustrate",zh:"插画铁盒"},
+f_soin:{fr:"Soins & lait d'ânesse",en:"Care & donkey milk",es:"Cuidado y leche de burra",de:"Pflege & Eselsmilch",it:"Cura e latte d'asina",zh:"护理与驴奶"},
+f_coffret:{fr:"Coffrets",en:"Gift sets",es:"Estuches",de:"Geschenksets",it:"Cofanetti",zh:"礼盒"},
+f_maison:{fr:"Maison",en:"Home",es:"Hogar",de:"Haushalt",it:"Casa",zh:"家居"},
+pdp_r:{fr:"Préparé à Nyons · livraison offerte dès 49 €",en:"Packed in Nyons · free delivery from €49",es:"Preparado en Nyons · envío gratis desde 49 €",de:"In Nyons gepackt · kostenlos ab 49 €",it:"Preparato a Nyons · spedizione gratuita da 49 €",zh:"尼永打包 · 满49欧元免运费"},
+acc1:{fr:"Fabrication",en:"How it's made",es:"Fabricación",de:"Herstellung",it:"Fabbricazione",zh:"制作工艺"},
+acc1p:{fr:"Fabriqué dans notre savonnerie de Nyons, en Drôme provençale. Parfums sélectionnés à Grasse, capitale du parfum.",en:"Made in our Nyons soap works, Drôme provençale. Scents selected in Grasse, the perfume capital.",es:"Fabricado en nuestra jabonería de Nyons, en la Drôme provenzal. Perfumes seleccionados en Grasse, capital del perfume.",de:"Hergestellt in unserer Manufaktur in Nyons, Drôme provençale. Düfte aus Grasse, der Hauptstadt des Parfums.",it:"Prodotto nel nostro saponificio di Nyons, Drôme provenzale. Profumi selezionati a Grasse, capitale del profumo.",zh:"产自普罗旺斯德龙的尼永皂坊，香氛精选自香水之都格拉斯。"},
+acc2:{fr:"Livraison",en:"Delivery",es:"Envío",de:"Versand",it:"Spedizione",zh:"配送"},
+acc2p:{fr:"Colis préparé à Nyons. Livraison offerte en France métropolitaine dès 49 € d'achat.",en:"Parcel packed in Nyons. Free delivery in mainland France from €49.",es:"Paquete preparado en Nyons. Envío gratis en Francia metropolitana desde 49 €.",de:"Paket in Nyons gepackt. Kostenloser Versand in Frankreich ab 49 €.",it:"Pacco preparato a Nyons. Spedizione gratuita in Francia metropolitana da 49 €.",zh:"在尼永打包。法国本土满49欧元免运费。"},
+back:{fr:"← Retour à la boutique",en:"← Back to the shop",es:"← Volver a la tienda",de:"← Zurück zum Shop",it:"← Torna al negozio",zh:"← 返回商店"},
+also:{fr:"Sur la même étagère",en:"On the same shelf",es:"En la misma estantería",de:"Im selben Regal",it:"Sullo stesso scaffale",zh:"同一货架"},
+hs_k:{fr:"Notre histoire",en:"Our story",es:"Nuestra historia",de:"Unsere Geschichte",it:"La nostra storia",zh:"我们的故事"},
+hs_t:{fr:"Une maison<br><em>façonnée par Nyons.</em>",en:"A house<br><em>shaped by Nyons.</em>",es:"Una casa<br><em>moldeada por Nyons.</em>",de:"Ein Haus,<br><em>von Nyons geprägt.</em>",it:"Una casa<br><em>plasmata da Nyons.</em>",zh:"一家<br><em>由尼永塑造的皂坊。</em>"},
+hs_p:{fr:"Nos matières, nos couleurs, nos senteurs et nos illustrations vintage composent un univers de nostalgie douce, de poésie et de souvenirs d'enfance. Notre envie : vous surprendre et transformer les gestes du quotidien en moments de plaisir.",en:"Our materials, colours, scents and vintage illustrations create a world of gentle nostalgia, poetry and childhood memories. Our wish: to surprise you and turn everyday gestures into moments of pleasure.",es:"Nuestras materias, colores, aromas e ilustraciones vintage crean un universo de nostalgia dulce, poesía y recuerdos de infancia. Nuestro deseo: sorprenderle y convertir los gestos cotidianos en momentos de placer.",de:"Unsere Materialien, Farben, Düfte und Vintage-Illustrationen schaffen eine Welt sanfter Nostalgie, Poesie und Kindheitserinnerungen. Unser Wunsch: Sie überraschen und Alltagsgesten in Genussmomente verwandeln.",it:"Le nostre materie, i colori, i profumi e le illustrazioni vintage compongono un universo di dolce nostalgia, poesia e ricordi d'infanzia. Il nostro desiderio: sorprendervi e trasformare i gesti quotidiani in momenti di piacere.",zh:"我们的原料、色彩、香氛与复古插画，构成温柔怀旧、诗意与童年回忆的世界。我们的心愿：给您惊喜，把日常小事变成愉悦时刻。"},
+e1:{fr:"Respecter",en:"Respect",es:"Respetar",de:"Respektieren",it:"Rispettare",zh:"尊重"},
+e1p:{fr:"Des matières et des emballages plus respectueux de l'environnement et de la santé.",en:"Materials and packaging kinder to the environment and to health.",es:"Materias y envases más respetuosos con el medio ambiente y la salud.",de:"Umwelt- und gesundheitsfreundlichere Materialien und Verpackungen.",it:"Materie e imballaggi più rispettosi dell'ambiente e della salute.",zh:"选用更环保、更健康的原料与包装。"},
+e2:{fr:"Préserver",en:"Preserve",es:"Preservar",de:"Bewahren",it:"Preservare",zh:"守护"},
+e2p:{fr:"Valoriser le patrimoine savonnier de Nyons et l'identité de la Provence.",en:"Honour the soap heritage of Nyons and the identity of Provence.",es:"Valorizar el patrimonio jabonero de Nyons y la identidad de Provenza.",de:"Das Seifenerbe von Nyons und die Identität der Provence pflegen.",it:"Valorizzare il patrimonio saponiero di Nyons e l'identità della Provenza.",zh:"弘扬尼永制皂遗产与普罗旺斯特色。"},
+ft_p:{fr:"La Savonnerie de Nyons imagine, compose et fabrique savons et cosmétiques à Nyons, en Drôme provençale.",en:"La Savonnerie de Nyons imagines, composes and makes soaps and cosmetics in Nyons, Drôme provençale.",es:"La Savonnerie de Nyons imagina, compone y fabrica jabones y cosméticos en Nyons, Drôme provenzal.",de:"La Savonnerie de Nyons erdenkt, komponiert und fertigt Seifen und Kosmetik in Nyons, Drôme provençale.",it:"La Savonnerie de Nyons immagina, compone e produce saponi e cosmetici a Nyons, Drôme provenzale.",zh:"尼永皂坊在普罗旺斯德龙的尼永构思、调配并制作香皂与化妆品。"},
+ft_c:{fr:"Contact",en:"Contact",es:"Contacto",de:"Kontakt",it:"Contatti",zh:"联系我们"},
+ft_h:{fr:"Aide",en:"Help",es:"Ayuda",de:"Hilfe",it:"Aiuto",zh:"帮助"},
+ft_h1:{fr:"Livraison & retours",en:"Delivery & returns",es:"Envíos y devoluciones",de:"Versand & Rückgabe",it:"Spedizioni e resi",zh:"配送与退货"},
+ft_h2:{fr:"Conditions générales de vente",en:"Terms of sale",es:"Condiciones de venta",de:"AGB",it:"Condizioni di vendita",zh:"销售条款"},
+ft_h3:{fr:"Revendeurs et boutiques",en:"Retailers and shops",es:"Distribuidores y tiendas",de:"Händler und Geschäfte",it:"Rivenditori e negozi",zh:"经销商与门店"},
+ft_f:{fr:"Suivez la savonnerie",en:"Follow the soap works",es:"Siga la jabonería",de:"Folgen Sie uns",it:"Seguite il saponificio",zh:"关注皂坊"},
+ft_nl:{fr:"La lettre de Nyons — nouvelles boîtes en avant-première",en:"The Nyons letter — new tins first",es:"La carta de Nyons — nuevas cajas en primicia",de:"Der Nyons-Brief — neue Dosen zuerst",it:"La lettera di Nyons — nuove scatole in anteprima",zh:"尼永通讯 — 新款铁盒抢先看"},
+ft_nlph:{fr:"Votre e-mail",en:"Your email",es:"Su e-mail",de:"Ihre E-Mail",it:"La vostra e-mail",zh:"您的邮箱"},
+ft_nlb:{fr:"S'inscrire",en:"Subscribe",es:"Suscribirse",de:"Anmelden",it:"Iscriversi",zh:"订阅"},
+ft_nlok:{fr:"Merci ! À très vite.",en:"Thank you! See you soon.",es:"¡Gracias! Hasta pronto.",de:"Danke! Bis bald.",it:"Grazie! A presto.",zh:"谢谢！期待再见。"},
+mock:{fr:"Proposition de refonte réalisée par Neovera Studio — maquette non contractuelle, produits, prix et notes issus de lasavonneriedenyons.com.",en:"Redesign proposal by Neovera Studio — non-binding mock-up, products, prices and ratings from lasavonneriedenyons.com.",es:"Propuesta de rediseño de Neovera Studio — maqueta no contractual, productos, precios y valoraciones de lasavonneriedenyons.com.",de:"Redesign-Vorschlag von Neovera Studio — unverbindlicher Entwurf, Produkte, Preise und Bewertungen von lasavonneriedenyons.com.",it:"Proposta di restyling di Neovera Studio — mockup non contrattuale, prodotti, prezzi e valutazioni da lasavonneriedenyons.com.",zh:"Neovera Studio改版提案 — 非合同性样稿，产品、价格与评分来自 lasavonneriedenyons.com。"},
+cart:{fr:"Votre panier",en:"Your cart",es:"Su cesta",de:"Ihr Warenkorb",it:"Il vostro carrello",zh:"您的购物车"},
+empty:{fr:"Votre panier est vide pour l'instant.",en:"Your cart is empty for now.",es:"Su cesta está vacía por ahora.",de:"Ihr Warenkorb ist noch leer.",it:"Il carrello è vuoto per ora.",zh:"购物车暂时为空。"},
+total:{fr:"Total",en:"Total",es:"Total",de:"Summe",it:"Totale",zh:"合计"},
+checkout:{fr:"Commander",en:"Checkout",es:"Pagar",de:"Zur Kasse",it:"Procedi all'ordine",zh:"结账"},
+ship_left:{fr:"Plus que {x} pour la livraison offerte",en:"Only {x} more for free delivery",es:"Solo {x} más para el envío gratis",de:"Nur noch {x} bis zum kostenlosen Versand",it:"Mancano {x} alla spedizione gratuita",zh:"再购{x}即享免运费"},
+ship_ok:{fr:"Livraison offerte",en:"Free delivery",es:"Envío gratis",de:"Kostenloser Versand",it:"Spedizione gratuita",zh:"免运费"},
+co_demo:{fr:"Maquette : le paiement sera branché sur votre boutique actuelle.",en:"Mock-up: payment will connect to your current shop.",es:"Maqueta: el pago se conectará a su tienda actual.",de:"Entwurf: Die Zahlung wird an Ihren Shop angebunden.",it:"Mockup: il pagamento sarà collegato al vostro negozio.",zh:"样稿：支付将对接您现有的商店。"},
+b_sig:{fr:"La signature",en:"The signature",es:"La firma",de:"Die Signatur",it:"La firma",zh:"招牌"},
+b_noel:{fr:"Noël",en:"Christmas",es:"Navidad",de:"Weihnachten",it:"Natale",zh:"圣诞"},
+b_fav:{fr:"4,9 / 5",en:"4.9 / 5",es:"4,9 / 5",de:"4,9 / 5",it:"4,9 / 5",zh:"4.9 / 5"}
+};
+const FLOW={
+start:{fr:"Bonjour, je suis le conseiller de la Savonnerie de Nyons. Pour qui cherchez-vous un savon ?",en:"Hello, I'm the Savonnerie de Nyons adviser. Who are you looking for a soap for?",es:"Hola, soy el asesor de la Savonnerie de Nyons. ¿Para quién busca un jabón?",de:"Hallo, ich bin der Berater der Savonnerie de Nyons. Für wen suchen Sie eine Seife?",it:"Buongiorno, sono il consulente della Savonnerie de Nyons. Per chi cerca un sapone?",zh:"您好，我是尼永皂坊顾问。您想为谁挑选香皂？"},
+q:{
+cadeau:{fr:"Un cadeau à offrir",en:"A gift to give",es:"Un regalo",de:"Ein Geschenk",it:"Un regalo",zh:"送礼"},
+souvenir:{fr:"Un souvenir de France",en:"A souvenir of France",es:"Un recuerdo de Francia",de:"Ein Frankreich-Souvenir",it:"Un ricordo di Francia",zh:"法国纪念品"},
+peau:{fr:"Ma peau est sensible",en:"I have sensitive skin",es:"Tengo la piel sensible",de:"Ich habe empfindliche Haut",it:"Ho la pelle sensibile",zh:"我是敏感肌"},
+metier:{fr:"Pour un métier ou une passion",en:"For a trade or a hobby",es:"Para un oficio o una afición",de:"Für einen Beruf oder ein Hobby",it:"Per un mestiere o una passione",zh:"为某种职业或爱好"},
+maison:{fr:"Pour la maison",en:"For the home",es:"Para el hogar",de:"Für den Haushalt",it:"Per la casa",zh:"家居用"},
+visite:{fr:"Venir à la boutique",en:"Visit the shop",es:"Visitar la tienda",de:"Den Laden besuchen",it:"Visitare il negozio",zh:"到店参观"},
+autre:{fr:"Autre question",en:"Another question",es:"Otra pregunta",de:"Eine andere Frage",it:"Un'altra domanda",zh:"其他问题"}
+},
+a:{
+cadeau:{fr:"Le plus simple : composer un coffret de trois boîtes illustrées. Pour Noël, le fourreau de 3 savons gourmands (9,60 €) ou le coffret au lait d'ânesse (27,50 €).",en:"The easiest: build a set of three illustrated tins. For Christmas, the sleeve of 3 gourmand soaps (€9.60) or the donkey milk gift box (€27.50).",es:"Lo más sencillo: componer un estuche de tres cajas ilustradas. Para Navidad, la funda de 3 jabones golosos (9,60 €) o el estuche de leche de burra (27,50 €).",de:"Am einfachsten: ein Set aus drei illustrierten Dosen zusammenstellen. Zu Weihnachten die Hülle mit 3 Seifen (9,60 €) oder die Eselsmilch-Box (27,50 €).",it:"La cosa più semplice: comporre un cofanetto di tre scatole illustrate. Per Natale, l'astuccio di 3 saponi golosi (9,60 €) o il cofanetto al latte d'asina (27,50 €).",zh:"最简单的方式：自选三只插画铁盒组成礼盒。圣诞可选三块美味香皂套装（9.60欧元）或驴奶礼盒（27.50欧元）。"},
+souvenir:{fr:"Nos boîtes « Voyage en France » : Montmartre, la Seine, la Côte d'Azur, le Mont-Saint-Michel… 6 € chacune, avec leur savon.",en:"Our 'Travels in France' tins: Montmartre, the Seine, the Côte d'Azur, Mont-Saint-Michel… €6 each, with their soap.",es:"Nuestras cajas «Viaje por Francia»: Montmartre, el Sena, la Costa Azul, el Monte Saint-Michel… 6 € cada una, con su jabón.",de:"Unsere Dosen „Reise durch Frankreich“: Montmartre, die Seine, die Côte d'Azur, Mont-Saint-Michel … je 6 € mit Seife.",it:"Le nostre scatole «Viaggio in Francia»: Montmartre, la Senna, la Costa Azzurra, il Mont-Saint-Michel… 6 € ciascuna, con il sapone.",zh:"我们的“法国之旅”铁盒：蒙马特、塞纳河、蔚蓝海岸、圣米歇尔山……每只6欧元，含香皂。"},
+peau:{fr:"Pour une peau sensible, la collection au lait bio d'ânesse : le savon à la corde est noté 4,9/5 par nos clients.",en:"For sensitive skin, the organic donkey milk collection: the rope soap is rated 4.9/5 by our customers.",es:"Para piel sensible, la colección de leche de burra bio: el jabón con cuerda tiene 4,9/5 de nuestros clientes.",de:"Für empfindliche Haut die Bio-Eselsmilch-Kollektion: die Seife am Seil hat 4,9/5 von unseren Kunden.",it:"Per la pelle sensibile, la collezione al latte d'asina bio: il sapone con corda ha 4,9/5 dai nostri clienti.",zh:"敏感肌推荐有机驴奶系列：挂绳皂获顾客4.9/5好评。"},
+metier:{fr:"Il y a une boîte pour chacun : le boulanger, le barbier, le jardinier… Le savon du jardinier est pensé pour les mains qui travaillent la terre.",en:"There's a tin for everyone: the baker, the barber, the gardener… The gardener's soap is made for hands that work the soil.",es:"Hay una caja para cada uno: el panadero, el barbero, el jardinero… El jabón del jardinero está pensado para manos que trabajan la tierra.",de:"Für jeden gibt es eine Dose: Bäcker, Barbier, Gärtner … Die Gärtnerseife ist für Hände gedacht, die in der Erde arbeiten.",it:"C'è una scatola per tutti: il fornaio, il barbiere, il giardiniere… Il sapone del giardiniere è pensato per le mani che lavorano la terra.",zh:"每个人都有专属铁盒：面包师、理发师、园丁……园丁皂专为耕作的双手设计。"},
+maison:{fr:"Le savon au fiel de bœuf détache comme chez grand-mère, et le porte-savon rotatif en laiton fait revivre les lavabos d'école.",en:"Ox-gall soap removes stains like grandma's, and the brass rotating soap holder revives old school washbasins.",es:"El jabón de hiel de buey quita manchas como el de la abuela, y el portajabón rotativo de latón revive los lavabos escolares.",de:"Gallseife entfernt Flecken wie bei Oma, und der drehbare Messinghalter lässt alte Schulwaschbecken aufleben.",it:"Il sapone al fiele di bue smacchia come quello della nonna, e il portasapone rotante in ottone fa rivivere i lavabi di scuola.",zh:"牛胆汁皂像祖母那样去渍，黄铜旋转皂架重现旧时学校洗手台。"},
+visite:{fr:"La boutique de 200 m² vous attend à Nyons, 70 rue Félix Maurent, avec parking et accès en fauteuil. Je vous montre comment préparer votre visite.",en:"The 200 m² shop awaits you in Nyons, 70 rue Félix Maurent, with parking and wheelchair access. Let me show you how to plan your visit.",es:"La tienda de 200 m² le espera en Nyons, 70 rue Félix Maurent, con aparcamiento y acceso en silla de ruedas. Le muestro cómo preparar su visita.",de:"Der 200-m²-Laden erwartet Sie in Nyons, 70 rue Félix Maurent, mit Parkplatz und barrierefreiem Zugang. Ich zeige Ihnen, wie Sie Ihren Besuch planen.",it:"Il negozio di 200 m² vi aspetta a Nyons, 70 rue Félix Maurent, con parcheggio e accesso in sedia a rotelle. Vi mostro come preparare la visita.",zh:"200平方米门店位于尼永费利克斯·莫朗街70号，设停车场与无障碍通道。我带您规划参观。"},
+autre:{fr:"Notre équipe vous répond à contact@lasavonneriedenyons.com. En attendant, que puis-je vous recommander ?",en:"Our team answers at contact@lasavonneriedenyons.com. Meanwhile, what can I recommend?",es:"Nuestro equipo le responde en contact@lasavonneriedenyons.com. Mientras tanto, ¿qué le recomiendo?",de:"Unser Team antwortet unter contact@lasavonneriedenyons.com. Was darf ich bis dahin empfehlen?",it:"Il nostro team risponde a contact@lasavonneriedenyons.com. Nel frattempo, cosa posso consigliarle?",zh:"我们的团队将通过 contact@lasavonneriedenyons.com 回复您。在此之前，我能推荐什么？"}
+},
+r:{cadeau:['p16','p19'],souvenir:['p03','p04','p09'],peau:['p18','p19'],metier:['p13','p14','p15'],maison:['p22','p21']},
+next:{start:['cadeau','souvenir','peau','metier','maison','visite'],cadeau:['souvenir','peau','visite','autre'],souvenir:['cadeau','metier','autre'],peau:['cadeau','maison','autre'],metier:['cadeau','souvenir','autre'],maison:['peau','cadeau','autre'],visite:['cadeau','souvenir','autre'],autre:['cadeau','souvenir','peau','maison']}
+};
+
+let LANG='fr';
+const P=id=>PRODUCTS.find(p=>p.id===id);
+const img=id=>'img/'+id+'.jpg';
+const t=k=>(I[k]&&(I[k][LANG]||I[k].fr))||k;
+const nm=p=>p.n[LANG]||p.n.fr, ds=p=>p.d[LANG]||p.d.fr, tt=p=>(p.t&&p.t[LANG])||nm(p);
+const eur=v=>['fr','es','de','it'].includes(LANG)?v.toFixed(2).replace('.',',')+' €':'€'+v.toFixed(2);
+const pr=p=>eur(p.p)+(p.r?`<s>${eur(p.r)}</s>`:'');
+const bg=p=>`var(--c-${p.c})`;
+const TINS=PRODUCTS.filter(p=>p.tin);
+function card(p){return `<article class="card" data-pid="${p.id}"><div class="ph" style="background:${bg(p)}">${p.b?`<span class="badge ${p.b}">${t('b_'+p.b)}</span>`:''}<img loading="eager" src="${img(p.id)}" alt="${nm(p)}"></div><div class="info"><div class="nm">${nm(p)}</div><div class="row2"><span class="pr">${pr(p)}</span><button class="add" data-add="${p.id}">${t('add')}</button></div></div></article>`}
+let THEME='all',FILTER='all';
+function renderCrate(){crate.innerHTML=TINS.filter(p=>THEME==='all'||p.c===THEME).map(p=>`<div class="tc" tabindex="0" data-pid="${p.id}"><span class="lbl">${tt(p)} · ${eur(p.p)}</span><div class="ph" style="background:${bg(p)}"><img src="${img(p.id)}" alt="${nm(p)}"></div><h3>${tt(p)}</h3><div class="row"><span class="pr">${eur(p.p)}</span><button class="add" data-add="${p.id}">${t('add')}</button></div></div>`).join('');crate.scrollLeft=0}
+themes.onclick=e=>{const b=e.target.closest('button');if(!b)return;THEME=b.dataset.t;[...themes.children].forEach(x=>x.classList.toggle('on',x===b));renderCrate()};
+function renderMq(){const f=l=>[...l,...l].map(p=>`<img src="${img(p.id)}" alt="">`).join('');mq1.innerHTML=f(TINS)}
+function renderGrids(){gX.innerHTML=['p16','p19','p23'].map(id=>card(P(id))).join('');gShop.innerHTML=PRODUCTS.filter(p=>FILTER==='all'||(FILTER==='tin'?p.tin:(!p.tin&&p.c===FILTER))).map(card).join('');renderCrate();renderPick()}
+filters.onclick=e=>{const b=e.target.closest('button');if(!b)return;FILTER=b.dataset.f;[...filters.children].forEach(x=>x.classList.toggle('on',x===b));renderGrids()};
+/* builder */
+let SET=[];
+function renderPick(){pick.innerHTML=TINS.filter(p=>p.id!=='p22').map(p=>`<button style="background:${bg(p)}" class="${SET.includes(p.id)?'sel':''}" onclick="pickTin('${p.id}')" title="${tt(p)}"><img src="${img(p.id)}" alt="${tt(p)}"><span>${tt(p)}</span></button>`).join('');renderSlots()}
+function renderSlots(){slots.innerHTML=[0,1,2].map(i=>SET[i]?`<div class="slot on"><img src="${img(SET[i])}" alt=""><button onclick="unpick(${i})" aria-label="Retirer">×</button></div>`:`<div class="slot">${t('g_slot')} ${i+1}</div>`).join('');const s=SET.reduce((a,id)=>a+P(id).p,0);btot.textContent=eur(s);badd.disabled=SET.length<3;badd.textContent=SET.length<3?t('g_more').replace('{n}',3-SET.length):t('g_add');bprog.textContent=t('g_prog').replace('{n}',SET.length)}
+function pickTin(id){if(SET.includes(id)){SET=SET.filter(x=>x!==id)}else if(SET.length<3){SET.push(id)}else{toast(t('g_full'));return}renderPick()}
+function unpick(i){SET.splice(i,1);renderPick()}
+function resetSet(){SET=[];renderPick()}
+function addSet(){if(SET.length<3)return;SET.forEach(id=>CART[id]=(CART[id]||0)+1);save();renderCart();toast(t('added'));resetSet();openCart()}
+/* pdp */
+let CUR='p00',QTY=1;
+function renderPdp(id){CUR=id;QTY=1;const p=P(id);const G=[img(id)];if(['p00','p01','p02','p03','p04','p05','p06','p07','p08','p09','p10','p11','p12','p13','p14','p15','p16','p18','p20','p21','p22','p23'].includes(id))G.push('img/'+id+'b.jpg');pdp.innerHTML=`<div><div class="g" style="background:${bg(p)}"><img id="pdpI" src="${img(id)}" alt="${nm(p)}"></div>${G.length>1?`<div class="thumbs">${G.map((g,i)=>`<img class="${i?'':'on'}" src="${g}" alt="" onclick="pv(this)">`).join('')}</div>`:''}</div><div><p class="k">${p.tin?t('f_tin'):t('f_'+(p.c==='metiers'?'maison':p.c))}</p><h1 class="disp">${nm(p)}</h1><div class="price">${pr(p)}</div>${id==='p18'?`<p class="prate">★★★★★ ${t('r1n')}</p>`:''}<p class="lead desc">${ds(p)}</p><div class="buy" style="display:flex;align-items:center;flex-wrap:wrap;gap:12px"><span class="qty"><button onclick="q(-1)">−</button><span id="qv">1</span><button onclick="q(1)">+</button></span><button class="btn" onclick="addCart(CUR,QTY)">${t('add_cart')}</button></div><p class="reass">${t('pdp_r')}</p>${p.tin?`<a class="ups" onclick="SET=['${id}'];renderPick();go('home',{anchor:'coffret'})">${t('up_t')} →</a>`:''}<div style="margin-top:26px"><details open><summary>${t('acc1')}</summary><p>${t('acc1p')}</p></details><details><summary>${t('acc2')}</summary><p>${t('acc2p')}</p></details></div></div>`;
+gA.innerHTML=PRODUCTS.filter(x=>x.id!==id&&(p.tin?x.tin&&x.c===p.c:x.c===p.c)).slice(0,4).map(card).join('')||PRODUCTS.filter(x=>x.id!==id).slice(0,4).map(card).join('')}
+function pv(el){pdpI.src=el.src;el.parentNode.querySelectorAll('img').forEach(x=>x.classList.toggle('on',x===el))}
+function q(d){QTY=Math.max(1,QTY+d);qv.textContent=QTY}
+function go(v,o={}){document.querySelectorAll('.view').forEach(x=>x.classList.toggle('on',x.id==='v-'+v));nav.classList.remove('open');if(v==='product')renderPdp(o.pid);setTimeout(upd,60);if(o.anchor){setTimeout(()=>document.getElementById(o.anchor)?.scrollIntoView({behavior:'smooth'}),40)}else scrollTo({top:0,behavior:'instant'})}
+document.addEventListener('click',e=>{const a=e.target.closest('[data-add]');if(a){e.stopPropagation();addCart(a.dataset.add,1);return}const g=e.target.closest('[data-go]');if(g){e.preventDefault();go(g.dataset.go,{anchor:g.dataset.anchor});return}const c=e.target.closest('[data-pid]');if(c&&!e.target.closest('.pick')){go('product',{pid:c.dataset.pid})}});
+function visit(e){e.preventDefault();vOk.textContent=t('v_ok');vOk.style.display='block';e.target.reset();return false}
+/* cart */
+const FREE=49;let CART={};try{CART=JSON.parse(localStorage.getItem('sn_cart')||'{}')}catch(e){}
+function save(){try{localStorage.setItem('sn_cart',JSON.stringify(CART))}catch(e){}}
+function addCart(id,n){CART[id]=(CART[id]||0)+n;save();renderCart();toast(t('added'))}
+function setQ(id,d){CART[id]=(CART[id]||0)+d;if(CART[id]<=0)delete CART[id];save();renderCart()}
+function renderCart(){const ids=Object.keys(CART);let tot=0,n=0;items.innerHTML=ids.length?ids.map(id=>{const p=P(id);tot+=p.p*CART[id];n+=CART[id];return `<div class="it"><img src="${img(id)}" alt=""><div>${nm(p)}<div class="q"><button onclick="setQ('${id}',-1)">−</button>${CART[id]}<button onclick="setQ('${id}',1)">+</button></div></div><b>${eur(p.p*CART[id])}</b></div>`}).join(''):`<p style="padding:30px 0;color:var(--mute)">${t('empty')}</p>`;cartN.textContent=n;document.getElementById('tot').textContent=eur(tot);const left=FREE-tot;ship.innerHTML=(left>0?t('ship_left').replace('{x}',eur(left)):t('ship_ok'))+`<div class="bar"><i style="width:${Math.min(100,tot/FREE*100)}%"></i></div>`}
+function openCart(){drawer.classList.add('on');ovl.classList.add('on')}
+function closeCart(){drawer.classList.remove('on');ovl.classList.remove('on')}
+let tT;const toastEl=document.getElementById('toast');function toast(m){toastEl.textContent=m;toastEl.classList.add('on');clearTimeout(tT);tT=setTimeout(()=>toastEl.classList.remove('on'),2200)}
+/* advisor */
+const adv=document.getElementById('adv'),advB=document.getElementById('advB');let started=false;
+const upd=()=>advB.classList.toggle('mini',document.getElementById('v-home').classList.contains('on')&&scrollY<600);addEventListener('scroll',upd,{passive:true});
+function say(x,w){const d=document.createElement('div');d.className='bub '+w;d.textContent=x;log.appendChild(d);log.scrollTop=log.scrollHeight}
+function recs(ids){ids.forEach(id=>{const p=P(id);const d=document.createElement('div');d.className='rec';d.innerHTML=`<img src="${img(id)}" alt=""><div>${nm(p)}<br><b>${eur(p.p)}</b></div><button class="add" data-add="${id}">${t('add')}</button>`;log.appendChild(d)});log.scrollTop=log.scrollHeight}
+function chipsFor(k){achips.innerHTML='';FLOW.next[k].forEach(c=>{const b=document.createElement('button');b.textContent=FLOW.q[c][LANG];b.onclick=()=>{say(FLOW.q[c][LANG],'me');setTimeout(()=>{say(FLOW.a[c][LANG],'bot');if(FLOW.r[c])recs(FLOW.r[c]);if(c==='visite')setTimeout(()=>{toggleAdv(false);go('home',{anchor:'visiter'})},1700);if(c==='cadeau')setTimeout(()=>{const l=document.createElement('button');l.className='add';l.style.alignSelf='flex-start';l.textContent=t('h_c2');l.onclick=()=>{toggleAdv(false);go('home',{anchor:'coffret'})};log.appendChild(l);log.scrollTop=log.scrollHeight},200);chipsFor(c)},350)};achips.appendChild(b)})}
+function startAdv(){log.innerHTML='';say(FLOW.start[LANG],'bot');chipsFor('start');started=true}
+function toggleAdv(o){const open=o===undefined?!adv.classList.contains('open'):o;adv.classList.toggle('open',open);advB.style.display=open?'none':'flex';document.getElementById('advBub')?.remove();if(open&&!started)startAdv()}
+(function(){const b=document.getElementById('advBub');let s=null;try{s=sessionStorage.getItem('snbub')}catch(e){}if(!s)setTimeout(()=>{if(document.body.contains(b)&&!adv.classList.contains('open')){b.classList.add('on');try{sessionStorage.setItem('snbub','1')}catch(e){}setTimeout(()=>b.remove(),10000)}},4000);b.addEventListener('click',()=>toggleAdv(true))})();
+/* i18n */
+function setLang(l){LANG=l;document.documentElement.lang=l;document.querySelectorAll('[data-i]').forEach(el=>{el.innerHTML=t(el.dataset.i)});document.querySelectorAll('[data-ip]').forEach(el=>el.placeholder=t(el.dataset.ip));if(innerWidth<821)[...lang.options].forEach(o=>o.textContent=o.value.toUpperCase());renderGrids();renderMq();renderCart();if(document.getElementById('v-product').classList.contains('on'))renderPdp(CUR);if(started)startAdv();try{localStorage.setItem('sn_lang',l)}catch(e){}}
+lang.innerHTML=Object.entries(LANGS).map(([k,v])=>`<option value="${k}">${v}</option>`).join('');
+lang.onchange=e=>setLang(e.target.value);
+let L0='fr';try{L0=localStorage.getItem('sn_lang')||'fr'}catch(e){}lang.value=L0;setLang(L0);upd();
+</script>
+</body>
+</html>
