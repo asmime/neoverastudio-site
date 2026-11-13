@@ -1,0 +1,6 @@
+# Permet au webmail OVH de récupérer l'image avant/après pour l'intégrer au mail
+<IfModule mod_headers.c>
+  <FilesMatch "avant-apres\.jpg$">
+    Header set Access-Control-Allow-Origin "https://mail.ovh.net"
+  </FilesMatch>
+</IfModule>
