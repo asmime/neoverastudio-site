@@ -6,6 +6,8 @@ header('X-Robots-Tag: noindex');
 if (!hash_equals('e8828944833618c19d575eab174d09c0090dbed81a41bbd2e3772c327088b869', hash('sha256', (string)($_GET['k'] ?? '')))) { http_response_code(404); exit; }
 $dir = dirname(__DIR__) . '/.stats';
 if (isset($_GET['purge'])) { $p = preg_replace('/[^a-z0-9-]/', '', (string)$_GET['purge']); if ($p !== '' && is_file("$dir/$p.log")) @unlink("$dir/$p.log"); }
+if (isset($_GET['purge_apres'], $_GET['m'])) { $pm = preg_replace('/[^a-z0-9-]/', '', (string)$_GET['m']); $lim = (string)$_GET['purge_apres']; $pf = "$dir/$pm.log";
+  if (is_file($pf)) { $keep = array_filter(file($pf, FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES), function ($l) use ($lim) { $r = json_decode($l, true); return $r && strcmp($r['ts'], $lim) < 0; }); file_put_contents($pf, $keep ? implode("\n", $keep) . "\n" : '', LOCK_EX); } }
 $only = preg_replace('/[^a-z0-9-]/', '', (string)($_GET['m'] ?? ''));
 $out = [];
 foreach (glob($dir . '/*.log') ?: [] as $f) {
