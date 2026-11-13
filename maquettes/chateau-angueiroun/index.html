@@ -6,6 +6,7 @@
 <meta name="robots" content="noindex, nofollow">
 <title>Château Angueiroun — Proposition Neovera Studio</title>
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 30 36%27%3E%3Cpath d=%27M2 2h26v15c0 9-6 14-13 17C8 31 2 26 2 17z%27 fill=%27%23fff%27 stroke=%27%23141414%27 stroke-width=%272%27/%3E%3Ccircle cx=%2715%27 cy=%279%27 r=%274%27 fill=%27%23C8412A%27/%3E%3C/svg%3E">
+<link rel="preload" as="image" href="img/film.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 30 36%27%3E%3Cpath d=%27M2 2h26v15c0 9-6 14-13 17C8 31 2 26 2 17z%27 fill=%27%23fff%27 stroke=%27%23141414%27 stroke-width=%272%27/%3E%3Ccircle cx=%2715%27 cy=%279%27 r=%274%27 fill=%27%23C8412A%27/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..800;1,6..96,400..700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -253,7 +254,7 @@ body.hasbar .advb{bottom:78px}body.hasbar .bub{bottom:146px}.blason{width:24px;h
 <main>
 <!-- HOME -->
 <div class="view" id="v-home">
- <div class="hwrap"><section class="hero2" id="hero2"><div class="hv" id="hv2"><video id="hv" autoplay muted loop playsinline poster="img/film.jpg"><source src="img/film.mp4" type="video/mp4"></video><div class="hshade"></div>
+ <div class="hwrap"><section class="hero2" id="hero2"><div class="hv" id="hv2"><video id="hv" muted loop playsinline preload="none" poster="img/film.jpg" data-v="img/film.mp4"></video><div class="hshade"></div>
   <div class="hcap"><div class="kick" data-i="h_kicker"></div><h1 class="ht" data-i="h_title"></h1><p class="lead" data-i="h_lead"></p>
    <div class="ctas"><button class="btn light" onclick="go('shop')"><span data-i="cta_wines"></span> →</button><button class="btn ghostl" onclick="go('visit')" data-i="cta_visit"></button></div></div>
   <div class="hcartel cartel"><b data-i="cartel_h"></b><span data-i="cartel_t"></span></div></div></section></div>
@@ -919,7 +920,7 @@ const eel=document.getElementById('eel1');const len=eel.getTotalLength?2600:0;ee
 addEventListener('scroll',()=>{const y=scrollY,h=document.getElementById('hero2');if(h&&view==='home'&&innerWidth>1060)h.style.setProperty('--p',Math.min(1,y/(innerHeight*.6)).toFixed(3));const s=document.getElementById('sec-wines');if(s){const r=s.getBoundingClientRect();const k=Math.min(1,Math.max(0,(innerHeight-r.top)/(r.height+innerHeight*.4)));eel.style.strokeDashoffset=len*(1-k)}},{passive:true});
 let bubShown=false;try{bubShown=sessionStorage.getItem('ang_b')==='1'}catch(x){}
 setTimeout(()=>{if(!bubShown&&!document.getElementById('adv').classList.contains('on')){bubShown=true;try{sessionStorage.setItem('ang_b','1')}catch(x){}const b=document.getElementById('bub');b.querySelector('span').innerHTML=t(view==='product'?'a_bub_p':view==='shop'?'a_bub_s':'a_bubble');b.classList.add('on');setTimeout(()=>b.classList.remove('on'),8000)}},4000);
-const v=document.getElementById('hv');v.addEventListener('error',()=>{v.outerHTML=`<img src="${img('film')}" alt="">`},true);
+const v=document.getElementById('hv');addEventListener('load',()=>setTimeout(()=>{try{v.src=v.dataset.v;v.play().catch(()=>{})}catch(x){}},300));v.addEventListener('error',()=>{v.outerHTML=`<img src="${img('film')}" alt="">`},true);
 apply();go('home');
 </script>
 <script id="nv-track">(function(){try{if(location.protocol!=='https:')return;if(/[?&]moi\b/.test(location.search)){localStorage.setItem('nv_moi','1');addEventListener('load',function(){var d=document.createElement('div');d.textContent='✓ Appareil reconnu : vos visites ne sont plus comptées';d.style.cssText='position:fixed;left:50%;bottom:24px;transform:translateX(-50%);z-index:2147483647;background:#1E3A2B;color:#fff;font:600 14px/1.3 system-ui,sans-serif;padding:12px 18px;border-radius:999px;box-shadow:0 8px 24px rgba(0,0,0,.25)';document.body.appendChild(d);setTimeout(function(){d.remove()},6000)})}if(localStorage.getItem('nv_moi')||navigator.webdriver)return;}catch(x){}
