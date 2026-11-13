@@ -1585,7 +1585,7 @@ fx(document.body);document.querySelectorAll('video').forEach(v=>v.load());
 new MutationObserver(ms=>ms.forEach(m=>{m.addedNodes.forEach(fx);if(m.type==='attributes')fx(m.target)})).observe(document.body,{childList:true,subtree:true,attributes:true,attributeFilter:['style']});
 })();
 </script>
-<script id="nv-track">(function(){try{if(location.protocol!=='https:')return;if(/[?&]moi\b/.test(location.search))localStorage.setItem('nv_moi','1');if(localStorage.getItem('nv_moi')||navigator.webdriver)return;}catch(x){}
+<script id="nv-track">(function(){try{if(location.protocol!=='https:')return;if(/[?&]moi\b/.test(location.search)){localStorage.setItem('nv_moi','1');addEventListener('load',function(){var d=document.createElement('div');d.textContent='\u2713 Appareil reconnu : vos visites ne sont plus comptées';d.style.cssText='position:fixed;left:50%;bottom:24px;transform:translateX(-50%);z-index:2147483647;background:#1E3A2B;color:#fff;font:600 14px/1.3 system-ui,sans-serif;padding:12px 18px;border-radius:999px;box-shadow:0 8px 24px rgba(0,0,0,.25)';document.body.appendChild(d);setTimeout(function(){d.remove()},6000)})}if(localStorage.getItem('nv_moi')||navigator.webdriver)return;}catch(x){}
 var m=location.pathname.split('/').filter(Boolean)[0]||'';if(!m)return;var s=Math.random().toString(36).slice(2,12),t0=Date.now(),u='/_t.php',last='';
 function send(e,p){var b=JSON.stringify({m:m,e:e,s:s,p:p||'',t:Math.round((Date.now()-t0)/1000),l:(document.documentElement.lang||'').slice(0,2)});try{if(navigator.sendBeacon)navigator.sendBeacon(u,new Blob([b],{type:'text/plain'}));else fetch(u,{method:'POST',body:b,keepalive:true})}catch(x){}}
 send('open');setInterval(function(){if(document.visibilityState==='visible')send('ping')},45000);
