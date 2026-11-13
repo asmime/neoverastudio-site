@@ -11,11 +11,12 @@ $out = [];
 foreach (glob($dir . '/*.log') ?: [] as $f) {
   $m = basename($f, '.log');
   if ($only !== '' && $m !== $only) continue;
-  $sess = []; $vis = []; $days = []; $dev = []; $views = []; $first = null; $last = null;
+  $sess = []; $vis = []; $acts = []; $days = []; $dev = []; $views = []; $first = null; $last = null;
   foreach (file($f, FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES) as $l) {
     $r = json_decode($l, true); if (!$r) continue;
     $s = $r['s'] ?: $r['ts'];
-    if (!isset($sess[$s])) $sess[$s] = ['debut' => $r['ts'], 'duree_s' => 0, 'appareil' => $r['d'], 'langue' => $r['l'], 'pages' => []];
+    if (!isset($sess[$s])) $sess[$s] = ['debut' => $r['ts'], 'duree_s' => 0, 'appareil' => $r['d'], 'langue' => $r['l'], 'pages' => [], 'actions' => []];
+    if ($r['e'] === 'ev' && $r['p'] !== '') { if (!in_array($r['p'], $sess[$s]['actions'], true)) $sess[$s]['actions'][] = $r['p']; $acts[$r['p']] = ($acts[$r['p']] ?? 0) + 1; }
     $sess[$s]['duree_s'] = max($sess[$s]['duree_s'], $r['t']);
     if ($r['e'] === 'view' && $r['p'] !== '') { $sess[$s]['pages'][] = $r['p']; $views[$r['p']] = ($views[$r['p']] ?? 0) + 1; }
     if ($r['e'] === 'open') { $vis[$r['v']] = 1; $days[substr($r['ts'], 0, 10)] = ($days[substr($r['ts'], 0, 10)] ?? 0) + 1; $dev[$r['d']] = ($dev[$r['d']] ?? 0) + 1; }
@@ -23,7 +24,7 @@ foreach (glob($dir . '/*.log') ?: [] as $f) {
   }
   $tot = array_sum(array_column($sess, 'duree_s'));
   $out[$m] = ['ouvertures' => count($sess), 'visiteurs_distincts_par_jour' => count($vis), 'temps_total_min' => round($tot / 60, 1),
-    'premiere' => $first, 'derniere' => $last, 'par_jour' => $days, 'appareils' => $dev, 'pages_vues' => $views,
+    'premiere' => $first, 'derniere' => $last, 'par_jour' => $days, 'appareils' => $dev, 'pages_vues' => $views, 'actions' => $acts,
     'sessions' => isset($_GET['detail']) ? array_values($sess) : null];
 }
 echo json_encode($out, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES);

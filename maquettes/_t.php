@@ -7,7 +7,7 @@ $d = json_decode(file_get_contents('php://input') ?: '', true);
 if (!is_array($d)) { http_response_code(204); exit; }
 $m = preg_replace('/[^a-z0-9-]/', '', strtolower((string)($d['m'] ?? '')));
 if ($m === '' || !is_dir(__DIR__ . '/' . $m)) { http_response_code(204); exit; }
-$e = in_array($d['e'] ?? '', ['open', 'ping', 'view'], true) ? $d['e'] : 'open';
+$e = in_array($d['e'] ?? '', ['open', 'ping', 'view', 'ev'], true) ? $d['e'] : 'open';
 $ua = $_SERVER['HTTP_USER_AGENT'] ?? '';
 if (preg_match('/bot|crawl|spider|preview|headless/i', $ua)) { http_response_code(204); exit; }
 $row = [
