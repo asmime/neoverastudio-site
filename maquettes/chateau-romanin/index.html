@@ -320,7 +320,7 @@ body.sb .adv-btn{bottom:86px}@media(min-width:900px){body.sb .adv-btn{bottom:16p
 
 .rv{opacity:0;transform:translateY(18px);transition:opacity .8s var(--ease),transform .8s var(--ease)}
 .rv.in{opacity:1;transform:none}
-@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}.ray{stroke-dashoffset:0}.rv{opacity:1;transform:none}}
+@media(prefers-reduced-motion:reduce){*:not(.ray),*::before,*::after{animation:none!important;transition:none!important}.rv{opacity:1;transform:none}}
 .sm{display:inline}.lg{display:none}@media(min-width:760px){.sm{display:none}.lg{display:inline}}
 .sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
 .mt{margin-top:18px}.mt2{margin-top:32px}
@@ -745,7 +745,7 @@ function route(){const h=(location.hash||'#/').slice(2).split('/');const k=h[0]|
 function bindPage(){
  $$('.tab').forEach(b=>b.onclick=()=>{FILTER=b.dataset.f;const cats=[...new Set($$('.tab').map(x=>x.dataset.f).filter(x=>x!=='all'))];const host=b.closest('.wrap');const g=host.querySelector('.tabs');const tmp=document.createElement('div');tmp.innerHTML=shopBlock(cats);g.replaceWith(tmp.children[0]);host.querySelector('#grid').replaceWith(tmp.children[0]);bindPage();reveal()});
  bindBooking();reveal();
- const v=$('#vid');if(v){v.addEventListener('error',()=>v.remove());if(matchMedia('(prefers-reduced-motion: reduce)').matches){v.pause();v.removeAttribute('autoplay')}}}
+ const v=$('#vid');if(v){v.addEventListener('error',()=>v.remove());v.muted=true;v.play().catch(()=>{})}}
 let io;function reveal(){if(!('IntersectionObserver' in window)){$$('.rv').forEach(e=>e.classList.add('in'));return}io=io||new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{rootMargin:'0px 0px -8% 0px'});$$('.rv:not(.in)').forEach(e=>io.observe(e))}
 window.q=d=>{const o=$('#qv');o.textContent=Math.max(1,Math.min(24,+o.textContent+d))};
 
@@ -813,7 +813,7 @@ $('#advF').onsubmit=e=>{e.preventDefault();const v=$('#advI').value.trim();if(!v
 /* ===================== DIVERS ===================== */
 let tt;window.toast=m=>{const t=$('#toast');t.textContent=m;t.classList.add('on');clearTimeout(tt);tt=setTimeout(()=>t.classList.remove('on'),2600)};
 function onScroll(){const y=scrollY;const hero=$('.hero');$('#hd').classList.toggle('solid',!hero||y>innerHeight*.6);
- const r=$('#starRot');if(r&&!matchMedia('(prefers-reduced-motion: reduce)').matches)r.setAttribute('transform',`rotate(${(y*.06).toFixed(2)})`);
+ const r=$('#starRot');if(r)r.setAttribute('transform',`rotate(${(y*.06).toFixed(2)})`);
  const bs=$('#brandStar');if(bs)bs.style.transform=`rotate(${(y*.12).toFixed(1)}deg)`;
  const st=$('#sticky');if(st.innerHTML)st.classList.toggle('on',y>520);else st.classList.remove('on');document.body.classList.toggle('sb',st.classList.contains('on'))}
 addEventListener('scroll',onScroll,{passive:true});
