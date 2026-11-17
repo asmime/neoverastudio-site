@@ -1,0 +1,675 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Optisun — Proposition Neovera Studio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,300..800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{--nuit:#15100C;--nuit2:#21180F;--ecaille:#C9822F;--ecaille-c:#E8AE62;--cristal:#ECEFEC;--blanc:#F8F9F7;--encre:#1A1512;--gris:#5E5650;--bleu:#25368A;--filet:rgba(26,21,18,.14);--sans:'Archivo','Hiragino Sans','Yu Gothic',sans-serif;--mono:'JetBrains Mono',ui-monospace,monospace;--ease:cubic-bezier(.16,1,.3,1)}
+*{box-sizing:border-box}html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--cristal);color:var(--encre);font-family:var(--sans);font-size:17px;line-height:1.6;font-variation-settings:"wdth" 100}
+::selection{background:var(--ecaille);color:var(--nuit)}
+:focus-visible{outline:2px solid #8A4F14;outline-offset:3px;border-radius:2px}
+.nuit :focus-visible{outline-color:var(--ecaille-c)}
+html{scrollbar-color:var(--ecaille) var(--nuit)}
+::-webkit-scrollbar{width:10px}::-webkit-scrollbar-track{background:var(--nuit)}::-webkit-scrollbar-thumb{background:var(--ecaille);border-radius:10px;border:2px solid var(--nuit)}
+a{color:inherit;text-underline-offset:.22em;text-decoration-thickness:1px}
+img{max-width:100%;display:block}
+h1,h2,h3{hyphens:manual;overflow-wrap:break-word;font-weight:500;line-height:1.02;letter-spacing:-.02em;margin:0;text-wrap:balance;font-variation-settings:"wdth" 72}
+h2{font-size:clamp(34px,4.6vw,64px)}
+h3{font-size:22px;letter-spacing:-.01em;font-variation-settings:"wdth" 85}
+p{margin:0 0 1em;text-wrap:pretty}
+.wrap{max-width:1240px;margin:0 auto;padding:0 28px}
+.mono{font-family:var(--mono);font-size:12px;letter-spacing:.06em}
+.vh{position:absolute!important;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.skip{position:absolute;left:-999px;top:8px;background:var(--blanc);padding:8px 14px;z-index:99}.skip:focus{left:8px}
+.btn{display:inline-flex;align-items:center;gap:10px;border:0;border-radius:2px;padding:16px 24px;font:600 15px/1 var(--sans);letter-spacing:.01em;cursor:pointer;text-decoration:none;transition:transform .3s var(--ease),background .3s,color .3s}
+.btn:hover{transform:translateY(-2px)}
+.btn-or{background:var(--ecaille);color:var(--nuit)}.btn-or:hover{background:var(--ecaille-c)}
+.btn-trait{background:transparent;color:inherit;box-shadow:inset 0 0 0 1px currentColor}
+.btn svg{width:16px;height:16px}
+/* En-tête */
+.tete{position:sticky;top:0;z-index:40;background:rgba(21,16,12,.92);backdrop-filter:saturate(1.2) blur(10px);color:var(--cristal);border-bottom:1px solid rgba(236,239,236,.08)}
+.tete .wrap{display:flex;align-items:center;gap:26px;height:72px}
+.logo{display:flex;align-items:center;text-decoration:none;flex-shrink:0}
+.logo img{height:38px;width:auto}
+.menu{display:flex;gap:22px;margin-left:auto}
+.menu a{font-size:14px;text-decoration:none;opacity:.82;padding:6px 0;border-bottom:1px solid transparent;white-space:nowrap}
+.menu a:hover,.menu a[aria-current=page]{opacity:1;border-color:var(--ecaille)}
+.langue{position:relative}
+.langue select{appearance:none;background:transparent;color:var(--cristal);border:1px solid rgba(236,239,236,.4);border-radius:2px;padding:8px 30px 8px 12px;font:500 13px var(--sans);cursor:pointer}
+.langue::after{content:"";position:absolute;right:12px;top:50%;width:6px;height:6px;border-right:1.5px solid var(--cristal);border-bottom:1.5px solid var(--cristal);transform:translateY(-70%) rotate(45deg);pointer-events:none}
+.langue option{color:var(--encre)}
+.tete .btn{padding:12px 18px;font-size:14px;white-space:nowrap}
+@media (max-width:1520px){.menu{gap:16px}.menu a{font-size:13.5px}}
+:lang(ja) .heros h1{font-size:clamp(34px,3.7vw,52px);line-height:1.2}:lang(ja) h1,:lang(ja) h2{line-height:1.25;letter-spacing:0;word-break:auto-phrase}:lang(ja) h2{font-size:clamp(28px,3.4vw,46px)}
+.burger{display:none;background:none;border:1px solid rgba(236,239,236,.4);color:var(--cristal);border-radius:2px;padding:9px 12px;font:500 13px var(--sans);cursor:pointer;margin-left:auto}
+/* Vues */
+.vue{display:none}.vue.on{display:block;animation:vue .6s var(--ease)}
+@keyframes vue{from{opacity:0;transform:translateY(10px)}}
+.nuit{background:var(--nuit);color:var(--cristal)}
+section{padding:110px 0}
+/* Héros : la plaque, la fraise, le laser */
+.heros{position:relative;overflow:hidden;padding:84px 0 96px;background:radial-gradient(120% 80% at 80% 40%,#2A1D12 0%,var(--nuit) 62%)}
+.heros .wrap{display:grid;grid-template-columns:1fr 1.08fr;gap:40px;align-items:center}
+.heros h1{font-size:clamp(46px,6.2vw,92px);font-weight:400}
+.heros h1 .l{display:block;overflow:hidden;padding-bottom:.06em}
+.heros h1 .l>span{display:block;animation:monte 1.1s var(--ease) both}
+.heros h1 .l:nth-child(2)>span{animation-delay:.12s;color:var(--ecaille-c)}
+@keyframes monte{from{transform:translateY(105%)}}
+.heros .intro{max-width:30em;margin:28px 0 34px;color:#C9C7BF;animation:fondu 1s var(--ease) .4s both}
+.heros .actions{display:flex;flex-wrap:wrap;gap:12px;animation:fondu 1s var(--ease) .55s both}
+@keyframes fondu{from{opacity:0;transform:translateY(14px)}}
+.labels{display:flex;gap:18px;align-items:center;margin-top:44px;animation:fondu 1s var(--ease) .7s both}
+.labels img{height:54px;width:54px;border-radius:50%;background:#fff;object-fit:contain;padding:3px}
+.labels span{font-size:13px;color:#A9A49B;line-height:1.4;max-width:13em}
+.plaque{position:relative;width:100%}
+.plaque svg{width:100%;height:auto;overflow:visible}
+.trace{fill:none;stroke:#F6D7A8;stroke-width:1.4;stroke-linecap:round;filter:drop-shadow(0 0 4px rgba(246,190,110,.85))}
+.cote{font-family:var(--mono);font-size:9px;fill:#8F877D;letter-spacing:.04em}
+.cote-l{stroke:#5F574F;stroke-width:.7}
+.grav{font-family:var(--mono);font-size:12.5px;letter-spacing:.2em;fill:#F6DDB0}
+.grav-ombre{font-family:var(--mono);font-size:12.5px;letter-spacing:.2em;fill:rgba(0,0,0,.6)}
+@media (max-width:860px){.grav,.grav-ombre{font-size:15px;letter-spacing:.08em}}
+.etincelle{fill:#FFF3DC;filter:drop-shadow(0 0 6px #FFC46B) drop-shadow(0 0 12px #FF9E2C)}
+/* Marques */
+.marques{padding:90px 0 80px}
+.marques .tete-s{display:flex;justify-content:space-between;gap:40px;align-items:end;margin-bottom:46px}
+.marques .tete-s p{max-width:28em;color:var(--gris);margin:0}
+.logos{display:grid;grid-template-columns:repeat(7,1fr);border-top:1px solid var(--filet);border-left:1px solid var(--filet)}
+.logos a,.logos .logo-s{display:flex;align-items:center;justify-content:center;height:130px;background:var(--blanc);border-right:1px solid var(--filet);border-bottom:1px solid var(--filet);padding:20px}
+.logos img{max-height:74px;max-width:100%;object-fit:contain;filter:grayscale(1) contrast(1.1);opacity:.75;transition:filter .4s,opacity .4s}
+.logos a:hover img,.logos .logo-s:hover img{filter:none;opacity:1}
+/* Maison */
+.maison{display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:start}
+.maison figure{margin:0;position:sticky;top:110px}
+.maison figure img{width:100%;aspect-ratio:4/5;object-fit:cover}
+.maison figcaption{margin-top:10px;color:var(--gris)}
+.pilier{padding:30px 0;border-top:1px solid var(--filet)}
+.pilier:last-of-type{border-bottom:1px solid var(--filet)}
+.pilier h3{margin-bottom:10px}.pilier p{color:var(--gris);margin:0;max-width:34em}
+.lien{display:inline-flex;align-items:center;gap:8px;font-weight:600;text-decoration:none;border-bottom:1px solid currentColor;padding-bottom:3px;margin-top:26px}
+.lien:hover{color:var(--ecaille)}
+/* Atelier */
+.atelier .intro2{display:grid;grid-template-columns:1.1fr 1fr;gap:60px;align-items:end;margin-bottom:56px}
+.atelier .intro2 p{color:#C9C7BF;margin:0}
+.postes{margin-top:22px;font-size:15px;letter-spacing:.12em;text-transform:uppercase;color:var(--ecaille-c)}
+.postes span+span::before{content:" / ";color:#6F665D;letter-spacing:0;margin:0 6px}
+.galerie{display:grid;grid-template-columns:1.5fr 1fr 1fr;grid-template-rows:260px 260px;gap:10px}
+.galerie img{width:100%;height:100%;object-fit:cover;filter:saturate(.92)}
+.galerie .g1{grid-row:1/3}
+.fiche{margin-top:70px;display:grid;grid-template-columns:1fr 1.4fr;gap:60px}
+.fiche table{width:100%;border-collapse:collapse;font-variant-numeric:tabular-nums}
+.fiche td{padding:14px 0;border-bottom:1px solid rgba(236,239,236,.12);vertical-align:top}
+.fiche td:first-child{font-size:14px;color:#A9A49B;width:45%;padding-top:17px}
+.fiche td:last-child{font-size:19px}
+/* Vidéo */
+.yt{position:relative;display:block;width:100%;aspect-ratio:16/9;background:#000 center/cover;border:0;padding:0;cursor:pointer;overflow:hidden}
+.yt::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 50%,rgba(0,0,0,.55))}
+.yt .jouer{position:absolute;left:24px;bottom:22px;z-index:2;display:flex;align-items:center;gap:12px;color:#fff;font-weight:600;font-size:15px}
+.yt .jouer i{width:52px;height:52px;border-radius:50%;background:var(--ecaille);display:flex;align-items:center;justify-content:center;transition:transform .3s var(--ease)}
+.yt:hover .jouer i{transform:scale(1.08)}
+.yt iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.videos{display:grid;grid-template-columns:repeat(6,1fr);gap:14px;margin-top:30px}.videos .yt{grid-column:span 2}.videos .yt:nth-child(4),.videos .yt:nth-child(5){grid-column:span 3}
+@media (max-width:860px){.videos{grid-template-columns:1fr}.videos .yt{grid-column:auto!important}}
+/* Mains */
+.mains{display:grid;grid-template-columns:1.6fr 1fr 1fr;gap:0;border-top:1px solid var(--filet)}
+.main{padding:34px 30px 34px 0;border-bottom:1px solid var(--filet)}
+.main+.main{padding-left:30px;border-left:1px solid var(--filet)}
+.main:first-child blockquote{font-size:clamp(28px,2.8vw,38px)}
+.main blockquote{margin:0 0 18px;font-size:22px;line-height:1.3;letter-spacing:-.01em;font-variation-settings:"wdth" 85}
+.main b{display:block;font-weight:600}.main span{color:var(--gris);font-size:15px}
+/* Visite */
+.visite{display:grid;grid-template-columns:1.2fr 1fr;gap:0;background:var(--nuit2);color:var(--cristal)}
+.visite img{width:100%;height:100%;object-fit:cover;min-height:420px}
+.visite div{padding:64px 56px;align-self:center}
+.visite p{color:#C9C7BF;margin:20px 0 28px}
+.etapes{list-style:none;counter-reset:e;margin:50px 0 0;padding:0;display:grid;grid-template-columns:repeat(3,1fr);gap:0;border-top:1px solid rgba(236,239,236,.14)}
+.etapes li{counter-increment:e;padding:30px 30px 0 0;position:relative}
+.etapes li+li{padding-left:30px;border-left:1px solid rgba(236,239,236,.14)}
+.etapes li::before{content:counter(e) ".";font-size:15px;font-weight:600;color:var(--ecaille-c);margin-right:8px}
+.etapes li:not(:last-child)::after{content:"";position:absolute;right:-7px;top:36px;width:12px;height:12px;border-top:1px solid var(--ecaille);border-right:1px solid var(--ecaille);transform:rotate(45deg);background:var(--nuit);z-index:1}
+.etapes b{display:inline;font-size:21px;font-weight:500;margin-bottom:8px}
+.etapes p{color:#C9C7BF;margin:10px 0 0}
+@media (max-width:860px){.etapes li::after{display:none}.etapes{grid-template-columns:1fr}.etapes li+li{padding-left:0;border-left:0;border-top:1px solid rgba(236,239,236,.14);margin-top:26px}}
+/* Histoire */
+.page-tete{padding:96px 0 60px}
+.page-tete p{font-size:20px;color:var(--gris);max-width:34em;margin-top:22px}
+.nuit .page-tete p{color:#C9C7BF}
+.frise{position:relative;margin:30px 0 0;padding:0;list-style:none}
+.frise::before{content:"";position:absolute;left:118px;top:8px;bottom:8px;width:1px;background:var(--filet)}
+.frise li{display:grid;grid-template-columns:118px 1fr;gap:34px;padding:0 0 38px;position:relative}
+.frise li::before{content:"";position:absolute;left:114px;top:12px;width:9px;height:9px;border-radius:50%;background:var(--ecaille)}
+.frise b[data-t]{font-size:19px;padding-top:6px}
+.frise b{font-size:30px;font-weight:500;font-variation-settings:"wdth" 70;line-height:1;font-variant-numeric:tabular-nums}
+.frise p{max-width:36em;margin:0;padding-top:4px}
+.duo{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
+.duo img{width:100%;object-fit:cover}
+.duo p{color:var(--gris)}
+.nuit .duo p{color:#C9C7BF}
+.panorama{width:100%;height:min(56vw,560px);object-fit:cover}
+/* Valeurs */
+.citation{font-size:clamp(28px,3.4vw,46px);line-height:1.12;letter-spacing:-.02em;font-variation-settings:"wdth" 75;max-width:22em;margin:0 0 16px}
+.badges{display:flex;gap:26px;flex-wrap:wrap;margin-top:28px}
+.badges figure{margin:0;display:flex;align-items:center;gap:14px}
+.badges img{height:78px;width:78px;object-fit:contain;background:#fff;border-radius:50%;padding:4px}
+.badges figcaption{font-size:14px;max-width:14em;line-height:1.4}
+.env{list-style:none;padding:0;margin:26px 0 0}
+.env li{padding:18px 0;border-top:1px solid var(--filet);color:var(--gris)}
+/* Portrait */
+.portraits{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.portraits figure{margin:0}
+.portraits img{width:100%;aspect-ratio:2/3;object-fit:cover}
+.portraits figcaption{padding-top:14px}
+.portraits blockquote{margin:6px 0 0;font-size:19px;line-height:1.35}
+/* News */
+.articles{list-style:none;margin:0;padding:0;border-top:1px solid var(--filet)}
+.articles li{display:grid;grid-template-columns:120px 200px 1fr;gap:30px;padding:26px 0;border-bottom:1px solid var(--filet);align-items:start}
+.articles time{font-family:var(--mono);font-size:12.5px;color:var(--gris);padding-top:4px}
+.articles img{width:200px;height:130px;object-fit:cover;background:#fff}
+.articles h3{margin-bottom:8px}
+.articles p{color:var(--gris);margin:0 0 8px}
+.articles a{font-size:14px}
+/* Recrutement */
+.voies{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--filet)}
+.voie{padding:34px 28px 34px 0;border-bottom:1px solid var(--filet)}
+.voie+.voie{padding-left:28px;border-left:1px solid var(--filet)}
+.voie p{color:var(--gris)}
+/* Contact */
+.contact{display:grid;grid-template-columns:1.25fr 1fr;gap:70px}
+form{display:grid;grid-template-columns:1fr 1fr;gap:18px 20px}
+.champ{display:flex;flex-direction:column;gap:7px}
+.champ.large{grid-column:1/-1}
+label,.leg{font-size:14px;font-weight:600}
+input,select,textarea{font:16px var(--sans);color:var(--encre);background:var(--blanc);border:1px solid rgba(26,21,18,.28);border-radius:2px;padding:13px 14px;transition:border-color .2s,box-shadow .2s}
+input:hover,select:hover,textarea:hover{border-color:rgba(26,21,18,.5)}
+input:focus,select:focus,textarea:focus{outline:none;border-color:var(--encre);box-shadow:0 0 0 3px rgba(201,130,47,.35)}
+textarea{min-height:130px;resize:vertical}
+.choix{display:flex;flex-wrap:wrap;gap:8px}
+.choix label{font-weight:500;display:flex;align-items:center;gap:8px;border:1px solid rgba(26,21,18,.28);border-radius:2px;padding:10px 14px;cursor:pointer;background:var(--blanc)}
+.choix input{accent-color:var(--encre);margin:0}
+.choix label:has(input:checked){border-color:var(--encre);box-shadow:inset 0 0 0 1px var(--encre)}
+fieldset{border:0;padding:0;margin:0;min-width:0;}
+legend{padding:0;margin-bottom:8px}
+fieldset{grid-column:1/-1;display:flex;flex-direction:column;gap:8px}
+.fichier{display:flex;align-items:center;gap:14px;flex-wrap:wrap}.fichier .btn{padding:12px 18px;font-size:14px;cursor:pointer}.fichier input:focus-visible+.btn{outline:2px solid #8A4F14;outline-offset:3px}.fichier .noms{font-size:14px;color:var(--gris)}
+.erreur{color:#A1281B;font-size:13.5px;min-height:0}
+.champ.ko input,.champ.ko textarea{border-color:#A1281B}
+.ok{grid-column:1/-1;background:#E3EAD9;border:1px solid #7C9362;padding:16px;display:none}
+.coord dl{margin:0}
+.coord dt{font-size:13px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--gris);margin-top:22px}
+.sig{font-weight:600;color:#8A5A1E;margin:0 0 10px}.nuit .sig{color:var(--ecaille-c)}
+.coord dd{margin:4px 0 0;font-size:18px}
+/* Pied */
+.pied{background:var(--nuit);color:#B9B4AB;padding:70px 0 40px;font-size:15px}
+.pied .grille{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:40px}
+.pied a{color:var(--cristal);text-decoration:none}.pied a:hover{color:var(--ecaille-c)}
+.pied ul{list-style:none;margin:0;padding:0}.pied li{margin:6px 0}
+.pied .bas{margin-top:50px;padding-top:22px;border-top:1px solid rgba(236,239,236,.1);display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;font-size:13px}
+.fb{display:inline-flex;align-items:center;gap:10px;margin-top:16px}
+.fb svg{width:20px;height:20px}
+/* Conseiller */
+.cs-bouton{position:fixed;right:22px;bottom:22px;z-index:60;display:flex;align-items:center;gap:12px;background:var(--nuit);color:var(--cristal);border:1px solid rgba(232,174,98,.5);border-radius:40px;padding:8px 20px 8px 8px;cursor:pointer;box-shadow:0 14px 34px rgba(10,6,3,.35);font-family:var(--sans);text-align:left}
+.cs-bouton i{width:42px;height:42px;border-radius:50%;background:var(--ecaille);display:flex;align-items:center;justify-content:center;flex:none}
+.cs-bouton b{display:block;font-size:14px}.cs-bouton small{display:block;font-size:12.5px;color:#C9C7BF}
+.cs-bulle{position:fixed;right:22px;bottom:92px;z-index:60;max-width:300px;background:var(--blanc);color:var(--encre);padding:16px 40px 16px 18px;border-radius:4px;box-shadow:0 18px 40px rgba(10,6,3,.25);font-size:15px;display:none}
+.cs-bulle.on{display:block;animation:fondu .5s var(--ease)}
+body{padding-bottom:0}
+.cs-bulle button{position:absolute;right:8px;top:8px;background:none;border:0;font-size:18px;cursor:pointer;color:var(--gris);width:28px;height:28px}
+.cs-panneau{position:fixed;right:22px;bottom:22px;z-index:70;width:min(400px,calc(100vw - 24px));max-height:min(620px,calc(100vh - 40px));background:var(--blanc);border-radius:6px;box-shadow:0 30px 70px rgba(10,6,3,.4);display:none;flex-direction:column;overflow:hidden}
+.cs-panneau.on{display:flex;animation:fondu .4s var(--ease)}
+.cs-haut{background:var(--nuit);color:var(--cristal);padding:16px 18px;display:flex;align-items:center;gap:12px}
+.cs-haut b{display:block}.cs-haut small{color:var(--ecaille-c);font-size:12.5px}
+.cs-haut button{margin-left:auto;background:none;border:1px solid rgba(236,239,236,.3);color:var(--cristal);border-radius:2px;padding:6px 10px;cursor:pointer;font:13px var(--sans)}
+.cs-fil{padding:18px;overflow-y:auto;display:flex;flex-direction:column;gap:12px}
+.msg{max-width:88%;padding:12px 14px;border-radius:4px;font-size:15px;line-height:1.5}
+.msg.ia{background:var(--cristal)}.msg.moi{background:var(--nuit);color:var(--cristal);align-self:flex-end}
+.cs-choix{display:flex;flex-direction:column;gap:8px}
+.cs-choix button{text-align:left;background:#fff;border:1px solid rgba(26,21,18,.22);border-radius:3px;padding:11px 13px;font:500 14.5px var(--sans);cursor:pointer;color:var(--encre)}
+.cs-choix button:hover{border-color:var(--ecaille);background:#FBF6EE}
+.apercu{position:fixed;left:14px;bottom:14px;z-index:30;font-family:var(--mono);font-size:11px;background:var(--blanc);border:1px solid var(--filet);padding:6px 10px;border-radius:20px}
+/* Apparitions */
+.rv{opacity:0;transform:translateY(22px);transition:opacity .9s var(--ease),transform .9s var(--ease)}
+.rv.vu{opacity:1;transform:none}
+/* Tablette et mobile */
+.menu .m-projet{display:none}
+.tete.compact .menu{display:none}.tete.compact .burger{display:block}.tete.compact>.wrap>.btn{display:none}
+.tete.compact .menu.ouvert{display:flex;flex-direction:column;position:absolute;top:72px;left:0;right:0;background:var(--nuit);padding:16px 28px 26px;gap:4px}
+.tete.compact .menu.ouvert a{font-size:18px;padding:10px 0}.tete.compact .menu.ouvert .m-projet{display:inline-flex;margin-top:12px;color:var(--nuit);font-size:16px;padding:14px 22px;opacity:1;align-self:start;border:0}
+body.menu-ouvert .cs-bouton,body.menu-ouvert .cs-bulle{display:none}
+@media (max-width:1080px){
+ .logos{grid-template-columns:repeat(4,1fr)}}
+@media (max-width:860px){section{padding:76px 0}.wrap{padding:0 20px}
+ .heros{padding:44px 0 64px}.heros .wrap{grid-template-columns:1fr;gap:20px}.plaque{order:-1;margin:0 -8px}
+ .maison,.atelier .intro2,.fiche,.duo,.contact,.visite{grid-template-columns:1fr;gap:34px}
+ .maison figure{position:static}.maison figure img{aspect-ratio:4/3}
+ .marques .tete-s{flex-direction:column;align-items:start}
+ .galerie{grid-template-columns:1fr 1fr;grid-template-rows:200px 160px 160px}.galerie .g1{grid-row:auto;grid-column:1/-1}
+ .mains,.voies,.portraits{grid-template-columns:1fr}.main+.main,.voie+.voie{padding-left:0;border-left:0}
+ .visite div{padding:40px 22px}.visite img{min-height:260px}
+ .articles li{grid-template-columns:1fr;gap:12px}.articles img{width:100%;height:190px}
+ form{grid-template-columns:1fr}
+ .frise::before{left:70px}.frise li{grid-template-columns:70px 1fr;gap:22px}.frise li::before{left:66px}.frise b{font-size:22px}
+ .pied .grille{grid-template-columns:1fr}
+ .cs-bouton span{display:none}.cs-bouton{padding:6px;border-radius:50%}.cs-bouton i{width:44px;height:44px}.apercu{display:none}
+ .cs-panneau{right:12px;left:12px;width:auto;bottom:12px}.cs-bulle{right:12px;left:auto;max-width:280px;bottom:78px}.heros{padding-bottom:96px}
+ .logos>*:last-child{grid-column:1/-1}
+ .logos{grid-template-columns:repeat(2,1fr)}.logos a,.logos .logo-s{height:100px}}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}.rv{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+<a class="skip" href="#contenu" data-t="skip"></a>
+<header class="tete">
+ <div class="wrap">
+  <a class="logo" href="#/" aria-label="Optisun"><img src="img/optisun-logo-clair.png" alt="Optisun, maître lunetier"></a>
+  <nav class="menu" id="menu" aria-label="Menu">
+   <a href="#/" data-t="nav_home"></a>
+   <a href="#/histoire" data-t="nav_histoire"></a>
+   <a href="#/valeurs" data-t="nav_valeurs"></a>
+   <a href="#/portrait" data-t="nav_portrait"></a>
+   <a href="#/news" data-t="nav_news"></a>
+   <a href="#/recrutement" data-t="nav_jobs"></a>
+   <a href="#/contact" data-t="nav_contact"></a>
+   <a href="#" data-cs data-t="cs_nom"></a>
+   <a class="btn btn-or m-projet" href="#/contact" data-t="nav_projet"></a>
+  </nav>
+  <label class="langue"><span class="vh" data-t="lang"></span>
+   <select id="langue" aria-label="Langue"><option value="fr">Français</option><option value="en">English</option><option value="es">Español</option><option value="de">Deutsch</option><option value="it">Italiano</option><option value="ja">日本語</option></select></label>
+  <a class="btn btn-or" href="#/contact" data-t="nav_projet"></a>
+  <button class="burger" id="burger" aria-expanded="false" aria-controls="menu" data-t="menu"></button>
+ </div>
+</header>
+
+<main id="contenu">
+<!-- ACCUEIL -->
+<div class="vue" data-vue="">
+ <section class="heros nuit">
+  <div class="wrap">
+   <div>
+    <h1><span class="l"><span data-t="h1_a"></span></span><span class="l"><span data-t="h1_b"></span></span></h1>
+    <p class="intro" data-t="hero_p"></p>
+    <div class="actions"><a class="btn btn-or" href="#/contact" data-t="cta_projet"></a><a class="btn btn-trait" href="#atelier" data-t="cta_atelier"></a></div>
+    <div class="labels"><img src="img/logo-epv.jpg" alt=""><span data-t="label_epv"></span><img src="img/originain-bleu-vecto.png" alt=""><span data-t="label_oa"></span></div>
+   </div>
+   <div class="plaque" aria-hidden="true">
+    <svg viewBox="0 0 600 330" id="usinage">
+     <defs>
+      <filter id="ecaille" x="0" y="0" width="100%" height="100%">
+       <feTurbulence type="fractalNoise" baseFrequency="0.011 0.034" numOctaves="3" seed="11"/>
+       <feColorMatrix type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  1.6 0 0 0 -.3"/>
+       <feComponentTransfer><feFuncA type="table" tableValues="0 .2 .55 .9 1"/></feComponentTransfer>
+       <feComposite in="SourceGraphic" operator="in" result="taches"/>
+       <feTurbulence type="fractalNoise" baseFrequency="0.02 0.09" numOctaves="2" seed="4" result="b"/>
+       <feColorMatrix in="b" type="matrix" values="0 0 0 0 .35  0 0 0 0 .16  0 0 0 0 .05  0 0 0 .9 0" result="fibres"/>
+       <feMerge><feMergeNode in="fibres"/><feMergeNode in="taches"/></feMerge>
+      </filter>
+      <linearGradient id="miel" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#E8A955"/><stop offset=".5" stop-color="#B8661F"/><stop offset="1" stop-color="#7A3A10"/></linearGradient>
+      <radialGradient id="lustre" cx=".3" cy=".2" r=".9"><stop offset="0" stop-color="#fff" stop-opacity=".35"/><stop offset=".45" stop-color="#fff" stop-opacity="0"/></radialGradient>
+      <path id="contour" d="M60,72 C60,58 72,52 92,52 L250,52 C272,52 282,62 286,80 C292,72 308,72 314,80 C318,62 328,52 350,52 L508,52 C528,52 540,58 540,72 L540,150 C540,205 505,232 455,232 L405,232 C350,232 322,200 314,140 C308,128 292,128 286,140 C278,200 250,232 195,232 L145,232 C95,232 60,205 60,150 Z"/>
+      <path id="verreG" d="M84,82 C84,75 90,72 99,72 L250,72 C262,72 268,80 266,96 L262,150 C258,192 236,212 196,212 L146,212 C106,212 84,192 84,152 Z"/>
+      <path id="verreD" d="M516,82 C516,75 510,72 501,72 L350,72 C338,72 332,80 334,96 L338,150 C342,192 364,212 404,212 L454,212 C494,212 516,192 516,152 Z"/>
+      <mask id="face"><use href="#contour" fill="#fff"/><use href="#verreG" fill="#000"/><use href="#verreD" fill="#000"/></mask>
+      <path id="brancheP" d="M44,272 L498,272 C532,272 556,282 572,304 L564,309 C550,292 530,291 498,291 L44,291 C40,291 38,288 38,284 L38,279 C38,275 40,272 44,272 Z"/><clipPath id="branche"><use href="#brancheP"/></clipPath>
+     </defs>
+     <!-- la plaque d'acétate -->
+     <g id="plaqueG"><rect x="18" y="20" width="564" height="236" rx="6" fill="url(#miel)" opacity=".22"/>
+     <rect x="18" y="20" width="564" height="236" rx="6" fill="#000" filter="url(#ecaille)" opacity=".28"/>
+     <rect x="18.5" y="20.5" width="563" height="235" rx="6" fill="none" stroke="rgba(232,174,98,.28)"/></g>
+     <!-- cotes du plan -->
+     <g class="cotes" opacity="0">
+      <line class="cote-l" x1="60" y1="36" x2="540" y2="36"/><line class="cote-l" x1="60" y1="31" x2="60" y2="41"/><line class="cote-l" x1="540" y1="31" x2="540" y2="41"/>
+      <text class="cote" x="300" y="30" text-anchor="middle">140.0</text>
+      <line class="cote-l" x1="556" y1="52" x2="556" y2="232"/><line class="cote-l" x1="551" y1="52" x2="561" y2="52"/><line class="cote-l" x1="551" y1="232" x2="561" y2="232"/>
+      <text class="cote" x="570" y="142" text-anchor="middle" transform="rotate(-90 570 142)">46.5</text>
+      <text class="cote" x="300" y="120" text-anchor="middle">18</text>
+     </g>
+     <!-- la face découpée -->
+     <g id="monture" opacity="0" style="filter:drop-shadow(0 14px 14px rgba(0,0,0,.55))">
+      <g mask="url(#face)">
+       <rect x="40" y="40" width="520" height="210" fill="url(#miel)"/>
+       <rect x="40" y="40" width="520" height="210" fill="#000" filter="url(#ecaille)"/>
+       <rect x="40" y="40" width="520" height="210" fill="url(#lustre)"/>
+      </g>
+     </g>
+     <use href="#contour" class="trace" id="t1"/>
+     <use href="#verreG" class="trace" id="t2"/>
+     <use href="#verreD" class="trace" id="t3"/>
+     <g id="fraise" opacity="0"><circle r="9" fill="none" stroke="rgba(255,214,150,.55)" stroke-width="1"/><circle r="5.5" fill="#D9D4CB" stroke="#8C857B" stroke-width="1"/><path d="M-3,-3 L3,3 M3,-3 L-3,3" stroke="#6B645B" stroke-width="1.1" id="dents"/><circle r="1.6" class="etincelle"/></g>
+     <g id="copeaux"></g>
+     <!-- la branche, gravée au laser -->
+     <g id="brancheG" opacity="0">
+      <use href="#brancheP" fill="url(#miel)"/>
+      <g clip-path="url(#branche)"><rect x="36" y="268" width="540" height="44" fill="#000" filter="url(#ecaille)"/><rect x="36" y="268" width="540" height="44" fill="url(#lustre)"/><rect x="36" y="272" width="470" height="19" fill="rgba(10,6,3,.35)"/></g>
+      <rect x="30" y="274" width="10" height="15" rx="2" fill="#B9B3A8"/>
+      <text class="grav-ombre" x="270" y="287.6" text-anchor="middle" id="gravO"></text>
+      <text class="grav" x="270" y="286.8" text-anchor="middle" id="grav"></text>
+     </g>
+     <circle r="2.6" class="etincelle" id="laser" cx="0" cy="282" opacity="0"/>
+    </svg>
+   </div>
+  </div>
+ </section>
+
+ <section class="marques">
+  <div class="wrap">
+   <div class="tete-s rv"><h2 data-t="confiance_h"></h2><p data-t="confiance_p"></p></div>
+   <div class="logos rv">
+    <a href="https://www.ahlemeyewear.com/" target="_blank" rel="noopener"><img src="img/ahlem.jpg" alt="Ahlem"></a>
+    <a href="https://anneetvalentin.com/" target="_blank" rel="noopener"><img src="img/anne-et-valentin-lunettes.jpg" alt="Anne et Valentin"></a>
+    <a href="https://ursprung-swiss.ch/" target="_blank" rel="noopener"><img src="img/ursprung-swiss.jpg" alt="Ursprung Swiss"></a>
+    <a href="https://www.veryfrenchgangsters.com/" target="_blank" rel="noopener"><img src="img/very-french-gangsters.jpg" alt="Very French Gangsters"></a>
+    <a href="http://vuedc.fr/" target="_blank" rel="noopener"><img src="img/vuedc.jpg" alt="Vue DC"></a>
+    <span class="logo-s"><img src="img/shelter.png" alt="Shelter, créateur lunetier"></span>
+    <span class="logo-s"><img src="img/opal.png" alt="Opal Demetz"></span>
+   </div>
+  </div>
+ </section>
+
+ <section style="padding-top:20px">
+  <div class="wrap maison">
+   <figure class="rv"><img src="img/fabricant-lunettes-oyonnax.jpg" alt="Polissage d'une monture en acétate à l'atelier Optisun" loading="lazy"></figure>
+   <div>
+    <h2 class="rv" data-t="pil_h"></h2>
+    <div style="margin-top:40px">
+     <div class="pilier rv"><h3 data-t="p1_h"></h3><p data-t="p1_t"></p></div>
+     <div class="pilier rv"><h3 data-t="p2_h"></h3><p data-t="p2_t"></p></div>
+     <div class="pilier rv"><h3 data-t="p3_h"></h3><p data-t="p3_t"></p></div>
+    </div>
+    <a class="lien rv" href="#/histoire" data-t="nav_histoire"></a>
+   </div>
+  </div>
+ </section>
+
+ <section class="atelier nuit" id="atelier">
+  <div class="wrap">
+   <div class="intro2"><h2 class="rv" data-t="at_h"></h2><div class="rv"><p data-t="at_p"></p></div></div>
+   <div class="galerie rv">
+    <img class="g1" src="img/20180426-081438.jpg" alt="Polissage d'une monture à l'atelier" loading="lazy" style="object-position:40% 50%">
+    <img src="img/lunettes-fabriquees-main.jpg" alt="Monture tenue à la main pendant une étape de fabrication" loading="lazy">
+    <img src="img/fabricant-lunettes-rhone-alpes.jpg" alt="Machine de l'atelier Optisun" loading="lazy">
+    <img src="img/lunettes-fabrication-ain.jpg" alt="Gestes de fabrication sur une monture" loading="lazy">
+    <img src="img/lunettes-france-fabrication.jpg" alt="Monture en acétate tenue pendant sa fabrication" loading="lazy">
+   </div>
+   <div class="fiche">
+    <div class="rv"><h2 style="font-size:clamp(28px,3vw,40px)" data-t="fiche_h"></h2><p style="color:#C9C7BF;margin-top:22px;max-width:24em" data-t="c3_t"></p></div>
+    <table class="rv"><tbody>
+     <tr><td data-t="f_creation"></td><td>1985</td></tr>
+     <tr><td data-t="f_equipe"></td><td data-t="f_equipe_v"></td></tr>
+     <tr><td data-t="f_usinage"></td><td data-t="f_usinage_v"></td></tr>
+     <tr><td data-t="f_laser"></td><td data-t="f_laser_v"></td></tr>
+     <tr><td data-t="f_matieres"></td><td data-t="f_matieres_v"></td></tr>
+     <tr><td data-t="f_collab"></td><td>42</td></tr>
+     <tr><td data-t="f_recomp"></td><td>3</td></tr>
+     <tr><td data-t="f_idees"></td><td>340</td></tr>
+    </tbody></table>
+   </div>
+  </div>
+ </section>
+
+ <section>
+  <div class="wrap">
+   <h2 class="rv" data-t="video_h" style="margin-bottom:34px"></h2>
+   <button class="yt rv" data-yt="tfrilOGQCY0" style="background-image:url(https://i.ytimg.com/vi/tfrilOGQCY0/hqdefault.jpg)"><span class="jouer"><i><svg width="18" height="18" viewBox="0 0 24 24"><path d="M7 4l14 8-14 8z" fill="#15100C"/></svg></i><span data-t="video_play"></span></span></button>
+  </div>
+ </section>
+
+ <section style="padding-top:20px">
+  <div class="wrap">
+   <h2 class="rv" data-t="mains_h" style="margin-bottom:40px"></h2>
+   <div class="mains rv">
+    <div class="main"><blockquote data-t="m1_q"></blockquote><b data-t="m1_n"></b><span data-t="m1_d"></span></div>
+    <div class="main"><blockquote data-t="m2_q"></blockquote><b data-t="m2_n"></b><span data-t="m2_d"></span></div>
+    <div class="main"><blockquote data-t="m3_q"></blockquote><b data-t="m3_n"></b><span data-t="m3_d"></span></div>
+   </div>
+   <a class="lien" href="#/portrait" data-t="mains_more"></a>
+  </div>
+ </section>
+
+ <section style="padding:0">
+  <div class="visite rv">
+   <img src="img/equipe-optisun-lunettes.jpg" alt="L'équipe Optisun devant l'usine d'Oyonnax" loading="lazy">
+   <div><h2 data-t="visite_h"></h2><p data-t="visite_p"></p><a class="btn btn-or" href="https://www.manufacture.tours/entreprise/optisun/" target="_blank" rel="noopener" data-t="visite_cta"></a></div>
+  </div>
+ </section>
+
+ <section class="nuit" style="padding:96px 0">
+  <div class="wrap">
+   <h2 class="rv" data-t="comment_h" style="max-width:14em"></h2>
+   <ol class="etapes rv">
+    <li><b data-t="c1_h"></b><p data-t="c1_t"></p></li>
+    <li><b data-t="c2_h"></b><p data-t="c2_t"></p></li>
+    <li><b data-t="c3_h"></b><p data-t="c3_t"></p></li>
+   </ol>
+  </div>
+ </section>
+ <section id="projet-accueil">
+  <div class="wrap contact" data-contact></div>
+ </section>
+</div>
+
+<!-- HISTOIRE -->
+<div class="vue" data-vue="histoire">
+ <div class="page-tete"><div class="wrap"><h1 style="font-size:clamp(40px,5.6vw,80px)" data-t="hi_h"></h1><p data-t="hi_lead"></p></div></div>
+ <img class="panorama" src="img/usine-optisun-lunettes-oyonnax.jpg" alt="L'usine Optisun à Oyonnax, de nuit" loading="lazy">
+ <section><div class="wrap"><ol class="frise">
+  <li class="rv"><b>1980</b><p data-t="y1980"></p></li>
+  <li class="rv"><b>1985</b><p data-t="y1985"></p></li>
+  <li class="rv"><b>1990</b><p data-t="y1990"></p></li>
+  <li class="rv"><b>2013</b><p data-t="y2013"></p></li>
+  <li class="rv"><b>2014</b><p data-t="y2014"></p></li>
+  <li class="rv"><b>2025</b><p data-t="y2025"></p></li>
+  <li class="rv"><b data-t="ynow_t"></b><p data-t="ynow"></p></li>
+ </ol></div></section>
+ <section class="nuit"><div class="wrap duo">
+  <img class="rv" src="img/optisun-usine.jpg" alt="L'usine Optisun rue Michelet : vieux murs et extension moderne" loading="lazy" style="aspect-ratio:4/3">
+  <div class="rv"><h2 data-t="murs_h"></h2><p style="margin-top:28px" data-t="murs_1"></p><p data-t="murs_2"></p><p data-t="murs_3"></p></div>
+ </div></section>
+</div>
+
+<!-- VALEURS -->
+<div class="vue" data-vue="valeurs">
+ <div class="page-tete"><div class="wrap"><h1 style="font-size:clamp(40px,5.6vw,80px)" data-t="va_h"></h1><p data-t="va_p"></p>
+  <div class="badges"><figure><img src="img/logo-epv.jpg" alt=""><figcaption data-t="label_epv"></figcaption></figure><figure><img src="img/originain-bleu-vecto.png" alt=""><figcaption data-t="label_oa"></figcaption></figure></div></div></div>
+ <section class="nuit"><div class="wrap duo">
+  <div class="rv"><p class="citation" data-t="va_quote"></p><p class="sig" data-t="va_quote_a"></p><p style="margin-top:30px" data-t="va_inno"></p></div>
+  <img class="rv" src="img/fabricant-de-lunettes-france.jpg" alt="Tonneau de shootage en bois rempli de copeaux" loading="lazy" style="aspect-ratio:4/3;object-fit:cover;object-position:30% 70%">
+ </div></section>
+ <section><div class="wrap duo">
+  <img class="rv" src="img/optisun-ecoresponsable.jpg" alt="Le bâtiment écoresponsable d'Optisun" loading="lazy">
+  <div class="rv"><h2 data-t="env_h"></h2><ul class="env"><li data-t="env_1"></li><li data-t="env_2"></li><li data-t="env_3"></li></ul></div>
+ </div></section>
+ <section style="padding-top:0"><div class="wrap"><h2 class="rv" data-t="video_h"></h2><div class="videos" id="videosValeurs"></div></div></section>
+</div>
+
+<!-- PORTRAIT -->
+<div class="vue" data-vue="portrait">
+ <div class="page-tete"><div class="wrap"><h1 style="font-size:clamp(40px,5.6vw,80px)" data-t="po_h"></h1><p data-t="po_p"></p></div></div>
+ <section style="padding-top:10px"><div class="wrap">
+  <div class="portraits">
+   <figure class="rv"><img src="img/lunettes-france-fabrication.jpg" alt="Gestes de finition sur une monture" loading="lazy"><figcaption><b data-t="m1_n"></b> · <span data-t="m1_d"></span><blockquote data-t="m1_q"></blockquote></figcaption></figure>
+   <figure class="rv"><img src="img/lunettes-fabriquees-main.jpg" alt="Monture en cours de fabrication" loading="lazy"><figcaption><b data-t="m2_n"></b> · <span data-t="m2_d"></span><blockquote data-t="m2_q"></blockquote></figcaption></figure>
+   <figure class="rv"><img src="img/lunettes-fabrication-ain.jpg" alt="Gestes de découpe sur une monture" loading="lazy"><figcaption><b data-t="m3_n"></b> · <span data-t="m3_d"></span><blockquote data-t="m3_q"></blockquote></figcaption></figure>
+  </div>
+  <div style="margin-top:60px"><button class="yt rv" data-yt="tfrilOGQCY0" style="background-image:url(https://i.ytimg.com/vi/tfrilOGQCY0/hqdefault.jpg)"><span class="jouer"><i><svg width="18" height="18" viewBox="0 0 24 24"><path d="M7 4l14 8-14 8z" fill="#15100C"/></svg></i><span data-t="video_play"></span></span></button></div>
+ </div></section>
+</div>
+
+<!-- NEWS -->
+<div class="vue" data-vue="news">
+ <div class="page-tete"><div class="wrap"><h1 style="font-size:clamp(40px,5.6vw,80px)" data-t="news_h"></h1></div></div>
+ <section style="padding-top:0"><div class="wrap"><ul class="articles" id="articles"></ul></div></section>
+</div>
+
+<!-- RECRUTEMENT -->
+<div class="vue" data-vue="recrutement">
+ <div class="page-tete"><div class="wrap duo" style="align-items:end"><div><h1 style="font-size:clamp(40px,5.6vw,80px)" data-t="jobs_h"></h1><p data-t="jobs_p"></p></div><img src="img/1716874729772.jpg" alt="L'équipe Optisun au défi sportif inter-entreprises 2024" loading="lazy"></div></div>
+ <section style="padding-top:20px"><div class="wrap">
+  <div class="voies">
+   <div class="voie rv"><h3 data-t="job1_h"></h3><p style="margin-top:10px" data-t="job1_t"></p><p data-t="job_poste"></p><a class="lien" href="https://fr.indeed.com/job/responsable-bureau-detudes-hf-a3eff23ca58cbbc4" target="_blank" rel="noopener" data-t="job1_c"></a></div>
+   <div class="voie rv"><h3 data-t="job2_h"></h3><p style="margin-top:10px" data-t="job2_t"></p><a class="lien" href="mailto:recrutement@optisun.fr?subject=Demande%20de%20stage" data-t="job_mail"></a></div>
+   <div class="voie rv"><h3 data-t="job3_h"></h3><p style="margin-top:10px" data-t="job3_t"></p><a class="lien" href="mailto:recrutement@optisun.fr?subject=Candidature%20spontan%C3%A9e" data-t="job_mail"></a></div>
+  </div>
+  <img class="rv" src="img/nous-recrutons.jpg" alt="Affiche : Optisun recrute des opérateurs sur lunettes et des techniciens de maintenance" loading="lazy" style="margin-top:60px;width:100%;max-width:560px;height:auto">
+ </div></section>
+</div>
+
+<!-- CONTACT -->
+<div class="vue" data-vue="contact">
+ <section><div class="wrap contact" data-contact></div></section>
+</div>
+</main>
+
+<template id="tplContact">
+ <div>
+  <h2 data-t="co_h"></h2><p style="color:var(--gris);margin:18px 0 30px;max-width:32em" data-t="co_p"></p>
+  <form novalidate>
+   <div class="champ"><label data-t="fo_marque" for="f-marque"></label><input id="f-marque" name="marque" autocomplete="organization" required><span class="erreur"></span></div>
+   <div class="champ"><label data-t="fo_nom" for="f-nom"></label><input id="f-nom" name="nom" autocomplete="name" required><span class="erreur"></span></div>
+   <div class="champ"><label data-t="fo_email" for="f-email"></label><input id="f-email" name="email" type="email" autocomplete="email" required><span class="erreur"></span></div>
+   <div class="champ"><label data-t="fo_tel" for="f-tel"></label><input id="f-tel" name="tel" type="tel" autocomplete="tel"></div>
+   <fieldset><legend class="leg" data-t="fo_type"></legend><div class="choix"><label><input type="radio" name="type" value="optique" checked><span data-t="fo_t1"></span></label><label><input type="radio" name="type" value="solaire"><span data-t="fo_t2"></span></label><label><input type="radio" name="type" value="deux"><span data-t="fo_t3"></span></label></div></fieldset>
+   <fieldset><legend class="leg" data-t="fo_mat"></legend><div class="choix"><label><input type="radio" name="mat" value="acetate" checked><span data-t="fo_m1"></span></label><label><input type="radio" name="mat" value="combinee"><span data-t="fo_m2"></span></label><label><input type="radio" name="mat" value="ensemble"><span data-t="fo_m3"></span></label></div></fieldset>
+   <div class="champ large"><label data-t="fo_msg" for="f-msg"></label><textarea id="f-msg" name="msg" required data-tp="fo_msg_ph"></textarea><span class="erreur"></span></div>
+   <div class="champ large"><label data-t="fo_fichier" for="f-fichier" class="lbl-f"></label><span class="fichier"><input class="vh" id="f-fichier" name="fichier" type="file" accept=".pdf,.dxf,image/*" multiple aria-describedby="aide-fichier"><span class="btn btn-trait" aria-hidden="true" data-t="fo_fichier_btn"></span><span class="noms"></span></span><small id="aide-fichier" style="color:var(--gris)" data-t="fo_fichier_aide"></small></div>
+   <div class="ok" role="status" data-t="fo_ok"></div>
+   <div><button class="btn btn-or" type="submit" data-t="fo_send"></button></div>
+  </form>
+ </div>
+ <div class="coord">
+  <blockquote class="citation" style="font-size:clamp(24px,2.4vw,32px)" data-t="va_quote"></blockquote><p class="sig" data-t="va_quote_a"></p>
+  <dl>
+   <dt data-t="co_adresse"></dt><dd>56 rue Michelet<br>01100 Oyonnax, France<br><a href="https://www.google.com/maps/dir/?api=1&amp;destination=56+rue+Michelet+01100+Oyonnax" target="_blank" rel="noopener" data-t="co_itin" style="font-size:15px"></a></dd>
+   <dt data-t="co_horaires"></dt><dd data-t="co_horaires_v"></dd>
+   <dt data-t="co_tel"></dt><dd><a href="tel:+33474738744">+33 (0)4 74 73 87 44</a><br><a href="tel:+33474772183">+33 (0)4 74 77 21 83</a></dd>
+   <dt>E-mail</dt><dd><a href="mailto:optisun@optisun.fr">optisun@optisun.fr</a></dd>
+  </dl>
+ </div>
+</template>
+
+<footer class="pied nuit">
+ <div class="wrap">
+  <div class="grille">
+   <div><img src="img/optisun-logo-clair.png" alt="Optisun" style="height:44px"><p style="margin-top:18px;max-width:24em" data-t="pied"></p>
+    <a class="fb" href="https://www.facebook.com/optisun.oyonnax/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M13.5 21v-7.5h2.6l.4-3h-3V8.6c0-.9.3-1.5 1.5-1.5h1.6V4.4c-.3 0-1.2-.1-2.3-.1-2.3 0-3.8 1.4-3.8 3.9v2.3H8v3h2.5V21z"/></svg><span data-t="suivre"></span></a></div>
+   <ul><li><a href="#/histoire" data-t="nav_histoire"></a></li><li><a href="#/valeurs" data-t="nav_valeurs"></a></li><li><a href="#/portrait" data-t="nav_portrait"></a></li><li><a href="#/news" data-t="nav_news"></a></li><li><a href="#/recrutement" data-t="nav_jobs"></a></li></ul>
+   <ul><li>56 rue Michelet, 01100 Oyonnax</li><li><a href="tel:+33474738744">+33 (0)4 74 73 87 44</a></li><li><a href="mailto:optisun@optisun.fr">optisun@optisun.fr</a></li><li data-t="co_horaires_v"></li><li><a href="#/contact" data-t="nav_contact"></a> · <a href="#/contact" data-t="nav_projet"></a></li></ul>
+  </div>
+  <div class="bas"><span>© 2012 – 2026 Optisun</span><span data-t="apercu"></span></div>
+ </div>
+</footer>
+
+<button class="cs-bouton" id="csBouton" data-cs><i><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#15100C" stroke-width="2"><circle cx="7" cy="13" r="4"/><circle cx="17" cy="13" r="4"/><path d="M11 13h2M3 12l-1-3M21 12l1-3"/></svg></i><span><b data-t="cs_nom"></b><small data-t="cs_sous"></small></span></button>
+<div class="cs-bulle" id="csBulle" role="status"><span data-t="cs_bulle"></span><button aria-label="Fermer" id="csBulleX">×</button></div>
+<div class="cs-panneau" id="csPanneau" role="dialog" aria-modal="false" aria-labelledby="csTitre">
+ <div class="cs-haut"><div><b id="csTitre" data-t="cs_nom"></b><small data-t="cs_virtuel"></small></div><button id="csFermer" data-t="cs_close"></button></div>
+ <div class="cs-fil" id="csFil"></div>
+</div>
+
+<script>
+var T={"nav_home": ["Accueil", "Home", "Inicio", "Startseite", "Home", "ホーム"], "nav_atelier": ["L'atelier", "The workshop", "El taller", "Die Werkstatt", "L'atelier", "工房"], "nav_histoire": ["Notre histoire", "Our story", "Nuestra historia", "Unsere Geschichte", "La nostra storia", "私たちの歩み"], "nav_valeurs": ["Nos valeurs", "Our values", "Nuestros valores", "Unsere Werte", "I nostri valori", "私たちの価値観"], "nav_portrait": ["Portrait des mains", "Portrait of the hands", "Retrato de las manos", "Porträt der Hände", "Ritratto delle mani", "職人の手"], "nav_news": ["News", "News", "Noticias", "Neuigkeiten", "News", "ニュース"], "nav_jobs": ["Rejoignez-nous", "Join us", "Únase a nosotros", "Arbeiten bei uns", "Lavora con noi", "採用情報"], "nav_contact": ["Contact", "Contact", "Contacto", "Kontakt", "Contatti", "お問い合わせ"], "nav_projet": ["Lancer un projet", "Start a project", "Iniciar un proyecto", "Projekt starten", "Avviare un progetto", "ご相談はこちら"], "lang": ["Langue", "Language", "Idioma", "Sprache", "Lingua", "言語"], "menu": ["Menu", "Menu", "Menú", "Menü", "Menu", "メニュー"], "h1_a": ["Vos montures,", "Your frames,", "Sus monturas,", "Ihre Brillenfassungen,", "Le vostre montature,", "あなたのフレームを、"], "h1_b": ["fabriquées à Oyonnax.", "made in Oyonnax.", "fabricadas en Oyonnax.", "gefertigt in Oyonnax.", "realizzate a Oyonnax.", "オヨナで製造します。"], "hero_p": ["Depuis 1985, Optisun fabrique des montures optiques et solaires en acétate et combinées pour les créateurs lunetiers. Vous dessinez, nous fabriquons.", "Since 1985, Optisun has been making optical and sun frames in acetate and combined materials for eyewear designers. You design, we make.", "Desde 1985, Optisun fabrica monturas ópticas y solares de acetato y combinadas para creadores de gafas. Usted diseña, nosotros fabricamos.", "Seit 1985 fertigt Optisun Korrektions- und Sonnenbrillenfassungen aus Acetat und Materialkombinationen für Brillendesigner. Sie entwerfen, wir fertigen.", "Dal 1985 Optisun produce montature da vista e da sole in acetato e combinate per i creatori di occhiali. Voi disegnate, noi realizziamo.", "1985年より、オプティサンはアイウェアデザイナーのために、アセテートおよびコンビネーション素材の眼鏡・サングラスフレームを製造しています。デザインはあなたが、製造は私たちが。"], "cta_projet": ["Lancer un projet de fabrication", "Start a manufacturing project", "Iniciar un proyecto de fabricación", "Fertigungsprojekt starten", "Avviare un progetto di produzione", "製造のご相談"], "cta_atelier": ["Entrer dans l'atelier", "Step into the workshop", "Entrar en el taller", "Die Werkstatt betreten", "Entrare nell'atelier", "工房をのぞく"], "grave": ["FABRIQUÉ À OYONNAX · DEPUIS 1985", "MADE IN OYONNAX · SINCE 1985", "FABRICADO EN OYONNAX · DESDE 1985", "GEFERTIGT IN OYONNAX · SEIT 1985", "REALIZZATO A OYONNAX · DAL 1985", "FABRIQUÉ À OYONNAX · DEPUIS 1985"], "label_epv": ["Entreprise du Patrimoine Vivant, 2014 et 2022", "Living Heritage Company, 2014 and 2022", "Empresa del Patrimonio Vivo, 2014 y 2022", "Unternehmen des lebendigen Erbes, 2014 und 2022", "Impresa del Patrimonio Vivente, 2014 e 2022", "無形文化財企業（EPV）認定 2014年・2022年"], "label_oa": ["Label Origin'Ain, 2025", "Origin'Ain label, 2025", "Sello Origin'Ain, 2025", "Label Origin'Ain, 2025", "Marchio Origin'Ain, 2025", "Origin'Ain ラベル 2025年"], "confiance_h": ["Ils nous confient leurs collections", "They trust us with their collections", "Nos confían sus colecciones", "Sie vertrauen uns ihre Kollektionen an", "Ci affidano le loro collezioni", "私たちにコレクションを託すブランド"], "confiance_p": ["Des maisons de créateurs, en France et ailleurs, font fabriquer leurs montures chez nous.", "Designer houses, in France and beyond, have their frames made with us.", "Casas de creadores, en Francia y fuera, fabrican sus monturas con nosotros.", "Designerhäuser in Frankreich und darüber hinaus lassen ihre Fassungen bei uns fertigen.", "Case di creatori, in Francia e altrove, fanno realizzare da noi le loro montature.", "フランス国内外のデザイナーブランドが、私たちにフレームの製造を任せています。"], "pil_h": ["Une maison de famille, une usine de précision", "A family house, a precision factory", "Una casa familiar, una fábrica de precisión", "Ein Familienbetrieb, eine Präzisionsfabrik", "Una casa di famiglia, una fabbrica di precisione", "家族経営の会社、精密な工場"], "p1_h": ["Un héritage familial", "A family legacy", "Un legado familiar", "Ein Familienerbe", "Un patrimonio di famiglia", "家族の伝統"], "p1_t": ["Edmond Maitre a commencé dans son garage. Son fils Olivier a modernisé l'usine. Le savoir-faire, lui, est resté.", "Edmond Maitre started out in his garage. His son Olivier modernised the factory. The know-how stayed.", "Edmond Maitre empezó en su garaje. Su hijo Olivier modernizó la fábrica. El saber hacer se quedó.", "Edmond Maitre begann in seiner Garage. Sein Sohn Olivier modernisierte die Fabrik. Das Können ist geblieben.", "Edmond Maitre ha iniziato nel suo garage. Il figlio Olivier ha modernizzato la fabbrica. Il saper fare è rimasto.", "エドモン・メートルはガレージから始めました。息子のオリヴィエが工場を近代化し、技はそのまま受け継がれています。"], "p2_h": ["L'expertise", "Expertise", "La experiencia", "Expertise", "L'esperienza", "専門性"], "p2_t": ["Notre bureau d’études et notre bureau des méthodes vous conseillent et donnent forme à vos projets, du dessin à la série.", "Our design office and methods office advise you and shape your projects, from drawing to production run.", "Nuestra oficina técnica y nuestra oficina de métodos le asesoran y dan forma a sus proyectos, del dibujo a la serie.", "Unser Konstruktionsbüro und unsere Arbeitsvorbereitung beraten Sie und setzen Ihre Projekte um, von der Zeichnung bis zur Serie.", "Il nostro ufficio tecnico e l’ufficio metodi vi consigliano e danno forma ai vostri progetti, dal disegno alla serie.", "設計部門と生産技術部門が、図面から量産まで、あなたのプロジェクトをサポートし形にします。"], "p3_h": ["L'innovation", "Innovation", "La innovación", "Innovation", "L'innovazione", "革新"], "p3_t": ["Nous gardons les gestes traditionnels et avançons avec de nouvelles méthodes de production, pour fabriquer mieux.", "We keep the traditional skills and move forward with new production methods, to make things better.", "Mantenemos los gestos tradicionales y avanzamos con nuevos métodos de producción, para fabricar mejor.", "Wir bewahren die traditionellen Handgriffe und entwickeln neue Fertigungsmethoden, um besser zu produzieren.", "Conserviamo i gesti tradizionali e avanziamo con nuovi metodi di produzione, per produrre meglio.", "伝統的な技を守りながら、新しい生産方法を取り入れ、より良いものづくりを目指しています。"], "at_h": ["Dans l'atelier", "Inside the workshop", "En el taller", "In der Werkstatt", "Nell'atelier", "工房の中で"], "at_p": ["L'acétate arrive en plaque. Il repart en monture, après être passé entre de nombreuses mains et machines.", "Acetate arrives in sheets. It leaves as a frame, after passing through many hands and machines.", "El acetato llega en planchas. Sale convertido en montura, tras pasar por muchas manos y máquinas.", "Das Acetat kommt als Platte an. Es verlässt uns als Fassung, nachdem es durch viele Hände und Maschinen gegangen ist.", "L'acetato arriva in lastre. Riparte come montatura, dopo essere passato da molte mani e macchine.", "アセテートは板の状態で届き、多くの職人の手と機械を経て、フレームとなって出荷されます。"], "at_d1": ["Découpe", "Cutting", "Corte", "Zuschnitt", "Taglio", "切断"], "at_d2": ["Usinage", "Machining", "Mecanizado", "Fräsen", "Lavorazione", "切削加工"], "at_d3": ["Shootage", "Tumbling", "Pulido en tambor", "Trommeln", "Burattatura", "バレル研磨"], "at_d4": ["Finition", "Finishing", "Acabado", "Endbearbeitung", "Finitura", "仕上げ"], "fiche_h": ["Fiche technique de la maison", "The company at a glance", "Ficha técnica de la casa", "Steckbrief des Hauses", "Scheda tecnica della casa", "会社概要"], "f_creation": ["Création", "Founded", "Fundación", "Gegründet", "Fondazione", "設立"], "f_equipe": ["Collaborateurs", "Employees", "Empleados", "Mitarbeitende", "Collaboratori", "従業員数"], "f_equipe_v": ["environ 50", "about 50", "unos 50", "rund 50", "circa 50", "約50名"], "f_usinage": ["Centres d'usinage", "Machining centres", "Centros de mecanizado", "Bearbeitungszentren", "Centri di lavoro", "マシニングセンタ"], "f_usinage_v": ["20 (3, 4 et 5 axes)", "20 (3, 4 and 5 axes)", "20 (3, 4 y 5 ejes)", "20 (3-, 4- und 5-Achs)", "20 (3, 4 e 5 assi)", "20台（3・4・5軸）"], "f_laser": ["Lasers", "Lasers", "Láseres", "Laser", "Laser", "レーザー"], "f_laser_v": ["découpe et marquage", "cutting and marking", "corte y marcado", "Schneiden und Markieren", "taglio e marcatura", "切断・刻印"], "f_matieres": ["Matières", "Materials", "Materiales", "Materialien", "Materiali", "素材"], "f_matieres_v": ["acétate et combinées", "acetate and combined", "acetato y combinadas", "Acetat und kombiniert", "acetato e combinate", "アセテート・コンビネーション"], "f_collab": ["Collaborations", "Collaborations", "Colaboraciones", "Kooperationen", "Collaborazioni", "コラボレーション"], "f_idees": ["Idées par an", "Ideas per year", "Ideas al año", "Ideen pro Jahr", "Idee all’anno", "年間アイデア数"], "f_recomp": ["Récompenses mondiales", "Global awards", "Premios mundiales", "Internationale Auszeichnungen", "Premi mondiali", "国際的な受賞"], "video_h": ["L'usine en images", "The factory on film", "La fábrica en imágenes", "Die Fabrik im Film", "La fabbrica in immagini", "映像で見る工場"], "video_play": ["Lire la vidéo", "Play the video", "Reproducir el vídeo", "Video abspielen", "Guarda il video", "動画を再生"], "mains_h": ["Les mains derrière vos montures", "The hands behind your frames", "Las manos detrás de sus monturas", "Die Hände hinter Ihren Fassungen", "Le mani dietro le vostre montature", "フレームをつくる手"], "m1_n": ["Laurence, à la finition", "Laurence, finishing", "Laurence, en acabado", "Laurence, Endbearbeitung", "Laurence, alla finitura", "ローランス（仕上げ）"], "m1_d": ["chez Optisun depuis 20 ans", "at Optisun for 20 years", "en Optisun desde hace 20 años", "seit 20 Jahren bei Optisun", "in Optisun da 20 anni", "勤続20年"], "m1_q": ["« Ce que j’aime dans mon métier : travailler la matière »", "“What I love about my job: working the material”", "«Lo que me gusta de mi oficio: trabajar la materia»", "„Was ich an meinem Beruf liebe: das Material bearbeiten“", "«Ciò che amo del mio mestiere: lavorare la materia»", "「この仕事で好きなのは、素材に触れることです」"], "m2_n": ["Georges, au shootage", "Georges, tumbling", "Georges, en el pulido en tambor", "Georges, Trommeln", "Georges, alla burattatura", "ジョルジュ（バレル研磨）"], "m2_d": ["chez Optisun depuis 7 ans", "at Optisun for 7 years", "en Optisun desde hace 7 años", "seit 7 Jahren bei Optisun", "in Optisun da 7 anni", "勤続7年"], "m2_q": ["« J’aime œuvrer au savoir-faire français »", "“I love working for French know-how”", "«Me gusta contribuir al saber hacer francés»", "„Ich arbeite gern für französisches Handwerk“", "«Amo lavorare per il saper fare francese»", "「フランスの技に携われることが好きです」"], "m3_n": ["Yanis, à la découpe", "Yanis, cutting", "Yanis, en el corte", "Yanis, Zuschnitt", "Yanis, al taglio", "ヤニス（切断）"], "m3_d": ["chez Optisun depuis 1 an", "at Optisun for 1 year", "en Optisun desde hace 1 año", "seit 1 Jahr bei Optisun", "in Optisun da 1 anno", "勤続1年"], "m3_q": ["« Je découvre le travail fait main »", "“I am discovering handmade work”", "«Estoy descubriendo el trabajo hecho a mano»", "„Ich entdecke die Handarbeit“", "«Sto scoprendo il lavoro fatto a mano»", "「手仕事の世界を学んでいます」"], "mains_more": ["Voir le portrait des mains", "See the portrait of the hands", "Ver el retrato de las manos", "Porträt der Hände ansehen", "Vedi il ritratto delle mani", "職人の紹介を見る"], "visite_h": ["Venez voir l'usine", "Come and see the factory", "Venga a ver la fábrica", "Besuchen Sie die Fabrik", "Venite a vedere la fabbrica", "工場見学へ"], "visite_p": ["Lors du Manufacture Tour, Optisun ouvre ses portes. Une occasion de voir naître des montures de créateurs, qualitatives et complexes.", "During the Manufacture Tour, Optisun opens its doors. A chance to watch high-quality, complex designer frames take shape.", "Durante el Manufacture Tour, Optisun abre sus puertas. Una ocasión para ver nacer monturas de creadores, de calidad y complejas.", "Beim Manufacture Tour öffnet Optisun seine Türen. Eine Gelegenheit, hochwertige und komplexe Designerfassungen entstehen zu sehen.", "Durante il Manufacture Tour, Optisun apre le sue porte. Un’occasione per vedere nascere montature di creatori, di qualità e complesse.", "マニュファクチュール・ツアーの期間中、工場を公開しています。高品質で複雑なデザイナーズフレームが生まれる現場をご覧いただけます。"], "visite_cta": ["Découvrir le Manufacture Tour", "Discover the Manufacture Tour", "Descubrir el Manufacture Tour", "Den Manufacture Tour entdecken", "Scoprire il Manufacture Tour", "マニュファクチュール・ツアーを見る"], "hi_h": ["L'histoire d'une entreprise familiale d'Oyonnax", "The story of a family company from Oyonnax", "La historia de una empresa familiar de Oyonnax", "Die Geschichte eines Familienunternehmens aus Oyonnax", "La storia di un'azienda di famiglia di Oyonnax", "オヨナの家族経営企業の物語"], "hi_lead": ["Fabricant français depuis 1985.", "French manufacturer since 1985.", "Fabricante francés desde 1985.", "Französischer Hersteller seit 1985.", "Produttore francese dal 1985.", "1985年創業のフランスのメーカー。"], "y1980": ["Edmond Maitre, le fondateur, décide de créer ses propres lunettes. Tout commence dans son garage.", "Edmond Maitre, the founder, decides to create his own glasses. It all begins in his garage.", "Edmond Maitre, el fundador, decide crear sus propias gafas. Todo empieza en su garaje.", "Gründer Edmond Maitre beschließt, eigene Brillen zu fertigen. Alles beginnt in seiner Garage.", "Edmond Maitre, il fondatore, decide di creare i propri occhiali. Tutto inizia nel suo garage.", "創業者エドモン・メートルが自らの眼鏡づくりを決意。すべてはガレージから始まりました。"], "y1985": ["L'entreprise naît. Elle compte 10 salariés.", "The company is born, with 10 employees.", "Nace la empresa, con 10 empleados.", "Das Unternehmen entsteht, mit 10 Beschäftigten.", "Nasce l'azienda, con 10 dipendenti.", "会社設立。従業員は10名でした。"], "y1990": ["Son fils Olivier rejoint l'entreprise. Il comprend que l'outil de production doit se moderniser, et l'usine fabrique ses propres machines à commande numérique.", "His son Olivier joins the company. He sees that production must modernise, and the factory builds its own CNC machines.", "Su hijo Olivier se une a la empresa. Entiende que la producción debe modernizarse, y la fábrica construye sus propias máquinas de control numérico.", "Sein Sohn Olivier steigt ein. Er erkennt, dass die Produktion modernisiert werden muss, und die Fabrik baut eigene CNC-Maschinen.", "Il figlio Olivier entra in azienda. Capisce che la produzione va modernizzata, e la fabbrica costruisce le proprie macchine a controllo numerico.", "息子オリヴィエが入社。生産設備の近代化が必要だと考え、自社でNC工作機械を製作します。"], "y2013": ["L'usine s'agrandit avec un bâtiment écoresponsable, à ossature bois venue du Jura.", "The factory expands with an eco-friendly building, framed in wood from the Jura.", "La fábrica se amplía con un edificio ecorresponsable, con estructura de madera del Jura.", "Die Fabrik wächst um ein nachhaltiges Gebäude mit Holzrahmen aus dem Jura.", "La fabbrica si amplia con un edificio ecosostenibile, con struttura in legno del Giura.", "工場を拡張。ジュラ産木材の骨組みによる環境配慮型の建物です。"], "y2014": ["Optisun reçoit le label Entreprise du Patrimoine Vivant, renouvelé en 2022.", "Optisun is awarded the Living Heritage Company label, renewed in 2022.", "Optisun obtiene el sello Empresa del Patrimonio Vivo, renovado en 2022.", "Optisun erhält das Label „Unternehmen des lebendigen Erbes“, 2022 erneuert.", "Optisun ottiene il marchio Impresa del Patrimonio Vivente, rinnovato nel 2022.", "EPV（無形文化財企業）に認定され、2022年に更新。"], "y2025": ["Optisun obtient le label Origin'Ain, qui distingue les savoir-faire de l'Ain.", "Optisun earns the Origin'Ain label, which honours know-how from the Ain region.", "Optisun obtiene el sello Origin'Ain, que distingue los saberes del Ain.", "Optisun erhält das Label Origin'Ain für Handwerkskunst aus dem Département Ain.", "Optisun ottiene il marchio Origin'Ain, che premia i saper fare dell'Ain.", "アン県の技を称える Origin'Ain ラベルを取得。"], "ynow": ["Environ 50 collaborateurs. Une maison connue dans le monde de la lunette pour son savoir-faire et son expertise.", "About 50 people. A company known in the eyewear world for its know-how and expertise.", "Unos 50 empleados. Una casa conocida en el mundo de las gafas por su saber hacer y su experiencia.", "Rund 50 Mitarbeitende. Ein Haus, das in der Brillenwelt für sein Können bekannt ist.", "Circa 50 collaboratori. Una casa conosciuta nel mondo dell’occhialeria per il suo saper fare.", "従業員は約50名。技術と専門性で眼鏡業界に知られる存在となりました。"], "ynow_t": ["Aujourd'hui", "Today", "Hoy", "Heute", "Oggi", "現在"], "murs_h": ["L'histoire d'un héritage immobilier", "A building with a past", "La historia de un patrimonio inmobiliario", "Die Geschichte der Gebäude", "La storia di un patrimonio immobiliare", "建物に刻まれた歴史"], "murs_1": ["L'usine appartenait autrefois à la famille Deslile, qui y fabriquait des branches de lunettes.", "The factory once belonged to the Deslile family, who made spectacle temples there.", "La fábrica perteneció a la familia Deslile, que fabricaba allí varillas de gafas.", "Die Fabrik gehörte einst der Familie Deslile, die dort Brillenbügel herstellte.", "La fabbrica apparteneva alla famiglia Deslile, che vi produceva aste per occhiali.", "かつてはデリル家の所有で、眼鏡のテンプルが作られていました。"], "murs_2": ["Le bâtiment voisin, construit à la fin du XIXe siècle, abritait la fabrique de barrettes Barreau. Pour limiter les incendies dus au celluloïd, très inflammable, ses box n'étaient pas reliés à la charpente.", "The neighbouring building, from the late 19th century, housed the Barreau hair-clip factory. To limit fires from highly flammable celluloid, its bays were not connected to the roof frame.", "El edificio vecino, de finales del siglo XIX, albergaba la fábrica de pasadores Barreau. Para limitar los incendios del celuloide, muy inflamable, sus boxes no estaban unidos a la armadura.", "Das Nachbargebäude vom Ende des 19. Jahrhunderts beherbergte die Haarspangenfabrik Barreau. Wegen des leicht entflammbaren Zelluloids waren die Boxen nicht mit dem Dachstuhl verbunden.", "L’edificio vicino, di fine Ottocento, ospitava la fabbrica di fermagli Barreau. Per limitare gli incendi dovuti alla celluloide, molto infiammabile, i box non erano collegati alla capriata.", "隣接する19世紀末の建物は、バロー社のヘアクリップ工場でした。燃えやすいセルロイドによる火災を防ぐため、作業区画は屋根組みとつながっていませんでした。"], "murs_3": ["La maison des anciens propriétaires est devenue nos bureaux, et une extension moderne mêle aujourd'hui vieux murs et architecture contemporaine.", "The former owners' house became our offices, and a modern extension now blends old walls with contemporary architecture.", "La casa de los antiguos propietarios se convirtió en nuestras oficinas, y una ampliación moderna mezcla hoy muros antiguos y arquitectura contemporánea.", "Das Wohnhaus der früheren Besitzer wurde zu unseren Büros, und ein moderner Anbau verbindet heute alte Mauern mit zeitgenössischer Architektur.", "La casa dei vecchi proprietari è diventata i nostri uffici, e un’estensione moderna unisce oggi vecchi muri e architettura contemporanea.", "旧所有者の住居はオフィスに生まれ変わり、現代的な増築部分が古い壁と調和しています。"], "va_h": ["Notre savoir-faire français", "Our French know-how", "Nuestro saber hacer francés", "Unser französisches Können", "Il nostro saper fare francese", "私たちのフランスの技"], "va_p": ["Trouver chaque jour le juste équilibre entre innovations technologiques et gestes acquis au fil du temps, pour livrer des montures en acétate de qualité et uniques.", "Every day, striking the right balance between technological innovation and skills built up over time, to deliver unique, quality acetate frames.", "Encontrar cada día el equilibrio justo entre innovación tecnológica y gestos adquiridos con el tiempo, para entregar monturas de acetato de calidad y únicas.", "Jeden Tag das richtige Gleichgewicht zwischen technischer Innovation und gewachsenem Können finden, für einzigartige, hochwertige Acetatfassungen.", "Trovare ogni giorno il giusto equilibrio tra innovazione tecnologica e gesti acquisiti nel tempo, per consegnare montature in acetato di qualità e uniche.", "技術革新と長年培ってきた技のバランスを日々追求し、上質で唯一無二のアセテートフレームをお届けします。"], "va_quote": ["« C’est grâce à la modernisation que l’on produit toujours en France »", "“It is thanks to modernisation that we still produce in France”", "«Gracias a la modernización seguimos produciendo en Francia»", "„Dank der Modernisierung produzieren wir immer noch in Frankreich“", "«È grazie alla modernizzazione che produciamo ancora in Francia»", "「近代化したからこそ、今もフランスで生産できるのです」"], "va_quote_a": ["Olivier Maitre, gérant", "Olivier Maitre, manager", "Olivier Maitre, gerente", "Olivier Maitre, Geschäftsführer", "Olivier Maitre, amministratore", "オリヴィエ・メートル（経営者）"], "va_inno": ["Équipée de 20 centres d'usinage (3, 4 et 5 axes) et de lasers de découpe et de marquage, l'usine a augmenté sa production et la technicité de ses fabrications. Son bureau d'études et son bureau des méthodes s'adaptent aux souhaits de chaque client.", "With 20 machining centres (3, 4 and 5 axes) and cutting and marking lasers, the factory has increased its output and technical level. Its design and methods offices adapt to each client’s wishes.", "Con 20 centros de mecanizado (3, 4 y 5 ejes) y láseres de corte y marcado, la fábrica ha aumentado su producción y su nivel técnico. Sus oficinas técnica y de métodos se adaptan a cada cliente.", "Mit 20 Bearbeitungszentren (3, 4 und 5 Achsen) sowie Schneid- und Markierlasern hat die Fabrik ihre Produktion und Präzision gesteigert. Konstruktion und Arbeitsvorbereitung passen sich jedem Kunden an.", "Con 20 centri di lavoro (3, 4 e 5 assi) e laser di taglio e marcatura, la fabbrica ha aumentato la produzione e la tecnicità. Ufficio tecnico e ufficio metodi si adattano a ogni cliente.", "20台のマシニングセンタ（3・4・5軸）と切断・刻印用レーザーを備え、生産量と技術力を高めてきました。設計・生産技術部門が各顧客のご要望に対応します。"], "env_h": ["Nos actions pour l'environnement", "Our environmental commitments", "Nuestras acciones por el medio ambiente", "Unser Einsatz für die Umwelt", "Le nostre azioni per l'ambiente", "環境への取り組み"], "env_1": ["Un bâtiment écoresponsable depuis 2013 : ossature bois du Jura, conception thermique, acoustique et lumineuse. Le chauffage consomme 20 kWh par m² et par an.", "An eco-friendly building since 2013: Jura timber frame, designed for heat, sound and light. Heating uses 20 kWh per m² per year.", "Un edificio ecorresponsable desde 2013: estructura de madera del Jura, diseño térmico, acústico y luminoso. La calefacción consume 20 kWh por m² al año.", "Ein nachhaltiges Gebäude seit 2013: Holzrahmen aus dem Jura, durchdacht für Wärme, Akustik und Licht. Die Heizung verbraucht 20 kWh pro m² und Jahr.", "Un edificio ecosostenibile dal 2013: struttura in legno del Giura, progettazione termica, acustica e luminosa. Il riscaldamento consuma 20 kWh per m² all’anno.", "2013年からの環境配慮型建物：ジュラ産木材の骨組み、断熱・音響・採光を考えた設計。暖房消費は年間1㎡あたり20kWhです。"], "env_2": ["Depuis 2016, toute notre flotte automobile est électrique.", "Since 2016, our entire vehicle fleet has been electric.", "Desde 2016, toda nuestra flota de vehículos es eléctrica.", "Seit 2016 fahren alle unsere Firmenfahrzeuge elektrisch.", "Dal 2016 tutta la nostra flotta auto è elettrica.", "2016年から、社用車はすべて電気自動車です。"], "env_3": ["Nos prochains chantiers : recycler toujours plus d'acétate, rénover et isoler le bâtiment historique.", "Next steps: recycling ever more acetate, renovating and insulating the historic building.", "Próximos retos: reciclar cada vez más acetato, renovar y aislar el edificio histórico.", "Nächste Vorhaben: noch mehr Acetat recyceln, das historische Gebäude sanieren und dämmen.", "I prossimi cantieri: riciclare sempre più acetato, rinnovare e isolare l’edificio storico.", "今後の課題：アセテートのリサイクル拡大、歴史ある建物の改修と断熱。"], "po_h": ["Portrait des mains", "Portrait of the hands", "Retrato de las manos", "Porträt der Hände", "Ritratto delle mani", "職人の手"], "po_p": ["Les femmes et les hommes qui façonnent chaque monture, poste après poste.", "The women and men who shape every frame, station after station.", "Las mujeres y los hombres que dan forma a cada montura, puesto tras puesto.", "Die Frauen und Männer, die jede Fassung formen, Station für Station.", "Le donne e gli uomini che plasmano ogni montatura, postazione dopo postazione.", "工程ごとに、一本一本のフレームを形づくる職人たち。"], "news_h": ["La vie de l'usine", "Life at the factory", "La vida de la fábrica", "Das Leben in der Fabrik", "La vita della fabbrica", "工場の日々"], "news_more": ["Lire l'article d'origine", "Read the original article", "Leer el artículo original", "Originalartikel lesen", "Leggi l'articolo originale", "元の記事を読む"], "jobs_h": ["Vous êtes branche et lunette ?", "Are you into frames and eyewear?", "¿Le apasionan las monturas y las gafas?", "Brillen sind Ihre Leidenschaft?", "Siete appassionati di montature e occhiali?", "眼鏡づくりに興味はありますか？"], "jobs_p": ["Rejoignez une équipe qui ne rate jamais une occasion de se retrouver : défi sportif, brunch de Noël, soirée d'été.", "Join a team that never misses a chance to get together: sports challenge, Christmas brunch, summer party.", "Únase a un equipo que no pierde ocasión de reunirse: reto deportivo, brunch de Navidad, fiesta de verano.", "Werden Sie Teil eines Teams, das jede Gelegenheit zum Feiern nutzt: Sportwettbewerb, Weihnachtsbrunch, Sommerfest.", "Entrate in una squadra che non perde occasione per ritrovarsi: sfida sportiva, brunch di Natale, festa d’estate.", "スポーツ大会、クリスマスブランチ、夏のパーティーなど、仲間と過ごす時間を大切にするチームです。"], "job1_h": ["Nos offres d'emploi", "Our job offers", "Nuestras ofertas de empleo", "Unsere Stellenangebote", "Le nostre offerte di lavoro", "求人情報"], "job1_t": ["1 offre en ligne : responsable bureau d'études (H/F).", "1 open position: head of design office (M/F).", "1 oferta publicada: responsable de oficina técnica (H/M).", "1 offene Stelle: Leitung Konstruktionsbüro (m/w/d).", "1 offerta: responsabile ufficio tecnico (M/F).", "募集中：設計部門責任者（男女不問）1名"], "job1_c": ["Voir l'offre", "See the offer", "Ver la oferta", "Angebot ansehen", "Vedi l'offerta", "求人を見る"], "job_poste": ["Nous recherchons aussi des opérateurs et opératrices sur lunettes (résine, rouleaux, tonneaux…) et des techniciens et techniciennes de maintenance.", "We are also looking for eyewear operators (resin, rollers, tumbling barrels…) and maintenance technicians.", "También buscamos operarios y operarias de gafas (resina, rodillos, tambores…) y técnicos de mantenimiento.", "Wir suchen außerdem Bediener/innen in der Brillenfertigung (Harz, Walzen, Trommeln…) und Instandhaltungstechniker/innen.", "Cerchiamo anche operatori e operatrici sugli occhiali (resina, rulli, buratti…) e tecnici di manutenzione.", "眼鏡製造オペレーター（樹脂、ローラー、バレルなど）と保守技術者も募集しています。"], "job2_h": ["Une demande de stage", "An internship request", "Una solicitud de prácticas", "Eine Praktikumsanfrage", "Una richiesta di stage", "インターンシップ"], "job2_t": ["Vos premiers pas dans la lunette ? Marchons ensemble.", "Your first steps in eyewear? Let’s walk together.", "¿Sus primeros pasos en las gafas? Caminemos juntos.", "Ihre ersten Schritte in der Brillenwelt? Gehen wir sie gemeinsam.", "I vostri primi passi nell’occhiale? Camminiamo insieme.", "眼鏡の世界への第一歩を、一緒に。"], "job3_h": ["Candidature spontanée", "Speculative application", "Candidatura espontánea", "Initiativbewerbung", "Candidatura spontanea", "自由応募"], "job3_t": ["Rien ne vous arrête ? Soyez spontané.", "Nothing stops you? Be spontaneous.", "¿Nada le detiene? Sea espontáneo.", "Nichts hält Sie auf? Bewerben Sie sich einfach.", "Niente vi ferma? Siate spontanei.", "思い立ったら、気軽にご応募ください。"], "job_mail": ["Écrire à recrutement@optisun.fr", "Write to recrutement@optisun.fr", "Escribir a recrutement@optisun.fr", "An recrutement@optisun.fr schreiben", "Scrivere a recrutement@optisun.fr", "recrutement@optisun.fr へ送る"], "co_h": ["Parlons de votre collection", "Let's talk about your collection", "Hablemos de su colección", "Sprechen wir über Ihre Kollektion", "Parliamo della vostra collezione", "コレクションについてご相談ください"], "co_p": ["Décrivez votre projet en quelques lignes. Notre équipe revient vers vous pour l'étudier ensemble.", "Describe your project in a few lines. Our team will get back to you to look at it together.", "Describa su proyecto en pocas líneas. Nuestro equipo le responderá para estudiarlo juntos.", "Beschreiben Sie Ihr Projekt in wenigen Zeilen. Unser Team meldet sich, um es gemeinsam zu prüfen.", "Descrivete il vostro progetto in poche righe. Il nostro team vi ricontatterà per studiarlo insieme.", "プロジェクトの概要をお書きください。担当者よりご連絡し、一緒に検討いたします。"], "fo_marque": ["Marque ou maison", "Brand or company", "Marca o empresa", "Marke oder Unternehmen", "Marchio o azienda", "ブランド名・会社名"], "fo_nom": ["Votre nom", "Your name", "Su nombre", "Ihr Name", "Il vostro nome", "お名前"], "fo_email": ["Votre e-mail", "Your email", "Su correo electrónico", "Ihre E-Mail", "La vostra e-mail", "メールアドレス"], "fo_type": ["Type de montures", "Type of frames", "Tipo de monturas", "Art der Fassungen", "Tipo di montature", "フレームの種類"], "fo_t1": ["Optique", "Optical", "Óptica", "Korrektion", "Da vista", "眼鏡"], "fo_t2": ["Solaire", "Sun", "Solar", "Sonne", "Da sole", "サングラス"], "fo_t3": ["Les deux", "Both", "Ambas", "Beides", "Entrambe", "両方"], "fo_mat": ["Matière", "Material", "Material", "Material", "Materiale", "素材"], "fo_m1": ["Acétate", "Acetate", "Acetato", "Acetat", "Acetato", "アセテート"], "fo_m2": ["Combinée", "Combined", "Combinada", "Kombiniert", "Combinata", "コンビネーション"], "fo_m3": ["À définir ensemble", "To be defined together", "A definir juntos", "Gemeinsam festlegen", "Da definire insieme", "相談して決めたい"], "fo_msg": ["Votre projet", "Your project", "Su proyecto", "Ihr Projekt", "Il vostro progetto", "プロジェクト内容"], "fo_msg_ph": ["Nombre de modèles, quantités envisagées, échéance, dessins disponibles…", "Number of models, expected quantities, deadline, drawings available…", "Número de modelos, cantidades previstas, plazo, dibujos disponibles…", "Anzahl Modelle, geplante Mengen, Termin, vorhandene Zeichnungen…", "Numero di modelli, quantità previste, scadenza, disegni disponibili…", "モデル数、想定数量、納期、図面の有無など"], "fo_send": ["Envoyer ma demande", "Send my request", "Enviar mi solicitud", "Anfrage senden", "Inviare la richiesta", "送信する"], "fo_err_req": ["Ce champ est nécessaire pour vous répondre.", "We need this field to reply to you.", "Necesitamos este campo para responderle.", "Dieses Feld brauchen wir für unsere Antwort.", "Questo campo ci serve per rispondervi.", "ご返信のため、この項目は必須です。"], "fo_err_mail": ["Vérifiez l’adresse e-mail, elle semble incomplète.", "Please check the email address, it looks incomplete.", "Revise la dirección de correo, parece incompleta.", "Bitte prüfen Sie die E-Mail-Adresse, sie scheint unvollständig.", "Controllate l’indirizzo e-mail, sembra incompleto.", "メールアドレスが不完全のようです。ご確認ください。"], "fo_ok": ["Merci ! Dans le site définitif, votre demande arrive directement chez Optisun.", "Thank you! On the final website, your request goes straight to Optisun.", "¡Gracias! En el sitio definitivo, su solicitud llega directamente a Optisun.", "Danke! Auf der fertigen Website geht Ihre Anfrage direkt an Optisun.", "Grazie! Nel sito definitivo, la vostra richiesta arriva direttamente a Optisun.", "ありがとうございます。正式サイトでは、ご依頼はオプティサンに直接届きます。"], "co_adresse": ["Adresse", "Address", "Dirección", "Adresse", "Indirizzo", "住所"], "co_horaires": ["Horaires", "Opening hours", "Horario", "Öffnungszeiten", "Orari", "営業時間"], "co_horaires_v": ["Du lundi au vendredi : 8 h 30 – 12 h, puis 13 h 30 – 17 h 30", "Monday to Friday: 8:30 am – 12 pm, then 1:30 – 5:30 pm", "De lunes a viernes: 8:30 – 12:00 y 13:30 – 17:30", "Montag bis Freitag: 8:30 – 12:00 und 13:30 – 17:30 Uhr", "Dal lunedì al venerdì: 8:30 – 12:00 e 13:30 – 17:30", "月〜金 8:30〜12:00 / 13:30〜17:30"], "co_tel": ["Téléphone", "Phone", "Teléfono", "Telefon", "Telefono", "電話"], "co_itin": ["Tracer l'itinéraire", "Get directions", "Cómo llegar", "Route planen", "Indicazioni stradali", "経路を表示"], "suivre": ["Suivre Optisun", "Follow Optisun", "Seguir a Optisun", "Optisun folgen", "Seguire Optisun", "オプティサンをフォロー"], "pied": ["Fabricant français de lunettes made in France, à Oyonnax depuis 1985.", "French eyewear maker, made in France, in Oyonnax since 1985.", "Fabricante francés de gafas made in France, en Oyonnax desde 1985.", "Französischer Brillenhersteller, made in France, in Oyonnax seit 1985.", "Produttore francese di occhiali made in France, a Oyonnax dal 1985.", "1985年からオヨナでフレームを製造するフランスのメーカー。"], "comment_h": ["Comment nous fabriquons votre collection", "How we make your collection", "Cómo fabricamos su colección", "So fertigen wir Ihre Kollektion", "Come realizziamo la vostra collezione", "コレクションができるまで"], "c1_h": ["Vous nous confiez votre dessin", "You entrust us with your design", "Nos confía su diseño", "Sie vertrauen uns Ihren Entwurf an", "Ci affidate il vostro disegno", "デザインをお預かりします"], "c1_t": ["Votre modèle et vos matières : nous en parlons ensemble.", "Your model and materials: we discuss them together.", "Su modelo, sus materiales, sus deseos: lo hablamos juntos.", "Ihr Modell, Ihre Materialien, Ihre Wünsche: Wir besprechen alles gemeinsam.", "Il vostro modello, i materiali, i desideri: ne parliamo insieme.", "モデル、素材、ご希望を一緒に確認します。"], "c2_h": ["Nos bureaux l’adaptent", "Our offices adapt it", "Nuestras oficinas lo adaptan", "Unsere Büros passen ihn an", "I nostri uffici lo adattano", "設計部門が製造用に調整"], "c2_t": ["Le bureau d’études et le bureau des méthodes vous conseillent et adaptent votre dessin à la fabrication.", "The design and methods offices advise you and adapt your drawing for production.", "La oficina técnica y la de métodos le asesoran y adaptan su dibujo a la fabricación.", "Konstruktion und Arbeitsvorbereitung beraten Sie und machen Ihre Zeichnung fertigungsreif.", "Ufficio tecnico e ufficio metodi vi consigliano e adattano il disegno alla produzione.", "設計・生産技術部門がアドバイスし、図面を製造に合わせて調整します。"], "c3_h": ["L’usine fabrique à Oyonnax", "The factory makes it in Oyonnax", "La fábrica lo produce en Oyonnax", "Die Fabrik fertigt in Oyonnax", "La fabbrica produce a Oyonnax", "オヨナの工場で製造"], "c3_t": ["Découpe, usinage, shootage, finition : vos montures passent entre les mains de nos équipes.", "Cutting, machining, tumbling, finishing: your frames pass through the hands of our teams.", "Corte, mecanizado, pulido en tambor, acabado: sus monturas pasan por las manos de nuestros talleres.", "Zuschnitt, Fräsen, Trommeln, Endbearbeitung: Ihre Fassungen gehen durch die Hände unserer Werkstätten.", "Taglio, lavorazione, burattatura, finitura: le vostre montature passano per le mani dei nostri reparti.", "切断、切削、バレル研磨、仕上げ。工房の職人たちの手を経てフレームが完成します。"], "fo_tel": ["Téléphone (facultatif)", "Phone (optional)", "Teléfono (opcional)", "Telefon (optional)", "Telefono (facoltativo)", "電話番号（任意）"], "fo_fichier": ["Vos dessins (facultatif)", "Your drawings (optional)", "Sus dibujos (opcional)", "Ihre Zeichnungen (optional)", "I vostri disegni (facoltativo)", "図面（任意）"], "fo_fichier_aide": ["PDF, DXF ou image", "PDF, DXF or image", "PDF, DXF o imagen", "PDF, DXF oder Bild", "PDF, DXF o immagine", "PDF・DXF・画像"], "video_n": ["Vidéo", "Video", "Vídeo", "Video", "Video", "動画"], "fo_fichier_btn": ["Joindre vos dessins", "Attach your drawings", "Adjuntar sus dibujos", "Zeichnungen anhängen", "Allegare i disegni", "図面を添付"], "cs_nom": ["Optisun Conseil", "Optisun Advice", "Optisun Asesor", "Optisun Beratung", "Optisun Consiglio", "オプティサン・アドバイス"], "cs_sous": ["Je vous oriente", "I can guide you", "Le oriento", "Ich helfe Ihnen weiter", "Vi oriento", "ご案内します"], "cs_bulle": ["Un projet de collection ? Je vous oriente en quelques questions.", "A collection in mind? I can guide you in a few questions.", "¿Un proyecto de colección? Le oriento en pocas preguntas.", "Eine Kollektion geplant? Ich helfe Ihnen mit wenigen Fragen weiter.", "Un progetto di collezione? Vi oriento in poche domande.", "コレクションのご計画ですか？いくつかの質問でご案内します。"], "cs_virtuel": ["Assistant virtuel", "Virtual assistant", "Asistente virtual", "Virtueller Assistent", "Assistente virtuale", "バーチャルアシスタント"], "cs_hello": ["Bonjour, je suis l'assistant virtuel d'Optisun. Que souhaitez-vous faire ?", "Hello, I am Optisun's virtual assistant. What would you like to do?", "Hola, soy el asistente virtual de Optisun. ¿Qué desea hacer?", "Guten Tag, ich bin der virtuelle Assistent von Optisun. Was möchten Sie tun?", "Buongiorno, sono l'assistente virtuale di Optisun. Cosa desiderate fare?", "こんにちは、オプティサンのバーチャルアシスタントです。どのようなご用件でしょうか？"], "cs_q1": ["Faire fabriquer ma collection", "Have my collection made", "Fabricar mi colección", "Meine Kollektion fertigen lassen", "Far produrre la mia collezione", "コレクションを製造したい"], "cs_a1": ["Avec plaisir. Optisun fabrique des montures optiques et solaires en acétate et combinées. Notre bureau d'études et notre bureau des méthodes étudient votre dessin et l'adaptent à la fabrication. Quel type de montures avez-vous en tête ?", "Gladly. Optisun makes optical and sun frames in acetate and combined materials. Our design and methods offices study your drawing and adapt it for production. What type of frames do you have in mind?", "Con mucho gusto. Optisun fabrica monturas ópticas y solares de acetato y combinadas. Nuestras oficinas técnica y de métodos estudian su dibujo y lo adaptan a la fabricación. ¿Qué tipo de monturas tiene en mente?", "Sehr gern. Optisun fertigt Korrektions- und Sonnenbrillenfassungen aus Acetat und Materialkombinationen. Konstruktion und Arbeitsvorbereitung prüfen Ihre Zeichnung und machen sie fertigungsreif. An welche Fassungen denken Sie?", "Con piacere. Optisun produce montature da vista e da sole in acetato e combinate. Ufficio tecnico e ufficio metodi studiano il vostro disegno e lo adattano alla produzione. Che tipo di montature avete in mente?", "喜んで。オプティサンはアセテートおよびコンビネーション素材の眼鏡・サングラスフレームを製造しています。設計・生産技術部門が図面を検討し、製造に合わせて調整します。どのようなフレームをお考えですか？"], "cs_a1b": ["Parfait. Le plus simple est de nous décrire votre projet : je pré-remplis le formulaire pour vous.", "Perfect. The easiest is to describe your project: I will pre-fill the form for you.", "Perfecto. Lo más sencillo es describirnos su proyecto: le relleno el formulario.", "Perfekt. Am einfachsten beschreiben Sie uns Ihr Projekt: Ich fülle das Formular für Sie vor.", "Perfetto. La cosa più semplice è descriverci il progetto: vi precompilo il modulo.", "かしこまりました。プロジェクトの内容をお知らせください。フォームに入力しておきます。"], "cs_go_form": ["Ouvrir le formulaire", "Open the form", "Abrir el formulario", "Formular öffnen", "Aprire il modulo", "フォームを開く"], "cs_q2": ["Comprendre votre savoir-faire", "Understand your know-how", "Conocer su saber hacer", "Ihr Können verstehen", "Capire il vostro saper fare", "技術について知りたい"], "cs_a2": ["L'usine compte 20 centres d'usinage (3, 4 et 5 axes), des lasers de découpe et de marquage, et environ 50 collaborateurs : découpe, usinage, shootage, finition. Optisun est labellisée Entreprise du Patrimoine Vivant depuis 2014.", "The factory has 20 machining centres (3, 4 and 5 axes), cutting and marking lasers, and about 50 people: cutting, machining, tumbling, finishing. Optisun has held the Living Heritage Company label since 2014.", "La fábrica cuenta con 20 centros de mecanizado (3, 4 y 5 ejes), láseres de corte y marcado y unos 50 empleados: corte, mecanizado, pulido en tambor, acabado. Optisun tiene el sello Empresa del Patrimonio Vivo desde 2014.", "Die Fabrik verfügt über 20 Bearbeitungszentren (3, 4 und 5 Achsen), Schneid- und Markierlaser und rund 50 Mitarbeitende: Zuschnitt, Fräsen, Trommeln, Endbearbeitung. Optisun trägt seit 2014 das Label „Unternehmen des lebendigen Erbes“.", "La fabbrica conta 20 centri di lavoro (3, 4 e 5 assi), laser di taglio e marcatura e circa 50 collaboratori: taglio, lavorazione, burattatura, finitura. Optisun ha il marchio Impresa del Patrimonio Vivente dal 2014.", "工場には20台のマシニングセンタ（3・4・5軸）、切断・刻印用レーザー、約50名の従業員がいます。切断、切削、バレル研磨、仕上げまで一貫して行います。2014年からEPV認定企業です。"], "cs_go_atelier": ["Voir l'atelier", "See the workshop", "Ver el taller", "Werkstatt ansehen", "Vedere l'atelier", "工房を見る"], "cs_q3": ["Visiter l'usine", "Visit the factory", "Visitar la fábrica", "Die Fabrik besuchen", "Visitare la fabbrica", "工場を見学したい"], "cs_a3": ["Optisun ouvre ses portes lors du Manufacture Tour, sur réservation. Pour une visite professionnelle, écrivez-nous.", "Optisun opens its doors during the Manufacture Tour, by booking. For a professional visit, write to us.", "Optisun abre sus puertas durante el Manufacture Tour, con reserva. Para una visita profesional, escríbanos.", "Optisun öffnet beim Manufacture Tour seine Türen, mit Anmeldung. Für einen Fachbesuch schreiben Sie uns.", "Optisun apre le sue porte durante il Manufacture Tour, su prenotazione. Per una visita professionale, scriveteci.", "マニュファクチュール・ツアーの期間に予約制で工場を公開しています。業務でのご見学はお問い合わせください。"], "cs_q4": ["Travailler chez Optisun", "Work at Optisun", "Trabajar en Optisun", "Bei Optisun arbeiten", "Lavorare in Optisun", "オプティサンで働きたい"], "cs_a4": ["Une offre est en ligne (responsable bureau d'études), et vous pouvez envoyer une demande de stage ou une candidature spontanée à recrutement@optisun.fr.", "One position is open (head of design office), and you can send an internship request or speculative application to recrutement@optisun.fr.", "Hay una oferta publicada (responsable de oficina técnica), y puede enviar una solicitud de prácticas o candidatura espontánea a recrutement@optisun.fr.", "Eine Stelle ist ausgeschrieben (Leitung Konstruktionsbüro). Praktikumsanfragen und Initiativbewerbungen gehen an recrutement@optisun.fr.", "È aperta un'offerta (responsabile ufficio tecnico) e potete inviare una richiesta di stage o una candidatura spontanea a recrutement@optisun.fr.", "設計部門責任者を募集中です。インターンシップや自由応募は recrutement@optisun.fr までお送りください。"], "cs_go_jobs": ["Voir les offres", "See the offers", "Ver las ofertas", "Angebote ansehen", "Vedere le offerte", "求人を見る"], "cs_q5": ["Nous contacter", "Contact us", "Contactarnos", "Kontakt aufnehmen", "Contattarci", "連絡したい"], "cs_a5": ["Optisun, 56 rue Michelet, 01100 Oyonnax. Du lundi au vendredi, 8 h 30 – 12 h et 13 h 30 – 17 h 30. Téléphone : +33 (0)4 74 73 87 44. E-mail : optisun@optisun.fr.", "Optisun, 56 rue Michelet, 01100 Oyonnax, France. Monday to Friday, 8:30 am – 12 pm and 1:30 – 5:30 pm. Phone: +33 (0)4 74 73 87 44. Email: optisun@optisun.fr.", "Optisun, 56 rue Michelet, 01100 Oyonnax, Francia. De lunes a viernes, 8:30 – 12:00 y 13:30 – 17:30. Teléfono: +33 (0)4 74 73 87 44. Correo: optisun@optisun.fr.", "Optisun, 56 rue Michelet, 01100 Oyonnax, Frankreich. Montag bis Freitag, 8:30 – 12:00 und 13:30 – 17:30 Uhr. Telefon: +33 (0)4 74 73 87 44. E-Mail: optisun@optisun.fr.", "Optisun, 56 rue Michelet, 01100 Oyonnax, Francia. Dal lunedì al venerdì, 8:30 – 12:00 e 13:30 – 17:30. Telefono: +33 (0)4 74 73 87 44. E-mail: optisun@optisun.fr.", "Optisun, 56 rue Michelet, 01100 Oyonnax（フランス）。月〜金 8:30〜12:00 / 13:30〜17:30。電話：+33 (0)4 74 73 87 44。メール：optisun@optisun.fr"], "cs_back": ["Autre question", "Another question", "Otra pregunta", "Andere Frage", "Altra domanda", "他の質問"], "cs_close": ["Fermer", "Close", "Cerrar", "Schließen", "Chiudi", "閉じる"], "skip": ["Aller au contenu", "Skip to content", "Ir al contenido", "Zum Inhalt", "Vai al contenuto", "本文へ"], "apercu": ["Aperçu · maquette Neovera Studio", "Preview · Neovera Studio mock-up", "Vista previa · maqueta Neovera Studio", "Vorschau · Entwurf Neovera Studio", "Anteprima · bozza Neovera Studio", "プレビュー · Neovera Studio デザイン案"]},NEWS=[["2025-04-10", "usine-optisun-lunettes-oyonnax.jpg", "https://www.optisun.fr/2025/04/10/manufacture-tour-2025-visitez-optisun/", ["Manufacture Tour 2025 : visitez Optisun !", "Manufacture Tour 2025: visit Optisun!", "Manufacture Tour 2025: ¡visite Optisun!", "Manufacture Tour 2025: Besuchen Sie Optisun!", "Manufacture Tour 2025: visitate Optisun!", "マニュファクチュール・ツアー2025：オプティサンへようこそ"], ["Optisun ouvre ses portes sur 6 créneaux pour faire découvrir la fabrication de montures de créateurs.", "Optisun opens its doors over 6 time slots to show how designer frames are made.", "Optisun abre sus puertas en 6 franjas horarias para mostrar la fabricación de monturas de creadores.", "Optisun öffnet in 6 Zeitfenstern seine Türen und zeigt die Fertigung von Designerfassungen.", "Optisun apre le porte in 6 fasce orarie per far scoprire la produzione di montature di creatori.", "6つの時間枠で工場を公開し、デザイナーズフレームの製造をご紹介します。"]], ["2025-03-14", "originain-bleu-vecto.png", "https://www.optisun.fr/2025/03/14/optisun-labelise-originain/", ["Optisun labellisé Origin'Ain !", "Optisun earns the Origin'Ain label!", "¡Optisun obtiene el sello Origin'Ain!", "Optisun erhält das Label Origin'Ain!", "Optisun ottiene il marchio Origin'Ain!", "Origin'Ain ラベルを取得しました"], ["Un label qui met en valeur l'excellence et les savoir-faire des entreprises de l'Ain.", "A label that highlights the excellence and know-how of companies from the Ain.", "Un sello que pone en valor la excelencia y el saber hacer de las empresas del Ain.", "Ein Label für die Exzellenz und das Können der Unternehmen im Département Ain.", "Un marchio che valorizza l'eccellenza e il saper fare delle imprese dell'Ain.", "アン県企業の卓越性と技を称えるラベルです。"]], ["2024-05-25", "1716874729815.jpg", "https://www.optisun.fr/2024/05/25/defi-sportif-inter-entreprises-2024-optisun-obtient-le-prix-coup-de-coeur-du-jury/", ["Défi sportif 2024 : le prix « coup de cœur du jury »", "2024 sports challenge: the “jury’s favourite” award", "Reto deportivo 2024: el premio «favorito del jurado»", "Sportwettbewerb 2024: Preis „Liebling der Jury“", "Sfida sportiva 2024: il premio «preferito della giuria»", "2024年企業対抗スポーツ大会：審査員特別賞"], ["Au bord du lac de Nantua, deux équipes de coureurs et une grande équipe de supporters.", "On the shores of Lake Nantua, two teams of runners and a big team of supporters.", "A orillas del lago de Nantua, dos equipos de corredores y un gran equipo de seguidores.", "Am Ufer des Sees von Nantua: zwei Läuferteams und ein großes Fanteam.", "Sulle rive del lago di Nantua, due squadre di corridori e una grande squadra di tifosi.", "ナンチュア湖畔で、2チームのランナーと大応援団が参加しました。"]], ["2024-02-13", "egapro.png", "https://www.optisun.fr/2024/02/13/index-egalite-professionnelle-2024/", ["Index égalité professionnelle 2024", "Gender equality index 2024", "Índice de igualdad profesional 2024", "Gleichstellungsindex 2024", "Indice di parità professionale 2024", "2024年 男女平等指数"], ["L'index 2024 est incalculable, les groupes n'étant pas assez représentatifs, mais l'engagement continue.", "The 2024 index could not be calculated, as the groups were too small, but the commitment continues.", "El índice 2024 no es calculable al no ser los grupos representativos, pero el compromiso continúa.", "Der Index 2024 ist mangels repräsentativer Gruppen nicht berechenbar, das Engagement bleibt.", "L'indice 2024 non è calcolabile perché i gruppi non sono rappresentativi, ma l'impegno continua.", "対象グループが小さく2024年の指数は算出不可でしたが、取り組みは続いています。"]], ["2023-12-22", "repas-de-noel-2023.jpg", "https://www.optisun.fr/2023/12/22/brunch-de-noel-chez-la-team-optisun/", ["Brunch de Noël chez la team Optisun", "Christmas brunch with the Optisun team", "Brunch de Navidad con el equipo Optisun", "Weihnachtsbrunch im Optisun-Team", "Brunch di Natale con il team Optisun", "チーム・オプティサンのクリスマスブランチ"], ["Avant la fermeture de fin d’année : brunch et Secret Santa pour toute l’équipe.", "Before the year-end closure: brunch and Secret Santa for the whole team.", "Antes del cierre de fin de año: brunch y amigo invisible para todo el equipo.", "Vor der Betriebsruhe zum Jahresende: Brunch und Wichteln für das ganze Team.", "Prima della chiusura di fine anno: brunch e Secret Santa per tutta la squadra.", "年末休暇の前に、全員でブランチとシークレットサンタを楽しみました。"]], ["2023-07-24", "dsc-0818.jpg", "https://www.optisun.fr/2023/07/24/barbecue-party/", ["Barbecue party !", "Barbecue party!", "¡Barbacoa!", "Grillparty!", "Barbecue party!", "バーベキューパーティー"], ["Le 7 juillet 2023, le repas d’été organisé par le CSE, avant les vacances.", "On 7 July 2023, the summer meal organised by the works council, before the holidays.", "El 7 de julio de 2023, la comida de verano organizada por el comité de empresa, antes de las vacaciones.", "Am 7. Juli 2023 das Sommeressen des Betriebsrats vor den Ferien.", "Il 7 luglio 2023, la cena estiva organizzata dal CSE, prima delle vacanze.", "2023年7月7日、社内委員会主催の夏の食事会を開きました。"]], ["2023-02-07", "index-egalite-professionnelle.png", "https://www.optisun.fr/2023/02/07/un-score-de-100-pour-la-deuxieme-annee-de-suite-chez-optisun/", ["Égalité professionnelle : un score de 100 %", "Gender equality: a score of 100%", "Igualdad profesional: una puntuación del 100 %", "Gleichstellung: 100 Punkte", "Parità professionale: un punteggio del 100%", "男女平等指数：100点満点"], ["Le score maximal à l’index égalité professionnelle femmes-hommes.", "The top score on the gender equality index.", "La puntuación máxima en el índice de igualdad entre mujeres y hombres.", "Die Höchstpunktzahl im Gleichstellungsindex.", "Il punteggio massimo nell’indice di parità tra donne e uomini.", "男女平等指数で満点を獲得しました。"]], ["2022-07-20", "soiree-blanche-optisun-09-07-22-070.jpg", "https://www.optisun.fr/2022/07/20/journee-cohesion-dentreprise-09-07-2022/", ["Journée cohésion d’entreprise", "Team-building day", "Jornada de cohesión de empresa", "Teamtag", "Giornata di coesione aziendale", "チームビルディングの日"], ["Le 9 juillet 2022 : visite des ateliers, puis soirée blanche pour tous les collaborateurs.", "9 July 2022: a tour of the workshops, then a white-dress party for all staff.", "9 de julio de 2022: visita a los talleres y fiesta blanca para todos.", "9. Juli 2022: Werkstattbesuch, dann eine weiße Party für alle.", "9 luglio 2022: visita dei reparti, poi serata in bianco per tutti.", "2022年7月9日、工房見学のあと全員で「白のパーティー」。"]], ["2022-04-19", "logo-epv.jpg", "https://www.optisun.fr/2022/04/19/la-labelisation-epv-renouvelee-en-2022/", ["Le label EPV renouvelé en 2022", "EPV label renewed in 2022", "Sello EPV renovado en 2022", "EPV-Label 2022 erneuert", "Marchio EPV rinnovato nel 2022", "EPV認定を2022年に更新"], ["Obtenu en 2014, ce label d'État valorise les savoir-faire industriels et artisanaux d'excellence.", "Awarded in 2014, this state label recognises excellent industrial and craft skills.", "Obtenido en 2014, este sello estatal valora los saberes industriales y artesanales de excelencia.", "Das 2014 verliehene staatliche Label würdigt herausragendes Industrie- und Handwerkskönnen.", "Ottenuto nel 2014, questo marchio di Stato valorizza i saper fare industriali e artigianali d'eccellenza.", "2014年に取得した国の認定で、優れた工業・工芸の技を称えるものです。"]], ["2022-02-18", "index-egalite-professionnel-optisun-2022-2021-pdf.jpg", "https://www.optisun.fr/2022/02/18/index-egalite-professionnelle-2022-2021/", ["Index égalité professionnelle 2022", "Gender equality index 2022", "Índice de igualdad profesional 2022", "Gleichstellungsindex 2022", "Indice di parità professionale 2022", "2022年 男女平等指数"], ["Un score de 99 sur 100.", "A score of 99 out of 100.", "Una puntuación de 99 sobre 100.", "99 von 100 Punkten.", "Un punteggio di 99 su 100.", "100点中99点を獲得。"]], ["2018-07-11", "optisun-sponsor-basket.jpg", "https://www.optisun.fr/2018/07/11/optisun-sponsor-du-club-de-basket-de-saint-claude/", ["Optisun, sponsor du club de basket de Saint-Claude", "Optisun sponsors the Saint-Claude basketball club", "Optisun, patrocinador del club de baloncesto de Saint-Claude", "Optisun sponsert den Basketballclub Saint-Claude", "Optisun, sponsor del club di basket di Saint-Claude", "サン＝クロードのバスケットボールクラブを支援"], ["Un soutien au sport local.", "Supporting local sport.", "Un apoyo al deporte local.", "Unterstützung für den lokalen Sport.", "Un sostegno allo sport locale.", "地域スポーツを応援しています。"]], ["2016-04-07", "lunettes-made-in-france.jpg", "https://www.optisun.fr/2016/04/07/optisun-des-lunettes-100-made-in-france-a-oyonnax/", ["Des lunettes « 100 % made in France » à Oyonnax", "“100% made in France” glasses in Oyonnax", "Gafas «100 % made in France» en Oyonnax", "„100 % made in France“: Brillen aus Oyonnax", "Occhiali «100% made in France» a Oyonnax", "オヨナ発「100％メイド・イン・フランス」の眼鏡"], ["La presse raconte la fabrication française d’Optisun.", "The press tells the story of Optisun’s French manufacturing.", "La prensa cuenta la fabricación francesa de Optisun.", "Die Presse berichtet über die französische Fertigung von Optisun.", "La stampa racconta la produzione francese di Optisun.", "オプティサンのフランス製造が報道で紹介されました。"]], ["2013-05-25", "bruno-lemaire-made-in-france.jpg", "https://www.optisun.fr/2013/05/25/bruno-lemaire-felicite-le-made-in-france/", ["Bruno Le Maire félicite le made in France", "Bruno Le Maire praises made in France", "Bruno Le Maire felicita el made in France", "Bruno Le Maire lobt das Made in France", "Bruno Le Maire si congratula per il made in France", "ブリュノ・ル・メールがメイド・イン・フランスを称賛"], ["Article de presse « L’Ain et ses pays ».", "Press article in “L’Ain et ses pays”.", "Artículo de prensa en «L’Ain et ses pays».", "Presseartikel in „L’Ain et ses pays“.", "Articolo di stampa su «L’Ain et ses pays».", "「L’Ain et ses pays」紙の記事。"]]],VIDS=["BRhuNEUEUW0", "lhl3YfLKvto", "ub4bZy0AJmk", "HHJLnpmmNQs", "nBn2wSK-Ohw"],LANGS=['fr','en','es','de','it','ja'];
+var lang=(function(){try{return localStorage.getItem('opt-lang')}catch(e){return null}})()||'fr';
+function t(k){var v=T[k];return v?v[LANGS.indexOf(lang)]||v[0]:k}
+function appliquer(){document.documentElement.lang=lang;
+ document.querySelectorAll('[data-t]').forEach(function(e){e.textContent=t(e.dataset.t)});
+ document.querySelectorAll('[data-tp]').forEach(function(e){e.placeholder=t(e.dataset.tp)});
+ document.getElementById('langue').value=lang;rendreNews();graver();if(window.ajuster)ajuster();}
+// Formulaires (copie du modèle)
+document.querySelectorAll('[data-contact]').forEach(function(z){z.appendChild(document.getElementById('tplContact').content.cloneNode(true));
+ z.querySelectorAll('[id]').forEach(function(e){var n=e.id+'-'+Math.random().toString(36).slice(2,6);var l=z.querySelector('label[for="'+e.id+'"]');if(l)l.htmlFor=n;e.id=n})});
+document.querySelectorAll('.fichier').forEach(function(z){var i=z.querySelector('input');z.querySelector('.btn').onclick=function(){i.click()};i.onchange=function(){z.querySelector('.noms').textContent=[].map.call(i.files,function(f){return f.name}).join(', ')}});
+document.querySelectorAll('form').forEach(function(f){f.addEventListener('submit',function(ev){ev.preventDefault();var bon=true;
+ f.querySelectorAll('[required]').forEach(function(c){var b=c.closest('.champ'),er=b.querySelector('.erreur'),m='';
+  if(!c.value.trim())m=t('fo_err_req');else if(c.type==='email'&&!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(c.value))m=t('fo_err_mail');
+  b.classList.toggle('ko',!!m);er.textContent=m;if(!er.id)er.id='err-'+c.id;c.setAttribute('aria-describedby',er.id);if(m)c.setAttribute('aria-invalid','true');else c.removeAttribute('aria-invalid');if(m&&bon){c.focus();bon=false}});
+ var ok=f.querySelector('.ok');ok.style.display=bon?'block':'none';});});
+// Vues
+document.addEventListener('click',function(e){var a=e.target.closest('a[href="#atelier"]');if(!a)return;e.preventDefault();if(location.hash.replace(/^#\/?/,'')!==''){location.hash='#/';setTimeout(function(){document.getElementById('atelier').scrollIntoView({behavior:'smooth'})},120)}else document.getElementById('atelier').scrollIntoView({behavior:'smooth'})});
+function route(){var h=location.hash.replace(/^#\/?/,'');
+ if(!document.querySelector('[data-vue="'+h+'"]'))h='';montrer(h);if(!/^#atelier/.test(location.hash))window.scrollTo(0,0)}
+function montrer(v){document.querySelectorAll('.vue').forEach(function(e){e.classList.toggle('on',e.dataset.vue===v)});
+ document.querySelectorAll('.menu a').forEach(function(a){a.toggleAttribute('aria-current',a.getAttribute('href')==='#/'+v);if(a.hasAttribute('aria-current'))a.setAttribute('aria-current','page')});
+ document.getElementById('menu').classList.remove('ouvert');document.body.classList.remove('menu-ouvert');observer();if(v==='')lancerUsinage()}
+window.addEventListener('hashchange',route);
+document.getElementById('burger').onclick=function(){var m=document.getElementById('menu');m.classList.toggle('ouvert');document.body.classList.toggle('menu-ouvert',m.classList.contains('ouvert'));this.setAttribute('aria-expanded',m.classList.contains('ouvert'))};
+document.getElementById('langue').onchange=function(){lang=this.value;try{localStorage.setItem('opt-lang',lang)}catch(e){}appliquer()};
+// Apparitions
+var io='IntersectionObserver' in window?new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('vu');io.unobserve(e.target)}})},{threshold:.12}):null;
+function observer(){document.querySelectorAll('.vue.on .rv:not(.vu)').forEach(function(e){io?io.observe(e):e.classList.add('vu')})}
+// News
+function rendreNews(){var u=document.getElementById('articles');u.innerHTML='';var i=LANGS.indexOf(lang);
+ NEWS.forEach(function(n){var li=document.createElement('li');var d=new Date(n[0]);
+  li.innerHTML='<time datetime="'+n[0]+'">'+d.toLocaleDateString(lang==='ja'?'ja-JP':lang,{year:'numeric',month:'long'})+'</time><img src="img/'+n[1]+'" alt="" loading="lazy"><div><h3></h3><p></p><a target="_blank" rel="noopener" href="'+n[2]+'"></a></div>';
+  li.querySelector('h3').textContent=n[3][i];li.querySelector('p').textContent=n[4][i];li.querySelector('a').textContent=t('news_more');u.appendChild(li)})}
+// Vidéos
+var vv=document.getElementById('videosValeurs');VIDS.forEach(function(id){var b=document.createElement('button');b.className='yt';b.dataset.yt=id;b.style.backgroundImage='url(https://i.ytimg.com/vi/'+id+'/hqdefault.jpg)';b.innerHTML='<span class="jouer"><i><svg width="18" height="18" viewBox="0 0 24 24"><path d="M7 4l14 8-14 8z" fill="#15100C"/></svg></i><span><span data-t="video_n"></span> '+(vv.children.length+1)+'</span></span>';vv.appendChild(b)});
+document.addEventListener('click',function(e){var b=e.target.closest('.yt');if(!b||b.querySelector('iframe'))return;var f=document.createElement('iframe');f.src='https://www.youtube-nocookie.com/embed/'+b.dataset.yt+'?autoplay=1&rel=0';f.allow='autoplay; encrypted-media; picture-in-picture';f.allowFullscreen=true;f.title='Optisun';b.appendChild(f)});
+// Geste signature : la fraise découpe la face, puis le laser grave la branche
+var lance=false;function lancerUsinage(){if(lance)return;lance=true;var svg=document.getElementById('usinage');if(!svg)return;
+ var reduit=matchMedia('(prefers-reduced-motion: reduce)').matches;var traces=['t1','t2','t3'].map(function(i){return document.getElementById(i)});
+ var fraise=document.getElementById('fraise'),dents=document.getElementById('dents'),cop=document.getElementById('copeaux'),mont=document.getElementById('monture'),cotes=svg.querySelector('.cotes'),br=document.getElementById('brancheG'),plaque=document.getElementById('plaqueG');
+ var chemins=['contour','verreG','verreD'].map(function(i){return document.getElementById(i)});
+ var L=chemins.map(function(p){return p.getTotalLength()});
+ traces.forEach(function(tr,i){tr.style.strokeDasharray=L[i];tr.style.strokeDashoffset=L[i]});
+ function detacher(){mont.style.transition='opacity .9s ease, transform 1.1s cubic-bezier(.16,1,.3,1)';mont.setAttribute('opacity',1);mont.style.transform='translate(-4px,-9px)';plaque.style.transition='opacity 1s';plaque.style.opacity=.45;traces.forEach(function(tr){tr.style.transition='opacity 1s';tr.style.opacity=.18})}
+ if(reduit){traces.forEach(function(tr){tr.style.strokeDashoffset=0});detacher();cotes.setAttribute('opacity',1);br.setAttribute('opacity',1);graver(true);return}
+ var dur=[1900,750,750],t0=null,phase=0,n=0;cotes.style.transition='opacity 1s';setTimeout(function(){cotes.setAttribute('opacity',1)},200);
+ function copeau(x,y){if(n++%3)return;var c=document.createElementNS('http://www.w3.org/2000/svg','path');var a=Math.random()*6.28,d=10+Math.random()*16;
+  c.setAttribute('d','M0,0 q2,-3 5,-1');c.setAttribute('stroke',Math.random()<.5?'#E8AE62':'#8A4F14');c.setAttribute('stroke-width','1.3');c.setAttribute('fill','none');
+  c.style.transform='translate('+x+'px,'+y+'px)';c.style.transition='transform .7s cubic-bezier(.2,.8,.3,1), opacity .7s';cop.appendChild(c);
+  requestAnimationFrame(function(){c.style.transform='translate('+(x+Math.cos(a)*d)+'px,'+(y+Math.sin(a)*d+8)+'px) rotate('+(a*90)+'deg)';c.style.opacity=0});setTimeout(function(){c.remove()},750)}
+ function pas(ts){if(!t0)t0=ts;var p=Math.min(1,(ts-t0)/dur[phase]);var e=p<.5?2*p*p:1-Math.pow(-2*p+2,2)/2;var tr=traces[phase];tr.style.strokeDashoffset=L[phase]*(1-e);
+  var pt=chemins[phase].getPointAtLength(L[phase]*e);fraise.setAttribute('transform','translate('+pt.x+','+pt.y+')');dents.setAttribute('transform','rotate('+(ts*1.2%360)+')');fraise.setAttribute('opacity',p<1?1:0);copeau(pt.x,pt.y);
+  if(p<1){requestAnimationFrame(pas);return}
+  phase++;t0=null;if(phase<3){requestAnimationFrame(pas);return}
+  detacher();setTimeout(function(){br.style.transition='opacity .6s';br.setAttribute('opacity',1);setTimeout(function(){graver(false)},350)},500)}
+ requestAnimationFrame(pas)}
+var gravure=null;function graver(immediat){var g=document.getElementById('grav'),o=document.getElementById('gravO'),l=document.getElementById('laser');if(!g)return;var txt=t('grave');
+ if(gravure){clearInterval(gravure);gravure=null}
+ if(immediat===undefined){if(document.getElementById('brancheG').getAttribute('opacity')!=='1')return;immediat=true}
+ if(immediat){g.textContent=txt;o.textContent=txt;l.setAttribute('opacity',0);return}
+ var i=0;gravure=setInterval(function(){i++;g.textContent=txt.slice(0,i);o.textContent=txt.slice(0,i);
+  try{var bb=g.getBBox();l.setAttribute('cx',bb.x+bb.width);l.setAttribute('opacity',1)}catch(e){}
+  if(i>=txt.length){clearInterval(gravure);gravure=null;setTimeout(function(){l.setAttribute('opacity',0)},250)}},32)}
+// Conseiller
+var fil=document.getElementById('csFil'),pan=document.getElementById('csPanneau'),bulle=document.getElementById('csBulle');
+function dire(k,cl){var m=document.createElement('div');m.className='msg '+(cl||'ia');m.textContent=t(k);fil.appendChild(m);fil.scrollTop=fil.scrollHeight}
+function choix(list){var d=document.createElement('div');d.className='cs-choix';list.forEach(function(c){var b=document.createElement('button');b.textContent=t(c[0]);b.onclick=function(){d.remove();c[1]()};d.appendChild(b)});fil.appendChild(d);fil.scrollTop=fil.scrollHeight}
+function accueilCs(){dire('cs_hello');choix([['cs_q1',q1],['cs_q2',function(){rep('cs_q2','cs_a2',[['cs_go_atelier',function(){fermer();location.hash='#/';setTimeout(function(){document.getElementById('atelier').scrollIntoView({behavior:'smooth'})},120)}]])}],['cs_q3',function(){rep('cs_q3','cs_a3',[['visite_cta',function(){window.open('https://www.manufacture.tours/entreprise/optisun/','_blank','noopener')}]])}],['cs_q4',function(){rep('cs_q4','cs_a4',[['cs_go_jobs',function(){fermer();location.hash='#/recrutement'}]])}],['cs_q5',function(){rep('cs_q5','cs_a5',[['nav_projet',function(){fermer();location.hash='#/contact'}]])}]])}
+function rep(q,a,suite){dire(q,'moi');setTimeout(function(){dire(a);choix((suite||[]).concat([['cs_back',accueilCs]]))},350)}
+function q1(){dire('cs_q1','moi');setTimeout(function(){dire('cs_a1');choix([['fo_t1',function(){pre('optique')}],['fo_t2',function(){pre('solaire')}],['fo_t3',function(){pre('deux')}]])},350)}
+function pre(v){dire('fo_t'+({optique:1,solaire:2,deux:3})[v],'moi');setTimeout(function(){dire('cs_a1b');choix([['cs_go_form',function(){fermer();location.hash='#/contact';setTimeout(function(){var f=document.querySelector('.vue.on form');var r=f&&f.querySelector('input[name=type][value='+v+']');if(r)r.checked=true;var c=f&&f.querySelector('input[name=marque]');if(c)c.focus()},120)}],['cs_back',accueilCs]])},350)}
+function ouvrir(){pan.classList.add('on');bulle.classList.remove('on');document.getElementById('csBouton').style.display='none';if(!fil.children.length)accueilCs();setTimeout(function(){var b=fil.querySelector('button');if(b)b.focus()},50)}
+function fermer(){pan.classList.remove('on');document.getElementById('csBouton').style.display=''}
+document.addEventListener('click',function(e){var c=e.target.closest('[data-cs]');if(c){e.preventDefault();ouvrir()}});
+document.getElementById('csFermer').onclick=fermer;document.addEventListener('keydown',function(e){if(e.key==='Escape'&&pan.classList.contains('on'))fermer()});
+document.getElementById('csBulleX').onclick=function(){bulle.classList.remove('on')};
+var vuB=false;try{vuB=sessionStorage.getItem('opt-bulle')}catch(e){}
+function inviter(){if(vuB||pan.classList.contains('on'))return;vuB=true;bulle.classList.add('on');try{sessionStorage.setItem('opt-bulle','1')}catch(e){}setTimeout(function(){bulle.classList.remove('on')},12000)}
+if(!vuB){var mobile=matchMedia('(max-width:860px)').matches;if(!mobile)setTimeout(inviter,4000);addEventListener('scroll',function s(){if(scrollY>innerHeight*.9){inviter();removeEventListener('scroll',s)}},{passive:true})}
+function ajuster(){var tete=document.querySelector('.tete'),w=tete.querySelector('.wrap'),m=document.getElementById('menu');tete.classList.remove('compact');if(innerWidth<=1080||w.scrollWidth>w.clientWidth+1||m.scrollWidth>m.clientWidth+1)tete.classList.add('compact')}
+addEventListener('resize',ajuster);
+appliquer();route();ajuster();
+</script>
+<script id="nv-track">(function(){try{if(location.protocol!=='https:')return;if(/[?&]moi\b/.test(location.search)){localStorage.setItem('nv_moi','1');addEventListener('load',function(){var d=document.createElement('div');d.textContent='✓ Appareil reconnu : vos visites ne sont plus comptées';d.style.cssText='position:fixed;left:50%;bottom:24px;transform:translateX(-50%);z-index:2147483647;background:#1E3A2B;color:#fff;font:600 14px/1.3 system-ui,sans-serif;padding:12px 18px;border-radius:999px;box-shadow:0 8px 24px rgba(0,0,0,.25)';document.body.appendChild(d);setTimeout(function(){d.remove()},6000)})}if(localStorage.getItem('nv_moi')||navigator.webdriver)return;}catch(x){}
+var m=location.pathname.split('/').filter(Boolean)[0]||'';if(!m)return;var s=Math.random().toString(36).slice(2,12),t0=Date.now(),u='/_t.php',last='home',seen={};
+function send(e,p){var b=JSON.stringify({m:m,e:e,s:s,p:p||'',t:Math.round((Date.now()-t0)/1000),l:(document.documentElement.lang||'').slice(0,2)});try{if(navigator.sendBeacon)navigator.sendBeacon(u,new Blob([b],{type:'text/plain'}));else fetch(u,{method:'POST',body:b,keepalive:true})}catch(x){}}
+function once(k){k=String(k).toLowerCase().replace(/[^a-z0-9_-]/g,'').slice(0,24);if(!k||seen[k])return;seen[k]=1;send('ev',k)}
+send('open');setInterval(function(){if(document.visibilityState==='visible')send('ping')},45000);
+document.addEventListener('visibilitychange',function(){if(document.visibilityState==='hidden')send('ping')});
+window.__nvView=function(p){p=String(p||'');if(p&&p!==last){last=p;send('view',p)}};
+addEventListener('scroll',function(){var h=document.documentElement,max=h.scrollHeight-innerHeight;if(max<200)return;var r=(scrollY/max)*100;[25,50,75,100].forEach(function(q){if(r>=q-2)once('defil'+q+'-'+last)})},{passive:true});
+document.addEventListener('click',function(e){var el=e.target.closest('a,button,[data-add],[data-go],[role=button],summary');if(!el)return;var t=((el.getAttribute('aria-label')||'')+' '+(el.textContent||'')+' '+(el.className||'')+' '+(el.id||'')).toLowerCase(),h=el.getAttribute&&el.getAttribute('href')||'';
+if(el.hasAttribute('data-add')||/ajouter|add to|añadir|hinzuf|aggiungi|加入/.test(t))once('panier-'+(el.getAttribute('data-add')||'ajout')),send('ev','panier');
+else if(/conseil|advisor|assistant|chat/.test(t))once('conseiller');
+else if(/instagram|facebook|youtube|pinterest|linkedin|tiktok/.test(h))once('reseau-'+(h.match(/instagram|facebook|youtube|pinterest|linkedin|tiktok/)||[''])[0]);
+else if(/réserv|reserv|visite|book/.test(t))once('reservation');
+else if(/coffret|gift|cadeau/.test(t))once('coffret')},true);
+document.addEventListener('play',function(e){if(e.target&&e.target.tagName==='VIDEO'&&!e.target.muted)once('video-son')},true);
+try{new MutationObserver(function(){var l=(document.documentElement.lang||'').slice(0,2);if(l&&l!=='fr')once('langue-'+l)}).observe(document.documentElement,{attributes:true,attributeFilter:['lang']})}catch(x){}
+addEventListener('load',function(){try{if(typeof window.go==='function'&&!window.go.__nv){var g=window.go;window.go=function(v){try{window.__nvView(v)}catch(x){}return g.apply(this,arguments)};window.go.__nv=1}}catch(x){}});})();</script>
+</body>
+</html>
