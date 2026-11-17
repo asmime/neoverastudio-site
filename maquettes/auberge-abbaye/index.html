@@ -138,8 +138,54 @@ html[lang=de] .pl1 .c1 h1{font-size:clamp(2.1rem,3.9vw,3.9rem)}
   .pl1 .c1 h1::after{display:none}
 }
 .visite.static .pl1{min-height:760px}
+/* chapitres 2 et 3 : cadres sur panneau */
+.pl2,.pl3{background:var(--fer)}
+.pl2{background-image:radial-gradient(110% 90% at 100% 0%,rgba(106,27,41,.5),rgba(106,27,41,0) 60%)}
+.pl3{background-image:radial-gradient(90% 80% at 80% 50%,rgba(255,122,26,calc(.16 * var(--feu))),rgba(25,20,17,0) 65%)}
+.pl2::after,.pl3::after{display:none}
+.plan .frame,.plan .medal{margin:0;position:absolute}
+.plan .frame picture,.plan .medal picture{position:absolute;inset:0;overflow:hidden}
+.plan .frame img,.plan .medal img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.pl2 .frame{left:var(--pad);top:calc(var(--head) + 22px);bottom:108px;width:min(54vw,920px)}
+.pl2 .frame picture{border-radius:2px;box-shadow:0 40px 80px -40px rgba(0,0,0,.95)}
+.pl2 .frame::before{content:"";position:absolute;inset:-12px;border:1.5px solid rgba(223,169,59,.6);pointer-events:none}
+.pl2 .frame img{transform:scale(var(--z2));object-position:44% 52%}
+.pl2 .c2{left:auto;right:var(--pad);top:var(--head);bottom:56px;display:flex;flex-direction:column;justify-content:center;max-width:min(34vw,500px)}
+.pl3 .medal{right:calc(var(--pad) + 2vw);top:calc(50% + 10px);width:min(44vw,calc(100vh - 210px),720px);aspect-ratio:1;transform:translateY(-50%)}
+.pl3 .medal picture{border-radius:50%;box-shadow:0 40px 90px -30px rgba(0,0,0,.95)}
+.pl3 .medal::before{content:"";position:absolute;inset:-14px;border:1.5px solid rgba(223,169,59,.6);border-radius:50%;pointer-events:none}
+.pl3 .medal img{object-position:50% 50%;transform:scale(1.02)}
+.pl3 .braise{border-radius:50%;overflow:hidden}
+.braise::before{left:38%!important;top:58%!important;width:120%!important}
+.pl3 .c3{top:var(--head);bottom:56px;display:flex;flex-direction:column;justify-content:center;max-width:min(40vw,560px);right:auto}
+.pl2 .chap h2,.pl3 .chap h2{font-size:clamp(2.3rem,4.4vw,4.4rem);text-shadow:none}
+.pl2 .chap h2::after,.pl3 .chap h2::after{content:"";display:block;width:64px;height:2px;background:var(--ocre);margin-top:24px}
+.pl2 .chap p,.pl3 .chap p{text-shadow:none}
+@media (max-width:900px){
+  .pl2 .frame{left:var(--pad);right:var(--pad);width:auto;top:calc(var(--head) + 16px);bottom:auto;height:min(44svh,520px)}
+  .pl2 .c2,.pl3 .c3{left:var(--pad);right:var(--pad);top:calc(var(--head) + min(44svh,520px) + 52px);bottom:auto;max-width:none;justify-content:flex-start}
+  .pl3 .medal{left:50%;right:auto;top:calc(var(--head) + 22px);width:min(78vw,calc(44svh - 12px),500px);transform:translateX(-50%)}
+  .pl2 .chap h2,.pl3 .chap h2{font-size:clamp(1.9rem,7vw,3.2rem)}
+  .pl2 .chap h2::after,.pl3 .chap h2::after{margin-top:14px;width:48px}
+}
+@media (max-width:700px){
+  .pl2 .frame{height:36svh}
+  .pl3 .medal{width:min(74vw,calc(36svh - 10px))}
+  .pl2 .c2,.pl3 .c3{top:calc(var(--head) + 36svh + 48px)}
+  .pl2 .chap p,.pl3 .chap p{font-size:1rem;margin-top:12px}
+}
+@media (max-width:700px) and (max-height:700px){
+  .pl2 .frame{height:30svh}.pl3 .medal{width:min(70vw,calc(30svh - 8px))}
+  .pl2 .c2,.pl3 .c3{top:calc(var(--head) + 30svh + 40px)}
+  .pl2 .chap h2::after,.pl3 .chap h2::after{display:none}
+}
+.visite.static .pl2,.visite.static .pl3{min-height:760px}
+.visite.static .pl3 .medal{transform:translateY(-50%)}
+@media (max-width:900px){.visite.static .pl3 .medal{transform:translateX(-50%)}}
 
-.pl2{clip-path:inset(0 calc((1 - var(--door)) * 50%) 0 calc((1 - var(--door)) * 50%))}
+
+.pl2{opacity:var(--door)}
+.pl2 .frame{transform:translateY(calc((1 - var(--door)) * 40px))}
 .pl2 img{transform:scale(var(--z2));object-position:42% 50%}
 .pl3{opacity:var(--p3);pointer-events:none}
 .pl3.live{pointer-events:auto}
@@ -167,7 +213,8 @@ html[lang=de] .chap h1,html[lang=de] .chap h2{font-size:clamp(2.1rem,5.2vw,4.4re
 /* version sans mouvement */
 .visite.static{height:auto}
 .visite.static .stage{position:static;height:auto;min-height:0;overflow:visible}
-.visite.static .plan{position:relative;height:92vh;height:92svh;min-height:520px;clip-path:none;opacity:1;overflow:hidden}
+.visite.static .plan{position:relative;height:92vh;height:92svh;min-height:520px;clip-path:none;opacity:1!important;overflow:hidden}
+.visite.static .pl2 .frame{transform:none}
 .visite.static .pl3 img{filter:none}
 .visite.static .chap{opacity:1;transform:none;z-index:2;bottom:56px}
 .visite.static .braise,.visite.static .progress,.visite.static .skip{display:none}
@@ -358,7 +405,6 @@ address{font-style:normal}
 }
 @media (max-width:700px){
   .visite{height:330vh}
-  .pl2 img,.pl3 img{object-position:50% 50%}
   .pl1 picture img{object-position:30% 44%}
   .braise::before{left:18%;top:57%;width:120vw}
   .chap{bottom:70px}
@@ -425,15 +471,14 @@ address{font-style:normal}
         </div>
       </div>
       <div class="plan pl2" id="visite-2">
-        <picture><source media="(max-width:700px)" srcset="img/salle-m.jpg"><img src="img/salle.jpg" alt="" data-ia="alt_salle" width="1800" height="1013" loading="lazy"></picture>
+        <figure class="frame"><picture><img src="img/salle.jpg" alt="" data-ia="alt_salle" width="2048" height="1152" loading="lazy"></picture></figure>
         <div class="chap c2">
           <h2 data-i="s2_h"></h2>
           <p data-i="s2_p"></p>
         </div>
       </div>
       <div class="plan pl3">
-        <picture><source media="(max-width:700px)" srcset="img/feu-m.jpg"><img src="img/feu.jpg" alt="" data-ia="alt_feu" width="1800" height="1013" loading="lazy"></picture>
-        <div class="braise" aria-hidden="true"></div>
+        <figure class="medal"><picture><img src="img/feu.jpg" alt="" data-ia="alt_feu" width="1100" height="1100" loading="lazy"></picture><div class="braise" aria-hidden="true"></div></figure>
         <div class="chap c3">
           <h2 data-i="s3_h"></h2>
           <p data-i="s3_p"></p>
