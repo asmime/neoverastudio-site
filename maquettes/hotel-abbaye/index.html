@@ -1,0 +1,1398 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Hôtel de l'Abbaye — Proposition Neovera Studio</title>
+<meta name="description" content="Hôtel-restaurant familial à Sauxillanges (Puy-de-Dôme) depuis 1972 : 16 chambres, cuisine traditionnelle, pizzas maison, plats à emporter, réceptions jusqu'à 80 couverts.">
+<meta name="theme-color" content="#B5212B">
+<link rel="icon" href="img/logo-bleu.png">
+<link rel="preload" href="fonts/zs700.woff2" as="font" type="font/woff2" crossorigin>
+<style>
+@font-face{font-family:"Zilla Slab";font-weight:500;font-display:swap;src:url(fonts/zs500.woff2) format("woff2")}
+@font-face{font-family:"Zilla Slab";font-weight:700;font-display:swap;src:url(fonts/zs700.woff2) format("woff2")}
+@font-face{font-family:"Commissioner";font-weight:400;font-display:swap;src:url(fonts/cm400.woff2) format("woff2")}
+@font-face{font-family:"Commissioner";font-weight:600 700;font-display:swap;src:url(fonts/cm600.woff2) format("woff2")}
+:root{
+  --rouge:#B5212B;--rouge-fonce:#8E1820;--rouge-pale:#F7E4E3;
+  --volet:#F6F6F3;--blanc:#fff;--pierre:#DCD8D0;--pierre-fonce:#B9B3A8;
+  --lave:#191B20;--ardoise:#4E525B;--nuit:#1C2541;--nuit-2:#26305A;--nuit-texte:#C9CEE0;
+  --vert:#17864A;
+  --titre:"Zilla Slab",Rockwell,Georgia,serif;--texte:"Commissioner",system-ui,sans-serif;
+  --r:10px;--ombre:0 10px 30px -12px rgba(25,27,32,.28),0 2px 6px -2px rgba(25,27,32,.10);
+  --ease:cubic-bezier(.16,1,.3,1);--max:1200px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{font-family:var(--texte);font-size:18px;line-height:1.6;color:var(--lave);background:var(--volet);font-variant-numeric:lining-nums}
+::selection{background:var(--rouge);color:#fff}
+:focus-visible{outline:3px solid var(--rouge);outline-offset:3px;border-radius:4px}
+html{scrollbar-color:var(--pierre-fonce) var(--volet)}
+::-webkit-scrollbar{width:11px}::-webkit-scrollbar-track{background:var(--volet)}::-webkit-scrollbar-thumb{background:var(--pierre-fonce);border-radius:8px;border:3px solid var(--volet)}
+img,video{display:block;max-width:100%}
+a{color:inherit;text-underline-offset:.22em;text-decoration-thickness:1px}
+a:hover{text-decoration-color:var(--rouge)}
+button,input,select,textarea{font:inherit;color:inherit}
+h1,h2,h3{overflow-wrap:break-word;hyphens:auto;font-family:var(--titre);font-weight:700;line-height:1.08;letter-spacing:-.01em;text-wrap:balance}
+h2{font-size:clamp(2rem,4.2vw,3.3rem);margin-bottom:.9rem}
+h3{font-size:1.45rem;margin-bottom:.4rem}
+p{max-width:65ch;text-wrap:pretty}
+.ic{width:1.25em;height:1.25em;flex:none;stroke:currentColor;fill:none;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 clamp(18px,4vw,40px)}
+.num{font-variant-numeric:tabular-nums}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+
+
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.55em;min-height:48px;padding:.7em 1.4em;border-radius:999px;border:2px solid transparent;font-weight:700;font-size:1rem;text-decoration:none;cursor:pointer;transition:background .25s var(--ease),color .25s var(--ease),border-color .25s,transform .25s var(--ease)}
+.btn:active{transform:translateY(1px)}
+.btn-rouge{background:var(--rouge);color:#fff}.btn-rouge:hover{background:var(--rouge-fonce)}
+.btn-ligne{border-color:currentColor;background:transparent}.btn-ligne:hover{background:var(--lave);color:#fff;border-color:var(--lave)}
+.sur-nuit .btn-ligne:hover{background:#fff;color:var(--nuit);border-color:#fff}
+.lien{display:inline-flex;align-items:center;gap:.4em;font-weight:700;color:var(--rouge-fonce);text-decoration:none;border-bottom:2px solid currentColor;padding-bottom:2px;transition:gap .25s var(--ease)}
+.lien:hover{gap:.75em}
+.sur-nuit .lien{color:#fff}
+
+
+.top{position:sticky;top:0;z-index:40;background:rgba(246,246,243,.94);backdrop-filter:saturate(1.2) blur(8px);border-bottom:1px solid var(--pierre)}
+.top .wrap{display:flex;align-items:center;gap:14px;height:72px;max-width:1440px}
+.marque{display:flex;align-items:center;gap:10px;text-decoration:none;flex:none}
+.marque img{height:46px;width:auto}
+.marque span{font-family:var(--titre);font-weight:700;font-size:1.15rem;line-height:1}
+.marque small{display:block;font-family:var(--texte);font-weight:400;font-size:.72rem;color:var(--ardoise);letter-spacing:.02em;margin-top:3px}
+.nav{display:flex;gap:4px;margin-left:auto}
+.nav a{font-size:1rem;font-weight:700;text-decoration:none;padding:.45em .6em;border-radius:8px;white-space:nowrap}
+.nav a:hover{background:var(--pierre)}
+.nav a[aria-current="page"]{color:var(--rouge-fonce);box-shadow:inset 0 -2px 0 var(--rouge)}
+.langue{flex:none;display:flex;align-items:center;gap:4px;border:1.5px solid var(--lave);border-radius:999px;padding:0 8px 0 10px;height:42px;background:#fff}
+.langue select{border:0;background:transparent;font-weight:700;font-size:.9rem;height:36px;cursor:pointer;padding-right:2px}
+.top .btn{min-height:42px;padding:.5em 1.1em}
+.burger{flex:none;width:44px;height:44px;border-radius:50%;border:1.5px solid var(--lave);background:#fff;align-items:center;justify-content:center;cursor:pointer}
+.burger{display:none}
+@media (max-width:1359px){.nav{display:none}.burger{display:inline-flex}.langue{margin-left:auto}}
+@media (max-width:640px){.marque small{display:none}.marque span{font-size:1rem}.top .btn-reserver-top{display:none}.langue{padding:0 6px 0 8px}.langue .ic{display:none}.langue select{font-size:.85rem}}
+.feuille-menu{position:fixed;inset:0;z-index:60;background:var(--volet);display:flex;flex-direction:column;padding:20px clamp(18px,5vw,40px);transform:translateY(-100%);transition:transform .45s var(--ease);visibility:hidden}
+.feuille-menu.ouvert{transform:none;visibility:visible}
+.feuille-menu .entete{display:flex;justify-content:space-between;align-items:center}
+.feuille-menu nav{display:flex;flex-direction:column;margin-top:24px}
+.feuille-menu nav a{font-family:var(--titre);font-weight:700;font-size:clamp(1.6rem,6vw,2.2rem);text-decoration:none;padding:.35em 0;border-bottom:1px solid var(--pierre)}
+.feuille-menu .btn{margin-top:22px;align-self:flex-start}
+
+
+.hero{position:relative;background:var(--volet)}
+.auvent{position:relative;z-index:3;transform-origin:top center}
+.store,.rideau{background:
+  linear-gradient(180deg,rgba(0,0,0,.20),rgba(0,0,0,0) 40%,rgba(255,255,255,.06) 70%,rgba(0,0,0,.10)),
+  repeating-linear-gradient(90deg,var(--rouge) 0 clamp(26px,3vw,44px),#f9f8f4 clamp(26px,3vw,44px) clamp(52px,6vw,88px))}
+.store{height:clamp(40px,5.5vw,78px)}
+.lambrequin{background:var(--rouge);color:#fff;text-align:center;padding:clamp(10px,1.6vw,18px) 16px clamp(14px,2vw,22px);box-shadow:0 14px 22px -14px rgba(60,10,12,.6);position:relative}
+.lambrequin::after,.rideau::after{content:"";position:absolute;left:0;right:0;bottom:-16px;height:16px;background:radial-gradient(circle at 50% 0,var(--rouge) 15.5px,transparent 16.5px) 0 0/32px 16px repeat-x;filter:drop-shadow(0 6px 5px rgba(60,10,12,.28))}
+.lambrequin{z-index:2}
+.lambrequin h1{font-size:clamp(2rem,6.6vw,5.4rem);letter-spacing:.02em;text-transform:uppercase;line-height:1;display:flex;justify-content:center;flex-wrap:wrap;gap:0 .28em}
+.lambrequin h1 .mot{display:inline-block;overflow:hidden;padding-bottom:.06em}
+.lambrequin h1 .mot span{display:inline-block}
+.lambrequin .sous{font-size:clamp(.9rem,1.6vw,1.1rem);letter-spacing:.06em;margin:.5em auto 0;opacity:.95}
+.place{position:relative;min-height:max(400px,calc(100svh - 430px));display:flex;align-items:flex-end;overflow:hidden;background:var(--nuit)}
+.place .secours{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 24%;transform-origin:52% 30%;animation:kb 22s cubic-bezier(.2,.6,.3,1) both}
+@keyframes kb{from{transform:scale(1.09)}to{transform:none}}
+.rideau{position:absolute;left:0;right:0;top:-2px;bottom:16px;z-index:4;display:none}
+.rideau::before{content:"";position:absolute;left:0;right:0;bottom:0;height:26px;background:linear-gradient(180deg,rgba(0,0,0,0),rgba(0,0,0,.35));}
+.js .rideau{display:block}
+.deroule .rideau{animation:enroule 1.5s cubic-bezier(.65,0,.25,1) .55s forwards}
+@keyframes enroule{to{transform:translateY(calc(-100% - 20px))}}
+@media (prefers-reduced-motion:reduce){.place .secours{animation:none}.js .rideau{display:none}}
+.place::before{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(180deg,rgba(28,37,65,.12) 0%,rgba(28,37,65,0) 30%,rgba(18,20,28,.55) 70%,rgba(18,20,28,.86) 100%),linear-gradient(90deg,rgba(18,20,28,.55) 0%,rgba(18,20,28,0) 60%)}
+.place .wrap{position:relative;z-index:2;width:100%;display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:32px;align-items:end;padding-bottom:clamp(22px,3vw,36px);padding-top:150px}
+.resa-mob{display:none}
+.chapeau{color:#fff}
+.chapeau p{font-size:clamp(1.05rem,1.6vw,1.28rem);line-height:1.5;max-width:34em;text-shadow:0 1px 14px rgba(0,0,0,.35)}
+.atouts{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px;list-style:none}
+.atouts{gap:6px 22px}.atouts li{display:flex;align-items:center;gap:7px;font-size:.92rem;font-weight:600;color:#fff;text-shadow:0 1px 8px rgba(0,0,0,.5)}
+.resa{background:#fff;border-radius:16px;padding:22px;box-shadow:0 24px 50px -20px rgba(0,0,0,.55);color:var(--lave)}
+.resa .champs{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr) minmax(0,.8fr);gap:10px}
+.champ{min-width:0}
+.champ label{display:block;font-size:.78rem;font-weight:700;color:var(--ardoise);margin-bottom:4px}
+.champ input,.champ select,.champ textarea{width:100%;height:50px;border:1.5px solid var(--pierre-fonce);border-radius:10px;padding:0 12px;background:#fff;font-size:1rem}
+.champ textarea{height:auto;min-height:120px;padding:12px;resize:vertical}
+.champ input:hover,.champ select:hover,.champ textarea:hover{border-color:var(--ardoise)}
+.champ input:focus,.champ select:focus,.champ textarea:focus{outline:none;border-color:var(--rouge);box-shadow:0 0 0 3px rgba(181,33,43,.18)}
+.champ.erreur input{border-color:var(--rouge)}
+.resa .btn{width:100%;margin-top:12px;min-height:54px;font-size:1.05rem}
+.resa .note{display:flex;align-items:center;justify-content:center;gap:6px;font-size:.82rem;color:var(--ardoise);margin-top:10px;text-align:center}
+@media (max-width:900px){.place .wrap{grid-template-columns:minmax(0,1fr);padding-top:170px}.place{min-height:auto}}
+@media (max-width:640px){.place{display:block;min-height:0}.atouts{display:none}.chapeau p{margin-bottom:4px}.place::before{display:none}.place .secours{position:relative;inset:auto;height:auto;aspect-ratio:5/4;object-position:42% 10%;animation:none}.place .wrap{padding-top:18px;padding-bottom:22px;gap:14px}.resa{display:none}.resa-mob{display:flex;flex-direction:column;gap:10px}.resa-mob p{color:#fff;font-family:var(--titre);font-size:1.35rem}.resa-mob .btn{width:100%;min-height:56px}.atouts li:nth-child(n+3){display:none}.place .wrap{padding-top:120px;gap:18px}.chapeau p{font-size:1rem}}
+
+
+@media (min-width:641px) and (max-width:1100px){.place::before{background:linear-gradient(180deg,rgba(18,20,28,.2) 0%,rgba(18,20,28,.55) 45%,rgba(18,20,28,.9) 100%)}}
+
+.js .lambrequin h1 .mot span{transform:translateY(110%)}
+.js .lambrequin .sous{opacity:0}
+.js .place .chapeau{opacity:0;transform:translateY(18px)}
+.deja .rideau{display:none!important}.deja .lambrequin h1 .mot span,.deja .place .chapeau{transform:none!important;opacity:1!important;animation:none!important}.deja .lambrequin .sous{opacity:.95!important;animation:none!important}
+.deroule .lambrequin h1 .mot span{animation:lettre .9s var(--ease) forwards}
+.deroule .lambrequin .sous{animation:fondu .8s var(--ease) 1.25s forwards}
+.deroule .place .chapeau{animation:monte .8s var(--ease) 1s forwards}
+@keyframes lettre{to{transform:none}}
+@keyframes fondu{to{opacity:.95}}
+@keyframes monte{to{opacity:1;transform:none}}
+@media (prefers-reduced-motion:reduce){.js .lambrequin h1 .mot span,.js .place .chapeau{transform:none;opacity:1}.js .lambrequin .sous{opacity:.95}.deroule *{animation:none!important}html{scroll-behavior:auto}}
+
+
+section.bloc{padding:clamp(64px,9vw,120px) 0}
+.duo{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(28px,5vw,72px);align-items:center}
+.duo.inverse .media{order:2}
+.media{position:relative}
+.media img{width:100%;height:100%;object-fit:cover}
+.media.haut img{aspect-ratio:4/5}
+.media.large img{aspect-ratio:16/10}
+.legende{font-size:.82rem;color:var(--ardoise);margin-top:8px}
+.texte p+p{margin-top:.8em}
+.texte .lien,.texte .btn{margin-top:1.3rem}
+.prix-dès{display:flex;align-items:baseline;gap:.4em;margin:1.2rem 0 .2rem;font-family:var(--titre)}
+.prix-dès b{font-size:clamp(2.6rem,5vw,3.6rem);color:var(--rouge);line-height:1}
+.prix-dès span{font-size:1.05rem;color:var(--ardoise);font-family:var(--texte)}
+@media (max-width:860px){.duo{grid-template-columns:minmax(0,1fr)}.duo.inverse .media{order:0}.media.haut img{aspect-ratio:4/3}}
+
+.famille-grille{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(28px,5vw,80px);align-items:center}
+.plaques{display:grid;gap:18px}
+.plaque{position:relative;background:var(--rouge);color:#fff;border-radius:14px;padding:26px 34px;display:grid;grid-template-columns:auto minmax(0,1fr);gap:24px;align-items:center;box-shadow:inset 0 0 0 3px #fff,inset 0 0 0 5px var(--rouge),0 12px 24px -14px rgba(90,15,20,.6);background-image:radial-gradient(circle at 16px 16px,#efe9df 3.5px,transparent 4.5px),radial-gradient(circle at calc(100% - 16px) 16px,#efe9df 3.5px,transparent 4.5px),radial-gradient(circle at 16px calc(100% - 16px),#efe9df 3.5px,transparent 4.5px),radial-gradient(circle at calc(100% - 16px) calc(100% - 16px),#efe9df 3.5px,transparent 4.5px),linear-gradient(160deg,rgba(255,255,255,.14),rgba(255,255,255,0) 45%)}
+.plaque dt{font-family:var(--titre);font-weight:700;font-size:clamp(2.8rem,5vw,4rem);line-height:1}
+.plaque dd{font-size:1.08rem;font-weight:600}
+.partage{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);min-height:clamp(440px,48vw,620px);border-top:1px solid var(--pierre)}
+.partage-img{position:relative;overflow:hidden;min-height:320px}.partage-img img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.partage-txt{padding:clamp(40px,6vw,90px) clamp(22px,5vw,80px);display:flex;flex-direction:column;justify-content:center}
+.partage.inverse .partage-img{order:2}
+.bandeau-img{height:clamp(240px,40vw,520px)}.bandeau-img img{width:100%;height:100%;object-fit:cover}
+.alentours-bloc{padding-top:0}
+.alentours-bloc+section,.partage+.alentours-bloc{margin-top:0}
+.compo{font-family:var(--titre);font-weight:700;font-size:clamp(1.3rem,2.4vw,2.05rem);line-height:1.55;text-transform:uppercase;max-width:none;margin:clamp(28px,4vw,44px) 0 clamp(28px,4vw,40px);color:#fff}
+.compo span{white-space:nowrap;margin-right:.75em;display:inline-block}.compo sup{font-size:.5em;color:#F06A6F;margin-right:.3em;vertical-align:.85em;font-variant-numeric:tabular-nums}
+@media (max-width:860px){.famille-grille{grid-template-columns:minmax(0,1fr)}.partage{grid-template-columns:minmax(0,1fr);min-height:0}.partage-img{aspect-ratio:4/3;min-height:0}.partage.inverse .partage-img{order:0}}
+.volets{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);border-top:1px solid var(--pierre)}
+.volet{display:flex;flex-direction:column;border-right:1px solid var(--pierre)}
+.volet:last-child{border-right:0}
+.volet-haut{aspect-ratio:16/10;overflow:hidden;position:relative}
+.volet-haut img{width:100%;height:100%;object-fit:cover}
+.volet-txt{padding:clamp(28px,4vw,56px) clamp(22px,4vw,56px) clamp(40px,5vw,72px);display:flex;flex-direction:column;align-items:flex-start;flex:1}
+.ardoise-carte{background:var(--nuit);color:#fff;padding:clamp(24px,4vw,48px);display:flex;flex-direction:column;justify-content:center}
+.ardoise-carte .ardoise-titre{font-family:var(--titre);font-weight:700;font-size:clamp(1.5rem,2.4vw,2rem);margin-bottom:.6rem}
+.ardoise-carte ul{list-style:none}
+.ardoise-carte li{display:flex;align-items:baseline;gap:12px;padding:10px 0;border-bottom:1px dashed rgba(255,255,255,.3)}
+.ardoise-carte li span{flex:1}
+.ardoise-carte li b{font-family:var(--titre);font-size:1.5rem;white-space:nowrap}
+.ardoise-carte .ardoise-bas{color:var(--nuit-texte);font-size:.95rem;margin-top:12px}
+@media (max-width:860px){.volets{grid-template-columns:minmax(0,1fr)}.volet{border-right:0;border-bottom:1px solid var(--pierre)}}
+
+.annees{display:grid;grid-template-columns:auto 1fr;gap:6px 22px;margin-top:1.6rem;align-items:baseline}
+.annees dt{font-family:var(--titre);font-weight:700;font-size:2.2rem;color:var(--rouge);line-height:1}
+.annees dd{padding-bottom:14px;border-bottom:1px solid var(--pierre)}
+
+
+.etape{background:var(--nuit);color:#fff}
+.etape .wrap{display:grid;grid-template-columns:1.3fr auto;gap:28px;align-items:center;padding-top:clamp(36px,5vw,56px);padding-bottom:clamp(36px,5vw,56px)}
+.etape h2{font-size:clamp(1.7rem,3.2vw,2.5rem);margin-bottom:.4rem}
+.etape p{color:var(--nuit-texte)}
+.etape .prix{font-family:var(--titre);font-weight:700;font-size:clamp(2rem,4vw,3rem);white-space:nowrap}
+.etape .droite{display:flex;flex-direction:column;align-items:flex-end;gap:10px}
+@media (max-width:760px){.etape .wrap{grid-template-columns:1fr}.etape .droite{align-items:flex-start}}
+
+
+.tribune{background:var(--nuit);color:#fff;overflow:hidden}
+.tribune .wrap{padding-top:clamp(64px,9vw,110px)}
+.tribune p{color:var(--nuit-texte)}
+
+
+
+.pratique{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));column-gap:40px;gap:0;border-top:1.5px solid var(--lave);margin-top:1.4rem}
+.pratique li{list-style:none;display:flex;gap:12px;padding:18px 18px 18px 0;border-bottom:1px solid var(--pierre);font-size:1rem}
+.pratique li .ic{color:var(--rouge);margin-top:3px}
+
+@media (max-width:560px){.pratique{grid-template-columns:1fr}}
+
+
+.emportes-bloc{border-top:1px solid var(--pierre)}
+.badge-emp{width:150px;height:auto;border-radius:6px}
+.etapes-emp{display:grid;grid-template-columns:repeat(4,1fr);gap:clamp(18px,3vw,36px);margin-top:2rem;counter-reset:e}
+.etapes-emp div{border-top:3px solid var(--vert);padding-top:14px}
+.etapes-emp h3{font-size:1.25rem}
+.etapes-emp p{font-size:.98rem;color:var(--ardoise)}
+@media (max-width:860px){.etapes-emp{grid-template-columns:1fr 1fr}}
+@media (max-width:480px){.etapes-emp{grid-template-columns:1fr}}
+
+.procede{list-style:none;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:clamp(18px,3vw,36px);margin-top:1.4rem;position:relative}
+.procede::before{content:"";position:absolute;left:24px;right:24px;top:24px;height:2px;background:var(--vert);opacity:.35}
+.procede li{position:relative}
+.procede span{display:inline-flex;width:48px;height:48px;border-radius:50%;background:var(--vert);color:#fff;font-family:var(--titre);font-weight:700;font-size:1.3rem;align-items:center;justify-content:center;margin-bottom:14px;position:relative}
+.procede h3{font-size:1.25rem}.procede p{font-size:1rem;color:var(--ardoise)}
+@media (max-width:860px){.procede{grid-template-columns:minmax(0,1fr)}.procede::before{left:23px;right:auto;top:24px;bottom:24px;width:2px;height:auto}.procede li{padding-left:66px}.procede span{position:absolute;left:0;top:0}}
+.etiquette{background:#fff;border:2px dashed var(--pierre-fonce);border-radius:18px;padding:clamp(22px,4vw,44px);max-width:860px;box-shadow:0 18px 40px -26px rgba(25,27,32,.4);margin-top:1.4rem}
+.et-tete{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;padding-bottom:16px;border-bottom:3px solid var(--lave)}
+.et-tete span{font-size:.85rem;text-transform:uppercase;letter-spacing:.1em;color:var(--ardoise)}
+.etiquette dl div{display:grid;grid-template-columns:minmax(0,13rem) minmax(0,1fr);gap:20px;padding:16px 0;border-bottom:1px solid var(--pierre)}
+.etiquette dl div:last-child{border-bottom:0}
+.etiquette dt{font-family:var(--titre);font-weight:700;font-size:1.35rem;color:var(--rouge-fonce)}
+@media (max-width:560px){.etiquette dl div{grid-template-columns:minmax(0,1fr);gap:4px}}
+
+.page-tete{padding-top:clamp(48px,7vw,90px);padding-bottom:clamp(28px,4vw,40px)}
+.page-tete h1{font-size:clamp(2.4rem,6vw,4.6rem);margin-bottom:.8rem}
+.page-tete p{font-size:1.15rem;color:var(--ardoise)}
+.liste-eq{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:10px 28px;margin-top:1rem}
+.liste-eq li{display:flex;gap:10px;align-items:flex-start;padding:8px 0;border-bottom:1px solid var(--pierre)}
+.liste-eq .ic{color:var(--rouge);margin-top:3px}
+@media (max-width:640px){.liste-eq{grid-template-columns:1fr}}
+.tarifs{width:100%;border-collapse:collapse;margin-top:1rem;font-size:1.02rem}
+.tarifs th,.tarifs td{text-align:left;padding:14px 0;border-bottom:1px solid var(--pierre);vertical-align:baseline}
+.tarifs td:last-child{text-align:right;font-weight:700;white-space:nowrap;font-variant-numeric:tabular-nums}
+.tarifs tr.fort td{color:var(--rouge-fonce)}
+.tarifs small{display:block;color:var(--ardoise);font-weight:400;font-size:.85rem}
+.carte-est{background:#fff;border:1px solid var(--pierre);border-radius:16px;padding:clamp(20px,3vw,32px);box-shadow:var(--ombre)}
+.carte-est .grille{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.carte-est .grille .plein{grid-column:1/-1}
+.case{display:flex;align-items:center;gap:10px;font-weight:700;cursor:pointer;min-height:44px}
+.case input{width:22px;height:22px;accent-color:var(--rouge)}
+.total{display:flex;justify-content:space-between;align-items:baseline;gap:12px;margin-top:18px;padding-top:16px;border-top:1.5px dashed var(--pierre-fonce)}
+.total b{font-family:var(--titre);font-size:1.9rem;color:var(--rouge);white-space:nowrap}
+.total{flex-wrap:wrap}.total>span{white-space:nowrap}
+.total small{display:block;color:var(--ardoise);font-size:.85rem}
+.petite{font-size:.86rem;color:var(--ardoise);margin-top:10px}
+.col-tarifs{position:sticky;top:96px}
+@media (max-width:860px){.col-tarifs{position:static;order:-1}}
+.horaires{list-style:none;margin-top:.6rem}
+.horaires li{display:flex;justify-content:space-between;gap:16px;padding:12px 0;border-bottom:1px solid var(--pierre)}
+.horaires li b{font-family:var(--titre);font-size:1.2rem}
+
+
+.formules{display:grid;grid-template-columns:1fr 1fr;gap:clamp(20px,3vw,40px);margin-top:1.4rem}
+.ardoise{background:var(--nuit);color:#fff;padding:clamp(24px,4vw,48px);margin-top:1.4rem;max-width:760px}
+.ardoise h3{font-size:1.6rem;margin-bottom:.8rem}
+.ardoise ul{list-style:none}
+.ardoise li{display:flex;align-items:baseline;gap:10px;padding:10px 0;border-bottom:1px dashed rgba(255,255,255,.25)}
+.ardoise li span:first-child{flex:1}
+.ardoise li b{font-family:var(--titre);font-size:1.35rem;font-variant-numeric:tabular-nums}
+.ardoise .bas{color:var(--nuit-texte);font-size:.95rem;margin-top:12px}
+@media (max-width:760px){.formules{grid-template-columns:1fr}}
+
+
+.match{background:var(--nuit);color:#fff;padding-bottom:clamp(60px,8vw,110px)}
+.match .page-tete p{color:var(--nuit-texte)}
+.jours{display:flex;gap:10px;align-items:flex-start;background:var(--nuit-2);border-radius:12px;padding:14px 16px;margin-top:1rem;max-width:60ch;color:#fff;font-size:1rem}
+.groupe{margin-top:clamp(36px,5vw,56px)}
+.groupe h2{font-size:clamp(1.5rem,2.6vw,2rem);display:flex;align-items:center;gap:14px;margin-bottom:.4rem}
+.groupe h2::after{content:"";flex:1;height:1px;background:var(--nuit-2)}
+.joueurs{display:grid;grid-template-columns:1fr 1fr;column-gap:clamp(24px,4vw,56px)}
+.joueur{display:grid;grid-template-columns:3.1rem 1fr auto auto;gap:4px 14px;align-items:center;padding:16px 0;border-bottom:1px solid var(--nuit-2)}
+.joueur .n{font-family:var(--titre);font-weight:700;font-size:1.7rem;color:var(--rouge);text-align:right;font-variant-numeric:tabular-nums}
+.joueur h3{font-size:1.3rem;text-transform:uppercase;letter-spacing:.03em;margin:0}
+.joueur p{grid-column:2;font-size:.95rem;color:var(--nuit-texte);margin:0}
+.joueur .p{grid-row:1/3;grid-column:3;font-family:var(--titre);font-weight:700;font-size:1.3rem;font-variant-numeric:tabular-nums;white-space:nowrap}
+.joueur .plus{grid-row:1/3;grid-column:4;min-height:42px;padding:.4em .9em;border-radius:999px;border:1.5px solid rgba(255,255,255,.6);background:transparent;color:#fff;font-weight:700;font-size:.88rem;cursor:pointer;display:inline-flex;align-items:center;gap:6px;transition:background .2s,color .2s,border-color .2s}
+.joueur .plus:hover{background:#fff;color:var(--nuit)}
+.joueur .plus.fait{background:var(--rouge);border-color:var(--rouge)}
+@media (max-width:860px){.joueurs{grid-template-columns:1fr}}
+@media (max-width:460px){.joueur{grid-template-columns:2.3rem 1fr auto}.joueur .n{font-size:1.35rem}.joueur .p{grid-row:1;grid-column:3}.joueur p{grid-column:2/4}.joueur .plus{grid-row:3;grid-column:2/4;justify-self:start;margin-top:6px}}
+
+.aide-xv{color:var(--nuit-texte);margin-top:1.2rem}
+.xv{margin-top:clamp(32px,5vw,52px)}
+.xv h2{font-size:clamp(1.5rem,2.6vw,2rem);margin-bottom:.8rem;text-transform:uppercase;letter-spacing:.02em}
+.xv ol{list-style:none;border-top:2px solid #fff}
+.tete-xv,.ligne-xv{display:grid;grid-template-columns:4.2rem minmax(0,1fr) 6.5rem 3.2rem;gap:14px;align-items:center}
+.tete-xv span:nth-child(3){text-align:right}
+.tete-xv{font-size:.8rem;text-transform:uppercase;letter-spacing:.08em;color:var(--nuit-texte);padding:0 8px 8px}
+.ligne-xv{width:100%;text-align:left;background:transparent;border:0;border-bottom:1px solid var(--nuit-2);color:#fff;padding:14px 8px;cursor:pointer;transition:background .2s}
+.ligne-xv:hover{background:var(--nuit-2)}
+.ligne-xv .n{font-family:var(--titre);font-weight:700;font-size:2.1rem;line-height:1;color:var(--nuit);background:#fff;width:3.2rem;height:3.4rem;display:flex;align-items:center;justify-content:center;clip-path:polygon(22% 0,78% 0,100% 18%,88% 30%,88% 100%,12% 100%,12% 30%,0 18%);font-variant-numeric:tabular-nums}
+.ligne-xv.choisie .n{background:var(--rouge);color:#fff}
+.ligne-xv .nom b{display:block;font-family:var(--titre);font-size:1.3rem;text-transform:uppercase;letter-spacing:.03em}
+.ligne-xv .nom small{display:block;color:var(--nuit-texte);font-size:1rem}
+.ligne-xv .p{font-family:var(--titre);font-weight:700;font-size:1.3rem;text-align:right;white-space:nowrap;font-variant-numeric:tabular-nums}
+.ligne-xv .cpt{justify-self:end;width:30px;height:30px;border-radius:50%;border:0;color:var(--nuit-texte);display:inline-flex;align-items:center;justify-content:center;font-weight:700;font-size:.9rem}
+.ligne-xv.choisie .cpt{background:var(--rouge);border-color:var(--rouge)}
+@media (max-width:560px){.tete-xv{display:none}.ligne-xv{grid-template-columns:3.2rem minmax(0,1fr) auto;gap:10px}.ligne-xv .n{width:2.6rem;height:2.8rem;font-size:1.6rem}.ligne-xv .cpt{display:none}.ligne-xv.choisie .p::after{content:" ✓"}}
+.terrain{position:relative;margin-top:clamp(28px,4vw,44px);height:clamp(520px,62vw,700px);max-width:900px;border:2px solid rgba(255,255,255,.75);background:linear-gradient(180deg,rgba(255,255,255,.04),rgba(255,255,255,0)),repeating-linear-gradient(180deg,var(--nuit-2) 0 10%,#222c55 10% 20%)}
+.terrain::before{content:"";position:absolute;left:0;right:0;top:17%;border-top:2px dashed rgba(255,255,255,.45)}
+.terrain::after{content:"";position:absolute;left:0;right:0;bottom:6%;border-top:2px solid rgba(255,255,255,.75)}
+.poste{position:absolute;transform:translate(-50%,-50%);background:none;border:0;color:#fff;cursor:pointer;display:flex;flex-direction:column;align-items:center;gap:4px;z-index:1}
+.poste .maillot{font-family:var(--titre);font-weight:700;font-size:1.35rem;color:var(--nuit);background:#fff;width:2.6rem;height:2.8rem;display:flex;align-items:center;justify-content:center;clip-path:polygon(22% 0,78% 0,100% 18%,88% 30%,88% 100%,12% 100%,12% 30%,0 18%);transition:transform .25s var(--ease),background .2s}
+.poste:hover .maillot{transform:translateY(-3px)}
+.poste.choisie .maillot{background:var(--rouge);color:#fff}
+.poste .etiq{font-family:var(--titre);font-weight:700;font-size:.82rem;text-transform:uppercase;letter-spacing:.03em;white-space:nowrap;background:rgba(18,20,28,.55);padding:1px 6px;border-radius:4px}
+@media (max-width:560px){.terrain{height:560px}.poste .etiq{font-size:.62rem;padding:0 3px}.poste .maillot{width:2.1rem;height:2.3rem;font-size:1.05rem}}
+
+.escapades{display:grid;grid-template-columns:minmax(0,1fr);margin:1rem 0 clamp(40px,6vw,64px);border-top:1.5px solid var(--lave)}
+.groupe-al h2{font-size:clamp(1.6rem,3vw,2.3rem)}
+.escapade{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.3fr) auto;gap:6px 28px;align-items:baseline;padding:16px 0;border-bottom:1px solid var(--pierre)}
+.escapade h3,.escapade p{margin:0}
+@media (max-width:700px){.escapade{grid-template-columns:minmax(0,1fr)}}
+.escapade h3{font-size:1.3rem}
+.escapade p{font-size:.98rem;color:var(--ardoise)}
+.escapade a{font-size:.9rem;font-weight:700;color:var(--rouge-fonce);display:inline-flex;align-items:center;gap:4px;margin-top:6px}
+
+
+
+.form{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.form .plein{grid-column:1/-1}
+.form .msg{grid-column:1/-1;font-weight:700;padding:12px 14px;border-radius:10px;display:none}
+.form .msg.ok{display:block;background:#E6F2EA;color:#145C35}
+.form .msg.ko{display:block;background:var(--rouge-pale);color:var(--rouge-fonce)}
+@media (max-width:560px){.form{grid-template-columns:1fr}}
+.coord{list-style:none}
+.coord li{display:flex;gap:12px;padding:12px 0;border-bottom:1px solid var(--pierre)}
+.coord .ic{color:var(--rouge);margin-top:3px}
+.legal h2{font-size:1.5rem;margin:2rem 0 .5rem}
+.legal p{margin-bottom:.6rem}
+
+
+.pied{background:var(--lave);color:#D8DAE0;padding:clamp(48px,6vw,72px) 0 28px;margin-top:0}
+.pied .wrap{display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:32px}
+.pied img{height:64px;width:auto;margin-bottom:12px}
+.pied h3{color:#fff;font-size:1.15rem;margin-bottom:.6rem}
+.pied a{color:#fff}
+.pied ul{list-style:none}.pied li{padding:4px 0}
+.pied .bas{grid-column:1/-1;border-top:1px solid #33363E;padding-top:18px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;font-size:.88rem}
+.reseau{display:inline-flex;align-items:center;gap:8px;margin-top:10px;font-weight:700}
+@media (max-width:760px){.pied .wrap{grid-template-columns:1fr}}
+
+
+.vue{display:none}.vue.active{display:block;animation:vue .5s var(--ease)}
+@keyframes vue{from{opacity:0;transform:translateY(8px)}}
+@media (prefers-reduced-motion:reduce){.vue.active{animation:none}}
+.apparait{opacity:0;transform:translateY(22px);transition:opacity .8s var(--ease),transform .8s var(--ease)}
+.apparait.vu{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.apparait{opacity:1;transform:none}}
+
+
+.voile{position:fixed;inset:0;background:rgba(20,22,30,.5);z-index:70;opacity:0;visibility:hidden;transition:opacity .3s}
+.voile.ouvert{opacity:1;visibility:visible}
+.tiroir{position:fixed;top:0;right:0;bottom:0;width:min(460px,100%);background:var(--volet);z-index:80;transform:translateX(105%);transition:transform .45s var(--ease);display:flex;flex-direction:column;box-shadow:-20px 0 60px -30px rgba(0,0,0,.5)}
+.tiroir.ouvert{transform:none}
+.tiroir .tete{display:flex;justify-content:space-between;align-items:center;padding:18px 22px;border-bottom:1px solid var(--pierre);background:#fff}
+.tiroir .tete h2{font-size:1.5rem;margin:0}
+.tiroir .corps{padding:22px;overflow:auto;flex:1}
+.fermer{width:44px;height:44px;border-radius:50%;border:1.5px solid var(--lave);background:#fff;display:inline-flex;align-items:center;justify-content:center;cursor:pointer}
+.ligne-cmd{display:grid;grid-template-columns:1fr auto auto;gap:10px;align-items:center;padding:12px 0;border-bottom:1px solid var(--pierre)}
+.ligne-cmd b{font-family:var(--titre);text-transform:uppercase}
+.qte{display:inline-flex;align-items:center;border:1.5px solid var(--pierre-fonce);border-radius:999px}
+.qte button{width:36px;height:36px;border:0;background:transparent;font-weight:700;font-size:1.1rem;cursor:pointer}
+.qte span{min-width:22px;text-align:center;font-variant-numeric:tabular-nums}
+.vide{color:var(--ardoise);padding:20px 0}
+.pastille-cmd{position:fixed;left:18px;bottom:18px;z-index:50;display:none}
+.pastille-cmd.visible{display:inline-flex}
+.pastille-cmd b{background:#fff;color:var(--rouge);border-radius:999px;min-width:26px;height:26px;display:inline-flex;align-items:center;justify-content:center;font-size:.85rem}
+
+
+.conseil-btn{position:fixed;right:18px;bottom:18px;z-index:55;display:flex;align-items:center;gap:12px;background:var(--nuit);color:#fff;border:0;border-radius:12px 30px 30px 12px;padding:8px 22px 8px 8px;border:2px solid rgba(255,255,255,.85);cursor:pointer;box-shadow:0 14px 34px -12px rgba(0,0,0,.55);text-align:left;transition:transform .25s var(--ease)}
+.conseil-btn:hover{transform:translateY(-2px)}
+.conseil-btn .rond{width:46px;height:46px;border-radius:8px 50% 50% 8px;background:var(--rouge);display:inline-flex;align-items:center;justify-content:center}
+.conseil-btn b{display:block;font-family:var(--titre);font-size:1.05rem;line-height:1.1}
+.conseil-btn small{display:block;font-size:.8rem;color:#C9CBD2}
+.barre-mob{display:none}
+.conseil-btn .sous-mob{display:none}.conseil-btn .sous-mob::first-letter{text-transform:uppercase}
+@media (max-width:640px){.conseil-btn .sous-ordi{display:none}.conseil-btn .sous-mob{display:block}.pied{padding-bottom:104px}.barre-mob{display:grid;grid-template-columns:1fr 1.25fr;gap:8px;position:fixed;left:0;right:0;bottom:0;z-index:55;padding:10px 10px calc(10px + env(safe-area-inset-bottom));background:rgba(246,246,243,.96);backdrop-filter:blur(8px);border-top:1px solid var(--pierre)}.barre-mob .btn{min-height:54px;padding:.4em .8em}.conseil-btn{position:static;width:100%;padding:6px 12px 6px 6px;box-shadow:none}.conseil-btn .rond{width:42px;height:42px}.conseil-btn small{font-size:.74rem}.bulle{bottom:96px;right:10px;left:10px;max-width:none}.pastille-cmd{bottom:90px}}
+.bulle{position:fixed;right:340px;bottom:22px;z-index:55;max-width:290px;background:#fff;border-radius:14px;padding:14px 40px 14px 16px;box-shadow:var(--ombre);font-size:.95rem;display:none}
+.bulle.visible{display:block;animation:monte .5s var(--ease) both}
+.bulle button{position:absolute;top:6px;right:6px;width:32px;height:32px;border:0;background:transparent;cursor:pointer;border-radius:50%}
+.conseil{position:fixed;right:18px;bottom:18px;z-index:90;width:min(400px,calc(100vw - 24px));height:min(600px,calc(100vh - 36px));background:var(--volet);border-radius:18px;box-shadow:0 30px 80px -20px rgba(0,0,0,.55);display:flex;flex-direction:column;overflow:hidden;transform:translateY(20px) scale(.98);opacity:0;visibility:hidden;transition:all .35s var(--ease)}
+.conseil.ouvert{transform:none;opacity:1;visibility:visible}
+@media (max-width:520px){.conseil{right:0;bottom:0;width:100vw;height:100dvh;border-radius:0}}
+.conseil .tete{background:var(--rouge);color:#fff;padding:14px 16px;display:flex;align-items:center;gap:12px}
+.conseil .tete b{font-family:var(--titre);font-size:1.2rem;display:block}
+.conseil .tete small{font-size:.8rem;opacity:.9}
+.conseil .tete .fermer{margin-left:auto;border-color:#fff;background:transparent;color:#fff}
+.fil{flex:1;overflow:auto;padding:16px;display:flex;flex-direction:column;gap:10px}
+.m{max-width:86%;padding:10px 14px;border-radius:14px;font-size:.97rem;line-height:1.45}
+.m.ia{background:#fff;border:1px solid var(--pierre);align-self:flex-start;border-bottom-left-radius:4px}
+.m.moi{background:var(--lave);color:#fff;align-self:flex-end;border-bottom-right-radius:4px}
+.puces{display:flex;flex-wrap:wrap;gap:8px}
+.puces button{border:1.5px solid var(--lave);background:#fff;border-radius:999px;padding:.45em .9em;font-size:.9rem;font-weight:700;cursor:pointer;min-height:40px}
+.puces button:hover{background:var(--lave);color:#fff}
+.puces button.action{background:var(--rouge);border-color:var(--rouge);color:#fff}
+.saisie{display:flex;gap:8px;padding:12px;border-top:1px solid var(--pierre);background:#fff}
+.saisie input{flex:1;height:46px;border:1.5px solid var(--pierre-fonce);border-radius:999px;padding:0 16px}
+.saisie input:focus{outline:none;border-color:var(--rouge)}
+.saisie button{width:46px;height:46px;border-radius:50%;border:0;background:var(--rouge);color:#fff;cursor:pointer;display:inline-flex;align-items:center;justify-content:center}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+<symbol id="i-lit" viewBox="0 0 24 24"><path d="M3 18V7M21 18v-5a3 3 0 0 0-3-3h-7v5M3 14h18M6.5 11.5a1.5 1.5 0 1 0 0-.01"/></symbol>
+<symbol id="i-couverts" viewBox="0 0 24 24"><path d="M7 3v8M5 3v5a2 2 0 0 0 4 0V3M7 11v10M17 21V3c-2 1-3 4-3 7h3"/></symbol>
+<symbol id="i-parking" viewBox="0 0 24 24"><rect x="4" y="3" width="16" height="18" rx="3"/><path d="M10 17V8h3a2.5 2.5 0 0 1 0 5h-3"/></symbol>
+<symbol id="i-patte" viewBox="0 0 24 24"><path d="M12 13c-3 0-5 3-5 5 0 1.5 1.3 2.3 2.8 1.8 1.5-.5 2.9-.5 4.4 0 1.5.5 2.8-.3 2.8-1.8 0-2-2-5-5-5Z"/><circle cx="6" cy="10" r="1.6"/><circle cx="18" cy="10" r="1.6"/><circle cx="9.5" cy="6" r="1.6"/><circle cx="14.5" cy="6" r="1.6"/></symbol>
+<symbol id="i-wifi" viewBox="0 0 24 24"><path d="M2.5 9a14 14 0 0 1 19 0M5.5 12.5a9.5 9.5 0 0 1 13 0M8.8 15.8a5 5 0 0 1 6.4 0"/><path d="M12 19.2h.01"/></symbol>
+<symbol id="i-ascenseur" viewBox="0 0 24 24"><rect x="5" y="3" width="14" height="18" rx="2"/><path d="M9 9l3-3 3 3M9 15l3 3 3-3"/></symbol>
+<symbol id="i-borne" viewBox="0 0 24 24"><path d="M5 21V5a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v16M3 21h14M15 9h2a2 2 0 0 1 2 2v4a1.5 1.5 0 0 0 3 0V8l-2-2M10 7l-2 4h4l-2 4"/></symbol>
+<symbol id="i-acces" viewBox="0 0 24 24"><circle cx="12" cy="4.5" r="1.6"/><path d="M12 7v6h5l2 5M12 9h-4M9.5 12.5A5 5 0 1 0 15 19"/></symbol>
+<symbol id="i-cle" viewBox="0 0 24 24"><circle cx="8" cy="8" r="4.5"/><path d="M11.2 11.2 20 20M16.5 16.5l2-2M14 14l2-2"/></symbol>
+<symbol id="i-horloge" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></symbol>
+<symbol id="i-tel" viewBox="0 0 24 24"><path d="M5 3h4l2 5-2.5 1.5a11 11 0 0 0 6 6L16 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 5a2 2 0 0 1 2-2Z"/></symbol>
+<symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></symbol>
+<symbol id="i-lieu" viewBox="0 0 24 24"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.5"/></symbol>
+<symbol id="i-fb" viewBox="0 0 24 24"><path d="M14 8h3V4h-3a4 4 0 0 0-4 4v3H7v4h3v6h4v-6h3l1-4h-4V8Z"/></symbol>
+<symbol id="i-bulle" viewBox="0 0 24 24"><path d="M4 5h16v11H9l-5 4V5Z"/><path d="M8.5 10.5h.01M12 10.5h.01M15.5 10.5h.01"/></symbol>
+<symbol id="i-x" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18"/></symbol>
+<symbol id="i-fleche" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+<symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol>
+<symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12.5 4.5 4.5L19 7"/></symbol>
+<symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></symbol>
+<symbol id="i-globe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></symbol>
+<symbol id="i-cadenas" viewBox="0 0 24 24"><rect x="5" y="10" width="14" height="11" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></symbol>
+<symbol id="i-sac" viewBox="0 0 24 24"><path d="M5 8h14l-1 13H6L5 8Z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></symbol>
+<symbol id="i-envoi" viewBox="0 0 24 24"><path d="M4 12 20 4l-6 16-3-7-7-1Z"/></symbol>
+<symbol id="i-montagne" viewBox="0 0 24 24"><path d="m2 20 7-12 4 6 2-3 7 9H2Z"/><path d="m7.5 11 1.5 1 1.5-1"/></symbol>
+<symbol id="i-fete" viewBox="0 0 24 24"><path d="M8 3h8l-1 7a3 3 0 0 1-6 0L8 3ZM12 13v7M8.5 20h7"/></symbol>
+<symbol id="i-bebe" viewBox="0 0 24 24"><path d="M4 10h16v7H4zM4 17v3M20 17v3M4 10V6M20 10V6M8 10v7M12 10v7M16 10v7"/></symbol>
+<symbol id="i-cafe" viewBox="0 0 24 24"><path d="M4 9h12v5a5 5 0 0 1-5 5H9a5 5 0 0 1-5-5V9ZM16 10h1.5a2.5 2.5 0 0 1 0 5H16M8 3c-1 1 1 2 0 3M12 3c-1 1 1 2 0 3"/></symbol>
+<symbol id="i-douche" viewBox="0 0 24 24"><path d="M4 21V7a4 4 0 0 1 8 0M8 11h8a4 4 0 0 0-8 0ZM10 15v1M12 15v2M14 15v1M16 15v2"/></symbol>
+<symbol id="i-cintre" viewBox="0 0 24 24"><path d="M12 7a2 2 0 1 1 2 2c-1 0-2 .7-2 2L3 17h18l-9-6"/></symbol>
+<symbol id="i-table" viewBox="0 0 24 24"><path d="M3 9h18M6 9v11M18 9v11M6 14h12"/></symbol>
+<symbol id="i-reveil" viewBox="0 0 24 24"><circle cx="12" cy="13" r="7"/><path d="M12 10v3l2 1.5M4 5l3-2M20 5l-3-2"/></symbol>
+<symbol id="i-oreiller" viewBox="0 0 24 24"><path d="M4 8c3-2 13-2 16 0 1 3 1 5 0 8-3 2-13 2-16 0-1-3-1-5 0-8Z"/></symbol>
+</svg>
+
+<header class="top">
+  <div class="wrap">
+    <a class="marque" href="#accueil" aria-label="Hôtel de l'Abbaye — accueil">
+      <img src="img/logo-bleu.png" alt="" width="62" height="51">
+      <span>Hôtel de l'Abbaye<small>Sauxillanges · Puy-de-Dôme</small></span>
+    </a>
+    <nav class="nav" aria-label="Navigation principale">
+      <a href="#maison" data-t="nav_maison"></a>
+      <a href="#chambres" data-t="nav_chambres"></a>
+      <a href="#restaurant" data-t="nav_restaurant"></a>
+      <a href="#pizzas" data-t="nav_pizzas"></a>
+      <a href="#emportes" data-t="nav_emportes"></a>
+      <a href="#alentours" data-t="nav_alentours"></a>
+      <a href="#receptions" data-t="nav_receptions"></a>
+      <a href="#contact" data-t="nav_contact"></a>
+    </nav>
+    <label class="langue"><span class="sr" data-t="ft_lang"></span>
+      <select id="langue" aria-label="Langue / Language">
+        <option value="fr" title="Français">FR</option><option value="en" title="English">EN</option><option value="es" title="Español">ES</option><option value="de" title="Deutsch">DE</option><option value="it" title="Italiano">IT</option><option value="nl" title="Nederlands">NL</option>
+      </select></label>
+    <button class="btn btn-rouge btn-reserver-top" data-ouvre="resa" data-t="reserver"></button>
+    <button class="burger" id="burger" aria-label="Menu" aria-expanded="false"><svg class="ic"><use href="#i-menu"/></svg></button>
+  </div>
+</header>
+
+<div class="feuille-menu" id="feuille" aria-hidden="true">
+  <div class="entete"><a class="marque" href="#accueil"><img src="img/logo-bleu.png" alt="" width="62" height="51"><span>Hôtel de l'Abbaye</span></a>
+  <button class="fermer" id="feuille-fermer" aria-label="Fermer"><svg class="ic"><use href="#i-x"/></svg></button></div>
+  <nav aria-label="Navigation mobile">
+    <a href="#maison" data-t="nav_maison"></a><a href="#chambres" data-t="nav_chambres"></a><a href="#restaurant" data-t="nav_restaurant"></a><a href="#pizzas" data-t="nav_pizzas"></a><a href="#emportes" data-t="nav_emportes"></a><a href="#alentours" data-t="nav_alentours"></a><a href="#receptions" data-t="nav_receptions"></a><a href="#contact" data-t="nav_contact"></a><a href="#conseil" data-ouvre="conseil" data-t="conseil_nom"></a>
+  </nav>
+  <button class="btn btn-rouge" data-ouvre="resa" data-t="reserver"></button>
+</div>
+
+<main>
+<div class="vue" data-vue="accueil">
+  <section class="hero" aria-labelledby="titre-hotel">
+    <div class="auvent">
+      <div class="store" aria-hidden="true"></div>
+      <div class="lambrequin">
+        <h1 id="titre-hotel"><span class="mot"><span>Hôtel</span></span><span class="mot"><span>de</span></span><span class="mot"><span>l'Abbaye</span></span></h1>
+        <p class="sous" data-t="h_sub"></p>
+      </div>
+    </div>
+    <div class="place">
+      <img class="secours" src="img/facade-hd.jpg" alt="La façade de l'hôtel, son enseigne peinte, son store rouge et blanc et le clocher de Sauxillanges" fetchpriority="high">
+      <div class="rideau" aria-hidden="true"></div>
+      <div class="wrap">
+        <div class="chapeau">
+          <p data-t="h_lead"></p>
+          <ul class="atouts">
+            <li><svg class="ic"><use href="#i-lit"/></svg><span data-t="f1"></span></li>
+            <li><svg class="ic"><use href="#i-ascenseur"/></svg><span data-t="f2"></span></li>
+            <li><svg class="ic"><use href="#i-parking"/></svg><span data-t="f3"></span></li>
+            <li><svg class="ic"><use href="#i-patte"/></svg><span data-t="f4"></span></li>
+          </ul>
+        </div>
+        <div class="resa-mob"><p data-t="h_mob"></p><button class="btn btn-rouge" data-ouvre="resa"><span data-t="b_go"></span><svg class="ic"><use href="#i-fleche"/></svg></button></div>
+        <form class="resa" id="resa-rapide" novalidate>
+          <div class="champs">
+            <div class="champ"><label for="r-arr" data-t="b_arrivee"></label><input type="date" id="r-arr" required></div>
+            <div class="champ"><label for="r-dep" data-t="b_depart"></label><input type="date" id="r-dep" required></div>
+            <div class="champ"><label for="r-pers" data-t="b_pers"></label><select id="r-pers"><option>1</option><option selected>2</option><option>3</option><option>4</option><option>5</option><option>6</option></select></div>
+          </div>
+          <button class="btn btn-rouge" type="submit"><span data-t="b_go"></span><svg class="ic"><use href="#i-fleche"/></svg></button>
+          <p class="note"><svg class="ic"><use href="#i-cadenas"/></svg><span data-t="b_note"></span></p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <section class="bloc famille">
+    <div class="wrap famille-grille">
+      <div class="texte apparait">
+        <h2 data-t="m_t"></h2>
+        <p data-t="m_p"></p>
+        <a class="lien" href="#maison"><span data-t="m_cta"></span><svg class="ic"><use href="#i-fleche"/></svg></a>
+      </div>
+      <dl class="plaques apparait">
+        <div class="plaque"><dt>1972</dt><dd data-t="mai_1972"></dd></div>
+        <div class="plaque"><dt>2006</dt><dd data-t="mai_2006"></dd></div>
+      </dl>
+    </div>
+  </section>
+
+  <section class="volets">
+    <article class="volet">
+      <div class="volet-haut"><img src="img/chambre.jpg" alt="Une chambre twin de l'hôtel, deux lits blancs et une grande fenêtre" loading="lazy"></div>
+      <div class="volet-txt apparait">
+        <h2 data-t="c_t"></h2>
+        <p data-t="c_p"></p>
+        <div class="prix-dès"><span data-t="c_from"></span><b class="num">58 €</b><span data-t="c_nuit"></span></div>
+        <a class="btn btn-rouge" href="#chambres"><span data-t="c_cta"></span><svg class="ic"><use href="#i-fleche"/></svg></a>
+      </div>
+    </article>
+    <article class="volet">
+      <div class="volet-haut ardoise-carte" aria-label="Formules du midi">
+        <p class="ardoise-titre" data-t="fo_jour"></p>
+        <ul><li><span data-t="fo_j1"></span><b>20 €</b></li><li><span data-t="fo_j2"></span><b>15 €</b></li><li><span data-t="fo_e1"></span><b>11 €</b></li></ul>
+        <p class="ardoise-bas" data-t="fo_sub"></p>
+      </div>
+      <div class="volet-txt apparait">
+        <h2 data-t="r_t"></h2>
+        <p data-t="r_p"></p>
+        <ul class="horaires">
+          <li><b data-t="re_midi"></b><span data-t="re_midi_h"></span></li>
+          <li><b data-t="re_soir"></b><span data-t="re_soir_h"></span></li>
+        </ul>
+        <a class="lien" href="#restaurant" style="margin-top:1.2rem"><span data-t="r_cta"></span><svg class="ic"><use href="#i-fleche"/></svg></a>
+      </div>
+    </article>
+  </section>
+
+  <section class="etape" aria-labelledby="t-etape">
+    <div class="wrap">
+      <div><h2 id="t-etape" data-t="e_t"></h2><p data-t="e_p"></p></div>
+      <div class="droite"><span class="prix num" data-t="e_prix"></span><button class="btn btn-rouge" data-ouvre="resa" data-type="etape"><span data-t="e_cta"></span></button></div>
+    </div>
+  </section>
+
+  <section class="tribune sur-nuit" aria-labelledby="t-pz">
+    <div class="wrap">
+      <h2 id="t-pz" data-t="p_t" style="max-width:18ch"></h2>
+      <p data-t="p_p"></p>
+      <p class="compo" id="compo" aria-hidden="true"></p>
+      <a class="btn btn-rouge" href="#pizzas" style="margin-bottom:clamp(60px,8vw,100px)"><span data-t="p_cta"></span><svg class="ic"><use href="#i-fleche"/></svg></a>
+    </div>
+  </section>
+
+  <section class="bloc emportes-bloc">
+    <div class="wrap famille-grille">
+      <div class="apparait" style="display:flex;justify-content:center"><img src="img/emportes.png" alt="Les Emportés de l'Abbaye" loading="lazy" style="width:min(400px,90%)"></div>
+      <div class="texte apparait">
+        <h2 data-t="x_t"></h2>
+        <p data-t="x_p"></p>
+        <a class="lien" href="#emportes"><span data-t="x_cta"></span><svg class="ic"><use href="#i-fleche"/></svg></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="partage">
+    <div class="partage-img"><img src="img/salle.jpg" alt="La grande salle, ses nappes et ses lustres" loading="lazy"></div>
+    <div class="partage-txt apparait">
+      <h2 data-t="v_t"></h2>
+      <p data-t="v_p"></p>
+      <a class="btn btn-ligne" href="#receptions" style="align-self:flex-start;margin-top:1.3rem"><span data-t="v_cta"></span><svg class="ic"><use href="#i-fleche"/></svg></a>
+    </div>
+  </section>
+
+  <section class="bloc alentours-bloc">
+    <div class="bandeau-img"><img src="img/sancy.jpg" alt="Sauxillanges dans la vallée, le Sancy enneigé à l'horizon" loading="lazy"></div>
+    <div class="wrap famille-grille" style="margin-top:clamp(28px,4vw,48px);align-items:start">
+      <h2 data-t="a_t"></h2>
+      <div class="texte"><p data-t="a_p"></p><a class="lien" href="#alentours"><span data-t="a_cta"></span><svg class="ic"><use href="#i-fleche"/></svg></a></div>
+    </div>
+  </section>
+
+  <section class="bloc" style="padding-top:0">
+    <div class="wrap">
+      <h2 data-t="i_t"></h2>
+      <ul class="pratique" id="pratique"></ul>
+      <p style="margin-top:1.4rem"><a class="lien" href="https://www.google.fr/maps/place/H%C3%B4tel+Restaurant+de+l'Abbaye/@45.55142,3.372986,3a,75y,61.61h,85.91t/data=!3m5!1e1!3m3!1sowMjI8vmD16h6cW5XTLmxA!2e0!3e2!4m2!3m1!1s0x0:0x2a5a53370658a9fb?hl=fr" target="_blank" rel="noopener"><svg class="ic"><use href="#i-lieu"/></svg><span data-t="i_street"></span></a></p>
+    </div>
+  </section>
+</div>
+
+<div class="vue" data-vue="maison">
+  <div class="wrap page-tete"><h1 data-t="mai_t"></h1><p data-t="mai_p1"></p></div>
+  <section class="bloc" style="padding-top:0">
+    <div class="wrap duo">
+      <div class="media haut"><img src="img/facade.jpg" alt="La façade de l'hôtel sur la place du 8-Mai, à côté du clocher" loading="lazy"></div>
+      <div class="texte">
+        <p data-t="mai_p2" style="font-size:1.2rem"></p>
+        <dl class="plaques" style="margin-top:1.6rem"><div class="plaque"><dt>1972</dt><dd data-t="mai_1972"></dd></div><div class="plaque"><dt>2006</dt><dd data-t="mai_2006"></dd></div><div class="plaque" style="background-color:var(--nuit);box-shadow:inset 0 0 0 3px #fff,inset 0 0 0 5px var(--nuit)"><dt data-t="mai_auj" style="font-size:clamp(1.6rem,3vw,2.2rem)"></dt><dd data-t="mai_auj_p"></dd></div></dl>
+        <a class="reseau lien" href="https://www.facebook.com/hotelabbayesauxillanges/" target="_blank" rel="noopener"><svg class="ic"><use href="#i-fb"/></svg><span data-t="mai_fb"></span></a>
+      </div>
+    </div>
+  </section>
+  <div class="bandeau-img"><img src="img/ruisseau.jpg" alt="Un ruisseau sous les arbres, près de Sauxillanges" loading="lazy"></div>
+  <section class="bloc"><div class="wrap famille-grille">
+    <h2 data-t="a_t"></h2>
+    <div class="texte"><p data-t="a_p"></p><a class="lien" href="#alentours"><span data-t="a_cta"></span><svg class="ic"><use href="#i-fleche"/></svg></a>
+    <p style="margin-top:1rem"><a class="lien" href="https://www.google.fr/maps/place/H%C3%B4tel+Restaurant+de+l'Abbaye/@45.55142,3.372986,3a,75y,61.61h,85.91t/data=!3m5!1e1!3m3!1sowMjI8vmD16h6cW5XTLmxA!2e0!3e2!4m2!3m1!1s0x0:0x2a5a53370658a9fb?hl=fr" target="_blank" rel="noopener"><svg class="ic"><use href="#i-lieu"/></svg><span data-t="i_street"></span></a></p></div>
+  </div></section>
+</div>
+
+<div class="vue" data-vue="chambres">
+  <div class="wrap page-tete"><h1 data-t="ch_t"></h1><p data-t="ch_p"></p></div>
+  <section class="bloc" style="padding-top:0">
+    <div class="wrap duo" style="align-items:start">
+      <div>
+        <div class="media large"><img src="img/chambre.jpg" alt="Chambre twin de l'hôtel" loading="lazy"></div>
+        <h2 style="margin-top:2.4rem;font-size:1.9rem" data-t="ch_eq_t"></h2>
+        <ul class="liste-eq" id="equipements"></ul>
+        <h2 style="margin-top:2.4rem;font-size:1.9rem" data-t="ch_h_t"></h2>
+        <ul class="liste-eq" style="grid-template-columns:1fr">
+          <li><svg class="ic"><use href="#i-cle"/></svg><span data-t="ch_h1"></span></li>
+          <li><svg class="ic"><use href="#i-horloge"/></svg><span data-t="ch_h2"></span></li>
+          <li><svg class="ic"><use href="#i-cle"/></svg><span data-t="ch_h3"></span></li>
+          <li><svg class="ic"><use href="#i-cafe"/></svg><span><span data-t="ch_pdj"></span> — <b class="num">8 €</b></span></li>
+        </ul>
+      </div>
+      <div class="col-tarifs">
+        <h2 style="font-size:1.9rem" data-t="tar_t"></h2>
+        <table class="tarifs" id="tarifs"></table>
+        <p class="petite" data-t="tar_note"></p>
+        <div class="carte-est" style="margin-top:1.6rem" id="estimateur-page"></div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<div class="vue" data-vue="restaurant">
+  <div class="wrap page-tete"><h1 data-t="re_t"></h1><p data-t="re_p"></p></div>
+  <section class="bloc" style="padding-top:0">
+    <div class="wrap duo" style="align-items:start">
+      <div class="media large"><img src="img/salle.jpg" alt="La salle du restaurant" loading="lazy"></div>
+      <div>
+        <h2 style="font-size:1.9rem" data-t="re_h_t"></h2>
+        <ul class="horaires">
+          <li><b data-t="re_midi"></b><span data-t="re_midi_h"></span></li>
+          <li><b data-t="re_soir"></b><span data-t="re_soir_h"></span></li>
+          <li><b data-t="re_ferme"></b><span></span></li>
+        </ul>
+        <p style="margin-top:1rem"><a class="lien" href="#pizzas"><span data-t="p_cta"></span><svg class="ic"><use href="#i-fleche"/></svg></a></p>
+      </div>
+    </div>
+    <div class="wrap" style="margin-top:clamp(48px,7vw,80px)">
+      <h2 data-t="fo_t"></h2><p data-t="fo_sub" style="color:var(--ardoise)"></p>
+      <div class="famille-grille" style="align-items:stretch;margin-top:0">
+      <div class="ardoise">
+        <h3 data-t="fo_jour"></h3><ul>
+          <li><span data-t="fo_j1"></span><b>20 €</b></li>
+          <li><span data-t="fo_j2"></span><b>15 €</b></li></ul>
+        <h3 data-t="fo_exp" style="margin-top:1.6rem"></h3><ul>
+          <li><span data-t="fo_e1"></span><b>11 €</b></li>
+          <li><span data-t="fo_e2"></span><b>14 €</b></li>
+          <li><span data-t="fo_dess"></span><b>4 €</b></li>
+          <li><span data-t="fo_cafe"></span><b>1 €</b></li></ul>
+      </div>
+      <div class="media" style="margin-top:1.4rem"><img src="img/cafe.jpg" alt="Café crème et irish coffee servis à la maison" loading="lazy" style="aspect-ratio:auto;height:100%;object-position:30% 50%"></div>
+      </div>
+    </div>
+    <div class="wrap duo" style="margin-top:clamp(48px,7vw,80px)">
+      <div class="texte"><h2 data-t="ca_t"></h2><p data-t="ca_p"></p><a class="btn btn-rouge" href="#contact" data-sujet="s2"><span data-t="ca_cta"></span></a></div>
+      <div class="texte"><h2 data-t="v_t"></h2><p data-t="rc_p"></p><a class="lien" href="#receptions"><span data-t="v_cta"></span><svg class="ic"><use href="#i-fleche"/></svg></a></div>
+    </div>
+  </section>
+</div>
+
+<div class="vue" data-vue="pizzas">
+  <section class="match sur-nuit">
+    <div class="wrap page-tete" style="padding-bottom:0">
+      <h1 data-t="pz_t"></h1><p data-t="pz_p"></p>
+      <p class="jours"><svg class="ic"><use href="#i-horloge"/></svg><span data-t="pz_jours"></span></p>
+    </div>
+    <div class="wrap" id="feuille-match"></div>
+  </section>
+</div>
+
+<div class="vue" data-vue="emportes">
+  <div class="wrap page-tete">
+    <img src="img/emportes.png" alt="Les Emportés de l'Abbaye" style="width:min(340px,80%);margin-bottom:22px">
+    <h1 data-t="em_t" class="sr"></h1><p data-t="em_p"></p></div>
+  <section class="bloc" style="padding-top:0">
+    <div class="wrap">
+      <div class="etiquette">
+        <div class="et-tete"><img src="img/emportes.png" alt="" width="180"><span>Hôtel de l'Abbaye · Sauxillanges</span></div>
+        <dl>
+          <div><dt data-t="em_1"></dt><dd data-t="em_1p"></dd></div>
+          <div><dt data-t="em_2"></dt><dd data-t="em_2p"></dd></div>
+          <div><dt data-t="em_3"></dt><dd data-t="em_3p"></dd></div>
+          <div><dt data-t="em_4"></dt><dd data-t="em_4p"></dd></div>
+        </dl>
+      </div>
+      <div class="texte" style="margin-top:clamp(48px,7vw,80px);max-width:60ch"><h2 data-t="em_pz"></h2><p data-t="pz_jours"></p><a class="btn btn-rouge" href="#pizzas" style="margin-top:1.2rem"><svg class="ic"><use href="#i-sac"/></svg><span data-t="em_pz_cta"></span></a></div>
+    </div>
+  </section>
+</div>
+
+<div class="vue" data-vue="alentours">
+  <div class="wrap page-tete"><h1 data-t="al_t"></h1><p data-t="al_p"></p></div>
+  <div class="bandeau-img"><img src="img/sancy.jpg" alt="Vue sur Sauxillanges et le Sancy" loading="lazy"></div>
+  <section class="bloc"><div class="wrap" id="escapades"></div></section>
+</div>
+
+<div class="vue" data-vue="receptions">
+  <div class="wrap page-tete"><h1 data-t="rc_t"></h1><p data-t="rc_p"></p></div>
+  <section class="bloc" style="padding-top:0">
+    <div class="wrap duo" style="align-items:start">
+      <div class="media large"><img src="img/salle.jpg" alt="La salle de réception" loading="lazy"></div>
+      <div class="carte-est">
+        <h2 style="font-size:1.6rem" data-t="rc_f_t"></h2>
+        <form class="form" id="form-rc" novalidate>
+          <div class="champ"><label for="rc-type" data-t="rc_type"></label><select id="rc-type"><option data-t="rc_mariage"></option><option data-t="rc_banquet"></option><option data-t="rc_seminaire"></option><option data-t="rc_famille"></option><option data-t="rc_autre"></option></select></div>
+          <div class="champ"><label for="rc-conv" data-t="rc_conv"></label><input id="rc-conv" type="number" min="1" max="80" value="40" inputmode="numeric"></div>
+          <div class="champ plein"><label for="rc-date" data-t="rc_date"></label><input id="rc-date" type="date"></div>
+          <div class="champ"><label for="rc-nom" data-t="ct_nom"></label><input id="rc-nom" autocomplete="name" required></div>
+          <div class="champ"><label for="rc-mail" data-t="ct_mail"></label><input id="rc-mail" autocomplete="email" required></div>
+          <div class="champ plein"><label for="rc-msg" data-t="ct_msg"></label><textarea id="rc-msg"></textarea></div>
+          <p class="msg" role="status"></p>
+          <button class="btn btn-rouge plein" type="submit"><span data-t="ct_send"></span><svg class="ic"><use href="#i-envoi"/></svg></button>
+          <p class="petite plein" data-t="ct_rgpd"></p>
+        </form>
+      </div>
+    </div>
+  </section>
+</div>
+
+<div class="vue" data-vue="contact">
+  <div class="wrap page-tete"><h1 data-t="ct_t"></h1><p data-t="ct_p"></p></div>
+  <section class="bloc" style="padding-top:0">
+    <div class="wrap duo" style="align-items:start">
+      <div>
+        <ul class="coord">
+          <li><svg class="ic"><use href="#i-lieu"/></svg><span><b data-t="ct_adr"></b><br>Hôtel de l'Abbaye<br>15, place du 8-Mai<br>63490 Sauxillanges</span></li>
+          <li><svg class="ic"><use href="#i-tel"/></svg><span><b data-t="ct_tel"></b><br><a href="tel:+33473968180">04 73 96 81 80</a></span></li>
+          <li><svg class="ic"><use href="#i-mail"/></svg><span><b>E-mail</b><br><a href="mailto:info@hotel-abbaye-sauxillanges.com">info@hotel-abbaye-sauxillanges.com</a></span></li>
+          <li><svg class="ic"><use href="#i-tel"/></svg><span><b data-t="ct_fax"></b><br>04 73 96 85 36</span></li>
+          <li><svg class="ic"><use href="#i-horloge"/></svg><span data-t="i_reception"></span></li>
+        </ul>
+        <p style="margin-top:1.2rem;display:flex;gap:18px;flex-wrap:wrap">
+          <a class="lien" href="https://www.openstreetmap.org/?mlat=45.5514&mlon=3.3730#map=17/45.5514/3.3730" target="_blank" rel="noopener"><svg class="ic"><use href="#i-lieu"/></svg><span data-t="ct_plan"></span></a>
+          <a class="lien" href="https://www.facebook.com/hotelabbayesauxillanges/" target="_blank" rel="noopener"><svg class="ic"><use href="#i-fb"/></svg>Facebook</a></p>
+      </div>
+      <div class="carte-est">
+        <form class="form" id="form-ct" novalidate>
+          <div class="champ"><label for="ct-nom" data-t="ct_nom"></label><input id="ct-nom" autocomplete="name" required></div>
+          <div class="champ"><label for="ct-mail" data-t="ct_mail"></label><input id="ct-mail" autocomplete="email" required></div>
+          <div class="champ plein"><label for="ct-sujet" data-t="ct_sujet"></label><select id="ct-sujet"><option value="s1" data-t="ct_s1"></option><option value="s2" data-t="ct_s2"></option><option value="s3" data-t="ct_s3"></option><option value="s4" data-t="ct_s4"></option><option value="s5" data-t="ct_s5"></option></select></div>
+          <div class="champ plein"><label for="ct-msg" data-t="ct_msg"></label><textarea id="ct-msg"></textarea></div>
+          <p class="msg" role="status"></p>
+          <button class="btn btn-rouge plein" type="submit"><span data-t="ct_send"></span><svg class="ic"><use href="#i-envoi"/></svg></button>
+          <p class="petite plein" data-t="ct_rgpd"></p>
+        </form>
+      </div>
+    </div>
+  </section>
+</div>
+
+<div class="vue" data-vue="mentions">
+  <div class="wrap page-tete"><h1 data-t="ml_t"></h1></div>
+  <section class="bloc legal" style="padding-top:0"><div class="wrap">
+    <h2 data-t="ml_ed"></h2>
+    <p>Hôtel de l'Abbaye — EURL de l'Abbaye<br>15, place du 8-Mai, 63490 Sauxillanges<br>Tél. 04 73 96 81 80 · info@hotel-abbaye-sauxillanges.com<br>SIRET 488 744 475 000 10 · APE 5510Z · TVA FR61 488 744 475</p>
+    <h2 data-t="ml_cnil"></h2><p data-t="ml_cnil_p"></p>
+    <h2 data-t="ml_heb"></h2><p>Applications Services, 5, rue du Sergent-Bobillot, 92400 Courbevoie · www.applications-services.com · info@applications-services.com</p>
+    <h2 data-t="ml_droits"></h2><p data-t="ml_droits_p"></p><p data-t="ml_photos"></p>
+  </div></section>
+</div>
+</main>
+
+<footer class="pied">
+  <div class="wrap">
+    <div>
+      <img src="img/logo-blanc.png" alt="Hôtel-Restaurant de l'Abbaye" width="78" height="64">
+      <p data-t="ft_maison"></p>
+      <a class="reseau" href="https://www.facebook.com/hotelabbayesauxillanges/" target="_blank" rel="noopener" aria-label="Facebook"><svg class="ic"><use href="#i-fb"/></svg>Facebook</a>
+    </div>
+    <div>
+      <h3>Hôtel de l'Abbaye</h3>
+      <ul><li>15, place du 8-Mai, 63490 Sauxillanges</li><li><a href="tel:+33473968180">04 73 96 81 80</a></li><li><a href="mailto:info@hotel-abbaye-sauxillanges.com">info@hotel-abbaye-sauxillanges.com</a></li></ul>
+    </div>
+    <div>
+      <ul>
+        <li><a href="#chambres" data-t="nav_chambres"></a></li><li><a href="#restaurant" data-t="nav_restaurant"></a></li><li><a href="#pizzas" data-t="nav_pizzas"></a></li><li><a href="#emportes" data-t="nav_emportes"></a></li><li><a href="#receptions" data-t="nav_receptions"></a></li><li><a href="#mentions" data-t="ft_rgpd"></a></li>
+      </ul>
+    </div>
+    <div class="bas"><span>© Hôtel-Restaurant de l'Abbaye · Sauxillanges</span><span>Tél. 04 73 96 81 80</span></div>
+  </div>
+</footer>
+
+<div class="voile" id="voile"></div>
+<aside class="tiroir" id="tiroir-resa" aria-labelledby="t-resa" aria-hidden="true">
+  <div class="tete"><h2 id="t-resa" data-t="est_t"></h2><button class="fermer" data-ferme aria-label="Fermer"><svg class="ic"><use href="#i-x"/></svg></button></div>
+  <div class="corps" id="estimateur-tiroir"></div>
+</aside>
+<aside class="tiroir" id="tiroir-cmd" aria-labelledby="t-cmd" aria-hidden="true">
+  <div class="tete"><h2 id="t-cmd" data-t="cmd_t"></h2><button class="fermer" data-ferme aria-label="Fermer"><svg class="ic"><use href="#i-x"/></svg></button></div>
+  <div class="corps" id="cmd-corps"></div>
+</aside>
+<button class="btn btn-rouge pastille-cmd" id="pastille-cmd"><svg class="ic"><use href="#i-sac"/></svg><span data-t="cmd_btn"></span><b id="cmd-n">0</b></button>
+
+<div class="bulle" id="bulle" role="status"><span data-t="as_bulle"></span><button aria-label="Fermer" id="bulle-x"><svg class="ic"><use href="#i-x"/></svg></button></div>
+<div class="barre-mob-wrap"><div class="barre-mob"><button class="btn btn-rouge" data-ouvre="resa" data-t="reserver"></button><span class="slot-conseil"></span></div></div>
+<button class="conseil-btn" id="conseil-btn" aria-controls="conseil"><span class="rond"><svg class="ic"><use href="#i-cle"/></svg></span><span><b data-t="conseil_nom"></b><small class="sous-ordi" data-t="conseil_sous"></small><small class="sous-mob" data-t="as_virtuel"></small></span></button>
+<section class="conseil" id="conseil" aria-label="Abbaye Conseil" aria-hidden="true">
+  <div class="tete"><img src="img/logo-blanc.png" alt="" width="44" height="36"><div><b data-t="conseil_nom"></b><small data-t="as_virtuel"></small></div><button class="fermer" id="conseil-x" aria-label="Fermer"><svg class="ic"><use href="#i-x"/></svg></button></div>
+  <div class="fil" id="fil" aria-live="polite"></div>
+  <form class="saisie" id="saisie"><input id="question" autocomplete="off"><button type="submit" aria-label="Envoyer"><svg class="ic"><use href="#i-envoi"/></svg></button></form>
+</section>
+
+<script>
+
+const T={
+fr:{
+lang:"Français",
+nav_maison:"La maison",nav_chambres:"Chambres et tarifs",nav_restaurant:"Restaurant",nav_pizzas:"Pizzas",nav_emportes:"À emporter",nav_alentours:"Alentours",nav_receptions:"Réceptions",nav_contact:"Contact",nav_menu:"Menu",nav_fermer:"Fermer",
+reserver:"Réserver",conseil_nom:"Abbaye Conseil",conseil_aide:"Je vous aide à choisir",
+h_sub:"Hôtel · Restaurant · Sauxillanges, Puy-de-Dôme",
+h_lead:"Seize chambres au calme sur la place du village, une table de tradition, et des pizzas qui portent des noms de stades. Une famille vous reçoit ici depuis 1972.",
+b_arrivee:"Arrivée",b_depart:"Départ",b_pers:"Personnes",b_go:"Voir les disponibilités",b_note:"Réservation sécurisée · chambre dès 58 € la nuit",
+f1:"16 chambres rénovées",f2:"Ascenseur et 2 chambres accessibles",f3:"Parking gratuit et garage",f4:"Animaux sans supplément",
+m_t:"Deux générations sur la même place",m_p:"Marie-Claude a repris l'hôtel en 1972. Son fils Stéphane tient la maison depuis mars 2006. Le clocher n'a pas bougé, l'accueil non plus.",m_cta:"Entrer dans la maison",
+c_t:"Des chambres où l'on dort vraiment",c_p:"Les grandes routes passent loin d'ici. Le soir, on entend surtout le clocher. Seize chambres rénovées, dont une familiale et deux pensées pour les personnes à mobilité réduite.",c_from:"dès",c_nuit:"la nuit",c_cta:"Voir les chambres et les tarifs",
+e_t:"En déplacement ? La soirée étape",e_p:"Pensée pour les déplacements professionnels, à 10 km de l'autoroute.",e_prix:"77 € par personne",e_cta:"Réserver ma soirée étape",
+r_t:"Une table de tradition, midi et soir",r_p:"Spécialités régionales, produits du terroir choisis par le chef, et une cuisine qui se renouvelle sans cesse. En semaine, le menu du jour est à 20 €.",r_cta:"Voir les formules et les horaires",
+p_t:"Le soir, la carte se joue en vingt-six noms",p_p:"Mayol, Eden Park, Murrayfield… Chaque pizza maison porte le nom d'un stade ou d'un geste de rugby. Sur place ou à emporter.",p_cta:"Lire la feuille de match",
+x_t:"Les Emportés de l'Abbaye",x_p:"Nos plats, cuisinés ici, mis sous vide puis pasteurisés. Un mois au réfrigérateur, dix minutes dans l'eau frémissante, et c'est servi.",x_cta:"Découvrir Les Emportés",
+v_t:"Jusqu'à 80 convives",v_p:"Mariage, banquet, séminaire : la salle se transforme pour votre fête ou votre journée de travail.",v_cta:"Préparer ma réception",
+a_t:"Entre Livradois-Forez et Sancy",a_p:"Usson et la reine Margot, l'abbatiale d'Issoire, les lacs, les sentiers… L'escapade commence sur le pas de la porte.",a_cta:"Voir les escapades",
+i_t:"Bon à savoir",i_reception:"Réception du lundi au samedi de 8 h à 21 h, le dimanche de 8 h à 12 h. Sinon, écrivez-nous.",i_parking:"Parking public gratuit sur place et garage privé",i_animaux:"Animaux acceptés sans supplément",i_wifi:"Wi-Fi gratuit dans tout l'établissement",i_ascenseur:"Ascenseur",i_borne:"Borne de recharge électrique à 200 m",i_pmr:"Place de parking adaptée à 100 m",i_couettes:"Couettes et oreillers en plus sur demande",i_langues:"Accueil en français et en anglais",i_acces:"À 10 km de l'autoroute · Clermont-Ferrand 47 km · Lyon 172 km · Paris 462 km",i_street:"Faire un tour devant l'hôtel",
+mai_t:"La maison",mai_p1:"Dans le petit village de Sauxillanges, au cœur du Puy-de-Dôme, l'Hôtel de l'Abbaye vous accueille toute l'année, pour les vacances comme pour le travail.",mai_p2:"Vous y trouverez le calme et la sérénité, dans un cadre naturel et authentique.",
+mai_1972:"Marie-Claude devient propriétaire de l'hôtel.",mai_2006:"En mars, son fils Stéphane Mavel prend la direction.",mai_auj:"Aujourd'hui",mai_auj_p:"16 chambres rénovées, un ascenseur, un restaurant et une salle de 80 couverts.",mai_fb:"Suivre l'hôtel sur Facebook",
+ch_t:"Chambres et tarifs",ch_p:"Spacieuses, calmes, loin des grands axes. Deux chambres sont adaptées aux personnes à mobilité réduite, et une chambre accueille toute la famille.",
+ch_eq_t:"Dans chaque chambre",ch_eq1:"Salle de bain individuelle : lavabo, douche, WC",ch_eq2:"Penderie et rangements",ch_eq3:"Table et chaise",ch_eq4:"Téléphone en ligne directe",ch_eq5:"Wi-Fi gratuit",ch_eq6:"Lits bébé sur demande",ch_eq7:"Oreillers et couettes en plus à la réception",ch_eq8:"Réveil sur demande à la réception",
+ch_h_t:"Vos horaires",ch_h1:"Chambre prête dès 17 h, à libérer à 10 h le lendemain.",ch_h2:"Arrivée après 21 h ? Prévenez-nous, on s'organise.",ch_h3:"Pendant le séjour, entrées et sorties libres 24 h/24.",ch_pdj:"Petit-déjeuner servi en salle de 7 h à 10 h",
+tar_t:"Tarifs",tar_1:"Chambre 1 personne",tar_2:"Chambre 2 personnes",tar_tw:"Chambre twin 2 personnes",tar_3:"Chambre 3 personnes",tar_etape:"Soirée étape",tar_pp:"par personne",tar_taxe:"Taxe de séjour",tar_pdj:"Petit-déjeuner",tar_de:"de",tar_a:"à",tar_note:"Le prix exact dépend de la date et de la chambre : la réservation en ligne fait le calcul pour vous.",
+est_t:"Votre séjour en un coup d'œil",est_type:"Chambre",est_nuits:"nuits",est_nuit:"nuit",est_pdj:"Avec petit-déjeuner",est_total:"Estimation",est_taxe:"taxe de séjour comprise",est_go:"Continuer vers la réservation sécurisée",est_info:"Vous finalisez sur notre module de réservation sécurisé. Aucun paiement ici.",
+re_t:"Restaurant",re_p:"Une cuisine soignée et gourmande : tradition, spécialités régionales, produits du terroir rigoureusement choisis par notre chef, et une carte qui se renouvelle sans cesse.",
+re_h_t:"Horaires",re_midi:"Midi",re_midi_h:"12 h – 13 h 30, du lundi au vendredi",re_soir:"Soir",re_soir_h:"19 h – 21 h, du lundi au samedi",re_ferme:"Fermé le dimanche",
+fo_t:"Les formules du midi",fo_sub:"du lundi au vendredi",fo_jour:"Le menu du jour",fo_j1:"Entrée + plat + fromage et dessert",fo_j2:"Entrée + plat ou plat + dessert",fo_exp:"L'express",fo_e1:"Plat du jour",fo_e2:"Planche express (entrée, plat, fromage)",fo_dess:"Dessert en supplément",fo_cafe:"Café",
+ca_t:"La carte du moment",ca_p:"Notre carte suit les saisons et le marché. Demandez-nous celle du jour : on vous l'envoie.",ca_cta:"Recevoir la carte du jour",
+pz_t:"La feuille de match",pz_p:"Vingt-six pizzas maison, chacune baptisée d'un stade ou d'un geste de rugby. Sur place ou à emporter.",pz_jours:"Le soir uniquement : jeudi, vendredi et samedi hors saison ; tous les jours en juillet et août, sauf le mercredi.",
+g_tomate:"Base tomate",g_moutarde:"Moutarde crémée",g_creme:"Base crème",g_oignons:"Oignons et lardons",g_miel:"Touche de miel",
+pz_add:"Ajouter",pz_added:"Ajoutée",
+cmd_t:"Votre commande à emporter",cmd_vide:"Votre commande est vide. Choisissez vos pizzas sur la feuille de match.",cmd_total:"Total",cmd_tel:"Appeler pour commander",cmd_mail:"Envoyer ma commande par e-mail",cmd_info:"Commande à confirmer par téléphone ou par e-mail selon les jours d'ouverture.",cmd_btn:"À emporter",
+em_t:"Les Emportés de l'Abbaye",em_p:"Nos plats sont préparés sur place, conditionnés sous vide puis pasteurisés. Ils se gardent jusqu'à un mois au réfrigérateur.",em_1:"Cuisinés ici",em_1p:"Préparés sur place par notre équipe.",em_2:"Sous vide, pasteurisés",em_2p:"Un procédé validé et contrôlé par un laboratoire indépendant, Terana, à Marmilhat (63).",em_3:"Un mois au frais",em_3p:"Jusqu'à un mois au réfrigérateur.",em_4:"Dix minutes",em_4p:"Plongez le sachet dans l'eau frémissante une dizaine de minutes, ouvrez… et dégustez.",em_pz:"Les pizzas aussi s'emportent",em_pz_cta:"Composer ma commande",
+al_t:"Les alentours",al_p:"Grâce à sa situation, l'hôtel est un point de départ idéal. Voici ce que l'on conseille à nos hôtes.",
+al_parentignat:"Château de Parentignat",al_parentignat_p:"Un château et son domaine, tout proches.",al_issoire:"Abbatiale d'Issoire et tour de l'Horloge",al_issoire_p:"À 10 km, un joyau roman.",al_livradois:"Parc naturel régional du Livradois-Forez",al_livradois_p:"Forêts, crêtes et villages.",al_sentiers:"Sentiers de randonnée",al_sentiers_p:"À pied ou à cheval, sur les GR et PR.",al_musee:"Musée Pierre le Vénérable",al_musee_p:"L'histoire de l'abbaye de Sauxillanges.",al_usson:"Usson",al_usson_p:"Parmi les plus beaux villages de France, où fut assignée à résidence la reine Margot.",al_etangs:"Étangs privés",al_etangs_p:"Perche, brochet, carpe amour, carpe commune, tanche, gardon. Pêche de nuit en toute sécurité.",al_velo:"Location de vélos",al_velo_p:"Et des circuits à proximité.",al_sancy:"Monts Dore et Puy de Sancy",al_sancy_p:"Le plus haut sommet du Massif central, 1 886 m.",al_lacs:"Le circuit des lacs",al_lacs_p:"Pavin, Chauvet, Chambon, Guéry, Aydat… pour se baigner ou taquiner le poisson.",al_domes:"Chaîne des Puys et Puy de Dôme",al_domes_p:"Vue magnifique sur la Limagne, et le parc Vulcania.",al_chateaux:"La route des châteaux",al_chateaux_p:"Murol, Cordès…",al_romanes:"Les églises romanes",al_romanes_p:"Saint-Nectaire, Issoire, Orcival, Saint-Saturnin…",al_villages:"Les villages",al_villages_p:"Champeix, Saint-Floret, Montpeyroux…",al_metiers:"La route des métiers",al_metiers_p:"Dont la fabrication du saint-nectaire.",al_ski:"Le ski",al_ski_p:"Pistes du Mont-Dore et de Super-Besse.",al_site:"Site",
+rc_t:"Réceptions",rc_p:"Jusqu'à 80 couverts dans une salle modulable : banquets, mariages, séminaires, repas de famille.",rc_f_t:"Parlez-nous de votre projet",rc_type:"Occasion",rc_mariage:"Mariage",rc_banquet:"Banquet",rc_seminaire:"Séminaire",rc_famille:"Repas de famille",rc_autre:"Autre",rc_date:"Date souhaitée",rc_conv:"Nombre de convives",
+ct_t:"Contact",ct_p:"Une question, une demande particulière ? Écrivez-nous, on vous répond vite.",ct_nom:"Votre nom",ct_mail:"E-mail ou téléphone",ct_sujet:"Sujet",ct_s1:"Chambre",ct_s2:"Restaurant",ct_s3:"Réception",ct_s4:"Les Emportés",ct_s5:"Autre",ct_msg:"Votre message",ct_send:"Envoyer",ct_ok:"Merci ! Votre messagerie s'ouvre avec votre message prêt à partir.",ct_err:"Indiquez votre nom et un moyen de vous répondre.",ct_rgpd:"Vos informations servent uniquement à vous répondre. Elles ne sont jamais transmises à des tiers (RGPD).",ct_tel:"Téléphone",ct_fax:"Fax",ct_adr:"Adresse",ct_plan:"Voir sur la carte",
+ml_t:"Mentions légales",ml_ed:"Éditeur",ml_cnil:"Informatique et libertés",ml_cnil_p:"Les informations transmises via ce site ne sont conservées par l'Hôtel de l'Abbaye qu'à des fins relationnelles avec ses contacts, clients ou prospects, et uniquement pour des besoins d'information, commerciaux ou comptables nécessaires au bon fonctionnement de l'entreprise. Elles ne sont ni divulguées ni transmises à des tiers, conformément au RGPD du 25 mai 2018.",ml_heb:"Conception, développement et hébergement",ml_droits:"Droits d'auteur",ml_droits_p:"L'ensemble de ce site relève des législations française et internationale sur le droit d'auteur et la propriété intellectuelle. Tous les droits de reproduction et de représentation sont réservés, y compris pour les documents téléchargeables et les représentations iconographiques et photographiques. Toute reproduction, totale ou partielle, sur quelque support électronique que ce soit est interdite sans autorisation expresse du propriétaire du site.",ml_photos:"Les photos de ce site ne sont pas libres de droits : elles sont la propriété de l'Hôtel de l'Abbaye de Sauxillanges, et leur usage est interdit sans autorisation expresse.",
+ft_rgpd:"Mentions légales",ft_lang:"Langue",ft_maison:"Hôtel-Restaurant familial à Sauxillanges depuis 1972.",
+as_hello:"Bonjour ! Je suis Abbaye Conseil, l'assistant virtuel de l'hôtel. Que puis-je faire pour vous ?",as_virtuel:"assistant virtuel",as_ph:"Posez votre question…",as_send:"Envoyer",
+as_q_dormir:"Dormir ce soir",as_q_diner:"Dîner ou pizzas",as_q_chien:"Venir avec mon chien",as_q_tard:"J'arrive tard",as_q_reception:"Organiser une réception",as_q_sortir:"Que faire autour ?",as_q_pro:"Déplacement pro",
+as_a_dormir:"Combien serez-vous ?",as_p1:"Seul(e)",as_p2:"À deux",as_p3:"À trois ou en famille",
+as_a_p1:"La chambre 1 personne est entre 58 et 64 € la nuit. Je vous ouvre la réservation ?",as_a_p2:"Pour deux : chambre double de 68 à 76 €, ou twin (deux lits) de 72 à 80 €. Je vous ouvre la réservation ?",as_a_p3:"La chambre 3 personnes est de 80 à 90 €, et une chambre familiale existe. Des lits bébé sont prêtés sur demande. Je vous ouvre la réservation ?",
+as_a_diner:"Le restaurant est ouvert le midi de 12 h à 13 h 30 en semaine, et le soir de 19 h à 21 h du lundi au samedi. Les pizzas, c'est le soir : jeudi, vendredi et samedi hors saison, et tous les jours en juillet-août sauf le mercredi.",
+as_a_chien:"Bonne nouvelle : les animaux sont acceptés sans supplément. Il y a aussi un garage privé pour la voiture.",
+as_a_tard:"Pas de souci. Pour une arrivée après 21 h, prévenez-nous à l'avance (04 73 96 81 80 ou info@hotel-abbaye-sauxillanges.com) : on s'organise. Ensuite, vous entrez et sortez librement 24 h/24.",
+as_a_reception:"La salle accueille jusqu'à 80 convives et se module : mariage, banquet, séminaire. Je vous emmène au formulaire ?",
+as_a_sortir:"Usson et la reine Margot, l'abbatiale d'Issoire à 10 km, les lacs Pavin et Chambon, le Sancy, Vulcania… Je vous montre les escapades ?",
+as_a_pro:"La soirée étape est à 77 € par personne, à 10 km de l'autoroute, avec Wi-Fi gratuit et parking. Je vous ouvre la réservation ?",
+as_a_pdj:"Le petit-déjeuner est servi en salle de 7 h à 10 h, au prix de 8 €.",as_a_wifi:"Le Wi-Fi est gratuit dans tout l'établissement.",as_a_parking:"Parking public gratuit sur place, garage privé, et une borne de recharge électrique à 200 m.",as_a_emp:"Les Emportés : nos plats sous vide et pasteurisés, à garder un mois au réfrigérateur. Dix minutes dans l'eau frémissante et c'est prêt.",as_a_pmr:"Deux chambres sont adaptées aux personnes à mobilité réduite, avec ascenseur, et une place de parking adaptée à 100 m.",
+as_a_defaut:"Je n'ai pas la réponse exacte. Le plus simple : appelez la réception au 04 73 96 81 80 ou écrivez à info@hotel-abbaye-sauxillanges.com.",
+as_go_res:"Ouvrir la réservation",as_go_rc:"Aller au formulaire",as_go_al:"Voir les escapades",as_go_pz:"Voir les pizzas",as_go_emp:"Voir Les Emportés",as_bulle:"Une question sur une chambre ou un dîner ? Je vous réponds tout de suite.",
+ing:{tomate:"tomate",fromage:"fromage",champignons:"champignons",jambon:"jambon",chevre:"chèvre",creme:"crème fraîche",pdt:"pommes de terre",lardons:"lardons",oeuf:"œuf",chorizo:"chorizo",poivron:"poivron",oignons:"oignons",boeuf:"bœuf",stnectaire:"saint-nectaire",roquefort:"roquefort",chevreEug:"chèvre d'Eugénie",moutarde:"moutarde crémée",bleu:"bleu",miel:"miel"},
+pers:"pers.",mois:["janv.","févr.","mars","avr.","mai","juin","juil.","août","sept.","oct.","nov.","déc."]
+},
+en:{
+lang:"English",
+nav_maison:"The house",nav_chambres:"Rooms & rates",nav_restaurant:"Restaurant",nav_pizzas:"Pizzas",nav_emportes:"Takeaway",nav_alentours:"Surroundings",nav_receptions:"Events",nav_contact:"Contact",nav_menu:"Menu",nav_fermer:"Close",
+reserver:"Book",conseil_nom:"Abbaye Conseil",conseil_aide:"Let me help you choose",
+h_sub:"Hotel · Restaurant · Sauxillanges, Puy-de-Dôme",
+h_lead:"Sixteen quiet rooms on the village square, a traditional table, and pizzas named after rugby grounds. The same family has welcomed guests here since 1972.",
+b_arrivee:"Check-in",b_depart:"Check-out",b_pers:"Guests",b_go:"Check availability",b_note:"Secure booking · rooms from €58 a night",
+f1:"16 renovated rooms",f2:"Lift and 2 accessible rooms",f3:"Free parking and garage",f4:"Pets at no extra charge",
+m_t:"Two generations on the same square",m_p:"Marie-Claude took over the hotel in 1972. Her son Stéphane has run it since March 2006. The bell tower hasn't moved, and neither has the welcome.",m_cta:"Step inside",
+c_t:"Rooms where you really sleep",c_p:"The main roads are far away. In the evening, the bell tower is all you hear. Sixteen renovated rooms, including a family room and two designed for guests with reduced mobility.",c_from:"from",c_nuit:"a night",c_cta:"See rooms and rates",
+e_t:"On the road? The overnight package",e_p:"Designed for business travel, 10 km from the motorway.",e_prix:"€77 per person",e_cta:"Book my overnight stay",
+r_t:"A traditional table, lunch and dinner",r_p:"Regional specialities, local produce chosen by the chef, and a menu that keeps changing. On weekdays, the set menu is €20.",r_cta:"See menus and opening hours",
+p_t:"In the evening, the menu is played out in twenty-six names",p_p:"Mayol, Eden Park, Murrayfield… Each homemade pizza is named after a rugby ground or move. Eat in or take away.",p_cta:"Read the team sheet",
+x_t:"Les Emportés de l'Abbaye",x_p:"Our dishes, cooked here, vacuum-packed and pasteurised. A month in the fridge, ten minutes in simmering water, and dinner is served.",x_cta:"Discover Les Emportés",
+v_t:"Up to 80 guests",v_p:"Wedding, banquet, seminar: the room adapts to your celebration or your working day.",v_cta:"Plan my event",
+a_t:"Between Livradois-Forez and the Sancy",a_p:"Usson and Queen Margot, Issoire's abbey church, the lakes, the trails… Your day out starts on the doorstep.",a_cta:"See day trips",
+i_t:"Good to know",i_reception:"Reception Monday to Saturday 8 am–9 pm, Sunday 8 am–12 pm. Otherwise, email us.",i_parking:"Free public parking on site and private garage",i_animaux:"Pets welcome at no extra charge",i_wifi:"Free Wi-Fi throughout",i_ascenseur:"Lift",i_borne:"EV charging point 200 m away",i_pmr:"Accessible parking space 100 m away",i_couettes:"Extra duvets and pillows on request",i_langues:"We speak French and English",i_acces:"10 km from the motorway · Clermont-Ferrand 47 km · Lyon 172 km · Paris 462 km",i_street:"Take a look outside the hotel",
+mai_t:"The house",mai_p1:"In the small village of Sauxillanges, in the heart of the Puy-de-Dôme, the Hôtel de l'Abbaye welcomes you all year round, for holidays and business trips alike.",mai_p2:"You will find peace and quiet in a natural, authentic setting.",
+mai_1972:"Marie-Claude becomes owner of the hotel.",mai_2006:"In March, her son Stéphane Mavel takes over.",mai_auj:"Today",mai_auj_p:"16 renovated rooms, a lift, a restaurant and a room seating 80.",mai_fb:"Follow the hotel on Facebook",
+ch_t:"Rooms & rates",ch_p:"Spacious, quiet, far from the main roads. Two rooms are adapted for guests with reduced mobility, and one room sleeps the whole family.",
+ch_eq_t:"In every room",ch_eq1:"Private bathroom: washbasin, shower, WC",ch_eq2:"Wardrobe and storage",ch_eq3:"Table and chair",ch_eq4:"Direct-line telephone",ch_eq5:"Free Wi-Fi",ch_eq6:"Baby cots on request",ch_eq7:"Extra pillows and duvets at reception",ch_eq8:"Wake-up call on request",
+ch_h_t:"Times",ch_h1:"Room ready from 5 pm, to be vacated by 10 am the next day.",ch_h2:"Arriving after 9 pm? Let us know and we'll arrange it.",ch_h3:"During your stay, come and go freely 24/7.",ch_pdj:"Breakfast served in the dining room 7–10 am",
+tar_t:"Rates",tar_1:"Single room",tar_2:"Double room",tar_tw:"Twin room",tar_3:"Triple room",tar_etape:"Overnight package",tar_pp:"per person",tar_taxe:"Tourist tax",tar_pdj:"Breakfast",tar_de:"from",tar_a:"to",tar_note:"The exact price depends on the date and the room: online booking calculates it for you.",
+est_t:"Your stay at a glance",est_type:"Room",est_nuits:"nights",est_nuit:"night",est_pdj:"With breakfast",est_total:"Estimate",est_taxe:"tourist tax included",est_go:"Continue to secure booking",est_info:"You complete your booking on our secure booking engine. No payment here.",
+re_t:"Restaurant",re_p:"Careful, generous cooking: tradition, regional specialities, local produce carefully selected by our chef, and a menu that is always changing.",
+re_h_t:"Opening hours",re_midi:"Lunch",re_midi_h:"12–1.30 pm, Monday to Friday",re_soir:"Dinner",re_soir_h:"7–9 pm, Monday to Saturday",re_ferme:"Closed on Sundays",
+fo_t:"Lunch menus",fo_sub:"Monday to Friday",fo_jour:"Menu of the day",fo_j1:"Starter + main + cheese and dessert",fo_j2:"Starter + main or main + dessert",fo_exp:"The Express",fo_e1:"Dish of the day",fo_e2:"Express board (starter, main, cheese)",fo_dess:"Extra dessert",fo_cafe:"Coffee",
+ca_t:"Today's menu",ca_p:"Our menu follows the seasons and the market. Ask us for today's: we'll send it to you.",ca_cta:"Get today's menu",
+pz_t:"The team sheet",pz_p:"Twenty-six homemade pizzas, each named after a rugby ground or move. Eat in or take away.",pz_jours:"Evenings only: Thursday, Friday and Saturday out of season; every day in July and August except Wednesday.",
+g_tomate:"Tomato base",g_moutarde:"Creamy mustard",g_creme:"Cream base",g_oignons:"Onions and bacon",g_miel:"A touch of honey",
+pz_add:"Add",pz_added:"Added",
+cmd_t:"Your takeaway order",cmd_vide:"Your order is empty. Pick your pizzas from the team sheet.",cmd_total:"Total",cmd_tel:"Call to order",cmd_mail:"Email my order",cmd_info:"Order to be confirmed by phone or email, depending on opening days.",cmd_btn:"Takeaway",
+em_t:"Les Emportés de l'Abbaye",em_p:"Our dishes are prepared on site, vacuum-packed and then pasteurised. They keep for up to a month in the fridge.",em_1:"Cooked here",em_1p:"Prepared on site by our team.",em_2:"Vacuum-packed, pasteurised",em_2p:"A process approved and checked by an independent laboratory, Terana, in Marmilhat (63).",em_3:"A month in the fridge",em_3p:"Keeps for up to a month in the fridge.",em_4:"Ten minutes",em_4p:"Drop the pouch into simmering water for about ten minutes, open… and enjoy.",em_pz:"Pizzas to take away too",em_pz_cta:"Build my order",
+al_t:"Surroundings",al_p:"Thanks to its location, the hotel is an ideal base. Here is what we recommend to our guests.",
+al_parentignat:"Château de Parentignat",al_parentignat_p:"A château and its estate, close by.",al_issoire:"Issoire abbey church and Clock Tower",al_issoire_p:"A Romanesque gem, 10 km away.",al_livradois:"Livradois-Forez Regional Nature Park",al_livradois_p:"Forests, ridges and villages.",al_sentiers:"Hiking trails",al_sentiers_p:"On foot or on horseback, on GR and PR trails.",al_musee:"Pierre le Vénérable Museum",al_musee_p:"The history of Sauxillanges abbey.",al_usson:"Usson",al_usson_p:"One of the most beautiful villages in France, where Queen Margot was held under house arrest.",al_etangs:"Private ponds",al_etangs_p:"Perch, pike, grass carp, common carp, tench, roach. Safe night fishing.",al_velo:"Bike hire",al_velo_p:"With routes nearby.",al_sancy:"Monts Dore and Puy de Sancy",al_sancy_p:"The highest peak in the Massif Central, 1,886 m.",al_lacs:"The lakes circuit",al_lacs_p:"Pavin, Chauvet, Chambon, Guéry, Aydat… for a swim or some fishing.",al_domes:"Chaîne des Puys and Puy de Dôme",al_domes_p:"Superb views over the Limagne plain, and Vulcania park.",al_chateaux:"The castles route",al_chateaux_p:"Murol, Cordès…",al_romanes:"Romanesque churches",al_romanes_p:"Saint-Nectaire, Issoire, Orcival, Saint-Saturnin…",al_villages:"Villages",al_villages_p:"Champeix, Saint-Floret, Montpeyroux…",al_metiers:"The crafts route",al_metiers_p:"Including how Saint-Nectaire cheese is made.",al_ski:"Skiing",al_ski_p:"Slopes at Mont-Dore and Super-Besse.",al_site:"Website",
+rc_t:"Events",rc_p:"Up to 80 guests in a flexible room: banquets, weddings, seminars, family meals.",rc_f_t:"Tell us about your plans",rc_type:"Occasion",rc_mariage:"Wedding",rc_banquet:"Banquet",rc_seminaire:"Seminar",rc_famille:"Family meal",rc_autre:"Other",rc_date:"Preferred date",rc_conv:"Number of guests",
+ct_t:"Contact",ct_p:"A question or a special request? Write to us and we'll reply quickly.",ct_nom:"Your name",ct_mail:"Email or phone",ct_sujet:"Subject",ct_s1:"Room",ct_s2:"Restaurant",ct_s3:"Event",ct_s4:"Les Emportés",ct_s5:"Other",ct_msg:"Your message",ct_send:"Send",ct_ok:"Thank you! Your email app opens with your message ready to go.",ct_err:"Please give your name and a way to reply to you.",ct_rgpd:"Your details are used only to reply to you and are never passed on to third parties (GDPR).",ct_tel:"Phone",ct_fax:"Fax",ct_adr:"Address",ct_plan:"View on the map",
+ml_t:"Legal notice",ml_ed:"Publisher",ml_cnil:"Data protection",ml_cnil_p:"Information sent through this site is kept by the Hôtel de l'Abbaye solely for its relations with contacts, customers and prospects, and only for informational, commercial or accounting purposes needed to run the business. It is never disclosed or passed on to third parties, in accordance with the GDPR of 25 May 2018.",ml_heb:"Design, development and hosting",ml_droits:"Copyright",ml_droits_p:"This entire site is subject to French and international copyright and intellectual property law. All reproduction and representation rights are reserved, including for downloadable documents and pictorial and photographic content. Reproduction of all or part of this site on any electronic medium is prohibited without the express permission of the site owner.",ml_photos:"The photos on this site are not royalty-free: they belong to the Hôtel de l'Abbaye de Sauxillanges, and may not be used without express permission.",
+ft_rgpd:"Legal notice",ft_lang:"Language",ft_maison:"Family-run hotel-restaurant in Sauxillanges since 1972.",
+as_hello:"Hello! I'm Abbaye Conseil, the hotel's virtual assistant. How can I help?",as_virtuel:"virtual assistant",as_ph:"Ask your question…",as_send:"Send",
+as_q_dormir:"A room tonight",as_q_diner:"Dinner or pizzas",as_q_chien:"Coming with my dog",as_q_tard:"Arriving late",as_q_reception:"Planning an event",as_q_sortir:"Things to do nearby",as_q_pro:"Business trip",
+as_a_dormir:"How many of you will there be?",as_p1:"Just me",as_p2:"Two of us",as_p3:"Three or a family",
+as_a_p1:"A single room is €58–64 a night. Shall I open the booking page?",as_a_p2:"For two: double room €68–76, or twin (two beds) €72–80. Shall I open the booking page?",as_a_p3:"The triple room is €80–90, and there is a family room. Baby cots are available on request. Shall I open the booking page?",
+as_a_diner:"The restaurant is open for lunch 12–1.30 pm on weekdays, and for dinner 7–9 pm Monday to Saturday. Pizzas are in the evening: Thursday, Friday and Saturday out of season, and every day in July–August except Wednesday.",
+as_a_chien:"Good news: pets are welcome at no extra charge. There's also a private garage for your car.",
+as_a_tard:"No problem. If you arrive after 9 pm, let us know in advance (+33 4 73 96 81 80 or info@hotel-abbaye-sauxillanges.com) and we'll arrange it. After that, you can come and go freely 24/7.",
+as_a_reception:"The room seats up to 80 and can be arranged as you wish: wedding, banquet, seminar. Shall I take you to the form?",
+as_a_sortir:"Usson and Queen Margot, Issoire abbey church 10 km away, lakes Pavin and Chambon, the Sancy, Vulcania… Shall I show you the day trips?",
+as_a_pro:"The overnight package is €77 per person, 10 km from the motorway, with free Wi-Fi and parking. Shall I open the booking page?",
+as_a_pdj:"Breakfast is served in the dining room 7–10 am, for €8.",as_a_wifi:"Wi-Fi is free throughout the hotel.",as_a_parking:"Free public parking on site, a private garage, and an EV charging point 200 m away.",as_a_emp:"Les Emportés: our vacuum-packed, pasteurised dishes keep for a month in the fridge. Ten minutes in simmering water and they're ready.",as_a_pmr:"Two rooms are adapted for guests with reduced mobility, there is a lift, and an accessible parking space 100 m away.",
+as_a_defaut:"I don't have the exact answer. The easiest way: call reception on +33 4 73 96 81 80 or email info@hotel-abbaye-sauxillanges.com.",
+as_go_res:"Open booking",as_go_rc:"Go to the form",as_go_al:"See day trips",as_go_pz:"See the pizzas",as_go_emp:"See Les Emportés",as_bulle:"A question about a room or dinner? I'll answer right away.",
+ing:{tomate:"tomato",fromage:"cheese",champignons:"mushrooms",jambon:"ham",chevre:"goat's cheese",creme:"crème fraîche",pdt:"potatoes",lardons:"bacon",oeuf:"egg",chorizo:"chorizo",poivron:"pepper",oignons:"onions",boeuf:"beef",stnectaire:"Saint-Nectaire",roquefort:"Roquefort",chevreEug:"Eugénie goat's cheese",moutarde:"creamy mustard",bleu:"blue cheese",miel:"honey"},
+pers:"guests",mois:["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"]
+},
+es:{
+lang:"Español",
+nav_maison:"La casa",nav_chambres:"Habitaciones y tarifas",nav_restaurant:"Restaurante",nav_pizzas:"Pizzas",nav_emportes:"Para llevar",nav_alentours:"Alrededores",nav_receptions:"Celebraciones",nav_contact:"Contacto",nav_menu:"Menú",nav_fermer:"Cerrar",
+reserver:"Reservar",conseil_nom:"Abbaye Conseil",conseil_aide:"Le ayudo a elegir",
+h_sub:"Hotel · Restaurante · Sauxillanges, Puy-de-Dôme",
+h_lead:"Dieciséis habitaciones tranquilas en la plaza del pueblo, una cocina de tradición y pizzas con nombres de estadios. Una familia le recibe aquí desde 1972.",
+b_arrivee:"Llegada",b_depart:"Salida",b_pers:"Personas",b_go:"Ver disponibilidad",b_note:"Reserva segura · habitación desde 58 € la noche",
+f1:"16 habitaciones renovadas",f2:"Ascensor y 2 habitaciones accesibles",f3:"Aparcamiento gratuito y garaje",f4:"Mascotas sin suplemento",
+m_t:"Dos generaciones en la misma plaza",m_p:"Marie-Claude se hizo cargo del hotel en 1972. Su hijo Stéphane lo dirige desde marzo de 2006. El campanario sigue en su sitio, y la acogida también.",m_cta:"Entrar en la casa",
+c_t:"Habitaciones donde se duerme de verdad",c_p:"Las grandes carreteras quedan lejos. Por la noche, solo se oye el campanario. Dieciséis habitaciones renovadas, una familiar y dos pensadas para personas con movilidad reducida.",c_from:"desde",c_nuit:"la noche",c_cta:"Ver habitaciones y tarifas",
+e_t:"¿De viaje? La «soirée étape»",e_p:"Pensada para los viajes de trabajo, a 10 km de la autopista.",e_prix:"77 € por persona",e_cta:"Reservar mi «soirée étape»",
+r_t:"Una mesa de tradición, a mediodía y por la noche",r_p:"Especialidades regionales, productos de la tierra elegidos por el chef y una carta que se renueva sin cesar. Entre semana, el menú del día cuesta 20 €.",r_cta:"Ver menús y horarios",
+p_t:"Por la noche, la carta se juega con veintiséis nombres",p_p:"Mayol, Eden Park, Murrayfield… Cada pizza casera lleva el nombre de un estadio o de una jugada de rugby. Para tomar aquí o para llevar.",p_cta:"Leer la alineación",
+x_t:"Les Emportés de l'Abbaye",x_p:"Nuestros platos, cocinados aquí, envasados al vacío y pasteurizados. Un mes en la nevera, diez minutos en agua a punto de hervir, y listo.",x_cta:"Descubrir Les Emportés",
+v_t:"Hasta 80 invitados",v_p:"Boda, banquete, seminario: el salón se adapta a su fiesta o a su jornada de trabajo.",v_cta:"Preparar mi celebración",
+a_t:"Entre el Livradois-Forez y el Sancy",a_p:"Usson y la reina Margot, la abacial de Issoire, los lagos, los senderos… La escapada empieza en la puerta.",a_cta:"Ver escapadas",
+i_t:"Bueno saber",i_reception:"Recepción de lunes a sábado de 8 h a 21 h, el domingo de 8 h a 12 h. Si no, escríbanos.",i_parking:"Aparcamiento público gratuito y garaje privado",i_animaux:"Mascotas admitidas sin suplemento",i_wifi:"Wi-Fi gratuito en todo el establecimiento",i_ascenseur:"Ascensor",i_borne:"Punto de recarga eléctrica a 200 m",i_pmr:"Plaza de aparcamiento adaptada a 100 m",i_couettes:"Edredones y almohadas extra a petición",i_langues:"Atención en francés e inglés",i_acces:"A 10 km de la autopista · Clermont-Ferrand 47 km · Lyon 172 km · París 462 km",i_street:"Dar una vuelta delante del hotel",
+mai_t:"La casa",mai_p1:"En el pequeño pueblo de Sauxillanges, en el corazón del Puy-de-Dôme, el Hôtel de l'Abbaye le recibe todo el año, de vacaciones o por trabajo.",mai_p2:"Encontrará calma y serenidad en un entorno natural y auténtico.",
+mai_1972:"Marie-Claude pasa a ser propietaria del hotel.",mai_2006:"En marzo, su hijo Stéphane Mavel toma el relevo.",mai_auj:"Hoy",mai_auj_p:"16 habitaciones renovadas, ascensor, restaurante y un salón para 80 comensales.",mai_fb:"Seguir al hotel en Facebook",
+ch_t:"Habitaciones y tarifas",ch_p:"Amplias, tranquilas, lejos de las carreteras principales. Dos habitaciones están adaptadas a personas con movilidad reducida y una acoge a toda la familia.",
+ch_eq_t:"En cada habitación",ch_eq1:"Baño privado: lavabo, ducha, WC",ch_eq2:"Armario y espacio de almacenaje",ch_eq3:"Mesa y silla",ch_eq4:"Teléfono con línea directa",ch_eq5:"Wi-Fi gratuito",ch_eq6:"Cunas a petición",ch_eq7:"Almohadas y edredones extra en recepción",ch_eq8:"Servicio de despertador a petición",
+ch_h_t:"Horarios",ch_h1:"Habitación lista desde las 17 h, a dejar a las 10 h del día siguiente.",ch_h2:"¿Llega después de las 21 h? Avísenos y nos organizamos.",ch_h3:"Durante la estancia, entra y sale libremente las 24 h.",ch_pdj:"Desayuno servido en el comedor de 7 h a 10 h",
+tar_t:"Tarifas",tar_1:"Habitación individual",tar_2:"Habitación doble",tar_tw:"Habitación twin",tar_3:"Habitación triple",tar_etape:"Soirée étape",tar_pp:"por persona",tar_taxe:"Tasa turística",tar_pdj:"Desayuno",tar_de:"de",tar_a:"a",tar_note:"El precio exacto depende de la fecha y de la habitación: la reserva en línea lo calcula por usted.",
+est_t:"Su estancia de un vistazo",est_type:"Habitación",est_nuits:"noches",est_nuit:"noche",est_pdj:"Con desayuno",est_total:"Estimación",est_taxe:"tasa turística incluida",est_go:"Continuar a la reserva segura",est_info:"La reserva se completa en nuestro motor de reservas seguro. Aquí no se paga nada.",
+re_t:"Restaurante",re_p:"Una cocina cuidada y generosa: tradición, especialidades regionales, productos de la tierra seleccionados por nuestro chef y una carta que se renueva sin cesar.",
+re_h_t:"Horarios",re_midi:"Mediodía",re_midi_h:"12 h – 13 h 30, de lunes a viernes",re_soir:"Noche",re_soir_h:"19 h – 21 h, de lunes a sábado",re_ferme:"Cerrado el domingo",
+fo_t:"Menús de mediodía",fo_sub:"de lunes a viernes",fo_jour:"Menú del día",fo_j1:"Entrante + plato + queso y postre",fo_j2:"Entrante + plato o plato + postre",fo_exp:"El exprés",fo_e1:"Plato del día",fo_e2:"Tabla exprés (entrante, plato, queso)",fo_dess:"Postre aparte",fo_cafe:"Café",
+ca_t:"La carta del momento",ca_p:"Nuestra carta sigue las estaciones y el mercado. Pídanos la del día y se la enviamos.",ca_cta:"Recibir la carta del día",
+pz_t:"La alineación",pz_p:"Veintiséis pizzas caseras, cada una bautizada con un estadio o una jugada de rugby. Para tomar aquí o para llevar.",pz_jours:"Solo por la noche: jueves, viernes y sábado fuera de temporada; todos los días en julio y agosto, salvo el miércoles.",
+g_tomate:"Base de tomate",g_moutarde:"Mostaza cremosa",g_creme:"Base de nata",g_oignons:"Cebolla y panceta",g_miel:"Toque de miel",
+pz_add:"Añadir",pz_added:"Añadida",
+cmd_t:"Su pedido para llevar",cmd_vide:"Su pedido está vacío. Elija sus pizzas en la alineación.",cmd_total:"Total",cmd_tel:"Llamar para pedir",cmd_mail:"Enviar mi pedido por e-mail",cmd_info:"Pedido a confirmar por teléfono o e-mail según los días de apertura.",cmd_btn:"Para llevar",
+em_t:"Les Emportés de l'Abbaye",em_p:"Nuestros platos se preparan aquí, se envasan al vacío y después se pasteurizan. Se conservan hasta un mes en la nevera.",em_1:"Cocinados aquí",em_1p:"Preparados en casa por nuestro equipo.",em_2:"Al vacío y pasteurizados",em_2p:"Un proceso validado y controlado por un laboratorio independiente, Terana, en Marmilhat (63).",em_3:"Un mes en frío",em_3p:"Hasta un mes en la nevera.",em_4:"Diez minutos",em_4p:"Sumerja la bolsa en agua a punto de hervir unos diez minutos, abra… y disfrute.",em_pz:"Las pizzas también se llevan",em_pz_cta:"Preparar mi pedido",
+al_t:"Los alrededores",al_p:"Por su ubicación, el hotel es un punto de partida ideal. Esto es lo que recomendamos a nuestros huéspedes.",
+al_parentignat:"Castillo de Parentignat",al_parentignat_p:"Un castillo y su finca, muy cerca.",al_issoire:"Abacial de Issoire y torre del Reloj",al_issoire_p:"Una joya románica a 10 km.",al_livradois:"Parque natural regional del Livradois-Forez",al_livradois_p:"Bosques, crestas y pueblos.",al_sentiers:"Senderos",al_sentiers_p:"A pie o a caballo, por los GR y PR.",al_musee:"Museo Pierre le Vénérable",al_musee_p:"La historia de la abadía de Sauxillanges.",al_usson:"Usson",al_usson_p:"Uno de los pueblos más bonitos de Francia, donde la reina Margot vivió confinada.",al_etangs:"Estanques privados",al_etangs_p:"Perca, lucio, carpa herbívora, carpa común, tenca, rutilo. Pesca nocturna segura.",al_velo:"Alquiler de bicicletas",al_velo_p:"Y circuitos cercanos.",al_sancy:"Monts Dore y Puy de Sancy",al_sancy_p:"La cumbre más alta del Macizo Central, 1886 m.",al_lacs:"El circuito de los lagos",al_lacs_p:"Pavin, Chauvet, Chambon, Guéry, Aydat… para bañarse o pescar.",al_domes:"Cadena de los Puys y Puy de Dôme",al_domes_p:"Vistas magníficas de la Limagne y el parque Vulcania.",al_chateaux:"La ruta de los castillos",al_chateaux_p:"Murol, Cordès…",al_romanes:"Las iglesias románicas",al_romanes_p:"Saint-Nectaire, Issoire, Orcival, Saint-Saturnin…",al_villages:"Los pueblos",al_villages_p:"Champeix, Saint-Floret, Montpeyroux…",al_metiers:"La ruta de los oficios",al_metiers_p:"Con la elaboración del queso saint-nectaire.",al_ski:"El esquí",al_ski_p:"Pistas de Mont-Dore y Super-Besse.",al_site:"Web",
+rc_t:"Celebraciones",rc_p:"Hasta 80 comensales en un salón modulable: banquetes, bodas, seminarios, comidas familiares.",rc_f_t:"Cuéntenos su proyecto",rc_type:"Ocasión",rc_mariage:"Boda",rc_banquet:"Banquete",rc_seminaire:"Seminario",rc_famille:"Comida familiar",rc_autre:"Otra",rc_date:"Fecha deseada",rc_conv:"Número de invitados",
+ct_t:"Contacto",ct_p:"¿Una pregunta o una petición especial? Escríbanos y le responderemos enseguida.",ct_nom:"Su nombre",ct_mail:"E-mail o teléfono",ct_sujet:"Asunto",ct_s1:"Habitación",ct_s2:"Restaurante",ct_s3:"Celebración",ct_s4:"Les Emportés",ct_s5:"Otro",ct_msg:"Su mensaje",ct_send:"Enviar",ct_ok:"¡Gracias! Su correo se abre con el mensaje listo para enviar.",ct_err:"Indique su nombre y un medio para responderle.",ct_rgpd:"Sus datos solo sirven para responderle. Nunca se transmiten a terceros (RGPD).",ct_tel:"Teléfono",ct_fax:"Fax",ct_adr:"Dirección",ct_plan:"Ver en el mapa",
+ml_t:"Aviso legal",ml_ed:"Editor",ml_cnil:"Protección de datos",ml_cnil_p:"La información enviada a través de este sitio solo la conserva el Hôtel de l'Abbaye para su relación con contactos, clientes o posibles clientes, y únicamente con fines informativos, comerciales o contables necesarios para el buen funcionamiento de la empresa. No se divulga ni se transmite a terceros, conforme al RGPD del 25 de mayo de 2018.",ml_heb:"Diseño, desarrollo y alojamiento",ml_droits:"Derechos de autor",ml_droits_p:"Todo este sitio está sujeto a la legislación francesa e internacional sobre derechos de autor y propiedad intelectual. Todos los derechos de reproducción y representación están reservados, incluidos los documentos descargables y las representaciones iconográficas y fotográficas. Queda prohibida la reproducción total o parcial en cualquier soporte electrónico sin autorización expresa del propietario del sitio.",ml_photos:"Las fotos de este sitio no son libres de derechos: pertenecen al Hôtel de l'Abbaye de Sauxillanges y su uso está prohibido sin autorización expresa.",
+ft_rgpd:"Aviso legal",ft_lang:"Idioma",ft_maison:"Hotel-restaurante familiar en Sauxillanges desde 1972.",
+as_hello:"¡Hola! Soy Abbaye Conseil, el asistente virtual del hotel. ¿En qué puedo ayudarle?",as_virtuel:"asistente virtual",as_ph:"Escriba su pregunta…",as_send:"Enviar",
+as_q_dormir:"Dormir esta noche",as_q_diner:"Cenar o pizzas",as_q_chien:"Venir con mi perro",as_q_tard:"Llego tarde",as_q_reception:"Organizar una celebración",as_q_sortir:"¿Qué hacer cerca?",as_q_pro:"Viaje de trabajo",
+as_a_dormir:"¿Cuántas personas serán?",as_p1:"Solo/a",as_p2:"Dos",as_p3:"Tres o en familia",
+as_a_p1:"La habitación individual cuesta entre 58 y 64 € la noche. ¿Le abro la reserva?",as_a_p2:"Para dos: habitación doble de 68 a 76 €, o twin (dos camas) de 72 a 80 €. ¿Le abro la reserva?",as_a_p3:"La habitación triple cuesta de 80 a 90 €, y hay una habitación familiar. Prestamos cunas a petición. ¿Le abro la reserva?",
+as_a_diner:"El restaurante abre a mediodía de 12 h a 13 h 30 entre semana, y por la noche de 19 h a 21 h de lunes a sábado. Las pizzas son por la noche: jueves, viernes y sábado fuera de temporada, y todos los días en julio y agosto salvo el miércoles.",
+as_a_chien:"Buena noticia: las mascotas son bienvenidas sin suplemento. También hay un garaje privado para el coche.",
+as_a_tard:"Ningún problema. Si llega después de las 21 h, avísenos con antelación (+33 4 73 96 81 80 o info@hotel-abbaye-sauxillanges.com) y nos organizamos. Después, entra y sale libremente las 24 h.",
+as_a_reception:"El salón acoge hasta 80 invitados y se adapta: boda, banquete, seminario. ¿Le llevo al formulario?",
+as_a_sortir:"Usson y la reina Margot, la abacial de Issoire a 10 km, los lagos Pavin y Chambon, el Sancy, Vulcania… ¿Le enseño las escapadas?",
+as_a_pro:"La «soirée étape» cuesta 77 € por persona, a 10 km de la autopista, con Wi-Fi y aparcamiento gratuitos. ¿Le abro la reserva?",
+as_a_pdj:"El desayuno se sirve en el comedor de 7 h a 10 h, por 8 €.",as_a_wifi:"El Wi-Fi es gratuito en todo el hotel.",as_a_parking:"Aparcamiento público gratuito, garaje privado y un punto de recarga eléctrica a 200 m.",as_a_emp:"Les Emportés: nuestros platos al vacío y pasteurizados se conservan un mes en la nevera. Diez minutos en agua a punto de hervir y listos.",as_a_pmr:"Dos habitaciones están adaptadas a personas con movilidad reducida, hay ascensor y una plaza de aparcamiento adaptada a 100 m.",
+as_a_defaut:"No tengo la respuesta exacta. Lo más sencillo: llame a recepción al +33 4 73 96 81 80 o escriba a info@hotel-abbaye-sauxillanges.com.",
+as_go_res:"Abrir la reserva",as_go_rc:"Ir al formulario",as_go_al:"Ver escapadas",as_go_pz:"Ver las pizzas",as_go_emp:"Ver Les Emportés",as_bulle:"¿Una pregunta sobre una habitación o una cena? Le respondo enseguida.",
+ing:{tomate:"tomate",fromage:"queso",champignons:"champiñones",jambon:"jamón",chevre:"queso de cabra",creme:"nata fresca",pdt:"patatas",lardons:"panceta",oeuf:"huevo",chorizo:"chorizo",poivron:"pimiento",oignons:"cebolla",boeuf:"ternera",stnectaire:"saint-nectaire",roquefort:"roquefort",chevreEug:"queso de cabra de Eugénie",moutarde:"mostaza cremosa",bleu:"queso azul",miel:"miel"},
+pers:"pers.",mois:["ene.","feb.","mar.","abr.","may.","jun.","jul.","ago.","sept.","oct.","nov.","dic."]
+},
+de:{
+lang:"Deutsch",
+nav_maison:"Das Haus",nav_chambres:"Zimmer & Preise",nav_restaurant:"Restaurant",nav_pizzas:"Pizzen",nav_emportes:"Zum Mitnehmen",nav_alentours:"Umgebung",nav_receptions:"Feiern",nav_contact:"Kontakt",nav_menu:"Menü",nav_fermer:"Schließen",
+reserver:"Buchen",conseil_nom:"Abbaye Conseil",conseil_aide:"Ich helfe Ihnen bei der Wahl",
+h_sub:"Hotel · Restaurant · Sauxillanges, Puy-de-Dôme",
+h_lead:"Sechzehn ruhige Zimmer am Dorfplatz, eine traditionelle Küche und Pizzen mit den Namen von Rugbystadien. Seit 1972 empfängt Sie hier eine Familie.",
+b_arrivee:"Anreise",b_depart:"Abreise",b_pers:"Personen",b_go:"Verfügbarkeit prüfen",b_note:"Sichere Buchung · Zimmer ab 58 € pro Nacht",
+f1:"16 renovierte Zimmer",f2:"Aufzug und 2 barrierefreie Zimmer",f3:"Kostenloser Parkplatz und Garage",f4:"Haustiere ohne Aufpreis",
+m_t:"Zwei Generationen am selben Platz",m_p:"Marie-Claude übernahm das Hotel 1972. Ihr Sohn Stéphane führt es seit März 2006. Der Kirchturm steht noch an seinem Platz, die Gastfreundschaft auch.",m_cta:"Das Haus entdecken",
+c_t:"Zimmer, in denen man wirklich schläft",c_p:"Die großen Straßen sind weit weg. Abends hört man vor allem den Kirchturm. Sechzehn renovierte Zimmer, darunter ein Familienzimmer und zwei für Gäste mit eingeschränkter Mobilität.",c_from:"ab",c_nuit:"pro Nacht",c_cta:"Zimmer und Preise ansehen",
+e_t:"Unterwegs? Das Etappen-Angebot",e_p:"Für Geschäftsreisen gedacht, 10 km von der Autobahn.",e_prix:"77 € pro Person",e_cta:"Etappen-Angebot buchen",
+r_t:"Traditionelle Küche, mittags und abends",r_p:"Regionale Spezialitäten, vom Küchenchef ausgewählte Produkte der Region und eine Karte, die sich ständig erneuert. Werktags kostet das Tagesmenü 20 €.",r_cta:"Menüs und Öffnungszeiten",
+p_t:"Abends spielt die Karte mit sechsundzwanzig Namen",p_p:"Mayol, Eden Park, Murrayfield… Jede hausgemachte Pizza trägt den Namen eines Rugbystadions oder eines Spielzugs. Vor Ort oder zum Mitnehmen.",p_cta:"Die Mannschaftsaufstellung lesen",
+x_t:"Les Emportés de l'Abbaye",x_p:"Unsere Gerichte, hier gekocht, vakuumverpackt und pasteurisiert. Einen Monat im Kühlschrank, zehn Minuten in siedendem Wasser, und schon ist serviert.",x_cta:"Les Emportés entdecken",
+v_t:"Bis zu 80 Gäste",v_p:"Hochzeit, Bankett, Seminar: Der Saal passt sich Ihrem Fest oder Ihrem Arbeitstag an.",v_cta:"Meine Feier planen",
+a_t:"Zwischen Livradois-Forez und Sancy",a_p:"Usson und Königin Margot, die Abteikirche von Issoire, die Seen, die Wanderwege… Der Ausflug beginnt vor der Haustür.",a_cta:"Ausflüge ansehen",
+i_t:"Gut zu wissen",i_reception:"Rezeption Montag bis Samstag 8–21 Uhr, Sonntag 8–12 Uhr. Sonst schreiben Sie uns.",i_parking:"Kostenloser öffentlicher Parkplatz und private Garage",i_animaux:"Haustiere ohne Aufpreis willkommen",i_wifi:"Kostenloses WLAN im ganzen Haus",i_ascenseur:"Aufzug",i_borne:"E-Ladestation in 200 m",i_pmr:"Behindertenparkplatz in 100 m",i_couettes:"Zusätzliche Decken und Kissen auf Anfrage",i_langues:"Wir sprechen Französisch und Englisch",i_acces:"10 km von der Autobahn · Clermont-Ferrand 47 km · Lyon 172 km · Paris 462 km",i_street:"Einen Blick vor das Hotel werfen",
+mai_t:"Das Haus",mai_p1:"Im kleinen Dorf Sauxillanges, im Herzen des Puy-de-Dôme, empfängt Sie das Hôtel de l'Abbaye das ganze Jahr – im Urlaub wie auf Geschäftsreise.",mai_p2:"Hier finden Sie Ruhe und Gelassenheit in einer natürlichen, ursprünglichen Umgebung.",
+mai_1972:"Marie-Claude wird Eigentümerin des Hotels.",mai_2006:"Im März übernimmt ihr Sohn Stéphane Mavel die Leitung.",mai_auj:"Heute",mai_auj_p:"16 renovierte Zimmer, ein Aufzug, ein Restaurant und ein Saal für 80 Gäste.",mai_fb:"Dem Hotel auf Facebook folgen",
+ch_t:"Zimmer & Preise",ch_p:"Geräumig, ruhig, abseits der großen Straßen. Zwei Zimmer sind für Gäste mit eingeschränkter Mobilität eingerichtet, und ein Zimmer bietet Platz für die ganze Familie.",
+ch_eq_t:"In jedem Zimmer",ch_eq1:"Eigenes Bad: Waschbecken, Dusche, WC",ch_eq2:"Kleiderschrank und Stauraum",ch_eq3:"Tisch und Stuhl",ch_eq4:"Telefon mit Direktwahl",ch_eq5:"Kostenloses WLAN",ch_eq6:"Babybetten auf Anfrage",ch_eq7:"Zusätzliche Kissen und Decken an der Rezeption",ch_eq8:"Weckdienst auf Anfrage",
+ch_h_t:"Ihre Zeiten",ch_h1:"Zimmer ab 17 Uhr bereit, Abreise bis 10 Uhr am nächsten Morgen.",ch_h2:"Ankunft nach 21 Uhr? Sagen Sie uns Bescheid, wir richten es ein.",ch_h3:"Während Ihres Aufenthalts kommen und gehen Sie rund um die Uhr.",ch_pdj:"Frühstück im Speisesaal von 7 bis 10 Uhr",
+tar_t:"Preise",tar_1:"Einzelzimmer",tar_2:"Doppelzimmer",tar_tw:"Zweibettzimmer",tar_3:"Dreibettzimmer",tar_etape:"Etappen-Angebot",tar_pp:"pro Person",tar_taxe:"Kurtaxe",tar_pdj:"Frühstück",tar_de:"von",tar_a:"bis",tar_note:"Der genaue Preis hängt von Datum und Zimmer ab: Die Online-Buchung rechnet ihn für Sie aus.",
+est_t:"Ihr Aufenthalt auf einen Blick",est_type:"Zimmer",est_nuits:"Nächte",est_nuit:"Nacht",est_pdj:"Mit Frühstück",est_total:"Schätzung",est_taxe:"inklusive Kurtaxe",est_go:"Weiter zur sicheren Buchung",est_info:"Sie schließen die Buchung in unserem sicheren Buchungssystem ab. Hier wird nichts bezahlt.",
+re_t:"Restaurant",re_p:"Sorgfältige, genussvolle Küche: Tradition, regionale Spezialitäten, sorgsam vom Küchenchef ausgewählte Produkte der Region und eine Karte, die sich ständig erneuert.",
+re_h_t:"Öffnungszeiten",re_midi:"Mittags",re_midi_h:"12–13.30 Uhr, Montag bis Freitag",re_soir:"Abends",re_soir_h:"19–21 Uhr, Montag bis Samstag",re_ferme:"Sonntags geschlossen",
+fo_t:"Mittagsmenüs",fo_sub:"Montag bis Freitag",fo_jour:"Tagesmenü",fo_j1:"Vorspeise + Hauptgericht + Käse und Dessert",fo_j2:"Vorspeise + Hauptgericht oder Hauptgericht + Dessert",fo_exp:"Das Express",fo_e1:"Tagesgericht",fo_e2:"Express-Brett (Vorspeise, Hauptgericht, Käse)",fo_dess:"Dessert zusätzlich",fo_cafe:"Kaffee",
+ca_t:"Die aktuelle Karte",ca_p:"Unsere Karte folgt den Jahreszeiten und dem Markt. Fragen Sie nach der heutigen: Wir schicken sie Ihnen.",ca_cta:"Die Tageskarte erhalten",
+pz_t:"Die Mannschaftsaufstellung",pz_p:"Sechsundzwanzig hausgemachte Pizzen, jede nach einem Rugbystadion oder einem Spielzug benannt. Vor Ort oder zum Mitnehmen.",pz_jours:"Nur abends: Donnerstag, Freitag und Samstag in der Nebensaison; im Juli und August täglich außer mittwochs.",
+g_tomate:"Tomatenbasis",g_moutarde:"Cremiger Senf",g_creme:"Sahnebasis",g_oignons:"Zwiebeln und Speck",g_miel:"Ein Hauch Honig",
+pz_add:"Hinzufügen",pz_added:"Hinzugefügt",
+cmd_t:"Ihre Bestellung zum Mitnehmen",cmd_vide:"Ihre Bestellung ist leer. Wählen Sie Ihre Pizzen aus der Aufstellung.",cmd_total:"Summe",cmd_tel:"Zum Bestellen anrufen",cmd_mail:"Bestellung per E-Mail senden",cmd_info:"Bestellung je nach Öffnungstagen telefonisch oder per E-Mail zu bestätigen.",cmd_btn:"Mitnehmen",
+em_t:"Les Emportés de l'Abbaye",em_p:"Unsere Gerichte werden vor Ort zubereitet, vakuumverpackt und anschließend pasteurisiert. Sie halten sich bis zu einen Monat im Kühlschrank.",em_1:"Hier gekocht",em_1p:"Vor Ort von unserem Team zubereitet.",em_2:"Vakuumverpackt, pasteurisiert",em_2p:"Ein Verfahren, das von einem unabhängigen Labor, Terana in Marmilhat (63), geprüft und kontrolliert wird.",em_3:"Ein Monat gekühlt",em_3p:"Bis zu einen Monat im Kühlschrank haltbar.",em_4:"Zehn Minuten",em_4p:"Den Beutel etwa zehn Minuten in siedendes Wasser legen, öffnen… und genießen.",em_pz:"Auch die Pizzen gibt es zum Mitnehmen",em_pz_cta:"Meine Bestellung zusammenstellen",
+al_t:"Die Umgebung",al_p:"Dank seiner Lage ist das Hotel ein idealer Ausgangspunkt. Das empfehlen wir unseren Gästen.",
+al_parentignat:"Schloss Parentignat",al_parentignat_p:"Ein Schloss mit Park, ganz in der Nähe.",al_issoire:"Abteikirche von Issoire und Uhrturm",al_issoire_p:"Ein romanisches Juwel in 10 km.",al_livradois:"Regionaler Naturpark Livradois-Forez",al_livradois_p:"Wälder, Höhenzüge und Dörfer.",al_sentiers:"Wanderwege",al_sentiers_p:"Zu Fuß oder zu Pferd, auf GR- und PR-Wegen.",al_musee:"Museum Pierre le Vénérable",al_musee_p:"Die Geschichte der Abtei von Sauxillanges.",al_usson:"Usson",al_usson_p:"Eines der schönsten Dörfer Frankreichs, wo Königin Margot unter Hausarrest stand.",al_etangs:"Private Teiche",al_etangs_p:"Barsch, Hecht, Graskarpfen, Karpfen, Schleie, Rotauge. Sicheres Nachtangeln.",al_velo:"Fahrradverleih",al_velo_p:"Mit Routen in der Nähe.",al_sancy:"Monts Dore und Puy de Sancy",al_sancy_p:"Der höchste Gipfel des Zentralmassivs, 1.886 m.",al_lacs:"Die Seenrunde",al_lacs_p:"Pavin, Chauvet, Chambon, Guéry, Aydat… zum Baden oder Angeln.",al_domes:"Chaîne des Puys und Puy de Dôme",al_domes_p:"Herrlicher Blick über die Limagne, dazu der Park Vulcania.",al_chateaux:"Die Schlösserstraße",al_chateaux_p:"Murol, Cordès…",al_romanes:"Romanische Kirchen",al_romanes_p:"Saint-Nectaire, Issoire, Orcival, Saint-Saturnin…",al_villages:"Die Dörfer",al_villages_p:"Champeix, Saint-Floret, Montpeyroux…",al_metiers:"Die Straße der Handwerke",al_metiers_p:"Unter anderem die Herstellung des Saint-Nectaire-Käses.",al_ski:"Skifahren",al_ski_p:"Pisten in Mont-Dore und Super-Besse.",al_site:"Website",
+rc_t:"Feiern",rc_p:"Bis zu 80 Gäste in einem flexiblen Saal: Bankette, Hochzeiten, Seminare, Familienessen.",rc_f_t:"Erzählen Sie uns von Ihrem Vorhaben",rc_type:"Anlass",rc_mariage:"Hochzeit",rc_banquet:"Bankett",rc_seminaire:"Seminar",rc_famille:"Familienessen",rc_autre:"Sonstiges",rc_date:"Wunschdatum",rc_conv:"Anzahl der Gäste",
+ct_t:"Kontakt",ct_p:"Eine Frage oder ein besonderer Wunsch? Schreiben Sie uns, wir antworten schnell.",ct_nom:"Ihr Name",ct_mail:"E-Mail oder Telefon",ct_sujet:"Betreff",ct_s1:"Zimmer",ct_s2:"Restaurant",ct_s3:"Feier",ct_s4:"Les Emportés",ct_s5:"Sonstiges",ct_msg:"Ihre Nachricht",ct_send:"Senden",ct_ok:"Danke! Ihr E-Mail-Programm öffnet sich mit Ihrer fertigen Nachricht.",ct_err:"Bitte geben Sie Ihren Namen und eine Kontaktmöglichkeit an.",ct_rgpd:"Ihre Angaben dienen nur dazu, Ihnen zu antworten, und werden nie an Dritte weitergegeben (DSGVO).",ct_tel:"Telefon",ct_fax:"Fax",ct_adr:"Adresse",ct_plan:"Auf der Karte ansehen",
+ml_t:"Impressum",ml_ed:"Herausgeber",ml_cnil:"Datenschutz",ml_cnil_p:"Über diese Website übermittelte Informationen werden vom Hôtel de l'Abbaye nur für die Beziehung zu Kontakten, Kunden und Interessenten aufbewahrt, und ausschließlich zu Informations-, Geschäfts- oder Buchhaltungszwecken, die für den Betrieb notwendig sind. Sie werden gemäß DSGVO vom 25. Mai 2018 weder offengelegt noch an Dritte weitergegeben.",ml_heb:"Gestaltung, Entwicklung und Hosting",ml_droits:"Urheberrecht",ml_droits_p:"Diese gesamte Website unterliegt dem französischen und internationalen Urheber- und Markenrecht. Alle Vervielfältigungs- und Darstellungsrechte sind vorbehalten, auch für herunterladbare Dokumente sowie Bild- und Fotoinhalte. Jede vollständige oder teilweise Vervielfältigung auf elektronischen Medien ist ohne ausdrückliche Genehmigung des Eigentümers untersagt.",ml_photos:"Die Fotos dieser Website sind nicht lizenzfrei: Sie gehören dem Hôtel de l'Abbaye de Sauxillanges und dürfen ohne ausdrückliche Genehmigung nicht verwendet werden.",
+ft_rgpd:"Impressum",ft_lang:"Sprache",ft_maison:"Familiengeführtes Hotel-Restaurant in Sauxillanges seit 1972.",
+as_hello:"Guten Tag! Ich bin Abbaye Conseil, der virtuelle Assistent des Hotels. Wie kann ich helfen?",as_virtuel:"virtueller Assistent",as_ph:"Stellen Sie Ihre Frage…",as_send:"Senden",
+as_q_dormir:"Heute übernachten",as_q_diner:"Abendessen oder Pizza",as_q_chien:"Mit meinem Hund",as_q_tard:"Ich komme spät",as_q_reception:"Eine Feier planen",as_q_sortir:"Ausflüge in der Nähe",as_q_pro:"Geschäftsreise",
+as_a_dormir:"Wie viele Personen sind Sie?",as_p1:"Allein",as_p2:"Zu zweit",as_p3:"Zu dritt oder als Familie",
+as_a_p1:"Das Einzelzimmer kostet 58 bis 64 € pro Nacht. Soll ich die Buchung öffnen?",as_a_p2:"Für zwei: Doppelzimmer 68 bis 76 € oder Zweibettzimmer 72 bis 80 €. Soll ich die Buchung öffnen?",as_a_p3:"Das Dreibettzimmer kostet 80 bis 90 €, außerdem gibt es ein Familienzimmer. Babybetten leihen wir auf Anfrage. Soll ich die Buchung öffnen?",
+as_a_diner:"Das Restaurant ist werktags mittags von 12 bis 13.30 Uhr und abends von Montag bis Samstag von 19 bis 21 Uhr geöffnet. Pizzen gibt es abends: in der Nebensaison donnerstags, freitags und samstags, im Juli und August täglich außer mittwochs.",
+as_a_chien:"Gute Nachricht: Haustiere sind ohne Aufpreis willkommen. Für das Auto gibt es auch eine private Garage.",
+as_a_tard:"Kein Problem. Wenn Sie nach 21 Uhr ankommen, sagen Sie uns vorher Bescheid (+33 4 73 96 81 80 oder info@hotel-abbaye-sauxillanges.com), wir richten es ein. Danach kommen und gehen Sie rund um die Uhr.",
+as_a_reception:"Der Saal fasst bis zu 80 Gäste und lässt sich anpassen: Hochzeit, Bankett, Seminar. Soll ich Sie zum Formular bringen?",
+as_a_sortir:"Usson und Königin Margot, die Abteikirche von Issoire in 10 km, die Seen Pavin und Chambon, der Sancy, Vulcania… Soll ich Ihnen die Ausflüge zeigen?",
+as_a_pro:"Das Etappen-Angebot kostet 77 € pro Person, 10 km von der Autobahn, mit kostenlosem WLAN und Parkplatz. Soll ich die Buchung öffnen?",
+as_a_pdj:"Das Frühstück wird von 7 bis 10 Uhr im Speisesaal serviert und kostet 8 €.",as_a_wifi:"Das WLAN ist im ganzen Hotel kostenlos.",as_a_parking:"Kostenloser öffentlicher Parkplatz, private Garage und eine E-Ladestation in 200 m.",as_a_emp:"Les Emportés: Unsere vakuumverpackten, pasteurisierten Gerichte halten einen Monat im Kühlschrank. Zehn Minuten in siedendem Wasser, und sie sind fertig.",as_a_pmr:"Zwei Zimmer sind für Gäste mit eingeschränkter Mobilität eingerichtet, es gibt einen Aufzug und einen Behindertenparkplatz in 100 m.",
+as_a_defaut:"Darauf habe ich keine genaue Antwort. Am einfachsten: Rufen Sie die Rezeption unter +33 4 73 96 81 80 an oder schreiben Sie an info@hotel-abbaye-sauxillanges.com.",
+as_go_res:"Buchung öffnen",as_go_rc:"Zum Formular",as_go_al:"Ausflüge ansehen",as_go_pz:"Die Pizzen ansehen",as_go_emp:"Les Emportés ansehen",as_bulle:"Eine Frage zu einem Zimmer oder zum Abendessen? Ich antworte sofort.",
+ing:{tomate:"Tomate",fromage:"Käse",champignons:"Champignons",jambon:"Schinken",chevre:"Ziegenkäse",creme:"Crème fraîche",pdt:"Kartoffeln",lardons:"Speck",oeuf:"Ei",chorizo:"Chorizo",poivron:"Paprika",oignons:"Zwiebeln",boeuf:"Rind",stnectaire:"Saint-Nectaire",roquefort:"Roquefort",chevreEug:"Ziegenkäse von Eugénie",moutarde:"cremiger Senf",bleu:"Blauschimmelkäse",miel:"Honig"},
+pers:"Pers.",mois:["Jan.","Feb.","März","Apr.","Mai","Juni","Juli","Aug.","Sept.","Okt.","Nov.","Dez."]
+},
+it:{
+lang:"Italiano",
+nav_maison:"La casa",nav_chambres:"Camere e tariffe",nav_restaurant:"Ristorante",nav_pizzas:"Pizze",nav_emportes:"Da asporto",nav_alentours:"Dintorni",nav_receptions:"Ricevimenti",nav_contact:"Contatti",nav_menu:"Menu",nav_fermer:"Chiudi",
+reserver:"Prenota",conseil_nom:"Abbaye Conseil",conseil_aide:"La aiuto a scegliere",
+h_sub:"Hotel · Ristorante · Sauxillanges, Puy-de-Dôme",
+h_lead:"Sedici camere tranquille sulla piazza del paese, una cucina di tradizione e pizze con i nomi degli stadi. Una famiglia vi accoglie qui dal 1972.",
+b_arrivee:"Arrivo",b_depart:"Partenza",b_pers:"Persone",b_go:"Verifica disponibilità",b_note:"Prenotazione sicura · camera da 58 € a notte",
+f1:"16 camere rinnovate",f2:"Ascensore e 2 camere accessibili",f3:"Parcheggio gratuito e garage",f4:"Animali senza supplemento",
+m_t:"Due generazioni sulla stessa piazza",m_p:"Marie-Claude ha rilevato l'hotel nel 1972. Suo figlio Stéphane lo gestisce da marzo 2006. Il campanile non si è mosso, e nemmeno l'accoglienza.",m_cta:"Entrare in casa",
+c_t:"Camere dove si dorme davvero",c_p:"Le grandi strade passano lontano. La sera si sente soprattutto il campanile. Sedici camere rinnovate, tra cui una familiare e due pensate per le persone a mobilità ridotta.",c_from:"da",c_nuit:"a notte",c_cta:"Vedere camere e tariffe",
+e_t:"In viaggio? La «soirée étape»",e_p:"Pensata per i viaggi di lavoro, a 10 km dall'autostrada.",e_prix:"77 € a persona",e_cta:"Prenotare la mia «soirée étape»",
+r_t:"Una tavola di tradizione, a pranzo e a cena",r_p:"Specialità regionali, prodotti del territorio scelti dallo chef e una carta che si rinnova di continuo. In settimana il menù del giorno costa 20 €.",r_cta:"Vedere menù e orari",
+p_t:"La sera, la carta si gioca con ventisei nomi",p_p:"Mayol, Eden Park, Murrayfield… Ogni pizza fatta in casa porta il nome di uno stadio o di un gesto del rugby. Al tavolo o da asporto.",p_cta:"Leggere la formazione",
+x_t:"Les Emportés de l'Abbaye",x_p:"I nostri piatti, cucinati qui, confezionati sottovuoto e pastorizzati. Un mese in frigorifero, dieci minuti in acqua che sobbolle, ed è servito.",x_cta:"Scoprire Les Emportés",
+v_t:"Fino a 80 invitati",v_p:"Matrimonio, banchetto, seminario: la sala si trasforma per la vostra festa o la vostra giornata di lavoro.",v_cta:"Preparare il mio ricevimento",
+a_t:"Tra Livradois-Forez e Sancy",a_p:"Usson e la regina Margot, l'abbaziale di Issoire, i laghi, i sentieri… La gita comincia sulla soglia di casa.",a_cta:"Vedere le gite",
+i_t:"Buono a sapersi",i_reception:"Reception dal lunedì al sabato dalle 8 alle 21, la domenica dalle 8 alle 12. Altrimenti, scriveteci.",i_parking:"Parcheggio pubblico gratuito e garage privato",i_animaux:"Animali ammessi senza supplemento",i_wifi:"Wi-Fi gratuito in tutta la struttura",i_ascenseur:"Ascensore",i_borne:"Colonnina di ricarica elettrica a 200 m",i_pmr:"Posto auto per disabili a 100 m",i_couettes:"Piumoni e cuscini in più su richiesta",i_langues:"Accoglienza in francese e in inglese",i_acces:"A 10 km dall'autostrada · Clermont-Ferrand 47 km · Lione 172 km · Parigi 462 km",i_street:"Fare un giro davanti all'hotel",
+mai_t:"La casa",mai_p1:"Nel piccolo paese di Sauxillanges, nel cuore del Puy-de-Dôme, l'Hôtel de l'Abbaye vi accoglie tutto l'anno, in vacanza come per lavoro.",mai_p2:"Troverete calma e serenità in un ambiente naturale e autentico.",
+mai_1972:"Marie-Claude diventa proprietaria dell'hotel.",mai_2006:"A marzo suo figlio Stéphane Mavel ne prende la guida.",mai_auj:"Oggi",mai_auj_p:"16 camere rinnovate, un ascensore, un ristorante e una sala da 80 coperti.",mai_fb:"Seguire l'hotel su Facebook",
+ch_t:"Camere e tariffe",ch_p:"Spaziose, tranquille, lontane dalle grandi strade. Due camere sono adatte alle persone a mobilità ridotta e una accoglie tutta la famiglia.",
+ch_eq_t:"In ogni camera",ch_eq1:"Bagno privato: lavabo, doccia, WC",ch_eq2:"Armadio e spazi per riporre",ch_eq3:"Tavolo e sedia",ch_eq4:"Telefono con linea diretta",ch_eq5:"Wi-Fi gratuito",ch_eq6:"Lettini per neonati su richiesta",ch_eq7:"Cuscini e piumoni in più alla reception",ch_eq8:"Sveglia su richiesta",
+ch_h_t:"I vostri orari",ch_h1:"Camera pronta dalle 17, da lasciare entro le 10 del giorno dopo.",ch_h2:"Arrivate dopo le 21? Avvisateci e ci organizziamo.",ch_h3:"Durante il soggiorno entrate e uscite liberamente 24 ore su 24.",ch_pdj:"Colazione servita in sala dalle 7 alle 10",
+tar_t:"Tariffe",tar_1:"Camera singola",tar_2:"Camera doppia",tar_tw:"Camera twin",tar_3:"Camera tripla",tar_etape:"Soirée étape",tar_pp:"a persona",tar_taxe:"Tassa di soggiorno",tar_pdj:"Colazione",tar_de:"da",tar_a:"a",tar_note:"Il prezzo esatto dipende dalla data e dalla camera: la prenotazione online lo calcola per voi.",
+est_t:"Il vostro soggiorno in un colpo d'occhio",est_type:"Camera",est_nuits:"notti",est_nuit:"notte",est_pdj:"Con colazione",est_total:"Stima",est_taxe:"tassa di soggiorno inclusa",est_go:"Continuare verso la prenotazione sicura",est_info:"Completate la prenotazione sul nostro sistema sicuro. Qui non si paga nulla.",
+re_t:"Ristorante",re_p:"Una cucina curata e golosa: tradizione, specialità regionali, prodotti del territorio scelti con cura dal nostro chef e una carta che si rinnova di continuo.",
+re_h_t:"Orari",re_midi:"Pranzo",re_midi_h:"12–13.30, dal lunedì al venerdì",re_soir:"Cena",re_soir_h:"19–21, dal lunedì al sabato",re_ferme:"Chiuso la domenica",
+fo_t:"Le formule del pranzo",fo_sub:"dal lunedì al venerdì",fo_jour:"Il menù del giorno",fo_j1:"Antipasto + piatto + formaggio e dessert",fo_j2:"Antipasto + piatto o piatto + dessert",fo_exp:"L'express",fo_e1:"Piatto del giorno",fo_e2:"Tagliere express (antipasto, piatto, formaggio)",fo_dess:"Dessert in aggiunta",fo_cafe:"Caffè",
+ca_t:"La carta del momento",ca_p:"La nostra carta segue le stagioni e il mercato. Chiedeteci quella del giorno: ve la inviamo.",ca_cta:"Ricevere la carta del giorno",
+pz_t:"La formazione",pz_p:"Ventisei pizze fatte in casa, ognuna battezzata con uno stadio o un gesto del rugby. Al tavolo o da asporto.",pz_jours:"Solo la sera: giovedì, venerdì e sabato in bassa stagione; tutti i giorni a luglio e agosto, tranne il mercoledì.",
+g_tomate:"Base pomodoro",g_moutarde:"Senape cremosa",g_creme:"Base panna",g_oignons:"Cipolle e pancetta",g_miel:"Tocco di miele",
+pz_add:"Aggiungi",pz_added:"Aggiunta",
+cmd_t:"Il vostro ordine da asporto",cmd_vide:"L'ordine è vuoto. Scegliete le pizze dalla formazione.",cmd_total:"Totale",cmd_tel:"Chiamare per ordinare",cmd_mail:"Inviare l'ordine per e-mail",cmd_info:"Ordine da confermare per telefono o e-mail secondo i giorni di apertura.",cmd_btn:"Asporto",
+em_t:"Les Emportés de l'Abbaye",em_p:"I nostri piatti sono preparati qui, confezionati sottovuoto e poi pastorizzati. Si conservano fino a un mese in frigorifero.",em_1:"Cucinati qui",em_1p:"Preparati in casa dalla nostra squadra.",em_2:"Sottovuoto e pastorizzati",em_2p:"Un procedimento convalidato e controllato da un laboratorio indipendente, Terana, a Marmilhat (63).",em_3:"Un mese al fresco",em_3p:"Fino a un mese in frigorifero.",em_4:"Dieci minuti",em_4p:"Immergete la busta in acqua che sobbolle per una decina di minuti, aprite… e gustate.",em_pz:"Anche le pizze sono da asporto",em_pz_cta:"Comporre il mio ordine",
+al_t:"I dintorni",al_p:"Grazie alla sua posizione, l'hotel è un punto di partenza ideale. Ecco cosa consigliamo ai nostri ospiti.",
+al_parentignat:"Castello di Parentignat",al_parentignat_p:"Un castello e la sua tenuta, vicinissimi.",al_issoire:"Abbaziale di Issoire e torre dell'Orologio",al_issoire_p:"Un gioiello romanico a 10 km.",al_livradois:"Parco naturale regionale del Livradois-Forez",al_livradois_p:"Foreste, crinali e villaggi.",al_sentiers:"Sentieri",al_sentiers_p:"A piedi o a cavallo, sui GR e PR.",al_musee:"Museo Pierre le Vénérable",al_musee_p:"La storia dell'abbazia di Sauxillanges.",al_usson:"Usson",al_usson_p:"Tra i borghi più belli di Francia, dove la regina Margot visse in residenza obbligata.",al_etangs:"Stagni privati",al_etangs_p:"Pesce persico, luccio, carpa erbivora, carpa comune, tinca, triotto. Pesca notturna in sicurezza.",al_velo:"Noleggio bici",al_velo_p:"E percorsi nelle vicinanze.",al_sancy:"Monts Dore e Puy de Sancy",al_sancy_p:"La vetta più alta del Massiccio Centrale, 1.886 m.",al_lacs:"Il giro dei laghi",al_lacs_p:"Pavin, Chauvet, Chambon, Guéry, Aydat… per un bagno o una pescata.",al_domes:"Catena dei Puys e Puy de Dôme",al_domes_p:"Vista splendida sulla Limagne, e il parco Vulcania.",al_chateaux:"La strada dei castelli",al_chateaux_p:"Murol, Cordès…",al_romanes:"Le chiese romaniche",al_romanes_p:"Saint-Nectaire, Issoire, Orcival, Saint-Saturnin…",al_villages:"I borghi",al_villages_p:"Champeix, Saint-Floret, Montpeyroux…",al_metiers:"La strada dei mestieri",al_metiers_p:"Compresa la produzione del saint-nectaire.",al_ski:"Lo sci",al_ski_p:"Piste del Mont-Dore e di Super-Besse.",al_site:"Sito",
+rc_t:"Ricevimenti",rc_p:"Fino a 80 coperti in una sala modulabile: banchetti, matrimoni, seminari, pranzi di famiglia.",rc_f_t:"Raccontateci il vostro progetto",rc_type:"Occasione",rc_mariage:"Matrimonio",rc_banquet:"Banchetto",rc_seminaire:"Seminario",rc_famille:"Pranzo di famiglia",rc_autre:"Altro",rc_date:"Data desiderata",rc_conv:"Numero di invitati",
+ct_t:"Contatti",ct_p:"Una domanda, una richiesta particolare? Scriveteci, rispondiamo presto.",ct_nom:"Il vostro nome",ct_mail:"E-mail o telefono",ct_sujet:"Oggetto",ct_s1:"Camera",ct_s2:"Ristorante",ct_s3:"Ricevimento",ct_s4:"Les Emportés",ct_s5:"Altro",ct_msg:"Il vostro messaggio",ct_send:"Invia",ct_ok:"Grazie! La vostra posta si apre con il messaggio pronto da inviare.",ct_err:"Indicate il vostro nome e un recapito.",ct_rgpd:"I vostri dati servono solo a rispondervi e non sono mai trasmessi a terzi (GDPR).",ct_tel:"Telefono",ct_fax:"Fax",ct_adr:"Indirizzo",ct_plan:"Vedere sulla mappa",
+ml_t:"Note legali",ml_ed:"Editore",ml_cnil:"Protezione dei dati",ml_cnil_p:"Le informazioni inviate tramite questo sito sono conservate dall'Hôtel de l'Abbaye solo per i rapporti con contatti, clienti o potenziali clienti, e unicamente a fini informativi, commerciali o contabili necessari al buon funzionamento dell'impresa. Non sono divulgate né trasmesse a terzi, in conformità al GDPR del 25 maggio 2018.",ml_heb:"Progettazione, sviluppo e hosting",ml_droits:"Diritto d'autore",ml_droits_p:"L'intero sito è soggetto alla legislazione francese e internazionale sul diritto d'autore e sulla proprietà intellettuale. Tutti i diritti di riproduzione e rappresentazione sono riservati, compresi i documenti scaricabili e le rappresentazioni iconografiche e fotografiche. È vietata qualsiasi riproduzione, totale o parziale, su qualunque supporto elettronico senza autorizzazione espressa del proprietario del sito.",ml_photos:"Le foto di questo sito non sono libere da diritti: appartengono all'Hôtel de l'Abbaye de Sauxillanges e ne è vietato l'uso senza autorizzazione espressa.",
+ft_rgpd:"Note legali",ft_lang:"Lingua",ft_maison:"Hotel-ristorante di famiglia a Sauxillanges dal 1972.",
+as_hello:"Buongiorno! Sono Abbaye Conseil, l'assistente virtuale dell'hotel. Come posso aiutarvi?",as_virtuel:"assistente virtuale",as_ph:"Scrivete la vostra domanda…",as_send:"Invia",
+as_q_dormir:"Dormire stasera",as_q_diner:"Cena o pizze",as_q_chien:"Venire con il cane",as_q_tard:"Arrivo tardi",as_q_reception:"Organizzare un ricevimento",as_q_sortir:"Cosa fare nei dintorni?",as_q_pro:"Viaggio di lavoro",
+as_a_dormir:"In quanti sarete?",as_p1:"Da solo/a",as_p2:"In due",as_p3:"In tre o in famiglia",
+as_a_p1:"La camera singola costa tra 58 e 64 € a notte. Vi apro la prenotazione?",as_a_p2:"Per due: camera doppia da 68 a 76 €, o twin (due letti) da 72 a 80 €. Vi apro la prenotazione?",as_a_p3:"La camera tripla costa da 80 a 90 €, e c'è una camera familiare. Prestiamo lettini per neonati su richiesta. Vi apro la prenotazione?",
+as_a_diner:"Il ristorante è aperto a pranzo dalle 12 alle 13.30 in settimana, e a cena dalle 19 alle 21 dal lunedì al sabato. Le pizze sono la sera: giovedì, venerdì e sabato in bassa stagione, e tutti i giorni a luglio-agosto tranne il mercoledì.",
+as_a_chien:"Buona notizia: gli animali sono i benvenuti senza supplemento. C'è anche un garage privato per l'auto.",
+as_a_tard:"Nessun problema. Se arrivate dopo le 21, avvisateci prima (+33 4 73 96 81 80 o info@hotel-abbaye-sauxillanges.com) e ci organizziamo. Poi entrate e uscite liberamente 24 ore su 24.",
+as_a_reception:"La sala accoglie fino a 80 invitati e si adatta: matrimonio, banchetto, seminario. Vi porto al modulo?",
+as_a_sortir:"Usson e la regina Margot, l'abbaziale di Issoire a 10 km, i laghi Pavin e Chambon, il Sancy, Vulcania… Vi mostro le gite?",
+as_a_pro:"La «soirée étape» costa 77 € a persona, a 10 km dall'autostrada, con Wi-Fi e parcheggio gratuiti. Vi apro la prenotazione?",
+as_a_pdj:"La colazione è servita in sala dalle 7 alle 10, al prezzo di 8 €.",as_a_wifi:"Il Wi-Fi è gratuito in tutto l'hotel.",as_a_parking:"Parcheggio pubblico gratuito, garage privato e una colonnina di ricarica a 200 m.",as_a_emp:"Les Emportés: i nostri piatti sottovuoto e pastorizzati si conservano un mese in frigorifero. Dieci minuti in acqua che sobbolle e sono pronti.",as_a_pmr:"Due camere sono adatte alle persone a mobilità ridotta, c'è l'ascensore e un posto auto per disabili a 100 m.",
+as_a_defaut:"Non ho la risposta esatta. La cosa più semplice: chiamate la reception al +33 4 73 96 81 80 o scrivete a info@hotel-abbaye-sauxillanges.com.",
+as_go_res:"Aprire la prenotazione",as_go_rc:"Andare al modulo",as_go_al:"Vedere le gite",as_go_pz:"Vedere le pizze",as_go_emp:"Vedere Les Emportés",as_bulle:"Una domanda su una camera o una cena? Vi rispondo subito.",
+ing:{tomate:"pomodoro",fromage:"formaggio",champignons:"funghi",jambon:"prosciutto",chevre:"caprino",creme:"panna fresca",pdt:"patate",lardons:"pancetta",oeuf:"uovo",chorizo:"chorizo",poivron:"peperone",oignons:"cipolle",boeuf:"manzo",stnectaire:"saint-nectaire",roquefort:"roquefort",chevreEug:"caprino di Eugénie",moutarde:"senape cremosa",bleu:"erborinato",miel:"miele"},
+pers:"pers.",mois:["gen.","feb.","mar.","apr.","mag.","giu.","lug.","ago.","set.","ott.","nov.","dic."]
+},
+nl:{
+lang:"Nederlands",
+nav_maison:"Het huis",nav_chambres:"Kamers & prijzen",nav_restaurant:"Restaurant",nav_pizzas:"Pizza's",nav_emportes:"Afhalen",nav_alentours:"Omgeving",nav_receptions:"Feesten",nav_contact:"Contact",nav_menu:"Menu",nav_fermer:"Sluiten",
+reserver:"Boeken",conseil_nom:"Abbaye Conseil",conseil_aide:"Ik help u kiezen",
+h_sub:"Hotel · Restaurant · Sauxillanges, Puy-de-Dôme",
+h_lead:"Zestien rustige kamers aan het dorpsplein, een traditionele keuken en pizza's met de namen van rugbystadions. Sinds 1972 ontvangt een familie u hier.",
+b_arrivee:"Aankomst",b_depart:"Vertrek",b_pers:"Personen",b_go:"Beschikbaarheid bekijken",b_note:"Veilig boeken · kamer vanaf € 58 per nacht",
+f1:"16 gerenoveerde kamers",f2:"Lift en 2 toegankelijke kamers",f3:"Gratis parkeren en garage",f4:"Huisdieren zonder toeslag",
+m_t:"Twee generaties aan hetzelfde plein",m_p:"Marie-Claude nam het hotel in 1972 over. Haar zoon Stéphane leidt het sinds maart 2006. De kerktoren staat er nog, de gastvrijheid ook.",m_cta:"Kom binnen",
+c_t:"Kamers waar je echt slaapt",c_p:"De grote wegen liggen ver weg. 's Avonds hoor je vooral de kerktoren. Zestien gerenoveerde kamers, waaronder een familiekamer en twee voor gasten met beperkte mobiliteit.",c_from:"vanaf",c_nuit:"per nacht",c_cta:"Kamers en prijzen bekijken",
+e_t:"Onderweg? Het etappe-arrangement",e_p:"Bedoeld voor zakenreizen, op 10 km van de snelweg.",e_prix:"€ 77 per persoon",e_cta:"Mijn etappe-arrangement boeken",
+r_t:"Een traditionele keuken, 's middags en 's avonds",r_p:"Streekgerechten, lokale producten gekozen door de chef en een kaart die steeds verandert. Doordeweeks kost het dagmenu € 20.",r_cta:"Menu's en openingstijden",
+p_t:"'s Avonds speelt de kaart met zesentwintig namen",p_p:"Mayol, Eden Park, Murrayfield… Elke huisgemaakte pizza draagt de naam van een rugbystadion of -spelactie. Ter plaatse of om mee te nemen.",p_cta:"De opstelling lezen",
+x_t:"Les Emportés de l'Abbaye",x_p:"Onze gerechten, hier gekookt, vacuüm verpakt en gepasteuriseerd. Een maand in de koelkast, tien minuten in zacht kokend water, en aan tafel.",x_cta:"Les Emportés ontdekken",
+v_t:"Tot 80 gasten",v_p:"Bruiloft, banket, seminar: de zaal past zich aan uw feest of werkdag aan.",v_cta:"Mijn feest voorbereiden",
+a_t:"Tussen Livradois-Forez en de Sancy",a_p:"Usson en koningin Margot, de abdijkerk van Issoire, de meren, de wandelpaden… Het uitje begint voor de deur.",a_cta:"Uitstapjes bekijken",
+i_t:"Goed om te weten",i_reception:"Receptie maandag t/m zaterdag 8–21 uur, zondag 8–12 uur. Anders kunt u ons mailen.",i_parking:"Gratis openbaar parkeren en privégarage",i_animaux:"Huisdieren welkom zonder toeslag",i_wifi:"Gratis wifi in het hele hotel",i_ascenseur:"Lift",i_borne:"Laadpaal op 200 m",i_pmr:"Invalidenparkeerplaats op 100 m",i_couettes:"Extra dekbedden en kussens op aanvraag",i_langues:"We spreken Frans en Engels",i_acces:"10 km van de snelweg · Clermont-Ferrand 47 km · Lyon 172 km · Parijs 462 km",i_street:"Even voor het hotel kijken",
+mai_t:"Het huis",mai_p1:"In het dorpje Sauxillanges, in het hart van de Puy-de-Dôme, ontvangt het Hôtel de l'Abbaye u het hele jaar door, voor vakantie of werk.",mai_p2:"U vindt er rust en kalmte in een natuurlijke, authentieke omgeving.",
+mai_1972:"Marie-Claude wordt eigenaar van het hotel.",mai_2006:"In maart neemt haar zoon Stéphane Mavel de leiding over.",mai_auj:"Vandaag",mai_auj_p:"16 gerenoveerde kamers, een lift, een restaurant en een zaal voor 80 gasten.",mai_fb:"Volg het hotel op Facebook",
+ch_t:"Kamers & prijzen",ch_p:"Ruim, rustig, ver van de grote wegen. Twee kamers zijn aangepast voor gasten met beperkte mobiliteit, en één kamer biedt plaats aan het hele gezin.",
+ch_eq_t:"In elke kamer",ch_eq1:"Eigen badkamer: wastafel, douche, wc",ch_eq2:"Kledingkast en bergruimte",ch_eq3:"Tafel en stoel",ch_eq4:"Telefoon met directe lijn",ch_eq5:"Gratis wifi",ch_eq6:"Babybedjes op aanvraag",ch_eq7:"Extra kussens en dekbedden bij de receptie",ch_eq8:"Wekdienst op aanvraag",
+ch_h_t:"Uw tijden",ch_h1:"Kamer klaar vanaf 17 uur, vrijmaken om 10 uur de volgende ochtend.",ch_h2:"Na 21 uur aankomen? Laat het ons weten, dan regelen we het.",ch_h3:"Tijdens uw verblijf gaat u 24 uur per dag vrij in en uit.",ch_pdj:"Ontbijt in de eetzaal van 7 tot 10 uur",
+tar_t:"Prijzen",tar_1:"Eenpersoonskamer",tar_2:"Tweepersoonskamer",tar_tw:"Twin-kamer",tar_3:"Driepersoonskamer",tar_etape:"Etappe-arrangement",tar_pp:"per persoon",tar_taxe:"Toeristenbelasting",tar_pdj:"Ontbijt",tar_de:"van",tar_a:"tot",tar_note:"De exacte prijs hangt af van de datum en de kamer: online boeken rekent het voor u uit.",
+est_t:"Uw verblijf in één oogopslag",est_type:"Kamer",est_nuits:"nachten",est_nuit:"nacht",est_pdj:"Met ontbijt",est_total:"Schatting",est_taxe:"inclusief toeristenbelasting",est_go:"Verder naar veilig boeken",est_info:"U rondt de boeking af in ons beveiligde boekingssysteem. Hier betaalt u niets.",
+re_t:"Restaurant",re_p:"Een verzorgde, gulle keuken: traditie, streekgerechten, lokale producten zorgvuldig gekozen door onze chef, en een kaart die steeds vernieuwt.",
+re_h_t:"Openingstijden",re_midi:"Lunch",re_midi_h:"12–13.30 uur, maandag t/m vrijdag",re_soir:"Diner",re_soir_h:"19–21 uur, maandag t/m zaterdag",re_ferme:"Zondag gesloten",
+fo_t:"Lunchformules",fo_sub:"maandag t/m vrijdag",fo_jour:"Het dagmenu",fo_j1:"Voorgerecht + hoofdgerecht + kaas en dessert",fo_j2:"Voorgerecht + hoofdgerecht of hoofdgerecht + dessert",fo_exp:"De express",fo_e1:"Dagschotel",fo_e2:"Express-plank (voorgerecht, hoofdgerecht, kaas)",fo_dess:"Dessert extra",fo_cafe:"Koffie",
+ca_t:"De kaart van nu",ca_p:"Onze kaart volgt de seizoenen en de markt. Vraag ons de kaart van vandaag: we sturen hem op.",ca_cta:"De dagkaart ontvangen",
+pz_t:"De opstelling",pz_p:"Zesentwintig huisgemaakte pizza's, elk vernoemd naar een rugbystadion of -spelactie. Ter plaatse of om mee te nemen.",pz_jours:"Alleen 's avonds: donderdag, vrijdag en zaterdag buiten het seizoen; in juli en augustus elke dag behalve woensdag.",
+g_tomate:"Tomatenbasis",g_moutarde:"Romige mosterd",g_creme:"Roombasis",g_oignons:"Uien en spek",g_miel:"Vleugje honing",
+pz_add:"Toevoegen",pz_added:"Toegevoegd",
+cmd_t:"Uw afhaalbestelling",cmd_vide:"Uw bestelling is leeg. Kies uw pizza's uit de opstelling.",cmd_total:"Totaal",cmd_tel:"Bellen om te bestellen",cmd_mail:"Mijn bestelling mailen",cmd_info:"Bestelling te bevestigen per telefoon of e-mail, afhankelijk van de openingsdagen.",cmd_btn:"Afhalen",
+em_t:"Les Emportés de l'Abbaye",em_p:"Onze gerechten worden hier bereid, vacuüm verpakt en daarna gepasteuriseerd. Ze blijven tot een maand goed in de koelkast.",em_1:"Hier gekookt",em_1p:"Ter plaatse bereid door ons team.",em_2:"Vacuüm, gepasteuriseerd",em_2p:"Een werkwijze goedgekeurd en gecontroleerd door een onafhankelijk laboratorium, Terana in Marmilhat (63).",em_3:"Een maand koel",em_3p:"Tot een maand houdbaar in de koelkast.",em_4:"Tien minuten",em_4p:"Leg het zakje een minuut of tien in zacht kokend water, open… en geniet.",em_pz:"Ook de pizza's kunt u meenemen",em_pz_cta:"Mijn bestelling samenstellen",
+al_t:"De omgeving",al_p:"Door zijn ligging is het hotel een ideaal vertrekpunt. Dit raden we onze gasten aan.",
+al_parentignat:"Kasteel van Parentignat",al_parentignat_p:"Een kasteel met landgoed, vlakbij.",al_issoire:"Abdijkerk van Issoire en Klokkentoren",al_issoire_p:"Een romaans juweel op 10 km.",al_livradois:"Regionaal natuurpark Livradois-Forez",al_livradois_p:"Bossen, bergkammen en dorpen.",al_sentiers:"Wandelpaden",al_sentiers_p:"Te voet of te paard, over GR- en PR-routes.",al_musee:"Museum Pierre le Vénérable",al_musee_p:"De geschiedenis van de abdij van Sauxillanges.",al_usson:"Usson",al_usson_p:"Een van de mooiste dorpen van Frankrijk, waar koningin Margot onder huisarrest stond.",al_etangs:"Privévijvers",al_etangs_p:"Baars, snoek, graskarper, karper, zeelt, blankvoorn. Veilig nachtvissen.",al_velo:"Fietsverhuur",al_velo_p:"Met routes in de buurt.",al_sancy:"Monts Dore en Puy de Sancy",al_sancy_p:"De hoogste top van het Centraal Massief, 1.886 m.",al_lacs:"De merenroute",al_lacs_p:"Pavin, Chauvet, Chambon, Guéry, Aydat… om te zwemmen of te vissen.",al_domes:"Chaîne des Puys en Puy de Dôme",al_domes_p:"Prachtig uitzicht over de Limagne, en het park Vulcania.",al_chateaux:"De kastelenroute",al_chateaux_p:"Murol, Cordès…",al_romanes:"Romaanse kerken",al_romanes_p:"Saint-Nectaire, Issoire, Orcival, Saint-Saturnin…",al_villages:"De dorpen",al_villages_p:"Champeix, Saint-Floret, Montpeyroux…",al_metiers:"De ambachtenroute",al_metiers_p:"Met onder meer het maken van saint-nectaire-kaas.",al_ski:"Skiën",al_ski_p:"Pistes in Mont-Dore en Super-Besse.",al_site:"Website",
+rc_t:"Feesten",rc_p:"Tot 80 gasten in een flexibele zaal: banketten, bruiloften, seminars, familiemaaltijden.",rc_f_t:"Vertel ons over uw plannen",rc_type:"Gelegenheid",rc_mariage:"Bruiloft",rc_banquet:"Banket",rc_seminaire:"Seminar",rc_famille:"Familiemaaltijd",rc_autre:"Anders",rc_date:"Gewenste datum",rc_conv:"Aantal gasten",
+ct_t:"Contact",ct_p:"Een vraag of speciaal verzoek? Schrijf ons, we antwoorden snel.",ct_nom:"Uw naam",ct_mail:"E-mail of telefoon",ct_sujet:"Onderwerp",ct_s1:"Kamer",ct_s2:"Restaurant",ct_s3:"Feest",ct_s4:"Les Emportés",ct_s5:"Anders",ct_msg:"Uw bericht",ct_send:"Versturen",ct_ok:"Dank u! Uw e-mailprogramma opent met uw bericht klaar om te versturen.",ct_err:"Vul uw naam in en hoe we u kunnen bereiken.",ct_rgpd:"Uw gegevens dienen alleen om u te antwoorden en worden nooit aan derden doorgegeven (AVG).",ct_tel:"Telefoon",ct_fax:"Fax",ct_adr:"Adres",ct_plan:"Op de kaart bekijken",
+ml_t:"Juridische informatie",ml_ed:"Uitgever",ml_cnil:"Gegevensbescherming",ml_cnil_p:"Informatie die via deze site wordt verstuurd, bewaart het Hôtel de l'Abbaye alleen voor contact met relaties, klanten of prospects, en uitsluitend voor informatieve, commerciële of boekhoudkundige doeleinden die nodig zijn voor de bedrijfsvoering. Ze wordt niet openbaar gemaakt of aan derden doorgegeven, conform de AVG van 25 mei 2018.",ml_heb:"Ontwerp, ontwikkeling en hosting",ml_droits:"Auteursrecht",ml_droits_p:"Deze hele site valt onder de Franse en internationale wetgeving inzake auteursrecht en intellectueel eigendom. Alle rechten van verveelvoudiging en weergave zijn voorbehouden, ook voor downloadbare documenten en beeld- en fotomateriaal. Gehele of gedeeltelijke verveelvoudiging op welke elektronische drager ook is verboden zonder uitdrukkelijke toestemming van de eigenaar.",ml_photos:"De foto's op deze site zijn niet rechtenvrij: ze zijn eigendom van het Hôtel de l'Abbaye de Sauxillanges en mogen niet zonder uitdrukkelijke toestemming worden gebruikt.",
+ft_rgpd:"Juridische informatie",ft_lang:"Taal",ft_maison:"Familiehotel-restaurant in Sauxillanges sinds 1972.",
+as_hello:"Hallo! Ik ben Abbaye Conseil, de virtuele assistent van het hotel. Waarmee kan ik helpen?",as_virtuel:"virtuele assistent",as_ph:"Stel uw vraag…",as_send:"Versturen",
+as_q_dormir:"Vannacht slapen",as_q_diner:"Diner of pizza",as_q_chien:"Met mijn hond",as_q_tard:"Ik kom laat",as_q_reception:"Een feest organiseren",as_q_sortir:"Wat te doen in de buurt?",as_q_pro:"Zakenreis",
+as_a_dormir:"Met hoeveel personen bent u?",as_p1:"Alleen",as_p2:"Met z'n tweeën",as_p3:"Met drie of als gezin",
+as_a_p1:"De eenpersoonskamer kost € 58 tot € 64 per nacht. Zal ik het boeken openen?",as_a_p2:"Voor twee: tweepersoonskamer € 68 tot € 76, of twin (twee bedden) € 72 tot € 80. Zal ik het boeken openen?",as_a_p3:"De driepersoonskamer kost € 80 tot € 90, en er is een familiekamer. Babybedjes lenen we op aanvraag uit. Zal ik het boeken openen?",
+as_a_diner:"Het restaurant is doordeweeks open voor de lunch van 12 tot 13.30 uur, en voor het diner van maandag t/m zaterdag van 19 tot 21 uur. Pizza's zijn er 's avonds: buiten het seizoen op donderdag, vrijdag en zaterdag, in juli-augustus elke dag behalve woensdag.",
+as_a_chien:"Goed nieuws: huisdieren zijn welkom zonder toeslag. Er is ook een privégarage voor de auto.",
+as_a_tard:"Geen probleem. Komt u na 21 uur aan, laat het ons dan vooraf weten (+33 4 73 96 81 80 of info@hotel-abbaye-sauxillanges.com), dan regelen we het. Daarna gaat u 24 uur per dag vrij in en uit.",
+as_a_reception:"De zaal biedt plaats aan 80 gasten en is aan te passen: bruiloft, banket, seminar. Zal ik u naar het formulier brengen?",
+as_a_sortir:"Usson en koningin Margot, de abdijkerk van Issoire op 10 km, de meren Pavin en Chambon, de Sancy, Vulcania… Zal ik de uitstapjes laten zien?",
+as_a_pro:"Het etappe-arrangement kost € 77 per persoon, op 10 km van de snelweg, met gratis wifi en parkeren. Zal ik het boeken openen?",
+as_a_pdj:"Het ontbijt wordt van 7 tot 10 uur in de eetzaal geserveerd, voor € 8.",as_a_wifi:"De wifi is gratis in het hele hotel.",as_a_parking:"Gratis openbaar parkeren, een privégarage en een laadpaal op 200 m.",as_a_emp:"Les Emportés: onze vacuüm verpakte, gepasteuriseerde gerechten blijven een maand goed in de koelkast. Tien minuten in zacht kokend water en klaar.",as_a_pmr:"Twee kamers zijn aangepast voor gasten met beperkte mobiliteit, er is een lift en een invalidenparkeerplaats op 100 m.",
+as_a_defaut:"Daar heb ik geen precies antwoord op. Het makkelijkst: bel de receptie op +33 4 73 96 81 80 of mail naar info@hotel-abbaye-sauxillanges.com.",
+as_go_res:"Boeken openen",as_go_rc:"Naar het formulier",as_go_al:"Uitstapjes bekijken",as_go_pz:"De pizza's bekijken",as_go_emp:"Les Emportés bekijken",as_bulle:"Een vraag over een kamer of het diner? Ik antwoord meteen.",
+ing:{tomate:"tomaat",fromage:"kaas",champignons:"champignons",jambon:"ham",chevre:"geitenkaas",creme:"crème fraîche",pdt:"aardappel",lardons:"spekjes",oeuf:"ei",chorizo:"chorizo",poivron:"paprika",oignons:"uien",boeuf:"rundvlees",stnectaire:"saint-nectaire",roquefort:"roquefort",chevreEug:"geitenkaas van Eugénie",moutarde:"romige mosterd",bleu:"blauwe kaas",miel:"honing"},
+pers:"pers.",mois:["jan.","feb.","mrt.","apr.","mei","jun.","jul.","aug.","sep.","okt.","nov.","dec."]
+}
+};
+
+const PATCH={
+fr:{c_p:"Loin des grands axes, seize chambres rénovées et calmes, dont une familiale et deux pensées pour les personnes à mobilité réduite.",m_p:"Marie-Claude a repris l'hôtel en 1972 ; son fils Stéphane le tient depuis mars 2006. Ici, on vous reçoit en famille, toute l'année.",conseil_sous:"Assistant virtuel · Je vous aide à choisir",as_bulle:"Assistant virtuel : une question sur une chambre ou un dîner ? Je réponds tout de suite.",xv_t:"Le XV de l'Abbaye",xv_tit:"Titulaires",xv_rem:"Remplaçants",xv_col:["N°","Pizza","Composition","Prix"],xv_aide:"Touchez une pizza pour l'ajouter à votre commande à emporter.",alg_pres:"À deux pas",alg_pat:"Patrimoine et villages",alg_vol:"Volcans, lacs et grands espaces",h_mob:"Chambre dès 58 € la nuit"},
+en:{c_p:"Away from the main roads, sixteen quiet renovated rooms, including a family room and two designed for guests with reduced mobility.",m_p:"Marie-Claude took over the hotel in 1972; her son Stéphane has run it since March 2006. Here, a family welcomes you all year round.",conseil_sous:"Virtual assistant · Let me help you choose",as_bulle:"Virtual assistant: a question about a room or dinner? I'll answer right away.",xv_t:"The Abbaye XV",xv_tit:"Starting XV",xv_rem:"Replacements",xv_col:["No.","Pizza","Toppings","Price"],xv_aide:"Tap a pizza to add it to your takeaway order.",alg_pres:"Close by",alg_pat:"Heritage and villages",alg_vol:"Volcanoes, lakes and open spaces",h_mob:"Rooms from €58 a night"},
+es:{c_p:"Lejos de las grandes vías, dieciséis habitaciones renovadas y tranquilas, una familiar y dos pensadas para personas con movilidad reducida.",m_p:"Marie-Claude se hizo cargo del hotel en 1972; su hijo Stéphane lo dirige desde marzo de 2006. Aquí le recibe una familia, todo el año.",conseil_sous:"Asistente virtual · Le ayudo a elegir",as_bulle:"Asistente virtual: ¿una pregunta sobre una habitación o una cena? Respondo enseguida.",xv_t:"El XV de l'Abbaye",xv_tit:"Titulares",xv_rem:"Suplentes",xv_col:["N.º","Pizza","Ingredientes","Precio"],xv_aide:"Toque una pizza para añadirla a su pedido para llevar.",alg_pres:"A dos pasos",alg_pat:"Patrimonio y pueblos",alg_vol:"Volcanes, lagos y grandes espacios",h_mob:"Habitación desde 58 € la noche"},
+de:{c_p:"Abseits der großen Verkehrsachsen: sechzehn ruhige, renovierte Zimmer, darunter ein Familienzimmer und zwei für Gäste mit eingeschränkter Mobilität.",m_p:"Marie-Claude übernahm das Hotel 1972, ihr Sohn Stéphane führt es seit März 2006. Hier empfängt Sie eine Familie – das ganze Jahr über.",conseil_sous:"Virtueller Assistent · Ich helfe bei der Wahl",as_bulle:"Virtueller Assistent: Eine Frage zu einem Zimmer oder zum Abendessen? Ich antworte sofort.",xv_t:"Die XV der Abbaye",xv_tit:"Startaufstellung",xv_rem:"Ersatzspieler",xv_col:["Nr.","Pizza","Belag","Preis"],xv_aide:"Tippen Sie auf eine Pizza, um sie Ihrer Bestellung zum Mitnehmen hinzuzufügen.",alg_pres:"Gleich nebenan",alg_pat:"Kulturerbe und Dörfer",alg_vol:"Vulkane, Seen und Weite",h_mob:"Zimmer ab 58 € pro Nacht"},
+it:{c_p:"Lontano dalle grandi strade, sedici camere rinnovate e tranquille, tra cui una familiare e due pensate per le persone a mobilità ridotta.",m_p:"Marie-Claude ha rilevato l'hotel nel 1972; suo figlio Stéphane lo gestisce da marzo 2006. Qui vi accoglie una famiglia, tutto l'anno.",conseil_sous:"Assistente virtuale · La aiuto a scegliere",as_bulle:"Assistente virtuale: una domanda su una camera o una cena? Rispondo subito.",xv_t:"Il XV dell'Abbaye",xv_tit:"Titolari",xv_rem:"Riserve",xv_col:["N.","Pizza","Ingredienti","Prezzo"],xv_aide:"Toccate una pizza per aggiungerla al vostro ordine da asporto.",alg_pres:"A due passi",alg_pat:"Patrimonio e borghi",alg_vol:"Vulcani, laghi e grandi spazi",h_mob:"Camera da 58 € a notte"},
+nl:{c_p:"Weg van de grote wegen: zestien rustige, gerenoveerde kamers, waaronder een familiekamer en twee voor gasten met beperkte mobiliteit.",m_p:"Marie-Claude nam het hotel in 1972 over; haar zoon Stéphane leidt het sinds maart 2006. Hier ontvangt een familie u, het hele jaar door.",conseil_sous:"Virtuele assistent · Ik help u kiezen",as_bulle:"Virtuele assistent: een vraag over een kamer of het diner? Ik antwoord meteen.",xv_t:"De XV van l'Abbaye",xv_tit:"Basisspelers",xv_rem:"Wissels",xv_col:["Nr.","Pizza","Beleg","Prijs"],xv_aide:"Tik op een pizza om hem aan uw afhaalbestelling toe te voegen.",alg_pres:"Vlakbij",alg_pat:"Erfgoed en dorpen",alg_vol:"Vulkanen, meren en ruimte",h_mob:"Kamer vanaf € 58 per nacht"}
+};
+for(const l in PATCH)Object.assign(T[l],PATCH[l]);
+Object.assign(T.fr,{nav_chambres:"Chambres"});Object.assign(T.en,{nav_chambres:"Rooms"});Object.assign(T.es,{nav_chambres:"Habitaciones"});Object.assign(T.de,{nav_chambres:"Zimmer"});Object.assign(T.it,{nav_chambres:"Camere"});Object.assign(T.nl,{nav_chambres:"Kamers"});
+
+const RESERVIT='https://secure.reservit.com/front/front.do?specialMode=default&custid=2&hotelid=3244&m=booking';
+const PIZZAS=[
+ ['tomate',[['Ouverture',11,['tomate','fromage']],['Mayol',12,['tomate','champignons','fromage']],['Mêlée',12,['tomate','fromage','jambon']],['Aimé Giral',12.5,['tomate','fromage','chevre','creme']],['Sautée',12.5,['tomate','champignons','fromage','jambon']],['Calzone',13,['tomate','champignons','fromage','jambon','oeuf']],['Croisée',13,['tomate','pdt','champignons','fromage','lardons']],['Du Manoir',13,['tomate','champignons','fromage','lardons','oeuf']],['Verdun',13,['tomate','chorizo','champignons','fromage','poivron']],['Bramentomb',14,['tomate','stnectaire','fromage','chevreEug','roquefort']],['Méditerranée',14.5,['tomate','fromage','oignons','boeuf','creme']]]],
+ ['moutarde',[['Telstra',12,['moutarde','pdt','fromage','lardons']],['Pile',12.5,['moutarde','pdt','fromage','lardons','stnectaire']]]],
+ ['creme',[['Eden Park',11,['fromage','creme']],['Kings Park',12,['fromage','chevre','creme']],['Millenium',12,['fromage','jambon','creme']],['Parc des Princes',12,['pdt','fromage','creme']],['Saint-Denis',12,['fromage','bleu','creme']],['Murrayfield',12.5,['fromage','jambon','lardons','oeuf','creme']],['Drop',13,['fromage','stnectaire','jambon','creme']],['Ellis',13.5,['chorizo','pdt','fromage','stnectaire','creme']]]],
+ ['oignons',[['Croke Park',12,['oignons','lardons','creme']],['Westpac',12.5,['fromage','oignons','lardons','creme']],['Colombes',13,['pdt','fromage','oignons','lardons','creme']]]],
+ ['miel',[['Brennus',13,['tomate','lardons','chevre','creme','miel']],['Currie Cup',13,['fromage','lardons','oignons','creme','miel']]]]
+];
+const ORDRE=(()=>{const f=PIZZAS.flatMap(g=>g[1]);const a=f.findIndex(x=>x[0]==='Bramentomb'),b=f.findIndex(x=>x[0]==='Méditerranée');[f[a],f[b]]=[f[b],f[a]];return f})();
+const CHAMBRES=[['tar_1',58,64,1],['tar_2',68,76,2],['tar_tw',72,80,2],['tar_3',80,90,3],['tar_etape',77,77,1,true]];
+const ESCAPADES=[['alg_pres',[['musee','https://www.musee-sauxillanges.com/'],['sentiers','https://www.sauxillanges.fr/spip.php?article57'],['etangs'],['velo','https://vttauvergne.fr/']]],['alg_pat',[['parentignat','https://www.parentignat.com/'],['issoire','https://www.sejours-issoire.com/'],['usson'],['romanes'],['chateaux'],['villages'],['metiers']]],['alg_vol',[['livradois','https://www.parc-livradois-forez.org/'],['sancy'],['lacs'],['domes'],['ski','https://www.sancy.com/']]]];
+const PRATIQUE=[['i-horloge','i_reception'],['i-parking','i_parking'],['i-patte','i_animaux'],['i-wifi','i_wifi'],['i-ascenseur','i_ascenseur'],['i-acces','i_pmr'],['i-borne','i_borne'],['i-oreiller','i_couettes'],['i-globe','i_langues'],['i-lieu','i_acces']];
+const EQUIP=[['i-douche','ch_eq1'],['i-cintre','ch_eq2'],['i-table','ch_eq3'],['i-tel','ch_eq4'],['i-wifi','ch_eq5'],['i-bebe','ch_eq6'],['i-oreiller','ch_eq7'],['i-reveil','ch_eq8']];
+
+document.documentElement.classList.add('js');
+const $=(s,c=document)=>c.querySelector(s),$$=(s,c=document)=>[...c.querySelectorAll(s)];
+let L=(()=>{try{const s=localStorage.getItem('abbaye-langue');if(s&&T[s])return s}catch(e){}const n=(navigator.language||'fr').slice(0,2);return T[n]?n:'fr'})();
+const typo=x=>typeof x!=='string'?x:(x.replace(/(\d) (h|€|km|m|min|°C|%|ans)(?=[\s,.;:)!?]|$)/g,'$1\u00a0$2').replace(/(\d) (\d{3})/g,'$1\u202f$2').replace(/ ([?!:;»])/g,L==='fr'?'\u202f$1':' $1').replace(/« /g,'«\u202f').replace(/€ (\d)/g,'€\u00a0$1'));
+const t=k=>typo(T[L][k]??T.fr[k]??k);
+const prix=v=>{const s=(Number.isInteger(v)?v:v.toFixed(2)).toString();const d=L==='en'?s:s.replace('.',',');return (L==='en'||L==='nl')?'€'+(L==='nl'?' ':'')+d:d+' €'};
+const ic=id=>`<svg class="ic"><use href="#${id}"/></svg>`;
+
+function rendreListes(){
+  $('#pratique').innerHTML=PRATIQUE.map(([i,k])=>`<li>${ic(i)}<span>${t(k)}</span></li>`).join('');
+  $('#equipements').innerHTML=EQUIP.map(([i,k])=>`<li>${ic(i)}<span>${t(k)}</span></li>`).join('');
+  $('#tarifs').innerHTML='<tbody>'+CHAMBRES.map(([k,a,b,,e])=>`<tr${e?' class="fort"':''}><td>${t(k)}${e?`<small>${t('tar_pp')}</small>`:''}</td><td>${a===b?prix(a):`${t('tar_de')} ${prix(a)} ${t('tar_a')} ${prix(b)}`}</td></tr>`).join('')+
+   `<tr><td>${t('tar_pdj')}</td><td>${prix(8)}</td></tr><tr><td>${t('tar_taxe')}<small>${t('tar_pp')}</small></td><td>${prix(.7)}</td></tr></tbody>`;
+  $('#escapades').innerHTML=ESCAPADES.map(([g,l])=>`<div class="groupe-al"><h2>${t(g)}</h2><div class="escapades">${l.map(([k,u])=>`<article class="escapade"><h3>${t('al_'+k)}</h3><p>${t('al_'+k+'_p')}</p>${u?`<a href="${u}" target="_blank" rel="noopener">${new URL(u).hostname.replace('www.','')} ${ic('i-fleche')}</a>`:''}</article>`).join('')}</div></div>`).join('');
+  const c=t('xv_col'),ligne=([nom,p,ing],n)=>`<li><button class="ligne-xv${panier[nom]?' choisie':''}" data-pizza="${nom}" data-prix="${p}" aria-label="${t('pz_add')} ${nom} — ${prix(p)}"><span class="n">${n}</span><span class="nom"><b>${nom}</b><small>${ing.map(i=>T[L].ing[i]).join(', ')}</small></span><span class="p">${prix(p)}</span><span class="cpt">${panier[nom]?'×'+panier[nom].q:ic('i-plus')}</span></button></li>`;
+  const tete=`<div class="tete-xv" aria-hidden="true"><span>${c[0]}</span><span>${c[1]} · ${c[2]}</span><span>${c[3]}</span><span></span></div>`;
+  const POS=[[38,9],[50,9],[62,9],[44,22],[56,22],[28,29],[72,29],[50,34],[42,49],[28,59],[10,75],[42,70],[58,79],[90,75],[50,92]];
+  const terrain=`<div class="terrain" role="group" aria-label="${t('xv_t')}">${ORDRE.slice(0,15).map((x,i)=>`<button class="poste${panier[x[0]]?' choisie':''}" style="left:${POS[i][0]}%;top:${POS[i][1]}%" data-pizza="${x[0]}" data-prix="${x[1]}" aria-label="${i+1} ${x[0]} — ${prix(x[1])}"><span class="maillot">${i+1}</span><span class="etiq">${x[0]}</span></button>`).join('')}</div>`;
+  $('#feuille-match').innerHTML=terrain+`<p class="aide-xv">${t('xv_aide')}</p><div class="xv"><h2>${t('xv_t')} — ${t('xv_tit')}</h2>${tete}<ol>${ORDRE.slice(0,15).map((x,i)=>ligne(x,i+1)).join('')}</ol></div><div class="xv"><h2>${t('xv_rem')}</h2>${tete}<ol>${ORDRE.slice(15).map((x,i)=>ligne(x,i+16)).join('')}</ol></div>`;
+  $('#compo').innerHTML=ORDRE.slice(0,15).map((x,i)=>`<span><sup>${i+1}</sup>${x[0]}</span>`).join('');
+}
+function traduire(){
+  document.documentElement.lang=L;$('#langue').value=L;
+  $$('[data-t]').forEach(e=>{e.textContent=t(e.dataset.t)});
+  $('#question').placeholder=t('as_ph');
+  rendreListes();rendreEstimateurs();rendreCmd();
+  if(conseilOuvert)demarrerConseil(true);
+}
+$('#langue').addEventListener('change',e=>{L=e.target.value;try{localStorage.setItem('abbaye-langue',L)}catch(_){}traduire()});
+
+
+const VUES=$$('.vue').map(v=>v.dataset.vue);
+function router(){
+  let h=location.hash.slice(1)||'accueil';if(h==='conseil'){ouvrirConseil();h='accueil'}
+  if(!VUES.includes(h))h='accueil';
+  $$('.vue').forEach(v=>v.classList.toggle('active',v.dataset.vue===h));
+  $$('.nav a').forEach(a=>{if(a.getAttribute('href')==='#'+h)a.setAttribute('aria-current','page');else a.removeAttribute('aria-current')});
+  fermerFeuille();window.scrollTo({top:0,behavior:'instant'});
+  if(h==='accueil')lancerStore();
+  observer();
+}
+window.addEventListener('hashchange',router);
+let storeFait=false;
+function lancerStore(){
+  if(storeFait)return;storeFait=true;
+  const hero=$('.hero');let vu=false;try{vu=sessionStorage.getItem('abbaye-store')==='1';sessionStorage.setItem('abbaye-store','1')}catch(_){}
+  if(vu){hero.classList.add('deja');return}const mots=$$('.lambrequin h1 .mot span');mots.forEach((m,i)=>m.style.animationDelay=(0.75+i*0.12)+'s');
+  requestAnimationFrame(()=>hero.classList.add('deroule'));
+}
+function observer(){
+  if(!('IntersectionObserver' in window)){$$('.apparait').forEach(e=>e.classList.add('vu'));return}
+  const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('vu');io.unobserve(e.target)}}),{rootMargin:'0px 0px -10% 0px'});
+  $$('.vue.active .apparait:not(.vu)').forEach(e=>io.observe(e));
+}
+const feuille=$('#feuille');
+function fermerFeuille(){feuille.classList.remove('ouvert');feuille.setAttribute('aria-hidden','true');$('#burger').setAttribute('aria-expanded','false')}
+$('#burger').onclick=()=>{feuille.classList.add('ouvert');feuille.setAttribute('aria-hidden','false');$('#burger').setAttribute('aria-expanded','true')};
+$('#feuille-fermer').onclick=fermerFeuille;
+
+
+const voile=$('#voile');
+function ouvrir(id){fermerTout();const el=$(id);el.classList.add('ouvert');el.setAttribute('aria-hidden','false');voile.classList.add('ouvert');setTimeout(()=>{const f=el.querySelector('input,select,button');f&&f.focus()},300)}
+function fermerTout(){$$('.tiroir').forEach(x=>{x.classList.remove('ouvert');x.setAttribute('aria-hidden','true')});voile.classList.remove('ouvert')}
+voile.onclick=fermerTout;$$('[data-ferme]').forEach(b=>b.onclick=fermerTout);
+document.addEventListener('keydown',e=>{if(e.key==='Escape'){fermerTout();fermerConseil();fermerFeuille()}});
+document.addEventListener('click',e=>{
+  const o=e.target.closest('[data-ouvre]');if(o){e.preventDefault();fermerFeuille();if(o.dataset.ouvre==='resa'){est.tiroir.type=o.dataset.type==='etape'?4:est.tiroir.type;rendreEstimateurs();ouvrir('#tiroir-resa')}else ouvrirConseil();return}
+  const s=e.target.closest('[data-sujet]');if(s){setTimeout(()=>{$('#ct-sujet').value=s.dataset.sujet},50)}
+  const p=e.target.closest('.ligne-xv,.poste');if(p){ajouter(p.dataset.pizza,+p.dataset.prix);}
+});
+
+
+const iso=d=>d.toISOString().slice(0,10);
+const auj=new Date();const dem=new Date(Date.now()+864e5);
+const est={tiroir:{type:1,arr:iso(auj),dep:iso(dem),pers:2,pdj:false},page:{type:1,arr:iso(auj),dep:iso(dem),pers:2,pdj:false}};
+$('#r-arr').value=iso(auj);$('#r-dep').value=iso(dem);$('#r-arr').min=iso(auj);$('#r-dep').min=iso(dem);
+$('#r-arr').addEventListener('change',e=>{const a=new Date(e.target.value);const d=new Date($('#r-dep').value);if(!(d>a)){$('#r-dep').value=iso(new Date(a.getTime()+864e5))}$('#r-dep').min=iso(new Date(a.getTime()+864e5))});
+function urlResa(o){const fr=o.arr.split('-').reverse().join('/');const n=Math.max(1,Math.round((new Date(o.dep)-new Date(o.arr))/864e5));const lc={fr:'FR',en:'EN',es:'ES',de:'DE',it:'IT',nl:'NL'}[L];return `${RESERVIT}&langcode=${lc}&fromdate=${fr}&nbnights=${n}&nbadt=${o.pers}`}
+$('#resa-rapide').addEventListener('submit',e=>{e.preventDefault();const o={arr:$('#r-arr').value,dep:$('#r-dep').value,pers:+$('#r-pers').value};
+  Object.assign(est.tiroir,o,{type:o.pers>=3?3:(o.pers===1?0:1)});rendreEstimateurs();ouvrir('#tiroir-resa')});
+function rendreEstimateur(cible,o){
+  const el=$(cible);if(!el)return;
+  const nuits=Math.max(1,Math.round((new Date(o.dep)-new Date(o.arr))/864e5)||1);
+  const c=CHAMBRES[o.type];const etape=!!c[4];
+  const taxe=.7*o.pers*nuits,pdj=(o.pdj&&!etape)?8*o.pers*nuits:0;
+  const mult=etape?o.pers:1;
+  const a=c[1]*nuits*mult+taxe+pdj,b=c[2]*nuits*mult+taxe+pdj;
+  el.innerHTML=`<div class="grille">
+   <div class="champ plein"><label>${t('est_type')}</label><select data-k="type">${CHAMBRES.map((x,i)=>`<option value="${i}"${i==o.type?' selected':''}>${t(x[0])}</option>`).join('')}</select></div>
+   <div class="champ"><label>${t('b_arrivee')}</label><input type="date" data-k="arr" value="${o.arr}" min="${iso(auj)}"></div>
+   <div class="champ"><label>${t('b_depart')}</label><input type="date" data-k="dep" value="${o.dep}" min="${o.arr}"></div>
+   <div class="champ"><label>${t('b_pers')}</label><select data-k="pers">${[1,2,3,4,5,6].map(n=>`<option${n==o.pers?' selected':''}>${n}</option>`).join('')}</select></div>
+   <label class="case"${etape?' style="opacity:.45"':''}><input type="checkbox" data-k="pdj"${o.pdj?' checked':''}${etape?' disabled':''}>${t('est_pdj')}</label>
+  </div>
+  <div class="total"><span>${t('est_total')} · <span class="num">${nuits}</span> ${t(nuits>1?'est_nuits':'est_nuit')}<small>${t('est_taxe')}</small></span><b class="num">${a===b?prix(a):prix(a)+' – '+prix(b)}</b></div>
+  <a class="btn btn-rouge" style="width:100%;margin-top:16px" href="${urlResa(o)}" target="_blank" rel="noopener">${ic('i-cadenas')}<span>${t('est_go')}</span></a>
+  <p class="petite">${t('est_info')}</p>`;
+  el.querySelectorAll('[data-k]').forEach(f=>f.addEventListener('change',()=>{const k=f.dataset.k;o[k]=k==='pdj'?f.checked:(k==='type'||k==='pers'?+f.value:f.value);if(k==='arr'&&!(new Date(o.dep)>new Date(o.arr)))o.dep=iso(new Date(new Date(o.arr).getTime()+864e5));rendreEstimateurs()}));
+}
+function rendreEstimateurs(){rendreEstimateur('#estimateur-tiroir',est.tiroir);rendreEstimateur('#estimateur-page',est.page)}
+
+
+const panier={};
+function ajouter(nom,p){panier[nom]=panier[nom]||{p,q:0};panier[nom].q++;rendreCmd();rendreListes();}
+function rendreCmd(){
+  const lignes=Object.entries(panier).filter(([,v])=>v.q>0);const n=lignes.reduce((s,[,v])=>s+v.q,0),tot=lignes.reduce((s,[,v])=>s+v.q*v.p,0);
+  $('#cmd-n').textContent=n;$('#pastille-cmd').classList.toggle('visible',n>0);
+  const corps=$('#cmd-corps');
+  if(!n){corps.innerHTML=`<p class="vide">${t('cmd_vide')}</p><a class="btn btn-ligne" href="#pizzas">${t('p_cta')}</a>`;return}
+  corps.innerHTML=lignes.map(([k,v])=>`<div class="ligne-cmd"><b>${k}</b><span class="qte"><button data-q="${k}" data-d="-1" aria-label="−">−</button><span>${v.q}</span><button data-q="${k}" data-d="1" aria-label="+">+</button></span><span class="num">${prix(v.q*v.p)}</span></div>`).join('')+
+   `<div class="total"><span>${t('cmd_total')}</span><b class="num">${prix(tot)}</b></div>
+   <a class="btn btn-rouge" style="width:100%;margin-top:16px" href="tel:+33473968180">${ic('i-tel')}<span>${t('cmd_tel')}</span></a>
+   <p class="petite">${t('cmd_info')} ${t('pz_jours')}</p>`;
+  corps.querySelectorAll('[data-q]').forEach(b=>b.onclick=()=>{panier[b.dataset.q].q+=+b.dataset.d;if(panier[b.dataset.q].q<=0)delete panier[b.dataset.q];rendreCmd();rendreListes()});
+}
+$('#pastille-cmd').onclick=()=>ouvrir('#tiroir-cmd');
+
+
+function formulaire(id,sujet){
+  const f=$(id);f.addEventListener('submit',e=>{e.preventDefault();const m=f.querySelector('.msg');const req=$$('[required]',f);let ok=true;
+    req.forEach(i=>{const bad=!i.value.trim();i.parentElement.classList.toggle('erreur',bad);if(bad)ok=false});
+    if(!ok){m.className='msg ko';m.textContent=t('ct_err');return}
+    const champs=$$('input,select,textarea',f).map(i=>`${i.labels&&i.labels[0]?i.labels[0].textContent:''} : ${i.value}`).join('\n');
+    m.className='msg ok';m.textContent=t('ct_ok');
+    location.href=`mailto:info@hotel-abbaye-sauxillanges.com?subject=${encodeURIComponent(sujet())}&body=${encodeURIComponent(champs)}`});
+}
+formulaire('#form-ct',()=>$('#ct-sujet').selectedOptions[0].textContent);
+formulaire('#form-rc',()=>t('rc_t')+' — '+$('#rc-type').value);
+
+
+let conseilOuvert=false;const fil=$('#fil');
+function msg(txt,qui='ia'){const d=document.createElement('div');d.className='m '+qui;d.textContent=txt;fil.appendChild(d);fil.scrollTop=fil.scrollHeight}
+function puces(liste){const d=document.createElement('div');d.className='puces';liste.forEach(([k,f,act])=>{const b=document.createElement('button');b.type='button';b.textContent=t(k);if(act)b.className='action';b.onclick=()=>{if(!act)msg(t(k),'moi');f()};d.appendChild(b)});fil.appendChild(d);fil.scrollTop=fil.scrollHeight}
+const allerResa=(type)=>[ 'as_go_res',()=>{fermerConseil();if(type!=null)est.tiroir.type=type;rendreEstimateurs();ouvrir('#tiroir-resa')},true];
+const aller=(k,h)=>[k,()=>{fermerConseil();location.hash=h},true];
+const SUJETS={
+  dormir:()=>{msg(t('as_a_dormir'));puces([['as_p1',()=>{msg(t('as_a_p1'));est.tiroir.pers=1;puces([allerResa(0)])}],['as_p2',()=>{msg(t('as_a_p2'));est.tiroir.pers=2;puces([allerResa(1)])}],['as_p3',()=>{msg(t('as_a_p3'));est.tiroir.pers=3;puces([allerResa(3)])}]])},
+  diner:()=>{msg(t('as_a_diner'));puces([aller('as_go_pz','pizzas')])},
+  chien:()=>{msg(t('as_a_chien'));puces([allerResa()])},
+  tard:()=>{msg(t('as_a_tard'))},
+  reception:()=>{msg(t('as_a_reception'));puces([aller('as_go_rc','receptions')])},
+  sortir:()=>{msg(t('as_a_sortir'));puces([aller('as_go_al','alentours')])},
+  pro:()=>{msg(t('as_a_pro'));puces([allerResa(4)])}
+};
+function menuConseil(){puces([['as_q_dormir',SUJETS.dormir],['as_q_diner',SUJETS.diner],['as_q_pro',SUJETS.pro],['as_q_chien',SUJETS.chien],['as_q_tard',SUJETS.tard],['as_q_reception',SUJETS.reception],['as_q_sortir',SUJETS.sortir]])}
+function demarrerConseil(reset){if(reset)fil.innerHTML='';if(!fil.children.length){msg(t('as_hello'));menuConseil()}}
+function ouvrirConseil(){conseilOuvert=true;$('#bulle').classList.remove('visible');demarrerConseil();const c=$('#conseil');c.classList.add('ouvert');c.setAttribute('aria-hidden','false');setTimeout(()=>$('#question').focus(),300)}
+function fermerConseil(){conseilOuvert=false;const c=$('#conseil');c.classList.remove('ouvert');c.setAttribute('aria-hidden','true')}
+$('#conseil-btn').onclick=ouvrirConseil;$('#conseil-x').onclick=fermerConseil;
+const sansAccent=s=>s.toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g,'');
+const MOTS=[
+ [/dejeuner|breakfast|desayuno|fruhstuck|colazione|ontbijt|\bpdj\b/,()=>msg(t('as_a_pdj'))],
+ [/\b(chiens?|chats?|animal|animaux|pets?|dogs?|perros?|mascotas?|hunde?|haustiere?|cane|animali|honden?|huisdieren?)\b/,SUJETS.chien],
+ [/\b(tard|late|tarde|spat|tardi|laat)\b|21 ?h|apres 21/,SUJETS.tard],
+ [/mariage|banquet|seminaire|reception|wedding|\bevent|boda|banquete|hochzeit|feier|matrimonio|ricevimento|bruiloft|feest/,SUJETS.reception],
+ [/pizza|diner|dinner|restaurant|manger|\beat\b|cenar|comer|essen|mangiare|\beten\b|midi|lunch|\bmenu|horaire|opening/,SUJETS.diner],
+ [/autoroute|motorway|autopista|autobahn|autostrada|snelweg|lyon|paris|clermont|distance|acces|venir|kilomet|\bkm\b/,()=>msg(t('i_acces'))],
+ [/visite|que faire|autour|sancy|\blacs?\b|usson|issoire|randonn|things to do|nearby|\bhike|excursion|ausflug|wander|gita|dintorni|uitstap|wandel/,SUJETS.sortir],
+ [/etape|\bpro\b|travail|business|trabajo|geschaft|arbeit|lavoro|zaken/,SUJETS.pro],
+ [/wifi|wi-fi|internet|wlan/,()=>msg(t('as_a_wifi'))],
+ [/parking|garage|voiture|\bcar\b|coche|\bauto\b|recharge|borne|charging|aparcamiento|parkplatz|parcheggio|parkeren/,()=>msg(t('as_a_parking'))],
+ [/emporte|sous vide|takeaway|take away|para llevar|mitnehmen|asporto|afhalen/,()=>{msg(t('as_a_emp'));puces([aller('as_go_emp','emportes')])}],
+ [/pmr|handicap|fauteuil|wheelchair|accessib|silla de ruedas|rollstuhl|disabil|rolstoel|ascenseur|\blift\b|aufzug|ascensor|ascensore/,()=>msg(t('as_a_pmr'))],
+ [/chambre|dormir|\bnuit|\broom|prix|tarif|price|rate|habitacion|precio|zimmer|preis|camera|prezzo|kamer|prijs|reserv|\bbook|buchen|prenot|boeken|\bnight/,SUJETS.dormir]
+];
+$('#saisie').addEventListener('submit',e=>{e.preventDefault();const q=$('#question').value.trim();if(!q)return;msg(q,'moi');$('#question').value='';const s=sansAccent(q);const r=MOTS.find(([re])=>re.test(s));setTimeout(()=>{if(r)r[1]();else{msg(t('as_a_defaut'));menuConseil()}},250)});
+let bulleVue=false;try{bulleVue=sessionStorage.getItem('abbaye-bulle')==='1'}catch(_){}
+function cacherBulle(){$('#bulle').classList.remove('visible')}
+function montrerBulle(){if(bulleVue||conseilOuvert||!['','#accueil'].includes(location.hash))return;bulleVue=true;$('#bulle').classList.add('visible');setTimeout(cacherBulle,8000);setTimeout(()=>addEventListener('scroll',cacherBulle,{once:true,passive:true}),600);try{sessionStorage.setItem('abbaye-bulle','1')}catch(_){}}
+if(!bulleVue){if(matchMedia('(max-width:640px)').matches){addEventListener('scroll',function f(){if(scrollY>900){montrerBulle();removeEventListener('scroll',f)}},{passive:true})}else setTimeout(montrerBulle,4000);}
+$('#bulle-x').onclick=()=>$('#bulle').classList.remove('visible');
+$('#bulle').addEventListener('click',e=>{if(!e.target.closest('#bulle-x'))ouvrirConseil()});
+
+const mq=matchMedia('(max-width:640px)');function placerConseil(){const b=$('#conseil-btn');if(mq.matches)$('.slot-conseil').appendChild(b);else document.body.appendChild(b)}mq.addEventListener('change',placerConseil);placerConseil();
+traduire();router();
+</script>
+<script id="nv-track">(function(){try{if(location.protocol!=='https:')return;if(/[?&]moi\b/.test(location.search)){localStorage.setItem('nv_moi','1');addEventListener('load',function(){var d=document.createElement('div');d.textContent='✓ Appareil reconnu : vos visites ne sont plus comptées';d.style.cssText='position:fixed;left:50%;bottom:24px;transform:translateX(-50%);z-index:2147483647;background:#1E3A2B;color:#fff;font:600 14px/1.3 system-ui,sans-serif;padding:12px 18px;border-radius:999px;box-shadow:0 8px 24px rgba(0,0,0,.25)';document.body.appendChild(d);setTimeout(function(){d.remove()},6000)})}if(localStorage.getItem('nv_moi')||navigator.webdriver)return;}catch(x){}
+var m=location.pathname.split('/').filter(Boolean)[0]||'';if(!m)return;var s=Math.random().toString(36).slice(2,12),t0=Date.now(),u='/_t.php',last='home',seen={};
+function send(e,p){var b=JSON.stringify({m:m,e:e,s:s,p:p||'',t:Math.round((Date.now()-t0)/1000),l:(document.documentElement.lang||'').slice(0,2)});try{if(navigator.sendBeacon)navigator.sendBeacon(u,new Blob([b],{type:'text/plain'}));else fetch(u,{method:'POST',body:b,keepalive:true})}catch(x){}}
+function once(k){k=String(k).toLowerCase().replace(/[^a-z0-9_-]/g,'').slice(0,24);if(!k||seen[k])return;seen[k]=1;send('ev',k)}
+send('open');setInterval(function(){if(document.visibilityState==='visible')send('ping')},45000);
+document.addEventListener('visibilitychange',function(){if(document.visibilityState==='hidden')send('ping')});
+window.__nvView=function(p){p=String(p||'');if(p&&p!==last){last=p;send('view',p)}};
+addEventListener('scroll',function(){var h=document.documentElement,max=h.scrollHeight-innerHeight;if(max<200)return;var r=(scrollY/max)*100;[25,50,75,100].forEach(function(q){if(r>=q-2)once('defil'+q+'-'+last)})},{passive:true});
+document.addEventListener('click',function(e){var el=e.target.closest('a,button,[data-add],[data-go],[role=button],summary');if(!el)return;var t=((el.getAttribute('aria-label')||'')+' '+(el.textContent||'')+' '+(el.className||'')+' '+(el.id||'')).toLowerCase(),h=el.getAttribute&&el.getAttribute('href')||'';
+if(el.hasAttribute('data-add')||/ajouter|add to|añadir|hinzuf|aggiungi|加入/.test(t))once('panier-'+(el.getAttribute('data-add')||'ajout')),send('ev','panier');
+else if(/conseil|advisor|assistant|chat/.test(t))once('conseiller');
+else if(/instagram|facebook|youtube|pinterest|linkedin|tiktok/.test(h))once('reseau-'+(h.match(/instagram|facebook|youtube|pinterest|linkedin|tiktok/)||[''])[0]);
+else if(/réserv|reserv|visite|book/.test(t))once('reservation');
+else if(/coffret|gift|cadeau/.test(t))once('coffret')},true);
+document.addEventListener('play',function(e){if(e.target&&e.target.tagName==='VIDEO'&&!e.target.muted)once('video-son')},true);
+try{new MutationObserver(function(){var l=(document.documentElement.lang||'').slice(0,2);if(l&&l!=='fr')once('langue-'+l)}).observe(document.documentElement,{attributes:true,attributeFilter:['lang']})}catch(x){}
+addEventListener('load',function(){try{if(typeof window.go==='function'&&!window.go.__nv){var g=window.go;window.go=function(v){try{window.__nvView(v)}catch(x){}return g.apply(this,arguments)};window.go.__nv=1}}catch(x){}});})();</script>
+</body>
+</html>
