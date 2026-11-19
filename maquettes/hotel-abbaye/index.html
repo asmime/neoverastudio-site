@@ -93,7 +93,7 @@ p{max-width:65ch;text-wrap:pretty}
 .lambrequin h1 .mot span{display:inline-block}
 .lambrequin .sous{font-size:clamp(.9rem,1.6vw,1.1rem);letter-spacing:.06em;margin:.5em auto 0;opacity:.95}
 .place{position:relative;min-height:max(400px,calc(100svh - 430px));display:flex;align-items:flex-end;overflow:hidden;background:var(--nuit)}
-.place .secours{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 24%;transform-origin:52% 30%;animation:kb 22s cubic-bezier(.2,.6,.3,1) both}
+.place .secours{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 16%;transform-origin:52% 24%;animation:kb 22s cubic-bezier(.2,.6,.3,1) both}
 @keyframes kb{from{transform:scale(1.09)}to{transform:none}}
 .rideau{position:absolute;left:0;right:0;top:-2px;bottom:16px;z-index:4;display:none}
 .rideau::before{content:"";position:absolute;left:0;right:0;bottom:0;height:26px;background:linear-gradient(180deg,rgba(0,0,0,0),rgba(0,0,0,.35));}
@@ -120,7 +120,7 @@ p{max-width:65ch;text-wrap:pretty}
 .resa .btn{width:100%;margin-top:12px;min-height:54px;font-size:1.05rem}
 .resa .note{display:flex;align-items:center;justify-content:center;gap:6px;font-size:.82rem;color:var(--ardoise);margin-top:10px;text-align:center}
 @media (max-width:900px){.place .wrap{grid-template-columns:minmax(0,1fr);padding-top:170px}.place{min-height:auto}}
-@media (max-width:640px){.place{display:block;min-height:0}.atouts{display:none}.chapeau p{margin-bottom:4px}.place::before{display:none}.place .secours{position:relative;inset:auto;height:auto;aspect-ratio:5/4;object-position:42% 10%;animation:none}.place .wrap{padding-top:18px;padding-bottom:22px;gap:14px}.resa{display:none}.resa-mob{display:flex;flex-direction:column;gap:10px}.resa-mob p{color:#fff;font-family:var(--titre);font-size:1.35rem}.resa-mob .btn{width:100%;min-height:56px}.atouts li:nth-child(n+3){display:none}.place .wrap{padding-top:120px;gap:18px}.chapeau p{font-size:1rem}}
+@media (max-width:640px){.place{display:block;min-height:0}.atouts{display:none}.chapeau p{margin-bottom:4px}.place::before{display:none}.place .secours{position:relative;inset:auto;height:auto;aspect-ratio:5/4;object-position:42% 10%;animation:none}.place .wrap{padding-top:18px;padding-bottom:22px;gap:14px}.resa{display:none}.resa-mob{display:flex;flex-direction:column;gap:10px}.resa-mob p{color:#fff;font-family:var(--titre);font-size:1.35rem}.resa-mob .btn{width:100%;min-height:56px}.atouts li:nth-child(n+3){display:none}.chapeau p{font-size:1rem}}
 
 
 @media (min-width:641px) and (max-width:1100px){.place::before{background:linear-gradient(180deg,rgba(18,20,28,.2) 0%,rgba(18,20,28,.55) 45%,rgba(18,20,28,.9) 100%)}}
@@ -182,6 +182,13 @@ section.bloc{padding:clamp(64px,9vw,120px) 0}
 .ardoise-carte li b{font-family:var(--titre);font-size:1.5rem;white-space:nowrap}
 .ardoise-carte .ardoise-bas{color:var(--nuit-texte);font-size:.95rem;margin-top:12px}
 @media (max-width:860px){.volets{grid-template-columns:minmax(0,1fr)}.volet{border-right:0;border-bottom:1px solid var(--pierre)}}
+.yt{position:relative;aspect-ratio:16/9;background:var(--nuit);overflow:hidden}
+.yt-play{position:absolute;inset:0;border:0;padding:0;cursor:pointer;background:none}
+.yt-play img{width:100%;height:100%;object-fit:cover;filter:saturate(.95)}
+.yt-play span{position:absolute;left:20px;bottom:20px;display:inline-flex;align-items:center;gap:10px;background:var(--rouge);color:#fff;padding:.7em 1.2em;border-radius:999px;font-weight:600}
+.yt iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.avis{width:100%;height:360px;border:1px solid var(--pierre);background:#fff}
+.carte-g{width:100%;height:360px;border:0;margin-top:1.4rem}
 
 .annees{display:grid;grid-template-columns:auto 1fr;gap:6px 22px;margin-top:1.6rem;align-items:baseline}
 .annees dt{font-family:var(--titre);font-weight:700;font-size:2.2rem;color:var(--rouge);line-height:1}
@@ -258,7 +265,7 @@ section.bloc{padding:clamp(64px,9vw,120px) 0}
 .col-tarifs{position:sticky;top:96px}
 @media (max-width:860px){.col-tarifs{position:static;order:-1}}
 .horaires{list-style:none;margin-top:.6rem}
-.horaires li{display:flex;justify-content:space-between;gap:16px;padding:12px 0;border-bottom:1px solid var(--pierre)}
+.horaires li{display:grid;grid-template-columns:5.5rem minmax(0,1fr);gap:16px;padding:12px 0;border-bottom:1px solid var(--pierre);align-items:baseline}
 .horaires li b{font-family:var(--titre);font-size:1.2rem}
 
 
@@ -300,32 +307,32 @@ section.bloc{padding:clamp(64px,9vw,120px) 0}
 .tete-xv{font-size:.8rem;text-transform:uppercase;letter-spacing:.08em;color:var(--nuit-texte);padding:0 8px 8px}
 .ligne-xv{width:100%;text-align:left;background:transparent;border:0;border-bottom:1px solid var(--nuit-2);color:#fff;padding:14px 8px;cursor:pointer;transition:background .2s}
 .ligne-xv:hover{background:var(--nuit-2)}
-.ligne-xv .n{font-family:var(--titre);font-weight:700;font-size:2.1rem;line-height:1;color:var(--nuit);background:#fff;width:3.2rem;height:3.4rem;display:flex;align-items:center;justify-content:center;clip-path:polygon(22% 0,78% 0,100% 18%,88% 30%,88% 100%,12% 100%,12% 30%,0 18%);font-variant-numeric:tabular-nums}
+.ligne-xv .n{font-family:var(--titre);font-weight:700;font-size:1.8rem;letter-spacing:-.06em;line-height:1;color:var(--nuit);background:#fff;width:3.2rem;height:3.4rem;display:flex;align-items:center;justify-content:center;clip-path:polygon(22% 0,78% 0,100% 18%,88% 30%,88% 100%,12% 100%,12% 30%,0 18%);font-variant-numeric:tabular-nums}
 .ligne-xv.choisie .n{background:var(--rouge);color:#fff}
 .ligne-xv .nom b{display:block;font-family:var(--titre);font-size:1.3rem;text-transform:uppercase;letter-spacing:.03em}
 .ligne-xv .nom small{display:block;color:var(--nuit-texte);font-size:1rem}
 .ligne-xv .p{font-family:var(--titre);font-weight:700;font-size:1.3rem;text-align:right;white-space:nowrap;font-variant-numeric:tabular-nums}
 .ligne-xv .cpt{justify-self:end;width:30px;height:30px;border-radius:50%;border:0;color:var(--nuit-texte);display:inline-flex;align-items:center;justify-content:center;font-weight:700;font-size:.9rem}
 .ligne-xv.choisie .cpt{background:var(--rouge);border-color:var(--rouge)}
-@media (max-width:560px){.tete-xv{display:none}.ligne-xv{grid-template-columns:3.2rem minmax(0,1fr) auto;gap:10px}.ligne-xv .n{width:2.6rem;height:2.8rem;font-size:1.6rem}.ligne-xv .cpt{display:none}.ligne-xv.choisie .p::after{content:" ✓"}}
+@media (max-width:560px){.tete-xv{display:none}.ligne-xv{gap:10px}.ligne-xv .n{width:2.6rem;height:2.8rem;font-size:1.6rem}.ligne-xv{grid-template-columns:3.2rem minmax(0,1fr) auto 28px}.ligne-xv .cpt{width:28px;height:28px}}
 .terrain{position:relative;margin-top:clamp(28px,4vw,44px);height:clamp(520px,62vw,700px);max-width:900px;border:2px solid rgba(255,255,255,.75);background:linear-gradient(180deg,rgba(255,255,255,.04),rgba(255,255,255,0)),repeating-linear-gradient(180deg,var(--nuit-2) 0 10%,#222c55 10% 20%)}
 .terrain::before{content:"";position:absolute;left:0;right:0;top:17%;border-top:2px dashed rgba(255,255,255,.45)}
 .terrain::after{content:"";position:absolute;left:0;right:0;bottom:6%;border-top:2px solid rgba(255,255,255,.75)}
 .poste{position:absolute;transform:translate(-50%,-50%);background:none;border:0;color:#fff;cursor:pointer;display:flex;flex-direction:column;align-items:center;gap:4px;z-index:1}
-.poste .maillot{font-family:var(--titre);font-weight:700;font-size:1.35rem;color:var(--nuit);background:#fff;width:2.6rem;height:2.8rem;display:flex;align-items:center;justify-content:center;clip-path:polygon(22% 0,78% 0,100% 18%,88% 30%,88% 100%,12% 100%,12% 30%,0 18%);transition:transform .25s var(--ease),background .2s}
+.poste .maillot{font-family:var(--titre);font-weight:700;font-size:1.3rem;letter-spacing:-.06em;color:var(--nuit);background:#fff;width:2.6rem;height:2.8rem;display:flex;align-items:center;justify-content:center;clip-path:polygon(22% 0,78% 0,100% 18%,88% 30%,88% 100%,12% 100%,12% 30%,0 18%);transition:transform .25s var(--ease),background .2s}
 .poste:hover .maillot{transform:translateY(-3px)}
 .poste.choisie .maillot{background:var(--rouge);color:#fff}
 .poste .etiq{font-family:var(--titre);font-weight:700;font-size:.82rem;text-transform:uppercase;letter-spacing:.03em;white-space:nowrap;background:rgba(18,20,28,.55);padding:1px 6px;border-radius:4px}
-@media (max-width:560px){.terrain{height:560px}.poste .etiq{font-size:.62rem;padding:0 3px}.poste .maillot{width:2.1rem;height:2.3rem;font-size:1.05rem}}
+@media (max-width:640px){.terrain{height:480px}.poste .etiq{display:none}.poste .maillot{width:2.1rem;height:2.3rem;font-size:1.05rem}}
 
 .escapades{display:grid;grid-template-columns:minmax(0,1fr);margin:1rem 0 clamp(40px,6vw,64px);border-top:1.5px solid var(--lave)}
 .groupe-al h2{font-size:clamp(1.6rem,3vw,2.3rem)}
-.escapade{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.3fr) auto;gap:6px 28px;align-items:baseline;padding:16px 0;border-bottom:1px solid var(--pierre)}
+.escapade{display:grid;grid-template-columns:minmax(0,3fr) minmax(0,5fr) minmax(0,2fr);gap:6px 28px;align-items:baseline;padding:16px 0;border-bottom:1px solid var(--pierre)}
 .escapade h3,.escapade p{margin:0}
 @media (max-width:700px){.escapade{grid-template-columns:minmax(0,1fr)}}
 .escapade h3{font-size:1.3rem}
 .escapade p{font-size:.98rem;color:var(--ardoise)}
-.escapade a{font-size:.9rem;font-weight:700;color:var(--rouge-fonce);display:inline-flex;align-items:center;gap:4px;margin-top:6px}
+.escapade a{justify-self:end;font-size:.9rem;font-weight:700;color:var(--rouge-fonce);display:inline-flex;align-items:center;gap:4px;margin-top:6px}
 
 
 
@@ -348,6 +355,7 @@ section.bloc{padding:clamp(64px,9vw,120px) 0}
 .pied h3{color:#fff;font-size:1.15rem;margin-bottom:.6rem}
 .pied a{color:#fff}
 .pied ul{list-style:none}.pied li{padding:4px 0}
+.pied .wrap>div:nth-child(3) ul{columns:2;column-gap:24px}
 .pied .bas{grid-column:1/-1;border-top:1px solid #33363E;padding-top:18px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;font-size:.88rem}
 .reseau{display:inline-flex;align-items:center;gap:8px;margin-top:10px;font-weight:700}
 @media (max-width:760px){.pied .wrap{grid-template-columns:1fr}}
@@ -366,7 +374,7 @@ section.bloc{padding:clamp(64px,9vw,120px) 0}
 .tiroir{position:fixed;top:0;right:0;bottom:0;width:min(460px,100%);background:var(--volet);z-index:80;transform:translateX(105%);transition:transform .45s var(--ease);display:flex;flex-direction:column;box-shadow:-20px 0 60px -30px rgba(0,0,0,.5)}
 .tiroir.ouvert{transform:none}
 .tiroir .tete{display:flex;justify-content:space-between;align-items:center;padding:18px 22px;border-bottom:1px solid var(--pierre);background:#fff}
-.tiroir .tete h2{font-size:1.5rem;margin:0}
+.tiroir .tete h2{font-size:1.5rem;margin:0;padding-right:14px}
 .tiroir .corps{padding:22px;overflow:auto;flex:1}
 .fermer{width:44px;height:44px;border-radius:50%;border:1.5px solid var(--lave);background:#fff;display:inline-flex;align-items:center;justify-content:center;cursor:pointer}
 .ligne-cmd{display:grid;grid-template-columns:1fr auto auto;gap:10px;align-items:center;padding:12px 0;border-bottom:1px solid var(--pierre)}
@@ -382,6 +390,7 @@ section.bloc{padding:clamp(64px,9vw,120px) 0}
 
 .conseil-btn{position:fixed;right:18px;bottom:18px;z-index:55;display:flex;align-items:center;gap:12px;background:var(--nuit);color:#fff;border:0;border-radius:12px 30px 30px 12px;padding:8px 22px 8px 8px;border:2px solid rgba(255,255,255,.85);cursor:pointer;box-shadow:0 14px 34px -12px rgba(0,0,0,.55);text-align:left;transition:transform .25s var(--ease)}
 .conseil-btn:hover{transform:translateY(-2px)}
+@media (min-width:641px){.conseil-btn.reduit{padding:6px}.conseil-btn.reduit>span:last-child{display:none}.conseil-btn.reduit:hover{padding:8px 22px 8px 8px}.conseil-btn.reduit:hover>span:last-child{display:block}}
 .conseil-btn .rond{width:46px;height:46px;border-radius:8px 50% 50% 8px;background:var(--rouge);display:inline-flex;align-items:center;justify-content:center}
 .conseil-btn b{display:block;font-family:var(--titre);font-size:1.05rem;line-height:1.1}
 .conseil-btn small{display:block;font-size:.8rem;color:#C9CBD2}
@@ -446,7 +455,8 @@ section.bloc{padding:clamp(64px,9vw,120px) 0}
 <symbol id="i-cintre" viewBox="0 0 24 24"><path d="M12 7a2 2 0 1 1 2 2c-1 0-2 .7-2 2L3 17h18l-9-6"/></symbol>
 <symbol id="i-table" viewBox="0 0 24 24"><path d="M3 9h18M6 9v11M18 9v11M6 14h12"/></symbol>
 <symbol id="i-reveil" viewBox="0 0 24 24"><circle cx="12" cy="13" r="7"/><path d="M12 10v3l2 1.5M4 5l3-2M20 5l-3-2"/></symbol>
-<symbol id="i-oreiller" viewBox="0 0 24 24"><path d="M4 8c3-2 13-2 16 0 1 3 1 5 0 8-3 2-13 2-16 0-1-3-1-5 0-8Z"/></symbol>
+<symbol id="i-oreiller" viewBox="0 0 24 24"><path d="M4 8c3-2 13-2 16 0 1 3 1 5 0 8-3 2-13 2-16 0-1-3-1-5 0-8Z"/><path d="M7 11c2 1 8 1 10 0M7 14c2 1 8 1 10 0"/></symbol>
+<symbol id="i-fax" viewBox="0 0 24 24"><path d="M7 9V3h10v6M5 9h14a2 2 0 0 1 2 2v7H3v-7a2 2 0 0 1 2-2ZM7 14h10v7H7z"/></symbol>
 </svg>
 
 <header class="top">
@@ -506,7 +516,7 @@ section.bloc{padding:clamp(64px,9vw,120px) 0}
             <li><svg class="ic"><use href="#i-patte"/></svg><span data-t="f4"></span></li>
           </ul>
         </div>
-        <div class="resa-mob"><p data-t="h_mob"></p><button class="btn btn-rouge" data-ouvre="resa"><span data-t="b_go"></span><svg class="ic"><use href="#i-fleche"/></svg></button></div>
+        <div class="resa-mob"><p data-t="h_mob"></p><button class="btn btn-rouge" data-ouvre="resa"><span data-t="reserver"></span><svg class="ic"><use href="#i-fleche"/></svg></button></div>
         <form class="resa" id="resa-rapide" novalidate>
           <div class="champs">
             <div class="champ"><label for="r-arr" data-t="b_arrivee"></label><input type="date" id="r-arr" required></div>
@@ -540,14 +550,14 @@ section.bloc{padding:clamp(64px,9vw,120px) 0}
       <div class="volet-txt apparait">
         <h2 data-t="c_t"></h2>
         <p data-t="c_p"></p>
-        <div class="prix-dès"><span data-t="c_from"></span><b class="num">58 €</b><span data-t="c_nuit"></span></div>
+        <div class="prix-dès"><span data-t="c_from"></span><b class="num px" data-v="58"></b><span data-t="c_nuit"></span></div>
         <a class="btn btn-rouge" href="#chambres"><span data-t="c_cta"></span><svg class="ic"><use href="#i-fleche"/></svg></a>
       </div>
     </article>
     <article class="volet">
       <div class="volet-haut ardoise-carte" aria-label="Formules du midi">
         <p class="ardoise-titre" data-t="fo_jour"></p>
-        <ul><li><span data-t="fo_j1"></span><b>20 €</b></li><li><span data-t="fo_j2"></span><b>15 €</b></li><li><span data-t="fo_e1"></span><b>11 €</b></li></ul>
+        <ul><li><span data-t="fo_j1"></span><b class="px" data-v="20"></b></li><li><span data-t="fo_j2"></span><b class="px" data-v="15"></b></li><li><span data-t="fo_e1"></span><b class="px" data-v="11"></b></li></ul>
         <p class="ardoise-bas" data-t="fo_sub"></p>
       </div>
       <div class="volet-txt apparait">
@@ -557,7 +567,7 @@ section.bloc{padding:clamp(64px,9vw,120px) 0}
           <li><b data-t="re_midi"></b><span data-t="re_midi_h"></span></li>
           <li><b data-t="re_soir"></b><span data-t="re_soir_h"></span></li>
         </ul>
-        <a class="lien" href="#restaurant" style="margin-top:1.2rem"><span data-t="r_cta"></span><svg class="ic"><use href="#i-fleche"/></svg></a>
+        <p style="display:flex;gap:16px;flex-wrap:wrap;align-items:center;margin-top:1.2rem"><a class="btn btn-rouge" href="tel:+33473968180"><svg class="ic"><use href="#i-tel"/></svg><span data-t="re_table"></span> · 04 73 96 81 80</a><a class="lien" href="#restaurant"><span data-t="r_cta"></span><svg class="ic"><use href="#i-fleche"/></svg></a></p>
       </div>
     </article>
   </section>
@@ -603,6 +613,13 @@ section.bloc{padding:clamp(64px,9vw,120px) 0}
     <div class="wrap famille-grille" style="margin-top:clamp(28px,4vw,48px);align-items:start">
       <h2 data-t="a_t"></h2>
       <div class="texte"><p data-t="a_p"></p><a class="lien" href="#alentours"><span data-t="a_cta"></span><svg class="ic"><use href="#i-fleche"/></svg></a></div>
+    </div>
+  </section>
+
+  <section class="bloc avis-bloc">
+    <div class="wrap famille-grille" style="align-items:start">
+      <div class="texte"><h2 data-t="av_t"></h2><p data-t="av_p"></p></div>
+      <iframe class="avis" src="https://guestapp.me/review/widget/kApGVH5VNbZolMqq/1085?borderColor=dcd8d0&amp;fontColor=8e1820&amp;bgColor=white&amp;pageSize=&amp;starredOnly=false" title="Avis clients" loading="lazy"></iframe>
     </div>
   </section>
 
@@ -671,9 +688,9 @@ section.bloc{padding:clamp(64px,9vw,120px) 0}
         <ul class="horaires">
           <li><b data-t="re_midi"></b><span data-t="re_midi_h"></span></li>
           <li><b data-t="re_soir"></b><span data-t="re_soir_h"></span></li>
-          <li><b data-t="re_ferme"></b><span></span></li>
+          <li><b style="grid-column:1/-1;font-family:var(--texte);font-size:1rem;font-weight:600" data-t="re_ferme"></b></li>
         </ul>
-        <p style="margin-top:1rem"><a class="lien" href="#pizzas"><span data-t="p_cta"></span><svg class="ic"><use href="#i-fleche"/></svg></a></p>
+        <p style="margin-top:1.2rem;display:flex;gap:16px;flex-wrap:wrap;align-items:center"><a class="btn btn-rouge" href="tel:+33473968180"><svg class="ic"><use href="#i-tel"/></svg><span data-t="re_table"></span> · 04 73 96 81 80</a><a class="lien" href="#pizzas"><span data-t="p_cta"></span><svg class="ic"><use href="#i-fleche"/></svg></a></p>
       </div>
     </div>
     <div class="wrap" style="margin-top:clamp(48px,7vw,80px)">
@@ -681,15 +698,15 @@ section.bloc{padding:clamp(64px,9vw,120px) 0}
       <div class="famille-grille" style="align-items:stretch;margin-top:0">
       <div class="ardoise">
         <h3 data-t="fo_jour"></h3><ul>
-          <li><span data-t="fo_j1"></span><b>20 €</b></li>
-          <li><span data-t="fo_j2"></span><b>15 €</b></li></ul>
+          <li><span data-t="fo_j1"></span><b class="px" data-v="20"></b></li>
+          <li><span data-t="fo_j2"></span><b class="px" data-v="15"></b></li></ul>
         <h3 data-t="fo_exp" style="margin-top:1.6rem"></h3><ul>
-          <li><span data-t="fo_e1"></span><b>11 €</b></li>
-          <li><span data-t="fo_e2"></span><b>14 €</b></li>
-          <li><span data-t="fo_dess"></span><b>4 €</b></li>
-          <li><span data-t="fo_cafe"></span><b>1 €</b></li></ul>
+          <li><span data-t="fo_e1"></span><b class="px" data-v="11"></b></li>
+          <li><span data-t="fo_e2"></span><b class="px" data-v="14"></b></li>
+          <li><span data-t="fo_dess"></span><b class="px" data-v="4"></b></li>
+          <li><span data-t="fo_cafe"></span><b class="px" data-v="1"></b></li></ul>
       </div>
-      <div class="media" style="margin-top:1.4rem"><img src="img/cafe.jpg" alt="Café crème et irish coffee servis à la maison" loading="lazy" style="aspect-ratio:auto;height:100%;object-position:30% 50%"></div>
+      <div style="margin-top:1.4rem"><div class="yt" id="yt"><button class="yt-play" type="button"><img src="img/cafe.jpg" alt="" loading="lazy" style="object-position:50% 40%"><span><svg class="ic"><use href="#i-fleche"/></svg><b data-t="vi_play"></b></span></button></div><h3 data-t="vi_t" style="margin-top:14px"></h3><p data-t="vi_p" style="color:var(--ardoise)"></p></div>
       </div>
     </div>
     <div class="wrap duo" style="margin-top:clamp(48px,7vw,80px)">
@@ -767,12 +784,13 @@ section.bloc{padding:clamp(64px,9vw,120px) 0}
           <li><svg class="ic"><use href="#i-lieu"/></svg><span><b data-t="ct_adr"></b><br>Hôtel de l'Abbaye<br>15, place du 8-Mai<br>63490 Sauxillanges</span></li>
           <li><svg class="ic"><use href="#i-tel"/></svg><span><b data-t="ct_tel"></b><br><a href="tel:+33473968180">04 73 96 81 80</a></span></li>
           <li><svg class="ic"><use href="#i-mail"/></svg><span><b>E-mail</b><br><a href="mailto:info@hotel-abbaye-sauxillanges.com">info@hotel-abbaye-sauxillanges.com</a></span></li>
-          <li><svg class="ic"><use href="#i-tel"/></svg><span><b data-t="ct_fax"></b><br>04 73 96 85 36</span></li>
+          <li><svg class="ic"><use href="#i-fax"/></svg><span><b data-t="ct_fax"></b><br>04 73 96 85 36</span></li>
           <li><svg class="ic"><use href="#i-horloge"/></svg><span data-t="i_reception"></span></li>
         </ul>
         <p style="margin-top:1.2rem;display:flex;gap:18px;flex-wrap:wrap">
           <a class="lien" href="https://www.openstreetmap.org/?mlat=45.5514&mlon=3.3730#map=17/45.5514/3.3730" target="_blank" rel="noopener"><svg class="ic"><use href="#i-lieu"/></svg><span data-t="ct_plan"></span></a>
           <a class="lien" href="https://www.facebook.com/hotelabbayesauxillanges/" target="_blank" rel="noopener"><svg class="ic"><use href="#i-fb"/></svg>Facebook</a></p>
+        <iframe class="carte-g" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyDhGZL3TajNq1avH32JA1m5g66mH3RZi1o&amp;q=place_id:ChIJs-p7BSr29kcR-6lYBjdTWio" loading="lazy" title="Plan d'accès" referrerpolicy="no-referrer-when-downgrade"></iframe>
       </div>
       <div class="carte-est">
         <form class="form" id="form-ct" novalidate>
@@ -793,7 +811,7 @@ section.bloc{padding:clamp(64px,9vw,120px) 0}
   <div class="wrap page-tete"><h1 data-t="ml_t"></h1></div>
   <section class="bloc legal" style="padding-top:0"><div class="wrap">
     <h2 data-t="ml_ed"></h2>
-    <p>Hôtel de l'Abbaye — EURL de l'Abbaye<br>15, place du 8-Mai, 63490 Sauxillanges<br>Tél. 04 73 96 81 80 · info@hotel-abbaye-sauxillanges.com<br>SIRET 488 744 475 000 10 · APE 5510Z · TVA FR61 488 744 475</p>
+    <p>Hôtel de l'Abbaye<br>15, place du 8-Mai, 63490 Sauxillanges<br>Tél. 04 73 96 81 80 · info@hotel-abbaye-sauxillanges.com<br>SIRET 488 744 475 000 10 · APE 5510Z · TVA FR61 488 744 475</p>
     <h2 data-t="ml_cnil"></h2><p data-t="ml_cnil_p"></p>
     <h2 data-t="ml_heb"></h2><p>Applications Services, 5, rue du Sergent-Bobillot, 92400 Courbevoie · www.applications-services.com · info@applications-services.com</p>
     <h2 data-t="ml_droits"></h2><p data-t="ml_droits_p"></p><p data-t="ml_photos"></p>
@@ -814,10 +832,10 @@ section.bloc{padding:clamp(64px,9vw,120px) 0}
     </div>
     <div>
       <ul>
-        <li><a href="#chambres" data-t="nav_chambres"></a></li><li><a href="#restaurant" data-t="nav_restaurant"></a></li><li><a href="#pizzas" data-t="nav_pizzas"></a></li><li><a href="#emportes" data-t="nav_emportes"></a></li><li><a href="#receptions" data-t="nav_receptions"></a></li><li><a href="#mentions" data-t="ft_rgpd"></a></li>
+        <li><a href="#maison" data-t="nav_maison"></a></li><li><a href="#chambres" data-t="nav_chambres"></a></li><li><a href="#restaurant" data-t="nav_restaurant"></a></li><li><a href="#pizzas" data-t="nav_pizzas"></a></li><li><a href="#emportes" data-t="nav_emportes"></a></li><li><a href="#alentours" data-t="nav_alentours"></a></li><li><a href="#receptions" data-t="nav_receptions"></a></li><li><a href="#contact" data-t="nav_contact"></a></li><li><a href="#mentions" data-t="ft_rgpd"></a></li>
       </ul>
     </div>
-    <div class="bas"><span>© Hôtel-Restaurant de l'Abbaye · Sauxillanges</span><span>Tél. 04 73 96 81 80</span></div>
+    <div class="bas"><span>© Hôtel-Restaurant de l'Abbaye · Sauxillanges</span><span><span data-t="ft_tel"></span> 04 73 96 81 80</span></div>
   </div>
 </footer>
 
@@ -1186,8 +1204,18 @@ nl:{c_p:"Weg van de grote wegen: zestien rustige, gerenoveerde kamers, waaronder
 };
 for(const l in PATCH)Object.assign(T[l],PATCH[l]);
 Object.assign(T.fr,{nav_chambres:"Chambres"});Object.assign(T.en,{nav_chambres:"Rooms"});Object.assign(T.es,{nav_chambres:"Habitaciones"});Object.assign(T.de,{nav_chambres:"Zimmer"});Object.assign(T.it,{nav_chambres:"Camere"});Object.assign(T.nl,{nav_chambres:"Kamers"});
+const PATCH2={
+fr:{as_a_table:"Pour réserver une table, appelez-nous au 04 73 96 81 80 : le midi du lundi au vendredi, le soir du lundi au samedi.",as_a_depart:"La chambre est prête dès 17 h et se libère à 10 h le lendemain matin.",as_a_bebe:"Oui, des lits bébé sont disponibles sur demande, et une chambre familiale existe.",as_a_dim:"Le dimanche, la réception est ouverte de 8 h à 12 h et le restaurant est fermé. En juillet et août, les pizzas sont servies le dimanche soir.",as_a_regime:"Pour un régime particulier, le plus simple est d'appeler le 04 73 96 81 80 : on vous dira ce qui est possible.",re_ferme:"Fermé le dimanche (pizzas le dimanche soir en juillet et août)",re_table:"Réserver une table",cmd_info:"Commande à confirmer par téléphone, selon les jours d'ouverture.",cmd_tel:"Appeler le 04 73 96 81 80",xv_aide:"Choisissez une pizza pour l'ajouter à votre commande à emporter.",est_cap:"Au-delà de 3 personnes, il vous faut plusieurs chambres : appelez-nous au 04 73 96 81 80.",ch_eq4:"Téléphone",al_parentignat_p:"",al_livradois_p:"",al_issoire_p:"À 10 km.",av_t:"Ils ont séjourné ici",av_p:"Les avis de nos clients, tels qu'ils les ont laissés.",vi_t:"La maison en vidéo",vi_play:"Lancer la vidéo",ct_carte:"Plan d'accès",ft_tel:"Tél."},
+en:{as_a_table:"To book a table, call us on +33 4 73 96 81 80: lunch Monday to Friday, dinner Monday to Saturday.",as_a_depart:"Your room is ready from 5 pm and should be vacated by 10 am the next morning.",as_a_bebe:"Yes, baby cots are available on request, and there is a family room.",as_a_dim:"On Sundays, reception is open 8 am–12 pm and the restaurant is closed. In July and August, pizzas are served on Sunday evenings.",as_a_regime:"For a special diet, the easiest way is to call +33 4 73 96 81 80: we'll tell you what's possible.",re_ferme:"Closed on Sundays (pizzas on Sunday evenings in July and August)",re_table:"Book a table",cmd_info:"Order to be confirmed by phone, depending on opening days.",cmd_tel:"Call +33 4 73 96 81 80",xv_aide:"Choose a pizza to add it to your takeaway order.",est_cap:"For more than 3 people you will need several rooms: call us on +33 4 73 96 81 80.",ch_eq4:"Telephone",al_parentignat_p:"",al_livradois_p:"",al_issoire_p:"10 km away.",av_t:"They stayed here",av_p:"Reviews from our guests, exactly as they left them.",vi_t:"The house on video",vi_play:"Play the video",ct_carte:"Map",ft_tel:"Tel."},
+es:{as_a_table:"Para reservar mesa, llámenos al +33 4 73 96 81 80: a mediodía de lunes a viernes, por la noche de lunes a sábado.",as_a_depart:"La habitación está lista desde las 17 h y se deja a las 10 h del día siguiente.",as_a_bebe:"Sí, hay cunas a petición y una habitación familiar.",as_a_dim:"El domingo, la recepción abre de 8 h a 12 h y el restaurante está cerrado. En julio y agosto se sirven pizzas el domingo por la noche.",as_a_regime:"Para una dieta especial, lo más sencillo es llamar al +33 4 73 96 81 80: le diremos qué es posible.",re_ferme:"Cerrado el domingo (pizzas el domingo por la noche en julio y agosto)",re_table:"Reservar mesa",cmd_info:"Pedido a confirmar por teléfono según los días de apertura.",cmd_tel:"Llamar al +33 4 73 96 81 80",xv_aide:"Elija una pizza para añadirla a su pedido para llevar.",est_cap:"Para más de 3 personas necesitará varias habitaciones: llámenos al +33 4 73 96 81 80.",ch_eq4:"Teléfono",al_parentignat_p:"",al_livradois_p:"",al_issoire_p:"A 10 km.",av_t:"Se alojaron aquí",av_p:"Las opiniones de nuestros clientes, tal como las dejaron.",vi_t:"La casa en vídeo",vi_play:"Ver el vídeo",ct_carte:"Mapa",ft_tel:"Tel."},
+de:{as_a_table:"Für eine Tischreservierung rufen Sie uns an: +33 4 73 96 81 80, mittags Montag bis Freitag, abends Montag bis Samstag.",as_a_depart:"Das Zimmer ist ab 17 Uhr bereit und wird am nächsten Morgen bis 10 Uhr frei gemacht.",as_a_bebe:"Ja, Babybetten gibt es auf Anfrage, und es gibt ein Familienzimmer.",as_a_dim:"Sonntags ist die Rezeption von 8 bis 12 Uhr geöffnet und das Restaurant geschlossen. Im Juli und August gibt es sonntagabends Pizza.",as_a_regime:"Bei einer besonderen Ernährung rufen Sie am besten an: +33 4 73 96 81 80. Wir sagen Ihnen, was möglich ist.",re_ferme:"Sonntags geschlossen (im Juli und August sonntagabends Pizza)",re_table:"Tisch reservieren",cmd_info:"Bestellung je nach Öffnungstagen telefonisch zu bestätigen.",cmd_tel:"+33 4 73 96 81 80 anrufen",xv_aide:"Wählen Sie eine Pizza, um sie Ihrer Bestellung zum Mitnehmen hinzuzufügen.",est_cap:"Ab 4 Personen brauchen Sie mehrere Zimmer: Rufen Sie uns an, +33 4 73 96 81 80.",ch_eq4:"Telefon",al_parentignat_p:"",al_livradois_p:"",al_issoire_p:"10 km entfernt.",av_t:"Sie waren unsere Gäste",av_p:"Die Bewertungen unserer Gäste, so wie sie sie hinterlassen haben.",vi_t:"Das Haus im Video",vi_play:"Video abspielen",ct_carte:"Anfahrt",ft_tel:"Tel.",x_p:"Unsere Gerichte, hier gekocht, vakuumverpackt und pasteurisiert. Einen Monat im Kühlschrank, zehn Minuten in siedendem Wasser, und schon ist es angerichtet."},
+it:{as_a_table:"Per prenotare un tavolo chiamateci al +33 4 73 96 81 80: a pranzo dal lunedì al venerdì, a cena dal lunedì al sabato.",as_a_depart:"La camera è pronta dalle 17 e va lasciata entro le 10 del mattino dopo.",as_a_bebe:"Sì, ci sono lettini per neonati su richiesta e una camera familiare.",as_a_dim:"La domenica la reception è aperta dalle 8 alle 12 e il ristorante è chiuso. A luglio e agosto le pizze si servono la domenica sera.",as_a_regime:"Per una dieta particolare, la cosa più semplice è chiamare il +33 4 73 96 81 80: vi diremo cosa è possibile.",re_ferme:"Chiuso la domenica (pizze la domenica sera a luglio e agosto)",re_table:"Prenotare un tavolo",cmd_info:"Ordine da confermare per telefono secondo i giorni di apertura.",cmd_tel:"Chiamare il +33 4 73 96 81 80",xv_aide:"Scegliete una pizza per aggiungerla al vostro ordine da asporto.",est_cap:"Oltre 3 persone servono più camere: chiamateci al +33 4 73 96 81 80.",ch_eq4:"Telefono",al_parentignat_p:"",al_livradois_p:"",al_issoire_p:"A 10 km.",av_t:"Hanno soggiornato qui",av_p:"Le recensioni dei nostri ospiti, così come le hanno lasciate.",vi_t:"La casa in video",vi_play:"Guardare il video",ct_carte:"Mappa",ft_tel:"Tel."},
+nl:{as_a_table:"Een tafel reserveren? Bel ons op +33 4 73 96 81 80: lunch maandag t/m vrijdag, diner maandag t/m zaterdag.",as_a_depart:"De kamer is klaar vanaf 17 uur en moet de volgende ochtend om 10 uur vrij zijn.",as_a_bebe:"Ja, babybedjes zijn op aanvraag beschikbaar, en er is een familiekamer.",as_a_dim:"Op zondag is de receptie open van 8 tot 12 uur en is het restaurant gesloten. In juli en augustus zijn er zondagavond pizza's.",as_a_regime:"Voor een speciaal dieet belt u het best +33 4 73 96 81 80: we zeggen u wat mogelijk is.",re_ferme:"Zondag gesloten (pizza's op zondagavond in juli en augustus)",re_table:"Tafel reserveren",cmd_info:"Bestelling telefonisch te bevestigen, afhankelijk van de openingsdagen.",cmd_tel:"Bel +33 4 73 96 81 80",xv_aide:"Kies een pizza om hem aan uw afhaalbestelling toe te voegen.",est_cap:"Met meer dan 3 personen heeft u meerdere kamers nodig: bel ons op +33 4 73 96 81 80.",ch_eq4:"Telefoon",al_parentignat_p:"",al_livradois_p:"",al_issoire_p:"Op 10 km.",av_t:"Zij logeerden hier",av_p:"De beoordelingen van onze gasten, zoals ze die achterlieten.",vi_t:"Het huis in beeld",vi_play:"Video afspelen",ct_carte:"Kaart",ft_tel:"Tel.",c_t:"Kamers waar u echt slaapt"}
+};
+for(const l in PATCH2)Object.assign(T[l],PATCH2[l]);
+Object.assign(T.fr,{vi_t:"Le cappuccino maison",vi_p:"Filmé chez nous, à la table de l'Abbaye."});Object.assign(T.en,{vi_t:"Our homemade cappuccino",vi_p:"Filmed here, at the Abbaye's table."});Object.assign(T.es,{vi_t:"Nuestro capuchino casero",vi_p:"Grabado en casa, en la mesa de l'Abbaye."});Object.assign(T.de,{vi_t:"Unser hausgemachter Cappuccino",vi_p:"Bei uns gefilmt, am Tisch der Abbaye."});Object.assign(T.it,{vi_t:"Il nostro cappuccino fatto in casa",vi_p:"Girato da noi, alla tavola dell'Abbaye."});Object.assign(T.nl,{vi_t:"Onze huisgemaakte cappuccino",vi_p:"Bij ons gefilmd, aan de tafel van l'Abbaye."});
 
-const RESERVIT='https://secure.reservit.com/front/front.do?specialMode=default&custid=2&hotelid=3244&m=booking';
+const RESERVIT='https://secure.reservit.com/engine/booking/2/3244/avail';
 const PIZZAS=[
  ['tomate',[['Ouverture',11,['tomate','fromage']],['Mayol',12,['tomate','champignons','fromage']],['Mêlée',12,['tomate','fromage','jambon']],['Aimé Giral',12.5,['tomate','fromage','chevre','creme']],['Sautée',12.5,['tomate','champignons','fromage','jambon']],['Calzone',13,['tomate','champignons','fromage','jambon','oeuf']],['Croisée',13,['tomate','pdt','champignons','fromage','lardons']],['Du Manoir',13,['tomate','champignons','fromage','lardons','oeuf']],['Verdun',13,['tomate','chorizo','champignons','fromage','poivron']],['Bramentomb',14,['tomate','stnectaire','fromage','chevreEug','roquefort']],['Méditerranée',14.5,['tomate','fromage','oignons','boeuf','creme']]]],
  ['moutarde',[['Telstra',12,['moutarde','pdt','fromage','lardons']],['Pile',12.5,['moutarde','pdt','fromage','lardons','stnectaire']]]],
@@ -1196,7 +1224,7 @@ const PIZZAS=[
  ['miel',[['Brennus',13,['tomate','lardons','chevre','creme','miel']],['Currie Cup',13,['fromage','lardons','oignons','creme','miel']]]]
 ];
 const ORDRE=(()=>{const f=PIZZAS.flatMap(g=>g[1]);const a=f.findIndex(x=>x[0]==='Bramentomb'),b=f.findIndex(x=>x[0]==='Méditerranée');[f[a],f[b]]=[f[b],f[a]];return f})();
-const CHAMBRES=[['tar_1',58,64,1],['tar_2',68,76,2],['tar_tw',72,80,2],['tar_3',80,90,3],['tar_etape',77,77,1,true]];
+const CHAMBRES=[['tar_1',58,64,1],['tar_2',68,76,2],['tar_tw',72,80,2],['tar_3',80,90,3],['tar_etape',77,77,6,true]];
 const ESCAPADES=[['alg_pres',[['musee','https://www.musee-sauxillanges.com/'],['sentiers','https://www.sauxillanges.fr/spip.php?article57'],['etangs'],['velo','https://vttauvergne.fr/']]],['alg_pat',[['parentignat','https://www.parentignat.com/'],['issoire','https://www.sejours-issoire.com/'],['usson'],['romanes'],['chateaux'],['villages'],['metiers']]],['alg_vol',[['livradois','https://www.parc-livradois-forez.org/'],['sancy'],['lacs'],['domes'],['ski','https://www.sancy.com/']]]];
 const PRATIQUE=[['i-horloge','i_reception'],['i-parking','i_parking'],['i-patte','i_animaux'],['i-wifi','i_wifi'],['i-ascenseur','i_ascenseur'],['i-acces','i_pmr'],['i-borne','i_borne'],['i-oreiller','i_couettes'],['i-globe','i_langues'],['i-lieu','i_acces']];
 const EQUIP=[['i-douche','ch_eq1'],['i-cintre','ch_eq2'],['i-table','ch_eq3'],['i-tel','ch_eq4'],['i-wifi','ch_eq5'],['i-bebe','ch_eq6'],['i-oreiller','ch_eq7'],['i-reveil','ch_eq8']];
@@ -1217,14 +1245,14 @@ function rendreListes(){
   $('#escapades').innerHTML=ESCAPADES.map(([g,l])=>`<div class="groupe-al"><h2>${t(g)}</h2><div class="escapades">${l.map(([k,u])=>`<article class="escapade"><h3>${t('al_'+k)}</h3><p>${t('al_'+k+'_p')}</p>${u?`<a href="${u}" target="_blank" rel="noopener">${new URL(u).hostname.replace('www.','')} ${ic('i-fleche')}</a>`:''}</article>`).join('')}</div></div>`).join('');
   const c=t('xv_col'),ligne=([nom,p,ing],n)=>`<li><button class="ligne-xv${panier[nom]?' choisie':''}" data-pizza="${nom}" data-prix="${p}" aria-label="${t('pz_add')} ${nom} — ${prix(p)}"><span class="n">${n}</span><span class="nom"><b>${nom}</b><small>${ing.map(i=>T[L].ing[i]).join(', ')}</small></span><span class="p">${prix(p)}</span><span class="cpt">${panier[nom]?'×'+panier[nom].q:ic('i-plus')}</span></button></li>`;
   const tete=`<div class="tete-xv" aria-hidden="true"><span>${c[0]}</span><span>${c[1]} · ${c[2]}</span><span>${c[3]}</span><span></span></div>`;
-  const POS=[[38,9],[50,9],[62,9],[44,22],[56,22],[28,29],[72,29],[50,34],[42,49],[28,59],[10,75],[42,70],[58,79],[90,75],[50,92]];
+  const POS=[[36,9],[50,9],[64,9],[41,23],[59,23],[24,30],[76,30],[50,38],[38,50],[24,61],[10,76],[40,71],[60,80],[90,76],[50,91]];
   const terrain=`<div class="terrain" role="group" aria-label="${t('xv_t')}">${ORDRE.slice(0,15).map((x,i)=>`<button class="poste${panier[x[0]]?' choisie':''}" style="left:${POS[i][0]}%;top:${POS[i][1]}%" data-pizza="${x[0]}" data-prix="${x[1]}" aria-label="${i+1} ${x[0]} — ${prix(x[1])}"><span class="maillot">${i+1}</span><span class="etiq">${x[0]}</span></button>`).join('')}</div>`;
   $('#feuille-match').innerHTML=terrain+`<p class="aide-xv">${t('xv_aide')}</p><div class="xv"><h2>${t('xv_t')} — ${t('xv_tit')}</h2>${tete}<ol>${ORDRE.slice(0,15).map((x,i)=>ligne(x,i+1)).join('')}</ol></div><div class="xv"><h2>${t('xv_rem')}</h2>${tete}<ol>${ORDRE.slice(15).map((x,i)=>ligne(x,i+16)).join('')}</ol></div>`;
   $('#compo').innerHTML=ORDRE.slice(0,15).map((x,i)=>`<span><sup>${i+1}</sup>${x[0]}</span>`).join('');
 }
 function traduire(){
   document.documentElement.lang=L;$('#langue').value=L;
-  $$('[data-t]').forEach(e=>{e.textContent=t(e.dataset.t)});
+  $$('[data-t]').forEach(e=>{e.textContent=t(e.dataset.t)});$$('.px').forEach(e=>{e.textContent=prix(+e.dataset.v)});
   $('#question').placeholder=t('as_ph');
   rendreListes();rendreEstimateurs();rendreCmd();
   if(conseilOuvert)demarrerConseil(true);
@@ -1278,16 +1306,17 @@ const auj=new Date();const dem=new Date(Date.now()+864e5);
 const est={tiroir:{type:1,arr:iso(auj),dep:iso(dem),pers:2,pdj:false},page:{type:1,arr:iso(auj),dep:iso(dem),pers:2,pdj:false}};
 $('#r-arr').value=iso(auj);$('#r-dep').value=iso(dem);$('#r-arr').min=iso(auj);$('#r-dep').min=iso(dem);
 $('#r-arr').addEventListener('change',e=>{const a=new Date(e.target.value);const d=new Date($('#r-dep').value);if(!(d>a)){$('#r-dep').value=iso(new Date(a.getTime()+864e5))}$('#r-dep').min=iso(new Date(a.getTime()+864e5))});
-function urlResa(o){const fr=o.arr.split('-').reverse().join('/');const n=Math.max(1,Math.round((new Date(o.dep)-new Date(o.arr))/864e5));const lc={fr:'FR',en:'EN',es:'ES',de:'DE',it:'IT',nl:'NL'}[L];return `${RESERVIT}&langcode=${lc}&fromdate=${fr}&nbnights=${n}&nbadt=${o.pers}`}
+function urlResa(o){const [fy,fm,fd]=o.arr.split('-').map(Number),[ty,tm,td]=o.dep.split('-').map(Number);const lc={fr:'FR',en:'EN',es:'ES',de:'DE',it:'IT',nl:'NL'}[L];return `${RESERVIT}?langcode=${lc}&custid=2&fday=${fd}&fmonth=${fm}&fyear=${fy}&tday=${td}&tmonth=${tm}&tyear=${ty}&nbpax=${o.pers}&numAdult=${o.pers}`}
+$('#r-dep').addEventListener('change',e=>{if(!(new Date(e.target.value)>new Date($('#r-arr').value)))e.target.value=iso(new Date(new Date($('#r-arr').value).getTime()+864e5))});
 $('#resa-rapide').addEventListener('submit',e=>{e.preventDefault();const o={arr:$('#r-arr').value,dep:$('#r-dep').value,pers:+$('#r-pers').value};
-  Object.assign(est.tiroir,o,{type:o.pers>=3?3:(o.pers===1?0:1)});rendreEstimateurs();ouvrir('#tiroir-resa')});
+  Object.assign(est.tiroir,o,{type:o.pers>=3?3:(o.pers===1?0:1)});window.open(urlResa(o),'_blank','noopener')});
 function rendreEstimateur(cible,o){
   const el=$(cible);if(!el)return;
   const nuits=Math.max(1,Math.round((new Date(o.dep)-new Date(o.arr))/864e5)||1);
-  const c=CHAMBRES[o.type];const etape=!!c[4];
+  const c=CHAMBRES[o.type];const etape=!!c[4];const trop=o.pers>c[3];if(trop&&o.pers<=3){o.type=o.pers===1?0:(o.pers===2?1:3);return rendreEstimateur(cible,o)}
   const taxe=.7*o.pers*nuits,pdj=(o.pdj&&!etape)?8*o.pers*nuits:0;
   const mult=etape?o.pers:1;
-  const a=c[1]*nuits*mult+taxe+pdj,b=c[2]*nuits*mult+taxe+pdj;
+  const persF=trop?c[3]:o.pers;const a=c[1]*nuits*mult+.7*persF*nuits+((o.pdj&&!etape)?8*persF*nuits:0),b=c[2]*nuits*mult+.7*persF*nuits+((o.pdj&&!etape)?8*persF*nuits:0);
   el.innerHTML=`<div class="grille">
    <div class="champ plein"><label>${t('est_type')}</label><select data-k="type">${CHAMBRES.map((x,i)=>`<option value="${i}"${i==o.type?' selected':''}>${t(x[0])}</option>`).join('')}</select></div>
    <div class="champ"><label>${t('b_arrivee')}</label><input type="date" data-k="arr" value="${o.arr}" min="${iso(auj)}"></div>
@@ -1295,10 +1324,11 @@ function rendreEstimateur(cible,o){
    <div class="champ"><label>${t('b_pers')}</label><select data-k="pers">${[1,2,3,4,5,6].map(n=>`<option${n==o.pers?' selected':''}>${n}</option>`).join('')}</select></div>
    <label class="case"${etape?' style="opacity:.45"':''}><input type="checkbox" data-k="pdj"${o.pdj?' checked':''}${etape?' disabled':''}>${t('est_pdj')}</label>
   </div>
+  ${trop?`<p class="petite" style="color:var(--rouge-fonce);font-weight:600">${t('est_cap')}</p>`:''}
   <div class="total"><span>${t('est_total')} · <span class="num">${nuits}</span> ${t(nuits>1?'est_nuits':'est_nuit')}<small>${t('est_taxe')}</small></span><b class="num">${a===b?prix(a):prix(a)+' – '+prix(b)}</b></div>
   <a class="btn btn-rouge" style="width:100%;margin-top:16px" href="${urlResa(o)}" target="_blank" rel="noopener">${ic('i-cadenas')}<span>${t('est_go')}</span></a>
   <p class="petite">${t('est_info')}</p>`;
-  el.querySelectorAll('[data-k]').forEach(f=>f.addEventListener('change',()=>{const k=f.dataset.k;o[k]=k==='pdj'?f.checked:(k==='type'||k==='pers'?+f.value:f.value);if(k==='arr'&&!(new Date(o.dep)>new Date(o.arr)))o.dep=iso(new Date(new Date(o.arr).getTime()+864e5));rendreEstimateurs()}));
+  el.querySelectorAll('[data-k]').forEach(f=>f.addEventListener('change',()=>{const k=f.dataset.k;o[k]=k==='pdj'?f.checked:(k==='type'||k==='pers'?+f.value:f.value);if((k==='arr'||k==='dep')&&!(new Date(o.dep)>new Date(o.arr)))o.dep=iso(new Date(new Date(o.arr).getTime()+864e5));rendreEstimateurs()}));
 }
 function rendreEstimateurs(){rendreEstimateur('#estimateur-tiroir',est.tiroir);rendreEstimateur('#estimateur-page',est.page)}
 
@@ -1352,11 +1382,16 @@ function fermerConseil(){conseilOuvert=false;const c=$('#conseil');c.classList.r
 $('#conseil-btn').onclick=ouvrirConseil;$('#conseil-x').onclick=fermerConseil;
 const sansAccent=s=>s.toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g,'');
 const MOTS=[
- [/dejeuner|breakfast|desayuno|fruhstuck|colazione|ontbijt|\bpdj\b/,()=>msg(t('as_a_pdj'))],
+ [/petit[- ]?dej|breakfast|desayuno|fruhstuck|colazione|ontbijt|\bpdj\b/,()=>msg(t('as_a_pdj'))],
+ [/\btable\b|couverts|book a table|reservar mesa|\bmesa\b|\btisch|tavolo|\btafel/,()=>msg(t('as_a_table'))],
+ [/gluten|vegetari|vegan|allerg|regime|diet|dieta|halal|celiac|zoliak|glutine/,()=>msg(t('as_a_regime'))],
  [/\b(chiens?|chats?|animal|animaux|pets?|dogs?|perros?|mascotas?|hunde?|haustiere?|cane|animali|honden?|huisdieren?)\b/,SUJETS.chien],
- [/\b(tard|late|tarde|spat|tardi|laat)\b|21 ?h|apres 21/,SUJETS.tard],
+ [/\b(tard|late|tarde|spat|tardi|laat|minuit|midnight|medianoche|mitternacht|mezzanotte|middernacht)\b|\b(2[1-3]|0?[0-4]) ?h\b|apres 21/,SUJETS.tard],
+ [/depart|check.?out|quitter|liberer|salida|abreise|partenza|vertrek|uitchecken|10 ?h/,()=>msg(t('as_a_depart'))],
+ [/\bbebe|baby|\bcuna|babybett|lettino|babybed|enfant|child|nino|kind|bambin/,()=>msg(t('as_a_bebe'))],
+ [/dimanche|sunday|domingo|sonntag|domenica|zondag/,()=>msg(t('as_a_dim'))],
  [/mariage|banquet|seminaire|reception|wedding|\bevent|boda|banquete|hochzeit|feier|matrimonio|ricevimento|bruiloft|feest/,SUJETS.reception],
- [/pizza|diner|dinner|restaurant|manger|\beat\b|cenar|comer|essen|mangiare|\beten\b|midi|lunch|\bmenu|horaire|opening/,SUJETS.diner],
+ [/pizza|diner|dinner|dejeuner|restaurant|manger|\beat\b|cenar|comer|almuerzo|essen|mittag|mangiare|pranzo|\beten\b|midi|lunch|\bmenu|horaire|opening/,SUJETS.diner],
  [/autoroute|motorway|autopista|autobahn|autostrada|snelweg|lyon|paris|clermont|distance|acces|venir|kilomet|\bkm\b/,()=>msg(t('i_acces'))],
  [/visite|que faire|autour|sancy|\blacs?\b|usson|issoire|randonn|things to do|nearby|\bhike|excursion|ausflug|wander|gita|dintorni|uitstap|wandel/,SUJETS.sortir],
  [/etape|\bpro\b|travail|business|trabajo|geschaft|arbeit|lavoro|zaken/,SUJETS.pro],
@@ -1364,9 +1399,9 @@ const MOTS=[
  [/parking|garage|voiture|\bcar\b|coche|\bauto\b|recharge|borne|charging|aparcamiento|parkplatz|parcheggio|parkeren/,()=>msg(t('as_a_parking'))],
  [/emporte|sous vide|takeaway|take away|para llevar|mitnehmen|asporto|afhalen/,()=>{msg(t('as_a_emp'));puces([aller('as_go_emp','emportes')])}],
  [/pmr|handicap|fauteuil|wheelchair|accessib|silla de ruedas|rollstuhl|disabil|rolstoel|ascenseur|\blift\b|aufzug|ascensor|ascensore/,()=>msg(t('as_a_pmr'))],
- [/chambre|dormir|\bnuit|\broom|prix|tarif|price|rate|habitacion|precio|zimmer|preis|camera|prezzo|kamer|prijs|reserv|\bbook|buchen|prenot|boeken|\bnight/,SUJETS.dormir]
+ [/chambre|dormir|\bnuit|\broom|prix|tarif|price|rate|habitacion|precio|zimmer|preis|camera|prezzo|kamer|prijs|reserv|\bbook|buchen|prenot|boeken|\bnight|double|einzel|single/,q=>{const n=/\b(3|trois|three|tres|drei|tre|drie|famil)/.test(q)?3:/\b(2|deux|two|dos|zwei|due|twee|couple|double|doppel)/.test(q)?2:/\b(1|seul|seule|alone|single|solo|einzel|alleen)\b/.test(q)?1:0;if(!n)return SUJETS.dormir();est.tiroir.pers=n;msg(t('as_a_p'+n));puces([allerResa(n===1?0:n===2?1:3)])}]
 ];
-$('#saisie').addEventListener('submit',e=>{e.preventDefault();const q=$('#question').value.trim();if(!q)return;msg(q,'moi');$('#question').value='';const s=sansAccent(q);const r=MOTS.find(([re])=>re.test(s));setTimeout(()=>{if(r)r[1]();else{msg(t('as_a_defaut'));menuConseil()}},250)});
+$('#saisie').addEventListener('submit',e=>{e.preventDefault();const q=$('#question').value.trim();if(!q)return;msg(q,'moi');$('#question').value='';const s=sansAccent(q);const r=MOTS.find(([re])=>re.test(s));setTimeout(()=>{if(r)r[1](s);else{msg(t('as_a_defaut'));menuConseil()}},250)});
 let bulleVue=false;try{bulleVue=sessionStorage.getItem('abbaye-bulle')==='1'}catch(_){}
 function cacherBulle(){$('#bulle').classList.remove('visible')}
 function montrerBulle(){if(bulleVue||conseilOuvert||!['','#accueil'].includes(location.hash))return;bulleVue=true;$('#bulle').classList.add('visible');setTimeout(cacherBulle,8000);setTimeout(()=>addEventListener('scroll',cacherBulle,{once:true,passive:true}),600);try{sessionStorage.setItem('abbaye-bulle','1')}catch(_){}}
@@ -1375,6 +1410,8 @@ $('#bulle-x').onclick=()=>$('#bulle').classList.remove('visible');
 $('#bulle').addEventListener('click',e=>{if(!e.target.closest('#bulle-x'))ouvrirConseil()});
 
 const mq=matchMedia('(max-width:640px)');function placerConseil(){const b=$('#conseil-btn');if(mq.matches)$('.slot-conseil').appendChild(b);else document.body.appendChild(b)}mq.addEventListener('change',placerConseil);placerConseil();
+setTimeout(()=>$('#conseil-btn').classList.add('reduit'),9000);addEventListener('scroll',function f(){if(scrollY>500){$('#conseil-btn').classList.add('reduit');removeEventListener('scroll',f)}},{passive:true});
+$('#yt').addEventListener('click',()=>{$('#yt').innerHTML='<iframe src="https://www.youtube-nocookie.com/embed/bbUI155IUwU?autoplay=1" title="Hôtel de l\'Abbaye" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe>'},{once:true});
 traduire();router();
 </script>
 <script id="nv-track">(function(){try{if(location.protocol!=='https:')return;if(/[?&]moi\b/.test(location.search)){localStorage.setItem('nv_moi','1');addEventListener('load',function(){var d=document.createElement('div');d.textContent='✓ Appareil reconnu : vos visites ne sont plus comptées';d.style.cssText='position:fixed;left:50%;bottom:24px;transform:translateX(-50%);z-index:2147483647;background:#1E3A2B;color:#fff;font:600 14px/1.3 system-ui,sans-serif;padding:12px 18px;border-radius:999px;box-shadow:0 8px 24px rgba(0,0,0,.25)';document.body.appendChild(d);setTimeout(function(){d.remove()},6000)})}if(localStorage.getItem('nv_moi')||navigator.webdriver)return;}catch(x){}
