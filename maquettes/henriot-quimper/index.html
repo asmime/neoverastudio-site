@@ -477,6 +477,18 @@ figure.contenu.duo-img{display:grid;grid-template-columns:1fr 1fr;gap:18px;align
 #ruban2 .decor-carte{flex:none}
 :lang(ja) h1,:lang(ja) h2,:lang(ja) h3{word-break:keep-all;overflow-wrap:anywhere}
 @media (max-width:820px){.prenom .bol-scene{order:0}}
+/* décors et étapes : tout visible, sur plusieurs lignes (demande du 19 nov.) */
+.decors-ruban,#ruban2{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:14px;overflow:visible;-webkit-mask-image:none;mask-image:none;padding:6px 0 0}
+.decors-ruban .decor-carte{flex:none}
+.etapes{display:grid;grid-auto-flow:row;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));overflow:visible;gap:0 24px;border-top:1.5px solid var(--cobalt);padding-bottom:0}
+.etape{margin-right:0;padding:22px 0 24px;border-right:0;border-bottom:1px solid var(--email-3)}
+@media (max-width:520px){.decors-ruban,#ruban2{grid-template-columns:repeat(2,1fr)}.etapes{grid-template-columns:1fr 1fr}}
+[hidden]{display:none!important}
+.decors-ruban,#ruban2{grid-template-columns:repeat(auto-fill,minmax(128px,1fr))}
+.decor-carte b{font-size:1rem;line-height:1.2}
+.etapes{grid-template-columns:repeat(6,1fr)}
+@media (max-width:1100px){.etapes{grid-template-columns:repeat(3,1fr)}}
+@media (max-width:520px){.etapes{grid-template-columns:1fr 1fr}}
 </style>
 </head>
 <body>
