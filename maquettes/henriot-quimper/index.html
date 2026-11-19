@@ -466,6 +466,17 @@ figure.duo-img{gap:18px}
 figure.petite{margin-inline:auto;text-align:center}
 .fiche h2{font-size:clamp(1.6rem,2.4vw,2.1rem);text-wrap:balance}
 @media (max-width:820px){.revers figure{margin-bottom:40px}.bloc.bande{grid-template-columns:1fr}}
+
+figure.contenu.duo-img{display:grid;grid-template-columns:1fr 1fr;gap:18px;align-items:center}
+.duo-img img{width:100%!important;max-width:100%!important;min-width:0;height:auto}
+.etape .vide-ph{display:none}
+.lp-act{display:flex;align-items:center;gap:14px;margin-top:6px}
+.qte.petite-q button{width:32px;height:32px;font-size:1rem}
+.qte.petite-q span{min-width:20px;font-size:.9rem}
+#ruban2{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:12px}
+#ruban2 .decor-carte{flex:none}
+:lang(ja) h1,:lang(ja) h2,:lang(ja) h3{word-break:keep-all;overflow-wrap:anywhere}
+@media (max-width:820px){.prenom .bol-scene{order:0}}
 </style>
 </head>
 <body>
@@ -540,9 +551,9 @@ figure.petite{margin-inline:auto;text-align:center}
     <p class="chapo" data-i="bp_texte"></p>
     <div class="champ"><label for="prenomIn" data-i="bp_label"></label><input id="prenomIn" maxlength="15" autocomplete="off" spellcheck="false"><small data-i="bp_aide"></small></div>
     <b style="font-size:.92rem" data-i="bp_decor"></b>
-    <div class="decors-mini" id="bpDecors"></div>
+    <div class="decors-mini" id="bpDecors"></div><p id="bpNomDecor" style="font-size:.92rem;font-weight:600;color:var(--cobalt-3);margin:-10px 0 18px"></p>
     <div class="prix-ligne"><span class="prix num" id="bpPrix">50 €</span><span class="delai" data-i="bp_delai"></span></div>
-    <div class="ajouter-ligne"><button class="btn btn-cobalt" id="bpAjout"><span data-i="bp_ajouter"></span></button><a class="lien" href="#boutique" data-go="shop" data-cat="prenom"><span data-i="bp_tous"></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
+    <div class="ajouter-ligne"><button class="btn btn-cobalt" id="bpAjout"><span data-i="bp_ajouter"></span></button><a class="lien" href="#boutique" data-go="shop" data-cat="prenom"><span data-i="bp_tous"></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div><p style="margin-top:14px"><a class="lien" href="#boutique" id="bpSuite" hidden><span data-i="bp_suite"></span></a></p>
    </div>
   </div>
  </section>
@@ -873,6 +884,12 @@ Le site Internet www.henriotboutique.com est conforme à la législation frança
 var LANGS=['fr','en','es','de','it','ja'];
 var T={
 // navigation
+r_inter:["Le tarif de 10 € concerne la France. Pour un envoi à l’étranger, écrivez à e-commerce@henriotboutique.com : la manufacture vous indique les frais et le délai.", "The €10 rate applies to France. For delivery abroad, write to e-commerce@henriotboutique.com and the manufactory will tell you the cost and timing.", "La tarifa de 10 € es para Francia. Para envíos al extranjero, escriba a e-commerce@henriotboutique.com: la manufactura le indicará gastos y plazo.", "Der Tarif von 10 € gilt für Frankreich. Für Versand ins Ausland schreiben Sie an e-commerce@henriotboutique.com; die Manufaktur nennt Kosten und Lieferzeit.", "La tariffa di 10 € vale per la Francia. Per spedizioni all’estero scrivete a e-commerce@henriotboutique.com: la manifattura vi indicherà costi e tempi.", "10ユーロはフランス国内の送料です。海外発送は e-commerce@henriotboutique.com へご連絡ください。送料と日数をご案内します。"],
+r_entretien:["Pour l’entretien d’une pièce (lave-vaisselle, micro-ondes), la manufacture vous répond pièce par pièce : écrivez à contact@henriot-quimper.com.", "For care questions (dishwasher, microwave), the manufactory answers piece by piece: write to contact@henriot-quimper.com.", "Para el cuidado de una pieza (lavavajillas, microondas), la manufactura responde pieza por pieza: escriba a contact@henriot-quimper.com.", "Zur Pflege (Spülmaschine, Mikrowelle) antwortet die Manufaktur je nach Stück: schreiben Sie an contact@henriot-quimper.com.", "Per la cura dei pezzi (lavastoviglie, microonde) la manifattura risponde pezzo per pezzo: scrivete a contact@henriot-quimper.com.", "食洗機・電子レンジなどのお手入れは作品ごとにご案内します。contact@henriot-quimper.com へどうぞ。"],
+r_hb:["La signature HB-Henriot, apposée avant cuisson par la peintre avec ses initiales, garantit une pièce faite à la main dans nos ateliers de Quimper. Nos signatures successives aident aussi à dater les faïences anciennes.", "The HB-Henriot signature, added before firing by the painter with her initials, guarantees a piece handmade in our Quimper workshops. Our successive marks also help date older pieces.", "La firma HB-Henriot, puesta antes de la cocción por la pintora con sus iniciales, garantiza una pieza hecha a mano en Quimper. Nuestras firmas sucesivas ayudan a datar piezas antiguas.", "Die Signatur HB-Henriot, vor dem Brand mit den Initialen der Malerin gesetzt, garantiert Handarbeit aus Quimper. Unsere Marken helfen auch beim Datieren alter Stücke.", "La firma HB-Henriot, apposta prima della cottura dalla pittrice con le sue iniziali, garantisce un pezzo fatto a mano a Quimper. I nostri marchi aiutano anche a datare i pezzi antichi.", "HB-Henriotのサインは焼成前に絵付け師がイニシャルとともに入れ、カンペールの工房での手作りを保証します。歴代の刻印は古い作品の年代判定にも役立ちます。"],
+r_casse:["Une pièce cassée à remplacer ou un décor à refaire ? Chaque demande fait l’objet d’une étude et d’un devis : décrivez la pièce dans le formulaire.", "A broken piece to replace or a décor to remake? Each request is studied and quoted: describe the piece in the form.", "¿Una pieza rota que reponer o una decoración que rehacer? Cada solicitud se estudia y presupuesta: descríbala en el formulario.", "Ein zerbrochenes Stück ersetzen oder ein Dekor nachmachen? Jede Anfrage wird geprüft und kalkuliert: beschreiben Sie es im Formular.", "Un pezzo rotto da sostituire o un decoro da rifare? Ogni richiesta viene studiata con preventivo: descrivetelo nel modulo.", "割れた作品の再制作や柄の再現は、ご依頼ごとにお見積りします。フォームで作品をお知らせください。"],
+r_voir_page:["Voir la page", "See the page", "Ver la página", "Seite ansehen", "Vedi la pagina", "ページを見る"],
+bp_suite:["Compléter avec le même décor", "Complete with the same décor", "Completar con la misma decoración", "Mit dem gleichen Dekor ergänzen", "Completa con lo stesso decoro", "同じ柄で揃える"],
 co_ambiance:["Ambiance et maison", "Home and atmosphere", "Ambiente y hogar", "Wohnen und Ambiente", "Atmosfera e casa", "暮らしとインテリア"],
 leg_costiou:["Michel Costiou, objets en faïence pour le Moulin Rouge", "Michel Costiou, faience pieces for the Moulin Rouge", "Michel Costiou, piezas de loza para el Moulin Rouge", "Michel Costiou, Fayence-Objekte für das Moulin Rouge", "Michel Costiou, oggetti in maiolica per il Moulin Rouge", "ミシェル・コスティウ、ムーラン・ルージュのための作品"],
 leg_jaouen:["Bustier en faïence pour Pascal Jaouen, Festival de Cornouaille 2008", "Faience bustier for Pascal Jaouen, Festival de Cornouaille 2008", "Corsé de loza para Pascal Jaouen, Festival de Cornouaille 2008", "Fayence-Bustier für Pascal Jaouen, Festival de Cornouaille 2008", "Bustier in maiolica per Pascal Jaouen, Festival de Cornouaille 2008", "パスカル・ジャウエンのファイアンスのビスチェ（2008年コルヌアイユ祭）"],
@@ -1191,6 +1208,7 @@ var I={};for(var k in T){I[k]={};for(var j=0;j<6;j++)I[k][LANGS[j]]=T[k][j];}
 var L='fr';
 try{var s=localStorage.getItem('hq-lang');if(s&&LANGS.indexOf(s)>=0)L=s;}catch(e){}
 var $=function(q,r){return (r||document).querySelector(q)},$$=function(q,r){return [].slice.call((r||document).querySelectorAll(q))};
+var esc=function(s){return String(s).replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]})};
 var t=function(k){return I[k]?I[k][L]:k};
 var img=function(id){return 'img/'+id+'.webp'};
 var eur=function(n){return new Intl.NumberFormat(L==='ja'?'ja-JP':L+'-'+(L==='en'?'GB':L.toUpperCase()),{style:'currency',currency:'EUR',maximumFractionDigits:n%1?2:0}).format(n)};
@@ -1240,7 +1258,7 @@ function go(v,a,noHash){
  $$('.vue').forEach(function(s){s.classList.toggle('on',s.dataset.vue===v)});
  $$('nav.menu a').forEach(function(x){x.toggleAttribute('aria-current',x.dataset.go===v&&!x.dataset.a&&v!=='home'||(v==='home'&&false));if(x.dataset.go===v&&!x.dataset.a)x.setAttribute('aria-current','page');else x.removeAttribute('aria-current')});
  fermeMobile();
- if(!noHash)try{history.replaceState(null,'','#'+(a||VUES[v]))}catch(e){}
+ if(!noHash)try{history.pushState(null,'','#'+(a||VUES[v]))}catch(e){}
  if(v==='shop')rendBoutique();
  observe();
  requestAnimationFrame(function(){var el=a&&document.getElementById(a);if(el){var y=el.getBoundingClientRect().top+scrollY-90;scrollTo({top:y,behavior:'smooth'})}else scrollTo(0,0)});
@@ -1254,7 +1272,8 @@ document.addEventListener('click',function(e){
  var aj=e.target.closest('[data-ajout]');if(aj){var pr=BYID[+aj.dataset.ajout];if(pr.i){ouvreFiche(pr.id)}else ajoute(pr.id,1,'');return}
  if(e.target.closest('[data-fermer]')||e.target.id==='voile'){fermeTout()}
 });
-function depuisHash(){var h=(location.hash||'').slice(1);var map={accueil:['home'],'bol-prenom':['home','bol-prenom'],boutique:['shop'],manufacture:['maison'],histoire:['maison','histoire'],marques:['maison','marques'],lexique:['maison','lexique'],'savoir-faire':['savoir'],collections:['collections'],visiter:['visite'],actualites:['actus'],'e-faience':['actus','e-faience'],liens:['actus','liens'],expertise:['expertise'],entreprises:['entreprises'],'sur-mesure':['entreprises','sur-mesure'],contact:['contact'],informations:['infos'],livraison:['infos','livraison'],paiement:['infos','paiement'],cgv:['infos','cgv'],mentions:['infos','mentions'],apropos:['infos','apropos']};if(map[h])go(map[h][0],map[h][1],true);if(h==='conseil')ouvreConseil()}
+function depuisHash(){var h=(location.hash||'').slice(1);var map={accueil:['home'],'bol-prenom':['home','bol-prenom'],boutique:['shop'],manufacture:['maison'],histoire:['maison','histoire'],marques:['maison','marques'],lexique:['maison','lexique'],'savoir-faire':['savoir'],collections:['collections'],visiter:['visite'],actualites:['actus'],'e-faience':['actus','e-faience'],liens:['actus','liens'],expertise:['expertise'],entreprises:['entreprises'],'sur-mesure':['entreprises','sur-mesure'],contact:['contact'],informations:['infos'],livraison:['infos','livraison'],paiement:['infos','paiement'],cgv:['infos','cgv'],mentions:['infos','mentions'],apropos:['infos','apropos']};if(map[h])go(map[h][0],map[h][1],true);if(h==='conseil')ouvreConseil();if(/^piece-\d+$/.test(h)){go('shop',null,true);ouvreFiche(+h.slice(6),false,true)}}
+window.addEventListener('popstate',function(){fermeTout();var h=location.hash.slice(1);if(/^piece-\d+$/.test(h)){ouvreFiche(+h.slice(6),false,true)}else depuisHash()});
 var mnav=$('#mnav');$('#burger').addEventListener('click',function(){mnav.classList.add('on')});
 function fermeMobile(){mnav.classList.remove('on')}
 $('[data-fermer-m]').addEventListener('click',fermeMobile);
@@ -1263,7 +1282,7 @@ $('[data-fermer-m]').addEventListener('click',fermeMobile);
 function carteProduit(p){
  var et=p.num?'<span class="etiq num">'+t('et_num')+'</span>':p.i?'<span class="etiq ins">'+t('et_ins')+'</span>':'';
  var sous=[p.s,dn(p),p.a].filter(Boolean).join(' · ');
- return '<article class="produit" data-prod="'+p.id+'" tabindex="0">'+et+'<div class="vis"><img src="'+img(p.id)+'" alt="" loading="lazy" width="360" height="360"></div><div class="nom">'+pnom(p)+'</div><div class="dec">'+sous+'</div><div class="bas"><span class="pr">'+eur(p.p)+'</span><button class="ajout" data-ajout="'+p.id+'" aria-label="'+t('ajouter')+'"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></button></div></article>';
+ return '<article class="produit" data-prod="'+p.id+'" tabindex="0">'+et+'<div class="vis"><img src="'+img(p.id)+'" alt="'+esc(pnom(p)+(p.d?' · '+dn(p):''))+'" loading="lazy" width="360" height="360"></div><div class="nom">'+pnom(p)+'</div><div class="dec">'+sous+'</div><div class="bas"><span class="pr">'+eur(p.p)+'</span><button class="ajout" data-ajout="'+p.id+'" aria-label="'+t('ajouter')+'"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></button></div></article>';
 }
 var DECORS=(function(){var m={};VENTE.forEach(function(p){if(p.d){var k=p.d[0];(m[k]=m[k]||[]).push(p)}});return Object.keys(m).filter(function(k){return m[k].length>=3}).sort(function(a,b){return m[b].length-m[a].length}).map(function(k){var l=m[k];var c=l.filter(function(p){return /ASSIETTE PLATE|Assiette plate/.test(p.n.fr)})[0]||l[0];return {k:k,p:l[0],cover:c,n:l.length}})})();
 function construit(){
@@ -1295,7 +1314,7 @@ $('#plus').addEventListener('click',function(){F.n+=48;rendBoutique()});
 var norm=function(s){return (s||'').toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g,'')};
 function liste(){
  var q=norm(F.q).split(/\s+/).filter(Boolean);
- var l=VENTE.filter(function(p){if(!inCat(p,F.cat))return false;if(F.decor&&dfr(p)!==F.decor)return false;if(!q.length)return true;var h=norm(p.n.fr+' '+p.n[L]+' '+(p.d?p.d.join(' '):'')+' '+(p.a||'')+' '+p.s);return q.every(function(w){return h.indexOf(w)>=0})});
+ var l=VENTE.filter(function(p){if(!inCat(p,F.cat))return false;if(F.decor&&dfr(p)!==F.decor)return false;if(!q.length)return true;var h=norm(LANGS.map(function(l){return p.n[l]}).join(' ')+' '+(p.d?p.d.join(' '):'')+' '+(p.a||'')+' '+p.s+' '+LANGS.map(function(l){return I['c_'+p.c][l]}).join(' ')+(p.i?' prenom nom inscription name personnalise':''));return q.every(function(w){if(h.indexOf(w)>=0)return true;if(w.length<5)return false;for(var k=0;k<w.length;k++){if(h.indexOf(w.slice(0,k)+w.slice(k+1))>=0)return true}return false})});
  if(F.tri==='1')l.sort(function(a,b){return a.p-b.p});else if(F.tri==='2')l.sort(function(a,b){return b.p-a.p});else if(F.tri==='3')l.sort(function(a,b){return pnom(a).localeCompare(pnom(b),L)});
  else l.sort(function(a,b){return rang(a)-rang(b)});
  return l;
@@ -1311,8 +1330,8 @@ function rendBoutique(){
 
 /* ---------- fiche ---------- */
 var ficheId=null,qte=1;
-function ouvreFiche(id,garde){
- var p=BYID[id];if(!p)return;ficheId=id;if(!garde)qte=1;
+function ouvreFiche(id,garde,sansHist){
+ var p=BYID[id];if(!p)return;ficheId=id;if(!garde)qte=1;if(!sansHist&&!garde)try{history.pushState(null,'','#piece-'+id)}catch(e){}
  var meme=VENTE.filter(function(x){return x.id!==id&&((p.d&&dfr(x)===dfr(p))||(p.a&&x.a===p.a))}).slice(0,8);
  var r='<li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m5 12.5 4.2 4L19 7"/></svg>';
  var h='<div class="vis"><img src="'+img(id)+'" '+(p.g&&location.protocol.indexOf('http')===0?'data-hd="https://www.henriotboutique.com/'+p.g+'-large_default/'+p.g+'.jpg" ':'')+'alt="" width="800" height="800"></div><div><h2>'+pnom(p)+'</h2><p class="meta">'+[p.s,p.d?t('decor')+' '+dn(p):'',p.a?t('artiste')+' '+p.a:''].filter(Boolean).join(' · ')+'</p><div class="prix-ligne"><span class="prix num">'+eur(p.p)+'</span><span class="delai">'+t('fi_ttc')+'</span></div>';
@@ -1335,24 +1354,25 @@ function ajoute(id,q,ins){var l=P.filter(function(x){return x.id===id&&x.ins===i
 function rendPanier(){
  var n=P.reduce(function(a,x){return a+x.q},0);$('#nbPanier').textContent=n;$('#nbPanier').hidden=!n;
  if(!P.length){$('#panierCorps').innerHTML='<p style="padding:30px 0;color:var(--manga-2)">'+t('pa_vide')+'</p><a class="btn btn-cobalt" href="#bol-prenom" data-go="home" data-a="bol-prenom" style="margin-top:6px">'+t('h_cta2')+'</a>';$('#panierPied').innerHTML='';return}
- $('#panierCorps').innerHTML=P.map(function(x,i){var p=BYID[x.id];return '<div class="ligne-panier"><img src="'+img(p.id)+'" alt=""><div><div style="font-size:.92rem;font-weight:500">'+pnom(p)+'</div><small>'+[p.s,dn(p)].filter(Boolean).join(' · ')+' · ×'+x.q+'</small>'+(x.ins?'<div class="ins">'+esc(x.ins)+'</div>':'')+'<button class="suppr" data-suppr="'+i+'">'+t('pa_retirer')+'</button></div><b class="num">'+eur(p.p*x.q)+'</b></div>'}).join('');
+ $('#panierCorps').innerHTML=P.map(function(x,i){var p=BYID[x.id];return '<div class="ligne-panier"><img src="'+img(p.id)+'" alt=""><div><div style="font-size:.92rem;font-weight:500">'+pnom(p)+'</div><small>'+[p.s,dn(p)].filter(Boolean).join(' · ')+'</small>'+(x.ins?'<div class="ins">'+esc(x.ins)+'</div><small style="display:block">'+t('fi_r5')+'</small>':'')+'<div class="lp-act"><span class="qte petite-q"><button data-pq="'+i+'" data-d="-1" aria-label="−">−</button><span>'+x.q+'</span><button data-pq="'+i+'" data-d="1" aria-label="+">+</button></span><button class="suppr" data-suppr="'+i+'">'+t('pa_retirer')+'</button></div></div><b class="num">'+eur(p.p*x.q)+'</b></div>'}).join('');
  var st=P.reduce(function(a,x){return a+BYID[x.id].p*x.q},0),port=10+(sign?2:0);
  $('#panierPied').innerHTML='<div class="tot"><span>'+t('pa_sous')+'</span><span>'+eur(st)+'</span></div><div class="tot"><span>'+t('pa_port')+'</span><span>'+eur(10)+'</span></div><label class="case"><input type="checkbox" id="sign"'+(sign?' checked':'')+'>'+t('pa_sign')+'</label><div class="tot grand"><span>'+t('pa_total')+'</span><span>'+eur(st+port)+'</span></div><button class="btn btn-jaune" style="width:100%" id="commander">'+t('pa_commander')+'</button><div class="paiements"><span>CB</span><span>Visa</span><span>MasterCard</span><span>American Express</span><span>'+t('pa_paie').split(' · ').slice(1).join('</span><span>')+'</span></div>';
  $$('[data-suppr]').forEach(function(b){b.onclick=function(){P.splice(+b.dataset.suppr,1);sauve();rendPanier()}});
+ $$('[data-pq]').forEach(function(b){b.onclick=function(){var l=P[+b.dataset.pq];l.q=Math.max(1,l.q+ +b.dataset.d);sauve();rendPanier()}});
  $('#sign').onchange=function(){sign=this.checked;rendPanier()};
  $('#commander').onclick=function(){toast(t('pa_demo'));trace('commande')};
 }
-var esc=function(s){return s.replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]})};
+
 $('#ouvrirPanier').addEventListener('click',function(){rendPanier();$('#tiroir').classList.add('on');$('#voile').classList.add('on')});
 
 /* ---------- bol prénom ---------- */
 var BP=VENTE.filter(function(p){return p.c==='prenom'&&/^Bol à oreilles/.test(p.n.fr)&&!/enfant/.test(p.n.fr)});
 var bpSel=BP.filter(function(p){return dfr(p)==='Fleuri'})[0]||BP[0];
-function rendBolDecors(){$('#bpDecors').innerHTML=BP.map(function(p){var nm=[dn(p),p.n[L].split(', ').slice(1).join(' ')].filter(Boolean).join(' · ');return '<button aria-pressed="'+(p.id===bpSel.id)+'" data-bp="'+p.id+'" title="'+nm+'" aria-label="'+nm+'"><img src="'+img(p.id)+'" alt="" loading="lazy"></button>'}).join('');$('#bpPrix').textContent=eur(bpSel.p);$('#bolImg').src=img(bpSel.id)}
+function rendBolDecors(){$('#bpDecors').innerHTML=BP.map(function(p){var nm=[dn(p),p.n[L].split(', ').slice(1).join(' ')].filter(Boolean).join(' · ');return '<button aria-pressed="'+(p.id===bpSel.id)+'" data-bp="'+p.id+'" title="'+nm+'" aria-label="'+nm+'"><img src="'+img(p.id)+'" alt="" loading="lazy"></button>'}).join('');$('#bpPrix').textContent=eur(bpSel.p);$('#bolImg').src=img(bpSel.id);$('#bpNomDecor').textContent=t('decor')+' : '+[dn(bpSel),bpSel.n[L].split(', ').slice(1).join(', ')].filter(Boolean).join(' · ')}
 $('#bpDecors').addEventListener('click',function(e){var b=e.target.closest('[data-bp]');if(!b)return;bpSel=BYID[+b.dataset.bp];rendBolDecors()});
 $('#prenomIn').addEventListener('input',function(){var v=this.value;$('#bolNom').textContent=v||t('bp_exemple');ajusteNom()});
 function ajusteNom(){var n=$('#bolNom');n.style.fontSize='';var max=n.parentNode.clientWidth-56,i=0;while(n.scrollWidth>max&&i<30){n.style.fontSize=(parseFloat(getComputedStyle(n).fontSize)*.93)+'px';i++}}
-$('#bpAjout').addEventListener('click',function(){var v=$('#prenomIn').value.trim();if(!v){$('#prenomIn').focus();toast(t('bp_vide'));return}ajoute(bpSel.id,1,v)});
+$('#bpAjout').addEventListener('click',function(){var v=$('#prenomIn').value.trim();if(!v){$('#prenomIn').focus();toast(t('bp_vide'));return}ajoute(bpSel.id,1,v);var dd=dfr(bpSel);if(dd){$('#bpSuite').hidden=false;$('#bpSuite').onclick=function(e){e.preventDefault();F.decor=dd;F.cat='tout';go('shop')}}});
 
 /* ---------- conseiller ---------- */
 var Q=['q_prenom','q_naissance','q_mariage','q_collection','q_decor','q_livraison','q_visite','q_ancien','q_pro'];
@@ -1364,8 +1384,8 @@ function choix(keys){var d=document.createElement('div');d.className='choix';d.i
 function accueilConseil(){msg(t('co_bonjour'),'c');choix(Q)}
 function recos(l){var d=document.createElement('div');d.className='recos';d.innerHTML=l.slice(0,4).map(function(p){return '<div class="reco" data-prod="'+p.id+'"><img src="'+img(p.id)+'" alt=""><div><b>'+pnom(p)+(p.d?' · '+dn(p):'')+'</b><span>'+eur(p.p)+'</span></div><button data-ajout="'+p.id+'" aria-label="'+t('ajouter')+'"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 5v14M5 12h14"/></svg></button></div>'}).join('');$('#fil').appendChild(d);$('#fil').scrollTop=1e6}
 function bouton(lbl,fn){var d=document.createElement('div');d.className='choix';var b=document.createElement('button');b.textContent=lbl;b.onclick=fn;d.appendChild(b);$('#fil').appendChild(d)}
-function repond(k){
- msg(t(k),'v');
+function repond(k,deja){
+ if(!deja)msg(t(k),'v');
  setTimeout(function(){
   var f=function(fn){return VENTE.filter(fn)};
   if(k==='q_prenom'){msg(t('r_prenom'),'c');recos(BP.filter(function(p){return ['Fleuri','Henriot','Gwenn ha Du','Fleuri Royal'].indexOf(dfr(p))>=0}));bouton(t('r_ouvrir_bp'),function(){fermeConseil();go('home','bol-prenom')})}
@@ -1381,11 +1401,18 @@ function repond(k){
  },280);
 }
 $('#fil').addEventListener('click',function(e){var b=e.target.closest('[data-k]');if(b){repond(b.dataset.k);return}var d=e.target.closest('[data-dec]');if(d){var k=d.dataset.dec;msg(d.textContent,'v');msg(t('r_trouve'),'c');recos(VENTE.filter(function(p){return dfr(p)===k}).sort(function(a,b){return rang(a)-rang(b)}));bouton(t('r_voir'),function(){F.decor=k;F.cat='tout';fermeConseil();go('shop')})}});
-$('#saisie').addEventListener('submit',function(e){e.preventDefault();var v=$('#question').value.trim();if(!v)return;$('#question').value='';var n=norm(v);
- var regles=[[/prenom|nom|name|nombre|nome|名|inscri|personnal/,'q_prenom'],[/naiss|bebe|baby|birth|bapt|nacim|geburt|nasci|出産|赤ちゃん/,'q_naissance'],[/mari|wedding|boda|hochzeit|nozz|結婚/,'q_mariage'],[/livr|deliver|envio|versand|sped|配送|delai|retour|return/,'q_livraison'],[/visit|horaire|hour|horario|besuch|見学|ouvert|open/,'q_visite'],[/ancien|antique|dater|date|valeur|estim|expert|鑑定/,'q_ancien'],[/entreprise|business|company|empresa|firma|aziend|法人|cadeau d.affaire|devis|quote/,'q_pro'],[/collection|statue|numero|limit|artist|sammler/,'q_collection']];
- for(var i=0;i<regles.length;i++){if(regles[i][0].test(n)){repond(regles[i][1]);return}}
- var hit=VENTE.filter(function(p){var h=norm(p.n.fr+' '+p.n[L]+' '+(p.d?p.d.join(' '):'')+' '+(p.a||''));return n.split(/\s+/).filter(function(w){return w.length>2}).some(function(w){return h.indexOf(w)>=0})});
- msg(esc(v),'v');setTimeout(function(){if(hit.length){msg(t('r_trouve'),'c');recos(hit)}else{msg(t('r_defaut'),'c');choix(Q)}},280);
+$('#saisie').addEventListener('submit',function(e){e.preventDefault();var v=$('#question').value.trim();if(!v)return;$('#question').value='';var n=' '+norm(v)+' ';
+ msg(esc(v),'v');
+ var R=[[/(ship|shipping|deliver to|etranger|international|belgique|suisse|canada|etats-unis|usa|japon|japan|allemagne|germany|liefern|ausland|spedi|estero|envio a|extranjero|発送|海外|日本)/,'r_inter',null],
+  [/(lave-vaisselle|lave vaisselle|micro-onde|dishwasher|microwave|spulmaschine|spülmaschine|mikrowelle|lavastoviglie|microonde|lavavajillas|食洗|電子レンジ|entretien|four )/,'r_entretien',null],
+  [/(\bhb\b|signature|marque|mark|marca|marke|marchio|刻印|サイン)/,'r_hb','maison#marques'],
+  [/(cass|broken|roto|rotto|kaputt|zerbrochen|割れ|reassort|refaire|remplacer|replace)/,'r_casse','entreprises#sur-mesure'],
+  [/(\bprenoms?\b|\bnoms?\b|\bnames?\b|\bnombres?\b|\bnomi?\b|\bnamen?\b|inscription|personnalis|personalis|名前|名入れ)/,'q_prenom'],[/(naiss|bebe|baby|birth|bapt|nacim|geburt|nasci|出産|赤ちゃん)/,'q_naissance'],[/(mari|wedding|boda|hochzeit|nozz|結婚)/,'q_mariage'],[/(livr|deliver|delai|envio|versand|sped|配送|retour|return)/,'q_livraison'],[/(visit|horaire|hour|horario|besuch|orari|見学|ouvert|open)/,'q_visite'],[/(ancien|antique|dater|valeur|estim|expert|鑑定)/,'q_ancien'],[/(entreprise|business|company|empresa|firma|aziend|法人|devis|quote)/,'q_pro'],[/(collection|statue|numero|limit|artist|sammler)/,'q_collection']];
+ for(var i=0;i<R.length;i++){if(R[i][0].test(n)){var r=R[i];if(r[1].indexOf('q_')===0){repond(r[1],true)}else{setTimeout(function(){msg(t(r[1]),'c');if(r[2])bouton(t('r_voir_page'),function(){fermeConseil();var x=r[2].split('#');go(x[0],x[1])})},250)}return}}
+ var STOP=['the','les','des','une','pour','avec','dans','vous','nous','est','and','for','you','nach','sie','der','die','das','und','con','per','una','los','las','del','que','par','sur','mon','ma','mes','a','de','la','le','un'];
+ var mots=n.split(/[^a-z0-9぀-ヿ一-鿿]+/).filter(function(w){return w.length>2&&STOP.indexOf(w)<0});
+ var hit=VENTE.map(function(p){var h=norm(LANGS.map(function(l){return p.n[l]}).join(' ')+' '+(p.d?p.d.join(' '):'')+' '+(p.a||''));return [p,mots.filter(function(w){return h.indexOf(w)>=0}).length]}).filter(function(x){return x[1]>=Math.min(2,mots.length)&&x[1]>0}).sort(function(a,b){return b[1]-a[1]}).map(function(x){return x[0]});
+ setTimeout(function(){if(hit.length){msg(t('r_trouve'),'c');recos(hit)}else{msg(t('r_defaut'),'c');choix(Q)}},280);
 });
 setTimeout(function(){if(innerWidth<=820)return;var vu=false;try{vu=sessionStorage.getItem('hq-bulle')}catch(e){};if(!vu&&!$('#conseil').classList.contains('on')){$('#bulle').classList.add('on');try{sessionStorage.setItem('hq-bulle','1')}catch(e){}}},12000);
 $('#bulleX').addEventListener('click',function(e){e.stopPropagation();$('#bulle').classList.remove('on')});
