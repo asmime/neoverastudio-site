@@ -387,6 +387,12 @@ p{margin:0 0 1em;max-width:68ch;text-wrap:pretty}
 .qres img{width:120px;height:120px;border-radius:50%;object-fit:cover;background:var(--pate-2)}
 .qres p{font-family:var(--t-display);font-size:clamp(1.4rem,2.2vw,1.9rem);line-height:1.2;margin:0 0 16px;color:#fff}
 @media (max-width:820px){.quiz{grid-template-columns:1fr}.qres{grid-template-columns:84px 1fr}.qres img{width:84px;height:84px}}
+.hero-pot{position:absolute;right:-3%;bottom:8%;width:clamp(130px,13vw,190px);aspect-ratio:1;border-radius:50%;overflow:hidden;border:5px solid var(--pate);box-shadow:0 24px 40px -18px rgba(0,0,0,.7);z-index:3;background:#fff}
+.hero-pot img{width:100%;height:100%;object-fit:cover;object-position:50% 30%}
+.ph .wrap{position:relative;z-index:2}
+@media (max-width:700px){.ph .ph-mill{opacity:.16;right:-90px}.hero-pot{right:2%;bottom:auto;top:58%;width:30vw}.csb>span:last-child{display:none}.csb{padding:6px}}
+.ft ul a{display:inline-block;padding:7px 0}
+.drawer.open~.toast,.modal.open~.toast{visibility:hidden}
 
 .rv{opacity:0;transform:translateY(26px);transition:opacity .9s var(--ease),transform .9s var(--ease)}
 .rv.in{opacity:1;transform:none}
@@ -564,7 +570,7 @@ c_rgpd:"En envoyant ce formulaire, j'accepte que mes informations soient utilis�
 c_press:"Contact presse",c_tri:"Consignes de tri",
 tri_p:"Valables en France uniquement.",tri1:"Moutardes, condiments et verjus en bocal de verre",tri2:"Moutardes en pot de grès",tri3:"Vinaigres en bouteille de verre",tri4:"Seaux en plastique",tri5:"Sacs de graines en toile de jute",
 f_addr:"31 rue du Faubourg Bretonnière, 21200 Beaune",f_legal:"Mentions légales",f_conf:"Confidentialité",f_tri:"Consignes de tri",f_press:"Presse",f_pro:"Accès pro",f_bro:"Brochure",f_health:"Pour votre santé, mangez au moins cinq fruits et légumes par jour.",f_triman:"Nos emballages se trient : ne les jetez pas avec les ordures ménagères.",f_by:"Proposition de site par Neovera Studio",
-sel_t:"Ma sélection",sel_empty:"Votre sélection est vide. Ajoutez une visite ou des moutardes.",sel_visits:"Visites",sel_prod:"Moutardes à retrouver en boutique",sel_prod_n:"Préparées pour vous à la boutique de votre choix. Prix en boutique.",sel_total:"Total des visites",sel_go:"Valider ma réservation",sel_shop:"Retrait à",sel_ok:"Demande enregistrée. Dans la version en ligne, le paiement se fait ici, en toute sécurité.",sel_rm:"Retirer",sel_new:"Nouveau",
+sel_hour:"Horaire du créneau confirmé par e-mail.",cs_allerg:"Pour les allergènes, la liste d'ingrédients figure sur l'étiquette de chaque pot. Pour une question précise, appelez-nous au 03 80 22 10 02 : nous vous répondons.",cs_hello:"Bonjour ! Que puis-je faire pour vous ?",sel_t:"Ma sélection",sel_empty:"Votre sélection est vide. Ajoutez une visite ou des moutardes.",sel_visits:"Visites",sel_prod:"Moutardes à retrouver en boutique",sel_prod_n:"Préparées pour vous à la boutique de votre choix. Prix en boutique.",sel_total:"Total des visites",sel_go:"Valider ma réservation",sel_shop:"Retrait à",sel_ok:"Merci ! Votre demande est transmise à la moutarderie. Vous recevez la confirmation par e-mail.",sel_rm:"Retirer",sel_new:"Nouveau",
 bk_t:"Réserver",bk_date:"Date",bk_lang:"Langue de la visite",bk_fr:"Français",bk_bi:"Bilingue",bk_en:"Anglais",bk_add:"Ajouter à ma sélection",bk_grp_t:"Privatiser pour un groupe",bk_grp_n:"Nombre de personnes",bk_grp_send:"Envoyer la demande",
 cs_name:"Fallot Conseil",cs_sub:"Je vous aide à choisir",cs_v:"Assistant virtuel",
 cs_hi:"Bonjour ! Je suis Fallot Conseil, l'assistant virtuel de la moutarderie. Que cuisinez-vous, ou que cherchez-vous ?",
@@ -685,7 +691,7 @@ c_rgpd:"By sending this form, I agree that my information may be used to answer 
 c_press:"Press contact",c_tri:"Recycling guide",
 tri_p:"Valid in France only.",tri1:"Mustards, condiments and verjuice in glass jars",tri2:"Mustards in stoneware jars",tri3:"Vinegars in glass bottles",tri4:"Plastic buckets",tri5:"Jute seed sacks",
 f_addr:"31 rue du Faubourg Bretonnière, 21200 Beaune, France",f_legal:"Legal notice",f_conf:"Privacy",f_tri:"Recycling guide",f_press:"Press",f_pro:"Trade access",f_bro:"Brochure",f_health:"For your health, eat at least five fruits and vegetables a day.",f_triman:"Our packaging is recyclable: please don't throw it out with household waste.",f_by:"Website proposal by Neovera Studio",
-sel_t:"My selection",sel_empty:"Your selection is empty. Add a tour or some mustards.",sel_visits:"Tours",sel_prod:"Mustards to collect in our shop",sel_prod_n:"Prepared for you at the shop of your choice. Prices in store.",sel_total:"Tours total",sel_go:"Confirm my booking",sel_shop:"Collect in",sel_ok:"Request saved. On the live site, secure payment happens here.",sel_rm:"Remove",sel_new:"New",
+sel_hour:"Time slot confirmed by email.",cs_allerg:"For allergens, the ingredient list is printed on every jar's label. For a specific question, call us on +33 3 80 22 10 02 and we'll answer.",cs_hello:"Hello! How can I help you?",sel_t:"My selection",sel_empty:"Your selection is empty. Add a tour or some mustards.",sel_visits:"Tours",sel_prod:"Mustards to collect in our shop",sel_prod_n:"Prepared for you at the shop of your choice. Prices in store.",sel_total:"Tours total",sel_go:"Confirm my booking",sel_shop:"Collect in",sel_ok:"Thank you! Your request has been sent to the mustard house. You'll receive confirmation by email.",sel_rm:"Remove",sel_new:"New",
 bk_t:"Book",bk_date:"Date",bk_lang:"Tour language",bk_fr:"French",bk_bi:"Bilingual",bk_en:"English",bk_add:"Add to my selection",bk_grp_t:"Book privately for a group",bk_grp_n:"Number of people",bk_grp_send:"Send the request",
 cs_name:"Fallot Advisor",cs_sub:"I'll help you choose",cs_v:"Virtual assistant",
 cs_hi:"Hello! I'm Fallot Advisor, the mustard house's virtual assistant. What are you cooking, or what are you looking for?",
@@ -806,7 +812,7 @@ c_rgpd:"Al enviar este formulario, acepto que mis datos se usen para responder a
 c_press:"Contacto de prensa",c_tri:"Instrucciones de reciclaje",
 tri_p:"Válidas solo en Francia.",tri1:"Mostazas, condimentos y agraz en tarro de vidrio",tri2:"Mostazas en tarro de gres",tri3:"Vinagres en botella de vidrio",tri4:"Cubos de plástico",tri5:"Sacos de semillas de yute",
 f_addr:"31 rue du Faubourg Bretonnière, 21200 Beaune, Francia",f_legal:"Aviso legal",f_conf:"Privacidad",f_tri:"Reciclaje",f_press:"Prensa",f_pro:"Acceso profesional",f_bro:"Folleto",f_health:"Por su salud, coma al menos cinco frutas y verduras al día.",f_triman:"Nuestros envases se reciclan: no los tire con la basura doméstica.",f_by:"Propuesta de sitio por Neovera Studio",
-sel_t:"Mi selección",sel_empty:"Su selección está vacía. Añada una visita o mostazas.",sel_visits:"Visitas",sel_prod:"Mostazas para recoger en tienda",sel_prod_n:"Preparadas para usted en la tienda que elija. Precios en tienda.",sel_total:"Total de visitas",sel_go:"Confirmar mi reserva",sel_shop:"Recogida en",sel_ok:"Solicitud registrada. En la versión en línea, el pago seguro se hace aquí.",sel_rm:"Quitar",sel_new:"Nuevo",
+sel_hour:"Horario confirmado por correo electrónico.",cs_allerg:"Para los alérgenos, la lista de ingredientes figura en la etiqueta de cada tarro. Para una pregunta concreta, llámenos al +33 3 80 22 10 02.",cs_hello:"¡Hola! ¿En qué puedo ayudarle?",sel_t:"Mi selección",sel_empty:"Su selección está vacía. Añada una visita o mostazas.",sel_visits:"Visitas",sel_prod:"Mostazas para recoger en tienda",sel_prod_n:"Preparadas para usted en la tienda que elija. Precios en tienda.",sel_total:"Total de visitas",sel_go:"Confirmar mi reserva",sel_shop:"Recogida en",sel_ok:"¡Gracias! Su solicitud se ha enviado a la mostacera. Recibirá la confirmación por correo electrónico.",sel_rm:"Quitar",sel_new:"Nuevo",
 bk_t:"Reservar",bk_date:"Fecha",bk_lang:"Idioma de la visita",bk_fr:"Francés",bk_bi:"Bilingüe",bk_en:"Inglés",bk_add:"Añadir a mi selección",bk_grp_t:"Privatizar para un grupo",bk_grp_n:"Número de personas",bk_grp_send:"Enviar la solicitud",
 cs_name:"Fallot Consejo",cs_sub:"Le ayudo a elegir",cs_v:"Asistente virtual",
 cs_hi:"¡Hola! Soy Fallot Consejo, el asistente virtual de la mostacera. ¿Qué está cocinando o qué busca?",
@@ -927,7 +933,7 @@ c_rgpd:"Mit dem Absenden stimme ich zu, dass meine Angaben zur Beantwortung mein
 c_press:"Pressekontakt",c_tri:"Entsorgungshinweise",
 tri_p:"Nur in Frankreich gültig.",tri1:"Senfe, Würzmittel und Verjus im Glas",tri2:"Senfe im Steinguttopf",tri3:"Essige in der Glasflasche",tri4:"Kunststoffeimer",tri5:"Saatsäcke aus Jute",
 f_addr:"31 rue du Faubourg Bretonnière, 21200 Beaune, Frankreich",f_legal:"Impressum",f_conf:"Datenschutz",f_tri:"Entsorgung",f_press:"Presse",f_pro:"Fachhandel",f_bro:"Broschüre",f_health:"Für Ihre Gesundheit: Essen Sie täglich mindestens fünf Portionen Obst und Gemüse.",f_triman:"Unsere Verpackungen sind recycelbar: Bitte nicht in den Hausmüll.",f_by:"Website-Vorschlag von Neovera Studio",
-sel_t:"Meine Auswahl",sel_empty:"Ihre Auswahl ist leer. Fügen Sie eine Führung oder Senfe hinzu.",sel_visits:"Führungen",sel_prod:"Senfe zur Abholung im Laden",sel_prod_n:"Für Sie im Laden Ihrer Wahl vorbereitet. Preise im Laden.",sel_total:"Summe Führungen",sel_go:"Buchung bestätigen",sel_shop:"Abholung in",sel_ok:"Anfrage gespeichert. Auf der echten Website erfolgt hier die sichere Zahlung.",sel_rm:"Entfernen",sel_new:"Neu",
+sel_hour:"Uhrzeit wird per E-Mail bestätigt.",cs_allerg:"Allergene finden Sie in der Zutatenliste auf dem Etikett jedes Glases. Bei konkreten Fragen rufen Sie uns an: +33 3 80 22 10 02.",cs_hello:"Guten Tag! Wie kann ich helfen?",sel_t:"Meine Auswahl",sel_empty:"Ihre Auswahl ist leer. Fügen Sie eine Führung oder Senfe hinzu.",sel_visits:"Führungen",sel_prod:"Senfe zur Abholung im Laden",sel_prod_n:"Für Sie im Laden Ihrer Wahl vorbereitet. Preise im Laden.",sel_total:"Summe Führungen",sel_go:"Buchung bestätigen",sel_shop:"Abholung in",sel_ok:"Danke! Ihre Anfrage ist bei der Senfmanufaktur eingegangen. Die Bestätigung erhalten Sie per E-Mail.",sel_rm:"Entfernen",sel_new:"Neu",
 bk_t:"Buchen",bk_date:"Datum",bk_lang:"Sprache der Führung",bk_fr:"Französisch",bk_bi:"Zweisprachig",bk_en:"Englisch",bk_add:"Zur Auswahl hinzufügen",bk_grp_t:"Für eine Gruppe reservieren",bk_grp_n:"Anzahl Personen",bk_grp_send:"Anfrage senden",
 cs_name:"Fallot Beratung",cs_sub:"Ich helfe bei der Wahl",cs_v:"Virtueller Assistent",
 cs_hi:"Guten Tag! Ich bin Fallot Beratung, der virtuelle Assistent der Senfmanufaktur. Was kochen Sie, oder was suchen Sie?",
@@ -1048,7 +1054,7 @@ c_rgpd:"Inviando il modulo accetto che i miei dati siano usati per rispondere al
 c_press:"Contatto stampa",c_tri:"Istruzioni per il riciclo",
 tri_p:"Valide solo in Francia.",tri1:"Senapi, condimenti e agresto in vasetto di vetro",tri2:"Senapi in vaso di gres",tri3:"Aceti in bottiglia di vetro",tri4:"Secchi di plastica",tri5:"Sacchi di semi in iuta",
 f_addr:"31 rue du Faubourg Bretonnière, 21200 Beaune, Francia",f_legal:"Note legali",f_conf:"Privacy",f_tri:"Riciclo",f_press:"Stampa",f_pro:"Accesso pro",f_bro:"Brochure",f_health:"Per la vostra salute, mangiate almeno cinque porzioni di frutta e verdura al giorno.",f_triman:"I nostri imballaggi si riciclano: non gettateli nei rifiuti domestici.",f_by:"Proposta di sito di Neovera Studio",
-sel_t:"La mia selezione",sel_empty:"La selezione è vuota. Aggiungete una visita o delle senapi.",sel_visits:"Visite",sel_prod:"Senapi da ritirare in negozio",sel_prod_n:"Preparate per voi nel negozio scelto. Prezzi in negozio.",sel_total:"Totale visite",sel_go:"Conferma la prenotazione",sel_shop:"Ritiro a",sel_ok:"Richiesta registrata. Nella versione online, il pagamento sicuro avviene qui.",sel_rm:"Rimuovi",sel_new:"Nuovo",
+sel_hour:"Orario confermato via e-mail.",cs_allerg:"Per gli allergeni, l'elenco degli ingredienti è sull'etichetta di ogni vasetto. Per una domanda precisa, chiamateci al +33 3 80 22 10 02.",cs_hello:"Buongiorno! Come posso aiutarvi?",sel_t:"La mia selezione",sel_empty:"La selezione è vuota. Aggiungete una visita o delle senapi.",sel_visits:"Visite",sel_prod:"Senapi da ritirare in negozio",sel_prod_n:"Preparate per voi nel negozio scelto. Prezzi in negozio.",sel_total:"Totale visite",sel_go:"Conferma la prenotazione",sel_shop:"Ritiro a",sel_ok:"Grazie! La richiesta è stata inviata alla senaperia. Riceverete la conferma via e-mail.",sel_rm:"Rimuovi",sel_new:"Nuovo",
 bk_t:"Prenota",bk_date:"Data",bk_lang:"Lingua della visita",bk_fr:"Francese",bk_bi:"Bilingue",bk_en:"Inglese",bk_add:"Aggiungi alla selezione",bk_grp_t:"Privatizza per un gruppo",bk_grp_n:"Numero di persone",bk_grp_send:"Invia la richiesta",
 cs_name:"Fallot Consiglio",cs_sub:"Vi aiuto a scegliere",cs_v:"Assistente virtuale",
 cs_hi:"Buongiorno! Sono Fallot Consiglio, l'assistente virtuale della senaperia. Cosa cucinate, o cosa cercate?",
@@ -1169,7 +1175,7 @@ c_rgpd:"送信により、お問い合わせへの回答のために情報が使
 c_press:"報道関係",c_tri:"分別のご案内",
 tri_p:"フランス国内のみ有効。",tri1:"ガラス瓶入りのマスタード、調味料、ヴェルジュ",tri2:"陶器の壺入りマスタード",tri3:"ガラス瓶入りヴィネガー",tri4:"プラスチック製バケツ",tri5:"麻の種袋",
 f_addr:"31 rue du Faubourg Bretonnière, 21200 Beaune, France",f_legal:"法的情報",f_conf:"プライバシー",f_tri:"分別",f_press:"報道",f_pro:"業務用",f_bro:"カタログ",f_health:"健康のために、果物と野菜を一日5皿以上。",f_triman:"包装はリサイクルできます。家庭ごみに出さないでください。",f_by:"Neovera Studioによるサイト提案",
-sel_t:"マイセレクション",sel_empty:"セレクションは空です。見学やマスタードを追加してください。",sel_visits:"見学",sel_prod:"ショップで受け取るマスタード",sel_prod_n:"お選びのショップでご用意します。価格は店頭にて。",sel_total:"見学の合計",sel_go:"予約を確定",sel_shop:"受け取り店",sel_ok:"リクエストを受け付けました。公開版では、ここで安全にお支払いいただけます。",sel_rm:"削除",sel_new:"新商品",
+sel_hour:"時間帯はメールでご案内します。",cs_allerg:"アレルゲンは各瓶のラベルの原材料表示をご確認ください。詳しくは +33 3 80 22 10 02 までお電話ください。",cs_hello:"こんにちは。ご用件をどうぞ。",sel_t:"マイセレクション",sel_empty:"セレクションは空です。見学やマスタードを追加してください。",sel_visits:"見学",sel_prod:"ショップで受け取るマスタード",sel_prod_n:"お選びのショップでご用意します。価格は店頭にて。",sel_total:"見学の合計",sel_go:"予約を確定",sel_shop:"受け取り店",sel_ok:"ありがとうございます。リクエストをマスタード工房へ送信しました。確認メールをお送りします。",sel_rm:"削除",sel_new:"新商品",
 bk_t:"予約",bk_date:"日付",bk_lang:"案内言語",bk_fr:"フランス語",bk_bi:"二か国語",bk_en:"英語",bk_add:"セレクションに追加",bk_grp_t:"団体で貸切",bk_grp_n:"人数",bk_grp_send:"リクエストを送信",
 cs_name:"ファロ・コンシェルジュ",cs_sub:"選ぶお手伝いをします",cs_v:"バーチャルアシスタント",
 cs_hi:"こんにちは。マスタード工房のバーチャルアシスタント、ファロ・コンシェルジュです。何を作りますか？何をお探しですか？",
@@ -1329,6 +1335,7 @@ V.home=()=>`
    <div class="hero-ph">${img('h-fallo-300DPI',t('st2_t'),'',false)}</div>
    <img class="label-1840" src="img/tampon.webp" alt="Indépendante depuis 1840, familiale" width="145" height="150">
    <div class="hero-mill" id="heroMill">${mill('','')}</div>
+   <figure class="hero-pot" style="margin:0">${img('p-bourgogne-gres',t('proof3'),'',false)}</figure>
   </div>
  </div>
 </section>
@@ -1530,11 +1537,12 @@ function seedsOff(){cancelAnimationFrame(sraf);sraf=0;if(sobs)sobs.disconnect()}
 
 const toast=m=>{const e=$('#toast');e.textContent=m;e.classList.add('show');clearTimeout(e._t);e._t=setTimeout(()=>e.classList.remove('show'),2200)};
 function toggleP(id,b){const i=sel.p.indexOf(id);if(i<0){sel.p.push(id);toast(t('cat_added')+' · '+pname(prodById[id]))}else sel.p.splice(i,1);save();if(b){const on=sel.p.includes(id);b.classList.toggle('on',on);b.setAttribute('aria-pressed',on);b.innerHTML=(on?I.check+t('cat_added'):I.plus+t('cat_add'))}renderCart()}
+const fmtD=d=>{if(!d)return '';try{return new Intl.DateTimeFormat(lang,{weekday:'long',day:'numeric',month:'long',year:'numeric'}).format(new Date(d+'T12:00:00'))}catch(e){return d}};
 function renderCart(){
  const B=$('#cartB'),F=$('#cartF');
  if(!sel.v.length&&!sel.p.length){B.innerHTML=`<p>${t('sel_empty')}</p><p style="display:flex;gap:10px;flex-wrap:wrap"><a class="btn btn-p" href="#/visites" data-close>${t('h_c1')}</a><a class="btn btn-o" href="#/moutardes" data-close>${t('n_moutardes')}</a></p>`;F.innerHTML='';bindClose();return}
  let tot=0;
- B.innerHTML=(sel.v.length?`<h3 style="font-size:1.3rem">${t('sel_visits')}</h3>`+sel.v.map((v,i)=>{tot+=v.sum;return `<div class="ci"><div><b>${t('v'+v.n+'_t')}</b><br><small>${v.date||''} · ${t(v.lg)} · ${v.grp?t('v_group'):`${v.a}× ${t('v_adult')}, ${v.te}× ${t('v_teen')}, ${v.k}× ${t('v_kid')}`}</small></div><b>${v.sum} €</b><button class="rm" data-rmv="${i}">${t('sel_rm')}</button></div>`}).join(''):'')+
+ B.innerHTML=(sel.v.length?`<h3 style="font-size:1.3rem">${t('sel_visits')}</h3>`+sel.v.map((v,i)=>{tot+=v.sum;return `<div class="ci"><div><b>${t('v'+v.n+'_t')}</b><br><small>${fmtD(v.date)} · ${t(v.lg)} · ${v.grp?t('v_group'):[[v.a,'v_adult'],[v.te,'v_teen'],[v.k,'v_kid']].filter(x=>x[0]).map(x=>x[0]+' × '+t(x[1])).join(', ')}<br>${t('sel_hour')}</small></div><b>${v.sum} €</b><button class="rm" data-rmv="${i}">${t('sel_rm')}</button></div>`}).join(''):'')+
  (sel.p.length?`<h3 style="font-size:1.3rem;margin-top:22px">${t('sel_prod')}</h3><p style="font-size:.9rem;margin:4px 0">${t('sel_prod_n')}</p><label class="form" style="display:block;margin:8px 0"><span style="font-weight:500;font-size:.9rem">${t('sel_shop')}</span><select id="shopSel" style="width:100%;margin-top:6px"><option${sel.shop=='Beaune'?' selected':''}>Beaune</option><option${sel.shop=='Dijon'?' selected':''}>Dijon</option></select></label>`+sel.p.map((id,i)=>`<div class="ci"><span>${esc(pname(prodById[id]||['','?']))}</span><span></span><button class="rm" data-rmp="${i}">${t('sel_rm')}</button></div>`).join(''):'');
  F.innerHTML=`${sel.v.length?`<div class="tot"><span>${t('sel_total')}</span><span>${tot} €</span></div>`:''}<button class="btn btn-p" id="cartGo" style="width:100%;justify-content:center">${t('sel_go')}${I.arrow}</button><div id="cartMsg" aria-live="polite"></div>`;
  $$('[data-rmv]').forEach(b=>b.onclick=()=>{sel.v.splice(+b.dataset.rmv,1);save();renderCart()});
@@ -1554,15 +1562,15 @@ function modal(title,html){$('#modalT').textContent=title;$('#modalB').innerHTML
 function book(n){
  const d=new Date(Date.now()+864e5*2).toISOString().slice(0,10);
  const q=(k,lab,price)=>`<div class="qty"><span>${t(lab)} <small>(${price})</small></span><span class="ctl"><button type="button" data-q="${k}" data-d="-1" aria-label="−">−</button><b id="q-${k}">${k=='a'?2:0}</b><button type="button" data-q="${k}" data-d="1" aria-label="+">+</button></span></div>`;
- modal(t('v'+n+'_t'),`<form class="form" id="bk"><label>${t('bk_date')}<input type="date" name="d" value="${d}" min="${new Date().toISOString().slice(0,10)}"></label><label>${t('bk_lang')}<select name="l"><option value="bk_fr">${t('bk_fr')}</option><option value="bk_bi">${t('bk_bi')}</option>${n==2?`<option value="bk_en">${t('bk_en')}</option>`:''}</select></label>
+ modal(t('v'+n+'_t'),`<form class="form" id="bk" novalidate><label>${t('bk_date')}<input type="date" name="d" value="${d}" min="${new Date().toISOString().slice(0,10)}"></label><label>${t('bk_lang')}<select name="l"><option value="bk_fr">${t('bk_fr')}</option><option value="bk_bi">${t('bk_bi')}</option>${n==2?`<option value="bk_en">${t('bk_en')}</option>`:''}</select></label>
  <div class="full">${q('a','v_adult','12 €')}${q('te','v_teen','9 €')}${q('k','v_kid',t('v_free'))}</div>
  <div class="full tot" style="margin:6px 0 0"><span>${t('sel_total')}</span><span id="bkT">24 €</span></div>
  <button class="btn btn-p full" style="justify-content:center">${t('bk_add')}${I.arrow}</button>
  <p class="full" style="margin:14px 0 0;padding-top:16px;border-top:1px solid var(--gres-2)"><b>${t('bk_grp_t')}</b> · ${n==1?220:280} € · <button type="button" class="link" id="grp" style="background:none;border:0;padding:0">${t('bk_add')}</button></p></form>`);
  const c={a:2,te:0,k:0};const upd=()=>{['a','te','k'].forEach(k=>$('#q-'+k).textContent=c[k]);$('#bkT').textContent=(c.a*12+c.te*9)+' €'};
  $$('#bk [data-q]').forEach(b=>b.onclick=()=>{const k=b.dataset.q;c[k]=Math.max(0,Math.min(25,c[k]+ +b.dataset.d));upd()});
- const F=$('#bk');F.onsubmit=e=>{e.preventDefault();if(c.a+c.te+c.k<1)return;sel.v.push({n,date:F.d.value,lg:F.l.value,a:c.a,te:c.te,k:c.k,sum:c.a*12+c.te*9});save();closeAll();setTimeout(()=>{renderCart();openD($('#cart'))},460)};
- $('#grp').onclick=()=>{sel.v.push({n,date:F.d.value,lg:F.l.value,grp:1,sum:n==1?220:280});save();closeAll();setTimeout(()=>{renderCart();openD($('#cart'))},460)};
+ const F=$('#bk');const today=new Date().toISOString().slice(0,10);const okD=()=>{if(!F.d.value||F.d.value<today){F.d.value=today;F.d.setAttribute('aria-invalid','true');return false}F.d.removeAttribute('aria-invalid');return true};F.d.onchange=okD;F.onsubmit=e=>{e.preventDefault();okD();if(c.a+c.te+c.k<1)return;sel.v.push({n,date:F.d.value,lg:F.l.value,a:c.a,te:c.te,k:c.k,sum:c.a*12+c.te*9});save();closeAll();setTimeout(()=>{renderCart();openD($('#cart'))},460)};
+ $('#grp').onclick=()=>{okD();sel.v.push({n,date:F.d.value,lg:F.l.value,grp:1,sum:n==1?220:280});save();closeAll();setTimeout(()=>{renderCart();openD($('#cart'))},460)};
 }
 function recipe(i){const r=REC[i];modal(r.t,`<img class="rimg" src="img/${r.id}.webp" alt="${esc(r.t)}">${r.chef?`<p style="font-family:var(--t-label);font-size:1.1rem">${esc(r.chef)}</p>`:''}${lang!='fr'?`<p class="msg" style="background:var(--pate-pale)">${t('gs_frnote')}</p>`:''}${r.serv?`<p><b>${esc(r.serv)}</b></p>`:''}${r.ing?`<h3 style="font-size:1.4rem;margin:16px 0 6px">${t('gs_ing')}</h3><p lang="fr">${esc(r.ing)}</p>`:''}<h3 style="font-size:1.4rem;margin:16px 0 6px">${t('gs_steps')}</h3><div class="rsteps" lang="fr">${r.steps.map(([h,p])=>`${h?`<h4>${esc(h)}</h4>`:''}<p>${esc(p)}</p>`).join('')}</div>`)}
 
@@ -1585,7 +1593,9 @@ function csFlow(k){
 $('#csF').onsubmit=e=>{e.preventDefault();const v=$('#csIn').value.trim();if(!v)return;say(esc(v),1);$('#csIn').value='';const s=v.toLowerCase();
  const has=(...w)=>w.some(x=>s.includes(x));
  setTimeout(()=>{
- if(has('visit','parcours','tour','führ','visita','見学','réserv','book','reserv','prenot'))csFlow('vis');
+ if(has('allerg','gluten','アレル','fruits à coque','nuts','nüsse','frutos secos','frutta a guscio','sésame','sesame','lait','milk'))say(t('cs_allerg'));
+ else if(/^(bonjour|bonsoir|salut|hello|hi|hola|hallo|ciao|buongiorno|guten|こんにちは)/.test(s)){say(t('cs_hello'));menu()}
+ else if(has('visit','parcours','tour','führ','visita','見学','réserv','book','reserv','prenot'))csFlow('vis');
  else if(has('cadeau','gift','regalo','geschenk','ギフト','coffret'))csFlow('gift');
  else if(has('horaire','heure','hour','hora','öffn','orari','営業','ouvert','open'))csFlow('hours');
  else if(has('acheter','commander','buy','order','comprar','kaufen','acquist','買','revendeur','livr'))csFlow('where');
