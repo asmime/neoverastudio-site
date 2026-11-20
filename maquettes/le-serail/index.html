@@ -298,6 +298,17 @@ h1,h2,.h1,.h2,.h3{text-wrap:balance}
  table.protab td:nth-child(4){grid-column:2;grid-row:1/4;align-self:center}
 }
 :focus-visible{outline:2px solid var(--copper);outline-offset:2px}
+
+/* menu-horizontal-partout */
+@media (max-width:1300px){
+ header.site > div.wrap.bar{height:auto!important;row-gap:0!important}
+ header.site > div.wrap.bar > div:first-child{grid-column:1/-1!important;grid-row:2!important;width:100%!important;min-width:0!important;display:block!important}
+ header.site nav.main{display:flex!important;flex-direction:row!important;flex-wrap:nowrap!important;order:99!important;flex:1 1 100%!important;width:100%!important;max-width:none!important;position:static!important;transform:none!important;visibility:visible!important;opacity:1!important;height:auto!important;inset:auto!important;overflow-x:auto!important;overflow-y:hidden!important;scrollbar-width:none;gap:20px!important;margin:0!important;padding:10px 0 12px!important;background:none!important;box-shadow:none!important;border:0!important;border-top:1px solid color-mix(in srgb,currentColor 18%,transparent)!important;justify-content:flex-start!important;align-items:center!important;pointer-events:auto!important}
+ header.site nav.main::-webkit-scrollbar{display:none}
+ header.site nav.main > a,header.site nav.main > button{flex:none!important;white-space:nowrap!important;font-size:14px!important;padding:4px 0!important;margin:0!important;display:inline-block!important;border:0!important;width:auto!important;background:none!important}
+ header.site button.burger{display:none!important}
+}
+@media (max-width:700px){ header.site nav.main{-webkit-mask-image:linear-gradient(90deg,#000 85%,transparent);mask-image:linear-gradient(90deg,#000 85%,transparent);padding-right:30px!important} }
 </style>
 </head>
 <body>

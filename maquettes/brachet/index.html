@@ -10,6 +10,17 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css?v=15">
+<style>
+/* menu-horizontal-partout */
+@media (max-width:1300px){
+ header#nav > div.nav-in{flex-wrap:wrap!important;height:auto!important;row-gap:0!important}
+ header#nav nav.menu{display:flex!important;flex-direction:row!important;flex-wrap:nowrap!important;order:99!important;flex:1 1 100%!important;width:100%!important;max-width:none!important;position:static!important;transform:none!important;visibility:visible!important;opacity:1!important;height:auto!important;inset:auto!important;overflow-x:auto!important;overflow-y:hidden!important;scrollbar-width:none;gap:20px!important;margin:0!important;padding:10px 0 12px!important;background:none!important;box-shadow:none!important;border:0!important;border-top:1px solid color-mix(in srgb,currentColor 18%,transparent)!important;justify-content:flex-start!important;align-items:center!important;pointer-events:auto!important}
+ header#nav nav.menu::-webkit-scrollbar{display:none}
+ header#nav nav.menu > a,header#nav nav.menu > button{flex:none!important;white-space:nowrap!important;font-size:14px!important;padding:4px 0!important;margin:0!important;display:inline-block!important;border:0!important;width:auto!important;background:none!important}
+ header#nav #burger{display:none!important}
+}
+@media (max-width:700px){ header#nav nav.menu{-webkit-mask-image:linear-gradient(90deg,#000 85%,transparent);mask-image:linear-gradient(90deg,#000 85%,transparent);padding-right:30px!important} }
+</style>
 </head>
 <body class="lock">
 <div class="grain"></div>

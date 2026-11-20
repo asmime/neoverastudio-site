@@ -399,6 +399,16 @@ button.article:hover img{filter:brightness(.92)}.article.fixe{cursor:default}
 .apparition{opacity:0;transform:translateY(24px);transition:opacity .9s var(--ease),transform .9s var(--ease)}
 .apparition.vu{opacity:1;transform:none}
 @media (prefers-reduced-motion:reduce){.apparition{opacity:1;transform:none;transition:none}.vue.active{animation:none}*{scroll-behavior:auto!important}}
+
+/* menu-horizontal-partout */
+@media (max-width:1300px){
+ header.entete > div.entete-in{flex-wrap:wrap!important;height:auto!important;row-gap:0!important}
+ header.entete nav.nav{display:flex!important;flex-direction:row!important;flex-wrap:nowrap!important;order:99!important;flex:1 1 100%!important;width:100%!important;max-width:none!important;position:static!important;transform:none!important;visibility:visible!important;opacity:1!important;height:auto!important;inset:auto!important;overflow-x:auto!important;overflow-y:hidden!important;scrollbar-width:none;gap:20px!important;margin:0!important;padding:10px 0 12px!important;background:none!important;box-shadow:none!important;border:0!important;border-top:1px solid color-mix(in srgb,currentColor 18%,transparent)!important;justify-content:flex-start!important;align-items:center!important;pointer-events:auto!important}
+ header.entete nav.nav::-webkit-scrollbar{display:none}
+ header.entete nav.nav > a,header.entete nav.nav > button{flex:none!important;white-space:nowrap!important;font-size:14px!important;padding:4px 0!important;margin:0!important;display:inline-block!important;border:0!important;width:auto!important;background:none!important}
+ header.entete #ouvre-menu{display:none!important}
+}
+@media (max-width:700px){ header.entete nav.nav{-webkit-mask-image:linear-gradient(90deg,#000 85%,transparent);mask-image:linear-gradient(90deg,#000 85%,transparent);padding-right:30px!important} }
 </style>
 </head>
 <body>

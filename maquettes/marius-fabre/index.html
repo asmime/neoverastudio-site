@@ -324,6 +324,16 @@ select{appearance:none;-webkit-appearance:none;background-image:url("data:image/
 .navadv{display:inline-flex;align-items:center;gap:8px;color:var(--navy)!important;font-weight:600}
 .navadv .dot{width:8px;height:8px;border-radius:50%;background:var(--navy);display:inline-block}
 @media(max-width:760px){.adv-b span small{display:none}.adv-bub{bottom:76px;max-width:240px;left:auto;right:16px}}
+
+/* menu-horizontal-partout */
+@media (max-width:1300px){
+ header.site > div.hd{height:auto!important;row-gap:0!important}
+ #nav{display:flex!important;flex-direction:row!important;flex-wrap:nowrap!important;order:99!important;flex:1 1 100%!important;width:100%!important;max-width:none!important;grid-column:1/-1!important;position:static!important;transform:none!important;visibility:visible!important;opacity:1!important;height:auto!important;inset:auto!important;overflow-x:auto!important;overflow-y:hidden!important;scrollbar-width:none;gap:20px!important;margin:0!important;padding:10px 0 12px!important;background:none!important;box-shadow:none!important;border:0!important;border-top:1px solid color-mix(in srgb,currentColor 18%,transparent)!important;justify-content:flex-start!important;align-items:center!important}
+ #nav::-webkit-scrollbar{display:none}
+ #nav a{flex:none!important;white-space:nowrap!important;font-size:14px!important;padding:4px 0!important;margin:0!important;display:inline-block!important;border:0!important;width:auto!important}
+ #burger{display:none!important}
+}
+@media (max-width:700px){ #nav{-webkit-mask-image:linear-gradient(90deg,#000 85%,transparent);mask-image:linear-gradient(90deg,#000 85%,transparent);padding-right:30px!important} }
 </style>
 </head>
 <body>

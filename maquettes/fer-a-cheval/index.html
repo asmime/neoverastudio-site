@@ -251,6 +251,16 @@ details p{color:var(--mute);margin-top:10px;font-size:15px}
 .revhead b{white-space:nowrap}
 @media(max-width:760px){.revhead{flex-wrap:wrap;gap:8px}.gstrip{grid-template-columns:repeat(4,1fr);gap:6px;margin-bottom:28px}.gstrip img{aspect-ratio:2/3}.labels div{padding:18px 14px;font-size:13px;line-height:1.2;gap:8px}}
 .adv-b.mini span{display:none}.adv-b.mini{padding:6px}
+
+/* menu-horizontal-partout */
+@media (max-width:1300px){
+ header > div.wrap.hd{height:auto!important;row-gap:0!important}
+ #nav{display:flex!important;flex-direction:row!important;flex-wrap:nowrap!important;order:99!important;flex:1 1 100%!important;width:100%!important;max-width:none!important;grid-column:1/-1!important;position:static!important;transform:none!important;visibility:visible!important;opacity:1!important;height:auto!important;inset:auto!important;overflow-x:auto!important;overflow-y:hidden!important;scrollbar-width:none;gap:20px!important;margin:0!important;padding:10px 0 12px!important;background:none!important;box-shadow:none!important;border:0!important;border-top:1px solid color-mix(in srgb,currentColor 18%,transparent)!important;justify-content:flex-start!important;align-items:center!important}
+ #nav::-webkit-scrollbar{display:none}
+ #nav a{flex:none!important;white-space:nowrap!important;font-size:14px!important;padding:4px 0!important;margin:0!important;display:inline-block!important;border:0!important;width:auto!important}
+ button.burger{display:none!important}
+}
+@media (max-width:700px){ #nav{-webkit-mask-image:linear-gradient(90deg,#000 85%,transparent);mask-image:linear-gradient(90deg,#000 85%,transparent);padding-right:30px!important} }
 </style>
 </head>
 <body>

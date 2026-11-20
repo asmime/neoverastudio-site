@@ -419,6 +419,16 @@ section.bloc{padding:clamp(64px,9vw,120px) 0}
 .saisie input{flex:1;height:46px;border:1.5px solid var(--pierre-fonce);border-radius:999px;padding:0 16px}
 .saisie input:focus{outline:none;border-color:var(--rouge)}
 .saisie button{width:46px;height:46px;border-radius:50%;border:0;background:var(--rouge);color:#fff;cursor:pointer;display:inline-flex;align-items:center;justify-content:center}
+
+/* menu-horizontal-partout */
+@media (max-width:1300px){
+ header.top > div.wrap{flex-wrap:wrap!important;height:auto!important;row-gap:0!important}
+ header.top nav.nav{display:flex!important;flex-direction:row!important;flex-wrap:nowrap!important;order:99!important;flex:1 1 100%!important;width:100%!important;max-width:none!important;position:static!important;transform:none!important;visibility:visible!important;opacity:1!important;height:auto!important;inset:auto!important;overflow-x:auto!important;overflow-y:hidden!important;scrollbar-width:none;gap:20px!important;margin:0!important;padding:10px 0 12px!important;background:none!important;box-shadow:none!important;border:0!important;border-top:1px solid color-mix(in srgb,currentColor 18%,transparent)!important;justify-content:flex-start!important;align-items:center!important;pointer-events:auto!important}
+ header.top nav.nav::-webkit-scrollbar{display:none}
+ header.top nav.nav > a,header.top nav.nav > button{flex:none!important;white-space:nowrap!important;font-size:14px!important;padding:4px 0!important;margin:0!important;display:inline-block!important;border:0!important;width:auto!important;background:none!important}
+ header.top #burger{display:none!important}
+}
+@media (max-width:700px){ header.top nav.nav{-webkit-mask-image:linear-gradient(90deg,#000 85%,transparent);mask-image:linear-gradient(90deg,#000 85%,transparent);padding-right:30px!important} }
 </style>
 </head>
 <body>
