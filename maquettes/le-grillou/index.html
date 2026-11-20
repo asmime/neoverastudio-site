@@ -1,0 +1,1127 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Camping Le Grillou — Proposition Neovera Studio</title>
+<meta name="description" content="Camping 3 étoiles à Rosières (Ardèche du Sud) : parc aquatique et toboggan de 47 m, chalets climatisés, emplacements, rivière à 150 m.">
+<meta name="theme-color" content="#0C3A36">
+<link rel="preload" href="fonts/unbounded.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/manrope.woff2" as="font" type="font/woff2" crossorigin>
+<style>@font-face{font-family:'Unbounded';font-style:normal;font-weight:200 900;font-display:swap;src:url(fonts/unbounded.woff2) format('woff2')}
+@font-face{font-family:'Manrope';font-style:normal;font-weight:200 800;font-display:swap;src:url(fonts/manrope.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:'Manrope';font-style:normal;font-weight:200 800;font-display:swap;src:url(fonts/manrope-ext.woff2) format('woff2');unicode-range:U+0100-02AF,U+0304,U+0308,U+0329,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
+:root{
+ --granit:#ECE9E2;--granit2:#DCD7CC;--pierre:#BDB6A7;--beaume:#0C3A36;--beaume2:#14524C;--beaume3:#1E6A62;
+ --tube:#B8D53B;--tube2:#D7EA86;--bassin:#1B9CBD;--bassin-d:#0B6680;--soleil:#F4B400;--ink:#12201E;--muted:#4B5B58;--blanc:#FBFAF7;
+ --r:22px;--fd:'Unbounded',system-ui,sans-serif;--fb:'Manrope',system-ui,sans-serif;
+ --ease:cubic-bezier(.16,1,.3,1);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+html,body{overflow-x:clip}
+body{margin:0;background:var(--granit);color:var(--ink);font:400 17px/1.6 var(--fb);font-feature-settings:"tnum" 0}
+img{max-width:100%;display:block}
+a{color:var(--bassin-d);text-underline-offset:.2em;text-decoration-thickness:1.5px}
+a:hover{color:var(--beaume)}
+::selection{background:var(--tube);color:var(--ink)}
+:focus-visible{outline:3px solid var(--bassin);outline-offset:3px;border-radius:6px}
+html{scrollbar-color:var(--beaume2) var(--granit2)}
+::-webkit-scrollbar{width:11px;height:8px}::-webkit-scrollbar-track{background:var(--granit2)}::-webkit-scrollbar-thumb{background:var(--beaume2);border-radius:8px;border:2px solid var(--granit2)}
+.skip{position:absolute;left:-999px;top:8px;background:var(--ink);color:#fff;padding:8px 14px;border-radius:8px;z-index:200}.skip:focus{left:8px}
+h1,h2,h3{font-family:var(--fd);font-weight:700;letter-spacing:-.02em;line-height:1.08;text-wrap:balance;margin:0}
+h1{font-size:clamp(2.1rem,5.2vw,4.4rem)}
+h2{font-size:clamp(1.6rem,3.4vw,2.7rem)}
+h3{font-size:clamp(1.12rem,1.7vw,1.35rem);letter-spacing:-.01em}
+p{margin:0}
+.wrap{width:min(1180px,100% - 40px);margin-inline:auto}
+.num{font-variant-numeric:tabular-nums}
+
+/* boutons */
+.btn{display:inline-flex;align-items:center;gap:.55em;font:700 .98rem/1 var(--fb);padding:15px 22px;border-radius:999px;border:2px solid transparent;text-decoration:none;cursor:pointer;transition:transform .35s var(--ease),background .25s,color .25s,box-shadow .35s var(--ease);white-space:nowrap}
+.btn svg{width:18px;height:18px;flex:none}
+.btn-tube{background:var(--tube);color:var(--ink);box-shadow:0 8px 22px -10px rgba(80,110,0,.55)}
+.btn-tube:hover{background:var(--tube2);color:var(--ink);transform:translateY(-2px)}
+.btn-ghost{border-color:currentColor;color:inherit;background:transparent}
+.btn-ghost:hover{background:rgba(255,255,255,.1);color:inherit}
+.btn-ink{background:var(--beaume);color:#fff}.btn-ink:hover{background:var(--beaume2);color:#fff}
+.lnk{font-weight:700;color:var(--bassin-d);text-decoration:none;display:inline-flex;align-items:center;gap:.4em;border-bottom:2px solid var(--tube);padding-bottom:2px}
+.lnk svg{width:18px;height:18px;flex:none}
+.lnk:hover{color:var(--beaume);border-color:var(--bassin)}
+.on-dark .lnk{color:var(--tube)}.on-dark .lnk svg{width:18px;height:18px;flex:none}
+.lnk:hover{color:#fff}
+
+/* en-tête */
+header.top{position:sticky;top:0;z-index:50;background:#fff;box-shadow:0 6px 24px -18px rgba(12,58,54,.5)}
+.top .r1{display:flex;align-items:center;gap:14px;padding:10px 20px;max-width:1440px;margin:auto}
+.logo{display:block;flex:none}.logo img{height:46px;width:auto}
+.top .sp{flex:1}
+.langsel{display:flex;align-items:center;gap:6px;border:2px solid var(--granit2);border-radius:999px;padding:4px 6px 4px 12px;color:var(--ink)}
+.langsel svg{width:18px;height:18px;color:var(--beaume3)}
+.langsel select{appearance:none;border:0;background:transparent;font:700 .92rem var(--fb);color:var(--ink);padding:6px 22px 6px 2px;cursor:pointer;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8'%3E%3Cpath d='M1 1l5 5 5-5' fill='none' stroke='%230C3A36' stroke-width='2'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 4px center}
+.tel{font-weight:700;color:var(--beaume);text-decoration:none;display:flex;align-items:center;gap:6px}
+.tel svg{width:18px;height:18px}
+.top .btn{padding:12px 18px}
+nav.menu{border-top:1px solid var(--granit2);position:relative}
+nav.menu ul{list-style:none;margin:0 auto;padding:0 14px;display:flex;gap:2px;overflow-x:auto;scrollbar-width:none;justify-content:center;max-width:1440px}
+nav.menu ul::-webkit-scrollbar{display:none}
+nav.menu a{display:block;padding:12px 11px;font:600 .9rem/1 var(--fb);color:var(--ink);text-decoration:none;white-space:nowrap;border-bottom:3px solid transparent}
+nav.menu a:hover{color:var(--bassin-d)}
+nav.menu a[aria-current=page]{border-color:var(--tube);color:var(--beaume)}
+nav.menu::after{content:"";position:absolute;right:0;top:0;bottom:0;width:36px;background:linear-gradient(90deg,rgba(255,255,255,0),#fff);pointer-events:none;opacity:0}
+@media (max-width:1240px){nav.menu ul{justify-content:flex-start}nav.menu::after{opacity:1}}
+@media (max-width:760px){.tel span,.top .btn .lbl-long{display:none}.logo img{height:38px}.top .r1{padding:8px 12px;gap:8px}.langsel{padding:2px 4px 2px 8px}.langsel select{font-size:.85rem;max-width:96px}}
+@media (max-width:420px){.tel{display:none}.top .btn{padding:11px 14px}}
+
+/* héros */
+.hero{background:var(--beaume);color:#fff;position:relative;z-index:3}
+.hero .hin{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center;padding:clamp(40px,7vw,90px) 0 clamp(60px,8vw,110px)}
+.hero h1{max-width:13ch}
+.hero .sub{font-size:1.12rem;color:#D6E5E1;max-width:34em;margin-top:22px}
+.hero .open{display:inline-flex;align-items:center;gap:8px;margin-top:22px;font-weight:700;color:var(--tube2)}
+.hero .open svg{width:18px;height:18px}
+.hero .ctas{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+.rate{display:inline-flex;align-items:center;gap:10px;margin-top:26px;color:#fff;text-decoration:none;font-weight:600}
+.rate .st{display:flex;gap:2px;color:var(--soleil)}.rate .st svg{width:16px;height:16px}
+.rate:hover{color:var(--tube2)}
+.tube-eye{position:relative;justify-self:end;width:min(500px,80vw);aspect-ratio:1;margin-right:-60px;margin-bottom:-150px;z-index:3}
+.tube-eye .ph{position:absolute;inset:0;border-radius:50%;overflow:hidden;box-shadow:0 30px 60px -30px rgba(0,0,0,.6),inset 0 0 0 1px rgba(255,255,255,.1)}
+.tube-eye .ph img{width:100%;height:100%;object-fit:cover;transform:scale(1.15);transition:transform 1.6s var(--ease)}
+.tube-eye.go .ph img{transform:scale(1.02)}
+.tube-eye .rim{position:absolute;inset:-14px;border-radius:50%;border:14px solid var(--tube);opacity:.95}
+
+.tube-eye .tag{position:absolute;left:-8px;bottom:8%;background:#fff;color:var(--ink);border-radius:16px;padding:10px 14px;font:700 .82rem/1.25 var(--fb);box-shadow:0 14px 30px -14px rgba(0,0,0,.5)}
+.tube-eye .tag b{display:block;font:800 1.5rem/1 var(--fd);color:var(--beaume)}
+@media (max-width:900px){.hero .hin{grid-template-columns:1fr}.tube-eye{order:-1;width:min(290px,68vw);margin:6px 0 0;justify-self:center}.hero h1{max-width:none}}
+
+/* descente : la ligne du toboggan */
+.descente{position:relative}
+.descente>svg.voie{position:absolute;top:0;left:0;width:100%;height:100%;pointer-events:none;z-index:2;overflow:visible}
+.voie .fond{fill:none;stroke:rgba(184,213,59,.28);stroke-width:16;stroke-linecap:round}
+.voie .trace{fill:none;stroke:var(--tube);stroke-width:16;stroke-linecap:round}
+.voie .eau{fill:none;stroke:rgba(255,255,255,.75);stroke-width:3;stroke-linecap:round;stroke-dasharray:2 22}
+.metre{position:fixed;left:18px;bottom:22px;z-index:40;background:var(--beaume);color:#fff;border-radius:18px;padding:10px 14px 9px;text-align:center;box-shadow:0 14px 30px -16px rgba(0,0,0,.6);opacity:0;transform:translateY(10px);transition:opacity .4s,transform .4s var(--ease);pointer-events:none}
+.metre.on{opacity:1;transform:none}
+.metre b{display:block;font:800 1.6rem/1 var(--fd);color:var(--tube)}
+.metre small{font:600 .7rem/1.2 var(--fb);color:#CFE1DC;display:block;max-width:9em}
+@media (max-width:760px){.descente .wrap{width:auto;margin-left:30px;margin-right:18px}.descente .riviere .wrap{margin-left:30px}
+.metre{left:10px;bottom:84px;padding:7px 10px}.metre b{font-size:1.15rem}.metre small{font-size:.62rem}}
+
+.sec{padding:clamp(64px,9vw,120px) 0;position:relative;z-index:1}
+.sec .lead{font-size:1.1rem;color:var(--muted);max-width:38em;margin-top:18px}
+.on-dark{background:var(--beaume);color:#fff}.on-dark .lead,.on-dark p{color:#D3E3DF}
+.split{display:grid;grid-template-columns:1fr 1fr;gap:clamp(28px,5vw,70px);align-items:center}
+@media (max-width:860px){.split{grid-template-columns:1fr}}
+.couloirs{list-style:none;padding:0;margin:26px 0 0;display:grid;grid-template-columns:1fr 1fr;gap:4px 22px}
+.couloirs li{display:flex;align-items:center;gap:10px;padding:10px 0;font-weight:700;border-bottom:1px solid var(--granit2)}
+.couloirs li svg{width:22px;height:22px;flex:none;color:var(--bassin-d)}
+.couloirs li span{font-weight:500;color:var(--muted)}
+@media (max-width:520px){.couloirs{grid-template-columns:1fr}}
+.chip{display:inline-flex;align-items:center;gap:8px;background:#fff;border-radius:999px;padding:8px 14px;font-weight:700;font-size:.92rem;margin-top:22px}
+.chip svg{width:17px;height:17px;color:var(--bassin-d)}
+.mosaic{display:grid;grid-template-columns:1.25fr 1fr;grid-template-rows:auto auto;gap:12px}
+.mosaic figure{margin:0;border-radius:var(--r);overflow:hidden;background:var(--granit2)}
+.mosaic figure img{width:100%;height:100%;object-fit:cover}
+.mosaic .a{grid-row:span 2;aspect-ratio:3/4}
+.mosaic .b,.mosaic .c{aspect-ratio:4/3}
+
+/* rail chalets */
+.rail{display:grid;grid-template-columns:repeat(5,1fr);gap:16px;overflow-x:auto;padding:6px 2px 18px;margin-top:34px;scroll-snap-type:x mandatory}
+.rail a{scroll-snap-align:start;text-decoration:none;color:var(--ink);background:#fff;border-radius:var(--r);overflow:hidden;display:flex;flex-direction:column;transition:transform .4s var(--ease),box-shadow .4s var(--ease)}
+.rail a:hover{transform:translateY(-4px);box-shadow:0 22px 40px -26px rgba(12,58,54,.55);color:var(--ink)}
+.rail .plan{background:#fff;padding:10px 12px 0}.rail .plan img{aspect-ratio:auto;height:70px;object-fit:contain;width:auto}
+@media (max-width:1100px){.rail{grid-template-columns:none;grid-auto-flow:column;grid-auto-columns:minmax(250px,1fr);overflow-x:auto}}
+.rail img{aspect-ratio:4/3;object-fit:cover;width:100%}
+.rail .t{padding:16px 18px 18px;display:flex;flex-direction:column;gap:6px;flex:1}
+.rail .t h3{font-size:1.15rem}
+.rail .meta{color:var(--muted);font-size:.92rem}
+.rail .px{margin-top:auto;font-weight:800;color:var(--beaume)}
+.rail .px small{font-weight:600;color:var(--muted)}
+.emp-band{display:grid;grid-template-columns:.9fr 1.1fr;gap:0;margin-top:22px;background:var(--beaume);color:#fff;border-radius:var(--r);overflow:hidden}
+.emp-band img{height:100%;width:100%;object-fit:cover;min-height:220px}
+.emp-band .t{padding:clamp(22px,4vw,40px);display:flex;flex-direction:column;gap:12px;justify-content:center}
+.emp-band p{color:#D3E3DF}
+@media (max-width:760px){.emp-band{grid-template-columns:1fr}}
+
+/* rivière */
+.riviere{position:relative;min-height:min(86vh,760px);display:flex;align-items:flex-end;color:#fff}
+.riviere>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.riviere::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(12,58,54,0) 40%,rgba(12,58,54,.82));z-index:1}
+.riviere .wrap{position:relative;z-index:2;padding-bottom:clamp(40px,6vw,80px)}
+.riviere .box{max-width:560px}
+.riviere p{color:#E6F0ED;margin-top:16px;font-size:1.08rem}
+.riviere .dist{font:800 clamp(3rem,9vw,6rem)/.9 var(--fd);color:var(--tube);letter-spacing:-.04em}
+
+.duo{display:grid;grid-template-columns:1fr 1fr;gap:clamp(24px,5vw,64px)}
+.duo article{display:flex;flex-direction:column;gap:14px}
+.duo article img{margin-bottom:12px;border-radius:var(--r);aspect-ratio:4/3;object-fit:cover;width:100%}
+.duo article:nth-child(2){margin-top:clamp(0px,8vw,110px)}
+@media (max-width:760px){.duo{grid-template-columns:1fr}.duo article:nth-child(2){margin-top:0}}
+
+.village{display:grid;grid-template-columns:1.2fr .8fr;gap:clamp(24px,4vw,56px);align-items:center}
+.village img{border-radius:var(--r);aspect-ratio:4/3;object-fit:cover}
+@media (max-width:760px){.village{grid-template-columns:1fr}}
+
+/* confiance */
+.trust{margin-top:22px;font:600 clamp(1.15rem,2.1vw,1.55rem)/1.6 var(--fb);max-width:46em}
+.trust b{font-weight:800;color:var(--beaume)}
+.trust .sep{color:var(--tube);font-weight:800;margin:0 .35em}
+.trust a{color:inherit;text-decoration-color:var(--tube)}
+
+/* calculateur */
+.calc{background:#fff;border-radius:28px;padding:clamp(22px,4vw,44px);display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(22px,4vw,48px);margin-top:30px;box-shadow:0 30px 60px -44px rgba(12,58,54,.6)}
+@media (max-width:860px){.calc{grid-template-columns:1fr}}
+.fld{display:flex;flex-direction:column;gap:6px;margin-bottom:16px}
+.fld label{font-weight:700;font-size:.92rem}
+.fld select,.fld input,.fld textarea{font:500 1rem var(--fb);padding:12px 14px;border:2px solid var(--granit2);border-radius:14px;background:var(--blanc);color:var(--ink);width:100%}
+.fld select:focus,.fld input:focus,.fld textarea:focus{border-color:var(--bassin);outline:none;box-shadow:0 0 0 4px rgba(27,156,189,.18)}
+.row3{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.row2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+@media (max-width:520px){.row3{grid-template-columns:1fr 1fr}}
+.step{display:flex;align-items:center;border:2px solid var(--granit2);border-radius:14px;background:var(--blanc);overflow:hidden}
+.step button{width:44px;height:46px;border:0;background:transparent;font:700 1.2rem var(--fb);color:var(--beaume);cursor:pointer}
+.step button:hover{background:var(--granit)}
+.step button:disabled{color:var(--pierre);cursor:not-allowed;background:transparent}
+.step output{flex:1;text-align:center;font-weight:800}
+.ticket{background:var(--beaume);color:#fff;border-radius:22px;padding:24px;display:flex;flex-direction:column;gap:10px}
+.ticket .l{display:flex;justify-content:space-between;gap:12px;color:#D3E3DF;font-size:.95rem}
+.ticket .l b{color:#fff;font-variant-numeric:tabular-nums}
+.ticket .tot{border-top:2px dashed rgba(255,255,255,.25);padding-top:14px;margin-top:4px;display:flex;justify-content:space-between;align-items:baseline}
+.ticket .tot b{font:800 2rem/1 var(--fd);color:var(--tube);font-variant-numeric:tabular-nums}
+.ticket .warn{background:rgba(244,180,0,.16);color:#FFE7A3;border-radius:12px;padding:10px 12px;font-size:.9rem}
+.ticket .note{font-size:.82rem;color:#A9C6BF}
+.ticket .btn{justify-content:center;margin-top:6px}
+
+/* arrivée */
+.arrivee{background:var(--beaume);color:#fff;text-align:center;padding:clamp(80px,11vw,140px) 0;position:relative;overflow:hidden}
+.arrivee h2{max-width:16ch;margin:auto}
+.arrivee p{color:#D3E3DF;max-width:34em;margin:18px auto 0}
+.arrivee .ctas{display:flex;justify-content:center;flex-wrap:wrap;gap:12px;margin-top:30px}
+.plouf{position:absolute;left:50%;top:0;width:10px;height:10px;transform:translateX(-50%)}
+.plouf i{position:absolute;left:50%;top:50%;border:3px solid var(--tube);border-radius:50%;width:20px;height:20px;transform:translate(-50%,-50%) scale(.2);opacity:0}
+.arrivee.go .plouf i{animation:onde 2.4s var(--ease) forwards}
+.arrivee.go .plouf i:nth-child(2){animation-delay:.25s}.arrivee.go .plouf i:nth-child(3){animation-delay:.5s}
+@keyframes onde{0%{opacity:.9;transform:translate(-50%,-50%) scale(.2)}100%{opacity:0;transform:translate(-50%,-50%) scale(18)}}
+
+/* pages intérieures */
+.ph-head{background:var(--beaume);color:#fff;padding:clamp(40px,6vw,76px) 0 clamp(40px,6vw,70px)}
+.ph-head .wrap{display:grid;grid-template-columns:1.2fr .8fr;gap:clamp(24px,4vw,56px);align-items:center}
+.ph-head .btn{margin-top:22px}
+.ph-head .pic{border-radius:var(--r);overflow:hidden;aspect-ratio:4/3;box-shadow:0 30px 50px -30px rgba(0,0,0,.6)}
+.ph-head .pic img{width:100%;height:100%;object-fit:cover}
+.ph-head.nopic .wrap{grid-template-columns:1fr}
+.ph-head p{color:#D3E3DF;max-width:40em;margin-top:16px;font-size:1.06rem}
+.page{padding:clamp(40px,6vw,80px) 0 clamp(100px,11vw,130px)}
+.prose{max-width:68ch}
+.prose p+p{margin-top:14px}
+.dots{list-style:none;padding:0;margin:14px 0 0;display:flex;flex-wrap:wrap;gap:8px}
+.dots li{max-width:100%;background:#fff;border-radius:999px;padding:8px 14px;font-weight:600;font-size:.94rem}
+.on-dark .dots li{background:rgba(255,255,255,.1);color:#fff}
+.block{margin-top:44px}
+.block h2{font-size:clamp(1.3rem,2.4vw,1.8rem);margin-bottom:6px}
+.photos{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:10px;margin-top:22px}
+.photos button{padding:0;border:0;border-radius:16px;overflow:hidden;cursor:zoom-in;background:var(--granit2);aspect-ratio:4/3}
+.photos img{width:100%;height:100%;object-fit:cover;transition:transform .6s var(--ease)}
+.photos button:hover img{transform:scale(1.05)}
+.gal{columns:3 280px;column-gap:12px;margin-top:28px}
+.gal button{display:block;width:100%;padding:0;border:0;margin:0 0 12px;border-radius:16px;overflow:hidden;cursor:zoom-in;background:var(--granit2)}
+.gal img{width:100%;height:auto}
+table.tar{width:100%;border-collapse:collapse;background:#fff;border-radius:18px;overflow:hidden;font-variant-numeric:tabular-nums;margin-top:16px}
+table.tar th,table.tar td{padding:12px 14px;text-align:left;border-bottom:1px solid var(--granit2);font-size:.95rem;vertical-align:top}
+table.tar thead th{background:var(--beaume);color:#fff;font-weight:700;font-size:.85rem}
+table.tar td.p,table.tar th.p{text-align:right;white-space:nowrap}
+table.tar tr:last-child td{border-bottom:0}
+.tscroll{overflow-x:auto;border-radius:18px}
+.tscroll table{min-width:620px}
+.tscroll td:first-child{min-width:190px}
+@media (max-width:640px){.tscroll table.cards{min-width:0}table.cards thead{display:none}table.cards,table.cards tbody,table.cards tr,table.cards td{display:block;width:100%}
+table.cards tr{border-bottom:6px solid var(--granit)}table.cards td{display:flex;justify-content:space-between;gap:12px;border-bottom:1px solid var(--granit2);text-align:right!important}
+table.cards td:first-child{display:block;text-align:left!important;background:var(--beaume);color:#fff;min-width:0}table.cards td:first-child a{color:var(--tube)}table.cards td:first-child .small{color:#CFE1DC}
+table.cards td[data-l]::before{content:attr(data-l);font-weight:600;color:var(--muted);text-align:left}}
+@media (max-width:760px){.ph-head .wrap{grid-template-columns:1fr}.ph-head .pic{aspect-ratio:16/9}}
+.small{font-size:.9rem;color:var(--muted);margin-top:10px}
+
+/* fiches location */
+.loclist{display:flex;flex-direction:column;gap:22px;margin-top:10px}
+.locrow{display:grid;grid-template-columns:1fr 1.1fr;background:#fff;border-radius:var(--r);overflow:hidden}
+.locrow img{width:100%;height:100%;object-fit:cover;min-height:240px}
+.locrow .t{padding:clamp(20px,3vw,34px);display:flex;flex-direction:column;gap:10px}
+.locrow .facts{display:flex;flex-wrap:wrap;gap:8px 18px;color:var(--muted);font-weight:600;font-size:.94rem}
+.locrow .act{display:flex;flex-wrap:wrap;gap:10px;margin-top:auto;padding-top:8px;align-items:center}
+.locrow .px{font-weight:800;color:var(--beaume);margin-right:auto}
+@media (max-width:760px){.locrow{grid-template-columns:1fr}.locrow img{aspect-ratio:4/3;min-height:0}}
+.fiche{display:grid;grid-template-columns:1.15fr .85fr;gap:clamp(24px,4vw,52px);align-items:start}
+@media (max-width:900px){.fiche{grid-template-columns:1fr}}
+.fiche>*,.split>*,.contact>*,.calc>*{min-width:0}
+.viewer .main{border-radius:var(--r);overflow:hidden;aspect-ratio:4/3;background:var(--granit2)}
+.viewer .main img{width:100%;height:100%;object-fit:cover}
+.viewer .thumbs{display:flex;gap:8px;margin-top:10px;overflow-x:auto;padding-bottom:6px}
+.viewer .thumbs button{flex:none;width:84px;aspect-ratio:4/3;border:3px solid transparent;border-radius:12px;overflow:hidden;padding:0;cursor:pointer;background:#fff}
+.viewer .thumbs button[aria-pressed=true]{border-color:var(--tube)}
+.viewer .thumbs img{width:100%;height:100%;object-fit:cover}
+dl.specs{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin:20px 0}
+dl.specs div{background:#fff;border-radius:16px;padding:12px}
+dl.specs dt{font-size:.8rem;color:var(--muted);font-weight:600}
+dl.specs dd{margin:2px 0 0;font:800 1.15rem/1.1 var(--fd);color:var(--beaume)}
+@media (max-width:520px){dl.specs{grid-template-columns:1fr 1fr}}
+.side{position:sticky;top:120px;background:#fff;border-radius:var(--r);padding:24px;display:flex;flex-direction:column;gap:12px}
+.side .btn{justify-content:center}
+.back{display:inline-flex;align-items:center;gap:6px;font-weight:700;text-decoration:none;color:var(--tube2);margin-bottom:14px}
+.back svg{width:18px;height:18px}
+.back:hover{color:#fff}
+
+/* FAQ */
+.faq details{background:#fff;border-radius:16px;margin-top:10px}
+.faq summary{list-style:none;cursor:pointer;padding:16px 50px 16px 18px;font-weight:700;position:relative}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"";position:absolute;right:18px;top:50%;width:12px;height:12px;border-right:2.5px solid var(--bassin-d);border-bottom:2.5px solid var(--bassin-d);transform:translateY(-70%) rotate(45deg);transition:transform .3s var(--ease)}
+.faq details[open] summary::after{transform:translateY(-30%) rotate(-135deg)}
+.faq details p{padding:0 18px 18px;color:var(--muted)}
+.faq h2{margin-top:36px;font-size:1.4rem}
+
+/* contact */
+.contact{display:grid;grid-template-columns:1fr 1fr;gap:clamp(24px,4vw,52px)}
+@media (max-width:860px){.contact{grid-template-columns:1fr}}
+.map{border-radius:var(--r);overflow:hidden;aspect-ratio:4/3;background:var(--granit2);margin-top:20px}
+.map iframe{width:100%;height:100%;border:0}
+.form{background:#fff;border-radius:var(--r);padding:clamp(20px,3vw,32px)}
+.msg{border-radius:12px;padding:10px 12px;font-size:.92rem;margin-top:10px}
+.msg.err{background:#FDECEA;color:#8A1F11}.msg.ok{background:#EAF6E0;color:#2F5A0B}
+.legal{white-space:pre-line;background:#fff;border-radius:var(--r);padding:clamp(20px,3vw,36px);max-width:80ch;font-size:.96rem}
+
+/* pied */
+footer.foot{background:#08292650;background:#082826;color:#CFE1DC;padding:60px 0 110px}
+.foot .g{display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:34px}
+.foot h3{color:#fff;font-size:1rem;margin-bottom:12px}
+.foot a{color:#E6F0ED;text-decoration:none}.foot a:hover{color:var(--tube)}
+.foot ul{list-style:none;padding:0;margin:0;display:grid;gap:6px}
+.foot .logo2{background:#fff;border-radius:12px;padding:8px 12px;display:inline-block;margin-bottom:16px}.foot .logo2 img{height:40px}
+.foot .bas{border-top:1px solid rgba(255,255,255,.12);margin-top:36px;padding-top:18px;font-size:.85rem;display:flex;flex-wrap:wrap;gap:8px 18px}
+.fb{display:inline-flex;align-items:center;gap:8px;margin-top:12px}.fb svg{width:22px;height:22px}
+@media (max-width:860px){.foot .g{grid-template-columns:1fr}}
+
+/* conseiller */
+.gc-btn{position:fixed;right:16px;bottom:16px;z-index:60;display:flex;align-items:center;gap:10px;background:var(--beaume);color:#fff;border:0;border-radius:999px;padding:8px 18px 8px 8px;cursor:pointer;box-shadow:0 18px 36px -16px rgba(0,0,0,.6);text-align:left;font-family:var(--fb);transition:transform .35s var(--ease)}
+.gc-btn:hover{transform:translateY(-3px)}
+.gc-av{width:44px;height:44px;border-radius:50%;background:var(--tube);display:grid;place-items:center;flex:none;box-shadow:inset 0 0 0 4px var(--beaume),0 0 0 2px var(--tube)}
+.gc-av svg{width:24px;height:24px;color:var(--beaume)}
+.gc-btn b{display:block;font-size:.95rem}.gc-btn small{display:block;font-size:.78rem;color:var(--tube2)}
+.gc-inv{position:fixed;right:16px;bottom:86px;z-index:60;max-width:290px;background:#fff;color:var(--ink);border-radius:18px;padding:14px 38px 14px 16px;box-shadow:0 18px 36px -18px rgba(0,0,0,.45);font-size:.94rem;font-weight:600;opacity:0;transform:translateY(8px);transition:opacity .4s,transform .4s var(--ease);pointer-events:none}
+.gc-inv.on{opacity:1;transform:none;pointer-events:auto}
+.gc-inv button{position:absolute;right:6px;top:6px;width:30px;height:30px;border:0;background:transparent;cursor:pointer;color:var(--muted);font-size:1.2rem;line-height:1}
+.gc-panel{position:fixed;right:16px;bottom:16px;z-index:70;width:min(390px,100vw - 24px);height:min(600px,100vh - 32px);height:min(600px,100dvh - 32px);background:var(--granit);border-radius:24px;box-shadow:0 30px 70px -20px rgba(0,0,0,.55);display:none;flex-direction:column;overflow:hidden}
+.gc-panel.on{display:flex}
+.gc-h{background:var(--beaume);color:#fff;padding:14px 14px 14px 16px;display:flex;gap:12px;align-items:center}
+.gc-h b{display:block}.gc-h small{color:var(--tube2);font-weight:600}
+.gc-h button{margin-left:auto;width:36px;height:36px;border-radius:50%;border:0;background:rgba(255,255,255,.12);color:#fff;cursor:pointer;font-size:1.2rem}
+.gc-m{flex:1;overflow-y:auto;padding:16px;display:flex;flex-direction:column;gap:10px}
+.gc-m .b{max-width:88%;padding:11px 14px;border-radius:16px;font-size:.94rem;line-height:1.5}
+.gc-m .b.bot{background:#fff;border-bottom-left-radius:4px}
+.gc-m .b.me{background:var(--beaume2);color:#fff;align-self:flex-end;border-bottom-right-radius:4px}
+.gc-m .b .va{display:inline-block;font-size:.72rem;font-weight:800;text-transform:uppercase;letter-spacing:.06em;color:var(--bassin-d);margin-bottom:4px}
+.gc-q{display:flex;flex-wrap:wrap;gap:6px}
+.gc-q button{border:2px solid var(--beaume3);background:transparent;color:var(--beaume);border-radius:999px;padding:7px 12px;font:700 .85rem var(--fb);cursor:pointer}
+.gc-q button:hover{background:var(--beaume);color:#fff}
+.gc-rec{display:flex;gap:10px;background:#fff;border-radius:14px;padding:8px;align-items:center;text-decoration:none;color:var(--ink)}
+.gc-rec img{width:64px;height:48px;object-fit:cover;border-radius:10px}
+.gc-rec b{font-size:.9rem;display:block}.gc-rec small{color:var(--muted)}
+.gc-f{display:flex;gap:8px;padding:12px;border-top:1px solid var(--granit2);background:#fff}
+.gc-f input{flex:1;border:2px solid var(--granit2);border-radius:999px;padding:10px 14px;font:500 .95rem var(--fb)}
+.gc-f button{border:0;background:var(--tube);color:var(--ink);border-radius:999px;padding:0 16px;font:700 .9rem var(--fb);cursor:pointer}
+@media (max-width:760px){.gc-btn{padding:6px 14px 6px 6px}.gc-av{width:38px;height:38px}.gc-btn b{font-size:.86rem}.gc-btn small{font-size:.72rem}}
+
+/* lightbox */
+.lb{position:fixed;inset:0;z-index:90;background:rgba(6,30,28,.94);display:none;align-items:center;justify-content:center;padding:20px}
+.lb.on{display:flex}
+.lb img{max-height:86vh;max-width:min(1400px,100%);border-radius:14px}
+.lb button{position:absolute;top:16px;right:16px;width:44px;height:44px;border-radius:50%;border:0;background:#fff;font-size:1.4rem;cursor:pointer}
+
+/* cookies */
+.ck{position:fixed;left:16px;bottom:16px;z-index:65;max-width:340px;background:#fff;border-radius:18px;padding:14px 16px;box-shadow:0 18px 36px -18px rgba(0,0,0,.45);font-size:.88rem;display:none}
+.ck.on{display:block}
+.ck .a{display:flex;gap:8px;margin-top:10px}
+.ck button{flex:1;border-radius:999px;padding:9px 10px;font:700 .86rem var(--fb);cursor:pointer;border:2px solid var(--beaume);background:#fff;color:var(--beaume)}
+.ck button.y{background:var(--beaume);color:#fff}
+@media (max-width:760px){.ck{right:16px;max-width:none;bottom:76px}}
+
+/* révélations */
+.rv{opacity:1}
+.js .rv{opacity:0;transform:translateY(26px);transition:opacity .9s var(--ease),transform .9s var(--ease)}
+.js .rv.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important;scroll-behavior:auto!important}.js .rv{opacity:1;transform:none}}
+[hidden]{display:none!important}
+
+.repere{position:absolute;z-index:3;transform:translateY(-50%);font:700 .72rem/1 var(--fb);color:var(--beaume);background:var(--tube);border-radius:999px;padding:4px 8px;pointer-events:none}
+</style>
+</head>
+<body>
+<a class="skip" href="#main" data-i="ui.skip"></a>
+<header class="top">
+ <div class="r1">
+  <a class="logo" href="#home" aria-label="Camping Le Grillou"><img src="img/logo.webp" alt="Camping Le Grillou ★★★" width="148" height="48"></a>
+  <span class="sp"></span>
+  <label class="langsel"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg><span class="sr" style="position:absolute;left:-999px" data-i="ui.lang"></span><select id="lang"></select></label>
+  <a class="tel" href="tel:+33475395150"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 3h3l2 5-2.5 1.5a11 11 0 0 0 7 7L16 14l5 2v3a2 2 0 0 1-2 2A17 17 0 0 1 3 5a2 2 0 0 1 2-2z"/></svg><span>04 75 39 51 50</span></a>
+  <a class="btn btn-tube resa" href="#" target="_blank" rel="noopener" data-i="ui.book"></a>
+ </div>
+ <nav class="menu" aria-label="Menu"><ul id="menu"></ul></nav>
+</header>
+<main id="main" tabindex="-1"></main>
+<footer class="foot"><div class="wrap">
+ <div class="g">
+  <div><span class="logo2"><img src="img/logo.webp" alt="Camping Le Grillou" width="124" height="40"></span>
+   <p>590 route de Joyeuse<br>07260 Rosières, Ardèche</p>
+   <p style="margin-top:10px"><a href="tel:+33475395150">04 75 39 51 50</a><br><a href="mailto:reception@camping-legrillou.fr">reception@camping-legrillou.fr</a></p>
+   <a class="fb" href="https://www.facebook.com/CAMPING-LE-GRILLOU-127301780686416" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M14 8h3V4h-3c-2.8 0-4.5 1.8-4.5 4.6V11H7v4h2.5v8h4v-8h3l.5-4h-3.5V9c0-.6.4-1 1-1z"/></svg><span data-i="ui.fb"></span></a>
+  </div>
+  <div><h3>Menu</h3><ul id="foot-nav"></ul></div>
+  <div><h3 data-i="ui.open"></h3><p data-i="ui.foot"></p><p style="margin-top:12px" data-i="ui.pay"></p>
+   <ul style="margin-top:16px"><li><a href="#legal/legal" data-i="nav.legal"></a></li><li><a href="#legal/cgv" data-i="nav.cgv"></a></li><li><a href="#legal/reg" data-i="nav.reg"></a></li><li><a href="#plan" data-i="nav.plan"></a></li></ul></div>
+ </div>
+ <div class="bas"><span>© 2026 SAS Camping Le Grillou</span><span>SIRET 429 446 420 00011</span></div>
+</div></footer>
+<div class="metre" id="metre" aria-hidden="true"><b>0 m</b><small data-i="h.meter"></small></div>
+<div class="gc-inv" id="gci" role="status"><span data-i="g.invite"></span><button type="button" aria-label="×">×</button></div>
+<button class="gc-btn" id="gcb" type="button"><span class="gc-av"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M6 3v4c0 3 3 3 6 3s6 0 6 3-3 3-6 3-6 0-6 3v2"/></svg></span><span><b data-i="g.name"></b><small data-i="g.sub"></small></span></button>
+<section class="gc-panel" id="gcp" aria-label="Grillou Conseil">
+ <div class="gc-h"><span class="gc-av"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M6 3v4c0 3 3 3 6 3s6 0 6 3-3 3-6 3-6 0-6 3v2"/></svg></span><span><b data-i="g.name"></b><small data-i="g.virtual"></small></span><button type="button" id="gcx" aria-label="×">×</button></div>
+ <div class="gc-m" id="gcm" aria-live="polite"></div>
+ <form class="gc-f" id="gcf"><input id="gcin" data-ip="g.ph" autocomplete="off" aria-label="Question"><button type="submit" data-i="g.send"></button></form>
+</section>
+<div class="lb" id="lb" role="dialog" aria-modal="true"><img alt=""><button type="button" aria-label="×">×</button></div>
+<div class="ck" id="ck" role="dialog" aria-live="polite"><span data-i="ck.t"></span><div class="a"><button type="button" data-v="0" data-i="ck.no"></button><button type="button" class="y" data-v="1" data-i="ck.yes"></button></div></div>
+<script>// fr, en, es, de, it, nl
+const LANGS=['fr','en','es','de','it','nl'];
+const LANG_NAMES={fr:'Français',en:'English',es:'Español',de:'Deutsch',it:'Italiano',nl:'Nederlands'};
+const R={
+// navigation
+'nav.home':['Accueil','Home','Inicio','Start','Home','Home'],
+'nav.camping':['Le camping','The campsite','El camping','Der Campingplatz','Il campeggio','De camping'],
+'nav.parc':['Parc aquatique','Water park','Parque acuático','Wasserpark','Parco acquatico','Waterpark'],
+'nav.loc':['Locations','Rentals','Alquileres','Mietunterkünfte','Affitti','Verhuur'],
+'nav.emp':['Emplacements','Pitches','Parcelas','Stellplätze','Piazzole','Kampeerplaatsen'],
+'nav.tarifs':['Tarifs 2026','2026 prices','Tarifas 2026','Preise 2026','Tariffe 2026','Prijzen 2026'],
+'nav.resto':['Restaurant','Restaurant','Restaurante','Restaurant','Ristorante','Restaurant'],
+'nav.riv':['La rivière','The river','El río','Der Fluss','Il fiume','De rivier'],
+'nav.anim':['Animations','Entertainment','Animación','Animation','Animazione','Animatie'],
+'nav.alent':['Aux alentours','Nearby','Alrededores','Umgebung','Dintorni','Omgeving'],
+'nav.gal':['Galerie','Gallery','Galería','Galerie','Galleria','Galerij'],
+'nav.faq':['Questions','FAQ','Preguntas','Fragen','Domande','Vragen'],
+'nav.acces':['Accès & contact','Getting here & contact','Acceso y contacto','Anfahrt & Kontakt','Accesso e contatti','Route & contact'],
+'nav.plan':['Plan du site','Site map','Mapa del sitio','Sitemap','Mappa del sito','Sitemap'],
+'nav.legal':['Mentions légales','Legal notice','Aviso legal','Impressum','Note legali','Juridische informatie'],
+'nav.cgv':['Conditions générales de vente','Terms and conditions','Condiciones generales','AGB','Condizioni generali','Algemene voorwaarden'],
+'nav.reg':['Règlement intérieur','Site rules','Reglamento interno','Platzordnung','Regolamento interno','Campingreglement'],
+// interface
+'ui.book':['Réserver','Book','Reservar','Buchen','Prenota','Boeken'],
+'ui.bookfull':['Voir les disponibilités','Check availability','Ver disponibilidad','Verfügbarkeit prüfen','Vedi disponibilità','Beschikbaarheid bekijken'],
+'ui.call':['Appeler','Call','Llamar','Anrufen','Chiama','Bellen'],
+'ui.lang':['Langue','Language','Idioma','Sprache','Lingua','Taal'],
+'ui.from':['dès','from','desde','ab','da','vanaf'],
+'ui.week':['la semaine','per week','por semana','pro Woche','a settimana','per week'],
+'ui.night':['la nuit','per night','por noche','pro Nacht','a notte','per nacht'],
+'ui.places':['places','guests','plazas','Personen','posti','personen'],
+'ui.back':['Toutes les locations','All rentals','Todos los alquileres','Alle Unterkünfte','Tutti gli affitti','Alle accommodaties'],
+'ui.open':['Ouvert du 1er mai au 13 septembre 2026','Open from 1 May to 13 September 2026','Abierto del 1 de mayo al 13 de septiembre de 2026','Geöffnet vom 1. Mai bis 13. September 2026','Aperto dal 1° maggio al 13 settembre 2026','Open van 1 mei tot 13 september 2026'],
+'ui.rating':['4,2/5 sur Google · 504 avis','4.2/5 on Google · 504 reviews','4,2/5 en Google · 504 opiniones','4,2/5 bei Google · 504 Bewertungen','4,2/5 su Google · 504 recensioni','4,2/5 op Google · 504 reviews'],
+'ui.readreviews':['Lire les avis','Read the reviews','Leer las opiniones','Bewertungen lesen','Leggi le recensioni','Reviews lezen'],
+'ui.close':['Fermer','Close','Cerrar','Schließen','Chiudi','Sluiten'],
+'ui.illus':['visuel d’illustration','illustrative image','imagen ilustrativa','Illustrationsbild','immagine illustrativa','sfeerbeeld'],
+'ui.plan':['Plan du chalet','Floor plan','Plano','Grundriss','Planimetria','Plattegrond'],
+'ui.legalnote':['Ce document juridique est rédigé en français ; la version française fait foi.','This legal document is written in French; the French version prevails.','Este documento jurídico está redactado en francés; prevalece la versión francesa.','Dieses Rechtsdokument ist auf Französisch verfasst; die französische Fassung ist maßgeblich.','Questo documento legale è redatto in francese; fa fede la versione francese.','Dit juridische document is in het Frans opgesteld; de Franse versie is bindend.'],
+'ui.foot':['Camping 3 étoiles · 2 hectares · 116 emplacements · Rosières, Ardèche du Sud','3-star campsite · 2 hectares · 116 pitches · Rosières, southern Ardèche','Camping de 3 estrellas · 2 hectáreas · 116 parcelas · Rosières, sur de Ardèche','3-Sterne-Campingplatz · 2 Hektar · 116 Stellplätze · Rosières, Südardèche','Campeggio 3 stelle · 2 ettari · 116 piazzole · Rosières, Ardèche del sud','3-sterrencamping · 2 hectare · 116 plaatsen · Rosières, Zuid-Ardèche'],
+'ui.pay':['Chèques-Vacances, carte bancaire, virement, chèque, espèces · agréé VACAF','Chèques-Vacances, card, bank transfer, cheque, cash · VACAF approved','Chèques-Vacances, tarjeta, transferencia, cheque, efectivo · homologado VACAF','Chèques-Vacances, Karte, Überweisung, Scheck, bar · VACAF-zugelassen','Chèques-Vacances, carta, bonifico, assegno, contanti · convenzionato VACAF','Chèques-Vacances, bankkaart, overschrijving, cheque, contant · VACAF-erkend'],
+'ui.fb':['Facebook du camping','Campsite Facebook page','Facebook del camping','Facebook-Seite','Facebook del campeggio','Facebookpagina'],
+'ui.skip':['Aller au contenu','Skip to content','Ir al contenido','Zum Inhalt','Vai al contenuto','Naar de inhoud'],
+// accueil
+'h.title':['47 mètres de glisse, à 150 mètres de la Beaume.','47 metres of slide, 150 metres from the Beaume.','47 metros de tobogán, a 150 metros del Beaume.','47 Meter Rutsche, 150 Meter vom Fluss Beaume.','47 metri di scivolo, a 150 metri dalla Beaume.','47 meter glijbaan, op 150 meter van de Beaume.'],
+'h.sub':['Camping 3 étoiles à Rosières, au sud de l’Ardèche. Un parc aquatique, des chalets climatisés, des emplacements ombragés et le village à pied.','A 3-star campsite in Rosières, southern Ardèche. A water park, air-conditioned chalets, shady pitches and the village within walking distance.','Camping de 3 estrellas en Rosières, al sur de Ardèche. Parque acuático, chalets con aire acondicionado, parcelas con sombra y el pueblo a pie.','3-Sterne-Camping in Rosières, im Süden der Ardèche. Wasserpark, klimatisierte Chalets, schattige Stellplätze und das Dorf zu Fuß erreichbar.','Campeggio 3 stelle a Rosières, nel sud dell’Ardèche. Parco acquatico, chalet climatizzati, piazzole ombreggiate e il paese a piedi.','3-sterrencamping in Rosières, in het zuiden van de Ardèche. Een waterpark, chalets met airco, schaduwrijke plaatsen en het dorp op loopafstand.'],
+'h.calc':['Calculer mon séjour','Work out my stay','Calcular mi estancia','Aufenthalt berechnen','Calcola il soggiorno','Mijn verblijf berekenen'],
+'h.meter':['mètres de descente','metres down','metros de bajada','Meter abwärts','metri di discesa','meter omlaag'],
+'h.s1t':['Le parc aquatique','The water park','El parque acuático','Der Wasserpark','Il parco acquatico','Het waterpark'],
+'h.s1p':['Un grand bassin, une balnéo à remous sous les cigales, un petit bassin, une pataugeoire et les animaux farceurs de l’aire aquatoons. Ouvert de 9 h 30 à 20 h, toute la saison.','A large pool, a whirlpool spa under the cicadas, a small pool, a paddling pool and the cheeky animals of the aquatoons play area. Open 9.30 am to 8 pm all season.','Una piscina grande, un jacuzzi bajo las cigarras, una piscina pequeña, un chapoteadero y los animales traviesos de la zona aquatoons. Abierto de 9:30 a 20:00 toda la temporada.','Großes Becken, Whirlpool unter Zikaden, kleines Becken, Planschbecken und die frechen Tiere der Aquatoons-Spielzone. Täglich 9.30 bis 20 Uhr, die ganze Saison.','Una grande piscina, una vasca idromassaggio tra le cicale, una piscina piccola, una vasca per bimbi e gli animali burloni dell’area aquatoons. Aperto dalle 9:30 alle 20, tutta la stagione.','Een groot bad, een bubbelbad onder de krekels, een klein bad, een pierenbad en de grappige dieren van de aquatoons-speelzone. Open van 9.30 tot 20.00 uur, het hele seizoen.'],
+'h.s1l':['Plonger dans le parc','Dive into the park','Entrar en el parque','Ab in den Park','Tuffati nel parco','Duik het park in'],
+'h.s2t':['Un chalet climatisé, ou de l’herbe sous la tente','An air-conditioned chalet, or grass under your tent','Un chalet climatizado, o hierba bajo la tienda','Ein klimatisiertes Chalet oder Gras unterm Zelt','Uno chalet climatizzato, o l’erba sotto la tenda','Een chalet met airco, of gras onder je tent'],
+'h.s2p':['Du mobil-home O’Hara pour quatre au Grand Trianon pour deux familles : tout est équipé, climatisé, avec télé et terrasse.','From the O’Hara mobile home for four to the Grand Trianon for two families: fully equipped, air-conditioned, with TV and terrace.','Del mobil-home O’Hara para cuatro al Grand Trianon para dos familias: todo equipado, climatizado, con tele y terraza.','Vom Mobilheim O’Hara für vier bis zum Grand Trianon für zwei Familien: voll ausgestattet, klimatisiert, mit TV und Terrasse.','Dal mobil-home O’Hara per quattro al Grand Trianon per due famiglie: tutto attrezzato, climatizzato, con TV e terrazza.','Van de stacaravan O’Hara voor vier tot de Grand Trianon voor twee gezinnen: volledig uitgerust, met airco, tv en terras.'],
+'h.s2l':['Choisir mon chalet','Choose my chalet','Elegir mi chalet','Mein Chalet wählen','Scegli lo chalet','Mijn chalet kiezen'],
+'h.empt':['Emplacements de 80 à 100 m²','Pitches of 80 to 100 m²','Parcelas de 80 a 100 m²','Stellplätze von 80 bis 100 m²','Piazzole da 80 a 100 m²','Plaatsen van 80 tot 100 m²'],
+'h.empp':['Tente, caravane ou camping-car, électricité 10 A, dès 20 € la nuit pour deux.','Tent, caravan or motorhome, 10 A electricity, from €20 a night for two.','Tienda, caravana o autocaravana, electricidad 10 A, desde 20 € la noche para dos.','Zelt, Wohnwagen oder Wohnmobil, Strom 10 A, ab 20 € pro Nacht für zwei.','Tenda, roulotte o camper, elettricità 10 A, da 20 € a notte per due.','Tent, caravan of camper, stroom 10 A, vanaf € 20 per nacht voor twee.'],
+'h.empl':['Voir les emplacements','See the pitches','Ver las parcelas','Stellplätze ansehen','Vedi le piazzole','Plaatsen bekijken'],
+'h.s3t':['La Beaume, au bout du chemin','The Beaume, at the end of the path','El Beaume, al final del camino','Die Beaume, am Ende des Weges','La Beaume, in fondo al sentiero','De Beaume, aan het eind van het pad'],
+'h.s3p':['Plages de sable et de rochers, bassins naturels pour les enfants, truites pour les pêcheurs. À 150 mètres à pied.','Sand and rock beaches, natural pools for children, trout for anglers. A 150-metre walk.','Playas de arena y rocas, pozas naturales para los niños, truchas para los pescadores. A 150 metros a pie.','Sand- und Felsstrände, natürliche Becken für Kinder, Forellen für Angler. 150 Meter zu Fuß.','Spiagge di sabbia e rocce, vasche naturali per i bambini, trote per i pescatori. A 150 metri a piedi.','Zand- en rotsstrandjes, natuurlijke poelen voor de kinderen, forel voor de vissers. 150 meter lopen.'],
+'h.s3l':['Descendre à la rivière','Walk down to the river','Bajar al río','Zum Fluss hinunter','Scendi al fiume','Naar de rivier'],
+'h.s4t':['Le Restaurant le Grillou','Restaurant le Grillou','El Restaurante le Grillou','Restaurant le Grillou','Il Ristorante le Grillou','Restaurant le Grillou'],
+'h.s4p':['Petit-déjeuner en terrasse, pizzas, grillades, coupes glacées. Et la demi-pension, pour ne plus penser aux courses.','Breakfast on the terrace, pizzas, grills, ice-cream sundaes. And half board, so you can forget the shopping.','Desayuno en la terraza, pizzas, parrilladas, copas de helado. Y media pensión, para olvidarse de la compra.','Frühstück auf der Terrasse, Pizza, Grillgerichte, Eisbecher. Und Halbpension, damit Einkaufen kein Thema ist.','Colazione in terrazza, pizze, grigliate, coppe gelato. E la mezza pensione, per non pensare alla spesa.','Ontbijt op het terras, pizza’s, grillgerechten, ijscoupes. En halfpension, zodat boodschappen geen zorg zijn.'],
+'h.s4l':['Voir le restaurant','See the restaurant','Ver el restaurante','Zum Restaurant','Vedi il ristorante','Naar het restaurant'],
+'h.s5t':['Juillet et août, tous les jours','July and August, every day','Julio y agosto, todos los días','Juli und August, jeden Tag','Luglio e agosto, ogni giorno','Juli en augustus, elke dag'],
+'h.s5p':['Aquagym, water-polo, pétanque, ateliers dès 3 ans, soirées dansantes et loto. Le programme vous attend au pot d’accueil du dimanche, à 19 h.','Aqua aerobics, water polo, pétanque, kids’ workshops from age 3, dance and bingo nights. The programme awaits you at the Sunday welcome drink, 7 pm.','Aquagym, waterpolo, petanca, talleres desde 3 años, noches de baile y bingo. El programa le espera en el cóctel de bienvenida del domingo, a las 19:00.','Aquagym, Wasserball, Boule, Kinderateliers ab 3 Jahren, Tanz- und Lottoabende. Das Programm gibt’s beim Begrüßungsdrink am Sonntag um 19 Uhr.','Acquagym, pallanuoto, bocce, laboratori dai 3 anni, serate danzanti e tombola. Il programma vi aspetta all’aperitivo di benvenuto della domenica, alle 19.','Aquagym, waterpolo, jeu de boules, workshops vanaf 3 jaar, dans- en bingoavonden. Het programma krijg je bij de welkomstborrel op zondag om 19.00 uur.'],
+'h.s5l':['Le programme de la semaine','The weekly programme','El programa semanal','Das Wochenprogramm','Il programma settimanale','Het weekprogramma'],
+'h.s6t':['Le village à 200 mètres','The village 200 metres away','El pueblo a 200 metros','Das Dorf in 200 Metern','Il paese a 200 metri','Het dorp op 200 meter'],
+'h.s6p':['Boulangerie, épicerie, pharmacie, cinéma. Le marché du lundi matin et les marchés nocturnes du jeudi, en été. On laisse la voiture.','Bakery, grocery, pharmacy, cinema. Monday-morning market and Thursday night markets in summer. Leave the car parked.','Panadería, tienda, farmacia, cine. Mercado del lunes por la mañana y mercados nocturnos del jueves en verano. El coche se queda aparcado.','Bäckerei, Lebensmittel, Apotheke, Kino. Montagsmarkt am Morgen und Nachtmärkte am Donnerstag im Sommer. Das Auto bleibt stehen.','Panetteria, alimentari, farmacia, cinema. Mercato del lunedì mattina e mercati notturni del giovedì in estate. L’auto resta parcheggiata.','Bakker, kruidenier, apotheek, bioscoop. Maandagochtendmarkt en avondmarkten op donderdag in de zomer. De auto blijft staan.'],
+'h.trust':['Ce qui rassure avant de réserver','Peace of mind before you book','Lo que tranquiliza antes de reservar','Gut zu wissen vor der Buchung','Da sapere prima di prenotare','Goed om te weten voor je boekt'],
+'h.t1':['4,2/5 sur Google, 504 avis','4.2/5 on Google, 504 reviews','4,2/5 en Google, 504 opiniones','4,2/5 bei Google, 504 Bewertungen','4,2/5 su Google, 504 recensioni','4,2/5 op Google, 504 reviews'],
+'h.t2':['Agréé VACAF','VACAF approved','Homologado VACAF','VACAF-zugelassen','Convenzionato VACAF','VACAF-erkend'],
+'h.t3':['Chèques-Vacances acceptés','Chèques-Vacances accepted','Se aceptan Chèques-Vacances','Chèques-Vacances akzeptiert','Chèques-Vacances accettati','Chèques-Vacances geaccepteerd'],
+'h.t4':['Solde en plusieurs fois, sans frais','Balance in instalments, no fees','Saldo a plazos, sin gastos','Restzahlung in Raten, gebührenfrei','Saldo a rate, senza costi','Restbedrag in termijnen, zonder kosten'],
+'h.t5':['Animaux bienvenus, sans supplément (2 max.)','Pets welcome, free of charge (2 max.)','Mascotas bienvenidas, sin suplemento (2 máx.)','Haustiere willkommen, ohne Aufpreis (max. 2)','Animali benvenuti, senza supplemento (max 2)','Huisdieren welkom, zonder toeslag (max. 2)'],
+'h.t6':['Camping en zone non inondable','Campsite outside flood zones','Camping en zona no inundable','Platz außerhalb von Überschwemmungsgebieten','Campeggio in zona non inondabile','Camping buiten overstromingsgebied'],
+'h.endt':['Il ne reste qu’à choisir la semaine.','All that’s left is to pick your week.','Solo queda elegir la semana.','Jetzt nur noch die Woche wählen.','Non resta che scegliere la settimana.','Nu alleen nog de week kiezen.'],
+'h.endp':['Réservation en ligne sécurisée, acompte de 25 %. Ou par téléphone, avec une option gardée 8 jours.','Secure online booking, 25% deposit. Or by phone, with an 8-day option held for you.','Reserva en línea segura, depósito del 25 %. O por teléfono, con una opción reservada 8 días.','Sichere Online-Buchung, 25 % Anzahlung. Oder telefonisch, mit 8 Tagen Option.','Prenotazione online sicura, acconto del 25 %. Oppure per telefono, con un’opzione tenuta 8 giorni.','Veilig online boeken, 25 % aanbetaling. Of telefonisch, met een optie van 8 dagen.'],
+// calculateur
+'c.t':['Combien coûte votre séjour ?','What will your stay cost?','¿Cuánto cuesta su estancia?','Was kostet Ihr Aufenthalt?','Quanto costa il soggiorno?','Wat kost je verblijf?'],
+'c.p':['Les tarifs officiels 2026 du camping, calculés pour vous.','The campsite’s official 2026 prices, worked out for you.','Las tarifas oficiales 2026 del camping, calculadas para usted.','Die offiziellen Preise 2026, für Sie berechnet.','Le tariffe ufficiali 2026 del campeggio, calcolate per voi.','De officiële prijzen 2026 van de camping, voor je uitgerekend.'],
+'c.type':['Hébergement','Accommodation','Alojamiento','Unterkunft','Sistemazione','Accommodatie'],
+'c.emp':['Emplacement (tente, caravane, camping-car)','Pitch (tent, caravan, motorhome)','Parcela (tienda, caravana, autocaravana)','Stellplatz (Zelt, Wohnwagen, Wohnmobil)','Piazzola (tenda, roulotte, camper)','Kampeerplaats (tent, caravan, camper)'],
+'c.arr':['Arrivée','Arrival','Llegada','Anreise','Arrivo','Aankomst'],
+'c.nights':['Nuits','Nights','Noches','Nächte','Notti','Nachten'],
+'c.adults':['Adultes (18 ans et +)','Adults (18+)','Adultos (18+)','Erwachsene (ab 18)','Adulti (18+)','Volwassenen (18+)'],
+'c.kids':['Enfants de 3 à 17 ans','Children aged 3 to 17','Niños de 3 a 17 años','Kinder von 3 bis 17','Bambini da 3 a 17 anni','Kinderen van 3 tot 17'],
+'c.babies':['Moins de 3 ans','Under 3','Menores de 3 años','Unter 3 Jahren','Sotto i 3 anni','Jonger dan 3'],
+'c.lodging':['Hébergement','Accommodation','Alojamiento','Unterkunft','Sistemazione','Accommodatie'],
+'c.tax':['Taxe de séjour (0,61 € par nuit et par adulte)','Tourist tax (€0.61 per night per adult)','Tasa turística (0,61 € por noche y adulto)','Kurtaxe (0,61 € pro Nacht und Erwachsenem)','Tassa di soggiorno (0,61 € a notte per adulto)','Toeristenbelasting (€ 0,61 per nacht per volwassene)'],
+'c.fee':['Frais de dossier','Booking fee','Gastos de gestión','Buchungsgebühr','Spese di pratica','Dossierkosten'],
+'c.total':['Total','Total','Total','Gesamt','Totale','Totaal'],
+'c.dep':['Acompte : 25 % de l’hébergement + frais de dossier','Deposit: 25% of accommodation + booking fee','Depósito: 25 % del alojamiento + gastos','Anzahlung: 25 % der Unterkunft + Gebühr','Acconto: 25 % dell’alloggio + spese','Aanbetaling: 25 % van de accommodatie + dossierkosten'],
+'c.note':['Calcul indicatif d’après la grille 2026. La réservation en ligne confirme la disponibilité et le prix.','Indicative, based on the 2026 price list. Online booking confirms availability and price.','Cálculo orientativo según la tarifa 2026. La reserva en línea confirma disponibilidad y precio.','Richtwert nach Preisliste 2026. Die Online-Buchung bestätigt Verfügbarkeit und Preis.','Calcolo indicativo secondo il listino 2026. La prenotazione online conferma disponibilità e prezzo.','Indicatief, volgens de prijslijst 2026. Online boeken bevestigt beschikbaarheid en prijs.'],
+'c.week':['Location à la semaine en juillet-août : arrivée le {d}.','Weekly rental in July–August: arrival on {d}.','Alquiler semanal en julio-agosto: llegada en {d}.','Juli–August nur wochenweise: Anreise am {d}.','In luglio-agosto affitto settimanale: arrivo di {d}.','In juli–augustus per week: aankomst op {d}.'],
+'c.min':['Minimum 2 nuits en basse saison.','2-night minimum in low season.','Mínimo 2 noches en temporada baja.','Mindestens 2 Nächte in der Nebensaison.','Minimo 2 notti in bassa stagione.','Minimaal 2 nachten in het laagseizoen.'],
+'c.closed':['Le camping est ouvert du 1er mai au 13 septembre 2026.','The campsite is open from 1 May to 13 September 2026.','El camping abre del 1 de mayo al 13 de septiembre de 2026.','Der Platz ist vom 1. Mai bis 13. September 2026 geöffnet.','Il campeggio è aperto dal 1° maggio al 13 settembre 2026.','De camping is open van 1 mei tot 13 september 2026.'],
+'c.cap':['Capacité maximale : {n} personnes.','Maximum capacity: {n} people.','Capacidad máxima: {n} personas.','Maximal {n} Personen.','Capienza massima: {n} persone.','Maximaal {n} personen.'],
+'c.trianon':['Le Grand Trianon se loue du 20 juin au 29 août.','The Grand Trianon is rented from 20 June to 29 August.','El Grand Trianon se alquila del 20 de junio al 29 de agosto.','Das Grand Trianon wird vom 20. Juni bis 29. August vermietet.','Il Grand Trianon si affitta dal 20 giugno al 29 agosto.','De Grand Trianon wordt verhuurd van 20 juni tot 29 augustus.'],
+'c.sun':['dimanche','Sunday','domingo','Sonntag','domenica','zondag'],
+'c.sat':['samedi','Saturday','sábado','Samstag','sabato','zaterdag'],
+// conseiller
+'g.name':['Grillou Conseil','Grillou Conseil','Grillou Conseil','Grillou Conseil','Grillou Conseil','Grillou Conseil'],
+'g.sub':['Je vous aide à choisir','I’ll help you choose','Le ayudo a elegir','Ich helfe beim Auswählen','Vi aiuto a scegliere','Ik help je kiezen'],
+'g.virtual':['assistant virtuel','virtual assistant','asistente virtual','virtueller Assistent','assistente virtuale','virtuele assistent'],
+'g.hello':['Bonjour ! Je suis Grillou Conseil, l’assistant virtuel du camping. Je connais les chalets, les tarifs 2026 et la vie du camping. Que puis-je faire pour vous ?','Hello! I’m Grillou Conseil, the campsite’s virtual assistant. I know the chalets, the 2026 prices and life on site. How can I help?','¡Hola! Soy Grillou Conseil, el asistente virtual del camping. Conozco los chalets, las tarifas 2026 y la vida del camping. ¿En qué puedo ayudarle?','Hallo! Ich bin Grillou Conseil, der virtuelle Assistent des Campingplatzes. Ich kenne die Chalets, die Preise 2026 und das Leben vor Ort. Wie kann ich helfen?','Buongiorno! Sono Grillou Conseil, l’assistente virtuale del campeggio. Conosco gli chalet, le tariffe 2026 e la vita del campeggio. Come posso aiutarvi?','Hallo! Ik ben Grillou Conseil, de virtuele assistent van de camping. Ik ken de chalets, de prijzen van 2026 en het leven op de camping. Waarmee kan ik helpen?'],
+'g.invite':['Une question sur les chalets ou les prix ? Je réponds tout de suite.','A question about chalets or prices? I’ll answer right away.','¿Una pregunta sobre los chalets o los precios? Respondo enseguida.','Eine Frage zu Chalets oder Preisen? Ich antworte sofort.','Una domanda su chalet o prezzi? Rispondo subito.','Een vraag over de chalets of prijzen? Ik antwoord meteen.'],
+'g.ph':['Écrivez votre question…','Type your question…','Escriba su pregunta…','Ihre Frage…','Scrivete la domanda…','Typ je vraag…'],
+'g.send':['Envoyer','Send','Enviar','Senden','Invia','Verstuur'],
+'g.q1':['Quel chalet pour nous ?','Which chalet for us?','¿Qué chalet para nosotros?','Welches Chalet für uns?','Quale chalet per noi?','Welk chalet past bij ons?'],
+'g.q2':['Le prix de mon séjour','The price of my stay','El precio de mi estancia','Preis meines Aufenthalts','Il prezzo del soggiorno','De prijs van mijn verblijf'],
+'g.q3':['Le parc aquatique','The water park','El parque acuático','Der Wasserpark','Il parco acquatico','Het waterpark'],
+'g.q4':['Animaux, arrivées, départs','Pets, arrivals, departures','Mascotas, llegadas, salidas','Tiere, Anreise, Abreise','Animali, arrivi, partenze','Huisdieren, aankomst, vertrek'],
+'g.q5':['Paiement et VACAF','Payment and VACAF','Pago y VACAF','Zahlung und VACAF','Pagamento e VACAF','Betalen en VACAF'],
+'g.q6':['Restaurant et commerces','Restaurant and shops','Restaurante y tiendas','Restaurant und Geschäfte','Ristorante e negozi','Restaurant en winkels'],
+'g.size':['Vous serez combien ?','How many of you?','¿Cuántos serán?','Wie viele Personen?','Quanti sarete?','Met hoeveel zijn jullie?'],
+'g.rec':['Pour {n} personnes, je vous conseille :','For {n} people, I recommend:','Para {n} personas, le recomiendo:','Für {n} Personen empfehle ich:','Per {n} persone vi consiglio:','Voor {n} personen raad ik aan:'],
+'g.toomany':['Au-delà de 8, le plus simple est d’appeler l’accueil au 04 75 39 51 50 : on combine deux hébergements.','Above 8, the easiest is to call reception on +33 4 75 39 51 50: we’ll combine two units.','Más de 8: lo más sencillo es llamar a recepción al +33 4 75 39 51 50, combinamos dos alojamientos.','Ab 9 Personen rufen Sie am besten die Rezeption an (+33 4 75 39 51 50): Wir kombinieren zwei Unterkünfte.','Oltre 8, la cosa più semplice è chiamare la reception al +33 4 75 39 51 50: combiniamo due alloggi.','Met meer dan 8 bel je het best de receptie (+33 4 75 39 51 50): we combineren twee accommodaties.'],
+'g.calc':['Le calculateur vous donne le prix exact, taxe et frais compris. Je vous y emmène.','The calculator gives you the exact price, tax and fees included. Taking you there.','La calculadora le da el precio exacto, tasa y gastos incluidos. Le llevo.','Der Rechner zeigt den genauen Preis inkl. Kurtaxe und Gebühren. Ich bringe Sie hin.','Il calcolatore vi dà il prezzo esatto, tasse e spese incluse. Vi porto lì.','De rekenhulp geeft de exacte prijs, inclusief belasting en kosten. Ik breng je erheen.'],
+'g.parc':['Le parc est ouvert du 1er mai au 13 septembre 2026, de 9 h 30 à 20 h : grand bassin, balnéo, petit bassin, toboggan de 47 m, pataugeoire et aquatoons. Il n’est pas chauffé. Slip de bain obligatoire, bermudas interdits.','The park is open from 1 May to 13 September 2026, 9.30 am to 8 pm: large pool, spa, small pool, 47 m slide, paddling pool and aquatoons. It is not heated. Swim briefs required, no board shorts.','El parque abre del 1 de mayo al 13 de septiembre de 2026, de 9:30 a 20:00: piscina grande, jacuzzi, piscina pequeña, tobogán de 47 m, chapoteadero y aquatoons. No está climatizado. Bañador tipo slip obligatorio, bermudas prohibidas.','Der Park ist vom 1. Mai bis 13. September 2026 von 9.30 bis 20 Uhr geöffnet: großes Becken, Whirlpool, kleines Becken, 47-m-Rutsche, Planschbecken und Aquatoons. Er ist nicht beheizt. Badehose Pflicht, keine Badeshorts.','Il parco è aperto dal 1° maggio al 13 settembre 2026, dalle 9:30 alle 20: grande piscina, idromassaggio, piscina piccola, scivolo di 47 m, vasca bimbi e aquatoons. Non è riscaldato. Slip obbligatorio, bermuda vietati.','Het park is open van 1 mei tot 13 september 2026, van 9.30 tot 20.00 uur: groot bad, bubbelbad, klein bad, glijbaan van 47 m, pierenbad en aquatoons. Het is niet verwarmd. Zwemslip verplicht, geen zwemshorts.'],
+'g.pets':['Animaux acceptés sans supplément, 2 maximum, carnet de vaccination à jour (pas de chiens de 1re catégorie). Locations : arrivée dès 16 h, départ avant 10 h. Emplacements : arrivée dès 14 h, départ avant 12 h. Arrivée tardive possible jusqu’à 21 h.','Pets welcome free of charge, 2 max., with up-to-date vaccination record (no category 1 dogs). Rentals: arrival from 4 pm, departure by 10 am. Pitches: arrival from 2 pm, departure by noon. Late arrival possible until 9 pm.','Mascotas sin suplemento, 2 máx., cartilla de vacunación al día (sin perros de 1.ª categoría). Alquileres: llegada desde las 16:00, salida antes de las 10:00. Parcelas: llegada desde las 14:00, salida antes de las 12:00. Llegada tardía posible hasta las 21:00.','Haustiere ohne Aufpreis, max. 2, mit aktuellem Impfpass (keine Kampfhunde der Kategorie 1). Mietunterkünfte: Anreise ab 16 Uhr, Abreise bis 10 Uhr. Stellplätze: Anreise ab 14 Uhr, Abreise bis 12 Uhr. Späte Anreise bis 21 Uhr möglich.','Animali senza supplemento, max 2, libretto vaccinale aggiornato (no cani di 1ª categoria). Affitti: arrivo dalle 16, partenza entro le 10. Piazzole: arrivo dalle 14, partenza entro le 12. Arrivo tardivo possibile fino alle 21.','Huisdieren zonder toeslag, max. 2, met geldig vaccinatieboekje (geen honden van categorie 1). Huur: aankomst vanaf 16.00 uur, vertrek voor 10.00 uur. Plaatsen: aankomst vanaf 14.00 uur, vertrek voor 12.00 uur. Late aankomst mogelijk tot 21.00 uur.'],
+'g.pay':['Acompte de 25 % + 20 € de frais de dossier à la réservation, solde 30 jours avant l’arrivée, payable en plusieurs fois sans frais. Chèques-Vacances (aussi Connect), carte, virement, chèque, espèces. Camping agréé VACAF : munissez-vous de votre numéro d’allocataire.','25% deposit + €20 booking fee when booking, balance 30 days before arrival, payable in instalments at no cost. Chèques-Vacances (incl. Connect), card, transfer, cheque, cash. VACAF approved: have your CAF number ready.','Depósito del 25 % + 20 € de gastos al reservar, saldo 30 días antes de la llegada, a plazos sin gastos. Chèques-Vacances (también Connect), tarjeta, transferencia, cheque, efectivo. Homologado VACAF: tenga a mano su número de beneficiario.','25 % Anzahlung + 20 € Gebühr bei Buchung, Rest 30 Tage vor Anreise, in Raten ohne Gebühren. Chèques-Vacances (auch Connect), Karte, Überweisung, Scheck, bar. VACAF-zugelassen: Halten Sie Ihre CAF-Nummer bereit.','Acconto del 25 % + 20 € di spese alla prenotazione, saldo 30 giorni prima dell’arrivo, a rate senza costi. Chèques-Vacances (anche Connect), carta, bonifico, assegno, contanti. Convenzionato VACAF: tenete pronto il numero CAF.','25 % aanbetaling + € 20 dossierkosten bij boeking, rest 30 dagen voor aankomst, in termijnen zonder kosten. Chèques-Vacances (ook Connect), kaart, overschrijving, cheque, contant. VACAF-erkend: houd je CAF-nummer bij de hand.'],
+'g.resto':['Le Restaurant le Grillou est à l’entrée du camping : petit-déjeuner, formule du jour, pizzas, buffet froid, glacier, demi-pension ou pension complète. Boulangerie, épicerie, pharmacie et cinéma à moins de 200 m, supermarché à 1 km.','Restaurant le Grillou is at the campsite entrance: breakfast, dish of the day, pizzas, cold buffet, ice creams, half or full board. Bakery, grocery, pharmacy and cinema within 200 m, supermarket 1 km away.','El Restaurante le Grillou está a la entrada: desayuno, menú del día, pizzas, bufé frío, heladería, media pensión o completa. Panadería, tienda, farmacia y cine a menos de 200 m, supermercado a 1 km.','Das Restaurant le Grillou liegt am Eingang: Frühstück, Tagesgericht, Pizza, kaltes Buffet, Eis, Halb- oder Vollpension. Bäckerei, Lebensmittel, Apotheke und Kino unter 200 m, Supermarkt 1 km.','Il Ristorante le Grillou è all’ingresso: colazione, piatto del giorno, pizze, buffet freddo, gelateria, mezza pensione o pensione completa. Panetteria, alimentari, farmacia e cinema entro 200 m, supermercato a 1 km.','Restaurant le Grillou ligt bij de ingang: ontbijt, dagschotel, pizza’s, koud buffet, ijs, half- of volpension. Bakker, kruidenier, apotheek en bioscoop binnen 200 m, supermarkt op 1 km.'],
+'g.unknown':['Je n’ai pas la réponse exacte. L’accueil vous répond au 04 75 39 51 50 ou à reception@camping-legrillou.fr.','I don’t have the exact answer. Reception can help on +33 4 75 39 51 50 or at reception@camping-legrillou.fr.','No tengo la respuesta exacta. Recepción le contesta en el +33 4 75 39 51 50 o en reception@camping-legrillou.fr.','Dazu habe ich keine genaue Antwort. Die Rezeption hilft unter +33 4 75 39 51 50 oder reception@camping-legrillou.fr.','Non ho la risposta esatta. La reception risponde al +33 4 75 39 51 50 o a reception@camping-legrillou.fr.','Daar heb ik geen exact antwoord op. De receptie helpt je via +33 4 75 39 51 50 of reception@camping-legrillou.fr.'],
+'g.see':['Voir','See','Ver','Ansehen','Vedi','Bekijk'],
+};
+
+Object.assign(R,{
+// le camping
+'p.cam.t':['Le Grillou, à Rosières','Le Grillou, in Rosières','Le Grillou, en Rosières','Le Grillou in Rosières','Le Grillou, a Rosières','Le Grillou, in Rosières'],
+'p.cam.p':['Au sud de l’Ardèche, dans le village de Rosières : un camping familial de 2 hectares et 116 emplacements, un parc aquatique, la rivière à 150 m et tous les commerces à pied.','In southern Ardèche, in the village of Rosières: a 2-hectare family campsite with 116 pitches, a water park, the river 150 m away and every shop within walking distance.','Al sur de Ardèche, en el pueblo de Rosières: un camping familiar de 2 hectáreas y 116 parcelas, un parque acuático, el río a 150 m y todas las tiendas a pie.','Im Süden der Ardèche, im Dorf Rosières: ein Familiencamping auf 2 Hektar mit 116 Stellplätzen, Wasserpark, Fluss in 150 m und alle Geschäfte zu Fuß.','Nel sud dell’Ardèche, nel paese di Rosières: un campeggio familiare di 2 ettari e 116 piazzole, un parco acquatico, il fiume a 150 m e tutti i negozi a piedi.','In het zuiden van de Ardèche, in het dorp Rosières: een familiecamping van 2 hectare met 116 plaatsen, een waterpark, de rivier op 150 m en alle winkels op loopafstand.'],
+'p.cam.eq':['Pour jouer','Things to play','Para jugar','Zum Spielen','Per giocare','Om te spelen'],
+'p.cam.eql':['2 aires de jeux · terrains de pétanque · tables de ping-pong · salle de jeux · stade de beach soccer · terrain de basket · jeu de corde · rocher d’escalade','2 playgrounds · pétanque courts · table tennis · games room · beach soccer pitch · basketball court · rope climbing frame · climbing rock','2 parques infantiles · pistas de petanca · mesas de ping-pong · sala de juegos · campo de fútbol playa · cancha de baloncesto · juego de cuerdas · roca de escalada','2 Spielplätze · Boulebahnen · Tischtennis · Spielraum · Beachsoccer-Feld · Basketballplatz · Seilgarten · Kletterfelsen','2 aree giochi · campi da bocce · ping-pong · sala giochi · campo da beach soccer · campo da basket · percorso di corde · roccia da arrampicata','2 speeltuinen · jeu-de-boulesbanen · pingpongtafels · speelzaal · beachsoccerveld · basketbalveld · touwklimrek · klimrots'],
+'p.cam.sv':['Les services','Services','Servicios','Service','Servizi','Voorzieningen'],
+'p.cam.svl':['Lave-linge et sèche-linge · salle télé · wifi gratuit près du bar et de l’accueil · location de frigos · location de kit bébé · sanitaire chauffé en basse saison · sanitaires adaptés aux tout-petits et aux personnes à mobilité réduite','Washing machines and dryer · TV room · free wifi near the bar and reception · fridge hire · baby kit hire · heated toilet block in low season · facilities for toddlers and guests with reduced mobility','Lavadora y secadora · sala de TV · wifi gratis junto al bar y la recepción · alquiler de neveras · alquiler de kit bebé · sanitarios con calefacción en temporada baja · sanitarios adaptados a bebés y personas con movilidad reducida','Waschmaschinen und Trockner · TV-Raum · kostenloses WLAN an Bar und Rezeption · Kühlschrankverleih · Babyset-Verleih · beheiztes Sanitärgebäude in der Nebensaison · Sanitär für Kleinkinder und Personen mit eingeschränkter Mobilität','Lavatrici e asciugatrice · sala TV · wifi gratuito vicino al bar e alla reception · noleggio frigoriferi · noleggio kit bebè · servizi riscaldati in bassa stagione · servizi per bimbi piccoli e persone a mobilità ridotta','Wasmachines en droger · tv-zaal · gratis wifi bij de bar en receptie · koelkastverhuur · babysetverhuur · verwarmd sanitair in het laagseizoen · sanitair voor peuters en mindervaliden'],
+'p.cam.vi':['Dans le village, à 200 m','In the village, 200 m away','En el pueblo, a 200 m','Im Dorf, 200 m entfernt','In paese, a 200 m','In het dorp, op 200 m'],
+'p.cam.vil':['Marché estival du lundi matin et marchés nocturnes du jeudi (juillet-août) · cinéma · boulangerie · épicerie · supermarché · tabac-presse · pharmacie et médecins · d’autres commerces à 2 km par une voie piétonne','Summer market on Monday mornings and night markets on Thursdays (July–August) · cinema · bakery · grocery · supermarket · newsagent · pharmacy and doctors · more shops 2 km away via a footpath','Mercado de verano el lunes por la mañana y mercados nocturnos el jueves (julio-agosto) · cine · panadería · tienda · supermercado · estanco · farmacia y médicos · más comercios a 2 km por un camino peatonal','Sommermarkt montags vormittags und Nachtmärkte donnerstags (Juli–August) · Kino · Bäckerei · Lebensmittel · Supermarkt · Tabak/Presse · Apotheke und Ärzte · weitere Geschäfte 2 km entfernt über einen Fußweg','Mercato estivo il lunedì mattina e mercati notturni il giovedì (luglio-agosto) · cinema · panetteria · alimentari · supermercato · tabaccheria · farmacia e medici · altri negozi a 2 km lungo un percorso pedonale','Zomermarkt op maandagochtend en avondmarkten op donderdag (juli–augustus) · bioscoop · bakker · kruidenier · supermarkt · tabak/krantenwinkel · apotheek en artsen · meer winkels op 2 km via een voetpad'],
+// parc
+'p.parc.p':['Il fait beau, il fait chaud : du 1er mai au 13 septembre 2026, de 9 h 30 à 20 h, l’espace aquatique familial vous attend. Le toboggan de 47 m pour les sensations, la balnéo à remous pour la détente, les animaux farceurs pour les plus petits, et l’aquagym ou l’aqua family avec des animateurs diplômés.','Sunny and hot: from 1 May to 13 September 2026, 9.30 am to 8 pm, the family water area is waiting. The 47 m slide for thrills, the whirlpool spa to unwind, the cheeky animals for the little ones, plus aqua aerobics and aqua family with qualified instructors.','Hace sol y calor: del 1 de mayo al 13 de septiembre de 2026, de 9:30 a 20:00, el espacio acuático familiar le espera. El tobogán de 47 m para las emociones, el jacuzzi para relajarse, los animales traviesos para los pequeños, y aquagym o aqua family con monitores titulados.','Sonne und Wärme: vom 1. Mai bis 13. September 2026, 9.30 bis 20 Uhr, wartet der Familien-Wasserbereich. Die 47-m-Rutsche für den Nervenkitzel, der Whirlpool zum Entspannen, die frechen Tiere für die Kleinsten, dazu Aquagym und Aqua Family mit ausgebildeten Animateuren.','Sole e caldo: dal 1° maggio al 13 settembre 2026, dalle 9:30 alle 20, vi aspetta lo spazio acquatico per famiglie. Lo scivolo di 47 m per le emozioni, l’idromassaggio per il relax, gli animali burloni per i più piccoli, e acquagym o aqua family con animatori diplomati.','Zon en warmte: van 1 mei tot 13 september 2026, van 9.30 tot 20.00 uur, wacht het familiewaterpark op je. De glijbaan van 47 m voor de sensatie, het bubbelbad om te ontspannen, de grappige dieren voor de kleintjes, en aquagym of aqua family met gediplomeerde animatoren.'],
+'p.parc.l':['Grand bassin · bassin de balnéothérapie à remous · petit bassin · toboggan aquatique de 47 m · pataugeoire · aire de jeux aquatoons','Large pool · whirlpool spa pool · small pool · 47 m water slide · paddling pool · aquatoons play area','Piscina grande · piscina de balneoterapia con burbujas · piscina pequeña · tobogán de 47 m · chapoteadero · zona de juegos aquatoons','Großes Becken · Whirlpool-Becken · kleines Becken · 47-m-Wasserrutsche · Planschbecken · Aquatoons-Spielzone','Grande piscina · vasca idromassaggio · piscina piccola · scivolo di 47 m · vasca bimbi · area giochi aquatoons','Groot bad · bubbelbad · klein bad · waterglijbaan van 47 m · pierenbad · aquatoons-speelzone'],
+'p.parc.rt':['Le règlement du bassin','Pool rules','Normas de la piscina','Badeordnung','Regole della piscina','Zwembadregels'],
+'p.parc.r':['Baignade non surveillée, enfants sous la responsabilité des parents. Slip de bain, douche et bain de pieds obligatoires. Interdits : bermuda ou caleçon, huile solaire (crème tolérée), chaussures, parasols, jouets et ballons, nourriture et boissons. Brassards et petites bouées pour les enfants qui ne savent pas nager. Transats non réservables. Les visiteurs n’ont pas accès au parc. Bassins non chauffés.','Unsupervised bathing; children are their parents’ responsibility. Swim briefs, shower and footbath required. Not allowed: board shorts, sun oil (cream is fine), shoes, parasols, toys and balls, food and drink. Armbands and small rings for non-swimmers. Sunbeds cannot be reserved. Visitors have no access to the park. Pools are not heated.','Baño sin vigilancia, niños bajo responsabilidad de los padres. Bañador tipo slip, ducha y lavapiés obligatorios. Prohibido: bermudas, aceite solar (crema sí), calzado, sombrillas, juguetes y balones, comida y bebida. Manguitos y flotadores pequeños para quien no sabe nadar. Tumbonas no reservables. Visitantes sin acceso al parque. Piscinas sin climatizar.','Baden ohne Aufsicht, Kinder in der Verantwortung der Eltern. Badehose, Dusche und Fußbad Pflicht. Verboten: Badeshorts, Sonnenöl (Creme erlaubt), Schuhe, Sonnenschirme, Spielzeug und Bälle, Essen und Trinken. Schwimmflügel und kleine Ringe für Nichtschwimmer. Liegen nicht reservierbar. Besucher haben keinen Zutritt. Becken nicht beheizt.','Balneazione non sorvegliata, bambini sotto la responsabilità dei genitori. Slip, doccia e pediluvio obbligatori. Vietati: bermuda, olio solare (crema tollerata), scarpe, ombrelloni, giochi e palloni, cibo e bevande. Braccioli e piccoli salvagenti per chi non sa nuotare. Lettini non prenotabili. Visitatori non ammessi. Vasche non riscaldate.','Zwemmen zonder toezicht, kinderen onder verantwoordelijkheid van de ouders. Zwemslip, douche en voetbad verplicht. Niet toegestaan: zwemshorts, zonneolie (crème mag), schoenen, parasols, speelgoed en ballen, eten en drinken. Zwembandjes en kleine banden voor wie niet kan zwemmen. Ligbedden niet te reserveren. Bezoekers hebben geen toegang. Baden niet verwarmd.'],
+// locations
+'p.loc.t':['Cinq façons de dormir au frais','Five ways to sleep cool','Cinco maneras de dormir fresco','Fünf Arten, kühl zu schlafen','Cinque modi per dormire al fresco','Vijf manieren om koel te slapen'],
+'p.loc.p':['Mobil-homes et chalets pour 4 à 8 personnes, tous climatisés, avec télé, cuisine équipée, oreillers et couettes. Dès 2 nuits avant le 20 juin et après le 29 août, à la semaine en juillet-août. À quelques minutes de Vallon-Pont-d’Arc, de la Caverne du Pont d’Arc, de Ruoms, Balazuc et Labeaume.','Mobile homes and chalets for 4 to 8 people, all air-conditioned, with TV, equipped kitchen, pillows and duvets. From 2 nights before 20 June and after 29 August, by the week in July–August. Minutes from Vallon-Pont-d’Arc, the Caverne du Pont d’Arc, Ruoms, Balazuc and Labeaume.','Mobil-homes y chalets para 4 a 8 personas, todos climatizados, con tele, cocina equipada, almohadas y edredones. Desde 2 noches antes del 20 de junio y después del 29 de agosto, por semanas en julio-agosto. A minutos de Vallon-Pont-d’Arc, la Caverne du Pont d’Arc, Ruoms, Balazuc y Labeaume.','Mobilheime und Chalets für 4 bis 8 Personen, alle klimatisiert, mit TV, Küche, Kissen und Decken. Ab 2 Nächten vor dem 20. Juni und nach dem 29. August, im Juli–August wochenweise. Wenige Minuten nach Vallon-Pont-d’Arc, zur Caverne du Pont d’Arc, nach Ruoms, Balazuc und Labeaume.','Mobil-home e chalet da 4 a 8 persone, tutti climatizzati, con TV, cucina attrezzata, cuscini e piumoni. Da 2 notti prima del 20 giugno e dopo il 29 agosto, a settimana in luglio-agosto. A pochi minuti da Vallon-Pont-d’Arc, dalla Caverne du Pont d’Arc, da Ruoms, Balazuc e Labeaume.','Stacaravans en chalets voor 4 tot 8 personen, allemaal met airco, tv, keuken, kussens en dekbedden. Vanaf 2 nachten voor 20 juni en na 29 augustus, per week in juli–augustus. Op enkele minuten van Vallon-Pont-d’Arc, de Caverne du Pont d’Arc, Ruoms, Balazuc en Labeaume.'],
+'p.loc.roussel':['Envie d’un appartement ? Le camping travaille avec la Maison Roussel.','Prefer an apartment? The campsite works with Maison Roussel.','¿Prefiere un apartamento? El camping colabora con la Maison Roussel.','Lieber eine Wohnung? Der Platz arbeitet mit der Maison Roussel.','Preferite un appartamento? Il campeggio collabora con la Maison Roussel.','Liever een appartement? De camping werkt samen met Maison Roussel.'],
+'p.loc.surface':['Surface','Size','Superficie','Fläche','Superficie','Oppervlakte'],
+'p.loc.rooms':['Chambres','Bedrooms','Dormitorios','Schlafzimmer','Camere','Slaapkamers'],
+'p.loc.arr':['Arrivée','Arrival day','Llegada','Anreisetag','Arrivo','Aankomstdag'],
+'p.loc.beds':['Couchages','Beds','Camas','Betten','Letti','Bedden'],
+'p.loc.equip':['Équipement','Equipment','Equipamiento','Ausstattung','Dotazioni','Uitrusting'],
+'p.loc.equipl':['Cuisine équipée : frigo top avec compartiment à glaçons, réchaud gaz, micro-ondes, vaisselle, cafetière Senseo · salle de bains · WC · climatisation réversible · télévision · salon de jardin · oreillers et couettes','Equipped kitchen: fridge with ice compartment, gas hob, microwave, crockery, Senseo coffee maker · bathroom · WC · reversible air-conditioning · TV · garden furniture · pillows and duvets','Cocina equipada: nevera con congelador, hornillo de gas, microondas, vajilla, cafetera Senseo · baño · WC · climatización reversible · televisión · muebles de jardín · almohadas y edredones','Küche: Kühlschrank mit Eisfach, Gaskocher, Mikrowelle, Geschirr, Senseo-Kaffeemaschine · Bad · WC · Klimaanlage mit Heizfunktion · TV · Gartenmöbel · Kissen und Decken','Cucina attrezzata: frigo con freezer, fornello a gas, microonde, stoviglie, macchina Senseo · bagno · WC · climatizzazione reversibile · TV · mobili da giardino · cuscini e piumoni','Keuken: koelkast met vriesvak, gasstel, magnetron, servies, Senseo-apparaat · badkamer · toilet · airco met verwarming · tv · tuinmeubelen · kussens en dekbedden'],
+'p.loc.prices':['Tarifs 2026 à la semaine','2026 weekly prices','Tarifas semanales 2026','Wochenpreise 2026','Tariffe settimanali 2026','Weekprijzen 2026'],
+'p.loc.low':['Basse saison : voir la grille 2 à 7 nuits','Low season: see the 2–7 night grid','Temporada baja: ver la tabla de 2 a 7 noches','Nebensaison: siehe Tabelle 2–7 Nächte','Bassa stagione: vedi la tabella 2-7 notti','Laagseizoen: zie de tabel 2–7 nachten'],
+'p.loc.phone':['Réserver par téléphone','Book by phone','Reservar por teléfono','Telefonisch buchen','Prenota per telefono','Telefonisch boeken'],
+'L.morea':['Le grand séjour du chalet, ouvert sur une terrasse de 10 m². Pour cinq, sans se marcher dessus.','The chalet’s big living room opens onto a 10 m² terrace. Room for five without bumping into each other.','La gran sala del chalet se abre a una terraza de 10 m². Para cinco, sin estorbarse.','Das große Wohnzimmer öffnet sich auf eine 10 m² große Terrasse. Platz für fünf, ohne sich im Weg zu stehen.','Il grande soggiorno si apre su una terrazza di 10 m². Per cinque, senza pestarsi i piedi.','De grote woonkamer opent op een terras van 10 m². Ruimte voor vijf, zonder elkaar voor de voeten te lopen.'],
+'L.trianon':['Deux modules indépendants de 4 places sous une grande terrasse couverte commune, séparable par un claustra coulissant. Idéal pour deux familles.','Two independent 4-person units under one large shared covered terrace, divided by a sliding screen. Ideal for two families.','Dos módulos independientes de 4 plazas bajo una gran terraza cubierta común, separable con una celosía corredera. Ideal para dos familias.','Zwei unabhängige 4-Personen-Module unter einer großen gemeinsamen überdachten Terrasse, teilbar durch eine Schiebewand. Ideal für zwei Familien.','Due moduli indipendenti da 4 posti sotto una grande terrazza coperta comune, divisibile con un pannello scorrevole. Ideale per due famiglie.','Twee onafhankelijke units voor 4 onder één groot overdekt terras, te scheiden met een schuifwand. Ideaal voor twee gezinnen.'],
+'L.club5':['Sur un emplacement calme et indépendant, près de la piscine et des aires de jeux. Terrasse de 10 m².','On a quiet, private plot near the pool and playgrounds. 10 m² terrace.','En una parcela tranquila e independiente, cerca de la piscina y de los juegos. Terraza de 10 m².','Auf einem ruhigen, eigenen Platz nahe Pool und Spielplätzen. Terrasse 10 m².','Su una piazzola tranquilla e indipendente, vicino alla piscina e ai giochi. Terrazza di 10 m².','Op een rustige, eigen plek bij het zwembad en de speeltuinen. Terras van 10 m².'],
+'L.titom':['À deux pas de la piscine et de l’aire de jeux, avec un grand séjour ouvert sur l’extérieur. Pensé pour les familles avec de jeunes enfants.','A stone’s throw from the pool and playground, with a big living room opening outside. Designed for families with young children.','A dos pasos de la piscina y de los juegos, con una gran sala abierta al exterior. Pensado para familias con niños pequeños.','Nur wenige Schritte von Pool und Spielplatz, mit großem, nach außen offenem Wohnraum. Gedacht für Familien mit kleinen Kindern.','A due passi dalla piscina e dai giochi, con un grande soggiorno aperto verso l’esterno. Pensato per famiglie con bimbi piccoli.','Op een steenworp van het zwembad en de speeltuin, met een grote woonkamer die naar buiten opent. Bedacht voor gezinnen met jonge kinderen.'],
+'L.ohara':['En haut du camping, au calme, avec une belle vue sur le village de Rosières. Terrasse couverte de 13 m², parasol et WC indépendant.','At the top of the campsite, in the quiet, with a lovely view over Rosières. 13 m² covered terrace, parasol and separate WC.','En lo alto del camping, tranquilo, con bonitas vistas al pueblo de Rosières. Terraza cubierta de 13 m², sombrilla y WC independiente.','Oben auf dem Platz, ruhig, mit schönem Blick auf Rosières. Überdachte Terrasse 13 m², Sonnenschirm und separates WC.','In cima al campeggio, tranquillo, con bella vista sul paese di Rosières. Terrazza coperta di 13 m², ombrellone e WC separato.','Bovenaan de camping, rustig, met mooi uitzicht op Rosières. Overdekt terras van 13 m², parasol en apart toilet.'],
+'B.morea':['Chambre 1 : lit 140 × 200 · chambre 2 : lits superposés 80 × 200 et un lit 80 × 200','Bedroom 1: 140 × 200 bed · bedroom 2: 80 × 200 bunk beds and one 80 × 200 bed','Dormitorio 1: cama 140 × 200 · dormitorio 2: literas 80 × 200 y una cama 80 × 200','Zimmer 1: Bett 140 × 200 · Zimmer 2: Etagenbett 80 × 200 und ein Bett 80 × 200','Camera 1: letto 140 × 200 · camera 2: letto a castello 80 × 200 e un letto 80 × 200','Kamer 1: bed 140 × 200 · kamer 2: stapelbed 80 × 200 en een bed 80 × 200'],
+'B.trianon':['Par module : chambre avec lit 140 × 200 et canapé-lit 140 × 200 au séjour · 2 salles de bains, 2 télés','Per unit: bedroom with 140 × 200 bed and 140 × 200 sofa bed in the living room · 2 bathrooms, 2 TVs','Por módulo: dormitorio con cama 140 × 200 y sofá cama 140 × 200 en la sala · 2 baños, 2 teles','Pro Modul: Schlafzimmer mit Bett 140 × 200 und Schlafsofa 140 × 200 im Wohnraum · 2 Bäder, 2 TV','Per modulo: camera con letto 140 × 200 e divano letto 140 × 200 in soggiorno · 2 bagni, 2 TV','Per unit: slaapkamer met bed 140 × 200 en slaapbank 140 × 200 in de woonkamer · 2 badkamers, 2 tv’s'],
+'B.ohara':['Chambre 1 : lit 140 × 190 · chambre 2 : deux lits 80 × 190','Bedroom 1: 140 × 190 bed · bedroom 2: two 80 × 190 beds','Dormitorio 1: cama 140 × 190 · dormitorio 2: dos camas 80 × 190','Zimmer 1: Bett 140 × 190 · Zimmer 2: zwei Betten 80 × 190','Camera 1: letto 140 × 190 · camera 2: due letti 80 × 190','Kamer 1: bed 140 × 190 · kamer 2: twee bedden 80 × 190'],
+// emplacements
+'p.emp.t':['Votre coin d’herbe, en faïsses','Your patch of grass, on the terraces','Su rincón de hierba, en bancales','Ihr Stück Wiese, auf Terrassen','Il vostro angolo d’erba, a terrazze','Jouw stukje gras, op de terrassen'],
+'p.emp.p':['Un site verdoyant et arboré, des emplacements de 80 à 100 m², certains sur les faïsses, ces terrasses typiques de l’Ardèche. Branchement 10 A à proximité (prévoyez une rallonge de 25 m, prise française). Arrivées et départs tous les jours, de 14 h à 12 h.','A green, wooded site with pitches of 80 to 100 m², some on the faïsses, the traditional Ardèche terraces. 10 A hook-up nearby (bring a 25 m extension cable, French socket). Arrivals and departures every day, 2 pm to noon.','Un lugar verde y arbolado, parcelas de 80 a 100 m², algunas en las faïsses, los bancales típicos de Ardèche. Toma de 10 A cerca (traiga un alargador de 25 m, enchufe francés). Llegadas y salidas todos los días, de 14:00 a 12:00.','Grünes, baumbestandenes Gelände, Stellplätze von 80 bis 100 m², einige auf den Faïsses, den typischen Terrassen der Ardèche. 10-A-Anschluss in der Nähe (25-m-Kabel mitbringen, französischer Stecker). An- und Abreise täglich, 14 bis 12 Uhr.','Un luogo verde e alberato, piazzole da 80 a 100 m², alcune sulle faïsses, i terrazzamenti tipici dell’Ardèche. Presa da 10 A vicina (portate una prolunga di 25 m, presa francese). Arrivi e partenze tutti i giorni, dalle 14 alle 12.','Een groen terrein met bomen, plaatsen van 80 tot 100 m², sommige op de faïsses, de typische terrassen van de Ardèche. Aansluiting 10 A dichtbij (neem een kabel van 25 m mee, Franse stekker). Aankomst en vertrek elke dag, van 14.00 tot 12.00 uur.'],
+'p.emp.l':['Sanitaire chauffé hors saison · cabine familiale avec baignoire bébé, lavabo et WC enfant · douche et WC pour personnes à mobilité réduite · aire de service camping-car gratuite (vidange et eau) · location de grand frigo avec congélateur · 6 personnes et 1 véhicule maximum par emplacement · précisez le type et les dimensions de votre installation','Heated toilet block off-season · family cubicle with baby bath, child basin and WC · shower and WC for reduced mobility · free motorhome service point (waste and water) · large fridge-freezer hire · max. 6 people and 1 vehicle per pitch · tell us your set-up type and size','Sanitarios con calefacción fuera de temporada · cabina familiar con bañera de bebé, lavabo y WC infantil · ducha y WC para movilidad reducida · área de servicio gratuita para autocaravanas · alquiler de nevera grande con congelador · máx. 6 personas y 1 vehículo por parcela · indique tipo y medidas de su equipo','Beheiztes Sanitär außerhalb der Saison · Familienkabine mit Babywanne, Kinderwaschbecken und -WC · Dusche und WC für eingeschränkte Mobilität · kostenlose Wohnmobil-Servicestation · Verleih großer Kühl-Gefrierschränke · max. 6 Personen und 1 Fahrzeug pro Platz · bitte Art und Maße Ihrer Ausrüstung angeben','Servizi riscaldati fuori stagione · cabina famiglia con vaschetta bebè, lavabo e WC per bimbi · doccia e WC per mobilità ridotta · area camper gratuita (scarico e acqua) · noleggio frigo grande con freezer · max 6 persone e 1 veicolo per piazzola · indicate tipo e misure dell’attrezzatura','Verwarmd sanitair buiten het seizoen · gezinscabine met babybad, kinderwastafel en -toilet · douche en toilet voor mindervaliden · gratis serviceplaats voor campers · verhuur grote koel-vriescombinatie · max. 6 personen en 1 voertuig per plaats · geef type en afmetingen van je kampeermiddel op'],
+'p.emp.year':['Forfaits à l’année et gardiennage','Seasonal pitches and storage','Forfaits anuales y guardería','Saisonplätze und Unterstellung','Forfait annuali e rimessaggio','Seizoensplaatsen en stalling'],
+// tarifs
+'p.tar.t':['Tarifs 2026, sans surprise','2026 prices, no surprises','Tarifas 2026, sin sorpresas','Preise 2026, ohne Überraschungen','Tariffe 2026, senza sorprese','Prijzen 2026, zonder verrassingen'],
+'p.tar.brochure':['Télécharger la brochure 2026 (PDF)','Download the 2026 brochure (PDF)','Descargar el folleto 2026 (PDF)','Broschüre 2026 herunterladen (PDF)','Scarica la brochure 2026 (PDF)','Brochure 2026 downloaden (pdf)'],
+'p.tar.loc':['Locations, à la semaine','Rentals, per week','Alquileres, por semana','Mietunterkünfte, pro Woche','Affitti, a settimana','Verhuur, per week'],
+'p.tar.locnote':['Arrivée dès 16 h, départ avant 10 h. Caution de 200 € par empreinte bancaire (Swikly). Taxe de séjour 0,61 € par jour et par personne de plus de 18 ans. Frais de dossier 20 €.','Arrival from 4 pm, departure by 10 am. €200 deposit by card imprint (Swikly). Tourist tax €0.61 per day per person over 18. Booking fee €20.','Llegada desde las 16:00, salida antes de las 10:00. Fianza de 200 € con huella bancaria (Swikly). Tasa turística 0,61 € por día y persona mayor de 18. Gastos de gestión 20 €.','Anreise ab 16 Uhr, Abreise bis 10 Uhr. Kaution 200 € per Kartenvorautorisierung (Swikly). Kurtaxe 0,61 € pro Tag und Person über 18. Buchungsgebühr 20 €.','Arrivo dalle 16, partenza entro le 10. Cauzione di 200 € con preautorizzazione (Swikly). Tassa di soggiorno 0,61 € al giorno a persona oltre i 18 anni. Spese di pratica 20 €.','Aankomst vanaf 16.00 uur, vertrek voor 10.00 uur. Borg € 200 via kaartautorisatie (Swikly). Toeristenbelasting € 0,61 per dag per persoon boven 18. Dossierkosten € 20.'],
+'p.tar.lowh':['Basse saison','Low season','Temporada baja','Nebensaison','Bassa stagione','Laagseizoen'],
+'p.tar.lowt':['Basse saison (avant le 20/06 et après le 29/08), 1 à 5 personnes','Low season (before 20/06 and after 29/08), 1 to 5 people','Temporada baja (antes del 20/06 y después del 29/08), 1 a 5 personas','Nebensaison (vor 20.06. und nach 29.08.), 1 bis 5 Personen','Bassa stagione (prima del 20/06 e dopo il 29/08), da 1 a 5 persone','Laagseizoen (voor 20/06 en na 29/08), 1 tot 5 personen'],
+'p.tar.lowp':['Arrivées et départs possibles tous les jours.','Arrivals and departures any day.','Llegadas y salidas cualquier día.','An- und Abreise an jedem Tag.','Arrivi e partenze ogni giorno.','Aankomst en vertrek op elke dag.'],
+'p.tar.emp':['Emplacements, à la nuit','Pitches, per night','Parcelas, por noche','Stellplätze, pro Nacht','Piazzole, a notte','Kampeerplaatsen, per nacht'],
+'p.tar.empf':['Forfait 2 personnes (emplacement, voiture, électricité 10 A)','2-person package (pitch, car, 10 A electricity)','Forfait 2 personas (parcela, coche, electricidad 10 A)','Pauschale 2 Personen (Platz, Auto, Strom 10 A)','Forfait 2 persone (piazzola, auto, elettricità 10 A)','Pakket 2 personen (plaats, auto, stroom 10 A)'],
+'p.tar.empx':['Personne supplémentaire de 3 ans et +','Extra person aged 3+','Persona adicional de 3 años o más','Zusätzliche Person ab 3 Jahren','Persona in più dai 3 anni','Extra persoon vanaf 3 jaar'],
+'p.tar.empb':['Enfant de moins de 3 ans','Child under 3','Niño menor de 3 años','Kind unter 3 Jahren','Bambino sotto i 3 anni','Kind jonger dan 3'],
+'p.tar.free':['Gratuit','Free','Gratis','Kostenlos','Gratis','Gratis'],
+'p.tar.sup':['Suppléments','Extras','Suplementos','Zusatzleistungen','Supplementi','Toeslagen'],
+'p.tar.s1':['Kit bébé : chaise haute, lit parapluie, baignoire','Baby kit: high chair, travel cot, bath','Kit bebé: trona, cuna de viaje, bañera','Babyset: Hochstuhl, Reisebett, Badewanne','Kit bebè: seggiolone, lettino, vaschetta','Babyset: kinderstoel, reisbedje, badje'],
+'p.tar.s2':['Draps jetables 1 personne','Disposable sheets, 1 person','Sábanas desechables 1 persona','Einwegbettwäsche 1 Person','Lenzuola monouso 1 persona','Wegwerplakens 1 persoon'],
+'p.tar.s3':['Draps jetables 2 personnes','Disposable sheets, 2 people','Sábanas desechables 2 personas','Einwegbettwäsche 2 Personen','Lenzuola monouso 2 persone','Wegwerplakens 2 personen'],
+'p.tar.s4':['Ménage de fin de séjour, location 4 à 6 personnes','End-of-stay cleaning, 4–6 person rental','Limpieza final, alquiler de 4 a 6 personas','Endreinigung, Unterkunft 4–6 Personen','Pulizia finale, alloggio 4-6 persone','Eindschoonmaak, accommodatie 4–6 personen'],
+'p.tar.s5':['Ménage de fin de séjour, location 8 personnes','End-of-stay cleaning, 8-person rental','Limpieza final, alquiler de 8 personas','Endreinigung, Unterkunft 8 Personen','Pulizia finale, alloggio 8 persone','Eindschoonmaak, accommodatie 8 personen'],
+'p.tar.s6':['Grand frigo avec congélateur (3 jours minimum)','Large fridge-freezer (3 days minimum)','Nevera grande con congelador (mínimo 3 días)','Großer Kühl-Gefrierschrank (mind. 3 Tage)','Frigo grande con freezer (minimo 3 giorni)','Grote koel-vriescombinatie (minimaal 3 dagen)'],
+'p.tar.day':['/jour','/day','/día','/Tag','/giorno','/dag'],
+'p.tar.set':['/parure','/set','/juego','/Set','/set','/set'],
+'p.tar.stay':['/séjour','/stay','/estancia','/Aufenthalt','/soggiorno','/verblijf'],
+'p.tar.y':['Forfaits annuels (camping accessible du 1er avril au 30 septembre 2026)','Seasonal packages (site accessible 1 April to 30 September 2026)','Forfaits anuales (camping accesible del 1 de abril al 30 de septiembre de 2026)','Saisonpauschalen (Zugang vom 1. April bis 30. September 2026)','Forfait annuali (campeggio accessibile dal 1° aprile al 30 settembre 2026)','Seizoenspakketten (toegankelijk van 1 april tot 30 september 2026)'],
+'p.tar.y1':['Emplacement Confort caravane : 6 personnes max., 1 véhicule, électricité 10 A','Comfort caravan pitch: max. 6 people, 1 vehicle, 10 A electricity','Parcela Confort caravana: máx. 6 personas, 1 vehículo, electricidad 10 A','Komfortplatz Wohnwagen: max. 6 Personen, 1 Fahrzeug, Strom 10 A','Piazzola Comfort roulotte: max 6 persone, 1 veicolo, elettricità 10 A','Comfortplaats caravan: max. 6 personen, 1 voertuig, stroom 10 A'],
+'p.tar.y2':['Emplacement Grand confort caravane : 7 personnes, 1 véhicule, 16 A, eau potable, tout-à-l’égout','Grand comfort caravan pitch: 7 people, 1 vehicle, 16 A, drinking water, mains drainage','Parcela Gran confort caravana: 7 personas, 1 vehículo, 16 A, agua potable, desagüe','Großkomfortplatz Wohnwagen: 7 Personen, 1 Fahrzeug, 16 A, Trinkwasser, Abwasser','Piazzola Grand comfort roulotte: 7 persone, 1 veicolo, 16 A, acqua potabile, scarico','Luxe plaats caravan: 7 personen, 1 voertuig, 16 A, drinkwater, riolering'],
+'p.tar.y3':['Emplacement Grand confort mobil-home : 7 personnes max., 1 véhicule, 32 A, eau potable, tout-à-l’égout','Grand comfort mobile-home pitch: max. 7 people, 1 vehicle, 32 A, drinking water, mains drainage','Parcela Gran confort mobil-home: máx. 7 personas, 1 vehículo, 32 A, agua potable, desagüe','Großkomfortplatz Mobilheim: max. 7 Personen, 1 Fahrzeug, 32 A, Trinkwasser, Abwasser','Piazzola Grand comfort mobil-home: max 7 persone, 1 veicolo, 32 A, acqua potabile, scarico','Luxe plaats stacaravan: max. 7 personen, 1 voertuig, 32 A, drinkwater, riolering'],
+'p.tar.ytax':['Taxe de séjour pour un emplacement annuel : 82,35 € pour la saison.','Tourist tax for a seasonal pitch: €82.35 for the season.','Tasa turística por parcela anual: 82,35 € la temporada.','Kurtaxe für einen Saisonplatz: 82,35 € pro Saison.','Tassa di soggiorno per piazzola annuale: 82,35 € a stagione.','Toeristenbelasting voor een seizoensplaats: € 82,35 per seizoen.'],
+'p.tar.g':['Gardiennage de caravane','Caravan storage','Guardería de caravanas','Wohnwagen-Unterstellung','Rimessaggio roulotte','Caravanstalling'],
+'p.tar.g1':['Caravane simple essieu','Single-axle caravan','Caravana de un eje','Wohnwagen mit Einzelachse','Roulotte monoasse','Caravan met enkele as'],
+'p.tar.g2':['Caravane double essieux','Twin-axle caravan','Caravana de dos ejes','Wohnwagen mit Tandemachse','Roulotte doppio asse','Caravan met dubbele as'],
+'p.tar.tva':['Tarifs TTC, TVA à 10 % incluse ; toute modification de ce taux modifie le tarif.','Prices include 10% VAT; any change in that rate changes the price.','Precios con IVA del 10 % incluido; cualquier cambio de tipo modifica la tarifa.','Preise inkl. 10 % MwSt.; jede Änderung des Satzes ändert den Preis.','Prezzi IVA 10 % inclusa; ogni variazione dell’aliquota modifica la tariffa.','Prijzen inclusief 10 % btw; een wijziging van het tarief wijzigt de prijs.'],
+'p.tar.period':['Période','Period','Periodo','Zeitraum','Periodo','Periode'],
+'p.tar.before':['Avant le 20/06 et après le 29/08','Before 20/06 and after 29/08','Antes del 20/06 y después del 29/08','Vor 20.06. und nach 29.08.','Prima del 20/06 e dopo il 29/08','Voor 20/06 en na 29/08'],
+'p.tar.weekcol':['La semaine','The week','La semana','Die Woche','La settimana','De week'],
+'p.tar.n':['nuits','nights','noches','Nächte','notti','nachten'],
+// restaurant
+'p.res.p':['Une carte pour les petites et les grosses faims, une terrasse au soleil pour le petit-déjeuner, une boisson fraîche ou une coupe glacée. Formules rapides, pizzas, assiettes repas, produits du terroir, grillades et menus de saison.','A menu for big and small appetites, a sunny terrace for breakfast, a cold drink or an ice-cream sundae. Quick set meals, pizzas, platters, local produce, grills and seasonal menus.','Una carta para hambres grandes y pequeñas, una terraza al sol para desayunar, tomar algo fresco o una copa de helado. Menús rápidos, pizzas, platos combinados, productos locales, parrilladas y menús de temporada.','Eine Karte für kleinen und großen Hunger, eine Sonnenterrasse für Frühstück, ein kühles Getränk oder einen Eisbecher. Schnelle Menüs, Pizza, Tellergerichte, regionale Produkte, Gegrilltes und Saisonmenüs.','Un menù per piccoli e grandi appetiti, una terrazza al sole per la colazione, una bibita fresca o una coppa gelato. Formule veloci, pizze, piatti unici, prodotti del territorio, grigliate e menù di stagione.','Een kaart voor kleine en grote trek, een zonnig terras voor het ontbijt, een frisse drank of een ijscoupe. Snelle menu’s, pizza’s, maaltijdborden, streekproducten, grillgerechten en seizoensmenu’s.'],
+'p.res.l':['Plats à emporter · paniers pique-nique · repas de groupe jusqu’à 120 personnes · formule petit-déjeuner · demi-pension · pension complète · salle climatisée avec wifi gratuit','Takeaway · picnic baskets · group meals up to 120 people · breakfast package · half board · full board · air-conditioned room with free wifi','Platos para llevar · cestas de pícnic · comidas de grupo hasta 120 personas · desayuno · media pensión · pensión completa · sala climatizada con wifi gratis','Speisen zum Mitnehmen · Picknickkörbe · Gruppenessen bis 120 Personen · Frühstück · Halbpension · Vollpension · klimatisierter Saal mit kostenlosem WLAN','Piatti da asporto · cestini picnic · pasti di gruppo fino a 120 persone · colazione · mezza pensione · pensione completa · sala climatizzata con wifi gratuito','Afhaalgerechten · picknickmanden · groepsmaaltijden tot 120 personen · ontbijt · halfpension · volpension · zaal met airco en gratis wifi'],
+'p.res.more':['Tarifs, jours et horaires sur le site du restaurant','Prices, days and opening hours on the restaurant’s website','Precios, días y horarios en la web del restaurante','Preise, Tage und Öffnungszeiten auf der Website des Restaurants','Prezzi, giorni e orari sul sito del ristorante','Prijzen, dagen en openingstijden op de website van het restaurant'],
+// rivière
+'p.riv.p':['À deux pas, la Beaume : un espace de verdure calme sous le soleil de l’Ardèche, des plages de sable et de rochers pour lézarder, des bassins naturels où les enfants s’amusent. Les pêcheurs y taquinent la truite, poisson emblématique du département, en rivières de 1re et 2e catégorie.','Close by, the Beaume: a calm green spot under the Ardèche sun, sand and rock beaches for lazing, natural pools where the children play. Anglers come for trout, the department’s emblematic fish, in category 1 and 2 rivers.','Muy cerca, el Beaume: un rincón verde y tranquilo bajo el sol de Ardèche, playas de arena y rocas para tumbarse, pozas naturales donde juegan los niños. Los pescadores buscan la trucha, pez emblemático del departamento, en ríos de 1.ª y 2.ª categoría.','Ganz nah die Beaume: ein ruhiges grünes Plätzchen unter der Sonne der Ardèche, Sand- und Felsstrände zum Sonnen, natürliche Becken zum Spielen für die Kinder. Angler fischen hier Forellen, den Symbolfisch des Départements, in Gewässern der 1. und 2. Kategorie.','A due passi, la Beaume: un angolo verde e tranquillo sotto il sole dell’Ardèche, spiagge di sabbia e rocce per oziare, vasche naturali dove giocano i bambini. I pescatori cercano la trota, pesce simbolo del dipartimento, in fiumi di 1ª e 2ª categoria.','Vlakbij, de Beaume: een rustige groene plek onder de Ardèchezon, zand- en rotsstrandjes om te luieren, natuurlijke poelen waar de kinderen spelen. Vissers komen voor de forel, de symboolvis van het departement, in rivieren van 1e en 2e categorie.'],
+'p.riv.fish':['Cartes de pêche en vente uniquement sur internet','Fishing permits sold online only','Licencias de pesca solo en internet','Angelscheine nur online','Licenze di pesca solo online','Visvergunningen alleen online'],
+// animations
+'p.ani.p':['Pour les petits dès 3 ans et pour les grands, toute la semaine en juillet et août. Animations en journée et en soirée, tous les jours sauf le samedi ; soirées 3 à 4 fois par semaine, jusqu’à minuit.','For little ones from age 3 and grown-ups, all week in July and August. Daytime and evening activities every day except Saturday; evening events 3 to 4 times a week, until midnight.','Para pequeños desde 3 años y para mayores, toda la semana en julio y agosto. Actividades de día y de noche, todos los días salvo el sábado; veladas 3 o 4 veces por semana, hasta medianoche.','Für Kleine ab 3 Jahren und für Große, die ganze Woche im Juli und August. Programm tagsüber und abends, täglich außer samstags; Abendveranstaltungen 3- bis 4-mal pro Woche, bis Mitternacht.','Per i piccoli dai 3 anni e per i grandi, tutta la settimana in luglio e agosto. Animazione di giorno e di sera, tutti i giorni tranne il sabato; serate 3-4 volte a settimana, fino a mezzanotte.','Voor kleintjes vanaf 3 jaar en voor groten, de hele week in juli en augustus. Activiteiten overdag en ’s avonds, elke dag behalve zaterdag; avondprogramma 3 tot 4 keer per week, tot middernacht.'],
+'p.ani.l':['Concours de pétanque · tournoi de water-polo · cours d’aquagym · soirée dansante · soirée loto · soirée jeux, différente chaque semaine · tournoi de beach soccer · tournoi de ping-pong · ateliers créatifs · concours de belote · grands jeux à thèmes · tournoi de beach-volley · concerts','Pétanque contest · water-polo tournament · aqua aerobics · dance night · bingo night · games night, different every week · beach-soccer tournament · table-tennis tournament · craft workshops · belote card contest · themed games · beach-volleyball tournament · concerts','Concurso de petanca · torneo de waterpolo · aquagym · noche de baile · bingo · noche de juegos, distinta cada semana · torneo de fútbol playa · torneo de ping-pong · talleres creativos · concurso de belote · grandes juegos temáticos · torneo de vóley playa · conciertos','Boule-Turnier · Wasserball-Turnier · Aquagym · Tanzabend · Lottoabend · Spieleabend, jede Woche anders · Beachsoccer-Turnier · Tischtennis-Turnier · Bastelateliers · Belote-Kartenturnier · große Themenspiele · Beachvolleyball-Turnier · Konzerte','Gara di bocce · torneo di pallanuoto · acquagym · serata danzante · tombola · serata giochi, diversa ogni settimana · torneo di beach soccer · torneo di ping-pong · laboratori creativi · gara di belote · grandi giochi a tema · torneo di beach volley · concerti','Jeu-de-boulestoernooi · waterpolotoernooi · aquagym · dansavond · bingoavond · spelavond, elke week anders · beachsoccertoernooi · pingpongtoernooi · knutselworkshops · belote-kaarttoernooi · grote themaspelen · beachvolleybaltoernooi · concerten'],
+'p.ani.canoe':['Une descente des Gorges du Chassezac en canoë-kayak part du camping, avec un prestataire partenaire. Le programme vous est remis à l’arrivée.','A canoe-kayak trip down the Chassezac Gorges leaves from the campsite with a partner provider. The programme is handed to you on arrival.','Un descenso de las Gargantas del Chassezac en canoa-kayak sale del camping, con un proveedor asociado. El programa se entrega a la llegada.','Eine Kanutour durch die Chassezac-Schluchten startet am Platz, mit einem Partneranbieter. Das Programm erhalten Sie bei der Ankunft.','Una discesa delle Gole del Chassezac in canoa-kayak parte dal campeggio, con un partner. Il programma vi viene consegnato all’arrivo.','Een kanotocht door de Gorges du Chassezac vertrekt vanaf de camping, met een partner. Het programma krijg je bij aankomst.'],
+// alentours
+'p.alt.p':['Dans l’Ardèche méridionale, en bordure du Parc naturel régional des Monts d’Ardèche, Rosières profite d’un climat méridional. Les sites incontournables, au départ du camping :','In southern Ardèche, on the edge of the Monts d’Ardèche Regional Nature Park, Rosières enjoys a southern climate. The must-sees, from the campsite:','En la Ardèche meridional, junto al Parque natural regional de los Montes de Ardèche, Rosières goza de un clima mediterráneo. Imprescindibles desde el camping:','In der südlichen Ardèche, am Rand des Regionalen Naturparks Monts d’Ardèche, genießt Rosières ein südliches Klima. Die Höhepunkte ab dem Platz:','Nell’Ardèche meridionale, ai margini del Parco naturale regionale dei Monts d’Ardèche, Rosières gode di un clima mediterraneo. Da non perdere, partendo dal campeggio:','In de zuidelijke Ardèche, aan de rand van het regionaal natuurpark Monts d’Ardèche, geniet Rosières van een zuidelijk klimaat. De hoogtepunten vanaf de camping:'],
+'p.alt.act':['Activités : canoë, randonnée, vélo, pêche, marchés. Les prestataires viennent présenter leurs sorties chaque dimanche, au pot d’accueil.','Activities: canoeing, hiking, cycling, fishing, markets. Providers present their outings every Sunday at the welcome drink.','Actividades: canoa, senderismo, bici, pesca, mercados. Los proveedores presentan sus salidas cada domingo en el cóctel de bienvenida.','Aktivitäten: Kanu, Wandern, Radfahren, Angeln, Märkte. Die Anbieter stellen ihre Touren jeden Sonntag beim Begrüßungsdrink vor.','Attività: canoa, escursioni, bici, pesca, mercati. I fornitori presentano le uscite ogni domenica all’aperitivo di benvenuto.','Activiteiten: kanoën, wandelen, fietsen, vissen, markten. Aanbieders stellen hun uitstapjes elke zondag voor bij de welkomstborrel.'],
+// galerie
+'p.gal.t':['Une saison au Grillou','A season at Le Grillou','Una temporada en Le Grillou','Eine Saison im Grillou','Una stagione al Grillou','Een seizoen op Le Grillou'],
+// accès & contact
+'p.acc.t':['Venir au Grillou','Getting to Le Grillou','Llegar a Le Grillou','Anreise zum Grillou','Arrivare al Grillou','Naar Le Grillou'],
+'p.acc.car':['En voiture : autoroute A7, sortie Montélimar Nord, puis Le Teil et direction Alès.','By car: A7 motorway, exit Montélimar Nord, then Le Teil and follow Alès.','En coche: autopista A7, salida Montélimar Nord, luego Le Teil y dirección Alès.','Mit dem Auto: Autobahn A7, Ausfahrt Montélimar Nord, dann Le Teil und Richtung Alès.','In auto: autostrada A7, uscita Montélimar Nord, poi Le Teil e direzione Alès.','Met de auto: snelweg A7, afrit Montélimar Nord, dan Le Teil en richting Alès.'],
+'p.acc.train':['En train : gare de Montélimar ou Valence TGV, puis bus jusqu’à Rosières via Aubenas.','By train: Montélimar or Valence TGV station, then bus to Rosières via Aubenas.','En tren: estación de Montélimar o Valence TGV, luego autobús hasta Rosières por Aubenas.','Mit dem Zug: Bahnhof Montélimar oder Valence TGV, dann Bus nach Rosières über Aubenas.','In treno: stazione di Montélimar o Valence TGV, poi bus fino a Rosières via Aubenas.','Met de trein: station Montélimar of Valence TGV, dan bus naar Rosières via Aubenas.'],
+'p.acc.gps':['Coordonnées GPS','GPS coordinates','Coordenadas GPS','GPS-Koordinaten','Coordinate GPS','GPS-coördinaten'],
+'p.acc.form':['Écrire à l’accueil','Write to reception','Escribir a recepción','An die Rezeption schreiben','Scrivere alla reception','Schrijf de receptie'],
+'p.acc.name':['Nom','Name','Nombre','Name','Nome','Naam'],
+'p.acc.mail':['E-mail','Email','Correo','E-Mail','E-mail','E-mail'],
+'p.acc.msg':['Votre message','Your message','Su mensaje','Ihre Nachricht','Il messaggio','Je bericht'],
+'p.acc.send':['Envoyer le message','Send message','Enviar mensaje','Nachricht senden','Invia messaggio','Bericht versturen'],
+'p.acc.err':['Merci d’indiquer votre nom, une adresse e-mail valide et votre message.','Please enter your name, a valid email address and your message.','Indique su nombre, un correo válido y su mensaje.','Bitte Namen, gültige E-Mail-Adresse und Nachricht angeben.','Indicate nome, un indirizzo e-mail valido e il messaggio.','Vul je naam, een geldig e-mailadres en je bericht in.'],
+'p.acc.ok':['Votre messagerie s’ouvre avec le message prêt à partir.','Your email app opens with the message ready to send.','Se abre su correo con el mensaje listo para enviar.','Ihr E-Mail-Programm öffnet sich mit der fertigen Nachricht.','Si apre la posta con il messaggio pronto da inviare.','Je mailprogramma opent met het bericht klaar om te verzenden.'],
+'p.acc.rgpd':['Vos données servent uniquement à vous répondre. Droit d’accès, de rectification et de suppression : reception@camping-legrillou.fr.','Your data is only used to reply to you. Right of access, correction and deletion: reception@camping-legrillou.fr.','Sus datos solo sirven para responderle. Derecho de acceso, rectificación y supresión: reception@camping-legrillou.fr.','Ihre Daten dienen nur der Antwort. Recht auf Auskunft, Berichtigung und Löschung: reception@camping-legrillou.fr.','I dati servono solo a rispondervi. Diritto di accesso, rettifica e cancellazione: reception@camping-legrillou.fr.','Je gegevens dienen alleen om je te antwoorden. Recht op inzage, correctie en verwijdering: reception@camping-legrillou.fr.'],
+'p.acc.reception':['Accueil ouvert de 9 h à 12 h et de 14 h à 17 h.','Reception open 9 am to noon and 2 pm to 5 pm.','Recepción abierta de 9:00 a 12:00 y de 14:00 a 17:00.','Rezeption geöffnet 9–12 Uhr und 14–17 Uhr.','Reception aperta dalle 9 alle 12 e dalle 14 alle 17.','Receptie open van 9.00 tot 12.00 en van 14.00 tot 17.00 uur.'],
+// cookies
+'ck.t':['Le site utilise des cookies de mesure d’audience, seulement avec votre accord.','This site uses audience-measurement cookies, only with your consent.','El sitio usa cookies de medición de audiencia, solo con su consentimiento.','Diese Website nutzt Reichweiten-Cookies, nur mit Ihrer Zustimmung.','Il sito usa cookie di misurazione del pubblico, solo con il vostro consenso.','Deze site gebruikt analysecookies, alleen met je toestemming.'],
+'ck.yes':['Accepter','Accept','Aceptar','Akzeptieren','Accetta','Accepteren'],
+'ck.no':['Refuser','Decline','Rechazar','Ablehnen','Rifiuta','Weigeren'],
+});
+
+Object.assign(R,{
+'f.g1':['Ma réservation','My booking','Mi reserva','Meine Buchung','La mia prenotazione','Mijn boeking'],
+'f.g2':['Le camping','The campsite','El camping','Der Platz','Il campeggio','De camping'],
+'f.q1':['Comment réserver un séjour ?','How do I book a stay?','¿Cómo reservar una estancia?','Wie buche ich?','Come prenotare un soggiorno?','Hoe boek ik een verblijf?'],
+'f.a1':['En ligne : disponibilités, tarifs et paiement sécurisé, avec un acompte de 25 % et 20 € de frais de dossier ; la confirmation suit rapidement. Par téléphone au 04 75 39 51 50 ou par e-mail : nous posons une option de 8 jours et vous envoyons le contrat, à retourner signé avec l’acompte.','Online: availability, prices and secure payment, with a 25% deposit and a €20 booking fee; confirmation follows quickly. By phone on +33 4 75 39 51 50 or by email: we hold an 8-day option and send you the contract to return signed with the deposit.','En línea: disponibilidad, tarifas y pago seguro, con un depósito del 25 % y 20 € de gastos; la confirmación llega enseguida. Por teléfono al +33 4 75 39 51 50 o por correo: dejamos una opción de 8 días y le enviamos el contrato, que nos devuelve firmado con el depósito.','Online: Verfügbarkeit, Preise und sichere Zahlung, mit 25 % Anzahlung und 20 € Gebühr; die Bestätigung folgt rasch. Telefonisch (+33 4 75 39 51 50) oder per E-Mail: Wir halten 8 Tage eine Option und senden Ihnen den Vertrag, den Sie unterschrieben mit der Anzahlung zurückschicken.','Online: disponibilità, tariffe e pagamento sicuro, con acconto del 25 % e 20 € di spese; la conferma arriva presto. Per telefono al +33 4 75 39 51 50 o per e-mail: teniamo un’opzione di 8 giorni e vi inviamo il contratto da restituire firmato con l’acconto.','Online: beschikbaarheid, prijzen en veilige betaling, met 25 % aanbetaling en € 20 dossierkosten; de bevestiging volgt snel. Telefonisch (+33 4 75 39 51 50) of per e-mail: we houden 8 dagen een optie vast en sturen je het contract, dat je ondertekend terugstuurt met de aanbetaling.'],
+'f.q2':['Quels modes de paiement acceptez-vous ?','Which payment methods do you accept?','¿Qué formas de pago aceptan?','Welche Zahlungsarten akzeptieren Sie?','Quali pagamenti accettate?','Welke betaalmiddelen accepteren jullie?'],
+'f.a2':['Virement, chèque, Chèques-Vacances et Chèques-Vacances Connect, carte bancaire (dès 10 €) et espèces.','Bank transfer, cheque, Chèques-Vacances and Chèques-Vacances Connect, card (from €10) and cash.','Transferencia, cheque, Chèques-Vacances y Chèques-Vacances Connect, tarjeta (desde 10 €) y efectivo.','Überweisung, Scheck, Chèques-Vacances und Chèques-Vacances Connect, Karte (ab 10 €) und bar.','Bonifico, assegno, Chèques-Vacances e Chèques-Vacances Connect, carta (da 10 €) e contanti.','Overschrijving, cheque, Chèques-Vacances en Chèques-Vacances Connect, bankkaart (vanaf € 10) en contant.'],
+'f.q3':['Le camping est-il agréé VACAF ?','Is the campsite VACAF approved?','¿Está homologado VACAF?','Ist der Platz VACAF-zugelassen?','Il campeggio è convenzionato VACAF?','Is de camping VACAF-erkend?'],
+'f.a3':['Oui. Vérifiez vos droits, puis communiquez-nous votre numéro d’allocataire et votre département.','Yes. Check your entitlement, then give us your CAF number and département.','Sí. Compruebe sus derechos y facilítenos su número de beneficiario y su departamento.','Ja. Prüfen Sie Ihren Anspruch und nennen Sie uns Ihre CAF-Nummer und Ihr Département.','Sì. Verificate i vostri diritti e comunicateci numero CAF e dipartimento.','Ja. Controleer je rechten en geef ons je CAF-nummer en departement door.'],
+'f.q4':['Quels jours peut-on arriver ?','Which days can we arrive?','¿Qué días se puede llegar?','An welchen Tagen ist Anreise?','In quali giorni si può arrivare?','Op welke dagen kunnen we aankomen?'],
+'f.a4':['En basse saison, tous les jours (pour les ponts, appelez-nous). Les emplacements se louent à la nuit, arrivée possible tous les jours. En haute saison, les locations se louent à la semaine, du samedi au samedi ou du dimanche au dimanche selon le modèle.','In low season, any day (call us for bank holidays). Pitches are rented by the night, arrival any day. In high season, rentals go by the week, Saturday to Saturday or Sunday to Sunday depending on the model.','En temporada baja, cualquier día (para puentes, llámenos). Las parcelas se alquilan por noche, llegada cualquier día. En temporada alta, los alquileres van por semanas, de sábado a sábado o de domingo a domingo según el modelo.','In der Nebensaison täglich (an Brückentagen bitte anrufen). Stellplätze pro Nacht, Anreise täglich. In der Hauptsaison Mietunterkünfte wochenweise, Samstag bis Samstag oder Sonntag bis Sonntag je nach Modell.','In bassa stagione ogni giorno (per i ponti chiamateci). Le piazzole si affittano a notte, arrivo ogni giorno. In alta stagione gli affitti sono settimanali, da sabato a sabato o da domenica a domenica secondo il modello.','In het laagseizoen elke dag (bel ons voor feestdagen). Plaatsen per nacht, aankomst elke dag. In het hoogseizoen per week, van zaterdag tot zaterdag of zondag tot zondag, afhankelijk van het model.'],
+'f.q5':['Sans assurance annulation, suis-je remboursé si j’annule ?','Without cancellation insurance, am I refunded if I cancel?','Sin seguro de cancelación, ¿me reembolsan si cancelo?','Ohne Rücktrittsversicherung: Werde ich bei Storno erstattet?','Senza assicurazione annullamento, sono rimborsato se annullo?','Zonder annuleringsverzekering: krijg ik geld terug als ik annuleer?'],
+'f.a5':['Annulation par lettre recommandée. Les frais de dossier sont toujours retenus. Plus de 60 jours avant : sommes versées remboursées. Entre 30 et 60 jours : 25 % du séjour conservés. Moins de 30 jours : 100 % conservés.','Cancel by registered letter. The booking fee is always kept. More than 60 days before: payments refunded. 30 to 60 days: 25% of the stay kept. Under 30 days: 100% kept.','Cancelación por carta certificada. Los gastos de gestión se retienen siempre. Más de 60 días antes: se reembolsa lo pagado. Entre 30 y 60 días: se retiene el 25 %. Menos de 30 días: se retiene el 100 %.','Stornierung per Einschreiben. Die Buchungsgebühr wird stets einbehalten. Mehr als 60 Tage vorher: Erstattung. 30 bis 60 Tage: 25 % einbehalten. Unter 30 Tagen: 100 % einbehalten.','Annullamento con raccomandata. Le spese di pratica sono sempre trattenute. Oltre 60 giorni prima: rimborso. Tra 30 e 60 giorni: trattenuto il 25 %. Meno di 30 giorni: trattenuto il 100 %.','Annuleren per aangetekende brief. De dossierkosten worden altijd ingehouden. Meer dan 60 dagen vooraf: terugbetaling. 30 tot 60 dagen: 25 % ingehouden. Minder dan 30 dagen: 100 % ingehouden.'],
+'f.q6':['Faut-il verser une caution pour une location ?','Is there a deposit for rentals?','¿Hay fianza para los alquileres?','Gibt es eine Kaution?','Serve una cauzione per gli affitti?','Is er een borg voor de huur?'],
+'f.a6':['Oui, 200 €, par empreinte de carte bancaire sur un site sécurisé avant votre arrivée, libérée quelques jours après votre départ.','Yes, €200, by card imprint on a secure site before arrival, released a few days after you leave.','Sí, 200 €, con huella de tarjeta en una web segura antes de llegar, liberada unos días después de su salida.','Ja, 200 €, per Kartenvorautorisierung auf einer sicheren Seite vor der Anreise, einige Tage nach Abreise freigegeben.','Sì, 200 €, con preautorizzazione della carta su un sito sicuro prima dell’arrivo, sbloccata pochi giorni dopo la partenza.','Ja, € 200, via kaartautorisatie op een beveiligde site voor aankomst, enkele dagen na vertrek vrijgegeven.'],
+'f.q7':['Comment se passe le départ ? Peut-on rester sur place ?','How does departure work? Can we stay on site afterwards?','¿Cómo es la salida? ¿Podemos quedarnos?','Wie läuft die Abreise? Dürfen wir noch bleiben?','Come funziona la partenza? Possiamo restare?','Hoe gaat het vertrek? Mogen we nog blijven?'],
+'f.a7':['Rendez les clés avant 10 h et le logement propre. Vous pouvez profiter des services toute la journée, voiture garée au parking visiteurs.','Return the keys by 10 am with the unit clean. You can enjoy the facilities all day, with your car in the visitors’ car park.','Devuelva las llaves antes de las 10:00 y el alojamiento limpio. Puede disfrutar de los servicios todo el día, con el coche en el aparcamiento de visitas.','Schlüssel bis 10 Uhr abgeben, Unterkunft sauber. Sie können die Einrichtungen den ganzen Tag nutzen, Auto auf dem Besucherparkplatz.','Restituite le chiavi entro le 10 con l’alloggio pulito. Potete usare i servizi tutto il giorno, auto al parcheggio visitatori.','Lever de sleutels voor 10.00 uur in en laat de accommodatie schoon achter. Je mag de hele dag van de voorzieningen gebruikmaken, met de auto op de bezoekersparking.'],
+'f.q8':['Quelles sont les dates d’ouverture ?','When is the campsite open?','¿Cuándo abre el camping?','Wann ist der Platz geöffnet?','Quando è aperto il campeggio?','Wanneer is de camping open?'],
+'f.a8':['Du 1er mai au 13 septembre 2026.','From 1 May to 13 September 2026.','Del 1 de mayo al 13 de septiembre de 2026.','Vom 1. Mai bis 13. September 2026.','Dal 1° maggio al 13 settembre 2026.','Van 1 mei tot 13 september 2026.'],
+'f.q9':['Comment fonctionne le wifi ?','How does the wifi work?','¿Cómo funciona el wifi?','Wie funktioniert das WLAN?','Come funziona il wifi?','Hoe werkt de wifi?'],
+'f.a9':['Gratuit, autour du bar et de l’accueil. La couverture 4G est excellente pour Free, Orange, SFR…','Free, around the bar and reception. 4G coverage is excellent on Free, Orange, SFR…','Gratis, junto al bar y la recepción. La cobertura 4G es excelente con Free, Orange, SFR…','Kostenlos rund um Bar und Rezeption. Sehr guter 4G-Empfang bei Free, Orange, SFR…','Gratuito, intorno al bar e alla reception. Ottima copertura 4G per Free, Orange, SFR…','Gratis, rond de bar en de receptie. Uitstekend 4G-bereik bij Free, Orange, SFR…'],
+'f.q10':['Y a-t-il une supérette ?','Is there a mini-market?','¿Hay un supermercado?','Gibt es einen Laden?','C’è un minimarket?','Is er een winkeltje?'],
+'f.a10':['Non, mais à 200 m : boulangerie, tabac, bar-restaurant, cinéma. À 1 km : supermarché, banque, maison de santé, pharmacie.','No, but within 200 m: bakery, newsagent, bar-restaurant, cinema. Within 1 km: supermarket, bank, health centre, pharmacy.','No, pero a 200 m: panadería, estanco, bar-restaurante, cine. A 1 km: supermercado, banco, centro de salud, farmacia.','Nein, aber in 200 m: Bäckerei, Tabak, Bar-Restaurant, Kino. In 1 km: Supermarkt, Bank, Ärztehaus, Apotheke.','No, ma a 200 m: panetteria, tabacchi, bar-ristorante, cinema. A 1 km: supermercato, banca, centro medico, farmacia.','Nee, maar op 200 m: bakker, tabakszaak, bar-restaurant, bioscoop. Op 1 km: supermarkt, bank, gezondheidscentrum, apotheek.'],
+'f.q11':['Proposez-vous un service de restauration ?','Do you offer food?','¿Ofrecen restauración?','Gibt es Verpflegung?','Offrite ristorazione?','Kun je er eten?'],
+'f.a11':['Oui, le Restaurant le Grillou, à l’entrée du camping : formule du jour, pizzas, buffet froid, glacier, petit-déjeuner, demi-pension ou pension complète. Jours et horaires sur son site.','Yes, Restaurant le Grillou at the campsite entrance: dish of the day, pizzas, cold buffet, ice creams, breakfast, half or full board. Days and hours on its website.','Sí, el Restaurante le Grillou, a la entrada: menú del día, pizzas, bufé frío, heladería, desayuno, media pensión o completa. Días y horarios en su web.','Ja, das Restaurant le Grillou am Eingang: Tagesgericht, Pizza, kaltes Buffet, Eis, Frühstück, Halb- oder Vollpension. Tage und Zeiten auf seiner Website.','Sì, il Ristorante le Grillou all’ingresso: piatto del giorno, pizze, buffet freddo, gelateria, colazione, mezza pensione o completa. Giorni e orari sul suo sito.','Ja, Restaurant le Grillou bij de ingang: dagschotel, pizza’s, koud buffet, ijs, ontbijt, half- of volpension. Dagen en uren op de website.'],
+'f.q12':['Y a-t-il une laverie ?','Is there a laundry?','¿Hay lavandería?','Gibt es eine Waschküche?','C’è una lavanderia?','Is er een wasserette?'],
+'f.a12':['Oui : 2 lave-linge et 1 sèche-linge. Les jetons s’achètent à l’accueil.','Yes: 2 washing machines and 1 dryer. Tokens are sold at reception.','Sí: 2 lavadoras y 1 secadora. Las fichas se compran en recepción.','Ja: 2 Waschmaschinen und 1 Trockner. Jetons gibt es an der Rezeption.','Sì: 2 lavatrici e 1 asciugatrice. I gettoni si comprano alla reception.','Ja: 2 wasmachines en 1 droger. Munten koop je aan de receptie.'],
+'f.q13':['Mon animal peut-il venir ?','Can my pet come?','¿Puede venir mi mascota?','Darf mein Haustier mit?','Il mio animale può venire?','Mag mijn huisdier mee?'],
+'f.a13':['Avec plaisir et sans supplément, 2 maximum, carnet de vaccination à jour.','Gladly and free of charge, 2 max., with an up-to-date vaccination record.','Con mucho gusto y sin suplemento, 2 máx., con la cartilla de vacunación al día.','Gern und ohne Aufpreis, max. 2, mit aktuellem Impfpass.','Con piacere e senza supplemento, max 2, con libretto vaccinale aggiornato.','Graag en zonder toeslag, max. 2, met geldig vaccinatieboekje.'],
+'f.q14':['Le camping est-il au bord de la rivière ?','Is the campsite by the river?','¿Está junto al río?','Liegt der Platz am Fluss?','Il campeggio è sul fiume?','Ligt de camping aan de rivier?'],
+'f.a14':['À 150 m de la Beaume, en zone non inondable. Sur place, une aire de jeux privative : beach soccer, basket, jeu de corde, rocher d’escalade.','150 m from the Beaume, outside flood zones. On site, a private play area: beach soccer, basketball, rope frame, climbing rock.','A 150 m del Beaume, en zona no inundable. En el camping, una zona de juegos privada: fútbol playa, baloncesto, cuerdas, roca de escalada.','150 m von der Beaume, außerhalb von Überschwemmungsgebieten. Vor Ort ein eigener Spielbereich: Beachsoccer, Basketball, Seilgarten, Kletterfelsen.','A 150 m dalla Beaume, in zona non inondabile. In loco un’area giochi privata: beach soccer, basket, corde, roccia da arrampicata.','Op 150 m van de Beaume, buiten overstromingsgebied. Op de camping een eigen speelzone: beachsoccer, basketbal, touwrek, klimrots.'],
+'f.q15':['En basse saison, l’espace aquatique est-il ouvert ?','Is the pool open in low season?','¿Abre la piscina en temporada baja?','Ist das Bad in der Nebensaison offen?','In bassa stagione la piscina è aperta?','Is het zwembad open in het laagseizoen?'],
+'f.a15':['Oui, du 1er mai au 13 septembre 2026. Il n’est pas chauffé.','Yes, from 1 May to 13 September 2026. It is not heated.','Sí, del 1 de mayo al 13 de septiembre de 2026. No está climatizado.','Ja, vom 1. Mai bis 13. September 2026. Es ist nicht beheizt.','Sì, dal 1° maggio al 13 settembre 2026. Non è riscaldato.','Ja, van 1 mei tot 13 september 2026. Het is niet verwarmd.'],
+'f.q16':['Les locations ont-elles la climatisation et la télé ?','Do rentals have air-conditioning and TV?','¿Tienen los alquileres aire y tele?','Haben die Unterkünfte Klima und TV?','Gli affitti hanno aria condizionata e TV?','Hebben de accommodaties airco en tv?'],
+'f.a16':['Oui, toutes.','Yes, all of them.','Sí, todos.','Ja, alle.','Sì, tutti.','Ja, allemaal.'],
+'f.q17':['Faut-il apporter draps et serviettes ?','Should we bring sheets and towels?','¿Hay que traer sábanas y toallas?','Bettwäsche und Handtücher mitbringen?','Bisogna portare lenzuola e asciugamani?','Moeten we lakens en handdoeken meenemen?'],
+'f.a17':['Oui : seuls les oreillers et couettes sont fournis. Des draps jetables sont en vente.','Yes: only pillows and duvets are provided. Disposable sheets are on sale.','Sí: solo se facilitan almohadas y edredones. Se venden sábanas desechables.','Ja: nur Kissen und Decken sind vorhanden. Einwegbettwäsche ist erhältlich.','Sì: sono forniti solo cuscini e piumoni. Si vendono lenzuola monouso.','Ja: alleen kussens en dekbedden zijn aanwezig. Wegwerplakens zijn te koop.'],
+'f.q18':['Les locations sont-elles équipées pour bébé ?','Are rentals equipped for babies?','¿Están equipados para bebés?','Gibt es Babyausstattung?','Gli alloggi sono attrezzati per neonati?','Zijn de accommodaties uitgerust voor baby’s?'],
+'f.a18':['Non, mais le kit bébé (chaise haute, baignoire, lit parapluie) se loue 5 € par jour, à demander à la réservation.','No, but the baby kit (high chair, bath, travel cot) can be hired for €5 a day; ask when booking.','No, pero el kit bebé (trona, bañera, cuna de viaje) se alquila por 5 € al día; pídalo al reservar.','Nein, aber das Babyset (Hochstuhl, Wanne, Reisebett) gibt es für 5 € pro Tag; bei Buchung angeben.','No, ma il kit bebè (seggiolone, vaschetta, lettino) si noleggia a 5 € al giorno; chiedetelo alla prenotazione.','Nee, maar de babyset (kinderstoel, badje, reisbedje) huur je voor € 5 per dag; vraag ernaar bij het boeken.'],
+'f.q19':['Quelle est la surface des emplacements ?','How big are the pitches?','¿Qué tamaño tienen las parcelas?','Wie groß sind die Stellplätze?','Quanto sono grandi le piazzole?','Hoe groot zijn de plaatsen?'],
+'f.a19':['De 80 à 100 m², parking compris, pour 6 personnes maximum et 1 véhicule, avec électricité 10 A à proximité (rallonge de 25 m, prise française). Indiquez-nous les dimensions de votre installation.','80 to 100 m² including parking, for max. 6 people and 1 vehicle, with 10 A electricity nearby (25 m cable, French socket). Tell us the size of your set-up.','De 80 a 100 m², aparcamiento incluido, para 6 personas máx. y 1 vehículo, con electricidad 10 A cerca (alargador de 25 m, enchufe francés). Indíquenos las medidas de su equipo.','80 bis 100 m² inkl. Parkplatz, für max. 6 Personen und 1 Fahrzeug, Strom 10 A in der Nähe (25-m-Kabel, französischer Stecker). Bitte Maße Ihrer Ausrüstung angeben.','Da 80 a 100 m², parcheggio incluso, per max 6 persone e 1 veicolo, con elettricità 10 A vicina (prolunga di 25 m, presa francese). Indicateci le misure dell’attrezzatura.','80 tot 100 m² inclusief parkeerplek, voor max. 6 personen en 1 voertuig, met stroom 10 A dichtbij (kabel van 25 m, Franse stekker). Geef de afmetingen van je kampeermiddel op.'],
+'f.q20':['Peut-on louer un réfrigérateur ?','Can we hire a fridge?','¿Se puede alquilar una nevera?','Kann man einen Kühlschrank mieten?','Si può noleggiare un frigorifero?','Kun je een koelkast huren?'],
+'f.a20':['Oui, un grand frigo avec congélateur, 6,50 € par jour, 3 jours minimum. Pensez à le réserver.','Yes, a large fridge-freezer, €6.50 a day, 3-day minimum. Best to book it.','Sí, una nevera grande con congelador, 6,50 € al día, mínimo 3 días. Mejor reservarla.','Ja, einen großen Kühl-Gefrierschrank, 6,50 € pro Tag, mind. 3 Tage. Am besten reservieren.','Sì, un frigo grande con freezer, 6,50 € al giorno, minimo 3 giorni. Meglio prenotarlo.','Ja, een grote koel-vriescombinatie, € 6,50 per dag, minimaal 3 dagen. Reserveer hem op tijd.'],
+'f.q21':['Mon fils de 4 ans peut-il participer aux animations ?','Can my 4-year-old join the activities?','¿Puede mi hijo de 4 años participar?','Darf mein 4-jähriger Sohn mitmachen?','Mio figlio di 4 anni può partecipare?','Mag mijn zoon van 4 meedoen?'],
+'f.a21':['Oui, les animations accueillent les enfants dès 3 ans.','Yes, activities welcome children from age 3.','Sí, las actividades aceptan niños desde 3 años.','Ja, ab 3 Jahren sind Kinder dabei.','Sì, l’animazione accoglie bambini dai 3 anni.','Ja, kinderen vanaf 3 jaar zijn welkom.'],
+'f.q22':['Y a-t-il des animations ?','Are there activities?','¿Hay animación?','Gibt es Animation?','C’è animazione?','Is er animatie?'],
+'f.a22':['Oui, en juillet et août : toute la journée et en soirée, tous les jours sauf le samedi. Le dimanche à 19 h, le pot d’accueil présente le programme de la semaine.','Yes, in July and August: all day and in the evening, every day except Saturday. Sunday at 7 pm, the welcome drink presents the week’s programme.','Sí, en julio y agosto: todo el día y por la noche, todos los días salvo el sábado. El domingo a las 19:00, el cóctel de bienvenida presenta el programa.','Ja, im Juli und August: ganztägig und abends, täglich außer samstags. Sonntags um 19 Uhr stellt der Begrüßungsdrink das Wochenprogramm vor.','Sì, in luglio e agosto: tutto il giorno e la sera, ogni giorno tranne il sabato. La domenica alle 19, l’aperitivo di benvenuto presenta il programma.','Ja, in juli en augustus: de hele dag en ’s avonds, elke dag behalve zaterdag. Zondag om 19.00 uur stelt de welkomstborrel het weekprogramma voor.'],
+'f.q23':['Quelles activités à ne pas manquer autour ?','Which nearby activities are not to be missed?','¿Qué actividades no perderse?','Welche Aktivitäten lohnen sich?','Quali attività da non perdere?','Welke activiteiten mag je niet missen?'],
+'f.a23':['L’Ardèche est un terrain de jeux : pêche, accrobranche, spéléo, vélo, VTT, canoë-kayak, randonnée à cheval ou à pied, et les villages de caractère. Voir la page Aux alentours.','The Ardèche is a playground: fishing, treetop adventure, caving, cycling, mountain biking, canoeing, horse riding or hiking, and its villages of character. See the Nearby page.','Ardèche es un parque de juegos: pesca, parque de aventura, espeleología, bici, BTT, canoa, rutas a caballo o a pie y pueblos con encanto. Vea la página Alrededores.','Die Ardèche ist ein Spielplatz: Angeln, Kletterwald, Höhlentouren, Rad, Mountainbike, Kanu, Reiten oder Wandern und charaktervolle Dörfer. Siehe Seite Umgebung.','L’Ardèche è un parco giochi: pesca, parco avventura, speleologia, bici, MTB, canoa, equitazione o trekking e borghi di carattere. Vedi la pagina Dintorni.','De Ardèche is één grote speeltuin: vissen, klimpark, grotten, fietsen, mountainbiken, kanoën, paardrijden of wandelen, en karaktervolle dorpjes. Zie de pagina Omgeving.'],
+});
+
+const LEGAL={"cgv": "Généralités et contrat\nToute option de réservation (valable 8 jours) devient effective uniquement avec l’accord du camping, après réception de l’acompte de 25%, des frais de dossier et du contrat de réservation (contrat de réservation dûment complété et signé ou réservation en ligne). Dans le cas contraire, celle-ci sera automatiquement annulée sans préavis de notre part.\nPour des questions de législation, de sécurité mais aussi de confort, le camping demande de recevoir au moment de la réservation l’ensemble des noms, prénoms et dates de naissance de tous les participants du séjour, ainsi qu’un numéro de portable et plaque d’immatriculation de leur véhicule. Toutes personnes non déclarées lors de la réservation initiale n’auront pas accès à votre location / emplacement sans accord au préalable de la réception. Le camping se réserve le droit de refuser son accès aux groupes ou familles se présentant avec un nombre de participants (bébé(s) compris) supérieur à la capacité de l’hébergement loué. A réception de votre paiement vous acceptez les termes, les conditions, les prestations et les prix de votre séjour. Vous ne pourrez prétendre vous être trompé car vous avez saisi les informations. Le camping le Grillou ne peut garantir les demandes particulières faites lors d’une réservation (numéro emplacement ou autre).\nLes demandes de prise en charge VACAF après validation du dossier initial resteront fermes et définitives. Les mineurs ne sont pas acceptés seuls dans l’enceinte de l’établissement. \nHoraire d’arrivée tardive : possibilité jusqu’à 21h00.\n Absence de droit de rétractation\nObligation d’information sur le fait que le droit de rétractation ne s’applique pas pour les hébergements d’hôtellerie de plein air, prévu à l’article L. 221-5 qui stipule que : … 5° Lorsque le droit de rétractation ne peut être\nexercé en application de l’article L. 221-28, l’information selon laquelle le consommateur ne bénéficie pas de ce droit ou, le cas échéant, les circonstances dans lesquelles le consommateur perd son droit de rétractation »\n Emplacements \nLe tarif des emplacements est à la nuitée de 14h00 à 12h00. Ils sont prévus pour 6 personnes maximum et ont tous l’électricité 10A (prise française – prévoir une rallonge de 25m). Deux blocs sanitaires sont à votre disposition (sanitaire PMR, cabine familiale). Aire de service pour camping-car.\nNotre prix de base comprend :\n– Un emplacement pour 2 personnes + une place pour une tente ou une caravane ou camping-car + la place d’un stationnement véhicule\nNotre prix de base ne comprend pas :\n– Les personnes supplémentaires + la location de frigo\n Locations\nHeure d’arrivée : 16h00 – Heure de départ : 10h00\nNotre prix de base comprend :\n– Location équipée pour le nombre de personnes prévues en fonction du type d’hébergement + la place d’un stationnement véhicule\nNotre prix de base ne comprend pas :\n– La fourniture de draps + fourniture de kit de serviettes + les produits d’entretien\nToute insatisfaction concernant l’état général doit être notifiée au plus tard 24h après l’arrivée. Passé ce délai, les plaintes ne seront plus recevables. Durant votre séjour, l’entretien de la location vous incombe. Le logement doit être rendu propre – à défaut les frais de remise en état vous seront facturés. Départ du mobil home/chalet avant l’ouverture de la réception : Si vous souhaitez partir avant l’ouverture, nous vous ferons confiance pour faire le ménage – il n’y aura pas « d’état des lieux » fait par le camping, cela se fera sans votre présence. Si le nettoyage n’est pas fait correctement, un forfait ménage vous sera facturé. Une caution de 200,00 € vous sera demandée par empreinte bancaire via notre partenaire sécurisé Swikly. Après votre départ et vérification du logement, votre caution Swikly sera automatiquement libérée sous quelques jours. Toutes les locations sont non-fumeurs. La caution sera conservée en totalité si l’interdiction de fumer n’a pas été respectée. En hors saison, les heures d’arrivée et de départ (location et emplacement) peuvent être adaptées sur demande.\nTarifs et règlement du séjour\nLes tarifs appliqués sont ceux mentionnés sur notre brochure et sur notre site internet www.campinglegrillou.fr. Des promos ponctuelles peuvent être mises en place sur notre site. Le tarif appliqué sera alors celui de la promo en cours en fonction des disponibilités au moment de la demande de réservation. Aucun séjour réservé et payé avant la mise en place de ces promotions\nne fera l’objet d’un remboursement même partiel ou d’une réduction de tarif. Ces prix sont à la date de réservation fermes et définitifs. Le montant de la taxe de séjour n’est pas inclus dans\nle prix (concerne les personnes de 18 ans et plus – elle s’élève à 0.61€/nuit/personne). Chaque réservation de séjour à partir de 3 nuits donne lieu à la perception de frais de dossier de 20,00 €.\nLe solde de réservation sera à régler pour les locations et les emplacements 30 jours avant la date de votre arrivée. En cas de retard de paiement, le camping se réserve le droit d’annuler la réservation et de conserver l’acompte réglé. Pour les réservations effectuées moins de 30 jours avant la date de votre arrivée, le règlement intégral doit être effectué au moment de la réservation par carte bancaire ou virement. Le paiement du solde peut être échelonné en plusieurs versements tous les mois sans frais supplémentaire (Jusqu’à J-30). Différents modes de paiement sont acceptés : ANCV, e-ANCV, chèque bancaire, carte bancaire ou virement bancaire. Aucun remboursement ne sera accordé pour toute arrivée retardée ou tout départ anticipé. Il est impératif et indispensable dans tous les cas de nous prévenir au préalable. Le camping se réserve le droit de proposer à nouveau l’emplacement ou la location à la vente sans remboursement possible. Aucun rendu de monnaie ne sera possible si le montant total des chèques vacances est supérieur au prix total de la réservation. Les ANCV non envoyés en recommandé et non réceptionnés par le Camping le Grillou sont sous la responsabilité du client.\nOccupation des lieux\nLe client pourra consulter notre règlement intérieur sur notre site stipulant le respect d’autrui, la propreté, le respect du calme ou l’enlèvement des ordures ménagères. Tous les clients doivent se conformer aux dispositions du règlement intérieur. Les mineurs non accompagnés par l’un des titulaires de l’autorité parentale ne peuvent déambuler après 23h00. Les animaux sont acceptés* dans la limite de 2 maximum par emplacement. Ils doivent être tatoués ou pucés et leurs carnets de vaccination à jour (*les chiens de première catégorie ne sont pas acceptés).\n Il est STRICTEMENT INTERDIT aux animaux de monter sur les lits : un supplément ménage pourra vous être facturé pour le lavage des couettes. La préfecture de l’Ardèche interdit l’utilisation des barbecues individuels sur le terrain du camping. Un barbecue collectif est à votre disposition. La responsabilité du camping ne saurait être engagée en cas de perte, de vol ou de dégradation d’effets personnels durant le séjour, tant dans les hébergements locatifs, emplacements que dans les parkings ou les locaux communs. La recharge de tout type de véhicule électrique est interdite à l’intérieur du camping, une borne de recharge rapide se trouve en face du camping.\nVisiteurs \nPour la sécurité et le confort de tous, l’accès au camping est réglementé. Nous rappelons que toute personne qui rentre dans le camping doit être signalée à la réception. Les visiteurs n’ont pas accès à notre espace aquatique. Les visiteurs qui dorment au camping doivent s’inscrire obligatoirement auprès de la réception à leur arrivée.\nEspace aquatique \nIl n’est pas permis de réserver des transats avec vos serviettes ou d’autres moyens, si vous ne restez pas à la piscine. Nous nous réservons le droit de retirer des chaises longues les draps de bain non utilisés après un certain temps. S’agissant d’une piscine privée à usage collectif, nous sommes soumis à une réglementation imposée par l’ARS (Agence Régionale de Santé). \nBaignade non surveillée. Les enfants sont sous la responsabilité des parents.\nObligations : Port du slip de bain, prise d’une douche et d’un bain de pieds.\nInterdictions :\n– Port du bermuda/caleçon\n– Huile solaire (crème tolérée)\n– Port de chaussures (les laisser à l’entrée)\n– Parasols dans l’enceinte des piscines (poussettes\nacceptées)\n– Pas de jouet, bateau, ballon, palmes, pelle, seau,\npistolet à eau, etc.\n– Ne pas manger, boire, fumer\nAutorisations : Petites bouées ou brassards pour les enfants qui ne savent pas nager uniquement.\nDroit à l’image\nNous vous informons que des reportages photos et vidéos peuvent être réalisés au sein de notre camping pour des besoins publicitaires. En cas de refus, vous devez le notifier par lettre recommandée avant votre arrivée. Si ce n’est pas le cas, aucune contestation ni revendication ne sera possible quant au droit à l’image des personnes apparaissant sur ces photos et vidéos prises dans l’enceinte du Camping Le Grillou.\nAnnulation\nToute annulation doit être notifiée par lettre recommandée, cachet de la poste faisant foi. Les annulations transmises par téléphone ne pourront pas être prises en compte. Il vous sera retenu les frais de dossier dans tous les cas ainsi qu’un montant proportionnel au montant total de votre séjour suivant le barème ci-dessous :\n1. Plus de 60 jours avant le début du séjour : les sommes versées vous seront remboursées.\n2. De 30 à 60 jours avant le début du séjour : 25% du montant total du séjour sera conservé par le camping.\n3. Moins de 30 jours avant le début du séjour : 100% du montant total du séjour sera conservé par le camping.\nEn cas d’annulation de la part du camping, sauf cas de force majeure, les sommes versées vous seront remboursées.\nLitige & Médiation\nDans le cadre d’un litige avec notre camping, vous avez la possibilité de nous contacter de la manière suivante :\n– Envoi d’un courrier par lettre recommandée avec AR (accusé de réception) à SAS CAMPING LE GRILLOU 590 Route de Joyeuse – 07260 ROSIERES\nSi la réponse ne vous satisfait pas, vous avez la possibilité de saisir le Centre de Médiation CM2C.\nCe dispositif de médiation peut être joint par :\n– Voie électronique : declarer-un-litige@cm2c.net\n– Voie postale : CM2C, 49 Rue de Ponthieu, 75008 PARIS\n– Ou en utilisant le service en ligne sur www.cm2c.net\nBloctel\nLe client dispose d’un droit d’opposition spécifique au démarchage téléphonique en s’inscrivant sur la liste Bloctel : www.bloctel.gouv.fr\nNous vous invitons à souscrire une assurance annulation auprès d’un des organismes indépendants suivants: FFCC , MEETCH ou autres\nEn réservant un séjour, le client atteste avoir lu et approuver les présentes conditions générales de vente ainsi que le règlement intérieur disponible sur notre site internet www.camping-legrillou.fr", "reglement": "RÈGLEMENT INTÉRIEUR DES TERRAINS DE CAMPING OU DE CARAVANAGE AINSI QUE DES PARCS RÉSIDENTIELS DE LOISIRS\nI. – CONDITIONS GENERALES\n1) Conditions d’admission : Pour être admis à pénétrer, à s’installer, et séjourner sur un terrain de camping, il faut y avoir été autorisé par le gestionnaire ou son représentant. Il a pour obligation de veiller à la bonne tenue et au bon ordre du terrain de camping ainsi qu’au respect de l’application du présent règlement intérieur. Le fait de séjourner sur le terrain de camping implique l’acceptation des dispositions du présent règlement et l’engagement de s’y conformer.\n2) Formalités de police : Toute personne devant séjourner au moins une nuit dans le terrain de camping doit au préalable présenter au gestionnaire ou son représentant ses pièces d’identité et remplir les formalités exigées par la police. Les mineurs non accompagnés de leurs parents ne seront admis qu’avec une autorisation écrite de ceux-ci.\n3) Installation : La tente ou la caravane et le matériel y afférent doivent être installés à l’emplacement indiqué conformément aux directives données par le gestionnaire ou son représentant.\n4) Bureau d’accueil : Ouvert de 9h00 à 12h00 et de 14h00 à 17h00. (voir affiche horaires à la réception).\nOn trouvera au bureau d’accueil tous les renseignements sur les services du terrain de camping, les informations sur les possibilités de ravitaillement, les installations sportives, les richesses touristiques des environs et diverses adresses qui peuvent s’avérer utiles.\nUn livre de réclamations ou une boîte spéciale destinée à recevoir les réclamations est tenu à la disposition des usagers. Les réclamations ne seront prises en considération que si elles sont signées, datées, aussi précises que possible et se rapportant à des faits relativement récents.\n5) Redevances : Les redevances sont payées au bureau d’accueil. Leur montant fait l’objet d’un affichage à l’entrée du terrain de camping et au bureau d’accueil. Elles sont dues selon le nombre de nuits passées sur le terrain. Les usagers du terrain de camping sont invités à prévenir le bureau d’accueil de leur départ dès la veille de celui-ci. Les campeurs ayant l’intention de partir avant l’heure d’ouverture du bureau d’accueil doivent effectuer la veille le paiement de leurs redevances.\n6) Bruit et silence : Les usagers du terrain de camping sont instamment priés d’éviter tous bruits et discussions qui pourraient gêner leurs voisins. Les appareils sonores doivent être réglés en conséquence. Les fermetures de portières et de coffres doivent être aussi discrètes que possible. Les chiens et autres animaux ne doivent jamais être laissés en liberté. Ils ne doivent pas être laissés au terrain de camping, même enfermés en l’absence de leurs maîtres qui en sont civilement responsables. Le silence doit être total entre 22h00 et 7h00.\n7) Visiteurs: Après y avoir été autorisés par le gestionnaire ou son représentant, les visiteurs peuvent être admis dans le terrain de camping sous la responsabilité des campeurs qui les reçoivent. Le campeur peut recevoir un ou des visiteurs à l’accueil. Si ces visiteurs sont admis à pénétrer dans le terrain de camping, le campeur qui les reçoit peut être tenu d’acquitter une redevance, dans la mesure où le visiteur a accès aux prestations et/ou installations du terrain de camping. Cette redevance fait l’objet d’un affichage à l’entrée du terrain de camping et au bureau d’accueil. Les voitures des visiteurs sont interdites dans le terrain de camping.\n8) Circulation et stationnement des véhicules : A l’intérieur du terrain de camping, les véhicules doivent rouler à une vitesse limite de 10 km/h. La circulation est interdite entre 22h00 et 7h00. Ne peuvent circuler dans le terrain de camping que les véhicules qui appartiennent aux campeurs y séjournant. Le stationnement, strictement interdit sur les emplacements habituellement occupés par les abris de camping, ne doit pas, en outre, entraver la circulation ni empêcher l’installation de nouveaux arrivants.\n9) Tenue et aspect des installations : Chacun est tenu de s’abstenir de toute action qui pourrait nuire à la propreté, à l’hygiène et à l’aspect du terrain de camping. Il est interdit de jeter des eaux usées sur le sol ou dans les caniveaux. Les « caravaniers » doivent obligatoirement vider leurs eaux usées dans les installations prévues à cet effet. Les ordures ménagères, les déchets de toute nature, les papiers, doivent être déposés dans les poubelles. Chacun est tenu de s’abstenir de toute action qui pourrait nuire à la propreté, à l’hygiène et à l’aspect du terrain de camping et de ses installations, notamment sanitaires. Le lavage est strictement interdit en dehors des bacs prévus à cet usage. Cependant, il est toléré jusqu’à 10 heures à proximité des chalets, à la condition qu’il soit très discret et ne gêne pas les voisins. Il ne devra jamais être fait à partir des arbres. Les plantations et les décorations florales doivent être respectées. Il est interdit au campeur de planter des clous dans les arbres, de couper des branches, de faire des plantations. II n’est pas permis non plus de délimiter l’emplacement d’une installation par des moyens personnels, ni de creuser le sol. Toute dégradation commise à la végétation, aux clôtures, au terrain ou aux installations du terrain de camping sera à la charge de son auteur. L’emplacement qui aura été utilisé durant le séjour devra être maintenu dans l’état dans lequel le campeur l’a trouvé à son entrée dans les lieux.\n10) Sécurité\nIncendie : Les feux ouverts (bois, charbon, etc…) sont rigoureusement interdits. Les réchauds doivent être maintenus en bon état de fonctionnement et ne pas être utilisés dans des conditions dangereuses. En cas d’incendie aviser immédiatement la direction.\nLes extincteurs sont utilisables en cas de nécessité. Une trousse de secours de première urgence se trouve au bureau d’accueil.\nVol : La direction est responsable des objets déposés au bureau et a une obligation générale de surveillance du terrain de camping. Le campeur garde la responsabilité de sa propre installation et doit signaler au responsable la présence de toute personne suspecte. Bien que le gardiennage soit assuré, les usagers du terrain de camping sont invités à prendre les précautions habituelles pour la sauvegarde de leur matériel.\n11) Jeux : Aucun jeu violent, ou gênant, ne peut être organisé à proximité des installations. La salle de réunion ne peut être utilisée pour les jeux mouvementés. Les enfants devront toujours être sous la surveillance de leurs parents.\n12) Garage mort : Il ne pourra être laissé de matériel non occupé sur le terrain, qu’après accord de la direction et seulement à l’emplacement indiqué. Une redevance, dont le montant sera affiché au bureau, sera due pour le « garage mort ».\n13) Affichage: Le présent règlement intérieur est affiché à l’entrée du terrain de camping et au bureau d’accueil. Il est remis au client à sa demande.\n14) Infraction au règlement intérieur : Dans le cas où un résidant perturberait le séjour des autres usagers ou ne respecterait pas les dispositions du présent règlement intérieur, le gestionnaire ou son représentant pourra oralement ou par écrit s’il le juge nécessaire, mettre en demeure ce dernier de cesser les troubles. En cas d’infraction grave ou répétée au règlement intérieur et après mise en demeure par le gestionnaire de s’y conformer, celui-ci pourra résilier le contrat. En cas d’infraction pénale, le gestionnaire pourra faire appel aux forces de l’ordre."};
+// ===== données =====
+const I={};for(const[k,a]of Object.entries(R)){I[k]={};LANGS.forEach((l,i)=>I[k][l]=a[i])}
+const RESA='https://thelisresa.webcamp.fr/list.php?camping=legrillou';
+const TEL='+33475395150',TELH='04 75 39 51 50',MAIL='reception@camping-legrillou.fr';
+const GOOGLE='https://search.google.com/local/reviews?placeid=ChIJbfBZVjjltBIRn6FF2hatRKQ';
+const FB='https://www.facebook.com/CAMPING-LE-GRILLOU-127301780686416';
+const img=id=>'img/'+id+'.webp';
+// tarifs semaine : [20/06-27/06, 27/06-04/07, 04/07-22/08, 22/08-29/08]
+const LOCS=[
+ {id:'ohara',name:'O’Hara',kind:'mh',cap:4,surf:33,detail:'20 m² + 13 m²',rooms:2,day:'sun',week:[450,625,795,625],low:true,imgs:['ohara','o_cui','o_ch','o_che'],plan:'o_plan',beds:'B.ohara'},
+ {id:'titom',name:'Titom',kind:'ch',cap:5,surf:31,detail:'31 m²',rooms:2,day:'sat',week:[455,635,805,635],low:true,imgs:['titom','ti_sej','ti_ch','ti_che'],plan:'ti_plan',beds:'B.morea'},
+ {id:'club5',name:'Club 5',kind:'ch',cap:5,surf:33,detail:'23 m² + 10 m²',rooms:2,day:'sat',week:[460,645,815,645],low:true,imgs:['club5','c_salon','c_ch'],plan:'c_plan',beds:'B.morea'},
+ {id:'morea',name:'Moréa',kind:'ch',cap:5,surf:35,detail:'25 m² + 10 m²',rooms:2,day:'sun',week:[485,680,850,680],low:true,imgs:['morea','m_salon','m_sej','m_ch'],plan:'m_plan',beds:'B.morea'},
+ {id:'trianon',name:'Grand Trianon',kind:'ch',cap:8,surf:52,detail:'35 m² + 17 m²',rooms:2,day:'sat',week:[750,1100,1340,1100],low:false,imgs:['t_sej','t_ch'],plan:'t_plan',beds:'B.trianon'},
+];
+const KIND={mh:['Mobil-home','Mobile home','Mobil-home','Mobilheim','Mobil-home','Stacaravan'],ch:['Chalet','Chalet','Chalet','Chalet','Chalet','Chalet']};
+const LOW=[[2,119],[3,177],[4,236],[5,257],[6,278],[7,299]];
+const WEEKS=['20/06 → 27/06','27/06 → 04/07','04/07 → 22/08','22/08 → 29/08'];
+const ALENT=['Balazuc','Labeaume','Rosières','Joyeuse','Le Pont d’Arc','Le Bois de Paiolive','La Grotte Chauvet 2','L’Aven d’Orgnac','Musée Castanea','Muséum de l’Ardèche'];
+const GALLERY=['drone','img0467','hero','dsc2510','dsc2526','fombon','aquatoons','img4748','img4753','img4761','gopr','dsc2405','img0413','parc03','img0467','tobo1','a1','a2','a3','a4','a5','a6','a7','a8','r1','r2','r3','r4','r5','r6','riv3','riv5','riv2','riv1','peche','peche1','e2','e6','emp','jeux','pontdarc','marche','alent6','marche1','morea','club5','titom','ohara'].filter((v,i,a)=>a.indexOf(v)===i);
+
+// ===== langue =====
+let L=(()=>{try{const s=localStorage.getItem('gr-lang');if(LANGS.includes(s))return s}catch(e){}const n=(navigator.language||'fr').slice(0,2);return LANGS.includes(n)?n:'fr'})();
+const nb=s=>L==='fr'?s.replace(/ ([:;!?»])/g,' $1').replace(/« /g,'« '):s;
+const t=(k,v)=>{let s=(I[k]&&I[k][L])||(I[k]&&I[k].fr)||k;if(v)for(const[a,b]of Object.entries(v))s=s.replace('{'+a+'}',b);return nb(s)};
+const eur=n=>new Intl.NumberFormat({fr:'fr-FR',en:'en-IE',es:'es-ES',de:'de-DE',it:'it-IT',nl:'nl-NL'}[L],{style:'currency',currency:'EUR',maximumFractionDigits:n%1?2:0,minimumFractionDigits:n%1?2:0}).format(n);
+const kind=k=>KIND[k][LANGS.indexOf(L)];
+const resa=(extra='')=>RESA+'&lang='+L+extra;
+const esc=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const cap=s=>s.charAt(0).toUpperCase()+s.slice(1);
+const dots=k=>'<ul class="dots">'+t(k).split(' · ').map(x=>'<li>'+cap(x)+'</li>').join('')+'</ul>';
+
+// icônes dessinées (trait 2)
+const ic={
+ cal:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18"/></svg>',
+ tel:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 3h3l2 5-2.5 1.5a11 11 0 0 0 7 7L16 14l5 2v3a2 2 0 0 1-2 2A17 17 0 0 1 3 5a2 2 0 0 1 2-2z"/></svg>',
+ globe:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg>',
+ star:'<svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.5 1.3 6.6L12 17.3l-5.9 3.2 1.3-6.6L2.5 9.4l6.6-.8z"/></svg>',
+ arrow:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>',
+ back:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M11 6l-6 6 6 6"/></svg>',
+ clock:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>',
+ wave:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M2 9c2.5 0 2.5-2 5-2s2.5 2 5 2 2.5-2 5-2 2.5 2 5 2M2 15c2.5 0 2.5-2 5-2s2.5 2 5 2 2.5-2 5-2 2.5 2 5 2"/></svg>',
+ shield:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/><path d="M8.5 12l2.5 2.5 4.5-5" stroke-linecap="round"/></svg>',
+ ticket:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="M3 7h18v3a2 2 0 0 0 0 4v3H3v-3a2 2 0 0 0 0-4z"/><path d="M14 7v10" stroke-dasharray="2 2"/></svg>',
+ card:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="2.5" y="5" width="19" height="14" rx="3"/><path d="M2.5 10h19M6 15h4"/></svg>',
+ paw:'<svg viewBox="0 0 24 24" fill="currentColor"><circle cx="6" cy="10" r="2"/><circle cx="10" cy="6" r="2"/><circle cx="14" cy="6" r="2"/><circle cx="18" cy="10" r="2"/><path d="M12 11c-3 0-6 4-6 6.5 0 1.5 1.5 2.5 3 2 1.2-.4 2-.8 3-.8s1.8.4 3 .8c1.5.5 3-.5 3-2C18 15 15 11 12 11z"/></svg>',
+ home:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="M3 11l9-7 9 7v9H3z"/><path d="M9 20v-6h6v6"/></svg>',
+ slide:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M5 3v4c0 3 3 3 6 3s6 0 6 3-3 3-6 3-6 0-6 3v2"/></svg>',
+ fb:'<svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 8h3V4h-3c-2.8 0-4.5 1.8-4.5 4.6V11H7v4h2.5v8h4v-8h3l.5-4h-3.5V9c0-.6.4-1 1-1z"/></svg>',
+};
+
+// ===== vues =====
+const NAV=[['home','nav.home'],['camping','nav.camping'],['parc','nav.parc'],['loc','nav.loc'],['emp','nav.emp'],['tarifs','nav.tarifs'],['resto','nav.resto'],['riv','nav.riv'],['anim','nav.anim'],['alent','nav.alent'],['gal','nav.gal'],['faq','nav.faq'],['acces','nav.acces']];
+const head=(title,lead,extra='',pic)=>`<section class="ph-head${pic?'':' nopic'}"><div class="wrap"><div>${extra}<h1>${title}</h1>${lead?`<p>${lead}</p>`:''}<a class="btn btn-tube" href="${resa()}" target="_blank" rel="noopener">${ic.cal}${t('ui.bookfull')}</a></div>${pic?`<div class="pic"><img src="${img(pic)}" alt="" fetchpriority="high"></div>`:''}</div></section>`;
+const photos=ids=>'<div class="photos">'+ids.map(i=>`<button type="button" data-lb="${i}" aria-label="${t('nav.gal')}"><img src="${img(i)}" alt="" loading="lazy" decoding="async"></button>`).join('')+'</div>';
+const minWeek=l=>Math.min(...l.week);
+
+function vHome(){
+ return `
+<section class="hero"><div class="wrap hin">
+ <div class="rv">
+  <h1>${t('h.title')}</h1>
+  <p class="sub">${t('h.sub')}</p>
+  <p class="open">${ic.cal}${t('ui.open')}</p>
+  <div class="ctas"><a class="btn btn-tube" href="${resa()}" target="_blank" rel="noopener">${ic.cal}${t('ui.bookfull')}</a><a class="btn btn-ghost" href="#calc" data-scroll="calc">${t('h.calc')}</a></div>
+  <a class="rate" href="${GOOGLE}" target="_blank" rel="noopener"><span class="st">${ic.star.repeat(4)}</span>${t('ui.rating')}</a>
+ </div>
+ <div class="tube-eye" id="oeil"><div class="rim"></div><div class="ph"><img src="${img('dsc2510')}" alt="${t('h.title')}" fetchpriority="high"></div></div>
+</div></section>
+<div class="descente" id="descente">
+ <svg class="voie" aria-hidden="true"><path class="fond"/><path class="trace"/><path class="eau"/></svg>
+ <section class="sec"><div class="wrap split">
+  <div class="rv"><h2>${t('h.s1t')}</h2><p class="lead">${t('h.s1p')}</p>
+   <ul class="couloirs">${t('p.parc.l').split(' · ').map(x=>`<li>${ic.wave}${cap(x)}</li>`).join('')}</ul>
+   <p class="chip">${ic.clock}9 h 30 – 20 h · 01/05 – 13/09/2026</p>
+   <p style="margin-top:22px"><a class="lnk" href="#parc">${t('h.s1l')}${ic.arrow}</a></p></div>
+  <div class="mosaic rv"><figure class="a"><img src="${img('hero')}" alt="" loading="lazy"></figure><figure class="b"><img src="${img('img4753')}" alt="" loading="lazy"></figure><figure class="c"><img src="${img('fombon')}" alt="" loading="lazy"></figure></div>
+ </div></section>
+ <section class="sec" style="padding-top:0"><div class="wrap">
+  <div class="rv"><h2>${t('h.s2t')}</h2><p class="lead">${t('h.s2p')}</p></div>
+  <div class="rail">${LOCS.map(l=>`<a href="#loc/${l.id}"><img src="${img(l.imgs[0])}" alt="${l.name}" loading="lazy"><div class="plan"><img src="${img(l.plan)}" alt="${t('ui.plan')}" loading="lazy"></div><div class="t"><h3>${kind(l.kind)} ${l.name}</h3><span class="meta">${l.cap} ${t('ui.places')} · ${l.surf} m²</span><span class="px num">${t('ui.from')} ${eur(minWeek(l))} <small>${t('ui.week')}</small></span></div></a>`).join('')}</div>
+  <div class="emp-band rv"><img src="${img('e2')}" alt="" loading="lazy"><div class="t"><h3>${t('h.empt')}</h3><p>${t('h.empp')}</p><p><a class="lnk" style="color:var(--tube)" href="#emp">${t('h.empl')}${ic.arrow}</a></p></div></div>
+ </div></section>
+ <section class="riviere"><img src="${img('riv3')}" alt="" loading="lazy"><div class="wrap"><div class="box rv"><div class="dist">150 m</div><h2>${t('h.s3t')}</h2><p>${t('h.s3p')}</p><p style="margin-top:20px"><a class="lnk" style="color:var(--tube)" href="#riv">${t('h.s3l')}${ic.arrow}</a></p></div></div></section>
+ <section class="sec"><div class="wrap duo">
+  <article class="rv"><img src="${img('r4')}" alt="" loading="lazy"><h2>${t('h.s4t')}</h2><p class="lead" style="margin-top:0">${t('h.s4p')}</p><p><a class="lnk" href="#resto">${t('h.s4l')}${ic.arrow}</a></p></article>
+  <article class="rv"><img src="${img('a1')}" alt="" loading="lazy"><h2>${t('h.s5t')}</h2><p class="lead" style="margin-top:0">${t('h.s5p')}</p><p><a class="lnk" href="#anim">${t('h.s5l')}${ic.arrow}</a></p></article>
+ </div></section>
+ <section class="sec" style="padding-top:0"><div class="wrap village">
+  <img class="rv" src="${img('marche1')}" alt="" loading="lazy">
+  <div class="rv"><h2>${t('h.s6t')}</h2><p class="lead">${t('h.s6p')}</p><p style="margin-top:20px"><a class="lnk" href="#camping">${t('nav.camping')}${ic.arrow}</a></p></div>
+ </div></section>
+ <section class="sec" id="calc" style="padding-top:0"><div class="wrap">
+  <div class="rv"><h2>${t('c.t')}</h2><p class="lead">${t('c.p')}</p></div>
+  ${calcHTML()}
+ </div></section>
+ <section class="sec" style="padding-top:0"><div class="wrap">
+  <h2 class="rv">${t('h.trust')}</h2>
+  <p class="trust rv"><b><a href="${GOOGLE}" target="_blank" rel="noopener">${t('h.t1')}</a></b><span class="sep">/</span>${['h.t2','h.t3','h.t4','h.t5','h.t6'].map(k=>t(k)).join('<span class="sep">/</span>')}</p>
+ </div></section>
+</div>
+<section class="arrivee" id="arrivee"><div class="plouf"><i></i><i></i><i></i></div><div class="wrap">
+ <h2>${t('h.endt')}</h2><p>${t('h.endp')}</p>
+ <div class="ctas"><a class="btn btn-tube" href="${resa()}" target="_blank" rel="noopener">${ic.cal}${t('ui.bookfull')}</a><a class="btn btn-ghost" href="tel:${TEL}">${ic.tel}${TELH}</a></div>
+</div></section>`;
+}
+function vCamping(){
+ return head(t('p.cam.t'),t('p.cam.p'),'','drone')+`<section class="page"><div class="wrap">
+ <div class="split"><div><div class="block" style="margin-top:0"><h2>${t('p.cam.eq')}</h2>${dots('p.cam.eql')}</div>
+ <div class="block"><h2>${t('p.cam.sv')}</h2>${dots('p.cam.svl')}</div>
+ <div class="block"><h2>${t('nav.anim')}</h2><p class="prose">${t('p.ani.p')}</p></div></div>
+ <div class="mosaic"><figure class="a"><img src="${img('drone')}" alt="" loading="lazy" style="object-position:30% 50%"></figure><figure class="b"><img src="${img('jeux')}" alt="" loading="lazy"></figure><figure class="c"><img src="${img('e6')}" alt="" loading="lazy"></figure></div></div>
+ <div class="block"><h2>${t('p.cam.vi')}</h2>${dots('p.cam.vil')}</div>
+ ${photos(['img0467','a8','marche','r2'])}
+ </div></section>`;
+}
+function vParc(){
+ return head(t('h.s1t'),t('p.parc.p'),'','img0413')+`<section class="page"><div class="wrap">
+ <div class="split"><div><p class="chip" style="margin-top:0">${ic.clock}9 h 30 – 20 h · 01/05 – 13/09/2026</p><ul class="couloirs">${t('p.parc.l').split(' · ').map(x=>`<li>${ic.wave}${cap(x)}</li>`).join('')}</ul></div>
+ <div class="block" style="margin-top:0"><h2>${t('p.parc.rt')}</h2><p class="prose" style="margin-top:12px">${t('p.parc.r')}</p></div></div>
+ ${photos(['hero','dsc2510','dsc2526','fombon','aquatoons','img0413','parc03','img4761','gopr','dsc2405','img4748','img4753','img0467','tobo1','a1'])}
+ </div></section>`;
+}
+function vLoc(){
+ return head(t('p.loc.t'),t('p.loc.p'),'','club5')+`<section class="page"><div class="wrap"><div class="loclist">${LOCS.map(l=>`
+ <article class="locrow"><img src="${img(l.imgs[0])}" alt="${l.name}" loading="lazy"><div class="t">
+  <h2 style="font-size:clamp(1.3rem,2.4vw,1.8rem)">${kind(l.kind)} ${l.name}</h2>
+  <div class="facts"><span>${l.cap} ${t('ui.places')}</span><span>${l.surf} m²</span><span>${l.rooms} ${t('p.loc.rooms').toLowerCase()}</span><span>${t('p.loc.arr')} : ${t('c.'+l.day)}</span></div>
+  <p>${t('L.'+l.id)}</p>
+  <div class="act"><span class="px num">${t('ui.from')} ${eur(minWeek(l))} ${t('ui.week')}</span><a class="btn btn-ink" href="#loc/${l.id}">${t('g.see')} ${l.name}</a></div>
+ </div></article>`).join('')}</div>
+ <p class="small" style="margin-top:22px">${t('p.loc.roussel')} <a href="https://www.lamaisonroussel.com/" target="_blank" rel="noopener">lamaisonroussel.com</a></p>
+ </div></section>`;
+}
+function vFiche(id){
+ const l=LOCS.find(x=>x.id===id);if(!l)return vLoc();
+ const all=[...l.imgs,l.plan];
+ return head(`${kind(l.kind)} ${l.name}`,t('L.'+l.id),`<a class="back" href="#loc">${ic.back}${t('ui.back')}</a>`)+`<section class="page"><div class="wrap fiche">
+ <div><div class="viewer"><div class="main"><img id="vmain" src="${img(all[0])}" alt="${l.name}"></div>
+  <div class="thumbs">${all.map((i,n)=>`<button type="button" data-v="${i}" aria-pressed="${n===0}" aria-label="${i===l.plan?t('ui.plan'):l.name+' '+(n+1)}"><img src="${img(i)}" alt="" loading="lazy"></button>`).join('')}</div></div>
+  <dl class="specs"><div><dt>${t('p.loc.surface')}</dt><dd>${l.surf} m²</dd></div><div><dt>${t('ui.places')}</dt><dd>${l.cap}</dd></div><div><dt>${t('p.loc.rooms')}</dt><dd>${l.rooms}</dd></div><div><dt>${t('p.loc.arr')}</dt><dd style="font-size:1rem">${t('c.'+l.day)}</dd></div></dl>
+  <p class="small">${l.detail}</p>
+  <div class="block" style="margin-top:22px"><h2>${t('p.loc.beds')}</h2><p class="prose">${t(l.beds)}</p></div>
+  <div class="block"><h2>${t('p.loc.equip')}</h2>${dots('p.loc.equipl')}</div>
+ </div>
+ <aside class="side">
+  <h3>${t('p.loc.prices')}</h3>
+  <table class="tar"><tbody>${WEEKS.map((w,i)=>`<tr><td>${w}</td><td class="p">${eur(l.week[i])}</td></tr>`).join('')}<tr><td colspan="2">${l.low?t('p.loc.low'):t('c.trianon')}</td></tr></tbody></table>
+  <a class="btn btn-tube" href="${resa('&nb_pers='+l.cap)}" target="_blank" rel="noopener">${ic.cal}${t('ui.bookfull')}</a>
+  <a class="btn btn-ink" href="#home" data-calc="${l.id}">${t('h.calc')}</a>
+  <a class="btn btn-ghost" style="color:var(--beaume)" href="tel:${TEL}">${ic.tel}${t('p.loc.phone')}</a>
+ </aside></div></section>`;
+}
+function vEmp(){
+ return head(t('p.emp.t'),t('p.emp.p'),'','e6')+`<section class="page"><div class="wrap">
+ ${dots('p.emp.l')}
+ <div class="block"><h2>${t('p.tar.emp')}</h2>${empTable()}</div>
+ <div class="block"><h2>${t('p.emp.year')}</h2>${yearTable()}</div>
+ ${photos(['e2','e6','emp','jeux'])}
+ </div></section>`;
+}
+const EP=['01/05 → 27/06','27/06 → 29/08','29/08 → 13/09'];const er=(lab,v)=>`<tr><td>${lab}</td>${v.map((x,i)=>`<td class="p" data-l="${EP[i]}">${x}</td>`).join('')}</tr>`;
+const empTable=()=>`<div class="tscroll"><table class="tar cards"><thead><tr><th></th>${EP.map(e=>`<th class="p">${e}</th>`).join('')}</tr></thead><tbody>
+${er(t('p.tar.empf'),[eur(20),eur(40),eur(20)])}${er(t('p.tar.empx'),[eur(3.5),eur(7),eur(3.5)])}${er(t('p.tar.empb'),[t('p.tar.free'),t('p.tar.free'),t('p.tar.free')])}</tbody></table></div>
+<p class="small">${t('g.pets').split('. ').slice(-3).join('. ')}</p>`;
+const yearTable=()=>`<div class="tscroll"><table class="tar"><thead><tr><th>${t('p.tar.y')}</th><th class="p"></th></tr></thead><tbody>
+<tr><td>${t('p.tar.y1')}</td><td class="p">${eur(2245)}</td></tr><tr><td>${t('p.tar.y2')}</td><td class="p">${eur(2745)}</td></tr><tr><td>${t('p.tar.y3')}</td><td class="p">${eur(3064)}</td></tr>
+<tr><td>${t('p.tar.g1')} (${t('p.tar.g').toLowerCase()})</td><td class="p">${eur(350)}</td></tr><tr><td>${t('p.tar.g2')} (${t('p.tar.g').toLowerCase()})</td><td class="p">${eur(450)}</td></tr></tbody></table></div><p class="small">${t('p.tar.ytax')}</p>`;
+function vTarifs(){
+ return head(t('p.tar.t'),t('ui.open'))+`<section class="page"><div class="wrap">
+ <p><a class="lnk" href="https://www.camping-legrillou.fr/wp-content/uploads/2026/01/Nos-tarifs-2026.pdf" target="_blank" rel="noopener">${t('p.tar.brochure')}${ic.arrow}</a></p>
+ <div class="block"><h2>${t('p.tar.loc')}</h2><div class="tscroll"><table class="tar cards"><thead><tr><th></th><th>${t('p.tar.before')}</th>${WEEKS.map(w=>`<th class="p">${w}</th>`).join('')}</tr></thead><tbody>
+ ${LOCS.map(l=>`<tr><td><a href="#loc/${l.id}">${kind(l.kind)} ${l.name}</a> · ${l.cap} ${t('ui.places')}<br><span class="small">${t('p.loc.arr')} : ${t('c.'+l.day)}</span></td><td data-l="${t('p.tar.before')}">${l.low?t('ui.from')+' '+eur(119):'—'}</td>${l.week.map((p,i)=>`<td class="p" data-l="${WEEKS[i]}">${eur(p)}</td>`).join('')}</tr>`).join('')}
+ </tbody></table></div><p class="small">${t('p.tar.locnote')}</p></div>
+ <div class="block"><h2>${t('p.tar.lowh')}</h2><p class="small">${t('p.tar.lowt')} · ${t('p.tar.lowp')}</p><div class="tscroll"><table class="tar"><thead><tr>${LOW.map(x=>`<th class="p">${x[0]===7?t('p.tar.weekcol'):x[0]+' '+t('p.tar.n')}</th>`).join('')}</tr></thead><tbody><tr>${LOW.map(x=>`<td class="p">${eur(x[1])}</td>`).join('')}</tr></tbody></table></div></div>
+ <div class="block"><h2>${t('p.tar.emp')}</h2>${empTable()}</div>
+ <div class="block"><h2>${t('p.tar.sup')}</h2><table class="tar"><tbody>
+ <tr><td>${t('p.tar.s1')}</td><td class="p">${eur(5)}${t('p.tar.day')}</td></tr><tr><td>${t('p.tar.s2')}</td><td class="p">${eur(6)}${t('p.tar.set')}</td></tr><tr><td>${t('p.tar.s3')}</td><td class="p">${eur(8)}${t('p.tar.set')}</td></tr>
+ <tr><td>${t('p.tar.s4')}</td><td class="p">${eur(60)}</td></tr><tr><td>${t('p.tar.s5')}</td><td class="p">${eur(120)}</td></tr><tr><td>${t('p.tar.s6')}</td><td class="p">${eur(6.5)}${t('p.tar.day')}</td></tr></tbody></table></div>
+ <div class="block"><h2>${t('p.emp.year')}</h2>${yearTable()}<p class="small">${t('p.tar.tva')}</p></div>
+ </div></section>`;
+}
+function vResto(){
+ return head(t('h.s4t'),t('p.res.p'),'','r1')+`<section class="page"><div class="wrap">${dots('p.res.l')}
+ <p style="margin-top:22px"><a class="lnk" href="https://www.restaurantlegrillou.com" target="_blank" rel="noopener">${t('p.res.more')}${ic.arrow}</a> · <a href="mailto:restaurantlegrillou@live.fr">restaurantlegrillou@live.fr</a></p>
+ ${photos(['r1','r2','r3','r4','r5','r6'])}</div></section>`;
+}
+function vRiv(){
+ return head(t('h.s3t'),t('p.riv.p'),'','riv1')+`<section class="page"><div class="wrap"><p><a class="lnk" href="https://www.cartedepeche.fr/" target="_blank" rel="noopener">${t('p.riv.fish')} · cartedepeche.fr${ic.arrow}</a></p>${photos(['riv3','riv5','riv2','riv1','peche','peche1'])}</div></section>`;
+}
+function vAnim(){
+ return head(t('h.s5t'),t('p.ani.p'),'','a3')+`<section class="page"><div class="wrap">${dots('p.ani.l')}<p class="prose" style="margin-top:22px">${t('p.ani.canoe')}</p>${photos(['a1','a2','a3','a4','a5','a6','a7','a8'])}</div></section>`;
+}
+function vAlent(){
+ return head(t('nav.alent'),t('p.alt.p'),'','pontdarc')+`<section class="page"><div class="wrap"><ul class="dots">${ALENT.map(x=>`<li>${ic.wave}${cap(x)}</li>`).join('')}</ul><p class="prose" style="margin-top:22px">${t('p.alt.act')}</p>${photos(['pontdarc','marche','alent6','marche1','a3'])}</div></section>`;
+}
+function vGal(){
+ return head(t('p.gal.t'),'')+`<section class="page"><div class="wrap"><div class="gal">${GALLERY.map(i=>`<button type="button" data-lb="${i}"><img src="${img(i)}" alt="" loading="lazy" decoding="async"></button>`).join('')}</div></div></section>`;
+}
+function vFaq(){
+ const g=(a,b)=>Array.from({length:b-a+1},(_,i)=>a+i).map(n=>`<details><summary>${t('f.q'+n)}</summary><p>${t('f.a'+n)}</p></details>`).join('');
+ return head(t('nav.faq'),'')+`<section class="page"><div class="wrap faq" style="max-width:860px"><h2>${t('f.g1')}</h2>${g(1,7)}<h2>${t('f.g2')}</h2>${g(8,23)}</div></section>`;
+}
+function vAcces(){
+ return head(t('p.acc.t'),'590 route de Joyeuse, 07260 Rosières','','drone')+`<section class="page"><div class="wrap contact">
+ <div><p><a class="tel" href="tel:${TEL}">${ic.tel}${TELH}</a></p><p style="margin-top:6px"><a href="mailto:${MAIL}">${MAIL}</a></p><p class="small">${t('p.acc.reception')}</p>
+  <div class="block" style="margin-top:26px"><p>${t('p.acc.car')}</p><p style="margin-top:10px">${t('p.acc.train')}</p><p class="small">${t('p.acc.gps')} : 44.4848189, 4.2529573</p></div>
+  <p class="small"><a href="https://www.google.com/maps/search/?api=1&query=44.4848189,4.2529573" target="_blank" rel="noopener">Google Maps ↗</a></p><div class="map"><iframe title="Google Maps" loading="lazy" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2846.573675580633!2d4.2519104155248835!3d44.4829107791016!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x42314180e1556880!2sCamping%20Caravaning%20le%20Grillou!5e0!3m2!1sfr!2sfr!4v1577972765438!5m2!1sfr!2sfr"></iframe></div></div>
+ <form class="form" id="cform" novalidate><h2 style="font-size:1.5rem;margin-bottom:16px">${t('p.acc.form')}</h2>
+  <div class="fld"><label for="cn">${t('p.acc.name')}</label><input id="cn" autocomplete="name"></div>
+  <div class="fld"><label for="ce">${t('p.acc.mail')}</label><input id="ce" type="email" autocomplete="email"></div>
+  <div class="fld"><label for="cm">${t('p.acc.msg')}</label><textarea id="cm" rows="5"></textarea></div>
+  <button class="btn btn-ink" type="submit">${t('p.acc.send')}</button><div id="cmsg" role="status"></div>
+  <p class="small">${t('p.acc.rgpd')}</p></form>
+ </div></section>`;
+}
+const LEG={legal:`Camping Le Grillou — SAS au capital de 100 610,00 €
+RCS : 429 446 420 00011 · TVA : FR 16 429 446 420
+590 route de Joyeuse, 07260 Rosières · 04 75 39 51 50 · ${MAIL}
+
+Hébergement : MTCOM Sarl, 62 chemin du lac, 07200 St-Didier-sous-Aubenas · 09 79 55 02 80 · www.mtcom.fr
+Photos et illustrations : Shutterstock
+
+Traitement des données personnelles : vous disposez d’un droit d’accès, de modification, de rectification et de suppression des données qui vous concernent. Pour l’exercer : ${MAIL}. Site de la CNIL : www.cnil.fr`};
+function vLegal(k){
+ const title={legal:'nav.legal',cgv:'nav.cgv',reg:'nav.reg'}[k];
+ const txt=k==='legal'?LEG.legal:(k==='cgv'?LEGAL.cgv:LEGAL.reglement);
+ return head(t(title),L==='fr'?'':t('ui.legalnote'))+`<section class="page"><div class="wrap"><div class="legal">${esc(txt)}</div></div></section>`;
+}
+
+// ===== calculateur =====
+function calcHTML(){
+ return `<div class="calc" id="calcbox"><div>
+ <div class="fld"><label for="ct">${t('c.type')}</label><select id="ct">${LOCS.map(l=>`<option value="${l.id}">${kind(l.kind)} ${l.name} · ${l.cap} ${t('ui.places')}</option>`).join('')}<option value="emp">${t('c.emp')}</option></select></div>
+ <div class="row2"><div class="fld"><label for="ca">${t('c.arr')}</label><input id="ca" type="date" min="2026-05-01" max="2026-09-12" value="2026-07-12"></div>
+ <div class="fld"><label for="cnts">${t('c.nights')}</label><div class="step" data-k="n"><button type="button" aria-label="−">−</button><output id="cnts" class="num">7</output><button type="button" aria-label="+">+</button></div></div></div>
+ <div class="row3"><div class="fld"><label>${t('c.adults')}</label><div class="step" data-k="a"><button type="button" aria-label="−">−</button><output class="num">2</output><button type="button" aria-label="+">+</button></div></div>
+ <div class="fld"><label>${t('c.kids')}</label><div class="step" data-k="k"><button type="button" aria-label="−">−</button><output class="num">2</output><button type="button" aria-label="+">+</button></div></div>
+ <div class="fld"><label>${t('c.babies')}</label><div class="step" data-k="b"><button type="button" aria-label="−">−</button><output class="num">0</output><button type="button" aria-label="+">+</button></div></div></div>
+ </div><div class="ticket" id="ticket" aria-live="polite"></div></div>`;
+}
+const S={n:7,a:2,k:2,b:0};
+const D=s=>{const[y,m,d]=s.split('-').map(Number);return new Date(Date.UTC(y,m-1,d))};
+const iso=d=>d.toISOString().slice(0,10);
+const addD=(d,n)=>new Date(d.getTime()+n*864e5);
+function weekIdx(d){const x=iso(d);if(x>='2026-06-20'&&x<'2026-06-27')return 0;if(x>='2026-06-27'&&x<'2026-07-04')return 1;if(x>='2026-07-04'&&x<'2026-08-22')return 2;if(x>='2026-08-22'&&x<'2026-08-29')return 3;return -1}
+function calc(){
+ const box=document.getElementById('ticket');if(!box)return;
+ const type=document.getElementById('ct').value;let arr=document.getElementById('ca').value||'2026-07-12';
+ const lines=[];let warn=[],lodg=0;const pers=S.a+S.k+S.b;
+ let a=D(arr);const open=D('2026-05-01'),close=D('2026-09-13');
+ if(a<open||a>=close){warn.push(t('c.closed'));a=a<open?open:addD(close,-1)}
+ if(type==='emp'){
+  if(S.n<1)S.n=1;
+  for(let i=0;i<S.n;i++){const d=iso(addD(a,i));const hi=d>='2026-06-27'&&d<'2026-08-29';const extra=Math.max(0,S.a+S.k-2);lodg+=(hi?40:20)+extra*(hi?7:3.5)}
+  if(S.a+S.k>6)warn.push(t('c.cap',{n:6}));
+ }else{
+  const l=LOCS.find(x=>x.id===type);
+  if(pers>l.cap)warn.push(t('c.cap',{n:l.cap}));
+  const wi=weekIdx(a);
+  if(wi>=0){ // haute saison : à la semaine
+   const want=l.day==='sun'?0:6;let dd=a;while(dd.getUTCDay()!==want)dd=addD(dd,-1);
+   if(iso(dd)!==iso(a))warn.push(t('c.week',{d:t('c.'+l.day)}));
+   a=dd;const w=Math.max(1,Math.round(S.n/7));S.n=w*7;
+   for(let i=0;i<w;i++){const j=weekIdx(addD(a,i*7));lodg+=j>=0?l.week[j]:LOW[5][1]}
+  }else{
+   if(!l.low){warn.push(t('c.trianon'))}
+   if(S.n<2){S.n=2;warn.push(t('c.min'))}
+   const w=Math.floor(S.n/7),r=S.n%7;lodg=w*LOW[5][1]+(r?LOW.find(x=>x[0]===Math.max(2,r))[1]:0);
+   if(pers>5&&l.cap<=5){}
+  }
+ }
+ document.getElementById('cnts').textContent=S.n;
+ const tax=Math.round(S.a*S.n*0.61*100)/100,fee=20,tot=lodg+tax+fee;
+ const end=iso(addD(a,S.n));
+ box.innerHTML=`<div class="l"><span>${t('c.lodging')}</span><b>${eur(lodg)}</b></div><div class="l"><span>${t('c.tax')}</span><b>${eur(tax)}</b></div><div class="l"><span>${t('c.fee')}</span><b>${eur(fee)}</b></div>
+ <div class="tot"><span>${t('c.total')}</span><b>${eur(Math.round(tot*100)/100)}</b></div>
+ <div class="l"><span>${t('c.dep')}</span><b>${eur(Math.round((lodg*.25+fee)*100)/100)}</b></div>
+ ${warn.length?`<div class="warn">${warn.join(' ')}</div>`:''}
+ <a class="btn btn-tube" href="${resa(`&begin=${iso(a)}&end=${end}&duration=${S.n}&nb_pers=${Math.max(1,pers)}`)}" target="_blank" rel="noopener">${ic.cal}${t('ui.bookfull')}</a>
+ <p class="note">${t('c.note')}</p>`;
+ document.querySelectorAll('#calcbox .step').forEach(s=>{const k=s.dataset.k;const lim={n:[1,28],a:[1,8],k:[0,7],b:[0,4]}[k];s.querySelector('output').textContent=S[k];s.querySelectorAll('button')[0].disabled=S[k]<=lim[0];s.querySelectorAll('button')[1].disabled=S[k]>=lim[1]});
+}
+function bindCalc(){
+ const box=document.getElementById('calcbox');if(!box)return;
+ box.querySelectorAll('.step').forEach(s=>{const k=s.dataset.k,[m,p]=s.querySelectorAll('button');const step=()=>(k==='n'&&document.getElementById('ct').value!=='emp'&&weekIdx(D(document.getElementById('ca').value||'2026-07-12'))>=0)?7:1;
+  m.onclick=()=>{S[k]=Math.max({n:1,a:1,k:0,b:0}[k],S[k]-step());calc()};p.onclick=()=>{S[k]=Math.min({n:28,a:8,k:7,b:4}[k],S[k]+step());calc()}});
+ document.getElementById('ct').onchange=calc;document.getElementById('ca').onchange=calc;calc();
+}
+
+// ===== routeur =====
+function vPlan(){return head(t('nav.plan'),'')+`<section class="page"><div class="wrap"><ul class="dots">${NAV.map(([k,lab])=>`<li><a href="#${k}">${t(lab)}</a></li>`).join('')}${LOCS.map(l=>`<li><a href="#loc/${l.id}">${kind(l.kind)} ${l.name}</a></li>`).join('')}<li><a href="#legal/legal">${t('nav.legal')}</a></li><li><a href="#legal/cgv">${t('nav.cgv')}</a></li><li><a href="#legal/reg">${t('nav.reg')}</a></li></ul></div></section>`}
+const V={plan:vPlan,home:vHome,camping:vCamping,parc:vParc,loc:vLoc,emp:vEmp,tarifs:vTarifs,resto:vResto,riv:vRiv,anim:vAnim,alent:vAlent,gal:vGal,faq:vFaq,acces:vAcces};
+let cur='home';
+function go(v,keep){
+ const [base,sub]=String(v||'home').split('/');
+ let html;
+ if(base==='loc'&&sub)html=vFiche(sub);else if(base==='legal')html=vLegal(sub||'legal');else html=(V[base]||vHome)();
+ cur=v;document.getElementById('main').innerHTML=html;
+ document.querySelectorAll('nav.menu a').forEach(a=>a.toggleAttribute('aria-current',a.dataset.go===base)||a.removeAttribute('aria-current'));
+ document.querySelectorAll('nav.menu a').forEach(a=>{if(a.dataset.go===base)a.setAttribute('aria-current','page');else a.removeAttribute('aria-current')});
+ const act=document.querySelector('nav.menu a[aria-current]');if(act)act.scrollIntoView({block:'nearest',inline:'center'});
+ if(!keep)window.scrollTo(0,0);
+ after();
+}
+function after(){
+ bindCalc();
+ document.querySelectorAll('[data-v]').forEach(b=>b.onclick=()=>{document.getElementById('vmain').src=img(b.dataset.v);document.querySelectorAll('[data-v]').forEach(x=>x.setAttribute('aria-pressed',x===b))});
+ document.querySelectorAll('[data-calc]').forEach(b=>b.onclick=e=>{e.preventDefault();const id=b.dataset.calc;location.hash='home';setTimeout(()=>{const s=document.getElementById('ct');if(s){s.value=id;calc();document.getElementById('calc').scrollIntoView()}},60)});
+ const f=document.getElementById('cform');if(f)f.onsubmit=e=>{e.preventDefault();const n=cn.value.trim(),m=ce.value.trim(),x=cm.value.trim();const o=document.getElementById('cmsg');
+  if(!n||!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(m)||!x){o.className='msg err';o.textContent=t('p.acc.err');return}
+  o.className='msg ok';o.textContent=t('p.acc.ok');location.href=`mailto:${MAIL}?subject=${encodeURIComponent('Camping Le Grillou — '+n)}&body=${encodeURIComponent(x+'\n\n'+n+' · '+m)}`};
+ reveal();voie();
+ const eye=document.getElementById('oeil');if(eye)requestAnimationFrame(()=>eye.classList.add('go'));
+}
+let io;function reveal(){
+ if(io)io.disconnect();
+ io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');if(e.target.id==='arrivee')e.target.classList.add('go');io.unobserve(e.target)}}),{rootMargin:'0px 0px -8% 0px'});
+ document.querySelectorAll('.rv,#arrivee').forEach(el=>io.observe(el));
+}
+
+// ===== geste signature : la descente de 47 m =====
+let VO=null;
+function voie(){
+ const d=document.getElementById('descente'),m=document.getElementById('metre');
+ if(!d){VO=null;m.classList.remove('on');return}
+ const svg=d.querySelector('svg.voie'),[fond,trace,eau]=svg.querySelectorAll('path');
+ const build=()=>{
+  const W=d.clientWidth,H=d.clientHeight,mob=W<760;
+  const xR=mob?13:Math.min(W-34,(W+1180)/2+30), amp=mob?7:Math.min(60,(W-1180)/2-10);
+  const xa=mob?xR:xR, swing=mob?amp:Math.max(18,amp);
+  let p=`M ${xa} 0`;const n=Math.max(4,Math.round(H/520));
+  for(let i=1;i<=n;i++){const y0=(i-1)*H/n,y1=i*H/n,dir=i%2?-1:1;p+=` C ${xa+dir*swing} ${y0+(y1-y0)*.35}, ${xa+dir*swing} ${y0+(y1-y0)*.65}, ${xa} ${y1}`}
+  svg.setAttribute('viewBox',`0 0 ${W} ${H}`);[fond,trace,eau].forEach(x=>x.setAttribute('d',p));
+  const len=trace.getTotalLength();trace.style.strokeDasharray=len;VO={d,trace,len,m};
+  d.querySelectorAll('.repere').forEach(e=>e.remove());
+  if(!mob)d.querySelectorAll(':scope>section').forEach((s,i)=>{if(!i)return;const y=s.offsetTop;const e=document.createElement('span');e.className='repere';e.textContent=Math.round(y/H*47)+' m';e.style.top=y+'px';e.style.left=(xa+14)+'px';d.appendChild(e)});
+  const sw=mob?8:16;fond.style.strokeWidth=sw;trace.style.strokeWidth=sw;
+  tick();
+ };
+ build();window.onresize=()=>{clearTimeout(window._rz);window._rz=setTimeout(build,150)};
+}
+function tick(){
+ if(!VO)return;const r=VO.d.getBoundingClientRect(),vh=innerHeight;
+ const p=Math.min(1,Math.max(0,(vh*.6-r.top)/r.height));
+ const rm=matchMedia('(prefers-reduced-motion:reduce)').matches;
+ VO.trace.style.strokeDashoffset=rm?0:VO.len*(1-p);
+ VO.m.classList.toggle('on',p>0.01&&p<1&&r.top<vh*.4);
+ VO.m.querySelector('b').textContent=Math.round(p*47)+' m';
+}
+addEventListener('scroll',()=>requestAnimationFrame(tick),{passive:true});
+
+// ===== conseiller =====
+const GC={el:null};
+function gcInit(){
+ const btn=document.getElementById('gcb'),pan=document.getElementById('gcp'),inv=document.getElementById('gci');
+ btn.onclick=()=>{pan.classList.add('on');inv.classList.remove('on');btn.hidden=true;if(!document.querySelector('#gcm .b'))gcStart();document.getElementById('gcin').focus()};
+ document.getElementById('gcx').onclick=()=>{pan.classList.remove('on');btn.hidden=false;btn.focus()};
+ inv.querySelector('button').onclick=e=>{e.stopPropagation();inv.classList.remove('on')};inv.onclick=()=>btn.click();
+ document.getElementById('gcf').onsubmit=e=>{e.preventDefault();const v=gcin.value.trim();if(!v)return;gcin.value='';gcSay(esc(v),'me');gcAnswer(v)};
+ let shown=false;try{shown=sessionStorage.getItem('gr-inv')}catch(e){}
+ if(!shown)setTimeout(()=>{if(!pan.classList.contains('on')){inv.classList.add('on');try{sessionStorage.setItem('gr-inv','1')}catch(e){}}},4000);
+ document.addEventListener('keydown',e=>{if(e.key==='Escape'&&pan.classList.contains('on'))document.getElementById('gcx').click()});
+}
+function gcSay(h,who='bot',va){const m=document.getElementById('gcm');const d=document.createElement('div');d.className='b '+who;d.innerHTML=(va?`<span class="va">${t('g.virtual')}</span><br>`:'')+h;m.appendChild(d);m.scrollTop=m.scrollHeight;return d}
+function gcQuick(){const m=document.getElementById('gcm');const q=document.createElement('div');q.className='gc-q';['q1','q2','q3','q4','q5','q6'].forEach(k=>{const b=document.createElement('button');b.type='button';b.textContent=t('g.'+k);b.onclick=()=>{gcSay(esc(t('g.'+k)),'me');gcTopic(k)};q.appendChild(b)});m.appendChild(q);m.scrollTop=m.scrollHeight}
+function gcStart(){gcSay(t('g.hello'),'bot',true);gcQuick()}
+function gcTopic(k){
+ if(k==='q1'){const d=gcSay(t('g.size'));const q=document.createElement('div');q.className='gc-q';[2,3,4,5,6,7,8,9].forEach(n=>{const b=document.createElement('button');b.type='button';b.textContent=n===9?'9 +':n;b.onclick=()=>{gcSay(n===9?'9 +':String(n),'me');gcRec(n)};q.appendChild(b)});document.getElementById('gcm').appendChild(q);return}
+ if(k==='q2'){gcSay(t('g.calc'));setTimeout(()=>{if(cur!=='home')go('home');setTimeout(()=>{const c=document.getElementById('calc');if(c)c.scrollIntoView({behavior:'smooth'})},80)},700);return}
+ const map={q3:'g.parc',q4:'g.pets',q5:'g.pay',q6:'g.resto'};gcSay(t(map[k]));gcQuick();
+}
+function gcRec(n){
+ if(n>8){gcSay(t('g.toomany'));gcQuick();return}
+ const ok=LOCS.filter(l=>l.cap>=n).sort((a,b)=>a.cap-b.cap||minWeek(a)-minWeek(b));
+ const pick=n<=4?ok.slice(0,3):n<=5?ok.filter(l=>l.cap===5).concat(ok.filter(l=>l.cap>5)).slice(0,3):ok;
+ const d=gcSay(t('g.rec',{n}));
+ pick.forEach(l=>{const a=document.createElement('a');a.className='gc-rec';a.href='#loc/'+l.id;a.innerHTML=`<img src="${img(l.imgs[0])}" alt=""><span><b>${kind(l.kind)} ${l.name}</b><small>${l.cap} ${t('ui.places')} · ${t('ui.from')} ${eur(minWeek(l))} ${t('ui.week')}</small></span>`;d.appendChild(a)});
+ const b=document.createElement('a');b.className='btn btn-tube';b.style.marginTop='8px';b.href=resa('&nb_pers='+n);b.target='_blank';b.rel='noopener';b.innerHTML=ic.cal+t('ui.bookfull');d.appendChild(b);
+ gcQuick();
+}
+function gcAnswer(v){
+ const s=v.toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g,'');
+ const has=w=>w.some(x=>s.includes(x));
+ const num=(s.match(/\b([1-9]|1[0-9])\b/)||[])[1];
+ if(num&&has(['pers','gens','nous','people','person','personas','personen','persone','we ','wir','noi','wij','famil']))return gcRec(+num);
+ if(has(['prix','tarif','cout','combien','price','cost','how much','precio','cuanto','preis','kosten','prezzo','quanto','prijs','kost']))return gcTopic('q2');
+ if(has(['piscin','toboggan','aqua','bassin','pool','slide','swim','piscina','tobogan','rutsche','schwimm','scivolo','zwembad','glijbaan','bad ']))return gcTopic('q3');
+ if(has(['chien','chat','animal','dog','cat','pet','perro','mascota','hund','katze','tier','cane','gatto','hond','kat','huisdier','arriv','depart','heure','check','llegada','anreise','abreise','arrivo','partenza','aankomst','vertrek']))return gcTopic('q4');
+ if(has(['paie','paye','vacaf','cheque','carte','acompte','pay','deposit','pago','tarjeta','zahl','anzahlung','pagamento','acconto','betal','aanbetaling']))return gcTopic('q5');
+ if(has(['restau','manger','pizza','boulang','courses','food','eat','shop','comer','tienda','essen','laden','mangiare','negozi','eten','winkel','bakker']))return gcTopic('q6');
+ if(has(['chalet','mobil','location','dormir','famille','rental','sleep','alquiler','unterkunft','affitto','verhuur','slapen']))return gcTopic('q1');
+ if(has(['riviere','beaume','river','rio','fluss','fiume','rivier','peche','fish']))return (gcSay(t('p.riv.p')),gcQuick());
+ if(has(['wifi','internet','4g']))return (gcSay(t('f.a9')),gcQuick());
+ if(has(['bebe','baby','bebé','neonat']))return (gcSay(t('f.a18')),gcQuick());
+ if(has(['annul','cancel','storn','annull','annuleer']))return (gcSay(t('f.a5')),gcQuick());
+ if(has(['drap','linge','sheet','towel','sabana','bettwasche','lenzuol','laken']))return (gcSay(t('f.a17')),gcQuick());
+ gcSay(t('g.unknown'));gcQuick();
+}
+
+// ===== coque =====
+function shell(){
+ document.documentElement.lang=L;
+ document.querySelectorAll('[data-i]').forEach(e=>e.innerHTML=t(e.dataset.i));
+ document.querySelectorAll('[data-ip]').forEach(e=>e.placeholder=t(e.dataset.ip));
+ document.getElementById('menu').innerHTML=NAV.map(([k,lab])=>`<li><a href="#${k}" data-go="${k}">${t(lab)}</a></li>`).join('');
+ document.querySelectorAll('a.resa').forEach(a=>a.href=resa());
+ document.getElementById('foot-nav').innerHTML=NAV.map(([k,lab])=>`<li><a href="#${k}">${t(lab)}</a></li>`).join('');
+}
+function setLang(l){L=l;try{localStorage.setItem('gr-lang',l)}catch(e){}shell();const keep=scrollY;go(cur,true);scrollTo(0,keep);const m=document.getElementById('gcm');m.innerHTML='';if(document.getElementById('gcp').classList.contains('on'))gcStart()}
+function route(){const h=location.hash.slice(1)||'home';if(h==='calc'){go('home');setTimeout(()=>document.getElementById('calc').scrollIntoView(),50);return}go(h)}
+document.documentElement.classList.add('js');
+addEventListener('DOMContentLoaded',()=>{
+ const sel=document.getElementById('lang');sel.innerHTML=LANGS.map(l=>`<option value="${l}">${LANG_NAMES[l]}</option>`).join('');sel.value=L;sel.onchange=()=>setLang(sel.value);
+ shell();route();gcInit();
+ addEventListener('hashchange',route);
+ document.addEventListener('click',e=>{const s=e.target.closest('[data-scroll]');if(s){e.preventDefault();document.getElementById(s.dataset.scroll).scrollIntoView({behavior:'smooth'})}
+  const b=e.target.closest('[data-lb]');if(b){const lb=document.getElementById('lb');lb.querySelector('img').src=img(b.dataset.lb);lb.classList.add('on');lb.querySelector('button').focus()}});
+ const lb=document.getElementById('lb');lb.onclick=e=>{if(e.target!==lb.querySelector('img'))lb.classList.remove('on')};
+ document.addEventListener('keydown',e=>{if(e.key==='Escape')lb.classList.remove('on')});
+ let ck=null;try{ck=localStorage.getItem('gr-ck')}catch(e){}
+ const c=document.getElementById('ck');if(!ck)setTimeout(()=>c.classList.add('on'),1200);
+ c.querySelectorAll('button').forEach(b=>b.onclick=()=>{try{localStorage.setItem('gr-ck',b.dataset.v)}catch(e){}c.classList.remove('on')});
+});
+</script>
+<script id="nv-track">(function(){try{if(location.protocol!=='https:')return;if(/[?&]moi\b/.test(location.search)){localStorage.setItem('nv_moi','1');addEventListener('load',function(){var d=document.createElement('div');d.textContent='✓ Appareil reconnu : vos visites ne sont plus comptées';d.style.cssText='position:fixed;left:50%;bottom:24px;transform:translateX(-50%);z-index:2147483647;background:#1E3A2B;color:#fff;font:600 14px/1.3 system-ui,sans-serif;padding:12px 18px;border-radius:999px;box-shadow:0 8px 24px rgba(0,0,0,.25)';document.body.appendChild(d);setTimeout(function(){d.remove()},6000)})}if(localStorage.getItem('nv_moi')||navigator.webdriver)return;}catch(x){}
+var m=location.pathname.split('/').filter(Boolean)[0]||'';if(!m)return;var s=Math.random().toString(36).slice(2,12),t0=Date.now(),u='/_t.php',last='home',seen={};
+function send(e,p){var b=JSON.stringify({m:m,e:e,s:s,p:p||'',t:Math.round((Date.now()-t0)/1000),l:(document.documentElement.lang||'').slice(0,2)});try{if(navigator.sendBeacon)navigator.sendBeacon(u,new Blob([b],{type:'text/plain'}));else fetch(u,{method:'POST',body:b,keepalive:true})}catch(x){}}
+function once(k){k=String(k).toLowerCase().replace(/[^a-z0-9_-]/g,'').slice(0,24);if(!k||seen[k])return;seen[k]=1;send('ev',k)}
+send('open');setInterval(function(){if(document.visibilityState==='visible')send('ping')},45000);
+document.addEventListener('visibilitychange',function(){if(document.visibilityState==='hidden')send('ping')});
+window.__nvView=function(p){p=String(p||'');if(p&&p!==last){last=p;send('view',p)}};
+addEventListener('scroll',function(){var h=document.documentElement,max=h.scrollHeight-innerHeight;if(max<200)return;var r=(scrollY/max)*100;[25,50,75,100].forEach(function(q){if(r>=q-2)once('defil'+q+'-'+last)})},{passive:true});
+document.addEventListener('click',function(e){var el=e.target.closest('a,button,[data-add],[data-go],[role=button],summary');if(!el)return;var t=((el.getAttribute('aria-label')||'')+' '+(el.textContent||'')+' '+(el.className||'')+' '+(el.id||'')).toLowerCase(),h=el.getAttribute&&el.getAttribute('href')||'';
+if(el.hasAttribute('data-add')||/ajouter|add to|añadir|hinzuf|aggiungi|加入/.test(t))once('panier-'+(el.getAttribute('data-add')||'ajout')),send('ev','panier');
+else if(/conseil|advisor|assistant|chat/.test(t))once('conseiller');
+else if(/instagram|facebook|youtube|pinterest|linkedin|tiktok/.test(h))once('reseau-'+(h.match(/instagram|facebook|youtube|pinterest|linkedin|tiktok/)||[''])[0]);
+else if(/réserv|reserv|visite|book/.test(t))once('reservation');
+else if(/coffret|gift|cadeau/.test(t))once('coffret')},true);
+document.addEventListener('play',function(e){if(e.target&&e.target.tagName==='VIDEO'&&!e.target.muted)once('video-son')},true);
+try{new MutationObserver(function(){var l=(document.documentElement.lang||'').slice(0,2);if(l&&l!=='fr')once('langue-'+l)}).observe(document.documentElement,{attributes:true,attributeFilter:['lang']})}catch(x){}
+addEventListener('load',function(){try{if(typeof window.go==='function'&&!window.go.__nv){var g=window.go;window.go=function(v){try{window.__nvView(v)}catch(x){}return g.apply(this,arguments)};window.go.__nv=1}}catch(x){}});})();</script>
+</body>
+</html>
