@@ -63,7 +63,7 @@ p{margin:0;text-wrap:pretty}
 /* Bandeau loi Evin */
 .evin{background:var(--encre);color:var(--encre-txt);font-size:.78rem;text-align:center;padding:6px 16px;border-bottom:1px solid var(--ligne-n)}
 /* En-tête */
-header.tete{position:sticky;top:0;z-index:40;background:rgba(236,235,230,.94);backdrop-filter:saturate(1.2) blur(8px);border-bottom:1px solid var(--ligne)}
+header.tete{position:sticky;top:0;z-index:40;background:var(--papier);border-bottom:1px solid var(--ligne)}
 .tete .l1{display:flex;align-items:center;gap:20px;min-height:68px}
 .marque{display:flex;flex-direction:column;text-decoration:none;line-height:1;margin-right:auto}
 .marque b{font:400 1.7rem/1 var(--d);font-style:italic;letter-spacing:-.01em}
@@ -301,8 +301,8 @@ footer.pied{background:var(--encre);color:var(--encre-txt);padding:64px 0 28px;m
 .jauge-txt{font-size:.88rem;color:var(--txt2)}
 .age-ok{display:flex;gap:10px;align-items:flex-start;font-size:.9rem}
 .age-ok input{width:20px;height:20px;accent-color:var(--ambre-fonce);margin-top:2px}
-.toast{position:fixed;left:50%;bottom:24px;transform:translate(-50%,140%);background:var(--encre);color:var(--blanc);padding:12px 18px;border-radius:40px;z-index:70;transition:transform .45s var(--ease);font-size:.92rem;box-shadow:var(--ombre)}
-.toast.on{transform:translate(-50%,0)}
+.toast{position:fixed;left:50%;bottom:24px;transform:translate(-50%,200%);visibility:hidden;background:var(--encre);color:var(--blanc);padding:12px 18px;border-radius:40px;z-index:70;transition:transform .45s var(--ease);font-size:.92rem;box-shadow:var(--ombre)}
+.toast.on{transform:translate(-50%,0);visibility:visible}
 /* Conseiller */
 .cons-btn{position:fixed;right:18px;bottom:18px;z-index:50;display:flex;align-items:center;gap:12px;background:var(--encre);color:var(--blanc);border:1px solid var(--encre3);border-radius:60px;padding:8px 18px 8px 8px;cursor:pointer;box-shadow:var(--ombre);text-align:left}
 .cons-btn .rond{width:42px;height:42px;border-radius:50%;background:var(--ambre);color:var(--encre);display:grid;place-items:center;font:400 1.4rem/1 var(--d);font-style:italic}
@@ -367,6 +367,12 @@ footer.pied{padding-bottom:96px}
 .porte-b{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
 .porte small{display:block;margin-top:22px;color:var(--encre-txt);font-size:.8rem}
 @media (max-width:1560px){nav.menu a{padding:12px 7px 10px;letter-spacing:.08em}.tete .l1{gap:14px}.langue select{padding-left:10px}}@media (min-width:1321px) and (max-width:1560px){.compte-l{display:none}}
+
+:lang(ja) h1,:lang(ja) h2,:lang(ja) h3{word-break:keep-all;line-break:strict;overflow-wrap:anywhere}
+.lien-n{text-transform:none;letter-spacing:0;font:500 .95rem/1.35 var(--b)}
+.etapes div:last-child:nth-child(odd){grid-column:1/-1;border-right:0;padding-right:0}
+.carte span.ajout{display:inline-flex;align-items:center}
+@media (max-width:560px){.bulle{max-width:260px;font-size:.84rem;bottom:76px}}
 </style>
 </head>
 <body>
@@ -599,12 +605,13 @@ const PRIV=I(
 
 const L={};
 L.fr={
+hero_l:"Depuis 1838, six générations élèvent l'armagnac à Nogaro. Plus de 60 millésimes au chai, dont 45 en boutique en ligne, mis en bouteille à la main.",adv_bio:"Oui : l'Organic Armagnac, certifié Agriculture biologique (baco 22A et folle blanche, au moins 5 ans de fût), 67 €.",adv_value:"Le meilleur rapport qualité-prix : le VSOP (47 €) pour découvrir, le Réserve (62 €), grande médaille d'or à Bruxelles en 2025. Pour goûter trois âges, le coffret Découverte (69 €).",adv_budget:"Avec un budget de {b}, je vous propose :",adv_choc:"Avec le chocolat noir : VSOP pour un 80 %, Réserve pour un 70 %, XO Signature pour un 65 %, Héritage ou Prestige pour un 60 % ou un praliné.",adv_out:"Je ne peux répondre que sur la maison, ses armagnacs, vos commandes et les visites. Pour le reste, je préfère ne pas inventer : la maison vous répond au 05 62 09 03 01.",gate_bye:"Merci de votre honnêteté. Revenez nous voir le moment venu.",choose:"Choisir",
 acc:"Mon compte",gate_q:"Avez-vous l’âge légal pour consommer de l’alcool dans votre pays ?",gate_y:"Oui, j’entre",gate_n:"Non, je sors",acc_l:"Connexion à votre compte : commandes, adresses, suivi. (Maquette : l’espace client sera relié à votre boutique actuelle à la mise en ligne.)",f_pw:"Mot de passe",f_login:"Se connecter",prevy:"Millésime précédent",nexty:"Millésime suivant",
 alt_hero:"Bouteilles Dartigalongue et machine à écrire au chai de Nogaro",alt_ghis:"Ghislain Laffargue, maître de chai",alt_fac:"Façade de la maison Dartigalongue, Place du Four, Nogaro",
 lang:"Français",nav_home:"Accueil",nav_hist:"Histoire",nav_sf:"Savoir-faire",nav_arm:"Nos armagnacs",nav_cock:"Cocktails",nav_vis:"Visites",nav_shop:"Boutique",nav_contact:"Contact",cart:"Panier",
 evin:"L'abus d'alcool est dangereux pour la santé, à consommer avec modération.",
 hero_t:"Votre année dort peut-être dans notre chai d’armagnac.",
-hero_l:"Depuis 1838, six générations élèvent l'armagnac à Nogaro. Plus de 60 millésimes attendent, mis en bouteille à la main.",
+
 cta_find:"Trouver mon millésime",cta_shop:"Toute la boutique",
 reg_t:"Le registre des millésimes",reg_l:"Faites glisser les années. À chacune son armagnac, ses notes, son prix.",
 reg_hint:"Glissez ou tapez une année",reg_nose:"Nez",reg_mouth:"Bouche",reg_add:"Ajouter au panier",reg_sheet:"Voir la fiche",reg_hand:"Mis en bouteille à la main, date notée en contre-étiquette.",
@@ -651,7 +658,7 @@ vb_t:"La boutique du chai",vb_l:"Ouverte toute l'année, du lundi au vendredi. T
 vg_t:"Visites de groupe",vg_l:"Toute l'année hors juillet et août, de 6 à 12 personnes, 10 € par personne, selon notre planning. Réservation par téléphone ou par mail.",
 vj_t:"Journées du Patrimoine",vj_l:"Dernière édition : dimanche 20 septembre 2026. Musée et chais ouverts, visites guidées gratuites d'une heure, 10 à 12 personnes, départs à 10 h, 11 h, 14 h, 15 h et 16 h. Les dates de la prochaine édition seront annoncées ici.",
 vstairs:"La visite des chais comprend une partie à l'étage, accessible uniquement par des escaliers.",
-v_book:"Réserver une visite",hours_t:"Horaires",hours:"Lundi au jeudi : 8 h 30 – 12 h 30 / 13 h 30 – 17 h 30\nVendredi : 8 h 30 – 12 h 30 / 14 h – 17 h",addr_t:"Adresse",
+v_book:"Réserver une visite",hours_t:"Horaires",hours:"Lundi au jeudi : 8 h 30 – 12 h 30 / 13 h 30 – 17 h 30\nVendredi : 8 h 30 – 12 h 30 / 14 h – 17 h",addr_t:"Adresse",
 occ:"Nous sommes fiers d'avoir reçu le soutien de la région Occitanie pour nos innovations produits.",bca:"Membre des Bons Crus d'Artagnan.",
 ct_t:"Écrivez-nous",ct_l:"Une commande hors de France, un caviste, une visite, une question sur un millésime : nous répondons nous-mêmes.",
 f_name:"Nom",f_mail:"E-mail",f_subj:"Sujet",f_msg:"Message",f_send:"Envoyer",f_ok:"Merci, votre message est prêt. (Maquette : aucun envoi réel.)",f_err:"Merci d'indiquer un e-mail valide et un message.",
@@ -679,12 +686,13 @@ skip:"Aller au contenu",menu_lang:"Langue",close:"Fermer",prev:"Précédent",nex
 prop:"Proposition de refonte — Neovera Studio"
 };
 L.en={
+hero_l:"Since 1838, six generations have aged armagnac in Nogaro. More than 60 vintages in the cellar, 45 of them in the online shop, bottled by hand.",adv_bio:"Yes: Organic Armagnac, certified organic (Baco 22A and Folle Blanche, at least 5 years in cask), €67.",adv_value:"Best value: the VSOP (€47) to discover, the Réserve (€62), Grand Gold Medal in Brussels 2025. To taste three ages, the Discovery box (€69).",adv_budget:"With a budget of {b}, I suggest:",adv_choc:"With dark chocolate: VSOP for 80%, Réserve for 70%, XO Signature for 65%, Héritage or Prestige for 60% or praline.",adv_out:"I can only answer about the house, its armagnacs, your orders and visits. For anything else I'd rather not guess: the house will help on +33 5 62 09 03 01.",gate_bye:"Thank you for your honesty. Come back and see us when the time is right.",choose:"Choose",
 acc:"My account",gate_q:"Are you of legal drinking age in your country?",gate_y:"Yes, enter",gate_n:"No, leave",acc_l:"Sign in to your account: orders, addresses, tracking. (Mock-up: the customer area will be linked to your current shop at launch.)",f_pw:"Password",f_login:"Sign in",prevy:"Previous vintage",nexty:"Next vintage",
 alt_hero:"Dartigalongue bottles and a typewriter in the Nogaro cellar",alt_ghis:"Ghislain Laffargue, cellar master",alt_fac:"The Dartigalongue house front, Place du Four, Nogaro",
 lang:"English",nav_home:"Home",nav_hist:"History",nav_sf:"Craft",nav_arm:"Our armagnacs",nav_cock:"Cocktails",nav_vis:"Visits",nav_shop:"Shop",nav_contact:"Contact",cart:"Cart",
 evin:"Alcohol abuse is dangerous for your health. Please drink responsibly.",
 hero_t:"Your year may be resting in our armagnac cellar.",
-hero_l:"Since 1838, six generations have aged armagnac in Nogaro. More than 60 vintages are waiting, bottled by hand.",
+
 cta_find:"Find my vintage",cta_shop:"Browse the shop",
 reg_t:"The vintage register",reg_l:"Slide through the years. Each one has its armagnac, its notes, its price.",
 reg_hint:"Slide or type a year",reg_nose:"Nose",reg_mouth:"Palate",reg_add:"Add to cart",reg_sheet:"See details",reg_hand:"Bottled by hand, bottling date on the back label.",
@@ -760,12 +768,13 @@ prop:"Redesign proposal — Neovera Studio"
 };
 
 L.es={
+hero_l:"Desde 1838, seis generaciones crían el armañac en Nogaro. Más de 60 añadas en la bodega, 45 de ellas en la tienda en línea, embotelladas a mano.",adv_bio:"Sí: el Organic Armagnac, certificado ecológico (baco 22A y folle blanche, al menos 5 años en barrica), 67 €.",adv_value:"La mejor relación calidad-precio: el VSOP (47 €) para descubrir, el Réserve (62 €), Gran Medalla de Oro en Bruselas 2025. Para catar tres edades, el estuche Descubrimiento (69 €).",adv_budget:"Con un presupuesto de {b}, le propongo:",adv_choc:"Con chocolate negro: VSOP para un 80 %, Réserve para un 70 %, XO Signature para un 65 %, Héritage o Prestige para un 60 % o un praliné.",adv_out:"Solo puedo responder sobre la casa, sus armañacs, sus pedidos y las visitas. Para lo demás prefiero no inventar: la casa le atiende en el +33 5 62 09 03 01.",gate_bye:"Gracias por su sinceridad. Vuelva a visitarnos cuando llegue el momento.",choose:"Elegir",
 acc:"Mi cuenta",gate_q:"¿Tiene la edad legal para consumir alcohol en su país?",gate_y:"Sí, entro",gate_n:"No, salgo",acc_l:"Acceda a su cuenta: pedidos, direcciones, seguimiento. (Maqueta: el área de cliente se conectará a su tienda actual en la puesta en línea.)",f_pw:"Contraseña",f_login:"Entrar",prevy:"Añada anterior",nexty:"Añada siguiente",
 alt_hero:"Botellas Dartigalongue y máquina de escribir en la bodega de Nogaro",alt_ghis:"Ghislain Laffargue, maestro bodeguero",alt_fac:"Fachada de la casa Dartigalongue, Place du Four, Nogaro",
 lang:"Español",nav_home:"Inicio",nav_hist:"Historia",nav_sf:"Saber hacer",nav_arm:"Nuestros armañacs",nav_cock:"Cócteles",nav_vis:"Visitas",nav_shop:"Tienda",nav_contact:"Contacto",cart:"Cesta",
 evin:"El abuso del alcohol es peligroso para la salud. Consúmalo con moderación.",
 hero_t:"Quizá su año descansa en nuestra bodega de armañac.",
-hero_l:"Desde 1838, seis generaciones crían el armañac en Nogaro. Más de 60 añadas esperan, embotelladas a mano.",
+
 cta_find:"Encontrar mi añada",cta_shop:"Toda la tienda",
 reg_t:"El registro de añadas",reg_l:"Deslice los años. Cada uno tiene su armañac, sus notas y su precio.",
 reg_hint:"Deslice o escriba un año",reg_nose:"Nariz",reg_mouth:"Boca",reg_add:"Añadir a la cesta",reg_sheet:"Ver la ficha",reg_hand:"Embotellado a mano, fecha anotada en la contraetiqueta.",
@@ -840,12 +849,13 @@ skip:"Ir al contenido",menu_lang:"Idioma",close:"Cerrar",prev:"Anterior",next:"S
 prop:"Propuesta de rediseño — Neovera Studio"
 };
 L.de={
+hero_l:"Seit 1838 lassen sechs Generationen in Nogaro Armagnac reifen. Über 60 Jahrgänge im Keller, 45 davon im Online-Shop, von Hand abgefüllt.",adv_bio:"Ja: der Organic Armagnac, bio-zertifiziert (Baco 22A und Folle Blanche, mindestens 5 Jahre im Fass), 67 €.",adv_value:"Das beste Preis-Leistungs-Verhältnis: der VSOP (47 €) zum Entdecken, die Réserve (62 €), Große Goldmedaille Brüssel 2025. Drei Alter probieren: die Entdeckungsbox (69 €).",adv_budget:"Für ein Budget von {b} schlage ich vor:",adv_choc:"Zu dunkler Schokolade: VSOP zu 80 %, Réserve zu 70 %, XO Signature zu 65 %, Héritage oder Prestige zu 60 % oder Praliné.",adv_out:"Ich kann nur zum Haus, seinen Armagnacs, Ihren Bestellungen und Besuchen antworten. Für alles andere rate ich lieber nicht: Das Haus hilft Ihnen unter +33 5 62 09 03 01.",gate_bye:"Danke für Ihre Ehrlichkeit. Besuchen Sie uns, wenn es so weit ist.",choose:"Auswählen",
 acc:"Mein Konto",gate_q:"Haben Sie in Ihrem Land das gesetzliche Mindestalter für Alkohol?",gate_y:"Ja, eintreten",gate_n:"Nein, verlassen",acc_l:"Anmeldung zu Ihrem Konto: Bestellungen, Adressen, Sendungsverfolgung. (Entwurf: Der Kundenbereich wird beim Start mit Ihrem bestehenden Shop verbunden.)",f_pw:"Passwort",f_login:"Anmelden",prevy:"Vorheriger Jahrgang",nexty:"Nächster Jahrgang",
 alt_hero:"Dartigalongue-Flaschen und Schreibmaschine im Keller von Nogaro",alt_ghis:"Ghislain Laffargue, Kellermeister",alt_fac:"Fassade des Hauses Dartigalongue, Place du Four, Nogaro",
 lang:"Deutsch",nav_home:"Start",nav_hist:"Geschichte",nav_sf:"Handwerk",nav_arm:"Unsere Armagnacs",nav_cock:"Cocktails",nav_vis:"Besuche",nav_shop:"Shop",nav_contact:"Kontakt",cart:"Warenkorb",
 evin:"Übermäßiger Alkoholkonsum schadet der Gesundheit. Bitte genießen Sie verantwortungsvoll.",
 hero_t:"Vielleicht ruht Ihr Jahr in unserem Armagnac-Keller.",
-hero_l:"Seit 1838 lassen sechs Generationen in Nogaro Armagnac reifen. Über 60 Jahrgänge warten, von Hand abgefüllt.",
+
 cta_find:"Meinen Jahrgang finden",cta_shop:"Zum ganzen Shop",
 reg_t:"Das Jahrgangsregister",reg_l:"Schieben Sie durch die Jahre. Jedes hat seinen Armagnac, seine Noten, seinen Preis.",
 reg_hint:"Schieben oder Jahr eingeben",reg_nose:"Nase",reg_mouth:"Gaumen",reg_add:"In den Warenkorb",reg_sheet:"Details ansehen",reg_hand:"Von Hand abgefüllt, Abfülldatum auf dem Rückenetikett.",
@@ -921,12 +931,13 @@ prop:"Redesign-Vorschlag — Neovera Studio"
 };
 
 L.it={
+hero_l:"Dal 1838 sei generazioni affinano l'armagnac a Nogaro. Oltre 60 annate in cantina, 45 nel negozio online, imbottigliate a mano.",adv_bio:"Sì: l'Organic Armagnac, certificato biologico (baco 22A e folle blanche, almeno 5 anni in botte), 67 €.",adv_value:"Il miglior rapporto qualità-prezzo: il VSOP (47 €) per scoprire, il Réserve (62 €), Gran medaglia d'oro a Bruxelles 2025. Per assaggiare tre età, il cofanetto Scoperta (69 €).",adv_budget:"Con un budget di {b}, vi propongo:",adv_choc:"Con il cioccolato fondente: VSOP per un 80%, Réserve per un 70%, XO Signature per un 65%, Héritage o Prestige per un 60% o un pralinato.",adv_out:"Posso rispondere solo sulla casa, i suoi armagnac, i vostri ordini e le visite. Per il resto preferisco non inventare: la casa vi risponde al +33 5 62 09 03 01.",gate_bye:"Grazie per la sincerità. Tornate a trovarci al momento giusto.",choose:"Scegli",
 acc:"Il mio account",gate_q:"Avete l’età legale per bere alcolici nel vostro paese?",gate_y:"Sì, entro",gate_n:"No, esco",acc_l:"Accedete al vostro account: ordini, indirizzi, tracciamento. (Bozza: l’area clienti sarà collegata al vostro negozio attuale alla messa online.)",f_pw:"Password",f_login:"Accedi",prevy:"Annata precedente",nexty:"Annata successiva",
 alt_hero:"Bottiglie Dartigalongue e macchina da scrivere nella cantina di Nogaro",alt_ghis:"Ghislain Laffargue, maestro di cantina",alt_fac:"Facciata della casa Dartigalongue, Place du Four, Nogaro",
 lang:"Italiano",nav_home:"Home",nav_hist:"Storia",nav_sf:"Saper fare",nav_arm:"I nostri armagnac",nav_cock:"Cocktail",nav_vis:"Visite",nav_shop:"Negozio",nav_contact:"Contatti",cart:"Carrello",
 evin:"L'abuso di alcol nuoce alla salute. Bevi responsabilmente.",
 hero_t:"Forse il vostro anno riposa nella nostra cantina di armagnac.",
-hero_l:"Dal 1838 sei generazioni affinano l'armagnac a Nogaro. Oltre 60 annate attendono, imbottigliate a mano.",
+
 cta_find:"Trova la mia annata",cta_shop:"Tutto il negozio",
 reg_t:"Il registro delle annate",reg_l:"Scorrete gli anni. Ognuno ha il suo armagnac, le sue note, il suo prezzo.",
 reg_hint:"Scorrete o digitate un anno",reg_nose:"Naso",reg_mouth:"Bocca",reg_add:"Aggiungi al carrello",reg_sheet:"Vedi la scheda",reg_hand:"Imbottigliato a mano, data riportata in controetichetta.",
@@ -1001,12 +1012,13 @@ skip:"Vai al contenuto",menu_lang:"Lingua",close:"Chiudi",prev:"Precedente",next
 prop:"Proposta di restyling — Neovera Studio"
 };
 L.ja={
+hero_l:"1838年から6世代にわたり、ノガロでアルマニャックを熟成。セラーには60以上のヴィンテージ、うち45をオンラインで。すべて手作業で瓶詰めしています。",adv_bio:"はい。有機農業認証のオーガニック・アルマニャック（バコ22A、フォル・ブランシュ、樽熟成5年以上）、67ユーロです。",adv_value:"コストパフォーマンスなら、まずVSOP（47ユーロ）、そして2025年ブリュッセル大金賞のレゼルヴ（62ユーロ）。3つの年齢を味わうならディスカバリー・ボックス（69ユーロ）。",adv_budget:"ご予算{b}なら、こちらをおすすめします：",adv_choc:"ダークチョコレートには、カカオ80%にVSOP、70%にレゼルヴ、65%にXOシグネチャー、60%やプラリネにはエリタージュかプレスティージュ。",adv_out:"メゾン、アルマニャック、ご注文、見学についてのみお答えできます。それ以外は推測いたしません。+33 5 62 09 03 01 までお問い合わせください。",gate_bye:"正直なお答えをありがとうございます。その時が来たら、またお越しください。",choose:"選ぶ",
 acc:"マイアカウント",gate_q:"お住まいの国の法定飲酒年齢に達していますか？",gate_y:"はい、入ります",gate_n:"いいえ、退出します",acc_l:"アカウントにログイン：注文、住所、配送状況。（試作版：公開時に現在のショップと連携します）",f_pw:"パスワード",f_login:"ログイン",prevy:"前のヴィンテージ",nexty:"次のヴィンテージ",
 alt_hero:"ノガロのセラーに並ぶダルティガロングのボトルとタイプライター",alt_ghis:"セラーマスター、ギスラン・ラファルグ",alt_fac:"ノガロ、プラス・デュ・フールのダルティガロング本社",
 lang:"日本語",nav_home:"ホーム",nav_hist:"歴史",nav_sf:"つくり",nav_arm:"アルマニャック",nav_cock:"カクテル",nav_vis:"見学",nav_shop:"ショップ",nav_contact:"お問い合わせ",cart:"カート",
 evin:"過度の飲酒は健康を害します。適量を楽しみましょう。",
-hero_t:"あなたの年が、私たちのアルマニャック・セラーで眠っているかもしれません。",
-hero_l:"1838年から6世代にわたり、ノガロでアルマニャックを熟成させてきました。手作業で瓶詰めした60以上のヴィンテージがお待ちしています。",
+hero_t:"あなたの年が、私たちのアルマニャックのセラーで眠っているかもしれません。",
+
 cta_find:"私のヴィンテージを探す",cta_shop:"ショップを見る",
 reg_t:"ヴィンテージ台帳",reg_l:"年をスライドしてください。それぞれの年に、アルマニャックと香りと価格があります。",
 reg_hint:"スライド、または年を入力",reg_nose:"香り",reg_mouth:"味わい",reg_add:"カートに入れる",reg_sheet:"詳細を見る",reg_hand:"手作業で瓶詰め。瓶詰め日は裏ラベルに記載。",
@@ -1102,7 +1114,7 @@ const esc=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;',
 let cart=[];try{cart=JSON.parse(localStorage.getItem('dg_cart')||'[]')}catch(e){}
 const save=()=>{try{localStorage.setItem('dg_cart',JSON.stringify(cart))}catch(e){}};
 const price=(p,pk)=>p.p.u!==undefined?p.p.u:p.p[pk||'etui'];
-function add(i,pk,q){const p=P[i];pk=p.p.u!==undefined?'u':(pk||'etui');q=q||1;const l=cart.find(x=>x.i===i&&x.k===pk);const max=p.max||24;if(l)l.q=Math.min(max,l.q+q);else cart.push({i,k:pk,q:Math.min(max,q)});save();drawCart();toast(t('added')+' · '+tr(p.n))}
+function add(i,pk,q){const p=P[i];pk=p.p.u!==undefined?'u':(pk||'etui');q=q||1;const l=cart.find(x=>x.i===i&&x.k===pk);const max=p.max||24;if(l)l.q=Math.min(max,l.q+q);else cart.push({i,k:pk,q:Math.min(max,q)});save();drawCart();openCart(true)}
 function drawCart(){
  const n=cart.reduce((a,l)=>a+l.q,0);$('#nb').textContent=n;
  const box=$('#lignes');
@@ -1124,7 +1136,7 @@ const openCart=o=>{$('#tiroir').classList.toggle('on',o);$('#voile').classList.t
 let tt;function toast(m){const e=$('#toast');e.textContent=m;e.classList.add('on');clearTimeout(tt);tt=setTimeout(()=>e.classList.remove('on'),2200)}
 /* ---------- Pages ---------- */
 const V=document.getElementById('vue');
-const card=p=>'<a class="carte" href="#/boutique/'+p.i+'"><div class="vis"><img loading="lazy" src="'+img(p.img)+'" alt="'+esc(tr(p.n))+'"></div><div class="nom">'+esc(tr(p.n))+'</div><div class="fmt">'+tr(p.f)+'</div><div class="bas"><b class="num">'+(p.p.u!==undefined?'':t('from')+' ')+eur(pmin(p))+'</b><button class="ajout" data-add="'+p.i+'">'+t('add')+'</button></div></a>';
+const card=p=>'<a class="carte" href="#/boutique/'+p.i+'"><div class="vis"><img loading="lazy" src="'+img(p.img)+'" alt="'+esc(tr(p.n))+'"></div><div class="nom">'+esc(tr(p.n))+'</div><div class="fmt">'+tr(p.f)+'</div><div class="bas"><b class="num">'+(p.p.u!==undefined?'':t('from')+' ')+eur(pmin(p))+'</b>'+(p.p.u!==undefined?'<button class="ajout" data-add="'+p.i+'">'+t('add')+'</button>':'<span class="ajout">'+t('choose')+'</span>')+'</div></a>';
 const ASM=[4,5,6,7,8],TEINTE=['#E9C17A','#D99B45','#B9742A','#8F4E1C','#5E2F12'],AGE=[4,6,12,20,30];
 function home(){
  return `<section class="hero"><div class="gauche nuit"><h1><span class="ligne"><span>${t('hero_t')}</span></span></h1><p class="lead">${t('hero_l')}</p>
@@ -1145,7 +1157,7 @@ function home(){
  </div></section>
  <div class="reass"><div><b>${t('r1')}</b><span>${t('r1s')}</span></div><div><b>${t('r2')}</b><span>${t('r2s')}</span></div><div><b>${t('r3')}</b><span><a href="tel:+33562090301">${t('r3s')}</a></span></div><div><b>${t('r4')}</b><span>${t('r4s')}</span></div></div>
  <section class="ages"><div class="wrap"><h2 class="rv">${t('asm_t')}</h2><p class="lead rv" style="margin-top:16px">${t('asm_l')}</p>
-  <div class="ages-liste">${ASM.map((i,k)=>{const p=P[i];return '<a class="age rv" href="#/boutique/'+i+'"><img loading="lazy" src="'+img(p.img)+'" alt="'+tr(p.n)+'" style="height:'+(170+k*22)+'px"><span class="teinte" style="background:'+TEINTE[k]+'"></span><span class="lab min">'+t('age',{n:AGE[k]})+'</span><h3>'+tr(p.n)+'</h3><p>'+X(PD[i]).split('. ')[0]+'.</p><span class="prix num">'+t('from')+' '+eur(pmin(p))+'</span></a>'}).join('')}</div></div></section>
+  <div class="ages-liste">${ASM.map((i,k)=>{const p=P[i];return '<a class="age rv" href="#/boutique/'+i+'"><img loading="lazy" src="'+img(p.img)+'" alt="'+tr(p.n)+'" style="height:'+(170+k*22)+'px"><span class="teinte" style="background:'+TEINTE[k]+'"></span><h3>'+tr(p.n)+'</h3><span class="lab min">'+t('age',{n:AGE[k]})+'</span><p>'+X(PD[i]).split('. ')[0]+'.</p><span class="prix num">'+t('from')+' '+eur(pmin(p))+'</span></a>'}).join('')}</div></div></section>
  <section class="duo nuit"><div class="txt"><h2 class="rv">${t('cb_t')}</h2><p class="lab meta">${t('cb_note')} · ${P[66].f}</p><p class="rv">${X(PD[66])}</p><div class="prixl"><strong class="num">${eur(P[66].p.etui)}</strong><button class="btn plein" data-add="66">${t('cb_cta')}</button><a class="lien" href="#/boutique/66">${t('reg_sheet')}</a></div></div><div class="img"><img loading="lazy" src="img/ghis.jpg" alt="${t('alt_ghis')}" style="object-position:50% 30%"><img class="flacon" loading="lazy" src="${img('p066')}" alt=""></div></section>
  <section class="duo inv"><div class="txt"><h2 class="rv">${t('fest_t')}</h2><p class="lab meta">${t('fest_note')} · ${P[0].f}</p><p class="rv" style="color:var(--txt2)">${X(PD[0])}</p><div class="prixl"><strong class="num">${eur(210)}</strong><button class="btn" data-add="0">${t('add')}</button><a class="lien" href="#/boutique/0">${t('reg_sheet')}</a></div></div><div class="img" style="background:var(--encre)"><img loading="lazy" src="img/fest.jpg" alt="Fest'Armagnac 2026" style="object-fit:contain;padding:clamp(28px,5vw,64px);filter:saturate(.8)"></div></section>
  <section class="duo"><div class="txt"><h2 class="rv">${t('ren_t')}</h2><p class="rv" style="color:var(--txt2)">${t('ren_l')}</p><div style="display:flex;gap:18px;align-items:end">${[70,71,72,73].map(i=>'<a href="#/boutique/'+i+'"><img loading="lazy" src="'+img(P[i].img)+'" alt="'+tr(P[i].n)+'" style="height:150px;width:auto"></a>').join('')}</div><a class="lien" href="#/cocktails">${t('ren_cta')}</a></div><div class="img"><img loading="lazy" src="img/barman.jpg" alt=""></div></section>
@@ -1153,7 +1165,7 @@ function home(){
  <section class="duo nuit inv"><div class="txt"><h2 class="rv">${t('st_t')}</h2><p class="rv">${t('st_l')}</p><a class="lien" href="#/savoir-faire">${t('st_cta')}</a></div><div class="img"><video id="vid" muted loop playsinline preload="none" poster="img/chai.jpg" aria-hidden="true"><source src="img/chai.mp4" type="video/mp4"></video></div></section>
  <figure class="plein"><img loading="lazy" src="img/h1.jpg" alt=""></figure>
  <section class="bande"><div class="wrap"><div class="epv"><div class="sceau">Entreprise du Patrimoine Vivant</div><div><h3>${t('epv_t')}</h3><p style="color:var(--txt2);margin-top:6px;max-width:62ch">${t('epv_l')}</p></div><a class="lien" href="https://www.institut-metiersdart.org/epv/une-reference" target="_blank" rel="noopener">${t('epv_link')}</a></div>
- <div class="grille3" style="margin-top:56px"><div class="rv"><h3>${t('vt_t')}</h3><p style="color:var(--txt2);margin:12px 0 18px">${t('vt_l')}</p><a class="lien" href="#/visites">${t('vt_cta')}</a></div><div class="rv"><h3>${t('where_t')}</h3><p style="color:var(--txt2);margin:12px 0 18px">${t('where_l')}</p><a class="lien" href="#/contact">${t('where_cta')}</a></div><div class="rv"><h3>${t('book_t')}</h3><p style="color:var(--txt2);margin:12px 0 18px">${t('book_l')}</p><a class="lien" href="#/boutique/74">${tr(P[74].n).replace(/^\S+ /,'')} · ${eur(28)}</a></div></div></div></section>`;
+ <div class="grille3" style="margin-top:56px"><div class="rv"><h3>${t('vt_t')}</h3><p style="color:var(--txt2);margin:12px 0 18px">${t('vt_l')}</p><a class="lien" href="#/visites">${t('vt_cta')}</a></div><div class="rv"><h3>${t('where_t')}</h3><p style="color:var(--txt2);margin:12px 0 18px">${t('where_l')}</p><a class="lien" href="#/contact">${t('where_cta')}</a></div><div class="rv"><h3>${t('book_t')}</h3><p style="color:var(--txt2);margin:12px 0 18px">${t('book_l')}</p><a class="lien lien-n" href="#/boutique/74">${tr(P[74].n).replace(/^\S+ /,'')} · ${eur(28)}</a></div></div></div></section>`;
 }
 function hist(){return `<section class="page-tete"><div class="wrap"><h1>${t('hp_t')}</h1><p class="lead">${t('hp_l')}</p></div></section>
 <section><div class="wrap"><img src="img/h1.jpg" alt="" style="width:100%;border-radius:var(--r);filter:grayscale(1)"></div></section>
@@ -1169,9 +1181,9 @@ function arm(){const sec=(id,ti,lead,ids)=>`<section class="bande" id="${id}"><d
 return `<section class="page-tete"><div class="wrap"><h1>${t('arm_t')}</h1><p class="lead">${t('arm_l')}</p></div></section>
 <section><div class="wrap"><img src="img/prod.jpg" alt="" style="width:100%;border-radius:var(--r)"></div></section>
 <section class="bande" style="border:0"><div class="wrap"><h2>${t('asm_t')}</h2><p class="lead" style="margin-top:14px">${t('asm_l')}</p>
-${ASM.map((i,k)=>'<div class="chap rv"><div><span class="teinte" style="display:block;height:6px;border-radius:2px;background:'+TEINTE[k]+'"></span><p class="lab" style="margin-top:12px;color:var(--txt2)">'+t('age',{n:AGE[k]})+'</p><img loading="lazy" src="'+img(P[i].img)+'" alt="" style="height:170px;width:auto;margin-top:12px"></div><div><h3>'+tr(P[i].n)+' <small class="num" style="font:500 1rem var(--b);color:var(--txt2)">'+P[i].f+'</small></h3><p>'+X(PD[i])+'</p><p style="margin-top:10px"><b>'+t('accords')+'</b> — '+X(ACC[i])+'</p><p style="margin-top:14px"><a class="lien" href="#/boutique/'+i+'">'+t('from')+' '+eur(pmin(P[i]))+'</a></p></div></div>').join('')}</div></section>
+${ASM.map((i,k)=>'<div class="chap rv"><div><span class="teinte" style="display:block;height:6px;border-radius:2px;background:'+TEINTE[k]+'"></span><img loading="lazy" src="'+img(P[i].img)+'" alt="" style="height:170px;width:auto;margin-top:12px"></div><div><h3>'+tr(P[i].n)+'</h3><p class="lab" style="margin:8px 0 12px;color:var(--txt2)">'+t('age',{n:AGE[k]})+' · '+P[i].f+'</p><p>'+X(PD[i])+'</p><p style="margin-top:10px"><b>'+t('accords')+'</b> — '+X(ACC[i])+'</p><p style="margin-top:14px"><a class="lien" href="#/boutique/'+i+'">'+t('from')+' '+eur(pmin(P[i]))+'</a></p></div></div>').join('')}</div></section>
 ${sec('renouveau',t('ren_t'),t('ren_l'),[70,71,72,73])}
-${sec('millesimes',t('mil_t'),t('mil_l'),VINT.map(p=>p.i))}
+${sec('millesimes',t('mil_t'),t('mil_l'),[1962,1975,1985,1995,2005].map(y=>VINT.find(v=>v.y===y).i))}<div class="wrap" style="margin-top:-40px;padding-bottom:40px"><a class="btn" href="#/boutique?c=mi">${X(CATS.mi)} · ${VINT.length}</a></div>
 ${sec('futs',t('fe_t'),t('fe_l'),[66,0,1,2,3])}
 ${sec('carafes',t('car_t'),'',[75,67,68,69,9,10])}
 <section class="bande"><div class="wrap epv" style="grid-template-columns:1fr auto"><div><h3>${t('dl_t')}</h3><p style="color:var(--txt2);margin-top:6px">${t('dl_l')}</p></div><a class="btn" href="#/contact?s=4">${t('dl_cta')}</a></div></section>`}
@@ -1248,7 +1260,7 @@ function initReg(){const ol=$('#regle');if(!ol)return;
 }
 function goYear(y){y=parseInt(y,10);if(!y)return false;const ex=VINT.find(v=>v.y===y);if(ex){location.hash='#/';setTimeout(()=>{$('#registre').scrollIntoView({behavior:'smooth'});setYear(y,true)},60);return true}return false}
 /* ---------- Routeur ---------- */
-const NAV=[['#/','nav_home'],['#/histoire','nav_hist'],['#/savoir-faire','nav_sf'],['#/armagnacs','nav_arm'],['#/cocktails','nav_cock'],['#/visites','nav_vis'],['#/boutique','nav_shop'],['#/contact','nav_contact']];
+const NAV=[['#/','nav_home'],['#/boutique','nav_shop'],['#/histoire','nav_hist'],['#/savoir-faire','nav_sf'],['#/armagnacs','nav_arm'],['#/cocktails','nav_cock'],['#/visites','nav_vis'],['#/contact','nav_contact']];
 function route(){const h=location.hash||'#/';if(h==='#registre'){const r=$('#registre');if(r){r.scrollIntoView({behavior:'smooth'});return}location.hash='#/';return}
  const [path,qs]=h.slice(1).split('?');const q=new URLSearchParams(qs||'');const seg=path.split('/').filter(Boolean);
  let html,key='#/';
@@ -1270,7 +1282,7 @@ function route(){const h=location.hash||'#/';if(h==='#registre'){const r=$('#reg
 function after(){initReg();drawGrid();
  const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('vu');io.unobserve(e.target)}}),{rootMargin:'0px 0px -8% 0px'});$$('.rv').forEach(e=>io.observe(e));
  const v=$('#vid');if(v&&!matchMedia('(prefers-reduced-motion: reduce)').matches){const vo=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){v.preload='auto';v.play().catch(()=>{})}else v.pause()}));vo.observe(v)}
- const s=$('#saisie');if(s)s.onsubmit=e=>{e.preventDefault();const y=$('#an').value;if(!goYear(y)){const n=parseInt(y,10);$('#saisie-msg').textContent=n?t('reg_none'):'';}else $('#saisie-msg').textContent=''};
+ const s=$('#saisie');if(s)s.onsubmit=e=>{e.preventDefault();const y=$('#an').value;if(!goYear(y)){const n=parseInt(y,10);if(n){const near=VINT.reduce((a,b)=>Math.abs(b.y-n)<Math.abs(a.y-n)?b:a);$('#saisie-msg').textContent=t('adv_ynear',{y:n,n:near.y});setTimeout(()=>{$('#registre').scrollIntoView({behavior:'smooth'});setYear(near.y,true)},900)}}else $('#saisie-msg').textContent=''};
  const f=$('.filtres');if(f){f.onclick=e=>{const b=e.target.closest('[data-cat]');if(!b)return;$$('button',f).forEach(x=>x.setAttribute('aria-pressed',x===b));drawGrid()};$('#rech').oninput=drawGrid;$('#tri').onchange=drawGrid}
  const pk=$('#pk');if(pk)pk.onclick=e=>{const b=e.target.closest('[data-k]');if(!b)return;$$('button',pk).forEach(x=>x.setAttribute('aria-pressed',x===b));const p=P[+$('#padd').dataset.i];$('#ppx').textContent=eur(p.p[b.dataset.k])};
  const pa=$('#padd');if(pa)pa.onclick=()=>{const k=pk?$('[aria-pressed=true]',pk).dataset.k:'u';add(+pa.dataset.i,k,+$('#pq').value)};
@@ -1282,7 +1294,7 @@ document.addEventListener('click',e=>{const a=e.target.closest('[data-add]');if(
 /* ---------- Langue ---------- */
 function applyLang(){$('.marque').setAttribute('aria-label','Dartigalongue — '+t('nav_home'));$$('.x').forEach(x=>x.setAttribute('aria-label',t('close')));document.documentElement.lang=lang;$$('[data-t]').forEach(e=>e.textContent=t(e.dataset.t));$('#lg').value=lang;$('#cons-in').placeholder=t('adv_ph');drawCart();route();resetCons()}
 /* ---------- Conseiller ---------- */
-const KW={gift:/cadeau|offrir|gift|present|regalo|geschenk|schenk|贈|プレゼント/i,begin:/d[ée]but|commencer|d[ée]couvr|start|begin|first|empezar|principiante|anfänger|einstieg|iniziare|principiante|はじめ|初めて|初心者/i,food:/accord|plat|fromage|chocolat|foie|cigare|food|pair|cheese|maridaje|queso|speise|käse|abbinament|formaggio|料理|チーズ|ペアリング/i,cock:/cocktail|tonic|spritz|カクテル/i,ship:/livr|exp[ée]di|port|d[ée]lai|deliver|shipping|env[ií]o|lieferung|versand|spedizion|配送|送料/i,visit:/visit|horaire|ouvert|chai|boutique|nogaro|hours|open|visita|horario|besuch|öffnung|orari|見学|営業/i,price:/prix|co[uû]t|price|precio|preis|prezzo|値段|価格/i,year:/ann[ée]e|naissance|mill[ée]sime|year|birth|vintage|añada|nacimiento|jahr|geburt|jahrgang|anno|nascita|annata|生まれ|ヴィンテージ|年/i};
+const KW={bio:/\bbio\b|organi|ecol[oó]gic|ökolog|biologic|有機|オーガニック/i,value:/qualit[ée].?prix|rapport|value|calidad.?precio|preis.?leistung|qualit[àa].?prezzo|コスパ|コストパフォーマンス/i,choc:/chocolat|chocolate|schokolade|cioccolat|チョコ/i,out:/m[ée]t[ée]o|weather|tiempo hace|clima|wetter|meteo|天気|parking|politique|football/i,gift:/cadeau|offrir|gift|present|regalo|geschenk|schenk|贈|プレゼント/i,begin:/d[ée]but|commencer|d[ée]couvr|start|begin|first|empezar|principiante|anfänger|einstieg|iniziare|principiante|はじめ|初めて|初心者/i,food:/accord|plat|fromage|chocolat|foie|cigare|food|pair|cheese|maridaje|queso|speise|käse|abbinament|formaggio|料理|チーズ|ペアリング/i,cock:/cocktail|tonic|spritz|カクテル/i,ship:/livr|exp[ée]di|frais de port|d[ée]lai|deliver|shipping|env[ií]o|lieferung|versand|spedizion|配送|送料/i,visit:/visit|horaire|ouvert|hours|open|visita|horario|besuch|öffnung|orari|見学|営業/i,price:/prix|co[uû]t|price|precio|preis|prezzo|値段|価格/i,year:/ann[ée]e|naissance|mill[ée]sime|year|birth|vintage|añada|nacimiento|jahr|geburt|jahrgang|anno|nascita|annata|生まれ|ヴィンテージ|年/i};
 const fil=()=>$('#fil-cons');
 function say(txt,who,btn){const d=document.createElement('div');d.className='m '+(who||'a');d.textContent=txt;if(btn){const b=document.createElement('button');b.className='lien';b.textContent=btn[0];b.onclick=btn[1];d.appendChild(document.createElement('br'));d.appendChild(b)}fil().appendChild(d);fil().scrollTop=1e6}
 function resetCons(){fil().innerHTML='';say(t('adv_hi'));$('#rac').innerHTML=t('adv_q').map((x,k)=>'<button data-q="'+k+'">'+x+'</button>').join('')}
@@ -1290,6 +1302,12 @@ let waitYear=false;
 function answer(q){const y=(q.match(/\b(1[89]\d\d|20[0-2]\d)\b/)||[])[1];
  if(y){waitYear=false;const n=+y;const ex=VINT.find(v=>v.y===n)||(P[1].y===n?P[1]:null);if(ex)return say(t('adv_yfound',{y:n,p:t('from')+' '+eur(pmin(ex))}),'a',[t('adv_open'),()=>{location.hash='#/boutique/'+ex.i;closeCons()}]);
   const near=VINT.reduce((a,b)=>Math.abs(b.y-n)<Math.abs(a.y-n)?b:a);return say(t('adv_ynear',{y:n,n:near.y}),'a',[near.y+' · '+eur(pmin(near)),()=>{location.hash='#/boutique/'+near.i;closeCons()}])}
+ if(KW.out.test(q))return say(t('adv_out'));
+ const bud=(q.match(/(\d{2,4})\s*(?:€|eur|euro|ユーロ)/i)||q.match(/(?:€|budget|presupuesto|予算)\s*(\d{2,4})/i)||[])[1];
+ if(bud){const b=+bud;const l=[75,67,9,8,7,6,69,5,68,10,4,72].map(i=>P[i]).filter(p=>pmin(p)<=b).sort((x,y)=>pmin(y)-pmin(x)).slice(0,3);if(l.length){say(t('adv_budget',{b:eur(b)})+' '+l.map(p=>tr(p.n)+' ('+eur(pmin(p))+')').join(', ')+'.','a',[tr(l[0].n),()=>{location.hash='#/boutique/'+l[0].i;closeCons()}]);return}}
+ if(KW.bio.test(q))return say(t('adv_bio'),'a',[tr(P[73].n),()=>{location.hash='#/boutique/73';closeCons()}]);
+ if(KW.value.test(q))return say(t('adv_value'),'a',['VSOP',()=>{location.hash='#/boutique/4';closeCons()}]);
+ if(KW.choc.test(q))return say(t('adv_choc'),'a',[t('nav_arm'),()=>{location.hash='#/armagnacs';closeCons()}]);
  if(KW.gift.test(q))return say(t('adv_gift'),'a',[tr(P[9].n),()=>{location.hash='#/boutique/9';closeCons()}]);
  if(KW.begin.test(q))return say(t('adv_begin'),'a',['VSOP',()=>{location.hash='#/boutique/4';closeCons()}]);
  if(KW.food.test(q))return say(t('adv_food'),'a',[t('nav_arm'),()=>{location.hash='#/armagnacs';closeCons()}]);
@@ -1316,9 +1334,9 @@ document.addEventListener('DOMContentLoaded',()=>{
  addEventListener('hashchange',route);
  applyLang();
  let ok=false;try{ok=localStorage.getItem('dg_age')}catch(e){}
- if(!ok){const g=$('#porte');g.hidden=false;$('#porte-oui').onclick=()=>{try{localStorage.setItem('dg_age','1')}catch(e){}g.hidden=true};$('#porte-non').onclick=()=>{location.href='https://www.google.com/'}}
+ if(!ok){const g=$('#porte');g.hidden=false;$('#porte-oui').onclick=()=>{try{localStorage.setItem('dg_age','1')}catch(e){}g.hidden=true};$('#porte-non').onclick=()=>{$('#porte-q').textContent=t('gate_bye');$('.porte-b').hidden=true}}
  let seen=false;try{seen=sessionStorage.getItem('dg_bulle')}catch(e){}
- if(!seen)setTimeout(()=>{if(!$('#cons').classList.contains('on'))$('#bulle').classList.add('on');try{sessionStorage.setItem('dg_bulle','1')}catch(e){}},4000);
+ if(!seen)setTimeout(()=>{if(!$('#cons').classList.contains('on'))$('#bulle').classList.add('on');setTimeout(()=>$('#bulle').classList.remove('on'),12000);try{sessionStorage.setItem('dg_bulle','1')}catch(e){}},4000);
 });
 })();
 
