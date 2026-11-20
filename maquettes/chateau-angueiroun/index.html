@@ -29,12 +29,12 @@ nav.mn{display:flex;gap:clamp(12px,1.2vw,20px);margin-left:8px;flex:1 1 auto;min
 nav.mn a{font-size:13px;font-weight:500;letter-spacing:.02em;text-decoration:none;cursor:pointer;white-space:nowrap;padding:6px 0;border-bottom:1px solid transparent}
 nav.mn a:hover,nav.mn a.on{border-color:var(--verm)}
 .hr{display:flex;align-items:center;gap:10px;margin-left:auto;flex:none}
-.hd.compact nav.mn{display:none}.hd.compact .burger{display:block}.hd.compact .lsel .lg{display:none}
+.hd.compact nav.mn{display:none}.hd.compact .burger{display:inline-flex}.hd.compact .lsel .lg{display:none}
 .lsel{display:flex;align-items:center;gap:6px;border:1px solid var(--ink);padding:6px 10px;font-size:13px;font-weight:600}
 .lsel select{border:0;background:transparent;font:600 13px var(--sans);color:var(--ink);cursor:pointer}
 .cartb{position:relative;border:1px solid var(--ink);padding:7px 14px;font-size:13px;font-weight:600;background:var(--ink);color:#fff}
 .cartb b{display:inline-block;min-width:18px;margin-left:6px;background:var(--verm);border-radius:9px;font-size:11px;padding:0 5px}
-.burger{display:none;border:1px solid var(--ink);padding:7px 10px;font-weight:600;font-size:13px}
+.burger{display:none;border:1px solid var(--ink);background:transparent;color:var(--ink);padding:7px 12px;font-weight:600;font-size:13px;cursor:pointer;align-items:center;gap:8px}.burger:hover{background:var(--ink);color:var(--wall)}
 .view{display:none}.view.on{display:block}
 /* hero */
 .hero{position:relative;padding:clamp(28px,5vw,64px) 0 40px;overflow:hidden}
@@ -230,12 +230,21 @@ form.f{display:grid;grid-template-columns:1fr 1fr;gap:12px}form.f .full{grid-col
 body.hasbar .advb{bottom:78px}body.hasbar .bub{bottom:146px}.blason{width:24px;height:30px}.medals b{font-size:80px}}
 .mnav{display:none}
 @media(max-width:1180px){nav.mn{gap:14px}nav.mn a{font-size:12.5px}}
-@media(max-width:1060px){nav.mn{display:none}.burger{display:block}.mnav.on{display:block;position:fixed;top:0;left:0;right:0;bottom:0;background:var(--wall);z-index:65;padding:24px var(--g);overflow:auto}.mnav a{display:block;font:400 30px/1.6 var(--serif);text-decoration:none;cursor:pointer;border-bottom:1px solid var(--line)}
+@media(max-width:1060px){nav.mn{display:none}.burger{display:inline-flex}.mnav.on{display:block;position:fixed;top:0;left:0;right:0;bottom:0;background:var(--wall);z-index:65;padding:24px var(--g);overflow:auto}.mnav a{display:block;font:400 30px/1.6 var(--serif);text-decoration:none;cursor:pointer;border-bottom:1px solid var(--line)}
 .hgrid,.two,.aw,.visit{grid-template-columns:1fr}.exps,.grid{grid-template-columns:repeat(2,1fr)}.news{grid-template-columns:1fr 1fr}.agenda{grid-template-columns:1fr}.tiles{grid-template-columns:1fr 1fr}.tile.big{grid-row:auto;grid-column:1/-1;min-height:340px}.stats{grid-template-columns:repeat(3,1fr)}.ft{grid-template-columns:1fr 1fr}.pd{grid-template-columns:1fr}.pd .stage{position:static;max-height:520px}}
 @media(max-width:640px){.hd{height:64px;gap:10px}.logo span{font-size:21px}.logo small{font-size:8px}.lsel{padding:5px 6px}.lsel select{font-size:12px;max-width:92px}.lsel .lg{display:none}.cartb{padding:6px 9px}.cartb span{display:none}.cartb b{margin-left:0}.burger{padding:6px 8px}.hr{gap:6px}
 .sh{grid-template-columns:1fr;gap:8px}.wall{grid-template-columns:1fr}.wall .art{margin-top:0!important}.exps,.grid{grid-template-columns:1fr 1fr;gap:10px}.news,.tiles{grid-template-columns:1fr}.ev{grid-template-columns:1fr}.ev img{height:180px}.stats{grid-template-columns:1fr 1fr}.ft{grid-template-columns:1fr}
 .card .cb{padding:10px}.card .cb h4{font-size:16px}.card .row{flex-direction:column;align-items:stretch!important}.add{width:100%}.exp .eb{padding:12px}.exp h4{font-size:18px}.exp .row{flex-direction:column;align-items:stretch;gap:8px}
 .advb{padding:6px 10px 6px 6px;right:10px;bottom:10px}.advb .av{width:30px;height:30px;font-size:16px}.advb b{font-size:12px}.advb small{display:none}.filters{position:static}.trust{justify-content:flex-start}.spec{grid-template-columns:1fr}form.f{grid-template-columns:1fr}.pin span{display:none}.pin i{width:22px;height:22px;font-size:11px}.cookie{right:18px;bottom:84px}.top{font-size:11.5px}}
+
+/* menu horizontal à toutes les tailles */
+@media(max-width:1060px){.hd,.hd.compact{flex-wrap:wrap;height:auto!important;row-gap:0;padding-top:10px}
+ .hd nav.mn,.hd.compact nav.mn{display:flex!important;order:10;flex:1 1 100%;margin:0;overflow-x:auto;scrollbar-width:none;gap:20px;padding:10px 0 12px;border-top:1px solid var(--line);-webkit-overflow-scrolling:touch}
+ .hd nav.mn::-webkit-scrollbar{display:none}
+ .hd nav.mn a{font-size:13.5px;flex:none}
+ .burger,.hd.compact .burger{display:none!important}}
+@media(max-width:700px){.hd nav.mn{-webkit-mask-image:linear-gradient(90deg,#000 85%,transparent);mask-image:linear-gradient(90deg,#000 85%,transparent);padding-right:30px}}
+@media(min-width:1061px){.hd.compact nav.mn{display:flex!important}.hd.compact .burger{display:none!important}}
 </style>
 </head>
 <body>
@@ -246,10 +255,10 @@ body.hasbar .advb{bottom:78px}body.hasbar .bub{bottom:146px}.blason{width:24px;h
  <div class="hr">
   <label class="lsel"><span class="lg" data-i="lang"></span><select id="lsel" aria-label="Langue"><option value="fr">Français</option><option value="en">English</option><option value="es">Español</option><option value="de">Deutsch</option><option value="it">Italiano</option><option value="nl">Nederlands</option></select></label>
   <button class="cartb" onclick="openCart()"><span data-i="cart"></span><b id="cc">0</b></button>
-  <button class="burger" onclick="document.getElementById('mnav').classList.add('on')">☰</button>
+  <button class="burger" aria-label="Menu" onclick="document.getElementById('mnav').classList.add('on')"><svg width="16" height="12" viewBox="0 0 16 12" aria-hidden="true"><path d="M0 1h16M0 6h16M0 11h16" stroke="currentColor" stroke-width="1.5"/></svg><span>Menu</span></button>
  </div>
 </div></header>
-<div class="mnav" id="mnav"><div style="display:flex;justify-content:flex-end"><button class="x" onclick="this.closest('.mnav').classList.remove('on')">×</button></div><div id="mnl"></div></div>
+<div class="mnav" id="mnav"><div style="display:flex;justify-content:flex-end"><button class="x" aria-label="Fermer le menu" onclick="this.closest('.mnav').classList.remove('on')"><svg width="18" height="18" viewBox="0 0 18 18" aria-hidden="true"><path d="M2 2l14 14M16 2L2 16" stroke="currentColor" stroke-width="1.6"/></svg></button></div><div id="mnl"></div></div>
 
 <main>
 <!-- HOME -->
