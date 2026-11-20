@@ -56,7 +56,7 @@ nav.principal a:hover{border-bottom-color:var(--forge)}
 .btn.vide:hover{background:var(--encre);color:var(--papier);border-color:var(--encre)}
 .btn svg{flex:none}
 .bar .btn{padding:10px 16px;font-size:14px}
-.menu-mob{display:none;border:1px solid var(--encre);background:none;padding:9px 11px;cursor:pointer}
+.menu-mob{display:none;border:1px solid var(--encre);background:none;padding:9px 12px;cursor:pointer;align-items:center;gap:8px;font-weight:600;font-size:14px}.menu-mob:hover{background:var(--encre);color:var(--papier)}
 
 /* héros */
 .hero{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);min-height:min(86vh,780px)}
@@ -254,9 +254,10 @@ footer{border-top:1px solid var(--trait)}
 .js .monte.vu{opacity:1;transform:none}
 
 /* adaptatif */
-@media (max-width:1100px){nav.principal{display:none}.menu-mob{display:block;margin-left:auto}
-  nav.principal.ouvert{display:flex;position:absolute;top:100%;left:14px;right:14px;flex-direction:column;background:var(--papier);border:1px solid var(--trait);padding:8px 16px 16px}
-  nav.principal.ouvert a{padding:12px 4px;border-bottom:1px solid var(--trait-fin);font-size:17px}}
+@media (max-width:1100px){.bar{flex-wrap:wrap;row-gap:0}.langue{margin-left:auto}
+  nav.principal{order:10;flex:1 1 100%;margin:8px -28px 0;padding:6px 28px 4px;border-top:1px solid var(--trait);overflow-x:auto;scrollbar-width:none;gap:2px}
+  nav.principal::-webkit-scrollbar{display:none}nav.principal a{flex:none}}
+@media (max-width:700px){nav.principal{-webkit-mask-image:linear-gradient(90deg,#000 85%,transparent);mask-image:linear-gradient(90deg,#000 85%,transparent)}}
 @media (max-width:900px){
   .hero{grid-template-columns:minmax(0,1fr);min-height:0}
   .plaque{border-left:0;border-top:1px solid var(--trait);min-height:0;padding:28px 0 64px}
@@ -271,7 +272,7 @@ footer{border-top:1px solid var(--trait)}
   body{font-size:16.5px}
   .sheet,.ruler,.bar{margin:0 6px}
   .ruler{grid-template-columns:repeat(4,1fr)}.ruler span:nth-child(n+5){display:none}
-  .bar{padding:10px 14px;gap:10px}
+  .bar{padding:10px 14px;gap:10px}nav.principal{margin:8px -14px 0;padding:6px 14px 4px}
   .marque b{font-size:26px}.marque small{display:none}
   .bar .btn{display:none}
   .langue select{padding:7px 22px 7px 0;font-size:13px;max-width:104px}
@@ -328,7 +329,7 @@ h1,h2,h3,.delai,.secteurs{overflow-wrap:break-word}
         <option value="fr">Français</option><option value="en">English</option><option value="es">Español</option><option value="de">Deutsch</option><option value="it">Italiano</option><option value="zh">中文</option>
       </select></label>
     <a class="btn chaud" href="#contact" data-i="cta">Envoyer un plan</a>
-    <button class="menu-mob" id="menuMob" aria-expanded="false" aria-controls="nav"><svg width="20" height="14" viewBox="0 0 20 14" aria-hidden="true"><path d="M0 1h20M0 7h20M0 13h20" stroke="currentColor" stroke-width="1.6"/></svg><span class="sr" data-i="menu">Menu</span></button>
+    <button class="menu-mob" hidden id="menuMob" aria-expanded="false" aria-controls="nav"><svg width="16" height="12" viewBox="0 0 16 12" aria-hidden="true"><path d="M0 1h16M0 6h16M0 11h16" stroke="currentColor" stroke-width="1.6"/></svg><span data-i="menu">Menu</span></button>
   </div>
 </header>
 
