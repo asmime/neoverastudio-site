@@ -93,7 +93,7 @@ nav.menu::after{content:"";position:absolute;right:0;top:0;bottom:0;width:36px;b
 
 .tube-eye .tag{position:absolute;left:-8px;bottom:8%;background:#fff;color:var(--ink);border-radius:16px;padding:10px 14px;font:700 .82rem/1.25 var(--fb);box-shadow:0 14px 30px -14px rgba(0,0,0,.5)}
 .tube-eye .tag b{display:block;font:800 1.5rem/1 var(--fd);color:var(--beaume)}
-@media (max-width:900px){.hero .hin{grid-template-columns:1fr}.tube-eye{order:-1;width:min(290px,68vw);margin:6px 0 0;justify-self:center}.hero h1{max-width:none}}
+@media (max-width:900px){.hero .hin{grid-template-columns:1fr;padding-top:28px}.tube-eye{order:0;width:min(200px,52vw);margin:0 0 -90px;justify-self:end}.tube-eye .rim{inset:-9px;border-width:9px}.hero h1{max-width:none}}
 
 /* descente : la ligne du toboggan */
 .descente{position:relative}
@@ -103,6 +103,7 @@ nav.menu::after{content:"";position:absolute;right:0;top:0;bottom:0;width:36px;b
 .voie .eau{fill:none;stroke:rgba(255,255,255,.75);stroke-width:3;stroke-linecap:round;stroke-dasharray:2 22}
 .metre{position:fixed;left:18px;bottom:22px;z-index:40;background:var(--beaume);color:#fff;border-radius:18px;padding:10px 14px 9px;text-align:center;box-shadow:0 14px 30px -16px rgba(0,0,0,.6);opacity:0;transform:translateY(10px);transition:opacity .4s,transform .4s var(--ease);pointer-events:none}
 .metre.on{opacity:1;transform:none}
+@media (max-width:1399px){.metre{display:none}}
 .metre b{display:block;font:800 1.6rem/1 var(--fd);color:var(--tube)}
 .metre small{font:600 .7rem/1.2 var(--fb);color:#CFE1DC;display:block;max-width:9em}
 @media (max-width:760px){.descente .wrap{width:auto;margin-left:30px;margin-right:18px}.descente .riviere .wrap{margin-left:30px}
@@ -483,7 +484,7 @@ const R={
 'c.total':['Total','Total','Total','Gesamt','Totale','Totaal'],
 'c.dep':['Acompte : 25 % de l’hébergement + frais de dossier','Deposit: 25% of accommodation + booking fee','Depósito: 25 % del alojamiento + gastos','Anzahlung: 25 % der Unterkunft + Gebühr','Acconto: 25 % dell’alloggio + spese','Aanbetaling: 25 % van de accommodatie + dossierkosten'],
 'c.note':['Calcul indicatif d’après la grille 2026. La réservation en ligne confirme la disponibilité et le prix.','Indicative, based on the 2026 price list. Online booking confirms availability and price.','Cálculo orientativo según la tarifa 2026. La reserva en línea confirma disponibilidad y precio.','Richtwert nach Preisliste 2026. Die Online-Buchung bestätigt Verfügbarkeit und Preis.','Calcolo indicativo secondo il listino 2026. La prenotazione online conferma disponibilità e prezzo.','Indicatief, volgens de prijslijst 2026. Online boeken bevestigt beschikbaarheid en prijs.'],
-'c.week':['Location à la semaine en juillet-août : arrivée le {d}.','Weekly rental in July–August: arrival on {d}.','Alquiler semanal en julio-agosto: llegada en {d}.','Juli–August nur wochenweise: Anreise am {d}.','In luglio-agosto affitto settimanale: arrivo di {d}.','In juli–augustus per week: aankomst op {d}.'],
+'c.week':['Du 20 juin au 29 août, location à la semaine : arrivée le {d}, date ajustée.','From 20 June to 29 August, weekly rental: arrival on {d}, date adjusted.','Del 20 de junio al 29 de agosto, alquiler semanal: llegada en {d}, fecha ajustada.','Vom 20. Juni bis 29. August wochenweise: Anreise am {d}, Datum angepasst.','Dal 20 giugno al 29 agosto affitto settimanale: arrivo di {d}, data adeguata.','Van 20 juni tot 29 augustus per week: aankomst op {d}, datum aangepast.'],
 'c.min':['Minimum 2 nuits en basse saison.','2-night minimum in low season.','Mínimo 2 noches en temporada baja.','Mindestens 2 Nächte in der Nebensaison.','Minimo 2 notti in bassa stagione.','Minimaal 2 nachten in het laagseizoen.'],
 'c.closed':['Le camping est ouvert du 1er mai au 13 septembre 2026.','The campsite is open from 1 May to 13 September 2026.','El camping abre del 1 de mayo al 13 de septiembre de 2026.','Der Platz ist vom 1. Mai bis 13. September 2026 geöffnet.','Il campeggio è aperto dal 1° maggio al 13 settembre 2026.','De camping is open van 1 mei tot 13 september 2026.'],
 'c.cap':['Capacité maximale : {n} personnes.','Maximum capacity: {n} people.','Capacidad máxima: {n} personas.','Maximal {n} Personen.','Capienza massima: {n} persone.','Maximaal {n} personen.'],
@@ -513,6 +514,9 @@ const R={
 'g.pay':['Acompte de 25 % + 20 € de frais de dossier à la réservation, solde 30 jours avant l’arrivée, payable en plusieurs fois sans frais. Chèques-Vacances (aussi Connect), carte, virement, chèque, espèces. Camping agréé VACAF : munissez-vous de votre numéro d’allocataire.','25% deposit + €20 booking fee when booking, balance 30 days before arrival, payable in instalments at no cost. Chèques-Vacances (incl. Connect), card, transfer, cheque, cash. VACAF approved: have your CAF number ready.','Depósito del 25 % + 20 € de gastos al reservar, saldo 30 días antes de la llegada, a plazos sin gastos. Chèques-Vacances (también Connect), tarjeta, transferencia, cheque, efectivo. Homologado VACAF: tenga a mano su número de beneficiario.','25 % Anzahlung + 20 € Gebühr bei Buchung, Rest 30 Tage vor Anreise, in Raten ohne Gebühren. Chèques-Vacances (auch Connect), Karte, Überweisung, Scheck, bar. VACAF-zugelassen: Halten Sie Ihre CAF-Nummer bereit.','Acconto del 25 % + 20 € di spese alla prenotazione, saldo 30 giorni prima dell’arrivo, a rate senza costi. Chèques-Vacances (anche Connect), carta, bonifico, assegno, contanti. Convenzionato VACAF: tenete pronto il numero CAF.','25 % aanbetaling + € 20 dossierkosten bij boeking, rest 30 dagen voor aankomst, in termijnen zonder kosten. Chèques-Vacances (ook Connect), kaart, overschrijving, cheque, contant. VACAF-erkend: houd je CAF-nummer bij de hand.'],
 'g.resto':['Le Restaurant le Grillou est à l’entrée du camping : petit-déjeuner, formule du jour, pizzas, buffet froid, glacier, demi-pension ou pension complète. Boulangerie, épicerie, pharmacie et cinéma à moins de 200 m, supermarché à 1 km.','Restaurant le Grillou is at the campsite entrance: breakfast, dish of the day, pizzas, cold buffet, ice creams, half or full board. Bakery, grocery, pharmacy and cinema within 200 m, supermarket 1 km away.','El Restaurante le Grillou está a la entrada: desayuno, menú del día, pizzas, bufé frío, heladería, media pensión o completa. Panadería, tienda, farmacia y cine a menos de 200 m, supermercado a 1 km.','Das Restaurant le Grillou liegt am Eingang: Frühstück, Tagesgericht, Pizza, kaltes Buffet, Eis, Halb- oder Vollpension. Bäckerei, Lebensmittel, Apotheke und Kino unter 200 m, Supermarkt 1 km.','Il Ristorante le Grillou è all’ingresso: colazione, piatto del giorno, pizze, buffet freddo, gelateria, mezza pensione o pensione completa. Panetteria, alimentari, farmacia e cinema entro 200 m, supermercato a 1 km.','Restaurant le Grillou ligt bij de ingang: ontbijt, dagschotel, pizza’s, koud buffet, ijs, half- of volpension. Bakker, kruidenier, apotheek en bioscoop binnen 200 m, supermarkt op 1 km.'],
 'g.unknown':['Je n’ai pas la réponse exacte. L’accueil vous répond au 04 75 39 51 50 ou à reception@camping-legrillou.fr.','I don’t have the exact answer. Reception can help on +33 4 75 39 51 50 or at reception@camping-legrillou.fr.','No tengo la respuesta exacta. Recepción le contesta en el +33 4 75 39 51 50 o en reception@camping-legrillou.fr.','Dazu habe ich keine genaue Antwort. Die Rezeption hilft unter +33 4 75 39 51 50 oder reception@camping-legrillou.fr.','Non ho la risposta esatta. La reception risponde al +33 4 75 39 51 50 o a reception@camping-legrillou.fr.','Daar heb ik geen exact antwoord op. De receptie helpt je via +33 4 75 39 51 50 of reception@camping-legrillou.fr.'],
+'g.emp2':['Aire de service camping-car gratuite sur place. Dès 20 € la nuit pour deux.','Free motorhome service point on site. From €20 a night for two.','Área de servicio gratuita para autocaravanas. Desde 20 € la noche para dos.','Kostenlose Wohnmobil-Servicestation vor Ort. Ab 20 € pro Nacht für zwei.','Area camper gratuita in loco. Da 20 € a notte per due.','Gratis serviceplaats voor campers. Vanaf € 20 per nacht voor twee.'],
+'g.budget':['Avec {b} la semaine en haute saison, voici ce qui entre dans votre budget :','With {b} a week in high season, here is what fits your budget:','Con {b} por semana en temporada alta, esto encaja en su presupuesto:','Mit {b} pro Woche in der Hauptsaison passt Folgendes:','Con {b} a settimana in alta stagione, ecco cosa rientra nel budget:','Met {b} per week in het hoogseizoen past dit binnen je budget:'],
+'g.nobudget':['À {b}, une location en haute saison n’est pas possible, mais la basse saison commence à 119 € les 2 nuits et l’emplacement à 20 € la nuit.','At {b}, a high-season rental isn’t possible, but low season starts at €119 for 2 nights and pitches at €20 a night.','Con {b} no hay alquiler en temporada alta, pero la baja empieza en 119 € las 2 noches y la parcela en 20 € la noche.','Für {b} ist in der Hauptsaison keine Miete möglich, aber die Nebensaison beginnt bei 119 € für 2 Nächte und Stellplätze bei 20 € pro Nacht.','Con {b} niente affitto in alta stagione, ma la bassa parte da 119 € per 2 notti e la piazzola da 20 € a notte.','Voor {b} lukt huren in het hoogseizoen niet, maar het laagseizoen begint bij € 119 voor 2 nachten en een plaats bij € 20 per nacht.'],
 'g.see':['Voir','See','Ver','Ansehen','Vedi','Bekijk'],
 };
 
@@ -944,7 +948,7 @@ function calc(){
   if(wi>=0){ // haute saison : à la semaine
    const want=l.day==='sun'?0:6;let dd=a;while(dd.getUTCDay()!==want)dd=addD(dd,-1);
    if(iso(dd)!==iso(a))warn.push(t('c.week',{d:t('c.'+l.day)}));
-   a=dd;const w=Math.max(1,Math.round(S.n/7));S.n=w*7;
+   a=dd;document.getElementById('ca').value=iso(a);const w=Math.max(1,Math.round(S.n/7));S.n=w*7;
    for(let i=0;i<w;i++){const j=weekIdx(addD(a,i*7));lodg+=j>=0?l.week[j]:LOW[5][1]}
   }else{
    if(!l.low){warn.push(t('c.trianon'))}
@@ -1066,6 +1070,12 @@ function gcAnswer(v){
  const s=v.toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g,'');
  const has=w=>w.some(x=>s.includes(x));
  const num=(s.match(/\b([1-9]|1[0-9])\b/)||[])[1];
+ if(has(['wifi','wi-fi','wlan','internet','4g']))return (gcSay(t('f.a9')),gcQuick());
+ if(has(['camping-car','camping car','campingcar','camper','motorhome','wohnmobil','caravan','autocaravan','roulotte','tente','tent','zelt','tenda','tienda','emplacement','pitch','stellplatz','piazzola','parcela','kampeerplaats']))return (gcSay(t('f.a19')+' '+t('g.emp2')),gcQuick());
+ const bud=s.match(/(\d{3,4})\s*(€|eur|euro)|(budget|presupuesto|preis|prezzo|prijs)\D{0,12}(\d{3,4})/);
+ if(bud){const b=+(bud[1]||bud[4]);const ok=LOCS.filter(l=>minWeek(l)<=b);const d=gcSay(ok.length?t('g.budget',{b:eur(b)}):t('g.nobudget',{b:eur(b)}));ok.forEach(l=>{const a=document.createElement('a');a.className='gc-rec';a.href='#loc/'+l.id;a.innerHTML=`<img src="${img(l.imgs[0])}" alt=""><span><b>${kind(l.kind)} ${l.name}</b><small>${l.cap} ${t('ui.places')} · ${t('ui.from')} ${eur(minWeek(l))} ${t('ui.week')}</small></span>`;d.appendChild(a)});gcQuick();return}
+ const kids=s.match(/(\d)\s*(enfant|kid|child|nino|niño|kind|bambin|figli|kinder)/);const ad=s.match(/(\d)\s*(adult|erwachs|volwass|adulto)/);
+ if(kids||ad)return gcRec((kids?+kids[1]:0)+(ad?+ad[1]:2));
  if(num&&has(['pers','gens','nous','people','person','personas','personen','persone','we ','wir','noi','wij','famil']))return gcRec(+num);
  if(has(['prix','tarif','cout','combien','price','cost','how much','precio','cuanto','preis','kosten','prezzo','quanto','prijs','kost']))return gcTopic('q2');
  if(has(['piscin','toboggan','aqua','bassin','pool','slide','swim','piscina','tobogan','rutsche','schwimm','scivolo','zwembad','glijbaan','bad ']))return gcTopic('q3');
@@ -1078,7 +1088,7 @@ function gcAnswer(v){
  if(has(['bebe','baby','bebé','neonat']))return (gcSay(t('f.a18')),gcQuick());
  if(has(['annul','cancel','storn','annull','annuleer']))return (gcSay(t('f.a5')),gcQuick());
  if(has(['drap','linge','sheet','towel','sabana','bettwasche','lenzuol','laken']))return (gcSay(t('f.a17')),gcQuick());
- gcSay(t('g.unknown'));gcQuick();
+ const u=gcSay(t('g.unknown'));const a=document.createElement('a');a.className='btn btn-tube';a.style.marginTop='8px';a.href='#calc';a.textContent=t('h.calc');u.appendChild(a);gcQuick();
 }
 
 // ===== coque =====
