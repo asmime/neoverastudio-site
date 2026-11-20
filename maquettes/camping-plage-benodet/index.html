@@ -71,9 +71,9 @@ nav.menu a.conseil::before{content:"";display:inline-block;width:8px;height:8px;
 .heros .diapo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transform:scale(1.08);transition:opacity 1.6s ease}
 .heros .diapo img.on{opacity:1;animation:kb 9s linear forwards}
 @keyframes kb{from{transform:scale(1.08)}to{transform:scale(1)}}
-.heros::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(6,28,38,.15) 0%,rgba(6,28,38,.05) 35%,rgba(6,28,38,.78) 100%)}
+.heros::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(6,28,38,.62) 0%,rgba(6,28,38,.25) 45%,rgba(6,28,38,0) 70%),linear-gradient(180deg,rgba(6,28,38,.2) 0%,rgba(6,28,38,0) 30%,rgba(6,28,38,.7) 100%)}
 .heros .wrap{position:relative;z-index:2;padding:0 0 clamp(28px,5vw,56px)}
-.heros h1{font-size:clamp(2.9rem,8.2vw,6rem);letter-spacing:-.04em;max-width:12ch;margin-bottom:.3em;text-shadow:0 2px 30px rgba(0,0,0,.25)}
+.heros h1{font-size:clamp(2.9rem,7.6vw,5.8rem);letter-spacing:-.04em;max-width:14ch;margin-bottom:.3em;text-shadow:0 2px 30px rgba(0,0,0,.25)}
 .heros p.sous{font-size:clamp(1.05rem,1.6vw,1.3rem);max-width:46ch;margin-bottom:1.6rem;color:#EAF3F1}
 .actions{display:flex;gap:12px;flex-wrap:wrap}
 .resa{margin-top:28px;display:grid;grid-template-columns:1fr 1fr 1.2fr auto;gap:0;background:var(--blanc);color:var(--encre);border-radius:18px;box-shadow:0 30px 60px -30px rgba(0,0,0,.6);overflow:hidden;max-width:880px}
@@ -86,7 +86,7 @@ nav.menu a.conseil::before{content:"";display:inline-block;width:8px;height:8px;
 /* signature : le chemin des 300 m */
 .chemin{background:var(--odet);color:#fff;overflow:hidden}
 .chemin .lead{color:#BFD6D6}
-.piste{position:relative;margin-top:24px}
+.piste{position:relative;margin-top:110px}
 .piste svg{width:100%;height:auto;overflow:visible}
 .piste .trace{fill:none;stroke:rgba(255,255,255,.18);stroke-width:3;stroke-dasharray:2 10;stroke-linecap:round}
 .piste .faite{fill:none;stroke:var(--transat);stroke-width:4;stroke-linecap:round}
@@ -94,6 +94,7 @@ nav.menu a.conseil::before{content:"";display:inline-block;width:8px;height:8px;
 .etapes{position:absolute;inset:0;pointer-events:none}
 .etape{position:absolute;transform:translate(-50%,0);text-align:center;width:150px;opacity:.38;transition:opacity .5s var(--ease)}
 .etape.ok{opacity:1}
+.etape.haut{transform:translate(-50%,-100%)}.etape.haut i{order:2;margin:10px auto 0;transform:translateY(8px)}.etape.haut{display:flex;flex-direction:column}.etape.haut i{order:3}
 .etape i{display:block;width:16px;height:16px;border-radius:50%;background:var(--odet);border:3px solid #fff;margin:0 auto 10px;transform:translateY(-8px);transition:background .4s,border-color .4s}
 .etape.ok i{background:var(--transat);border-color:var(--transat)}
 .etape b{display:block;font-family:var(--m);font-size:.82rem;color:var(--transat)}
@@ -393,7 +394,7 @@ n_conseil:["La Plage Conseil","La Plage Advisor","La Plage Consejo","La Plage Be
 reserver:["Réserver","Book now","Reservar","Buchen","Prenota","Boeken"],
 langue:["Langue","Language","Idioma","Sprache","Lingua","Taal"],
 /* hero */
-h1:["Bénodet,<br>à 300 m de la mer.","Bénodet,<br>300 m from the sea.","Bénodet,<br>a 300 m del mar.","Bénodet,<br>300 m vom Meer.","Bénodet,<br>a 300 m dal mare.","Bénodet,<br>op 300 m van zee."],
+h1:["Bénodet,<br>à 300&nbsp;m de la&nbsp;mer.","Bénodet,<br>300&nbsp;m from the&nbsp;sea.","Bénodet,<br>a 300&nbsp;m del&nbsp;mar.","Bénodet,<br>300&nbsp;m vom&nbsp;Meer.","Bénodet,<br>a 300&nbsp;m dal&nbsp;mare.","Bénodet,<br>op 300&nbsp;m van&nbsp;zee."],
 hsub:["Camping familial 4 étoiles en pleine nature. Deux piscines chauffées, des toboggans, et la plage du Trez au bout du chemin.","A family-run 4-star campsite set in nature. Two heated pools, water slides, and Trez beach at the end of the path.","Camping familiar de 4 estrellas en plena naturaleza. Dos piscinas climatizadas, toboganes y la playa del Trez al final del camino.","Familiengeführter 4-Sterne-Campingplatz mitten im Grünen. Zwei beheizte Pools, Wasserrutschen und der Strand Le Trez am Ende des Weges.","Campeggio familiare 4 stelle immerso nel verde. Due piscine riscaldate, scivoli e la spiaggia del Trez in fondo al sentiero.","Familiecamping met 4 sterren midden in het groen. Twee verwarmde zwembaden, glijbanen en het strand van Le Trez aan het eind van het pad."],
 cta_dispo:["Voir les disponibilités","Check availability","Ver disponibilidad","Verfügbarkeit prüfen","Vedi disponibilità","Beschikbaarheid bekijken"],
 cta_choisir:["Choisir mon hébergement","Choose my rental","Elegir mi alojamiento","Unterkunft wählen","Scegli il mio alloggio","Mijn accommodatie kiezen"],
@@ -700,7 +701,7 @@ const S={
  <form class="resa" id="resa-form"><label>${t("b_arr")}<input type="date" id="r-arr" min="2026-05-22" max="2026-09-19" value="2026-07-11"></label><label>${t("b_nuits")}<select id="r-n">${[2,3,4,5,6,7,10,14,21].map(n=>`<option ${n==7?"selected":""}>${n}</option>`).join("")}</select></label><label>${t("b_type")}<select id="r-type"><option>${t("b_loc")}</option><option>${t("b_empl")}</option></select></label><button class="btn btn-j">${t("cta_dispo")}</button></form></div></section>`,
  chemin:()=>`<section class="chemin" id="chemin"><div class="wrap"><div class="chemin-haut"><div><h2>${t("sig_t")}</h2><p class="lead">${t("sig_p")}</p></div><div class="compteur" aria-live="off"><span id="cpt">0</span><small>m</small></div></div>
  <div class="piste"><svg viewBox="0 0 1000 150" preserveAspectRatio="none" aria-hidden="true"><path class="mer" d="M0 140 C120 128 240 150 360 138 S600 126 720 140 S900 150 1000 136"/><path id="trace" class="trace" d="M20 80 C140 40 220 110 330 80 S520 30 600 70 S780 120 860 70 S960 50 990 60"/><path id="faite" class="faite" d="M20 80 C140 40 220 110 330 80 S520 30 600 70 S780 120 860 70 S960 50 990 60"/></svg><div class="etapes" id="etapes"></div></div>
- <div style="margin-top:110px"><a class="lien" href="#/benodet">${t("sig_cta")}</a></div></div></section>`,
+ <div style="margin-top:120px"><a class="lien" href="#/benodet">${t("sig_cta")}</a></div></div></section>`,
  aqua:()=>`<section><div class="wrap aqua"><figure class="rv-clip">${img(P.couv,900,1125,t("aq_1"))}${img(P.tob,500,500,t("aq_3"))}</figure><div><span class="badge">${t("inclus")}</span><h2>${t("aq_t")}</h2><p class="lead">${t("aq_p")}</p>
  <ul class="fiches">${[["180 m²","aq_1"],["160 m²","aq_2"],["3 × 20 m","aq_3"],["1","aq_4"],["1","aq_5"],["2","aq_6"]].map(([v,k])=>`<li><span class="mono">${v}</span><span>${t(k)}</span></li>`).join("")}</ul><a class="lien" href="#/activites">${t("aq_cta")}</a></div></div></section>`,
  hebs:(full)=>`<section id="hebergements" ${full?'style="padding-top:48px"':""}><div class="wrap">${full?"":`<h2>${t("heb_t")}</h2><p class="lead">${t("heb_p")}</p>`}
@@ -807,7 +808,7 @@ function estimateur(es){const h=HEB.find(x=>x.id==es.dataset.id),p=$("#e-p"),n=$
 function chemin(){const sec=$("#chemin");if(!sec)return;const path=$("#faite"),tr=$("#trace"),L0=path.getTotalLength(),box=$("#etapes");
  const ST=[[0,"sig_0"],[300,"sig_1"],[400,"sig_2"],[500,"sig_3"],[800,"sig_4"],[1500,"sig_5"]],fr=[0,.2,.36,.52,.72,1];
  const svg=path.ownerSVGElement;path.style.strokeDasharray=L0;
- const place=()=>{const r=svg.getBoundingClientRect(),vb=svg.viewBox.baseVal;box.innerHTML=ST.map(([d,k],i)=>{const pt=tr.getPointAtLength(fr[i]*L0);const x=pt.x/vb.width*r.width,y=pt.y/vb.height*r.height;return `<div class="etape" style="left:${Math.min(Math.max(x,50),r.width-50)}px;top:${y}px"><i></i><b>${d<1000?d+" m":(d/1000).toLocaleString(L)+" km"}</b><span>${t(k)}</span></div>`}).join("");maj()};
+ const place=()=>{const r=svg.getBoundingClientRect(),vb=svg.viewBox.baseVal;box.innerHTML=ST.map(([d,k],i)=>{const pt=tr.getPointAtLength(fr[i]*L0);const x=pt.x/vb.width*r.width,y=pt.y/vb.height*r.height;return `<div class="etape${i%2?" haut":""}" style="left:${Math.min(Math.max(x,50),r.width-50)}px;top:${y}px"><i></i><b>${d<1000?d+" m":(d/1000).toLocaleString(L)+" km"}</b><span>${t(k)}</span></div>`}).join("");maj()};
  const red=matchMedia("(prefers-reduced-motion:reduce)").matches;
  const maj=()=>{const r=sec.getBoundingClientRect(),vh=innerHeight;let p=red?1:Math.min(1,Math.max(0,(vh*.85-r.top)/(r.height*.75)));
   path.style.strokeDashoffset=L0*(1-p);let i=0;while(i<fr.length-1&&p>fr[i+1])i++;const seg=i<fr.length-1?(p-fr[i])/(fr[i+1]-fr[i]):0;const m=i<fr.length-1?ST[i][0]+seg*(ST[i+1][0]-ST[i][0]):1500;
