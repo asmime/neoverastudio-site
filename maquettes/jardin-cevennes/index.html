@@ -7,6 +7,9 @@
 <title>Camping Le Jardin des Cévennes — Proposition Neovera Studio</title>
 <meta name="description" content="Camping 3 étoiles à Meyrueis (Lozère), à 5 minutes à pied du village : 63 emplacements, 29 locations, piscine chauffée. Ouvert du 17 avril au 11 octobre 2026.">
 <meta name="theme-color" content="#22282C">
+<meta property="og:title" content="Camping Le Jardin des Cévennes, Meyrueis">
+<meta property="og:description" content="Camping 3 étoiles au pied des Causses, à 5 minutes à pied de Meyrueis. Piscine chauffée, 29 locations, 63 emplacements.">
+<meta property="og:image" content="https://maquettes.neoverastudio.fr/jardin-cevennes/img/sh-emplacement-montagne.jpg">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='16' fill='%23fff'/%3E%3Crect y='16' width='32' height='16' fill='%23C41E2C'/%3E%3C/svg%3E">
 <link rel="preload" href="fonts/barlow-condensed-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="img/sh-emplacement-montagne.jpg" as="image">
@@ -35,7 +38,7 @@
 }
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
-body{font-family:var(--sans);font-size:17px;line-height:1.55;color:var(--texte);background:var(--calcaire);font-variant-numeric:lining-nums;overflow-x:hidden}
+body{caret-color:var(--balise);accent-color:var(--balise);font-family:var(--sans);font-size:17px;line-height:1.55;color:var(--texte);background:var(--calcaire);font-variant-numeric:lining-nums;overflow-x:hidden}
 ::selection{background:var(--balise);color:#fff}
 ::-webkit-scrollbar{width:11px;height:8px}::-webkit-scrollbar-track{background:var(--calcaire2)}::-webkit-scrollbar-thumb{background:var(--schiste3);border:3px solid var(--calcaire2);border-radius:8px}
 html{scrollbar-color:var(--schiste3) var(--calcaire2)}
@@ -403,6 +406,11 @@ details .rep p+p{margin-top:8px}
 .spec-ligne .non{color:var(--balise2)}
 #fiche{padding-bottom:40px}
 @media (max-width:620px){.cs-bouton{padding:6px 12px 6px 6px;gap:8px}.cs-bouton .pastille{width:34px;height:34px}.cs-bouton b{font-size:1rem}.cs-bouton small{font-size:.74rem}.cs-invite{bottom:128px}}
+
+.fiche>*{min-width:0}.galerie{min-width:0}.plan-h img{max-width:100%;height:auto}
+.etape .prix .fl{margin-left:8px}
+.etape .prix .ete{display:block;color:var(--schiste);font-weight:600;margin-top:2px}
+.note-grande b.n{font-size:clamp(2.4rem,4vw,3rem)}
 </style>
 </head>
 <body>
@@ -470,7 +478,7 @@ details .rep p+p{margin-top:8px}
 
   <section class="saison">
     <div class="wrap saison-in">
-      <div class="dates"><small data-t="s_ouv">Saison 2026</small><span data-t="s_dates">17 avril → 11 octobre</span></div>
+      <div class="dates"><span data-t="s_dates">Ouvert du 17 avril au 11 octobre 2026</span></div>
       <p data-t="s_promo"><b>Canicule annoncée ? Prenez de l'altitude.</b> −20 % sur les locations disponibles du 11 au 18 juillet. Offres couple : mobil-home Bikini à 240 € la semaine, Oakley à 280 €.</p>
       <a class="lien" style="color:#fff" href="#sejour" data-sejour><span data-t="s_cta">Voir les disponibilités</span></a>
     </div>
@@ -510,7 +518,7 @@ details .rep p+p{margin-top:8px}
     <div class="wrap">
       <div class="entete-sec">
         <h2 class="titre"><span class="gr"></span><span data-t="c_t">Un camping à taille humaine</span></h2>
-        <p data-t="c_p">92 emplacements en tout, l'ancien « Champ d'Ayres », côté château d'Ayres. Ici on se dit bonjour, on prend le café sous l'acacia, et on part en balade le sac léger.</p>
+        <p data-t="c_p">92 emplacements en tout, sur l'ancien « Champ d'Ayres », côté château d'Ayres : le café se prend sous l'acacia, et les cartes IGN se vendent à la réception.</p>
       </div>
       <div class="deux">
         <ul class="liste-gr">
@@ -536,7 +544,7 @@ details .rep p+p{margin-top:8px}
       <div class="entete-sec">
         <div>
           <h2 class="titre"><span class="gr"></span><span data-t="av_t">Ce qu'en disent les campeurs</span></h2>
-          <div class="note-grande"><b class="num">9,22</b><span><span data-t="av_n">sur 10, d'après 198 avis vérifiés</span><br><a href="https://www.camping2be.com/france/meyrueis/avis-clients-camping-le-jardin-des-cevennes" target="_blank" rel="noopener" data-t="av_lien">Lire tous les avis sur Camping2Be</a></span></div>
+          <div class="note-grande"><b class="num n">9,22</b><span><span data-t="av_n">sur 10, d'après 198 avis vérifiés</span><br><a href="https://www.camping2be.com/france/meyrueis/avis-clients-camping-le-jardin-des-cevennes" target="_blank" rel="noopener" data-t="av_lien">Lire tous les avis sur Camping2Be</a></span></div>
         </div>
         <p data-t="av_p">Accueil noté 9,5 sur 10. Les campeurs parlent surtout du calme, de la piscine et de la disponibilité de Fabien, Sonia et leurs filles.</p>
       </div>
@@ -739,7 +747,7 @@ details .rep p+p{margin-top:8px}
       <div>
         <div class="tab-scroll"><table><thead><tr><th data-t="d_tps">Temps de route</th><th class="p"></th></tr></thead><tbody>
           <tr><td>Montpellier</td><td class="p">2 h</td></tr><tr><td>Clermont-Ferrand</td><td class="p">2 h 30</td></tr><tr><td>Toulouse</td><td class="p">3 h 15</td></tr><tr><td>Lyon</td><td class="p">4 h 30</td></tr><tr><td>Paris</td><td class="p">6 h 30</td></tr></tbody></table></div>
-        <p class="note-bas" data-t="d_gps">Coordonnées GPS indiquées sur le site actuel : 44.180727 E 3.43528 N.</p>
+        <p class="note-bas" data-t="d_gps">Coordonnées GPS : 44,180727 N · 3,43528 E.</p>
       </div>
     </div>
     <p class="mt2" data-t="d_liens">Pour préparer vos journées : <a href="https://www.causses-cevennes.com/campings-gorges-causses-cevennes" target="_blank" rel="noopener">Causses-Cévennes</a> · <a href="https://www.lozere-tourisme.com" target="_blank" rel="noopener">Lozère Tourisme</a></p>
@@ -838,6 +846,7 @@ details .rep p+p{margin-top:8px}
       <label><span data-t="sj_ad">Adultes</span><select id="sj-a"></select></label>
       <label><span data-t="sj_en">Enfants (3-17 ans)</span><select id="sj-e"></select></label>
     </div>
+    <label><span data-t="sj_pt">Dont enfants de 3 à 6 ans</span><select id="sj-p"></select></label>
     <div class="estim" id="sj-estim" aria-live="polite"></div>
     <a class="btn btn-r" id="sj-go" href="https://reservation.secureholiday.net/fr/2419" target="_blank" rel="noopener"><span data-t="sj_go">Vérifier les disponibilités</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
     <p class="note-bas" data-t="sj_note">Estimation calculée avec les tarifs 2026. Vous confirmez vos dates et réglez l'acompte (30 %) sur la page de réservation sécurisée du camping. Ou par téléphone : 04 66 45 60 51.</p>
@@ -909,7 +918,7 @@ const SAISONS=[["2026-04-17","2026-05-03","b"],["2026-05-04","2026-07-10","m"],[
 /* Emplacements 2026 par nuit [basse, moyenne, haute] */
 const EMP={std:[15,19,25],conf:[19,24,29],rando:[7,9,12],adulte:[5,6,7],ado:[4,5,6],enfant:[3,4,5],vehic:[0,3,3],animal:[0,2,2]};
 const VIDEOS=[["NefcwAX5zkk","canoe-tarn",["Les gorges du Tarn","The Tarn gorges","Las gargantas del Tarn","Die Tarnschlucht","Le gole del Tarn","De Tarnkloven"]],["BpXU4bkIMNg","decouvrir-2",["Les gorges de la Jonte","The Jonte gorges","Las gargantas del Jonte","Die Jonteschlucht","Le gole della Jonte","De Jontekloven"]],["kMfUeYYaD2U","randonnee",["Activités sportives aux Grands Causses","Outdoor sports in the Grands Causses","Deportes en los Grands Causses","Sport in den Grands Causses","Sport nei Grands Causses","Sport in de Grands Causses"]],["3EW5Vdz2MJA","decouvrir-1",["Autour de Meyrueis","Around Meyrueis","Alrededor de Meyrueis","Rund um Meyrueis","Intorno a Meyrueis","Rond Meyrueis"]]];
-const RESEAUX=[["Facebook","https://www.facebook.com/Camping-Le-Jardin-des-C%C3%A9vennes-101125148738072/",'<svg viewBox="0 0 24 24" fill="currentColor"><path d="M13.5 21v-7.5H16l.4-3h-2.9V8.7c0-.9.3-1.5 1.5-1.5h1.5V4.5c-.3 0-1.2-.1-2.2-.1-2.2 0-3.8 1.4-3.8 3.9v2.2H8v3h2.5V21z"/></svg>'],["Tripadvisor","https://www.tripadvisor.fr/Hotel_Review-g672975-d5050162-Reviews-Camping_Le_Jardin_des_Cevennes-Meyrueis_Lozere_Occitanie.html",'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="7" cy="13" r="3.5"/><circle cx="17" cy="13" r="3.5"/><path d="M3.5 9.5C6 7.5 9 6.6 12 6.6s6 .9 8.5 2.9M12 9v5"/></svg>'],["Camping2Be","https://www.camping2be.com/france/meyrueis/avis-clients-camping-le-jardin-des-cevennes",'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 19 12 5l9 14zM12 5v14"/></svg>']];
+const RESEAUX=[["Facebook","https://www.facebook.com/Camping-Le-Jardin-des-C%C3%A9vennes-101125148738072/",'<svg viewBox="0 0 24 24" fill="currentColor"><path d="M13.5 21v-7.5H16l.4-3h-2.9V8.7c0-.9.3-1.5 1.5-1.5h1.5V4.5c-.3 0-1.2-.1-2.2-.1-2.2 0-3.8 1.4-3.8 3.9v2.2H8v3h2.5V21z"/></svg>'],["Tripadvisor","https://www.tripadvisor.fr/Hotel_Review-g672975-d5050162-Reviews-Camping_Le_Jardin_des_Cevennes-Meyrueis_Lozere_Occitanie.html",'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="7" cy="13" r="3.5"/><circle cx="17" cy="13" r="3.5"/><path d="M3.5 9.5C6 7.5 9 6.6 12 6.6s6 .9 8.5 2.9M12 9v5"/></svg>'],["Camping2Be","https://www.camping2be.com/france/meyrueis/avis-clients-camping-le-jardin-des-cevennes",'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 3l2.6 5.6 6.1.7-4.5 4.2 1.2 6L12 16.6 6.6 19.5l1.2-6-4.5-4.2 6.1-.7z"/></svg>']];
 const RESA_URL=["fr","en","es","de","it","nl"].map(l=>"https://reservation.secureholiday.net/"+l+"/2419");
 
 const FAQ_CATS=[["gen",["Informations générales","General information","Información general","Allgemeines","Informazioni generali","Algemene informatie"]],["res",["Réservation","Booking","Reserva","Buchung","Prenotazione","Reserveren"]],["pay",["Paiement","Payment","Pago","Bezahlung","Pagamento","Betaling"]],["arr",["Votre arrivée","Your arrival","Su llegada","Ihre Ankunft","Il vostro arrivo","Uw aankomst"]],["dep",["Votre départ","Your departure","Su salida","Ihre Abreise","La vostra partenza","Uw vertrek"]],["serv",["Prestations et services","Facilities and services","Prestaciones y servicios","Leistungen und Service","Prestazioni e servizi","Voorzieningen en diensten"]],["tar",["Tarifs","Prices","Tarifas","Preise","Tariffe","Tarieven"]]];
@@ -986,7 +995,7 @@ pt5:["Book 2026","Reservar 2026","Buchen 2026","Prenota 2026","Reserveer 2026"],
 pt5s:["17 April to 11 October","del 17 de abril al 11 de octubre","17. April bis 11. Oktober","dal 17 aprile all'11 ottobre","17 april tot 11 oktober"],
 leg_heros:["The campsite pitches, facing the Causses","Las parcelas del camping, frente a los Causses","Die Stellplätze mit Blick auf die Causses","Le piazzole del campeggio, di fronte ai Causses","De kampeerplaatsen, met zicht op de Causses"],
 s_ouv:["2026 season","Temporada 2026","Saison 2026","Stagione 2026","Seizoen 2026"],
-s_dates:["17 April → 11 October","17 abril → 11 octubre","17. April → 11. Oktober","17 aprile → 11 ottobre","17 april → 11 oktober"],
+s_dates:["Open 17 April to 11 October 2026","Abierto del 17 de abril al 11 de octubre de 2026","Geöffnet 17. April bis 11. Oktober 2026","Aperto dal 17 aprile all'11 ottobre 2026","Open van 17 april tot 11 oktober 2026"],
 s_promo:["<b>Heatwave forecast? Head for the hills.</b> 20% off available rentals from 11 to 18 July. Couples' offers: Bikini mobile home €240 a week, Oakley €280.","<b>¿Ola de calor? Suba de altitud.</b> −20 % en los alojamientos disponibles del 11 al 18 de julio. Ofertas pareja: mobil-home Bikini a 240 € la semana, Oakley a 280 €.","<b>Hitzewelle angesagt? Ab in die Höhe.</b> −20 % auf freie Mietunterkünfte vom 11. bis 18. Juli. Paarangebote: Mobilheim Bikini 240 € pro Woche, Oakley 280 €.","<b>Arriva il caldo? Salite in quota.</b> −20 % sugli alloggi disponibili dall'11 al 18 luglio. Offerte coppia: casa mobile Bikini a 240 € la settimana, Oakley a 280 €.","<b>Hittegolf voorspeld? Zoek de hoogte op.</b> −20 % op beschikbare accommodaties van 11 tot 18 juli. Aanbiedingen voor stellen: stacaravan Bikini € 240 per week, Oakley € 280."],
 s_cta:["Check availability","Ver disponibilidad","Verfügbarkeit prüfen","Vedi disponibilità","Beschikbaarheid bekijken"],
 a_t:["Choose your shelter","Elegir su refugio","Ihre Unterkunft","Scegli il tuo rifugio","Kies uw onderkomen"],
@@ -1002,7 +1011,8 @@ pi_3:["Water slide, sunloungers and parasols","Tobogán, tumbonas y sombrillas",
 pi_4:["Tight swimming trunks only: shorts and board shorts aren't allowed","Solo bañador slip: no se admiten shorts ni bermudas","Nur eng anliegende Badehosen, keine Shorts","Solo slip da bagno: niente boxer né bermuda","Alleen strakke zwembroeken, geen shorts"],
 pi_5:["Free Wi-Fi everywhere on site since 2025, pool included","Wifi gratis en todo el camping desde 2025, también en la piscina","Kostenloses WLAN überall seit 2025, auch am Pool","Wi-Fi gratuito ovunque dal 2025, piscina compresa","Sinds 2025 overal gratis wifi, ook bij het zwembad"],
 c_t:["A campsite on a human scale","Un camping a escala humana","Ein Campingplatz mit menschlichem Maß","Un campeggio a misura d'uomo","Een camping op mensenmaat"],
-c_p:["92 pitches in all, the former \"Champ d'Ayres\", on the Château d'Ayres side. Here people say hello, have coffee under the acacia, and head off on walks with a light pack.","92 parcelas en total, el antiguo «Champ d'Ayres», junto al castillo de Ayres. Aquí la gente se saluda, toma café bajo la acacia y sale a caminar con poco peso.","92 Plätze insgesamt, das frühere „Champ d'Ayres“ beim Schloss Ayres. Hier grüßt man sich, trinkt Kaffee unter der Akazie und wandert mit leichtem Gepäck los.","92 piazzole in tutto, l'ex «Champ d'Ayres», dal lato del castello d'Ayres. Qui ci si saluta, si prende il caffè sotto l'acacia e si parte a camminare con lo zaino leggero.","92 plaatsen in totaal, het vroegere ‘Champ d'Ayres’, aan de kant van het kasteel van Ayres. Hier groet men elkaar, drinkt koffie onder de acacia en gaat met lichte bepakking wandelen."],
+sj_pt:["Of whom children aged 3–6","De ellos, niños de 3 a 6 años","Davon Kinder 3–6 J.","Di cui bambini da 3 a 6 anni","Waarvan kinderen van 3-6 jaar"],
+c_p:["92 pitches in all, on the former \"Champ d'Ayres\", on the Château d'Ayres side: coffee is taken under the acacia, and IGN hiking maps are sold at reception.","92 parcelas en total, en el antiguo «Champ d'Ayres», junto al castillo de Ayres: el café se toma bajo la acacia y los mapas IGN se venden en recepción.","92 Plätze insgesamt, auf dem früheren „Champ d'Ayres“ beim Schloss Ayres: Kaffee gibt es unter der Akazie, IGN-Wanderkarten an der Rezeption.","92 piazzole in tutto, sull'ex «Champ d'Ayres», dal lato del castello d'Ayres: il caffè si prende sotto l'acacia e le carte IGN si comprano alla reception.","92 plaatsen in totaal, op het vroegere ‘Champ d'Ayres’, aan de kant van het kasteel van Ayres: koffie drink je onder de acacia, IGN-wandelkaarten koop je bij de receptie."],
 c_1:["Terrace in the shade of an acacia: breakfast, a drink, ice cream any time","Terraza a la sombra de una acacia: desayuno, una copa, helado a cualquier hora","Terrasse im Schatten einer Akazie: Frühstück, Drink, Eis zu jeder Zeit","Terrazza all'ombra di un'acacia: colazione, un drink, un gelato a ogni ora","Terras in de schaduw van een acacia: ontbijt, een drankje, een ijsje op elk moment"],
 c_2:["Bar: draught and craft beers from Lozère, coffee, juices, snacks","Bar: cerveza de barril y artesanal de Lozère, cafés, zumos, comida rápida","Bar: Bier vom Fass und Craft-Biere aus der Lozère, Kaffee, Säfte, Snacks","Bar: birre alla spina e artigianali della Lozère, caffè, succhi, spuntini","Bar: tapbier en ambachtelijk bier uit de Lozère, koffie, sappen, snacks"],
 c_3:["Bread and pastries at reception, small everyday grocery","Pan y bollería en recepción, pequeña tienda de lo esencial","Brot und Gebäck an der Rezeption, kleiner Laden für das Nötigste","Pane e cornetti alla reception, piccolo alimentari","Brood en gebak bij de receptie, kleine kruidenier"],
@@ -1132,7 +1142,7 @@ d_a2:["From Montpellier or Béziers: exit 47 to Millau, then through the town to
 d_a3:["From Nîmes: Anduze, Saint-Jean-du-Gard, the Corniche des Cévennes then Meyrueis, or via Florac","Desde Nîmes: Anduze, Saint-Jean-du-Gard, la Corniche des Cévennes y Meyrueis, o por Florac","Von Nîmes: Anduze, Saint-Jean-du-Gard, Corniche des Cévennes, dann Meyrueis, oder über Florac","Da Nîmes: Anduze, Saint-Jean-du-Gard, la Corniche des Cévennes poi Meyrueis, o via Florac","Vanuit Nîmes: Anduze, Saint-Jean-du-Gard, de Corniche des Cévennes en dan Meyrueis, of via Florac"],
 d_a4:["From Lyon: Saint-Étienne (A47), Le Puy, Mende via the N88, Sainte-Enimie then Meyrueis","Desde Lyon: Saint-Étienne (A47), Le Puy, Mende por la N88, Sainte-Enimie y Meyrueis","Von Lyon: Saint-Étienne (A47), Le Puy, Mende über die N88, Sainte-Enimie, dann Meyrueis","Da Lione: Saint-Étienne (A47), Le Puy, Mende per la N88, Sainte-Enimie poi Meyrueis","Vanuit Lyon: Saint-Étienne (A47), Le Puy, Mende via de N88, Sainte-Enimie en dan Meyrueis"],
 d_tps:["Driving times","Tiempo en coche","Fahrzeit","Tempi di percorrenza","Reistijd met de auto"],
-d_gps:["GPS coordinates shown on the current site: 44.180727 E 3.43528 N.","Coordenadas GPS del sitio actual: 44.180727 E 3.43528 N.","GPS-Koordinaten laut aktueller Website: 44.180727 E 3.43528 N.","Coordinate GPS indicate sul sito attuale: 44.180727 E 3.43528 N.","GPS-coördinaten volgens de huidige site: 44.180727 E 3.43528 N."],
+d_gps:["GPS: 44.180727 N · 3.43528 E.","Coordenadas GPS: 44,180727 N · 3,43528 E.","GPS-Koordinaten: 44,180727 N · 3,43528 E.","Coordinate GPS: 44,180727 N · 3,43528 E.","GPS-coördinaten: 44,180727 N · 3,43528 E."],
 d_liens:["To plan your days: <a href=\"https://www.causses-cevennes.com/campings-gorges-causses-cevennes\" target=\"_blank\" rel=\"noopener\">Causses-Cévennes</a> · <a href=\"https://www.lozere-tourisme.com\" target=\"_blank\" rel=\"noopener\">Lozère Tourisme</a>","Para preparar sus días: <a href=\"https://www.causses-cevennes.com/campings-gorges-causses-cevennes\" target=\"_blank\" rel=\"noopener\">Causses-Cévennes</a> · <a href=\"https://www.lozere-tourisme.com\" target=\"_blank\" rel=\"noopener\">Lozère Tourisme</a>","Zur Planung: <a href=\"https://www.causses-cevennes.com/campings-gorges-causses-cevennes\" target=\"_blank\" rel=\"noopener\">Causses-Cévennes</a> · <a href=\"https://www.lozere-tourisme.com\" target=\"_blank\" rel=\"noopener\">Lozère Tourisme</a>","Per organizzare le giornate: <a href=\"https://www.causses-cevennes.com/campings-gorges-causses-cevennes\" target=\"_blank\" rel=\"noopener\">Causses-Cévennes</a> · <a href=\"https://www.lozere-tourisme.com\" target=\"_blank\" rel=\"noopener\">Lozère Tourisme</a>","Om uw dagen te plannen: <a href=\"https://www.causses-cevennes.com/campings-gorges-causses-cevennes\" target=\"_blank\" rel=\"noopener\">Causses-Cévennes</a> · <a href=\"https://www.lozere-tourisme.com\" target=\"_blank\" rel=\"noopener\">Lozère Tourisme</a>"],
 i_t:["Practical info","Información práctica","Praktische Infos","Informazioni pratiche","Praktische informatie"],
 i_p:["Booking, payment, arrival, departure, services: answers to the questions we hear most.","Reserva, pago, llegada, salida, servicios: respuestas a las preguntas más frecuentes.","Buchung, Zahlung, Ankunft, Abreise, Service: Antworten auf die häufigsten Fragen.","Prenotazione, pagamento, arrivo, partenza, servizi: le risposte alle domande più frequenti.","Reserveren, betalen, aankomst, vertrek, diensten: antwoorden op de meest gestelde vragen."],
@@ -1242,7 +1252,7 @@ visiteur:["Accès visiteur (sans piscine), à déclarer à l'accueil","Visitor a
 choisir:["Choisissez un hébergement","Choose your accommodation","Elija un alojamiento","Wählen Sie eine Unterkunft","Scegliete un alloggio","Kies een accommodatie"],
 hors_saison:["Le camping est ouvert du 17 avril au 11 octobre 2026 : choisissez une date dans la saison.","The campsite is open from 17 April to 11 October 2026: pick a date within the season.","El camping abre del 17 de abril al 11 de octubre de 2026: elija una fecha de la temporada.","Geöffnet vom 17. April bis 11. Oktober 2026: Bitte ein Datum in der Saison wählen.","Il campeggio è aperto dal 17 aprile all'11 ottobre 2026: scegliete una data nella stagione.","De camping is open van 17 april tot 11 oktober 2026: kies een datum in het seizoen."],
 date_d:["Indiquez votre date d'arrivée pour voir le prix.","Enter your arrival date to see the price.","Indique su fecha de llegada para ver el precio.","Ankunftsdatum eingeben, um den Preis zu sehen.","Indicate la data di arrivo per vedere il prezzo.","Vul uw aankomstdatum in om de prijs te zien."],
-haute_sem:["En juillet-août, les locations se réservent à la semaine, du samedi au samedi.","In July and August, rentals are booked by the week, Saturday to Saturday.","En julio y agosto, los alojamientos se reservan por semanas, de sábado a sábado.","Im Juli und August werden Unterkünfte wochenweise gebucht, Samstag bis Samstag.","A luglio e agosto gli alloggi si prenotano a settimana, da sabato a sabato.","In juli en augustus worden accommodaties per week geboekt, van zaterdag tot zaterdag."],
+haute_sem:["En juillet-août, les locations se réservent à la semaine, du samedi au samedi : choisissez un samedi et 7 ou 14 nuits.","In July and August, rentals are booked by the week, Saturday to Saturday: pick a Saturday and 7 or 14 nights.","En julio y agosto, los alojamientos se reservan por semanas, de sábado a sábado: elija un sábado y 7 o 14 noches.","Im Juli und August werden Unterkünfte wochenweise gebucht, Samstag bis Samstag: Wählen Sie einen Samstag und 7 oder 14 Nächte.","A luglio e agosto gli alloggi si prenotano a settimana, da sabato a sabato: scegliete un sabato e 7 o 14 notti.","In juli en augustus worden accommodaties per week geboekt, van zaterdag tot zaterdag: kies een zaterdag en 7 of 14 nachten."],
 min2:["2 nuits minimum pour ce modèle.","2 nights minimum for this model.","2 noches mínimo para este modelo.","Mindestens 2 Nächte für dieses Modell.","Minimo 2 notti per questo modello.","Minimaal 2 nachten voor dit model."],
 sur_dem:["Pour 4 à 6 nuits, le prix vous est donné à la réservation (la semaine coûte {s}).","For 4 to 6 nights, the price is given when you book (a week costs {s}).","Para 4 a 6 noches, el precio se da al reservar (la semana cuesta {s}).","Für 4 bis 6 Nächte erhalten Sie den Preis bei der Buchung (die Woche kostet {s}).","Per 4-6 notti il prezzo vi è indicato alla prenotazione (la settimana costa {s}).","Voor 4 tot 6 nachten krijgt u de prijs bij het reserveren (een week kost {s})."],
 capa:["Ce modèle accueille {c} personnes au maximum, bébés compris.","This model sleeps {c} people maximum, babies included.","Este modelo admite {c} personas como máximo, bebés incluidos.","Dieses Modell bietet Platz für höchstens {c} Personen, Babys inklusive.","Questo modello ospita al massimo {c} persone, bebè compresi.","Dit model biedt plaats aan maximaal {c} personen, baby's inbegrepen."],
@@ -1257,6 +1267,7 @@ pers_supp:["Personnes supplémentaires","Extra people","Personas adicionales","Z
 nuit_s:["nuit","night","noche","Nacht","notte","nacht"],nuits_p:["nuits","nights","noches","Nächte","notti","nachten"],
 enf7:["Enfants de 7 à 17 ans","Children aged 7–17","Niños de 7 a 17 años","Kinder 7–17 J.","Bambini da 7 a 17 anni","Kinderen 7-17 jaar"],
 enf3:["Enfants de moins de 7 ans","Children under 7","Niños menores de 7 años","Kinder unter 7 J.","Bambini sotto i 7 anni","Kinderen onder 7 jaar"],
+pt7:["dont moins de 7 ans","of whom under 7","de ellos menores de 7","davon unter 7 J.","di cui sotto i 7 anni","waarvan onder 7"],
 moins3:["Les moins de 3 ans sont gratuits sur emplacement : retirez-les du calcul.","Under-3s stay free on pitches: leave them out of the count.","Los menores de 3 años no pagan en parcela: no los cuente.","Kinder unter 3 Jahren sind auf Stellplätzen frei: bitte nicht mitzählen.","I bambini sotto i 3 anni non pagano in piazzola: non contateli.","Kinderen onder 3 zijn gratis op kampeerplaatsen: tel ze niet mee."],
 max6:["6 personnes au maximum par emplacement.","6 people maximum per pitch.","6 personas como máximo por parcela.","Höchstens 6 Personen pro Stellplatz.","Massimo 6 persone per piazzola.","Maximaal 6 personen per plaats."],
 rando1:["Le forfait randonneur ou cycliste est pour une personne seule.","The hiker or cyclist package is for one person alone.","La tarifa senderista o ciclista es para una sola persona.","Der Wanderer-/Radlerpreis gilt für eine Person allein.","La formula escursionista o ciclista è per una sola persona.","Het wandelaars- of fietserstarief is voor één persoon alleen."],
@@ -1286,7 +1297,7 @@ function ligneHeb(h){
   return `<a class="etape" href="#location/${h.id}"><div class="cap num">${h.cap}<small>${u('pers')}</small></div>
   <div><h3>${h.nom}</h3><div class="spec num">${h.type[L]} · ${h.m2} m² · ${h.ch} ${u('ch')} · ${u('modele')} ${h.an}${h.eau?'':' · '+u('sans_eau')}</div><div class="plus">${h.plus[L]}</div></div>
   <div class="vign"><img src="img/${h.img[0]}.jpg" alt="${h.nom}" loading="lazy" width="600" height="250"></div>
-  <div class="prix num">${u('des')} <b>${fmtE(des)}</b>${lab}<br>${fmtE(p.h)} ${u('sem_h')}<span class="fl">${u('voir')} ${ico.fl}</span></div></a>`;
+  <div class="prix num">${u('des')} <b>${fmtE(des)}</b>${lab}<span class="ete">${fmtE(p.h)} ${u('sem_h')}</span><span class="fl">${u('voir')} ${ico.fl}</span></div></a>`;
 }
 function ligneEmp(){return `<a class="etape" href="#emplacements"><div class="cap num">6<small>${u('pers')}</small></div><div><h3>${u('emp_nom')}</h3><div class="spec">${u('emp_type')} · 63 × 95 m²</div><div class="plus">${u('emp_plus')}</div></div><div class="vign"><img src="img/empl-tente.jpg" alt="${u('emp_nom')}" loading="lazy" width="600" height="250"></div><div class="prix num">${u('des')} <b>${fmtE(15)}</b>${u('la_nuit')}<span class="fl">${u('voir')} ${ico.fl}</span></div></a>`}
 function tabLoc(){
@@ -1373,10 +1384,11 @@ function remplirSejour(){
   const n=$('#sj-n'),nv=n.value||'7';n.innerHTML=Array.from({length:21},(_,i)=>`<option value="${i+1}">${i+1} ${i?u('nuits_p'):u('nuit_s')}</option>`).join('');n.value=nv;
   const ad=$('#sj-a'),av=ad.value||'2';ad.innerHTML=[1,2,3,4,5,6].map(i=>`<option>${i}</option>`).join('');ad.value=av;
   const en=$('#sj-e'),ev=en.value||'0';en.innerHTML=[0,1,2,3,4,5].map(i=>`<option>${i}</option>`).join('');en.value=ev;
+  const pp=$('#sj-p'),pv=pp.value||'0';pp.innerHTML=[0,1,2,3,4,5].map(i=>`<option>${i}</option>`).join('');pp.value=pv;
   calc();
 }
 function calc(){
-  const id=$('#sj-h').value,d=$('#sj-d').value,n=+$('#sj-n').value,ad=+$('#sj-a').value,en=+$('#sj-e').value,box=$('#sj-estim');
+  const id=$('#sj-h').value,d=$('#sj-d').value,n=+$('#sj-n').value,ad=+$('#sj-a').value,en=+$('#sj-e').value,pt=Math.min(+$('#sj-p').value,en),box=$('#sj-estim');
   $('#sj-go').href=RESA_URL[L];
   if(!id){box.innerHTML=`<p class="vide">${u('choisir')}.</p>`;return}
   if(!d){box.innerHTML=`<p class="vide">${u('date_d')}</p>`;return}
@@ -1386,7 +1398,7 @@ function calc(){
   if(h){
     if(ad+en>h.cap)aver.push(u('capa').replace('{c}',h.cap));
     let base=null;
-    if(s=='h'){if(n%7){aver.push(u('haute_sem'))}else base=(n/7)*h.prix.h}
+    if(s=='h'){if(n%7||new Date(d+'T12:00').getDay()!=6){aver.push(u('haute_sem'))}if(!(n%7))base=(n/7)*h.prix.h}
     else{const p=h.prix[s];const w=Math.floor(n/7),r=n%7;
       if(n==1&&!p[0])aver.push(u('min2'));
       else if(r>=4){aver.push(u('sur_dem').replace('{s}',fmtE(p[3])))}
@@ -1396,9 +1408,10 @@ function calc(){
     const tot2=ad+en;if(tot2>6)aver.push(u('max6'));
     if(id=='rando'){if(ad+en>1)aver.push(u('rando1'));lignes.push([`${u('rando')} · ${n} × ${fmtE(EMP.rando[si])}`,EMP.rando[si]*n]);}
     else{const f=EMP[id][si];lignes.push([`${u('forfait')} · ${n} × ${fmtE(f)}`,f*n]);
-      const xa=Math.max(0,ad-2),place=Math.max(0,2-ad),xe=Math.max(0,en-place);
+      const xa=Math.max(0,ad-2);let place=Math.max(0,2-ad);const grands=en-pt;const xg=Math.max(0,grands-place);place=Math.max(0,place-grands);const xp=Math.max(0,pt-place);
       if(xa)lignes.push([`${u('adulte')} × ${xa}`,xa*EMP.adulte[si]*n]);
-      if(xe)lignes.push([`${u('ado')} × ${xe}`,xe*EMP.ado[si]*n]);}
+      if(xg)lignes.push([`${u('ado')} × ${xg}`,xg*EMP.ado[si]*n]);
+      if(xp)lignes.push([`${u('enfant')} × ${xp}`,xp*EMP.enfant[si]*n]);}
     if(n>=7&&s!='b')lignes.push([u('frais18'),15]);
     tot=lignes.reduce((a,l)=>a+l[1],0);
     aver.push(u('moins3'));
@@ -1411,7 +1424,7 @@ function ouvrirSejour(c){if(c){choix=c;$('#sj-h').value=c}else if(ficheId&&!$('#
 function fermerSejour(){const s=$('#sejour');s.classList.remove('on');s.setAttribute('aria-hidden','true');$('#voile').classList.remove('on')}
 function lierSejour(){}
 document.addEventListener('click',e=>{const b=e.target.closest('[data-sejour]');if(!b)return;e.preventDefault();ouvrirSejour(b.dataset.choix)});
-['sj-h','sj-d','sj-n','sj-a','sj-e'].forEach(i=>document.getElementById(i).addEventListener('input',calc));
+['sj-h','sj-d','sj-n','sj-a','sj-e','sj-p'].forEach(i=>document.getElementById(i).addEventListener('input',calc));
 $('[data-fermer]').onclick=fermerSejour;$('#voile').onclick=()=>{fermerSejour();fermerCS()};
 document.addEventListener('keydown',e=>{if(e.key=='Escape'){fermerSejour();fermerCS()}});
 
@@ -1450,7 +1463,8 @@ r_animal:["Sur un emplacement, oui : 2 animaux au maximum, en laisse, carnet de 
 r_piscine:["La piscine vient d'être entièrement rénovée : grand bassin chauffé à 26 °C environ, pataugeoire sécurisée, toboggan. Elle est comprise dans tous les séjours. Seul le slip de bain est accepté (pas de short ni de bermuda).","The pool has just been fully renovated: big pool heated to about 26 °C, safe paddling pool, slide. It's included in every stay. Tight swimming trunks only (no shorts).","La piscina acaba de renovarse por completo: gran vaso climatizado a unos 26 °C, chapoteadero seguro, tobogán. Incluida en todas las estancias. Solo bañador slip (nada de shorts).","Der Pool wurde komplett erneuert: großes Becken mit etwa 26 °C, sicheres Planschbecken, Rutsche. In jedem Aufenthalt inbegriffen. Nur eng anliegende Badehosen, keine Shorts.","La piscina è stata appena rinnovata: grande vasca riscaldata a circa 26 °C, piscinetta sicura, scivolo. Compresa in ogni soggiorno. Solo slip da bagno (niente boxer).","Het zwembad is net volledig vernieuwd: groot bad verwarmd tot ongeveer 26 °C, veilig pierenbad, glijbaan. Bij elk verblijf inbegrepen. Alleen strakke zwembroeken, geen shorts."],
 r_faire:["Au pied du camping, la Jonte et la Brèze (baignade, pêche) à 100 m, le village à 5 minutes à pied. Autour : gorges de la Jonte et du Tarn, Mont Aigoual, Aven Armand, Dargilan, Bramabiau, la Maison des vautours, Montpellier-le-Vieux. La réception réserve canoë, rafting, escalade ou saut à l'élastique.","Right by the campsite: the Jonte and Brèze rivers (swimming, fishing) 100 m away, the village a 5-minute walk. Nearby: the Jonte and Tarn gorges, Mont Aigoual, Aven Armand, Dargilan, Bramabiau, the Vulture House, Montpellier-le-Vieux. Reception books canoeing, rafting, climbing or bungee jumping.","Junto al camping, el Jonte y el Brèze (baño, pesca) a 100 m, el pueblo a 5 minutos a pie. Cerca: gargantas del Jonte y del Tarn, Monte Aigoual, Aven Armand, Dargilan, Bramabiau, la Casa de los buitres, Montpellier-le-Vieux. La recepción reserva canoa, rafting, escalada o puenting.","Direkt am Platz: Jonte und Brèze (Baden, Angeln) in 100 m, das Dorf in 5 Gehminuten. Rundum: Jonte- und Tarnschlucht, Mont Aigoual, Aven Armand, Dargilan, Bramabiau, das Geierhaus, Montpellier-le-Vieux. Die Rezeption bucht Kanu, Rafting, Klettern oder Bungee.","Ai piedi del campeggio, la Jonte e la Brèze (bagno, pesca) a 100 m, il paese a 5 minuti a piedi. Intorno: gole della Jonte e del Tarn, Monte Aigoual, Aven Armand, Dargilan, Bramabiau, la Casa degli avvoltoi, Montpellier-le-Vieux. La reception prenota canoa, rafting, arrampicata o bungee.","Vlak bij de camping: de Jonte en de Brèze (zwemmen, vissen) op 100 m, het dorp op 5 minuten lopen. In de buurt: Jonte- en Tarnkloven, Mont Aigoual, Aven Armand, Dargilan, Bramabiau, het Gierenhuis, Montpellier-le-Vieux. De receptie reserveert kano, rafting, klimmen of bungeejumpen."],
 r_arrivee:["Emplacements : arrivée dès 12 h, départ avant 12 h, jours libres. Locations : clés dès 15 h 30, départ avant 11 h ; en juillet-août du samedi au samedi. Réception de 8 h 30 à 20 h (8 h en juillet-août).","Pitches: arrive from 12 noon, leave before 12 noon, any day. Rentals: keys from 3:30 pm, leave before 11 am; Saturday to Saturday in July–August. Reception 8:30 am–8 pm (from 8 am in July–August).","Parcelas: llegada desde las 12 h, salida antes de las 12 h, días libres. Alojamientos: llaves desde las 15:30, salida antes de las 11 h; en julio-agosto de sábado a sábado. Recepción de 8:30 a 20 h (desde las 8 h en julio-agosto).","Stellplätze: Anreise ab 12 Uhr, Abreise vor 12 Uhr, freie Tage. Mietunterkünfte: Schlüssel ab 15:30 Uhr, Abreise vor 11 Uhr; im Juli/August Samstag bis Samstag. Rezeption 8:30–20 Uhr (Juli/August ab 8 Uhr).","Piazzole: arrivo dalle 12, partenza entro le 12, giorni liberi. Alloggi: chiavi dalle 15:30, partenza entro le 11; a luglio-agosto da sabato a sabato. Reception dalle 8:30 alle 20 (dalle 8 a luglio-agosto).","Kampeerplaatsen: aankomst vanaf 12.00 uur, vertrek vóór 12.00 uur, vrije dagen. Accommodaties: sleutels vanaf 15.30 uur, vertrek vóór 11.00 uur; in juli-augustus van zaterdag tot zaterdag. Receptie 8.30–20.00 uur (juli-augustus vanaf 8.00 uur)."],
-r_wifi:["Le Wi-Fi est gratuit partout dans le camping depuis 2025 : emplacement, location, piscine, espaces communs.","Wi-Fi is free everywhere on site since 2025: pitch, rental, pool, shared areas.","El wifi es gratis en todo el camping desde 2025: parcela, alojamiento, piscina, zonas comunes.","WLAN ist seit 2025 überall kostenlos: Stellplatz, Unterkunft, Pool, Gemeinschaftsbereiche.","Il Wi-Fi è gratuito ovunque dal 2025: piazzola, alloggio, piscina, spazi comuni.","Wifi is sinds 2025 overal gratis: plaats, accommodatie, zwembad, gemeenschappelijke ruimtes."],
+r_wifi:["Le Wi-Fi est gratuit partout dans le camping depuis 2025 : emplacement, location, piscine, espaces communs. Et au bloc sanitaire, lave-linge et sèche-linge.","Wi-Fi is free everywhere on site since 2025: pitch, rental, pool, shared areas.","El wifi es gratis en todo el camping desde 2025: parcela, alojamiento, piscina, zonas comunes.","WLAN ist seit 2025 überall kostenlos: Stellplatz, Unterkunft, Pool, Gemeinschaftsbereiche.","Il Wi-Fi è gratuito ovunque dal 2025: piazzola, alloggio, piscina, spazi comuni.","Wifi is sinds 2025 overal gratis: plaats, accommodatie, zwembad, gemeenschappelijke ruimtes."],
+r_linge:["Oui : lave-linge et sèche-linge sont à votre disposition au bloc sanitaire, rénové en 2021.","Yes: a washing machine and dryer are available in the shower block, renovated in 2021.","Sí: lavadora y secadora a su disposición en el bloque sanitario, renovado en 2021.","Ja: Waschmaschine und Trockner stehen im 2021 erneuerten Sanitärgebäude bereit.","Sì: lavatrice e asciugatrice sono a disposizione nei servizi, rinnovati nel 2021.","Ja: wasmachine en droger staan in het in 2021 vernieuwde sanitairgebouw."],
 r_draps:["Couvertures et oreillers sont fournis, pas les draps ni les serviettes. Draps jetables : 8,50 € la paire. Lit bébé ou chaise haute : 17 € la semaine chacun.","Blankets and pillows are provided, but not sheets or towels. Disposable sheets: €8.50 a pair. Cot or high chair: €17 a week each.","Se facilitan mantas y almohadas, no sábanas ni toallas. Sábanas desechables: 8,50 € el juego. Cuna o trona: 17 € la semana cada una.","Decken und Kissen sind da, Bettlaken und Handtücher nicht. Einwegbettwäsche: 8,50 € pro Paar. Babybett oder Hochstuhl: je 17 € pro Woche.","Coperte e cuscini sono forniti, lenzuola e asciugamani no. Lenzuola monouso: 8,50 € il paio. Lettino o seggiolone: 17 € a settimana ciascuno.","Dekens en kussens zijn aanwezig, lakens en handdoeken niet. Wegwerplakens: € 8,50 per paar. Babybed of kinderstoel: € 17 per week per stuk."],
 r_paie:["Acompte de 30 % à la réservation (plus 18 € de frais de dossier pour une location), solde 30 jours avant l'arrivée. Carte bancaire, virement, chèque ou chèques-vacances ANCV. Caution de 250 € rendue au départ.","30% deposit when booking (plus an €18 fee for a rental), balance 30 days before arrival. Card, bank transfer, cheque or ANCV holiday vouchers. €250 security deposit returned on departure.","Anticipo del 30 % al reservar (más 18 € de gestión para un alojamiento), resto 30 días antes. Tarjeta, transferencia, cheque o cheques-vacaciones ANCV. Fianza de 250 € devuelta al salir.","30 % Anzahlung bei Buchung (plus 18 € Gebühr für Mietunterkünfte), Rest 30 Tage vor Anreise. Karte, Überweisung, Scheck oder ANCV-Schecks. 250 € Kaution, Rückgabe bei Abreise.","Acconto del 30 % alla prenotazione (più 18 € di spese per un alloggio), saldo 30 giorni prima. Carta, bonifico, assegno o buoni ANCV. Cauzione di 250 € restituita alla partenza.","30 % aanbetaling bij reservering (plus € 18 dossierkosten voor een accommodatie), rest 30 dagen voor aankomst. Kaart, overschrijving, cheque of ANCV-cheques. Borg van € 250, terug bij vertrek."],
 r_annul:["Plus de 15 jours avant l'arrivée, 20 % du séjour restent dus ; moins de 15 jours avant, la totalité. Les frais de dossier ne sont pas remboursés. L'assurance annulation, proposée à la réservation, vous rembourse en cas d'imprévu.","More than 15 days before arrival, 20% of the stay is due; less than 15 days, the full amount. Booking fees aren't refunded. Cancellation insurance, offered when booking, refunds you if something unexpected happens.","Más de 15 días antes, se debe el 20 %; menos de 15 días, el total. Los gastos de gestión no se reembolsan. El seguro de cancelación, propuesto al reservar, le reembolsa en caso de imprevisto.","Mehr als 15 Tage vorher sind 20 % fällig, weniger als 15 Tage der volle Betrag. Gebühren werden nicht erstattet. Die bei der Buchung angebotene Versicherung erstattet bei unvorhergesehenen Ereignissen.","Oltre 15 giorni prima è dovuto il 20 %, meno di 15 giorni l'intero importo. Le spese non sono rimborsate. L'assicurazione annullamento, proposta alla prenotazione, vi rimborsa in caso di imprevisti.","Meer dan 15 dagen vooraf is 20 % verschuldigd, minder dan 15 dagen het volledige bedrag. Dossierkosten worden niet terugbetaald. De annuleringsverzekering, aangeboden bij reserveren, betaalt terug bij onvoorziene gebeurtenissen."],
@@ -1465,6 +1479,8 @@ r_inconnu:["Je n'ai pas cette information, et je préfère ne pas inventer. L'é
 calc:["Calculer mon séjour","Work out my stay","Calcular mi estancia","Aufenthalt berechnen","Calcola il soggiorno","Mijn verblijf berekenen"]
 };
 const INT=[
+ ['r_inconnu',/allerg|maitre.?nageur|surveill|lifeguard|socorrista|bademeister|bagnino|badmeester|plusieurs fois|en \d fois|installment|a plazos|raten|rate\b|termijn|defibril|medecin de garde/],
+ ['r_linge',/lave.?linge|machine a laver|laverie|seche.?linge|washing|lavadora|waschmasch|lavatrice|wasmachine|lessive/],
  ['r_inconnu',/recharg|borne|charging|ladestat|laadpaal|ricaric|cargador|meteo|weather|tiempo|wetter|weer\b/],
  ['r_inconnu',/(lou|location|rent|hire|alquil|verleih|miet|noleggi|huur)\w*.{0,25}(velo|vtt|bike|bici|fahrrad|rad\b|fiets|kayak|canoe|voiture|car\b|auto)/],
  ['r_animal',/chien|chat|animal|animaux|dog|pet|perro|mascota|hund|haustier|cane|animale|hond|huisdier/],
@@ -1475,8 +1491,8 @@ const INT=[
  ['r_paie',/paie|payer|paiement|pay|acompte|deposit|anticipo|anzahlung|acconto|aanbetaling|caution|kaution|cauzion|borg|fianza|cheque|ancv|virement|carte|card|tarjeta|karte|carta|kaart/],
  ['r_dispo',/dispo|libre|availab|disponib|verfugbar|beschikba|complet|reste-t-il|place pour/],
  ['r_ouv',/ouvert|ouverture|saison|open|abierto|geoffnet|aperto|quand|when|cuando|wann|quando|wanneer|ferme/],
+ ['r_acces',/acces|lyon|clermont|nimes|toulouse|marseille|bordeaux|depuis|\bfrom\b|desde|\bvon\b|\bda\b|vanuit|venir|\broute\b|gps|autoroute|a75|\btrain\b|\bgare\b|\baller\b|how to get|directions|como llegar|anreise|anfahrt|come arrivare|bereik|millau|montpellier|paris/],
  ['r_arrivee',/arriv|depart|heure|horaire|check|cle|key|llave|schlussel|chiav|sleutel|reception|rezeption|receptie|recepcion/],
- ['r_acces',/acces|venir|route|gps|autoroute|a75|train|gare|aller|how to get|directions|como llegar|anreise|anfahrt|come arrivare|bereik|millau|montpellier|paris/],
  ['r_manger|',/manger|restaurant|bar\b|pain|boulang|epicer|food|eat|bread|comer|comida|pan\b|essen|brot|mangiare|pane|eten|brood|marche|market|mercado|markt|mercato/],
  ['r_pmr',/pmr|handicap|fauteuil|wheelchair|silla de ruedas|rollstuhl|disabil|mobilit|toeganke|minderval/],
  ['r_anim',/anima|soiree|enfant|kids|child|nino|kinder|bambin|jeux|play|spiel|gioc|spel|loto|karaoke/],
@@ -1503,7 +1519,9 @@ function repondre(k){
   },380);
 }
 function lier(d){$$('[data-sejour-cs]',d).forEach(b=>b.onclick=()=>{fermerCS();ouvrirSejour()});$$('a',d).forEach(a=>a.addEventListener('click',()=>{if(innerWidth<620)fermerCS()}))}
-function comprendre(t){const n=norm(t);for(const [k,re] of INT){if(re.test(n))return k.replace('|','')}
+function comprendre(t){const n=norm(t);
+  if(/adult|enfant|child|kid|nino|kind|bambin|volwass|erwachs|ado|bebe|baby|person|pers\b/.test(n)&&/\d/.test(n)&&!/chien|dog|perro|hund|cane|hond/.test(n)){const x=(n.match(/\d+/g)||[]).map(Number).filter(v=>v<20).reduce((a,b)=>a+b,0);if(x>0)return x<=2?'n2':x<=4?'n4':x==5?'n5':x==6?'n6':'n7'}
+  for(const [k,re] of INT){if(re.test(n))return k.replace('|','')}
   const m=n.match(/\b([1-9])\b/);if(m){const x=+m[1];return x<=2?'n2':x<=4?'n4':x==5?'n5':x==6?'n6':'n7'}return 'r_inconnu'}
 function ouvrirCS(){const c=$('#cs');c.classList.add('on');c.setAttribute('aria-hidden','false');$('#cs-invite').classList.remove('on');csOuvert=true;try{sessionStorage.setItem('jdc-inv','1')}catch(e){}
   if(!csInit){csInit=true;bulle(`<span class="mention">${cu('mention')}</span><br>${cu('accueil')}`);pucesBase()}
@@ -1514,7 +1532,7 @@ $$('[data-cs]').forEach(b=>b.addEventListener('click',e=>{e.preventDefault();ouv
 $('[data-csx]').onclick=fermerCS;
 $('#cs-invite .x').onclick=()=>{$('#cs-invite').classList.remove('on');try{sessionStorage.setItem('jdc-inv','1')}catch(e){}};
 $('#cs-form').addEventListener('submit',e=>{e.preventDefault();const v=$('#cs-in').value.trim();if(!v)return;bulle(v.replace(/</g,'&lt;'),'moi');$('#cs-in').value='';repondre(comprendre(v))});
-setTimeout(()=>{let vu=null;try{vu=sessionStorage.getItem('jdc-inv')}catch(e){}if(!vu&&!csOuvert)$('#cs-invite').classList.add('on')},4000);
+setTimeout(()=>{let vu=null;try{vu=sessionStorage.getItem('jdc-inv')}catch(e){}if(!vu&&!csOuvert&&$('#v-accueil').classList.contains('on'))$('#cs-invite').classList.add('on')},4000);
 
 initFR();
 window.addEventListener('hashchange',route);
