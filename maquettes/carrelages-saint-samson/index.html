@@ -116,7 +116,7 @@ section{padding:clamp(64px,9vw,128px) 0}
 .sol{position:relative;background:var(--joint);min-height:420px}
 .sol svg{position:absolute;inset:0;width:100%;height:100%}
 .sol .hx{transition:filter .4s}
-.four-legende{position:absolute;left:18px;bottom:18px;z-index:3;background:rgba(28,21,18,.86);color:var(--clair);padding:12px 16px;border-radius:var(--r);display:flex;gap:14px;align-items:baseline;box-shadow:0 10px 30px -12px rgba(0,0,0,.6)}
+.four-legende{position:absolute;left:50%;transform:translateX(-50%);bottom:18px;white-space:nowrap;z-index:3;background:rgba(28,21,18,.86);color:var(--clair);padding:12px 16px;border-radius:var(--r);display:flex;gap:14px;align-items:baseline;box-shadow:0 10px 30px -12px rgba(0,0,0,.6)}
 .four-legende .t{font-family:var(--sans);font-weight:600;font-variation-settings:"wdth" 92;font-size:1.6rem;line-height:1;min-width:5.2ch;text-align:right;font-variant-numeric:tabular-nums}
 .four-legende .e{font-size:.8rem;color:var(--clair2)}
 .preuves{background:var(--suie2);color:var(--clair2);border-top:1px solid #3d2f28}
@@ -369,8 +369,8 @@ sup{font-size:.62em;line-height:0;vertical-align:.5em}
 
 .chif{font-family:var(--sans);font-weight:500;font-variation-settings:"wdth" 88;letter-spacing:-.02em;font-size:.86em}
 .heros-txt .ou{font-size:.84rem;color:var(--clair2);letter-spacing:.03em}
-.thermo{position:absolute;right:16px;top:20px;bottom:20px;z-index:3;display:flex;gap:8px;align-items:stretch;cursor:pointer;padding:6px}
-.thermo .graduation{display:flex;flex-direction:column;justify-content:space-between;font-size:.72rem;font-weight:600;color:var(--suie);text-align:right}
+.thermo{position:absolute;left:16px;flex-direction:row-reverse;top:20px;bottom:20px;z-index:3;display:flex;gap:8px;align-items:stretch;cursor:pointer;padding:6px}
+.thermo .graduation{display:flex;flex-direction:column;justify-content:space-between;font-size:.72rem;font-weight:600;color:var(--suie);text-align:left}
 .thermo .graduation span{background:rgba(235,230,221,.92);padding:2px 6px;border-radius:2px}
 .thermo .tube{width:12px;border-radius:8px;background:rgba(28,21,18,.82);position:relative;overflow:hidden;box-shadow:inset 0 0 0 2px rgba(235,230,221,.6)}
 .thermo .mer{position:absolute;left:3px;right:3px;bottom:3px;height:0;border-radius:6px;background:linear-gradient(0deg,#c8664a,#f0a35e)}
@@ -406,6 +406,15 @@ nav.menu.deborde ul{-webkit-mask-image:linear-gradient(90deg,#000 calc(100% - 48
 @media (max-width:620px){.menu-fixe a.conseil-lien{display:none}}
 
 @media (max-width:620px){.marque .pre{display:none}}
+
+@media (max-width:620px){
+ .conseil-btn{padding:6px}.conseil-btn>span:last-child{display:none}.conseil-btn .pastille{width:48px;height:48px}
+ nav.menu a,.menu-fixe a{padding:.75em .6em}
+ .thermo{left:8px}
+}
+.uni .txt p,.fiche p,.gamme p{font-size:1rem}
+
+@media (max-width:620px){.four-legende{left:auto;right:56px;transform:none}}
 </style>
 </head>
 <body>
@@ -464,10 +473,10 @@ nav.menu.deborde ul{-webkit-mask-image:linear-gradient(90deg,#000 calc(100% - 48
   <div class="w">
    <div class="entete-sec app"><h2 data-i="g_t"></h2><p class="lead" data-i="g_s"></p></div>
    <div class="gammes">
-    <a class="gamme g1 app" href="#terres-cuites" data-go="terres-cuites"><img src="img/g12.jpg" alt="Hexagones Saint Samson" loading="lazy"><div class="cap"><h3>Saint Samson</h3><p data-i="r_ss"></p></div></a>
-    <a class="gamme g2 app" href="#terres-cuites" data-go="terres-cuites"><img src="img/g2.jpg" alt="Carrés Mercastel" loading="lazy"><div class="cap"><h3>Mercastel</h3><p data-i="r_me"></p></div></a>
-    <a class="gamme g3 app" href="#terres-cuites" data-go="terres-cuites"><img src="img/g34.jpg" alt="Hexagones Mercastel veinés" loading="lazy"><div class="cap"><h3>Veines</h3><p data-i="r_ve"></p></div></a>
-    <a class="gamme g4 app" href="#terres-cuites" data-go="terres-cuites"><img src="img/g1.jpg" alt="Carrés Le Moulin Saint Samson" loading="lazy"><div class="cap"><h3>Le Moulin</h3><p data-i="r_mo"></p></div></a>
+    <a class="gamme g1 app" href="#terres-cuites" data-go="terres-cuites"><img src="img/g12.jpg" alt="" loading="lazy"><div class="cap"><h3>Saint Samson</h3><p data-i="r_ss"></p></div></a>
+    <a class="gamme g2 app" href="#terres-cuites" data-go="terres-cuites"><img src="img/g2.jpg" alt="" loading="lazy"><div class="cap"><h3>Mercastel</h3><p data-i="r_me"></p></div></a>
+    <a class="gamme g3 app" href="#terres-cuites" data-go="terres-cuites"><img src="img/g34.jpg" alt="" loading="lazy"><div class="cap"><h3>Veines</h3><p data-i="r_ve"></p></div></a>
+    <a class="gamme g4 app" href="#terres-cuites" data-go="terres-cuites"><img src="img/g1.jpg" alt="" loading="lazy"><div class="cap"><h3>Le Moulin</h3><p data-i="r_mo"></p></div></a>
    </div>
    <div class="formats app"><span class="f"><svg viewBox="0 0 24 24"><path d="M7 3h10l5 9-5 9H7l-5-9z"/></svg><span data-i="formats"></span></span><a class="lien" href="#terres-cuites" data-go="terres-cuites" data-i="g_more"></a></div>
   </div>
@@ -575,10 +584,10 @@ nav.menu.deborde ul{-webkit-mask-image:linear-gradient(90deg,#000 calc(100% - 48
  <section class="clair"><div class="w">
   <h2 data-i="tc_gam" style="margin-bottom:24px"></h2>
   <div class="rangs">
-   <div class="rang app"><img src="img/g7.jpg" alt="" loading="lazy"><img src="img/g23.jpg" alt="" loading="lazy"><div><h3>Saint Samson</h3><p data-i="r_ss"></p></div></div>
-   <div class="rang app"><img src="img/g35.jpg" alt="" loading="lazy"><img src="img/g2.jpg" alt="" loading="lazy"><div><h3>Mercastel</h3><p data-i="r_me"></p></div></div>
-   <div class="rang app"><img src="img/g66.jpg" alt="" loading="lazy"><img src="img/g34.jpg" alt="" loading="lazy"><div><h3>Veines</h3><p data-i="r_ve"></p></div></div>
-   <div class="rang app"><img src="img/g17.jpg" alt="" loading="lazy"><img src="img/g41.jpg" alt="" loading="lazy"><div><h3>Le Moulin</h3><p data-i="r_mo"></p></div></div>
+   <div class="rang app"><img src="img/g7.jpg" alt="" loading="lazy"><img src="img/g23.jpg" alt="" loading="lazy"><div><h3>Saint Samson</h3><p data-i="r_ss"></p><p data-i="tc_tous" style="font-size:.88rem;color:var(--encre3);margin-top:6px"></p><p style="margin-top:14px"><button class="btn btn-feu" data-add="ech-ss"><span data-i="ech_g"></span></button></p></div></div>
+   <div class="rang app"><img src="img/g35.jpg" alt="" loading="lazy"><img src="img/g2.jpg" alt="" loading="lazy"><div><h3>Mercastel</h3><p data-i="r_me"></p><p data-i="tc_tous" style="font-size:.88rem;color:var(--encre3);margin-top:6px"></p><p style="margin-top:14px"><button class="btn btn-feu" data-add="ech-me"><span data-i="ech_g"></span></button></p></div></div>
+   <div class="rang app"><img src="img/g66.jpg" alt="" loading="lazy"><img src="img/g34.jpg" alt="" loading="lazy"><div><h3>Veines</h3><p data-i="r_ve"></p><p data-i="tc_tous" style="font-size:.88rem;color:var(--encre3);margin-top:6px"></p><p style="margin-top:14px"><button class="btn btn-feu" data-add="ech-ve"><span data-i="ech_g"></span></button></p></div></div>
+   <div class="rang app"><img src="img/g17.jpg" alt="" loading="lazy"><img src="img/g41.jpg" alt="" loading="lazy"><div><h3>Le Moulin</h3><p data-i="r_mo"></p><p data-i="tc_tous" style="font-size:.88rem;color:var(--encre3);margin-top:6px"></p><p style="margin-top:14px"><button class="btn btn-feu" data-add="ech-mo"><span data-i="ech_g"></span></button></p></div></div>
   </div>
   <div class="formats"><span class="f"><svg viewBox="0 0 24 24"><path d="M7 3h10l5 9-5 9H7l-5-9z"/></svg><span data-i="formats"></span></span></div>
   <p style="margin-top:20px;display:flex;gap:12px;flex-wrap:wrap"><button class="btn btn-feu" data-go="boutique" data-cat="ech"><span data-i="h_c2"></span></button><button class="btn btn-ligne" data-add="tc-m2"><span data-i="devis"></span></button></p>
@@ -775,7 +784,9 @@ nav.menu.deborde ul{-webkit-mask-image:linear-gradient(90deg,#000 calc(100% - 48
  <div class="tiroir-p" id="tiroirP">
   <p style="font-size:.88rem;color:var(--encre3)" data-i="pa_info"></p>
   <div class="r2" style="display:grid;grid-template-columns:1fr 1fr;gap:10px"><div><label for="pNom" data-i="co_nom"></label><input id="pNom" autocomplete="name"></div><div><label for="pMail" data-i="co_email"></label><input id="pMail" type="email" autocomplete="email"></div></div>
-  <p class="err" id="pErr" hidden data-i="co_err"></p>
+  <div><label for="pAdr" data-i="pa_adr"></label><input id="pAdr" autocomplete="street-address"></div>
+  <div class="r2" style="display:grid;grid-template-columns:1fr 1fr;gap:10px"><div><label for="pTel" data-i="co_tel2"></label><input id="pTel" type="tel" autocomplete="tel"></div><div><label for="pProj" data-i="pa_proj"></label><input id="pProj"></div></div>
+  <p class="err" id="pErr" hidden data-i="pa_err"></p>
   <button class="btn btn-feu" id="pEnv" style="justify-content:center"><span data-i="pa_env"></span></button>
   <p class="ok" id="pOk" hidden data-i="pa_ok"></p>
  </div>
@@ -1128,7 +1139,6 @@ a_end:L("Mur lisse (plâtre, placo, peinture minérale) : primaire d’accrocha
 a_pose:L("Sur chape mortier, ou à la colle sur chape existante. Possible sur un carrelage bien scellé. Comptez un joint clair d’environ 7 mm. Une notice de pose et d’entretien est fournie avec votre commande.","On a mortar screed, or glued onto an existing screed. Possible over well-bonded tiles. Allow a light joint of about 7 mm. A laying and care guide comes with your order.","Sobre recrecido de mortero o con cola sobre recrecido existente. Posible sobre baldosa bien fijada. Cuente una junta clara de unos 7 mm. Con su pedido van instrucciones de colocación y mantenimiento.","Im Mörtelbett oder geklebt auf vorhandenem Estrich. Auf festsitzenden Fliesen möglich. Helle Fuge von etwa 7 mm. Verlege- und Pflegeanleitung liegt der Bestellung bei.","Su massetto di malta, o incollate su massetto esistente. Possibile su piastrelle ben fissate. Prevedete una fuga chiara di circa 7 mm. Istruzioni di posa e manutenzione con l’ordine.","Op een mortelchape, of gelijmd op een bestaande chape. Kan op goed vastzittende tegels. Reken op een lichte voeg van ongeveer 7 mm. Leg- en onderhoudsinstructies bij uw bestelling."),
 a_vis:L("Visites toute l’année sur réservation, pour des groupes de 10 à 50 personnes : 2 heures, 8,50 € TTC par personne. Particulier ? Passez aux heures d’ouverture pour choisir vos carreaux sur place.","Tours all year by booking, for groups of 10 to 50: 2 hours, €8.50 incl. VAT per person. On your own? Drop by during opening hours to choose your tiles on site.","Visitas todo el año con reserva, para grupos de 10 a 50 personas: 2 horas, 8,50 € IVA incl. por persona. ¿Particular? Pase en horario de apertura para elegir sus baldosas allí.","Führungen ganzjährig nach Anmeldung, für Gruppen von 10 bis 50 Personen: 2 Stunden, 8,50 € inkl. MwSt. pro Person. Privat? Kommen Sie zu den Öffnungszeiten und wählen Sie vor Ort.","Visite tutto l’anno su prenotazione, per gruppi da 10 a 50 persone: 2 ore, 8,50 € IVA incl. a persona. Privati? Passate negli orari di apertura per scegliere sul posto.","Bezoeken het hele jaar op reservering, voor groepen van 10 tot 50: 2 uur, € 8,50 incl. btw per persoon. Particulier? Kom langs tijdens de openingsuren om ter plaatse te kiezen."),
 a_ech:L("Une matière se touche. Choisissez votre gamme dans la boutique, nous vous envoyons un exemplaire chez vous.","A material must be touched. Choose your range in the shop and we’ll send you a piece.","Un material se toca. Elija su gama en la tienda y le enviamos una pieza.","Material muss man fühlen. Wählen Sie Ihr Sortiment im Shop, wir senden Ihnen ein Exemplar.","Una materia si tocca. Scegliete la gamma nel negozio, vi spediamo un esemplare.","Materiaal moet je voelen. Kies uw reeks in de winkel, wij sturen u een exemplaar."),
-a_def:L("Je transmets volontiers à l’atelier : 03 44 82 40 22, du lundi au jeudi de 9 h à 12 h et de 13 h 30 à 17 h, le vendredi de 9 h à 12 h. Ou écrivez à info@carrelages-de-st-samson.com.","I’ll gladly pass this to the workshop: +33 3 44 82 40 22, Monday to Thursday 9–12 and 1:30–5, Friday 9–12. Or write to info@carrelages-de-st-samson.com.","Lo transmito con gusto al taller: +33 3 44 82 40 22, de lunes a jueves de 9 a 12 h y de 13:30 a 17 h, viernes de 9 a 12 h. O escriba a info@carrelages-de-st-samson.com.","Ich leite gern an die Werkstatt weiter: +33 3 44 82 40 22, Mo–Do 9–12 und 13:30–17 Uhr, Fr 9–12 Uhr. Oder schreiben Sie an info@carrelages-de-st-samson.com.","Lo giro volentieri al laboratorio: +33 3 44 82 40 22, lun–gio 9–12 e 13:30–17, ven 9–12. Oppure scrivete a info@carrelages-de-st-samson.com.","Ik geef het graag door aan het atelier: +33 3 44 82 40 22, ma–do 9–12 u en 13.30–17 u, vr 9–12 u. Of mail naar info@carrelages-de-st-samson.com."),
 b_tc:L("Voir les terres cuites","See terracotta","Ver barro cocido","Terrakotta ansehen","Vedere il cotto","Terracotta bekijken"),
 b_calc:L("Ouvrir le calculateur","Open the calculator","Abrir la calculadora","Rechner öffnen","Aprire il calcolatore","Rekentool openen"),
 b_huile:L("Ajouter l’huile dure","Add the hard oil","Añadir el aceite duro","Hartöl hinzufügen","Aggiungere l’olio duro","Harde olie toevoegen"),
@@ -1152,6 +1162,20 @@ b_rea:L("Voir les réalisations","See projects","Ver realizaciones","Referenzen 
 b_devis:L("Ouvrir ma sélection","Open my selection","Abrir mi selección","Auswahl öffnen","Aprire la selezione","Mijn selectie openen"),
 b_ecrire:L("Écrire à l’atelier avec ma question","Write to the workshop with my question","Escribir al taller con mi pregunta","Mit meiner Frage an die Werkstatt schreiben","Scrivere al laboratorio con la mia domanda","Mijn vraag naar het atelier sturen"),
 tel:L("Appeler","Call","Llamar","Anrufen","Chiamare","Bellen"),
+a_def:L("Je ne sais pas répondre à cela. L’atelier, si : 03 44 82 40 22, du lundi au jeudi 9 h – 12 h et 13 h 30 – 17 h, le vendredi 9 h – 12 h. Vous pouvez aussi lui écrire votre question.","I can’t answer that, but the workshop can: +33 3 44 82 40 22, Monday to Thursday 9–12 and 1:30–5, Friday 9–12. You can also send them your question.","No sé responder a eso, pero el taller sí: +33 3 44 82 40 22, de lunes a jueves 9–12 h y 13:30–17 h, viernes 9–12 h. También puede escribirles su pregunta.","Darauf weiß ich keine Antwort, die Werkstatt schon: +33 3 44 82 40 22, Mo–Do 9–12 und 13:30–17 Uhr, Fr 9–12 Uhr. Sie können Ihre Frage auch schriftlich senden.","Non so rispondere, ma il laboratorio sì: +33 3 44 82 40 22, lun–gio 9–12 e 13:30–17, ven 9–12. Potete anche scrivere la vostra domanda.","Daar weet ik geen antwoord op, het atelier wel: +33 3 44 82 40 22, ma–do 9–12 u en 13.30–17 u, vr 9–12 u. U kunt uw vraag ook schrijven."),
+a_delai:L("Le devis vous parvient sous 48 heures ouvrées. Le délai de fabrication et de livraison dépend du stock, de la gamme et de la quantité : l’atelier vous le précise avec le devis.","The quote reaches you within 48 working hours. Production and delivery times depend on stock, range and quantity: the workshop confirms them with the quote.","El presupuesto le llega en 48 horas laborables. El plazo de fabricación y entrega depende del stock, la gama y la cantidad: el taller se lo indica con el presupuesto.","Das Angebot erhalten Sie binnen 48 Werktagsstunden. Fertigungs- und Lieferzeit hängen von Lager, Sortiment und Menge ab: Die Werkstatt nennt sie mit dem Angebot.","Il preventivo arriva entro 48 ore lavorative. I tempi di produzione e consegna dipendono da scorte, gamma e quantità: il laboratorio li indica con il preventivo.","De offerte bereikt u binnen 48 werkuren. Productie- en levertijd hangen af van voorraad, reeks en hoeveelheid: het atelier vermeldt ze bij de offerte."),
+a_chauff:L("Oui. La terre cuite donne d’excellents résultats sur plancher chauffant, et ce dans toutes nos gammes.","Yes. Terracotta performs excellently over underfloor heating, in every one of our ranges.","Sí. El barro cocido da excelentes resultados sobre suelo radiante, en todas nuestras gamas.","Ja. Terrakotta funktioniert hervorragend auf Fußbodenheizung, in allen unseren Sortimenten.","Sì. Il cotto dà ottimi risultati su riscaldamento a pavimento, in tutte le nostre gamme.","Ja. Terracotta geeft uitstekende resultaten op vloerverwarming, in al onze reeksen."),
+a_gel:L("Pour un usage extérieur ou une région exposée au gel, l’atelier vous conseille au cas par cas, selon la gamme et la pose. Plusieurs terrasses figurent dans nos réalisations.","For outdoor use or frost-exposed areas, the workshop advises case by case, depending on range and laying. Several terraces appear in our projects.","Para exterior o zonas con heladas, el taller le aconseja caso por caso, según la gama y la colocación. Varias terrazas figuran en nuestras realizaciones.","Für den Außenbereich oder frostgefährdete Lagen berät die Werkstatt im Einzelfall, je nach Sortiment und Verlegung. Mehrere Terrassen finden Sie in unseren Referenzen.","Per l’esterno o zone esposte al gelo, il laboratorio consiglia caso per caso, secondo gamma e posa. Diverse terrazze sono tra le nostre realizzazioni.","Voor buiten of vorstgevoelige plekken adviseert het atelier per geval, afhankelijk van reeks en plaatsing. Verschillende terrassen staan bij onze projecten."),
+a_reno:L("Une vieille demeure ? Nos carreaux sont faits pour elle : leurs irrégularités donnent, une fois posés, le charme des sols d’antan. Pour les murs, nos enduits d’argile accrochent sur torchis, pierre ou brique, et nos éco-matériaux (chaux, chanvre) respectent le bâti ancien. Une visite sur place aide beaucoup à choisir.","An old house? Our tiles are made for it: once laid, their irregularities give the charm of old floors. For walls, our clay plasters bond to cob, stone or brick, and our eco-materials (lime, hemp) respect old buildings. A visit on site really helps you choose.","¿Una casa antigua? Nuestras baldosas están hechas para ella: sus irregularidades dan, una vez colocadas, el encanto de los suelos de antaño. Para las paredes, nuestros revocos se agarran a adobe, piedra o ladrillo, y nuestros ecomateriales (cal, cáñamo) respetan la construcción antigua. Una visita ayuda mucho a elegir.","Ein altes Haus? Dafür sind unsere Fliesen gemacht: Verlegt geben ihre Unregelmäßigkeiten den Charme alter Böden. Für Wände haften unsere Lehmputze auf Stroh-Lehm, Stein oder Ziegel, und unsere Öko-Baustoffe (Kalk, Hanf) schonen die alte Bausubstanz. Ein Besuch vor Ort hilft sehr bei der Wahl.","Una dimora antica? Le nostre piastrelle sono fatte per lei: posate, le loro irregolarità danno il fascino dei pavimenti d’un tempo. Per i muri, i nostri intonaci aderiscono su torchis, pietra o mattone, e gli eco-materiali (calce, canapa) rispettano l’edificio antico. Una visita aiuta molto a scegliere.","Een oud huis? Daar zijn onze tegels voor gemaakt: eenmaal gelegd geven hun onregelmatigheden de charme van vroeger. Voor muren hecht onze leempleister op vakwerk, steen of baksteen, en onze eco-materialen (kalk, hennep) respecteren oude gebouwen. Een bezoek ter plaatse helpt echt bij het kiezen."),
+a_cat:L("Le catalogue des produits est envoyé sur demande, par e-mail. Écrivez à info@carrelages-de-st-samson.com.","The product catalogue is sent on request by email. Write to info@carrelages-de-st-samson.com.","El catálogo se envía a petición por correo. Escriba a info@carrelages-de-st-samson.com.","Der Produktkatalog wird auf Anfrage per E-Mail verschickt. Schreiben Sie an info@carrelages-de-st-samson.com.","Il catalogo prodotti è inviato su richiesta via e-mail. Scrivete a info@carrelages-de-st-samson.com.","De productcatalogus wordt op aanvraag per e-mail verstuurd. Schrijf naar info@carrelages-de-st-samson.com."),
+a_mesure:L("Oui : chaque format existe dans chaque gamme, et l’atelier personnalise aussi les motifs émaillés et les parements en terre crue.","Yes: every format exists in every range, and the workshop also customises glazed patterns and raw-earth panels.","Sí: cada formato existe en cada gama, y el taller también personaliza los motivos esmaltados y los revestimientos de tierra cruda.","Ja: Jedes Format gibt es in jedem Sortiment, und die Werkstatt gestaltet auch glasierte Motive und Lehmverblender nach Wunsch.","Sì: ogni formato esiste in ogni gamma, e il laboratorio personalizza anche i motivi smaltati e i rivestimenti in terra cruda.","Ja: elk formaat bestaat in elke reeks, en het atelier personaliseert ook geglazuurde motieven en leempanelen."),
+a_qui:L("Guillaume et Thomas Alglave, deux frères de l’Oise, ont repris la manufacture en 2008. Ils ont tout appris auprès des trois salariés en poste.","Guillaume and Thomas Alglave, two brothers from the Oise, took over the works in 2008. They learned everything from its three craftsmen.","Guillaume y Thomas Alglave, dos hermanos del Oise, retomaron la manufactura en 2008. Lo aprendieron todo de sus tres empleados.","Guillaume und Thomas Alglave, zwei Brüder aus der Oise, übernahmen die Manufaktur 2008. Alles lernten sie von den drei Mitarbeitern.","Guillaume e Thomas Alglave, due fratelli dell’Oise, hanno rilevato la manifattura nel 2008. Hanno imparato tutto dai tre dipendenti.","Guillaume en Thomas Alglave, twee broers uit de Oise, namen de manufactuur in 2008 over. Ze leerden alles van de drie medewerkers."),
+b_manu:L("Découvrir la manufacture","Discover the works","Descubrir la manufactura","Die Manufaktur entdecken","Scoprire la manifattura","De manufactuur ontdekken"),
+pa_adr:L("Adresse de livraison","Delivery address","Dirección de entrega","Lieferadresse","Indirizzo di consegna","Leveringsadres"),
+pa_proj:L("Votre projet (surface, pièce, délai)","Your project (area, room, timing)","Su proyecto (superficie, estancia, plazo)","Ihr Projekt (Fläche, Raum, Zeitplan)","Il vostro progetto (superficie, stanza, tempi)","Uw project (oppervlakte, ruimte, timing)"),
+pa_err:L("Merci d’indiquer votre nom, un e-mail valide et votre adresse de livraison.","Please enter your name, a valid email and your delivery address.","Indique su nombre, un correo válido y su dirección de entrega.","Bitte Name, gültige E-Mail und Lieferadresse angeben.","Indicate nome, e-mail valida e indirizzo di consegna.","Vul uw naam, een geldig e-mailadres en uw leveringsadres in."),
+ech_g:L("Recevoir un échantillon","Get a sample","Recibir una muestra","Muster anfordern","Ricevere un campione","Staal ontvangen"),
+tc_tous:L("Chaque format existe dans chaque gamme.","Every format exists in every range.","Cada formato existe en cada gama.","Jedes Format gibt es in jedem Sortiment.","Ogni formato esiste in ogni gamma.","Elk formaat bestaat in elke reeks."),
 b_contact:L("Contacter l’atelier","Contact the workshop","Contactar con el taller","Werkstatt kontaktieren","Contattare il laboratorio","Atelier contacteren")
 };
 
@@ -1370,7 +1394,7 @@ function fermerTiroir(){$('#tiroir').classList.remove('on');$('#voile').classLis
 window.fermerTiroir=fermerTiroir;
 $('#btnPanier').onclick=ouvrirTiroir;$('#fermerTiroir').onclick=fermerTiroir;$('#voile').onclick=()=>{fermerTiroir();};
 const mailOk=v=>/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(v);
-$('#pEnv').onclick=()=>{const ok=$('#pNom').value.trim()&&mailOk($('#pMail').value.trim());$('#pErr').hidden=!!ok;if(!ok)return;$('#pOk').hidden=false;panier=[];sauver();setTimeout(()=>{renderPanier();$('#pOk').hidden=true},2600);};
+$('#pEnv').onclick=()=>{const ok=$('#pNom').value.trim()&&mailOk($('#pMail').value.trim())&&$('#pAdr').value.trim();$('#pErr').hidden=!!ok;if(!ok)return;$('#pOk').hidden=false;panier=[];sauver();setTimeout(()=>{renderPanier();$('#pOk').hidden=true},2600);};
 function toast(m){const e=$('#toast');e.textContent=m;e.classList.add('on');clearTimeout(e._t);e._t=setTimeout(()=>e.classList.remove('on'),2200);}
 $('#emAjout').onclick=()=>{if(emSel)ajouter('email','img:'+emSel);};
 $('#faAjout').onclick=()=>{ajouter('faience','img:'+motifSel+'|'+$('#faCouleur').value.trim().slice(0,40));};
@@ -1389,16 +1413,23 @@ const dmin=new Date(Date.now()+86400000*3).toISOString().slice(0,10);$('#rvDate'
 /* ---------- conseiller ---------- */
 let chatOuvert=false;
 const INT=[
+ ['','a_qui',[['b_manu',()=>{fermerChat();go('manufacture')}]],/qui (êtes|etes|sont)|who are|quién|wer (sind|ist)|chi siete|wie zijn|alglave|guillaume|thomas|fondateur|founder|propriétaire|owner/i],
+ ['','a_cat',[['b_contact',()=>{fermerChat();go('contact')}]],/catalogue|catalog|catálogo|katalog|catalogo|pdf|brochure/i],
+ ['','a_delai',[['b_devis',()=>{fermerChat();ouvrirTiroir()}]],/délai|delai|combien de temps|how long|lead time|when will|plazo|cuánto tarda|lieferzeit|wie lange|tempi|quanto tempo|levertijd|hoe lang/i],
+ ['','a_chauff',[['b_tc',()=>{fermerChat();go('terres-cuites')}]],/plancher chauffant|chauffage au sol|underfloor|floor heating|suelo radiante|fußbodenheizung|fussbodenheizung|riscaldamento a pavimento|vloerverwarming/i],
+ ['','a_gel',[['b_contact',()=>{fermerChat();go('contact')}]],/\bgel|frost|helad|hielo|\bgelo|vorst|terrasse|terrace|terraza|outdoor|extérieur|exterieur|außen|esterno|buiten/i],
+ ['','a_mesure',[['b_contact',()=>{fermerChat();go('contact')}]],/sur mesure|personnalis|custom|made to measure|a medida|nach maß|nach mass|su misura|op maat/i],
+ ['','a_reno',[['b_vis',()=>{fermerChat();go('vie',{ancre:'reserver'})}]],/longère|longere|rénov|renov|ancien|old house|vieja|antigua|altbau|antica|oud huis|bauernhaus|farmhouse/i],
  ['q_devis','a_devis',[['b_devis',()=>{fermerChat();ouvrirTiroir()}],['b_ech',()=>{fermerChat();go('boutique',{cat:'ech'})}]],/prix|price|precio|preis|prezzo|prijs|coût|cout|cost|cuesta|kost|costa|tarif|devis|quote|presupuesto|angebot|preventivo|offerte/i],
- ['','a_etr',[['b_calc',()=>{fermerChat();go('accueil',{ancre:'calcSec'})}]],/belgi|suisse|switzerland|europ|étranger|etranger|abroad|extranjero|ausland|estero|buitenland|international|uk\b|angleterre|england|deutschland|allemagne|nederland|pays-bas|holland|españa|espagne|ital/i],
- ['','a_sdb',[['b_rea',()=>{fermerChat();go('realisations')}]],/salle de bain|bathroom|baño|bad\b|badezimmer|bagno|badkamer|douche|shower|ducha|dusche|doccia|extérieur|exterieur|terrasse|outdoor|terrace|terraza|außen|esterno|buiten/i],
- ['','a_adr',[['b_contact',()=>{fermerChat();go('contact')}]],/adresse|address|dirección|direccion|où |where|dónde|wo |dove|waar|itinéraire|route|venir|come to|llegar|anfahrt/i],
+ ['','a_etr',[['b_calc',()=>{fermerChat();go('accueil',{ancre:'calcSec'})}]],/belgi|suisse|switzerland|europ|étranger|etranger|abroad|extranjero|ausland|estero|buitenland|international|\buk\b|angleterre|england|deutschland|allemagne|nederland|pays-bas|holland|españa|espagne|\bital(ie|y|ia|ien|ië)\b|luxembourg|schweiz/i],
+ ['','a_sdb',[['b_rea',()=>{fermerChat();go('realisations')}]],/salle de bain|bathroom|baño|\bbad\b|badezimmer|bagno|badkamer|douche|shower|ducha|dusche|doccia/i],
+ ['','a_adr',[['b_contact',()=>{fermerChat();go('contact')}]],/adresse|address|dirección|direccion|où êtes|où se trouve|where are|where is|dónde|\bwo\b|dove|waar|itinéraire|venir|come to|llegar|anfahrt|samedi|saturday|sábado|samstag|sabato|zaterdag/i],
  ['','a_bonjour',[],/^(bonjour|salut|hello|hi|hola|hallo|ciao|buongiorno|goedendag|guten tag|bonsoir)\b/i],
- ['q_piece','a_piece',[['b_tc',()=>{fermerChat();go('terres-cuites')}],['b_ech',()=>{fermerChat();go('boutique',{cat:'ech'})}]],/pi[eè]ce|room|estancia|raum|stanza|kamer|cuisine|kitchen|cocina|küche|cucina|keuken|choisir|choose|elegir|wählen|scegl|kiez|gamme|range|mercastel|samson|veine|chauff|heating|radiant|heizung/i],
- ['q_calc','a_calc',[['b_calc',()=>{fermerChat();go('accueil',{ancre:'calcSec'})}]],/m²|m2|metre|meter|véhicule|vehicle|veh[ií]culo|fahrzeug|veicolo|voertuig|poids|weight|peso|gewicht|gewicht|transport|livraison|deliver|entrega|liefer|consegna|lever/i],
+ ['q_piece','a_piece',[['b_tc',()=>{fermerChat();go('terres-cuites')}],['b_ech',()=>{fermerChat();go('boutique',{cat:'ech'})}]],/quelle terre|which terracotta|qué barro|welche terrakotta|quale cotto|welke terracotta|cuisine|kitchen|cocina|küche|cucina|keuken|choisir|choose|elegir|wählen|scegl|kiez|gamme|range|mercastel|samson|veine/i],
+ ['q_calc','a_calc',[['b_calc',()=>{fermerChat();go('accueil',{ancre:'calcSec'})}]],/m²|m2|véhicule|vehicle|veh[ií]culo|fahrzeug|veicolo|voertuig|poids|weight|peso|gewicht|transport/i],
  ['q_ent','a_ent',[['b_huile',()=>ajouter('huile')]],/entret|nettoy|care|clean|manten|limp|pflege|reinig|manuten|pul|onderhoud|schoon|huile|oil|aceite|öl|olio|olie|tache|stain|mancha|fleck|macchia|vlek/i],
  ['q_end','a_end',[['b_end',()=>{fermerChat();go('enduits')}]],/enduit|plaster|revoco|putz|intonac|pleister|stuc|mur|wall|pared|wand|muro|muur|teinte|shade|tono|farbton|tinta|tint/i],
- ['q_pose','a_pose',[['b_tc',()=>{fermerChat();go('terres-cuites')}]],/pose|lay|coloc|verleg|posa|leggen|plaats|colle|glue|cola|kleb|colla|lijm|joint|grout|junta|fuge|fuga|voeg|chape|screed/i],
+ ['q_pose','a_pose',[['b_tc',()=>{fermerChat();go('terres-cuites')}]],/poser|pose |how to lay|laying|coloc|verleg|posa|leggen|plaats|colle|glue|cola|kleb|colla|lijm|joint|grout|junta|fuge|fuga|voeg|chape|screed/i],
  ['q_vis','a_vis',[['b_vis',()=>{fermerChat();go('vie',{ancre:'reserver'})}]],/visit|tour|führung|bezoek|rondleid|groupe|group|grupo|gruppe|gruppo|groep|horaire|hours|horario|öffnung|orari|open/i],
  ['q_ech','a_ech',[['b_ech',()=>{fermerChat();go('boutique',{cat:'ech'})}]],/échantillon|echantillon|sample|muestra|muster|campion|staal/i]
 ];
@@ -1423,7 +1454,7 @@ addEventListener('scroll',frise,{passive:true});
 function menuFade(){const m=$('#menu'),u=$('#menu ul');m.classList.toggle('deborde',u.scrollWidth-u.clientWidth-u.scrollLeft>8);}
 $('#menu ul').addEventListener('scroll',menuFade,{passive:true});addEventListener('resize',menuFade);
 
-const PTI={manufacture:'photoG','terres-cuites':'g58',emaillees:'g84',faiences:'g90',enduits:'g127','terre-crue':'g170',eco:'cycled1',boutique:'g13',realisations:'g83',videos:'yt_bXoCk_JM8cc',vie:'visite',partenaires:'g44',contact:'voe6861'};
+const PTI={manufacture:'photoG','terres-cuites':'g58',emaillees:'g84',faiences:'g90',enduits:'g127','terre-crue':'g170',eco:'cycled1',boutique:'g13',realisations:'g83',videos:'yt_bXoCk_JM8cc',vie:'yt_IvJQG0sNtHE',partenaires:'g44',contact:'g64'};
 Object.entries(PTI).forEach(([v,im])=>{const w=document.querySelector(`.vue[data-vue="${v}"] .page-tete .w`);if(w){const d=document.createElement('div');[...w.children].forEach(c=>d.appendChild(c));w.appendChild(d);const i=document.createElement('img');i.className='pt-img';i.src='img/'+im+'.jpg';i.alt='';w.appendChild(i);}});
 /* ---------- démarrage ---------- */
 initLang();solConstruire();applyLang();
