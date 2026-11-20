@@ -39,7 +39,7 @@ button,input,select,textarea{font:inherit;color:inherit}
 /* en-tête */
 header{position:sticky;top:0;z-index:40;background:color-mix(in srgb,var(--papier) 94%,transparent);backdrop-filter:saturate(1.2);border-bottom:1px solid var(--trait)}
 .bar{display:flex;align-items:center;gap:22px;padding:12px 28px;margin:0 14px;border-left:1px solid var(--trait);border-right:1px solid var(--trait)}
-.marque{display:flex;align-items:baseline;gap:12px;text-decoration:none;flex:none}
+.marque{display:flex;align-items:center;gap:12px;text-decoration:none;flex:none;min-height:44px}
 .marque b{font:italic 900 30px/1 var(--titre);font-stretch:125%;letter-spacing:-.02em}
 .marque small{font:400 11px/1.25 var(--mono);color:var(--gris);text-transform:uppercase;max-width:9.5em}
 nav.principal{display:flex;gap:4px;margin-left:auto}
@@ -70,6 +70,7 @@ h1 em{font-style:normal;color:var(--forge)}
 .actions{display:flex;flex-wrap:wrap;gap:12px;margin-bottom:40px}
 .preuves{display:flex;flex-wrap:wrap;gap:0 28px;margin:0;padding:0;list-style:none;border-top:1px solid var(--trait)}
 .preuves li{display:flex;align-items:center;gap:10px;padding-top:14px;font-size:14.5px;font-weight:600;white-space:nowrap}
+.preuves li+li::before{content:"";width:1px;height:14px;background:var(--trait);margin-right:18px}
 .preuves svg{color:var(--forge)}
 .plaque{position:relative;background:var(--noir);overflow:hidden;display:flex;align-items:center;justify-content:center;border-left:1px solid var(--trait)}
 .plaque .scene{position:relative;width:min(88%,520px);aspect-ratio:1}
@@ -112,7 +113,7 @@ h2{font:800 clamp(30px,3.8vw,54px)/1.02 var(--titre);font-stretch:112%;letter-sp
 .p1>svg{max-width:340px;margin:auto auto 28px}.p1 h3{margin-top:auto}
 .piece h3{font:700 21px/1.15 var(--titre);font-stretch:108%;margin:0}
 .piece p{margin:0;color:var(--gris);font-size:15px}
-.piece a{margin-top:auto;font-weight:700;font-size:14.5px;text-decoration:none;display:inline-flex;gap:8px;align-items:center}
+.piece a{margin-top:auto;font-weight:700;font-size:14.5px;text-decoration:none;display:inline-flex;gap:8px;align-items:center;min-height:44px}
 .piece a:hover{color:var(--forge)}
 .p1{grid-column:span 5;grid-row:span 2}.p2{grid-column:span 4}.p3{grid-column:span 3}.p4{grid-column:span 4}.p5{grid-column:span 3}.p6{grid-column:span 12;display:grid;grid-template-columns:minmax(0,1.6fr) minmax(0,1fr);column-gap:40px;align-items:center}
 .p6{align-content:center}.p6>svg{grid-row:1/4;max-width:560px}.p6 a{margin-top:6px}.p6 h3,.p6 p,.p6 a{grid-column:2}
@@ -181,7 +182,7 @@ table.nuances{width:100%;border-collapse:collapse;border:1px solid var(--trait);
 .demande>div{padding:clamp(48px,7vw,96px) clamp(24px,5vw,72px)}
 .demande>div+div{border-left:1px solid var(--trait);background:var(--papier-2)}
 form.rfq{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--trait);border:1px solid var(--trait);margin-top:28px}
-.champ{background:var(--papier);padding:10px 14px 12px;display:flex;flex-direction:column;gap:4px;position:relative}
+.champ{scroll-margin-top:120px;background:var(--papier);padding:10px 14px 12px;display:flex;flex-direction:column;gap:4px;position:relative}
 .champ.large{grid-column:1/-1}
 .champ label,.champ legend{font:400 12px var(--mono);text-transform:uppercase;letter-spacing:.04em;color:var(--gris)}
 .champ input,.champ select,.champ textarea{min-width:0;width:100%;border:0;background:transparent;padding:4px 0;font-size:16px;border-bottom:1px solid transparent;border-radius:0}
@@ -278,7 +279,7 @@ footer{border-top:1px solid var(--trait)}
   .hero-texte{padding:36px 20px 32px}
   h1{font-size:clamp(34px,9.6vw,44px)}
   .actions .btn{flex:1 1 100%;justify-content:center}
-  .preuves{flex-direction:column}.preuves li{padding-top:12px;white-space:normal}
+  .preuves{flex-direction:column}.preuves li{padding-top:12px;white-space:normal}.preuves li+li::before{display:none}
   .p1,.p2,.p3,.p4,.p5,.p6{grid-column:span 12}.p6{display:flex;align-items:stretch}
   .p7{flex-direction:column;align-items:flex-start}
   .inner,.duo>div,.demande>div{padding:52px 20px}
@@ -342,9 +343,9 @@ h1,h2,h3,.delai,.secteurs{overflow-wrap:break-word}
       <a class="btn vide" href="#nuances" data-i="cta2">Parcourir les nuances</a>
     </div>
     <ul class="preuves">
-      <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg><span data-i="pr1">Réponse sous 48 heures</span></li>
-      <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M5 3h10l4 4v14H5z"/><path d="M8.5 13l2.5 2.5 4.5-5"/></svg><span data-i="pr2">Certificats et P.V. de contrôle</span></li>
-      <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M3 20h18M6 20V10M12 20V6M18 20V3"/></svg><span data-i="pr3">Du prototype à la grande série</span></li>
+      <li><span data-i="pr1">Réponse sous 48 heures</span></li>
+      <li><span data-i="pr2">Certificats et P.V. de contrôle</span></li>
+      <li><span data-i="pr3">Du prototype à la grande série</span></li>
     </ul>
   </div>
   <div class="plaque" id="plaque">
@@ -377,7 +378,7 @@ h1,h2,h3,.delai,.secteurs{overflow-wrap:break-word}
         </g>
       </svg>
     </div>
-    <div class="legende"><span data-ih="leg">Brut de forge, à la sortie du feu. <b>Photo MFD</b></span></div>
+    <div class="legende"><span data-ih="leg">Brut de forge, à la sortie du feu.</span></div>
   </div>
 </section>
 
@@ -465,7 +466,7 @@ h1,h2,h3,.delai,.secteurs{overflow-wrap:break-word}
         <div class="champ large"><label for="f_msg" data-i="f_msg">Votre besoin (norme DIN / ISO, dimensions, délai…)</label><textarea id="f_msg" name="msg"></textarea></div>
         <div class="envoi"><p data-i="f_note">Votre messagerie s'ouvre avec la demande prête, adressée à contact@mfd74.fr. Joignez-y votre plan.</p><button class="btn chaud" type="submit" data-i="f_go">Préparer l'envoi</button></div>
       </form>
-      <p class="ok" id="ok" role="status" data-i="f_ok">Votre demande est prête dans votre messagerie : ajoutez votre plan, puis envoyez.</p>
+      <div class="ok" id="ok" role="status"><p style="margin:0 0 6px" data-i="f_ok">Votre demande est prête dans votre messagerie : ajoutez votre plan, puis envoyez.</p><p style="margin:0 0 12px;font-weight:400;color:var(--gris)" data-i="f_fb">Si votre messagerie ne s'ouvre pas, copiez la demande et envoyez-la à contact@mfd74.fr avec votre plan.</p><button type="button" class="btn vide" id="copier" data-i="copier">Copier la demande</button></div>
     </div>
     <div>
       <div class="coord">
@@ -514,7 +515,7 @@ fr:{baseline:"Mécanique Forge Décolletage",n_fab:"Fabrications",n_srv:"Service
 h1:"Pièces inox et superalliages, <em>forgées à chaud</em> puis usinées.",
 lead:"Spécialiste de la production de composants mécaniques et de visserie normalisée DIN ou ISO en <span class=\"mono\">1.4462 · 1.4539 · 1.4410 · 1.4501 · 1.4507</span>, à partir de barre ou de brut de forge.",
 cta2:"Parcourir les nuances",pr1:"Réponse sous 48 heures",pr2:"Certificats et P.V. de contrôle",pr3:"Du prototype à la grande série",
-alt_forge:"Tête de pièce forgée à chaud, incandescente, à la sortie du feu",leg:"Brut de forge, à la sortie du feu. <b>Photo MFD</b>",
+alt_forge:"Tête de pièce forgée à chaud, incandescente, à la sortie du feu",leg:"Brut de forge, à la sortie du feu.",
 fab_t:"Du brut de forge à la pièce finie",fab_p1:"Spécialiste des pièces en inox et en superalliage, MFD allie forge à chaud et usinage pour couvrir une large gamme de produits.",fab_p2:"Visserie normalisée ou composant mécanique suivant spécification : notre outil de production apporte la solution juste, du prototype à la grande série.",
 pz:{forgee:["Pièces forgées","Forgées à chaud, puis usinées selon votre plan."],boulon:["Boulons","Normalisés DIN ou ISO, ou suivant plan."],ecrou:["Écrous","Normalisés DIN ou ISO, ou suivant plan."],goujon:["Goujons","Normalisés ou suivant plan."],oeil:["Vis à œil","Normalisées ou suivant plan."],meca:["Pièces mécaniques","Composants décolletés suivant spécification, à partir de barre."],forme:["Toutes formes selon vos caractéristiques","Une pièce hors catalogue ? Envoyez le plan : nous l'étudions."]},
 ask:"Demander un prix",
@@ -540,7 +541,7 @@ m:["Usage courant, atmosphère humide","Eau de mer, chlorures, chimie","Haute te
 r:["Les austénitiques 304L (1.4307) et 316L (1.4404) sont les choix les plus courants. Le 316L, au molybdène, résiste mieux à la corrosion.","En milieu marin ou chimique, on regarde vers les duplex 329LN (1.4462, Uranus 45N) et 32550 (1.4507, Uranus 52N+), ou le 904L (1.4539, Uranus B6). Pour les cas extrêmes : Inconel 625 ou Monel 400.","Pour la tenue à chaud : 310 (1.4845, NS 30), Incoloy 800 / 800HT, Inconel 600 / 601, Nimonic 75 / 90.","Pour les fortes charges : 630 (1.4542, F16PH), 660 (Fluginox 130), 431 (1.4057), et en visserie les grades B7 / B8M (ASTM A193, A320).","Titane grade 2 (T40) ou grade 5 (TA6V)."],
 r_val:"Une orientation à confirmer avec nos techniciens, d'après votre cahier des charges.",
 r_dem:"Pour chiffrer, il nous faut votre plan (ou la norme DIN / ISO), la nuance, la quantité et les documents souhaités. Réponse sous 48 heures.",
-r_del:"Notre organisation nous permet de répondre à vos demandes sous 48 heures, du prototype à la grande série.",
+r_del:"Nous répondons à vos demandes de prix sous 48 heures, du prototype à la grande série. Le délai de fabrication vous est indiqué dans cette réponse.",copier:"Copier la demande",copie:"Demande copiée",f_fb:"Si votre messagerie ne s'ouvre pas, copiez la demande et envoyez-la à contact@mfd74.fr avec votre plan.",
 r_cert:"Certificats d'analyse chimique, certificats d'essais mécaniques et P.V. de contrôle sont disponibles, pour une production conforme aux standards commandés.",
 r_pcs:"Pièces forgées, boulons, écrous, goujons, vis à œil et pièces mécaniques, en visserie normalisée DIN ou ISO ou suivant plan, et toutes formes selon vos caractéristiques.",
 r_loc:"MFD, 1051 route de Bidaille, 74930 Scientrier (Haute-Savoie). Tél. 04 50 97 01 71 · contact@mfd74.fr",
@@ -551,7 +552,7 @@ en:{baseline:"Mechanics · Forging · Bar turning",n_fab:"Products",n_srv:"Servi
 h1:"Stainless and superalloy parts, <em>hot-forged</em> then machined.",
 lead:"Specialists in mechanical components and DIN or ISO standard fasteners in <span class=\"mono\">1.4462 · 1.4539 · 1.4410 · 1.4501 · 1.4507</span>, from bar stock or forged blanks.",
 cta2:"Browse our grades",pr1:"Reply within 48 hours",pr2:"Certificates and inspection reports",pr3:"From prototype to mass production",
-alt_forge:"Hot-forged part head, glowing, straight out of the fire",leg:"Forged blank, straight out of the fire. <b>MFD photo</b>",
+alt_forge:"Hot-forged part head, glowing, straight out of the fire",leg:"Forged blank, straight out of the fire.",
 fab_t:"From forged blank to finished part",fab_p1:"Specialists in stainless steel and superalloy parts, MFD combines hot forging and machining to cover a wide range of products.",fab_p2:"Standard fasteners or mechanical parts to specification: our production facilities deliver the right solution, from prototype to mass production.",
 pz:{forgee:["Forged parts","Hot-forged, then machined to your drawing."],boulon:["Bolts","DIN or ISO standard, or to drawing."],ecrou:["Nuts","DIN or ISO standard, or to drawing."],goujon:["Studs","Standard or to drawing."],oeil:["Eye bolts","Standard or to drawing."],meca:["Mechanical parts","Bar-turned components to specification."],forme:["Any shape to your specifications","A part that isn't in a catalogue? Send the drawing and we'll study it."]},
 ask:"Request a quote",
@@ -577,7 +578,7 @@ m:["General use, humid air","Seawater, chlorides, chemicals","High temperature",
 r:["The austenitic grades 304L (1.4307) and 316L (1.4404) are the most common choices. 316L, with molybdenum, resists corrosion better.","For marine or chemical environments, look at the duplex grades 329LN (1.4462, Uranus 45N) and 32550 (1.4507, Uranus 52N+), or 904L (1.4539, Uranus B6). For extreme cases: Inconel 625 or Monel 400.","For heat resistance: 310 (1.4845, NS 30), Incoloy 800 / 800HT, Inconel 600 / 601, Nimonic 75 / 90.","For heavy loads: 630 (1.4542, F16PH), 660 (Fluginox 130), 431 (1.4057), and for fasteners grades B7 / B8M (ASTM A193, A320).","Titanium grade 2 (T40) or grade 5 (TA6V)."],
 r_val:"A first pointer, to be confirmed by our engineers against your specification.",
 r_dem:"To quote, we need your drawing (or the DIN / ISO standard), the grade, the quantity and the documents you require. Reply within 48 hours.",
-r_del:"Our organisation lets us answer your requests within 48 hours, from prototype to mass production.",
+r_del:"We answer quote requests within 48 hours, from prototype to mass production. The manufacturing lead time is given in that answer.",copier:"Copy the request",copie:"Request copied",f_fb:"If your email app doesn't open, copy the request and send it to contact@mfd74.fr with your drawing.",
 r_cert:"Chemical analysis certificates, mechanical test certificates and inspection reports are available, for production that meets the standards you ordered.",
 r_pcs:"Forged parts, bolts, nuts, studs, eye bolts and mechanical parts, as DIN or ISO standard fasteners or to drawing, and any shape to your specifications.",
 r_loc:"MFD, 1051 route de Bidaille, 74930 Scientrier (Haute-Savoie, France). Tel. +33 4 50 97 01 71 · contact@mfd74.fr",
@@ -588,7 +589,7 @@ es:{baseline:"Mecánica · Forja · Decoletaje",n_fab:"Fabricación",n_srv:"Serv
 h1:"Piezas de inox y superaleaciones, <em>forjadas en caliente</em> y mecanizadas.",
 lead:"Especialistas en componentes mecánicos y tornillería normalizada DIN o ISO en <span class=\"mono\">1.4462 · 1.4539 · 1.4410 · 1.4501 · 1.4507</span>, a partir de barra o de pieza forjada en bruto.",
 cta2:"Ver las calidades",pr1:"Respuesta en 48 horas",pr2:"Certificados e informes de control",pr3:"Del prototipo a la gran serie",
-alt_forge:"Cabeza de pieza forjada en caliente, incandescente, al salir del fuego",leg:"Forja en bruto, al salir del fuego. <b>Foto MFD</b>",
+alt_forge:"Cabeza de pieza forjada en caliente, incandescente, al salir del fuego",leg:"Forja en bruto, al salir del fuego.",
 fab_t:"De la forja en bruto a la pieza terminada",fab_p1:"Especialista en piezas de inox y superaleaciones, MFD une forja en caliente y mecanizado para cubrir una amplia gama de productos.",fab_p2:"Tornillería normalizada o componente mecánico según especificación: nuestros medios de producción aportan la solución adecuada, del prototipo a la gran serie.",
 pz:{forgee:["Piezas forjadas","Forjadas en caliente y mecanizadas según su plano."],boulon:["Pernos","Normalizados DIN o ISO, o según plano."],ecrou:["Tuercas","Normalizadas DIN o ISO, o según plano."],goujon:["Espárragos","Normalizados o según plano."],oeil:["Cáncamos","Normalizados o según plano."],meca:["Piezas mecánicas","Componentes decoletados según especificación, a partir de barra."],forme:["Cualquier forma según sus características","¿Una pieza fuera de catálogo? Envíe el plano y la estudiamos."]},
 ask:"Pedir precio",
@@ -614,7 +615,7 @@ m:["Uso corriente, ambiente húmedo","Agua de mar, cloruros, química","Alta tem
 r:["Los austeníticos 304L (1.4307) y 316L (1.4404) son las opciones más habituales. El 316L, con molibdeno, resiste mejor la corrosión.","En medio marino o químico, conviene mirar los dúplex 329LN (1.4462, Uranus 45N) y 32550 (1.4507, Uranus 52N+), o el 904L (1.4539, Uranus B6). Para casos extremos: Inconel 625 o Monel 400.","Para la resistencia en caliente: 310 (1.4845, NS 30), Incoloy 800 / 800HT, Inconel 600 / 601, Nimonic 75 / 90.","Para cargas elevadas: 630 (1.4542, F16PH), 660 (Fluginox 130), 431 (1.4057) y, en tornillería, los grados B7 / B8M (ASTM A193, A320).","Titanio grado 2 (T40) o grado 5 (TA6V)."],
 r_val:"Una orientación que confirmarán nuestros técnicos según su pliego de condiciones.",
 r_dem:"Para presupuestar necesitamos su plano (o la norma DIN / ISO), la calidad, la cantidad y los documentos deseados. Respuesta en 48 horas.",
-r_del:"Nuestra organización nos permite responder a sus consultas en 48 horas, del prototipo a la gran serie.",
+r_del:"Respondemos a sus peticiones de precio en 48 horas, del prototipo a la gran serie. El plazo de fabricación se indica en esa respuesta.",copier:"Copiar la petición",copie:"Petición copiada",f_fb:"Si su correo no se abre, copie la petición y envíela a contact@mfd74.fr con su plano.",
 r_cert:"Disponemos de certificados de análisis químico, certificados de ensayos mecánicos e informes de control, para una producción conforme a los estándares pedidos.",
 r_pcs:"Piezas forjadas, pernos, tuercas, espárragos, cáncamos y piezas mecánicas, en tornillería normalizada DIN o ISO o según plano, y cualquier forma según sus características.",
 r_loc:"MFD, 1051 route de Bidaille, 74930 Scientrier (Alta Saboya, Francia). Tel. +33 4 50 97 01 71 · contact@mfd74.fr",
@@ -625,7 +626,7 @@ de:{baseline:"Mechanik · Schmieden · Drehteile",n_fab:"Fertigung",n_srv:"Servi
 h1:"Teile aus Edelstahl und Superlegierungen, <em>warmgeschmiedet</em> und bearbeitet.",
 lead:"Spezialist für mechanische Bauteile und genormte Verbindungselemente nach DIN oder ISO aus <span class=\"mono\">1.4462 · 1.4539 · 1.4410 · 1.4501 · 1.4507</span>, aus Stangenmaterial oder Schmiederohling.",
 cta2:"Werkstoffe ansehen",pr1:"Antwort innerhalb von 48 Stunden",pr2:"Zeugnisse und Prüfprotokolle",pr3:"Vom Prototyp bis zur Großserie",
-alt_forge:"Warmgeschmiedeter Teilekopf, glühend, frisch aus dem Feuer",leg:"Schmiederohling, frisch aus dem Feuer. <b>Foto MFD</b>",
+alt_forge:"Warmgeschmiedeter Teilekopf, glühend, frisch aus dem Feuer",leg:"Schmiederohling, frisch aus dem Feuer.",
 fab_t:"Vom Schmiederohling zum fertigen Teil",fab_p1:"Als Spezialist für Teile aus Edelstahl und Superlegierungen verbindet MFD Warmschmieden und Zerspanung für ein breites Produktspektrum.",fab_p2:"Genormte Verbindungselemente oder mechanische Bauteile nach Spezifikation: Unsere Fertigung liefert die passende Lösung, vom Prototyp bis zur Großserie.",
 pz:{forgee:["Schmiedeteile","Warmgeschmiedet, dann nach Ihrer Zeichnung bearbeitet."],boulon:["Schrauben","Genormt nach DIN oder ISO oder nach Zeichnung."],ecrou:["Muttern","Genormt nach DIN oder ISO oder nach Zeichnung."],goujon:["Stiftschrauben","Genormt oder nach Zeichnung."],oeil:["Augenschrauben","Genormt oder nach Zeichnung."],meca:["Mechanische Teile","Drehteile nach Spezifikation, aus Stangenmaterial."],forme:["Jede Form nach Ihren Vorgaben","Ein Teil, das in keinem Katalog steht? Senden Sie die Zeichnung, wir prüfen sie."]},
 ask:"Preis anfragen",
@@ -651,7 +652,7 @@ m:["Normaler Einsatz, feuchte Luft","Meerwasser, Chloride, Chemie","Hohe Tempera
 r:["Die austenitischen Stähle 304L (1.4307) und 316L (1.4404) sind die gängigste Wahl. 316L mit Molybdän ist korrosionsbeständiger.","Bei Meerwasser oder Chemie kommen die Duplexstähle 329LN (1.4462, Uranus 45N) und 32550 (1.4507, Uranus 52N+) oder 904L (1.4539, Uranus B6) infrage. Für Extremfälle: Inconel 625 oder Monel 400.","Für Warmfestigkeit: 310 (1.4845, NS 30), Incoloy 800 / 800HT, Inconel 600 / 601, Nimonic 75 / 90.","Für hohe Lasten: 630 (1.4542, F16PH), 660 (Fluginox 130), 431 (1.4057) und für Verbindungselemente die Güten B7 / B8M (ASTM A193, A320).","Titan Grade 2 (T40) oder Grade 5 (TA6V)."],
 r_val:"Eine erste Orientierung, die unsere Techniker anhand Ihres Lastenhefts bestätigen.",
 r_dem:"Für ein Angebot brauchen wir Ihre Zeichnung (oder die DIN-/ISO-Norm), den Werkstoff, die Menge und die gewünschten Dokumente. Antwort in 48 Stunden.",
-r_del:"Unsere Organisation erlaubt es uns, Ihre Anfragen innerhalb von 48 Stunden zu beantworten, vom Prototyp bis zur Großserie.",
+r_del:"Wir beantworten Preisanfragen innerhalb von 48 Stunden, vom Prototyp bis zur Großserie. Die Fertigungszeit nennen wir Ihnen in dieser Antwort.",copier:"Anfrage kopieren",copie:"Anfrage kopiert",f_fb:"Falls sich Ihr E-Mail-Programm nicht öffnet, kopieren Sie die Anfrage und senden Sie sie mit Ihrer Zeichnung an contact@mfd74.fr.",
 r_cert:"Zeugnisse über chemische Analysen und mechanische Prüfungen sowie Prüfprotokolle sind verfügbar, für eine Fertigung nach den bestellten Normen.",
 r_pcs:"Schmiedeteile, Schrauben, Muttern, Stiftschrauben, Augenschrauben und mechanische Teile, genormt nach DIN oder ISO oder nach Zeichnung, und jede Form nach Ihren Vorgaben.",
 r_loc:"MFD, 1051 route de Bidaille, 74930 Scientrier (Hochsavoyen, Frankreich). Tel. +33 4 50 97 01 71 · contact@mfd74.fr",
@@ -662,7 +663,7 @@ it:{baseline:"Meccanica · Forgiatura · Torneria",n_fab:"Produzione",n_srv:"Ser
 h1:"Pezzi in inox e superleghe, <em>forgiati a caldo</em> e poi lavorati.",
 lead:"Specialisti nella produzione di componenti meccanici e viteria normalizzata DIN o ISO in <span class=\"mono\">1.4462 · 1.4539 · 1.4410 · 1.4501 · 1.4507</span>, da barra o da grezzo di forgia.",
 cta2:"Sfoglia le leghe",pr1:"Risposta entro 48 ore",pr2:"Certificati e verbali di controllo",pr3:"Dal prototipo alla grande serie",
-alt_forge:"Testa di un pezzo forgiato a caldo, incandescente, appena uscita dal fuoco",leg:"Grezzo di forgia, appena uscito dal fuoco. <b>Foto MFD</b>",
+alt_forge:"Testa di un pezzo forgiato a caldo, incandescente, appena uscita dal fuoco",leg:"Grezzo di forgia, appena uscito dal fuoco.",
 fab_t:"Dal grezzo di forgia al pezzo finito",fab_p1:"Specialista dei pezzi in inox e superleghe, MFD unisce forgiatura a caldo e lavorazione meccanica per coprire un'ampia gamma di prodotti.",fab_p2:"Viteria normalizzata o componente meccanico su specifica: i nostri mezzi di produzione offrono la soluzione giusta, dal prototipo alla grande serie.",
 pz:{forgee:["Pezzi forgiati","Forgiati a caldo, poi lavorati secondo il vostro disegno."],boulon:["Bulloni","Normalizzati DIN o ISO, o su disegno."],ecrou:["Dadi","Normalizzati DIN o ISO, o su disegno."],goujon:["Prigionieri","Normalizzati o su disegno."],oeil:["Viti a occhio","Normalizzate o su disegno."],meca:["Pezzi meccanici","Componenti torniti su specifica, da barra."],forme:["Qualsiasi forma secondo le vostre caratteristiche","Un pezzo fuori catalogo? Inviate il disegno: lo studiamo."]},
 ask:"Chiedi un prezzo",
@@ -688,7 +689,7 @@ m:["Uso comune, aria umida","Acqua di mare, cloruri, chimica","Alta temperatura"
 r:["Gli austenitici 304L (1.4307) e 316L (1.4404) sono le scelte più comuni. Il 316L, al molibdeno, resiste meglio alla corrosione.","In ambiente marino o chimico si guarda ai duplex 329LN (1.4462, Uranus 45N) e 32550 (1.4507, Uranus 52N+), o al 904L (1.4539, Uranus B6). Per i casi estremi: Inconel 625 o Monel 400.","Per la tenuta a caldo: 310 (1.4845, NS 30), Incoloy 800 / 800HT, Inconel 600 / 601, Nimonic 75 / 90.","Per carichi elevati: 630 (1.4542, F16PH), 660 (Fluginox 130), 431 (1.4057) e, per la viteria, i gradi B7 / B8M (ASTM A193, A320).","Titanio grado 2 (T40) o grado 5 (TA6V)."],
 r_val:"Un orientamento da confermare con i nostri tecnici in base al vostro capitolato.",
 r_dem:"Per la quotazione ci servono il disegno (o la norma DIN / ISO), la lega, la quantità e i documenti richiesti. Risposta entro 48 ore.",
-r_del:"La nostra organizzazione ci permette di rispondere alle vostre richieste entro 48 ore, dal prototipo alla grande serie.",
+r_del:"Rispondiamo alle richieste di prezzo entro 48 ore, dal prototipo alla grande serie. I tempi di produzione sono indicati nella risposta.",copier:"Copia la richiesta",copie:"Richiesta copiata",f_fb:"Se la vostra posta non si apre, copiate la richiesta e inviatela a contact@mfd74.fr con il disegno.",
 r_cert:"Sono disponibili certificati di analisi chimica, certificati di prove meccaniche e verbali di controllo, per una produzione conforme agli standard ordinati.",
 r_pcs:"Pezzi forgiati, bulloni, dadi, prigionieri, viti a occhio e pezzi meccanici, in viteria normalizzata DIN o ISO o su disegno, e qualsiasi forma secondo le vostre caratteristiche.",
 r_loc:"MFD, 1051 route de Bidaille, 74930 Scientrier (Alta Savoia, Francia). Tel. +33 4 50 97 01 71 · contact@mfd74.fr",
@@ -699,7 +700,7 @@ zh:{baseline:"机械 · 锻造 · 车削",n_fab:"产品",n_srv:"服务",n_qual:"
 h1:"不锈钢与高温合金零件，<em>热锻成形</em>，精密加工。",
 lead:"专业生产机械零部件及 DIN、ISO 标准紧固件，材料包括 <span class=\"mono\">1.4462 · 1.4539 · 1.4410 · 1.4501 · 1.4507</span>，以棒材或锻造毛坯加工。",
 cta2:"浏览材料牌号",pr1:"48 小时内答复",pr2:"材质证书与检验报告",pr3:"从样件到大批量",
-alt_forge:"刚出炉的热锻零件头部，通红发亮",leg:"刚出炉的锻造毛坯。<b>MFD 摄</b>",
+alt_forge:"刚出炉的热锻零件头部，通红发亮",leg:"刚出炉的锻造毛坯。",
 fab_t:"从锻造毛坯到成品零件",fab_p1:"MFD 专注于不锈钢和高温合金零件，结合热锻与机加工，产品范围广泛。",fab_p2:"无论是标准紧固件还是按规格定制的机械零件，我们的生产设备都能提供合适的方案，从样件到大批量。",
 pz:{forgee:["锻件","热锻成形，再按您的图纸加工。"],boulon:["螺栓","DIN 或 ISO 标准，或按图纸。"],ecrou:["螺母","DIN 或 ISO 标准，或按图纸。"],goujon:["双头螺柱","标准件或按图纸。"],oeil:["吊环螺栓","标准件或按图纸。"],meca:["机械零件","以棒材车削，按规格制造。"],forme:["按您的要求制作任意形状","目录中没有的零件？请发送图纸，我们来评估。"]},
 ask:"询价",
@@ -725,7 +726,7 @@ m:["一般用途、潮湿空气","海水、氯化物、化工","高温","高机�
 r:["奥氏体不锈钢 304L (1.4307) 和 316L (1.4404) 是最常见的选择。316L 含钼，耐腐蚀性更好。","海洋或化工环境可考虑双相钢 329LN (1.4462, Uranus 45N) 和 32550 (1.4507, Uranus 52N+)，或 904L (1.4539, Uranus B6)。极端工况：Inconel 625 或 Monel 400。","耐高温：310 (1.4845, NS 30)、Incoloy 800 / 800HT、Inconel 600 / 601、Nimonic 75 / 90。","高载荷：630 (1.4542, F16PH)、660 (Fluginox 130)、431 (1.4057)；紧固件可选 B7 / B8M 等级 (ASTM A193, A320)。","钛 2 级 (T40) 或 5 级 (TA6V)。"],
 r_val:"以上仅为初步建议，需由我们的技术人员根据您的技术要求确认。",
 r_dem:"报价需要：您的图纸（或 DIN / ISO 标准）、材料牌号、数量以及所需文件。48 小时内答复。",
-r_del:"我们的组织方式让我们能在 48 小时内答复您的询价，从样件到大批量。",
+r_del:"我们在 48 小时内答复询价，从样件到大批量。生产交期会在答复中告知。",copier:"复制询价内容",copie:"已复制",f_fb:"如果邮件程序没有打开，请复制询价内容，连同图纸发送至 contact@mfd74.fr。",
 r_cert:"可提供化学成分分析证书、力学性能试验证书和检验报告，确保产品符合订购标准。",
 r_pcs:"锻件、螺栓、螺母、双头螺柱、吊环螺栓和机械零件，DIN 或 ISO 标准件或按图纸制作，也可按您的要求制作任意形状。",
 r_loc:"MFD，1051 route de Bidaille，74930 Scientrier（法国上萨瓦省）。电话 +33 4 50 97 01 71 · contact@mfd74.fr",
@@ -768,19 +769,22 @@ const N=[
  {rows:[['@m_titane','Grade 2 · T40'],['@m_titane','Grade 5 · TA6V'],['@m_laiton',''],['@m_cuivre',''],['@m_cupro','OGEL D4-SO1…']],nom:r=>`${tx(r[0])}${r[1]?' '+r[1]:''}`}
 ];
 const tx=v=>v.startsWith('@')?t(v.slice(1)):v;
+const ALIAS={'304L':'A2 S30403','316L':'A4 S31603','904L':'N08904','310':'310S S31008','630':'17-4PH 17-4 S17400','660':'A286 A-286 S66286','329LN':'duplex 2205 F51 S31803 S32205','32550':'super duplex F61 S32550','Inconel':'alloy 600 alloy 625 alloy 718 N06625 N07718','Incoloy':'alloy 800 alloy 825','Monel':'alloy 400','@m_titane':'Ti TA6V Ti6Al4V'};
+const alias=r=>ALIAS[r[0]]||'';
+let ongManuel=0;
 let ong=0;
 const norm=s=>s.toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g,'').replace(/[\s·.\-\/]+/g,'');
 const esc=s=>s.replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
 function surl(v,q){if(!q||!v)return esc(v);const nv=v.toLowerCase(),nq=q.toLowerCase().trim();const i=nv.indexOf(nq);return i<0?esc(v):esc(v.slice(0,i))+'<mark>'+esc(v.slice(i,i+nq.length))+'</mark>'+esc(v.slice(i+nq.length))}
-function match(r,q){if(!q)return true;const n=norm(q);return r.some(c=>norm(tx(c)).includes(n))}
+function match(r,q){if(!q)return true;const n=norm(q);return [...r,alias(r)].some(c=>norm(tx(c)).includes(n))}
 function tableau(){const q=$('#q').value.trim();const cnt=N.map(g=>g.rows.filter(r=>match(r,q)).length);
- if(q&&!cnt[ong]){const j=cnt.findIndex(c=>c>0);if(j>=0)ong=j;}
+ if(!q)ong=ongManuel;else if(!cnt[ong]){const j=cnt.findIndex(c=>c>0);if(j>=0)ong=j;}
  $('#onglets').innerHTML=t('tabs').map((n,i)=>`<button role="tab" aria-selected="${i===ong}" data-o="${i}">${n}${q?` <span class="mono">(${cnt[i]})</span>`:''}</button>`).join('');
  const h=t('heads')[ong];$('#tab thead').innerHTML='<tr>'+h.map(x=>`<th scope="col">${x}</th>`).join('')+'<th><span class="sr">'+t('prix')+'</span></th></tr>';
  const rows=N[ong].rows.filter(r=>match(r,q));
  $('#tab tbody').innerHTML=rows.length?rows.map(r=>'<tr>'+r.map((c,i)=>`<td data-h="${h[i]}">${surl(tx(c),q)||'<span aria-hidden="true">—</span>'}</td>`).join('')+`<td class="act"><a href="#contact" data-nua="${esc(N[ong].nom(r))}">${t('prix')}</a></td></tr>`).join(''):`<tr><td class="vide-tab" colspan="${h.length+1}">${t('vide')}</td></tr>`;}
 $('#q').addEventListener('input',tableau);
-$('#onglets').addEventListener('click',e=>{const b=e.target.closest('button');if(b){ong=+b.dataset.o;tableau();}});
+$('#onglets').addEventListener('click',e=>{const b=e.target.closest('button');if(b){ong=ongManuel=+b.dataset.o;tableau();}});
 
 /* ---------- formulaire ---------- */
 function formulaire(){const pz=t('pz');const vt=$('#f_type').value,vn=$('#f_nua').value;
@@ -796,12 +800,13 @@ document.addEventListener('click',e=>{const a=e.target.closest('[data-type],[dat
  if(a.hasAttribute('data-docs'))$$('#f_docs input').forEach(i=>i.checked=true);
  setTimeout(()=>$('#f_mail').focus({preventScroll:true}),700);});
 $('#rfq').addEventListener('submit',e=>{e.preventDefault();const m=$('#f_mail'),c=m.closest('.champ');
- if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(m.value.trim())){c.classList.add('ko');m.setAttribute('aria-invalid','true');m.focus();return}
+ if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(m.value.trim())){c.classList.add('ko');m.setAttribute('aria-invalid','true');c.scrollIntoView({block:'center',behavior:calme?'auto':'smooth'});m.focus({preventScroll:true});return}
  c.classList.remove('ko');m.removeAttribute('aria-invalid');
  const fr=T.fr,ty=$('#f_type').value,qte=$('#f_qte input:checked'),docs=$$('#f_docs input:checked').map(i=>fr['d'+(+i.value+1)]);
  const nua=$('#f_nua').value==='autre'?fr.autre:$('#f_nua').value;
  const lignes=[['Société',$('#f_soc').value],['Nom',$('#f_nom').value],['E-mail',m.value],['Téléphone',$('#f_tel').value],['Type de pièce',ty?fr.pz[ty][0]:''],['Nuance',nua],['Quantité',qte?fr.qte[+qte.value]:''],['Documents souhaités',docs.join(', ')],['Besoin',$('#f_msg').value]].filter(l=>l[1]).map(l=>l[0]+' : '+l[1]);
  const sujet='Demande de prix'+(ty?' — '+fr.pz[ty][0]:'')+(nua?' — '+nua:'');
+ window.__demande=sujet+'\n\n'+lignes.join('\n');
  location.href='mailto:contact@mfd74.fr?subject='+encodeURIComponent(sujet)+'&body='+encodeURIComponent(lignes.join('\n')+'\n\n(Plan joint)');
  $('#ok').classList.add('on');});
 $('#f_mail').addEventListener('input',e=>{if(e.target.closest('.champ').classList.contains('ko')&&/@.+\./.test(e.target.value))e.target.closest('.champ').classList.remove('ko')});
@@ -844,25 +849,26 @@ const fermer=()=>{$('#panneau').classList.remove('on');$('#conseilBtn').style.di
 const aller=(id,fn)=>{if(innerWidth<700)fermer();fn&&fn();location.hash=id;$(id)?.scrollIntoView({behavior:calme?'auto':'smooth'})};
 const suite=extra=>boutons([...(extra||[]),[t('b_more'),menuConseil]]);
 const nuancePour=i=>[t('b_prix'),()=>aller('#contact',()=>{$('#f_nua').value=({0:'316L · 1.4404',1:'329LN · 1.4462 · Uranus 45N',2:'310 · 1.4845 · NS 30',3:'630 · 1.4542 · F16PH',4:'Titane Grade 2 · T40'.replace('Titane',t('m_titane'))})[i]}),true];
-function choixNuance(){bulleMsg(t('q_milieu'));boutons(t('m').map((m,i)=>[m,()=>{bulleMsg(t('r')[i]);bulleMsg(t('r_val'));suite([nuancePour(i),[t('b_tab'),()=>aller('#nuances',()=>{ong=[0,0,0,0,3][i];$('#q').value='';tableau()})]])}]))}
+function choixNuance(){bulleMsg(t('q_milieu'));boutons(t('m').map((m,i)=>[m,()=>{bulleMsg(t('r')[i]);bulleMsg(t('r_val'));suite([nuancePour(i),[t('b_tab'),()=>aller('#nuances',()=>{ong=ongManuel=[0,0,0,0,3][i];$('#q').value='';tableau()})]])}]))}
 const R={dem:()=>{bulleMsg(t('r_dem'));suite([[t('b_form'),()=>aller('#contact'),true]])},del:()=>{bulleMsg(t('r_del'));suite([[t('b_form'),()=>aller('#contact'),true]])},cert:()=>{bulleMsg(t('r_cert'));suite([[t('q_l'),()=>aller('#contact',()=>$$('#f_docs input').forEach(i=>i.checked=true)),true]])},pcs:()=>{bulleMsg(t('r_pcs'));suite([[t('b_form'),()=>aller('#contact'),true]])},loc:()=>{bulleMsg(t('r_loc'));suite([[t('b_iti'),()=>window.open('https://www.google.com/maps/search/?api=1&query=1051+route+de+Bidaille+74930+Scientrier','_blank','noopener')]])}};
 function menuConseil(){boutons(t('o').map((o,i)=>[o,[choixNuance,R.dem,R.del,R.cert,R.pcs,R.loc][i]]))}
 function accueilConseil(re){fil.innerHTML='';bulleMsg(t('hello'));menuConseil()}
 function ouvrir(){$('#panneau').classList.add('on');$('#conseilBtn').style.display='none';$('#bulle').classList.remove('on');if(!fil.children.length)accueilConseil();setTimeout(()=>$('#sIn').focus(),50)}
 $$('[data-conseil]').forEach(b=>b.addEventListener('click',e=>{e.preventDefault();ouvrir()}));
 $('#pX').addEventListener('click',fermer);addEventListener('keydown',e=>{if(e.key==='Escape'&&$('#panneau').classList.contains('on'))fermer()});
-const MOTS=[[1,['mer','marin','sea','meer','mar ','mare','海','chlor','chimi','chemi','quim','acide','acid','säure','化工','offshore']],[2,['chaud','temp','heat','hitze','calor','caldo','高温','four','furnace','ofen','horno','forno','feu']],[3,['resist','strength','festig','charge','load','last','carico','强度','载荷','haute limite','dur']],[4,['titan','钛','leger','light','leicht','liger','legger','轻']],[0,['304','316','courant','general','normal','comun','comune','一般','humid','feucht']]];
-const INT=[[choixNuance,['nuance','grade','werkstoff','calidad','lega','牌号','matiere','material','acier','steel','stahl','acero','acciai','inox','钢','alliage','alloy']],[R.dem,['prix','devis','price','quote','preis','angebot','precio','presupuesto','prezzo','preventiv','报价','询价','tarif','cost','plan','drawing','zeichnung','plano','disegno','图纸','commande','order']],[R.del,['delai','48','time','zeit','plazo','tempi','时间','多久','rapide','fast','quand','when','wann','cuando','quando']],[R.cert,['certif','pv','p.v','controle','inspection','pruf','prüf','control','controllo','证书','检验','3.1','qualit']],[R.loc,['adresse','address','ou etes','where','wo ','donde','dove','地址','位置','tel','phone','telefon','contact','itin','venir']],[R.pcs,['vis','boulon','ecrou','goujon','piece','bolt','nut','stud','part','schraube','mutter','perno','tuerca','bullon','dado','螺','零件','forg','œil','oeil','eye']]];
-const TOUTES=N.flatMap((g,gi)=>g.rows.map(r=>({g:gi,n:g.nom(r),k:r.map(c=>norm(tx(c))).filter(c=>c.length>2&&c!=='—')})));
+const MOTS=[[1,['mer ','marin','sea','meer','mar ','mare','海','chlor','offshore']],[2,['chaud','temp','heat','hitze','calor','caldo','高温','four','furnace','ofen','horno','forno','feu']],[3,['resist','strength','festig','charge','load','last','carico','强度','载荷','haute limite','dur']],[4,['titan','钛','leger','light','leicht','liger','legger','轻']],[0,['304','316','courant','general','normal','comun','comune','一般','humid','feucht']]];
+const INT=[[()=>{bulleMsg(t('r_def'));suite([[t('b_form'),()=>aller('#contact'),true]])},['iso 9001','9001','iso9001','en 9100','9100','agrement','agrément','approval','zertifizierung']],[choixNuance,['nuance','grade','werkstoff','calidad','lega','牌号','matiere','material','acier','steel','stahl','acero','acciai','inox','钢','alliage','alloy']],[R.dem,['prix','devis','price','quote','preis','angebot','precio','presupuesto','prezzo','preventiv','报价','询价','tarif','cost','plan','drawing','zeichnung','plano','disegno','图纸','commande','order']],[R.del,['delai','48','time','zeit','plazo','tempi','时间','多久','rapide','fast','quand','when','wann','cuando','quando']],[R.cert,['certif','pv','p.v','controle','inspection','pruf','prüf','control','controllo','证书','检验','3.1','qualit']],[R.loc,['adresse','address','ou etes','where','wo ','donde','dove','地址','位置','tel','phone','telefon','contact','itin','venir']],[R.pcs,['vis','boulon','ecrou','goujon','piece','bolt','nut','stud','part','schraube','mutter','perno','tuerca','bullon','dado','螺','零件','forg','œil','oeil','eye']]];
+const TOUTES=N.flatMap((g,gi)=>g.rows.map(r=>({g:gi,n:g.nom(r),k:[...r.map(c=>norm(tx(c))),...alias(r).split(' ').filter(x=>x.length>3).map(norm),...(alias(r).match(/alloy \d+|super duplex|17-4ph/gi)||[]).map(norm)].filter(c=>c.length>2&&c!=='—')})));
 $('#saisie').addEventListener('submit',e=>{e.preventDefault();const v=$('#sIn').value.trim();if(!v)return;$('#sIn').value='';bulleMsg(v,'moi');
  $$('#fil .opts').forEach(o=>o.remove());const n=' '+v.toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g,'')+' ',nn=norm(v);
  setTimeout(()=>{const g=TOUTES.find(x=>x.k.some(k=>nn.includes(k)&&k.length>3));
-  if(g){bulleMsg(t('r_found').replace('{x}',g.n));return suite([[t('b_prix'),()=>aller('#contact',()=>$('#f_nua').value=g.n),true],[t('b_tab'),()=>aller('#nuances',()=>{ong=g.g;$('#q').value='';tableau()})]])}
+  if(g){bulleMsg(t('r_found').replace('{x}',g.n));return suite([[t('b_prix'),()=>aller('#contact',()=>$('#f_nua').value=g.n),true],[t('b_tab'),()=>aller('#nuances',()=>{ong=ongManuel=g.g;$('#q').value='';tableau()})]])}
   const m=MOTS.find(([,w])=>w.some(x=>n.includes(x)));if(m&&!/prix|devis|price|quote|preis|precio|prezzo|报价/.test(n)){bulleMsg(t('r')[m[0]]);bulleMsg(t('r_val'));return suite([nuancePour(m[0])])}
   const it=INT.find(([,w])=>w.some(x=>n.includes(x)));if(it)return it[0]();
   bulleMsg(t('r_def'));suite([[t('b_form'),()=>aller('#contact'),true]]);},300)});
 let vueBulle=false;try{vueBulle=sessionStorage.getItem('mfd-bulle')==='1'}catch(e){}
 if(!vueBulle)setTimeout(()=>{if(!$('#panneau').classList.contains('on')){$('#bulle').classList.add('on');try{sessionStorage.setItem('mfd-bulle','1')}catch(e){}setTimeout(()=>$('#bulle').classList.remove('on'),12000)}},4000);
+$('#copier').addEventListener('click',async()=>{try{await navigator.clipboard.writeText(window.__demande||'');$('#copier').textContent=t('copie')}catch(e){}});
 $('#bulleX').addEventListener('click',()=>$('#bulle').classList.remove('on'));
 $('#bulle').addEventListener('click',e=>{if(!e.target.closest('#bulleX'))ouvrir()});
 
