@@ -79,7 +79,7 @@ nav.menu a:hover{color:var(--ambre-fonce)}
 .langue::after{content:"";position:absolute;right:12px;top:50%;width:7px;height:7px;border-right:1.5px solid var(--txt);border-bottom:1.5px solid var(--txt);transform:translateY(-70%) rotate(45deg);pointer-events:none}
 .panier-btn{display:inline-flex;align-items:center;gap:8px;min-height:42px;padding:0 14px;border:1px solid var(--encre);background:var(--encre);color:var(--blanc);border-radius:var(--r);cursor:pointer;font:600 .76rem/1 var(--l);letter-spacing:.12em;text-transform:uppercase}
 .panier-btn b{background:var(--ambre);color:var(--encre);border-radius:20px;min-width:22px;height:22px;display:grid;place-items:center;font:600 .78rem/1 var(--b);letter-spacing:0}
-@media (max-width:1180px){
+@media (max-width:1320px){
  .tete .l1{flex-wrap:wrap;gap:10px 16px;padding-top:10px}
  nav.menu{order:3;width:100%;overflow-x:auto;scrollbar-width:none;-webkit-mask:linear-gradient(90deg,#000 88%,transparent);mask:linear-gradient(90deg,#000 88%,transparent);padding-bottom:4px;margin-inline:-6px}
  nav.menu::-webkit-scrollbar{display:none}
@@ -94,7 +94,7 @@ nav.menu a:hover{color:var(--ambre-fonce)}
 .saisie{margin-top:36px;display:flex;align-items:stretch;gap:0;max-width:440px;border:1px solid var(--ligne-n);border-radius:var(--r);background:var(--encre2)}
 .saisie label{display:flex;align-items:center;padding:0 14px;font:600 .72rem/1.2 var(--l);letter-spacing:.14em;text-transform:uppercase;color:var(--encre-txt);border-right:1px solid var(--ligne-n);max-width:46%}
 .saisie input{flex:1;min-width:0;background:none;border:0;padding:12px 14px;font:400 1.9rem/1 var(--d);color:var(--ambre-clair);letter-spacing:.06em}
-.saisie input::placeholder{color:rgba(228,181,102,.35)}
+.saisie input::placeholder{color:rgba(228,181,102,.62)}
 .saisie input:focus{outline:none}.saisie:focus-within{border-color:var(--ambre)}
 .saisie button{border:0;background:var(--ambre);color:var(--encre);padding:0 18px;font:600 .8rem/1 var(--l);letter-spacing:.14em;text-transform:uppercase;cursor:pointer;border-radius:0 var(--r) var(--r) 0}
 .hero .actions{display:flex;flex-wrap:wrap;gap:12px 24px;align-items:center;margin-top:26px}
@@ -104,7 +104,7 @@ nav.menu a:hover{color:var(--ambre-fonce)}
 .hero h1 .ligne{display:block;overflow:hidden}.hero h1 .ligne>span{display:block;animation:monte 1.1s var(--ease) both}
 .hero h1 .ligne:nth-child(2)>span{animation-delay:.08s}.hero h1 .ligne:nth-child(3)>span{animation-delay:.16s}
 @keyframes monte{from{transform:translateY(105%)}to{transform:none}}
-@media (max-width:860px){.hero{grid-template-columns:minmax(0,1fr)}.hero .droite{order:-1;height:44vh;min-height:260px}}
+@media (max-width:860px){.hero{grid-template-columns:minmax(0,1fr);min-height:0}.hero .droite{height:220px}.hero .gauche{padding-top:36px;padding-bottom:40px}}
 .reass{display:grid;grid-template-columns:repeat(4,1fr);border-bottom:1px solid var(--ligne);background:var(--blanc)}
 .reass div{padding:18px 20px;border-left:1px solid var(--ligne)}.reass div:first-child{border-left:0}
 .reass b{display:block;font:500 .95rem/1.3 var(--b)}.reass span{font-size:.84rem;color:var(--txt2)}
@@ -115,7 +115,7 @@ nav.menu a:hover{color:var(--ambre-fonce)}
 .registre .entete .lead{max-width:44ch}
 .reg-corps{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:clamp(24px,5vw,72px);align-items:center;margin-top:clamp(32px,5vw,56px)}
 .etui-scene{position:relative;aspect-ratio:4/5;background:radial-gradient(120% 80% at 50% 100%,rgba(201,138,46,.22),transparent 60%),var(--encre2);border:1px solid var(--ligne-n);border-radius:var(--r);overflow:hidden;display:grid;place-items:end center}
-.etui-scene .annee-fond{position:absolute;inset:auto 0 50% 0;text-align:center;font:400 clamp(7rem,16vw,15rem)/.8 var(--d);color:rgba(248,247,243,.05);letter-spacing:-.04em;pointer-events:none;user-select:none}
+.etui-scene .annee-fond{position:absolute;inset:8% 0 auto 0;text-align:center;font:400 clamp(6rem,13vw,12rem)/.8 var(--d);color:rgba(248,247,243,.08);letter-spacing:-.04em;pointer-events:none;user-select:none}
 .etui-scene img{position:relative;height:92%;width:auto;object-fit:contain;filter:drop-shadow(0 30px 30px rgba(0,0,0,.45));transition:clip-path .9s var(--ease),transform .9s var(--ease),opacity .4s}
 .etui-scene img.sort{clip-path:inset(100% 0 0 0);transform:translateY(14%);opacity:.3}
 .etui-scene .bord{position:absolute;left:0;right:0;bottom:0;height:9%;background:linear-gradient(var(--encre),#0f1a2c);border-top:1px solid rgba(228,181,102,.35)}
@@ -138,7 +138,7 @@ nav.menu a:hover{color:var(--ambre-fonce)}
 .regle ol{list-style:none;margin:0;padding:18px 50%;display:flex;gap:0;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;cursor:grab}
 .regle ol::-webkit-scrollbar{display:none}
 .regle li{scroll-snap-align:center;flex:0 0 auto}
-.regle button{background:none;border:0;cursor:pointer;color:rgba(248,247,243,.38);font:400 1.5rem/1 var(--d);padding:10px 16px;transition:color .3s,transform .4s var(--ease);font-variant-numeric:lining-nums}
+.regle button{background:none;border:0;cursor:pointer;color:rgba(248,247,243,.6);font:400 1.6rem/1 var(--d);padding:10px 16px;transition:color .3s,transform .4s var(--ease);font-variant-numeric:lining-nums}
 .regle button:hover{color:var(--blanc)}
 .regle button[aria-current=true]{color:var(--ambre-clair);transform:scale(1.35)}
 .regle::before{content:"";position:absolute;left:50%;top:-1px;bottom:-1px;width:1px;background:var(--ambre);opacity:.6}
@@ -339,6 +339,34 @@ footer.pied{background:var(--encre);color:var(--encre-txt);padding:64px 0 28px;m
 .vh{position:absolute!important;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 .infos.ct{grid-template-columns:1.4fr 1fr}@media (max-width:860px){.infos.ct{grid-template-columns:minmax(0,1fr)}}
 @media (max-width:560px){.grille{grid-template-columns:repeat(2,minmax(0,1fr))}.carte{padding:12px 10px}.carte .vis{height:150px}.carte img{max-height:150px}.carte .nom{font-size:1.05rem}.carte .bas{flex-wrap:wrap;gap:8px}}
+
+/* Page de registre : filets de livre de chai */
+.fiche-reg{background:repeating-linear-gradient(to bottom,transparent 0 35px,rgba(232,236,242,.07) 35px 36px);padding:8px 0}
+.notes{border-top:1px solid var(--ligne-n);padding-top:16px}
+.notes dt,.notes dd{padding-bottom:12px;border-bottom:1px solid var(--ligne-n)}
+.regle li:nth-child(5n+1) button{color:rgba(248,247,243,.85)}
+.age{border-right:0}.ages-liste{border-top:0;align-items:end;border-bottom:1px solid var(--ligne)}.age{justify-content:flex-end}.age:hover{background:none}
+.age img{margin:0 0 6px}
+.carte .nom{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.grille{gap:24px 18px;background:none;border:0}.carte{background:none;padding:10px 4px 6px}.carte .vis{background:var(--papier2);border-radius:var(--r)}.carte:hover{background:none}
+.produit .vis{background:var(--papier2)}
+.fil{padding-top:14px}.produit{padding-top:18px}
+.reass-p{list-style:none;padding:16px 0 0;margin:20px 0 0;border-top:1px solid var(--ligne);display:grid;gap:6px;font-size:.92rem}
+.reass-p span{color:var(--txt2)}
+.voisins{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;margin-top:28px}
+figure.plein{margin:0;position:relative;height:clamp(260px,46vw,560px);overflow:hidden}
+figure.plein img{width:100%;height:100%;object-fit:cover;filter:grayscale(1) contrast(1.08)}
+figure.plein figcaption{position:absolute;left:clamp(16px,4vw,48px);bottom:18px;color:#F8F7F3;font:600 .72rem/1 var(--l);letter-spacing:.18em;text-transform:uppercase}
+.compte-l{font:600 .72rem/1 var(--l);letter-spacing:.12em;text-transform:uppercase;text-decoration:none;white-space:nowrap}
+@media (max-width:700px){.compte-l{display:none}}
+footer.pied{padding-bottom:96px}
+.porte{position:fixed;inset:0;z-index:90;background:rgba(14,22,38,.82);backdrop-filter:blur(6px);display:grid;place-items:center;padding:16px}
+.porte>div{background:var(--encre);color:var(--blanc);border:1px solid var(--ligne-n);border-radius:var(--r);padding:clamp(28px,5vw,48px);max-width:520px;text-align:center}
+.porte-m{font:400 2.2rem/1 var(--d);font-style:italic;display:block}
+.porte p{font:400 1.35rem/1.35 var(--d);margin:22px 0 26px}
+.porte-b{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+.porte small{display:block;margin-top:22px;color:var(--encre-txt);font-size:.8rem}
+@media (max-width:1560px){nav.menu a{padding:12px 7px 10px;letter-spacing:.08em}.tete .l1{gap:14px}.langue select{padding-left:10px}}@media (min-width:1321px) and (max-width:1560px){.compte-l{display:none}}
 </style>
 </head>
 <body>
@@ -349,6 +377,7 @@ footer.pied{background:var(--encre);color:var(--encre-txt);padding:64px 0 28px;m
  <nav class="menu" id="menu" aria-label="Menu"></nav>
  <div class="outils">
   <label class="langue"><span class="vh" data-t="menu_lang">Langue</span><select id="lg" aria-label="Langue / Language"></select></label>
+  <a class="compte-l" href="#/compte" data-t="acc">Mon compte</a>
   <button class="panier-btn" id="ouvrir-panier" aria-haspopup="dialog"><span data-t="cart">Panier</span><b id="nb" class="num">0</b></button>
  </div>
 </div></header>
@@ -360,7 +389,7 @@ footer.pied{background:var(--encre);color:var(--encre-txt);padding:64px 0 28px;m
    <div class="reseaux"><a href="https://www.facebook.com/ArmagnacDARTIGALONGUE" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M14 8h3V4h-3c-2.8 0-4.5 1.8-4.5 4.6V11H7v4h2.5v9h4v-9h3l.5-4h-3.5V8.8c0-.5.3-.8.5-.8z"/></svg></a><a href="https://www.instagram.com/armagnacdartigalongue" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24"><path d="M12 7.2A4.8 4.8 0 1 0 12 16.8 4.8 4.8 0 0 0 12 7.2zm0 7.9a3.1 3.1 0 1 1 0-6.2 3.1 3.1 0 0 1 0 6.2zM17 5.8a1.1 1.1 0 1 0 0 2.2 1.1 1.1 0 0 0 0-2.2zM21.9 7.1c-.1-1.6-.4-3-1.6-4.2S17.6 1.4 16 1.3C14.4 1.2 9.6 1.2 8 1.3 6.4 1.4 5 1.7 3.8 2.9S2.2 5.5 2.1 7.1c-.1 1.6-.1 6.4 0 8 .1 1.6.4 3 1.6 4.2s2.6 1.5 4.2 1.6c1.6.1 6.4.1 8 0 1.6-.1 3-.4 4.2-1.6s1.5-2.6 1.6-4.2c.1-1.6.1-6.4.2-8zm-2.1 9.8a3.3 3.3 0 0 1-1.8 1.8c-1.3.5-4.3.4-5.9.4s-4.6.1-5.9-.4a3.3 3.3 0 0 1-1.8-1.8c-.5-1.3-.4-4.3-.4-5.9s-.1-4.6.4-5.9A3.3 3.3 0 0 1 6.1 3.3c1.3-.5 4.3-.4 5.9-.4s4.6-.1 5.9.4a3.3 3.3 0 0 1 1.8 1.8c.5 1.3.4 4.3.4 5.9s.2 4.6-.3 5.9z"/></svg></a></div>
   </div>
   <div><h4 data-t="ft_shop"></h4><ul><li><a href="#/boutique?c=mi" data-t="cta_find"></a></li><li><a href="#/armagnacs" data-t="nav_arm"></a></li><li><a href="#/boutique" data-t="nav_shop"></a></li><li><a href="#/cocktails" data-t="nav_cock"></a></li></ul></div>
-  <div><h4 data-t="ft_house"></h4><ul><li><a href="#/histoire" data-t="nav_hist"></a></li><li><a href="#/savoir-faire" data-t="nav_sf"></a></li><li><a href="#/visites" data-t="nav_vis"></a></li><li><a href="#/contact" data-t="nav_contact"></a></li></ul></div>
+  <div><h4 data-t="ft_house"></h4><ul><li><a href="#/histoire" data-t="nav_hist"></a></li><li><a href="#/savoir-faire" data-t="nav_sf"></a></li><li><a href="#/visites" data-t="nav_vis"></a></li><li><a href="#/contact" data-t="nav_contact"></a></li><li><a href="#/compte" data-t="acc"></a></li></ul></div>
   <div><h4 data-t="hours_t"></h4><p class="pre" style="font-size:.9rem" data-t="hours"></p><h4 style="margin-top:22px" data-t="ft_follow"></h4><ul><li><a href="https://www.instagram.com/armagnacdartigalongue" target="_blank" rel="noopener">Instagram</a></li><li><a href="https://www.facebook.com/ArmagnacDARTIGALONGUE" target="_blank" rel="noopener">Facebook</a></li></ul></div>
  </div>
  <div class="bas"><span>© 2026 Dartigalongue · <a href="#/mentions" data-t="ft_legal"></a> · <a href="#/cgv" data-t="ft_cgv"></a> · <a href="#/confidentialite" data-t="ft_priv"></a></span><span data-t="evin"></span><span class="prop" data-t="prop"></span></div>
@@ -377,6 +406,7 @@ footer.pied{background:var(--encre);color:var(--encre-txt);padding:64px 0 28px;m
  <div class="fil-cons" id="fil-cons" aria-live="polite"></div><div class="raccourcis" id="rac"></div>
  <form><input id="cons-in" aria-label="Question"><button data-t="adv_send"></button></form></section>
 <div class="toast" id="toast" role="status"></div>
+<div class="porte" id="porte" hidden role="dialog" aria-modal="true" aria-labelledby="porte-q"><div><b class="porte-m">Dartigalongue</b><p id="porte-q" data-t="gate_q"></p><div class="porte-b"><button class="btn plein" id="porte-oui" data-t="gate_y"></button><button class="btn" id="porte-non" data-t="gate_n"></button></div><small data-t="evin"></small></div></div>
 <script>const CAT=[{"i":0,"n":"1976 Brut de fût — Sélection Fest’Armagnac 2026","c":["fa","fe"],"f":"45,3° · 50 cl","p":{"u":210.0},"img":"p000","max":6},{"i":1,"n":"1981 Single Cask","c":["fe"],"f":"45° · 70 cl","p":{"etui":234,"bois":245},"img":"p001","nz":["fruits_murs","epices","fleur_oranger"],"bo":["intense","rancio","fruits_secs","noix"],"cask":"487","bt":456,"y":1981,"ap":"Bas-Armagnac","max":6},{"i":2,"n":"1992 Single Cask","c":["fe"],"f":"46° · 70 cl","p":{"etui":177,"bois":188},"img":"p002","nz":["santal","agrumes","floral"],"bo":["ample","fruits_confits","cuir","bois_fume"],"cask":"057","bt":498,"y":1992,"ap":"Bas-Armagnac","max":6},{"i":3,"n":"2003 Single Cask","c":["fe"],"f":"46° · 70 cl","p":{"etui":137,"bois":148},"img":"p003","nz":["miel","vanille","coco","fruits_jaunes"],"bo":["epices","fruite","fruits_exo","patissier"],"cask":"419","bt":524,"y":2003,"ap":"Bas-Armagnac","max":6},{"i":4,"n":"VSOP","c":["as"],"f":"42° · 70 cl","p":{"etui":47,"bois":58},"img":"p004","img2":"p004b"},{"i":5,"n":"Réserve","c":["as"],"f":"42° · 70 cl","p":{"etui":62,"bois":73},"img":"p005","aw":"bxl25gold"},{"i":6,"n":"XO Signature","c":["as"],"f":"42° · 70 cl","p":{"etui":79,"bois":90},"img":"p006"},{"i":7,"n":"Héritage – 20 ans","c":["as"],"f":"42° · 70 cl","p":{"etui":98,"bois":110},"img":"p007","aw":"bxl25silver"},{"i":8,"n":"Prestige – 30 ans","c":["as"],"f":"42° · 70 cl","p":{"etui":122,"bois":133},"img":"p008"},{"i":9,"n":"Coffret Expérience","c":["cc","as"],"f":"42° · 5 × 10 cl","p":{"u":89.0},"img":"p009"},{"i":10,"n":"Coffret Découverte","c":["cc"],"f":"42° · 3 × 20 cl","p":{"u":69.0},"img":"p010"},{"i":11,"n":"Magnum VSOP","c":["gf"],"f":"42° · 150 cl","p":{"u":106.0},"img":"p011","base":4},{"i":12,"n":"Magnum Réserve","c":["gf"],"f":"42° · 150 cl","p":{"u":138.0},"img":"p012","base":5},{"i":13,"n":"Magnum XO Signature","c":["gf"],"f":"42° · 150 cl","p":{"u":175.0},"img":"p013","base":6},{"i":14,"n":"Magnum Héritage – 20 ans","c":["gf"],"f":"42° · 150 cl","p":{"u":217.0},"img":"p014","base":7},{"i":15,"n":"Magnum Prestige – 30 ans","c":["gf"],"f":"42° · 150 cl","p":{"u":270.0},"img":"p015","base":8},{"i":16,"n":"Pot gascon VSOP","c":["gf"],"f":"42° · 250 cl","p":{"u":170.0},"img":"p016","base":4},{"i":17,"n":"Pot gascon Réserve","c":["gf"],"f":"42° · 250 cl","p":{"u":217.0},"img":"p017","base":5},{"i":18,"n":"Pot gascon XO Signature","c":["gf"],"f":"42° · 250 cl","p":{"u":277.0},"img":"p018","base":6},{"i":19,"n":"Pot gascon Héritage – 20 ans","c":["gf"],"f":"42° · 250 cl","p":{"u":343.0},"img":"p019","base":7},{"i":20,"n":"Pot gascon Prestige – 30 ans","c":["gf"],"f":"42° · 250 cl","p":{"u":427.0},"img":"p020","base":8},{"i":21,"n":"1962","c":["mi"],"f":"42° · 70 cl","p":{"etui":577,"bois":588},"img":"p021","y":1962,"nz":["chene_toaste","vanille","cuir"],"bo":["structure","vieux_fut","prune_cuite","fruits_secs"],"ap":"Bas-Armagnac","max":6},{"i":22,"n":"1963","c":["mi"],"f":"42° · 70 cl","p":{"etui":527,"bois":538},"img":"p022","y":1963,"nz":["fruits_exo","noix","rancio"],"bo":["rond","gourmand","patissier","tanins_doux"],"ap":"Bas-Armagnac","max":6},{"i":23,"n":"1964","c":["mi"],"f":"42° · 70 cl","p":{"etui":519,"bois":530},"img":"p023","y":1964,"nz":["vanille","orange_confite","floral"],"bo":["fraicheur","acidule","long","delicat"],"ap":"Armagnac","max":6},{"i":24,"n":"1965","c":["mi"],"f":"42° · 70 cl","p":{"etui":507,"bois":518},"img":"p024","y":1965,"nz":["caramel","cafe","pain_epices"],"bo":["raisins","noix","complexe","douceur"],"ap":"Armagnac","max":6},{"i":25,"n":"1966","c":["mi"],"f":"42° · 70 cl","p":{"etui":476,"bois":487},"img":"p025","y":1966,"nz":["floral","citron_confit"],"bo":["sec","menthe","fraicheur","amande","fleur_sechee"],"ap":"Bas-Armagnac","max":6},{"i":26,"n":"1967","c":["mi"],"f":"42° · 70 cl","p":{"etui":445,"bois":456},"img":"p026","y":1967,"nz":["epices","vieux_fut","pomme_caramel"],"bo":["tonique","reglisse","fruite"],"ap":"Armagnac","max":6},{"i":27,"n":"1970","c":["mi"],"f":"42° · 70 cl","p":{"etui":414,"bois":425},"img":"p027","y":1970,"nz":["bois_fume","rancio","cannelle"],"bo":["fin","reglisse","pomme_sechee"],"ap":"Bas-Armagnac","max":6},{"i":28,"n":"1972","c":["mi"],"f":"42° · 70 cl","p":{"etui":303,"bois":314},"img":"p028","y":1972,"nz":["banane","caramel","fruits_exo"],"bo":["rond","souple","bois_fume"],"ap":"Bas-Armagnac","max":6},{"i":29,"n":"1973","c":["mi"],"f":"42° · 70 cl","p":{"etui":280,"bois":291},"img":"p029","y":1973,"nz":["vanille","girofle","fruits_rouges"],"bo":["leger","souple","epices","rancio"],"ap":"Bas-Armagnac","max":6},{"i":30,"n":"1974","c":["mi"],"f":"42° · 70 cl","p":{"etui":273,"bois":284},"img":"p030","y":1974,"nz":["epices","fleurs_blanches","noix","rancio"],"bo":["tanins_soyeux","long","fraicheur"],"ap":"Bas-Armagnac","max":6},{"i":31,"n":"1975","c":["mi"],"f":"42° · 70 cl","p":{"etui":269,"bois":280},"img":"p031","y":1975,"nz":["tabac","cafe","floral"],"bo":["douceur","acidule","long"],"ap":"Armagnac","max":6},{"i":32,"n":"1976","c":["mi"],"f":"42° · 70 cl","p":{"etui":263,"bois":274},"img":"p032","y":1976,"nz":["cire","orange_confite"],"bo":["fruite","leger","gourmand"],"ap":"Bas-Armagnac","max":6},{"i":33,"n":"1978","c":["mi"],"f":"42° · 70 cl","p":{"etui":257,"bois":268},"img":"p033","y":1978,"nz":["santal","cuir","floral"],"bo":["sec","peche","rancio"],"ap":"Bas-Armagnac","max":6},{"i":34,"n":"1979","c":["mi"],"f":"42° · 70 cl","p":{"etui":222,"bois":233},"img":"p034","y":1979,"nz":["encens","datte","bois_fume"],"bo":["race","long","rancio"],"ap":"Bas-Armagnac","max":6},{"i":35,"n":"1980","c":["mi"],"f":"42° · 70 cl","p":{"etui":211,"bois":222},"img":"p035","y":1980,"nz":["bois_fume","torrefaction"],"bo":["tendu","sous_bois","datte"],"ap":"Bas-Armagnac","max":6},{"i":36,"n":"1981","c":["mi"],"f":"42° · 70 cl","p":{"etui":205,"bois":216},"img":"p036","y":1981,"nz":["bois_exo","romarin","fruits_secs"],"bo":["fraicheur","fruits_confits","souple"],"ap":"Bas-Armagnac","max":6},{"i":37,"n":"1982","c":["mi"],"f":"42° · 70 cl","p":{"etui":195,"bois":206},"img":"p037","y":1982,"nz":["pomme_caramel","raisins","noix"],"bo":["rond","cacao","epices"],"ap":"Armagnac","max":6},{"i":38,"n":"1983","c":["mi"],"f":"42° · 70 cl","p":{"etui":188,"bois":199},"img":"p038","y":1983,"nz":["epices","santal","pruneau"],"bo":["sec","cacao","gourmand"],"ap":"Bas-Armagnac","max":6},{"i":39,"n":"1984","c":["mi"],"f":"42° · 70 cl","p":{"etui":184,"bois":195},"img":"p039","y":1984,"nz":["citron_confit","fleur_sechee"],"bo":["long","fruits_confits","rancio"],"ap":"Armagnac","max":6},{"i":40,"n":"1985","c":["mi"],"f":"40° · 70 cl","p":{"etui":180,"bois":191},"img":"p040","y":1985,"nz":["bois_fume","noix","cuir"],"bo":["leger","epices","orange_confite"],"ap":"Armagnac","max":6},{"i":41,"n":"1986","c":["mi"],"f":"40° · 70 cl","p":{"etui":174,"bois":185},"img":"p041","y":1986,"nz":["chene_toaste","vanille","fruits_secs"],"bo":["delicat","floral","onctueux","amande"],"ap":"Bas-Armagnac","max":6},{"i":42,"n":"1987","c":["mi"],"f":"42° · 70 cl","p":{"etui":171,"bois":182},"img":"p042","y":1987,"nz":["fruits_exo","noix","rancio","sureau"],"bo":["gourmand","equilibre"],"ap":"Bas-Armagnac","max":6},{"i":43,"n":"1988","c":["mi"],"f":"42° · 70 cl","p":{"etui":168,"bois":179},"img":"p043","y":1988,"nz":["fruits_confits","santal","pruneau"],"bo":["rond","fruits_secs","race"],"ap":"Bas-Armagnac","max":6},{"i":44,"n":"1989","c":["mi"],"f":"42° · 70 cl","p":{"etui":166,"bois":177},"img":"p044","y":1989,"nz":["epices","orange_confite","fruits_confits"],"bo":["caramel","vanille","rancio"],"ap":"Bas-Armagnac","aw":"iwsc15","max":6},{"i":45,"n":"1990","c":["mi"],"f":"42° · 70 cl","p":{"etui":160,"bois":171},"img":"p045","y":1990,"nz":["girofle","cannelle","moka"],"bo":["praline","chocolat","caramel","rond"],"ap":"Bas-Armagnac","max":6},{"i":46,"n":"1991","c":["mi"],"f":"42° · 70 cl","p":{"etui":157,"bois":168},"img":"p046","y":1991,"nz":["moka","vanille","patissier"],"bo":["equilibre","fruits_secs","santal"],"ap":"Bas-Armagnac","max":6},{"i":47,"n":"1992","c":["mi"],"f":"42° · 70 cl","p":{"etui":154,"bois":165},"img":"p047","y":1992,"nz":["fruits_confits","fleurs_blanches","menthe"],"bo":["gourmand","rond"],"ap":"Bas-Armagnac","max":6},{"i":48,"n":"1993","c":["mi"],"f":"42° · 70 cl","p":{"etui":152,"bois":163},"img":"p048","y":1993,"nz":["santal","tabac"],"bo":["puissant","caramel","tarte_tatin"],"ap":"Bas-Armagnac","max":6},{"i":49,"n":"1994","c":["mi"],"f":"42° · 70 cl","p":{"etui":146,"bois":157},"img":"p049","y":1994,"nz":["vanille","prune","peche","chene_toaste"],"bo":["intense","fruits_jaunes","santal"],"ap":"Bas-Armagnac","max":6},{"i":50,"n":"1995","c":["mi"],"f":"42° · 70 cl","p":{"etui":144,"bois":155},"img":"p050","y":1995,"nz":["chene_toaste","reglisse","patissier"],"bo":["equilibre","coing"],"ap":"Bas-Armagnac","max":6},{"i":51,"n":"1996","c":["mi"],"f":"42° · 70 cl","p":{"etui":142,"bois":153},"img":"p051","y":1996,"nz":["epices","fruits_confits","torrefaction"],"bo":["souple","fraicheur","epices"],"ap":"Bas-Armagnac","max":6},{"i":52,"n":"1997","c":["mi"],"f":"42° · 70 cl","p":{"etui":140,"bois":151},"img":"p052","y":1997,"nz":["bois_fume","peche","fruits_exo","floral"],"bo":["leger","amande","patissier","cacao"],"ap":"Bas-Armagnac","max":6},{"i":53,"n":"1998","c":["mi"],"f":"42° · 70 cl","p":{"etui":138,"bois":149},"img":"p053","y":1998,"nz":["epices","fruits_confits","torrefaction"],"bo":["souple","fraicheur","epices"],"ap":"Bas-Armagnac","max":6},{"i":54,"n":"1999","c":["mi"],"f":"42° · 70 cl","p":{"etui":135,"bois":146},"img":"p054","y":1999,"nz":["mirabelle","coing"],"bo":["gourmand","rond","frangipane"],"ap":"Bas-Armagnac","max":6},{"i":55,"n":"2000","c":["mi"],"f":"42° · 70 cl","p":{"etui":131,"bois":142},"img":"p055","y":2000,"nz":["amande","pomme_cuite","sureau"],"bo":["leger","fruite","long"],"ap":"Bas-Armagnac","max":6},{"i":56,"n":"2001","c":["mi"],"f":"42° · 70 cl","p":{"etui":129,"bois":140},"img":"p056","y":2001,"nz":["caramel","santal","raisins"],"bo":["amande_grillee","fruits_confits","rond"],"ap":"Bas-Armagnac","max":6},{"i":57,"n":"2002","c":["mi"],"f":"42° · 70 cl","p":{"etui":127,"bois":138},"img":"p057","y":2002,"nz":["bois_fume","pruneau","vanille"],"bo":["ample","santal","cire","equilibre"],"ap":"Bas-Armagnac","max":6},{"i":58,"n":"2003","c":["mi"],"f":"42° · 70 cl","p":{"etui":123,"bois":134},"img":"p058","y":2003,"nz":["peche","prune_cuite","orange_confite","chene_toaste"],"bo":["fruite","rond","long","epices"],"ap":"Bas-Armagnac","max":6},{"i":59,"n":"2004","c":["mi"],"f":"42° · 70 cl","p":{"etui":121,"bois":132},"img":"p059","y":2004,"nz":["vanille","bois_frais","patissier"],"bo":["intense","caramel","brioche","santal"],"ap":"Bas-Armagnac","max":6},{"i":60,"n":"2005","c":["mi"],"f":"42° · 70 cl","p":{"etui":119,"bois":130},"img":"p060","y":2005,"nz":["fruits_caramel","agrumes","torrefaction"],"bo":["rond","coco","vanille","equilibre"],"ap":"Bas-Armagnac","max":6},{"i":61,"n":"2006","c":["mi"],"f":"42° · 70 cl","p":{"etui":117,"bois":128},"img":"p061","y":2006,"nz":["fruits_caramel","agrumes","torrefaction"],"bo":["rond","coco","vanille","equilibre"],"ap":"Bas-Armagnac","max":6},{"i":62,"n":"2007","c":["mi"],"f":"42° · 70 cl","p":{"etui":116,"bois":127},"img":"p062","y":2007,"nz":["fruits_confits","pruneau","vanille","epices"],"bo":["ample","fruits_jaunes","caramel","long"],"ap":"Bas-Armagnac","max":6},{"i":63,"n":"2008","c":["mi"],"f":"42° · 70 cl","p":{"etui":114,"bois":125},"img":"p063","y":2008,"nz":["agrumes","fleurs_blanches","epices"],"bo":["fluide","fruite","agrumes_confits"],"ap":"Bas-Armagnac","max":6},{"i":64,"n":"2009","c":["mi"],"f":"42° · 70 cl","p":{"etui":113,"bois":124},"img":"p064","y":2009,"nz":["pruneau","orange_confite","cannelle"],"bo":["gourmand","pomme_caramel","santal","tanins_soyeux"],"ap":"Bas-Armagnac","max":6},{"i":65,"n":"2010","c":["mi"],"f":"42° · 70 cl","p":{"etui":111,"bois":122},"img":"p065","y":2010,"nz":["orange_confite","santal","epices"],"bo":["rond","prune","bois_toaste","fraicheur"],"ap":"Bas-Armagnac","max":6},{"i":66,"n":"Carte Blanche N°1 — Épilogue 2011","c":["cb","fe"],"f":"46° · 70 cl","p":{"etui":93,"bois":104},"img":"p066","img2":"p066b","max":6},{"i":67,"n":"Carafe Diva XO","c":["cc"],"f":"42° · 70 cl","p":{"u":105.0},"img":"p067","base":6},{"i":68,"n":"Carafe Jens Réserve","c":["cc"],"f":"42° · 50 cl","p":{"u":70.0},"img":"p068","base":5,"aw":"bxl25gold"},{"i":69,"n":"Carafe Yogi XO","c":["cc"],"f":"42° · 50 cl","p":{"u":88.0},"img":"p069","base":6},{"i":70,"n":"Un-Oaked Armagnac","c":["re"],"f":"43° · 70 cl","p":{"u":41.0},"img":"p070","aw":"talents19"},{"i":71,"n":"Single-Oaked Armagnac","c":["re"],"f":"43° · 70 cl","p":{"u":44.0},"img":"p071"},{"i":72,"n":"Double-Oaked Armagnac","c":["re"],"f":"43° · 70 cl","p":{"u":53.0},"img":"p072"},{"i":73,"n":"Organic Armagnac","c":["re"],"f":"42,6° · 70 cl","p":{"u":67.0},"img":"p073"},{"i":74,"n":"Livre « La Maison Dartigalongue, une histoire de l’armagnac »","c":["li"],"f":"24 × 22 cm · 200 p.","p":{"u":28.0},"img":"p074"},{"i":75,"n":"Cuvée Louis-Philippe — 180e anniversaire","c":["cc"],"f":"42° · 70 cl","p":{"u":243.0},"img":"p075"},{"i":76,"n":"Elixir 32","c":["fl"],"f":"32° · 70 cl","p":{"u":48.0},"img":"p076"},{"i":77,"n":"Pruneaux à l’armagnac","c":["fl"],"f":"18° · 70 cl","p":{"u":38.0},"img":"p077"},{"i":78,"n":"Verres Tulipe sans pied","c":["ve"],"f":"12 cl","p":{"u":18.0},"img":"p078"},{"i":79,"n":"Verres Tulipe avec pied","c":["ve"],"f":"15 cl","p":{"u":31.8},"img":"p079"}];
 /* Arômes : [fr, en, es, de, it, ja] */
 const AR={
@@ -569,10 +599,11 @@ const PRIV=I(
 
 const L={};
 L.fr={
+acc:"Mon compte",gate_q:"Avez-vous l’âge légal pour consommer de l’alcool dans votre pays ?",gate_y:"Oui, j’entre",gate_n:"Non, je sors",acc_l:"Connexion à votre compte : commandes, adresses, suivi. (Maquette : l’espace client sera relié à votre boutique actuelle à la mise en ligne.)",f_pw:"Mot de passe",f_login:"Se connecter",prevy:"Millésime précédent",nexty:"Millésime suivant",
 alt_hero:"Bouteilles Dartigalongue et machine à écrire au chai de Nogaro",alt_ghis:"Ghislain Laffargue, maître de chai",alt_fac:"Façade de la maison Dartigalongue, Place du Four, Nogaro",
 lang:"Français",nav_home:"Accueil",nav_hist:"Histoire",nav_sf:"Savoir-faire",nav_arm:"Nos armagnacs",nav_cock:"Cocktails",nav_vis:"Visites",nav_shop:"Boutique",nav_contact:"Contact",cart:"Panier",
 evin:"L'abus d'alcool est dangereux pour la santé, à consommer avec modération.",
-hero_t:"Votre année dort peut-être dans notre chai.",
+hero_t:"Votre année dort peut-être dans notre chai d’armagnac.",
 hero_l:"Depuis 1838, six générations élèvent l'armagnac à Nogaro. Plus de 60 millésimes attendent, mis en bouteille à la main.",
 cta_find:"Trouver mon millésime",cta_shop:"Toute la boutique",
 reg_t:"Le registre des millésimes",reg_l:"Faites glisser les années. À chacune son armagnac, ses notes, son prix.",
@@ -648,10 +679,11 @@ skip:"Aller au contenu",menu_lang:"Langue",close:"Fermer",prev:"Précédent",nex
 prop:"Proposition de refonte — Neovera Studio"
 };
 L.en={
+acc:"My account",gate_q:"Are you of legal drinking age in your country?",gate_y:"Yes, enter",gate_n:"No, leave",acc_l:"Sign in to your account: orders, addresses, tracking. (Mock-up: the customer area will be linked to your current shop at launch.)",f_pw:"Password",f_login:"Sign in",prevy:"Previous vintage",nexty:"Next vintage",
 alt_hero:"Dartigalongue bottles and a typewriter in the Nogaro cellar",alt_ghis:"Ghislain Laffargue, cellar master",alt_fac:"The Dartigalongue house front, Place du Four, Nogaro",
 lang:"English",nav_home:"Home",nav_hist:"History",nav_sf:"Craft",nav_arm:"Our armagnacs",nav_cock:"Cocktails",nav_vis:"Visits",nav_shop:"Shop",nav_contact:"Contact",cart:"Cart",
 evin:"Alcohol abuse is dangerous for your health. Please drink responsibly.",
-hero_t:"Your year may be resting in our cellar.",
+hero_t:"Your year may be resting in our armagnac cellar.",
 hero_l:"Since 1838, six generations have aged armagnac in Nogaro. More than 60 vintages are waiting, bottled by hand.",
 cta_find:"Find my vintage",cta_shop:"Browse the shop",
 reg_t:"The vintage register",reg_l:"Slide through the years. Each one has its armagnac, its notes, its price.",
@@ -728,10 +760,11 @@ prop:"Redesign proposal — Neovera Studio"
 };
 
 L.es={
+acc:"Mi cuenta",gate_q:"¿Tiene la edad legal para consumir alcohol en su país?",gate_y:"Sí, entro",gate_n:"No, salgo",acc_l:"Acceda a su cuenta: pedidos, direcciones, seguimiento. (Maqueta: el área de cliente se conectará a su tienda actual en la puesta en línea.)",f_pw:"Contraseña",f_login:"Entrar",prevy:"Añada anterior",nexty:"Añada siguiente",
 alt_hero:"Botellas Dartigalongue y máquina de escribir en la bodega de Nogaro",alt_ghis:"Ghislain Laffargue, maestro bodeguero",alt_fac:"Fachada de la casa Dartigalongue, Place du Four, Nogaro",
 lang:"Español",nav_home:"Inicio",nav_hist:"Historia",nav_sf:"Saber hacer",nav_arm:"Nuestros armañacs",nav_cock:"Cócteles",nav_vis:"Visitas",nav_shop:"Tienda",nav_contact:"Contacto",cart:"Cesta",
 evin:"El abuso del alcohol es peligroso para la salud. Consúmalo con moderación.",
-hero_t:"Quizá su año descansa en nuestra bodega.",
+hero_t:"Quizá su año descansa en nuestra bodega de armañac.",
 hero_l:"Desde 1838, seis generaciones crían el armañac en Nogaro. Más de 60 añadas esperan, embotelladas a mano.",
 cta_find:"Encontrar mi añada",cta_shop:"Toda la tienda",
 reg_t:"El registro de añadas",reg_l:"Deslice los años. Cada uno tiene su armañac, sus notas y su precio.",
@@ -807,10 +840,11 @@ skip:"Ir al contenido",menu_lang:"Idioma",close:"Cerrar",prev:"Anterior",next:"S
 prop:"Propuesta de rediseño — Neovera Studio"
 };
 L.de={
+acc:"Mein Konto",gate_q:"Haben Sie in Ihrem Land das gesetzliche Mindestalter für Alkohol?",gate_y:"Ja, eintreten",gate_n:"Nein, verlassen",acc_l:"Anmeldung zu Ihrem Konto: Bestellungen, Adressen, Sendungsverfolgung. (Entwurf: Der Kundenbereich wird beim Start mit Ihrem bestehenden Shop verbunden.)",f_pw:"Passwort",f_login:"Anmelden",prevy:"Vorheriger Jahrgang",nexty:"Nächster Jahrgang",
 alt_hero:"Dartigalongue-Flaschen und Schreibmaschine im Keller von Nogaro",alt_ghis:"Ghislain Laffargue, Kellermeister",alt_fac:"Fassade des Hauses Dartigalongue, Place du Four, Nogaro",
 lang:"Deutsch",nav_home:"Start",nav_hist:"Geschichte",nav_sf:"Handwerk",nav_arm:"Unsere Armagnacs",nav_cock:"Cocktails",nav_vis:"Besuche",nav_shop:"Shop",nav_contact:"Kontakt",cart:"Warenkorb",
 evin:"Übermäßiger Alkoholkonsum schadet der Gesundheit. Bitte genießen Sie verantwortungsvoll.",
-hero_t:"Vielleicht ruht Ihr Jahr in unserem Keller.",
+hero_t:"Vielleicht ruht Ihr Jahr in unserem Armagnac-Keller.",
 hero_l:"Seit 1838 lassen sechs Generationen in Nogaro Armagnac reifen. Über 60 Jahrgänge warten, von Hand abgefüllt.",
 cta_find:"Meinen Jahrgang finden",cta_shop:"Zum ganzen Shop",
 reg_t:"Das Jahrgangsregister",reg_l:"Schieben Sie durch die Jahre. Jedes hat seinen Armagnac, seine Noten, seinen Preis.",
@@ -887,10 +921,11 @@ prop:"Redesign-Vorschlag — Neovera Studio"
 };
 
 L.it={
+acc:"Il mio account",gate_q:"Avete l’età legale per bere alcolici nel vostro paese?",gate_y:"Sì, entro",gate_n:"No, esco",acc_l:"Accedete al vostro account: ordini, indirizzi, tracciamento. (Bozza: l’area clienti sarà collegata al vostro negozio attuale alla messa online.)",f_pw:"Password",f_login:"Accedi",prevy:"Annata precedente",nexty:"Annata successiva",
 alt_hero:"Bottiglie Dartigalongue e macchina da scrivere nella cantina di Nogaro",alt_ghis:"Ghislain Laffargue, maestro di cantina",alt_fac:"Facciata della casa Dartigalongue, Place du Four, Nogaro",
 lang:"Italiano",nav_home:"Home",nav_hist:"Storia",nav_sf:"Saper fare",nav_arm:"I nostri armagnac",nav_cock:"Cocktail",nav_vis:"Visite",nav_shop:"Negozio",nav_contact:"Contatti",cart:"Carrello",
 evin:"L'abuso di alcol nuoce alla salute. Bevi responsabilmente.",
-hero_t:"Forse il vostro anno riposa nella nostra cantina.",
+hero_t:"Forse il vostro anno riposa nella nostra cantina di armagnac.",
 hero_l:"Dal 1838 sei generazioni affinano l'armagnac a Nogaro. Oltre 60 annate attendono, imbottigliate a mano.",
 cta_find:"Trova la mia annata",cta_shop:"Tutto il negozio",
 reg_t:"Il registro delle annate",reg_l:"Scorrete gli anni. Ognuno ha il suo armagnac, le sue note, il suo prezzo.",
@@ -966,10 +1001,11 @@ skip:"Vai al contenuto",menu_lang:"Lingua",close:"Chiudi",prev:"Precedente",next
 prop:"Proposta di restyling — Neovera Studio"
 };
 L.ja={
+acc:"マイアカウント",gate_q:"お住まいの国の法定飲酒年齢に達していますか？",gate_y:"はい、入ります",gate_n:"いいえ、退出します",acc_l:"アカウントにログイン：注文、住所、配送状況。（試作版：公開時に現在のショップと連携します）",f_pw:"パスワード",f_login:"ログイン",prevy:"前のヴィンテージ",nexty:"次のヴィンテージ",
 alt_hero:"ノガロのセラーに並ぶダルティガロングのボトルとタイプライター",alt_ghis:"セラーマスター、ギスラン・ラファルグ",alt_fac:"ノガロ、プラス・デュ・フールのダルティガロング本社",
 lang:"日本語",nav_home:"ホーム",nav_hist:"歴史",nav_sf:"つくり",nav_arm:"アルマニャック",nav_cock:"カクテル",nav_vis:"見学",nav_shop:"ショップ",nav_contact:"お問い合わせ",cart:"カート",
 evin:"過度の飲酒は健康を害します。適量を楽しみましょう。",
-hero_t:"あなたの年が、私たちのセラーで眠っているかもしれません。",
+hero_t:"あなたの年が、私たちのアルマニャック・セラーで眠っているかもしれません。",
 hero_l:"1838年から6世代にわたり、ノガロでアルマニャックを熟成させてきました。手作業で瓶詰めした60以上のヴィンテージがお待ちしています。",
 cta_find:"私のヴィンテージを探す",cta_shop:"ショップを見る",
 reg_t:"ヴィンテージ台帳",reg_l:"年をスライドしてください。それぞれの年に、アルマニャックと香りと価格があります。",
@@ -1095,7 +1131,6 @@ function home(){
  <form class="saisie" id="saisie" autocomplete="off"><label for="an">${t('reg_hint')}</label><input id="an" inputmode="numeric" maxlength="4" placeholder="1985" aria-describedby="saisie-msg"><button>${t('reg_go')}</button></form><p id="saisie-msg" class="main" aria-live="polite"></p>
  <div class="actions"><a class="btn plein" href="#registre" data-reg>${t('cta_find')}</a><a class="lien" href="#/boutique">${t('cta_shop')}</a></div></div>
  <div class="droite"><img src="img/hero1.jpg" alt="${t('alt_hero')}" fetchpriority="high"></div></section>
- <div class="reass"><div><b>${t('r1')}</b><span>${t('r1s')}</span></div><div><b>${t('r2')}</b><span>${t('r2s')}</span></div><div><b>${t('r3')}</b><span><a href="tel:+33562090301">${t('r3s')}</a></span></div><div><b>${t('r4')}</b><span>${t('r4s')}</span></div></div>
  <section class="registre nuit" id="registre" aria-labelledby="reg-t"><div class="wrap">
   <div class="entete"><h2 id="reg-t">${t('reg_t')}</h2><p class="lead">${t('reg_l')}</p></div>
   <div class="reg-corps"><div class="etui-scene" aria-hidden="true"><div class="annee-fond num" id="reg-fond"></div><img id="reg-img" alt=""><div class="bord"></div></div>
@@ -1108,13 +1143,15 @@ function home(){
   <div class="regle-nav"><div class="fl"><button id="reg-prev" aria-label="${t('prev')}">←</button><button id="reg-next" aria-label="${t('next')}">→</button></div><small>1962 — 2010 · ${VINT.length}</small></div>
   <p class="cadeau">${t('reg_gift')}</p>
  </div></section>
+ <div class="reass"><div><b>${t('r1')}</b><span>${t('r1s')}</span></div><div><b>${t('r2')}</b><span>${t('r2s')}</span></div><div><b>${t('r3')}</b><span><a href="tel:+33562090301">${t('r3s')}</a></span></div><div><b>${t('r4')}</b><span>${t('r4s')}</span></div></div>
  <section class="ages"><div class="wrap"><h2 class="rv">${t('asm_t')}</h2><p class="lead rv" style="margin-top:16px">${t('asm_l')}</p>
-  <div class="ages-liste">${ASM.map((i,k)=>{const p=P[i];return '<a class="age rv" href="#/boutique/'+i+'"><span class="teinte" style="background:'+TEINTE[k]+'"></span><span class="lab min">'+t('age',{n:AGE[k]})+'</span><img loading="lazy" src="'+img(p.img)+'" alt="'+tr(p.n)+'"><h3>'+tr(p.n)+'</h3><p>'+X(PD[i]).split('. ')[0]+'.</p><span class="prix num">'+t('from')+' '+eur(pmin(p))+'</span></a>'}).join('')}</div></div></section>
+  <div class="ages-liste">${ASM.map((i,k)=>{const p=P[i];return '<a class="age rv" href="#/boutique/'+i+'"><img loading="lazy" src="'+img(p.img)+'" alt="'+tr(p.n)+'" style="height:'+(170+k*22)+'px"><span class="teinte" style="background:'+TEINTE[k]+'"></span><span class="lab min">'+t('age',{n:AGE[k]})+'</span><h3>'+tr(p.n)+'</h3><p>'+X(PD[i]).split('. ')[0]+'.</p><span class="prix num">'+t('from')+' '+eur(pmin(p))+'</span></a>'}).join('')}</div></div></section>
  <section class="duo nuit"><div class="txt"><h2 class="rv">${t('cb_t')}</h2><p class="lab meta">${t('cb_note')} · ${P[66].f}</p><p class="rv">${X(PD[66])}</p><div class="prixl"><strong class="num">${eur(P[66].p.etui)}</strong><button class="btn plein" data-add="66">${t('cb_cta')}</button><a class="lien" href="#/boutique/66">${t('reg_sheet')}</a></div></div><div class="img"><img loading="lazy" src="img/ghis.jpg" alt="${t('alt_ghis')}" style="object-position:50% 30%"><img class="flacon" loading="lazy" src="${img('p066')}" alt=""></div></section>
- <section class="duo inv"><div class="txt"><h2 class="rv">${t('fest_t')}</h2><p class="lab meta">${t('fest_note')} · ${P[0].f}</p><p class="rv" style="color:var(--txt2)">${X(PD[0])}</p><div class="prixl"><strong class="num">${eur(210)}</strong><button class="btn" data-add="0">${t('add')}</button><a class="lien" href="#/boutique/0">${t('reg_sheet')}</a></div></div><div class="img" style="background:#E8E3D6"><img loading="lazy" src="img/fest.jpg" alt="Fest'Armagnac 2026" style="object-fit:contain;padding:28px"></div></section>
+ <section class="duo inv"><div class="txt"><h2 class="rv">${t('fest_t')}</h2><p class="lab meta">${t('fest_note')} · ${P[0].f}</p><p class="rv" style="color:var(--txt2)">${X(PD[0])}</p><div class="prixl"><strong class="num">${eur(210)}</strong><button class="btn" data-add="0">${t('add')}</button><a class="lien" href="#/boutique/0">${t('reg_sheet')}</a></div></div><div class="img" style="background:var(--encre)"><img loading="lazy" src="img/fest.jpg" alt="Fest'Armagnac 2026" style="object-fit:contain;padding:clamp(28px,5vw,64px);filter:saturate(.8)"></div></section>
  <section class="duo"><div class="txt"><h2 class="rv">${t('ren_t')}</h2><p class="rv" style="color:var(--txt2)">${t('ren_l')}</p><div style="display:flex;gap:18px;align-items:end">${[70,71,72,73].map(i=>'<a href="#/boutique/'+i+'"><img loading="lazy" src="'+img(P[i].img)+'" alt="'+tr(P[i].n)+'" style="height:150px;width:auto"></a>').join('')}</div><a class="lien" href="#/cocktails">${t('ren_cta')}</a></div><div class="img"><img loading="lazy" src="img/barman.jpg" alt=""></div></section>
  <section class="bande"><div class="wrap archive"><figure class="rv"><img loading="lazy" src="img/t1910.jpg" alt=""><figcaption>1910 — ${t('cap').t1910}</figcaption></figure><div><h2 class="rv">${t('ht_t')}</h2><p class="lead rv" style="margin:18px 0 24px">${t('ht_l')}</p><a class="lien" href="#/histoire">${t('ht_cta')}</a></div></div></section>
  <section class="duo nuit inv"><div class="txt"><h2 class="rv">${t('st_t')}</h2><p class="rv">${t('st_l')}</p><a class="lien" href="#/savoir-faire">${t('st_cta')}</a></div><div class="img"><video id="vid" muted loop playsinline preload="none" poster="img/chai.jpg" aria-hidden="true"><source src="img/chai.mp4" type="video/mp4"></video></div></section>
+ <figure class="plein"><img loading="lazy" src="img/h1.jpg" alt=""></figure>
  <section class="bande"><div class="wrap"><div class="epv"><div class="sceau">Entreprise du Patrimoine Vivant</div><div><h3>${t('epv_t')}</h3><p style="color:var(--txt2);margin-top:6px;max-width:62ch">${t('epv_l')}</p></div><a class="lien" href="https://www.institut-metiersdart.org/epv/une-reference" target="_blank" rel="noopener">${t('epv_link')}</a></div>
  <div class="grille3" style="margin-top:56px"><div class="rv"><h3>${t('vt_t')}</h3><p style="color:var(--txt2);margin:12px 0 18px">${t('vt_l')}</p><a class="lien" href="#/visites">${t('vt_cta')}</a></div><div class="rv"><h3>${t('where_t')}</h3><p style="color:var(--txt2);margin:12px 0 18px">${t('where_l')}</p><a class="lien" href="#/contact">${t('where_cta')}</a></div><div class="rv"><h3>${t('book_t')}</h3><p style="color:var(--txt2);margin:12px 0 18px">${t('book_l')}</p><a class="lien" href="#/boutique/74">${tr(P[74].n).replace(/^\S+ /,'')} · ${eur(28)}</a></div></div></div></section>`;
 }
@@ -1172,10 +1209,12 @@ function prod(i){const p=P[i];if(!p)return shop(new URLSearchParams());const bas
  ${p.aw?'<dt>'+t('p_aw')+'</dt><dd>'+X(AW[p.aw])+'</dd>':''}${base?'<dt>'+t('p_base')+'</dt><dd><a href="#/boutique/'+base.i+'">'+tr(base.n)+'</a></dd>':''}
  ${p.ap?'<dt>'+t('p_app')+'</dt><dd>'+p.ap+'</dd>':''}<dt>${t('p_fmt')}</dt><dd class="num">${tr(p.f)}</dd></dl>
  ${p.y?'<p class="main" style="color:var(--txt2);margin-top:18px">'+t('reg_hand')+'</p>':''}
- <p style="margin-top:26px"><a class="lien" href="javascript:history.back()">${t('p_back')}</a></p></div></section></div>`}
+ <ul class="reass-p"><li>${t('r1')} <span>${t('r1s')}</span></li><li>${t('r2')} <span>${t('r2s')}</span></li><li>${t('r3')} <a href="tel:+33562090301">${t('r3s')}</a></li></ul>
+ <p class="voisins">${(()=>{if(!p.c.includes('mi'))return '<a class="lien" href="#/boutique?c='+p.c[0]+'">'+t('p_back')+'</a>';const k=VINT.findIndex(v=>v.i===i);const pv=VINT[k-1],nx=VINT[k+1];return (pv?'<a class="lien" href="#/boutique/'+pv.i+'">← '+t('prevy')+' · '+pv.y+'</a>':'')+(nx?'<a class="lien" href="#/boutique/'+nx.i+'">'+t('nexty')+' · '+nx.y+' →</a>':'')})()}</p></div></section></div>`}
 function contact(q){const s=+(q.get('s')||0);return `<section class="page-tete"><div class="wrap"><h1>${t('ct_t')}</h1><p class="lead">${t('ct_l')}</p></div></section>
 <section><div class="wrap infos ct"><form class="contact" id="fc" novalidate><label>${t('f_name')}<input name="n" autocomplete="name"></label><label>${t('f_mail')}<input name="m" type="email" autocomplete="email" required></label><label>${t('f_subj')}<select name="s">${t('subj').map((x,k)=>'<option'+(k===s?' selected':'')+'>'+x+'</option>').join('')}</select></label><label>${t('f_msg')}<textarea name="t" required></textarea></label><div id="fm" aria-live="polite"></div><button class="btn plein" style="justify-self:start">${t('f_send')}</button></form>
 <div><h3>${t('addr_t')}</h3><p style="margin:10px 0">Maison Dartigalongue<br>Place du Four – BP 9<br>32110 Nogaro, Gers, France</p><p><a href="mailto:contact@dartigalongue.com">contact@dartigalongue.com</a><br><a href="tel:+33562090301">+33 (0)5 62 09 03 01</a></p><h3 style="margin-top:28px">${t('hours_t')}</h3><p class="pre" style="margin-top:8px">${t('hours')}</p></div></div></section><div style="height:90px"></div>`}
+function compte(){return `<section class="page-tete"><div class="wrap"><h1>${t('acc')}</h1><p class="lead">${t('acc_l')}</p><form class="contact" style="margin-top:28px" onsubmit="return false"><label>${t('f_mail')}<input type="email" autocomplete="email"></label><label>${t('f_pw')}<input type="password" autocomplete="current-password"></label><button class="btn plein" style="justify-self:start">${t('f_login')}</button></form></div></section><div style="height:80px"></div>`}
 function legal(k){let h='';if(k==='mentions'){h='<h1>'+t('lg_t')+'</h1><dl class="tab" style="margin-top:28px">'+X(LEG.k).map((x,j)=>'<dt>'+x+'</dt><dd>'+LEG.v[j]+'</dd>').join('')+'</dl>'+X(LEG.p).map(x=>'<p style="margin-top:18px;max-width:70ch;color:var(--txt2)">'+x+'</p>').join('')}
  if(k==='cgv'){h='<h1>'+t('cgv_t')+'</h1>'+X(CGV).map((a,j)=>'<div class="chap"><div class="an num" style="font-size:2rem">'+(j+1)+'</div><div><h3>'+a[0]+'</h3><p>'+a[1]+'</p></div></div>').join('')}
  if(k==='confidentialite'){h='<h1>'+t('pv_t')+'</h1>'+X(PRIV).map(x=>'<p style="margin-top:20px;max-width:70ch;color:var(--txt2)">'+x+'</p>').join('')}
@@ -1222,6 +1261,7 @@ function route(){const h=location.hash||'#/';if(h==='#registre'){const r=$('#reg
  else if(seg[0]==='boutique'&&seg[1]){html=prod(+seg[1]);key='#/boutique'}
  else if(seg[0]==='boutique'){html=shop(q);key='#/boutique'}
  else if(seg[0]==='contact'){html=contact(q);key='#/contact'}
+ else if(seg[0]==='compte'){html=compte();key=''}
  else if(['mentions','cgv','confidentialite'].includes(seg[0])){html=legal(seg[0]);key=''}
  else html=home();
  V.innerHTML=html;$$('nav.menu a').forEach(a=>a.setAttribute('aria-current',a.getAttribute('href')===key?'page':'false'));
@@ -1275,6 +1315,8 @@ document.addEventListener('DOMContentLoaded',()=>{
  document.addEventListener('keydown',e=>{if(e.key==='Escape'){openCart(false);closeCons()}});
  addEventListener('hashchange',route);
  applyLang();
+ let ok=false;try{ok=localStorage.getItem('dg_age')}catch(e){}
+ if(!ok){const g=$('#porte');g.hidden=false;$('#porte-oui').onclick=()=>{try{localStorage.setItem('dg_age','1')}catch(e){}g.hidden=true};$('#porte-non').onclick=()=>{location.href='https://www.google.com/'}}
  let seen=false;try{seen=sessionStorage.getItem('dg_bulle')}catch(e){}
  if(!seen)setTimeout(()=>{if(!$('#cons').classList.contains('on'))$('#bulle').classList.add('on');try{sessionStorage.setItem('dg_bulle','1')}catch(e){}},4000);
 });
