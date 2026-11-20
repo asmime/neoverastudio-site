@@ -46,7 +46,7 @@ button{font:inherit;cursor:pointer;color:inherit;background:none;border:0}
 .num{font-variant-numeric:tabular-nums}
 .wrap{max-width:var(--max);margin:0 auto;padding:0 var(--pad)}
 h1,h2,h3,.cond{font-family:var(--cond);font-weight:700;line-height:1.02;letter-spacing:-.005em;text-wrap:balance}
-h1{font-size:clamp(2.6rem,6.2vw,5.4rem);text-transform:uppercase}
+h1{font-size:clamp(2.5rem,5.2vw,4.6rem);text-transform:uppercase}
 h2{font-size:clamp(2rem,4.2vw,3.4rem);text-transform:uppercase;margin-bottom:.5em}
 h3{font-size:clamp(1.35rem,2.2vw,1.75rem);text-transform:uppercase;margin-bottom:.35em}
 p{max-width:68ch;text-wrap:pretty}
@@ -99,7 +99,8 @@ p{max-width:68ch;text-wrap:pretty}
 @media (max-width:620px){
   .marque small{display:none}.marque b{font-size:1.12rem}.marque svg{width:32px;height:32px}
   .top .btn-resa{display:none}
-  .langue{height:40px;padding-left:8px}.langue select{font-size:.92rem;height:36px;max-width:118px}
+  .langue{height:40px;padding-left:6px;gap:2px}.langue svg{display:none}.langue select{font-size:.9rem;height:36px;max-width:104px;padding:0 2px}
+  .top-in{column-gap:10px}.marque span{min-width:0}.marque b{white-space:nowrap}
 }
 
 /* ===== VUES ===== */
@@ -118,7 +119,7 @@ section{padding:clamp(56px,8vw,112px) 0}
 .preuves .note{font-family:var(--cond);font-weight:700;font-size:1.25rem;color:var(--balise)}
 .heros-img{position:relative;overflow:hidden;background:var(--schiste)}
 .heros-img>img{width:100%;height:100%;object-fit:cover;object-position:30% 60%;position:absolute;inset:0}
-.heros-img::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(34,40,44,0) 55%,rgba(34,40,44,.45))}
+.heros-img::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(34,40,44,.05),rgba(34,40,44,0) 30%,rgba(34,40,44,.18) 60%,rgba(34,40,44,.6))}
 .legende-photo{position:absolute;left:16px;bottom:14px;z-index:3;color:#fff;font-size:.82rem;opacity:.9}
 
 /* ===== POTEAU INDICATEUR (geste signature) ===== */
@@ -392,6 +393,16 @@ details .rep p+p{margin-top:8px}
 .vh{position:absolute!important;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 .mt{margin-top:22px}.mt2{margin-top:40px}
 .sur-blanc{background:#fff}
+
+/* fiche : équipement en liste sobre */
+.fiche-info .liste-gr{grid-template-columns:1fr 1fr;gap:0 24px}
+.fiche-info .liste-gr li{padding:8px 0;border-bottom:1px solid var(--roche)}
+.fiche-info .liste-gr li::before{width:8px;height:2px;margin-top:.7em;background:var(--balise);box-shadow:none}
+@media (max-width:620px){.fiche-info .liste-gr{grid-template-columns:1fr}}
+.spec-ligne{font-family:var(--cond);font-weight:600;font-size:1.15rem;text-transform:uppercase;letter-spacing:.03em;color:var(--texte2);margin:10px 0 16px}
+.spec-ligne .non{color:var(--balise2)}
+#fiche{padding-bottom:40px}
+@media (max-width:620px){.cs-bouton{padding:6px 12px 6px 6px;gap:8px}.cs-bouton .pastille{width:34px;height:34px}.cs-bouton b{font-size:1rem}.cs-bouton small{font-size:.74rem}.cs-invite{bottom:128px}}
 </style>
 </head>
 <body>
@@ -1238,6 +1249,7 @@ capa:["Ce modèle accueille {c} personnes au maximum, bébés compris.","This mo
 sejour_l:["Séjour","Stay","Estancia","Aufenthalt","Soggiorno","Verblijf"],
 frais18:["Frais de dossier","Booking fee","Gastos de gestión","Buchungsgebühr","Spese di prenotazione","Dossierkosten"],
 taxe_l:["Taxe de séjour","Tourist tax","Tasa turística","Kurtaxe","Tassa di soggiorno","Toeristenbelasting"],
+depart:["Départ","Departure","Salida","Abreise","Partenza","Vertrek"],
 total:["Total estimé","Estimated total","Total estimado","Geschätzte Summe","Totale stimato","Geschat totaal"],
 acompte:["Acompte de 30 % à la réservation : {a}","30% deposit when booking: {a}","Anticipo del 30 % al reservar: {a}","30 % Anzahlung bei Buchung: {a}","Acconto del 30 % alla prenotazione: {a}","30 % aanbetaling bij reservering: {a}"],
 forfait:["Forfait","Package","Tarifa","Grundpreis","Formula","Basistarief"],
@@ -1299,7 +1311,7 @@ function fiche(id){
   $('#fiche').innerHTML=`<div class="page-tete"><p class="fil"><a href="#locations">${u('retour')}</a> / ${h.nom}</p><h1 class="titre" style="font-size:clamp(2.4rem,5vw,4rem)"><span class="gr"></span><span>${h.nom}</span></h1><p class="lead">${h.acc[L]}</p></div>
   <div class="fiche"><div class="galerie"><div class="grande"><img id="g-img" src="img/${h.img[0]}.jpg" alt="${h.nom}" width="600" height="250"></div><div class="mini">${h.img.map((m,i)=>`<button aria-pressed="${i==0}" data-g="${m}" aria-label="${h.nom} ${i+1}"><img src="img/${m}.jpg" alt="" loading="lazy"></button>`).join('')}</div>
   <div class="plan-h"><img src="img/${h.plan}.jpg" alt="${u('plan')} ${h.nom}" loading="lazy"><p>${u('plan')}</p></div></div>
-  <div class="fiche-info"><div class="etiquettes num"><span class="etiq">${h.cap} ${u('pers')}</span><span class="etiq">${h.m2} m²</span><span class="etiq">${h.ch} ${u('ch')}</span><span class="etiq">${u('modele')} ${h.an}</span><span class="etiq${h.eau?'':' non'}">${h.eau?u('avec_sdb'):u('sans_eau')}</span></div>
+  <div class="fiche-info"><p class="spec-ligne num">${h.cap} ${u('pers')} · ${h.m2} m² · ${h.ch} ${u('ch')} · ${u('modele')} ${h.an} · <span class="${h.eau?'':'non'}">${h.eau?u('avec_sdb'):u('sans_eau')}</span></p>
   <p>${h.desc[L]}</p><h3 class="mt">${u('equip')}</h3><ul class="liste-gr">${h.eq[L].map(x=>`<li>${x}</li>`).join('')}</ul>
   <div class="prix-fiche"><table><thead><tr><th>${u('tarifs26')}</th><th class="p">${u('basse')}</th><th class="p">${u('moy')}</th><th class="p">${u('haute')}</th></tr></thead><tbody>
   ${tp.b[0]?`<tr><td>${u('n1')}</td><td class="p">${c(tp.b[0])}</td><td class="p">${c(tp.m[0])}</td><td class="p">—</td></tr>`:''}
@@ -1392,7 +1404,8 @@ function calc(){
     aver.push(u('moins3'));
   }
   if(lignes.length){const tx=Math.round(ad*n*.6*100)/100;lignes.push([`${u('taxe_l')} (${ad} × ${n} × ${fmtE(.6)})`,tx]);tot+=tx;}
-  box.innerHTML=(lignes.length?`<ul class="num">${lignes.map(l=>`<li><span>${l[0]}</span><span>${fmtE(Math.round(l[1]*100)/100)}</span></li>`).join('')}</ul><div class="tot num"><span>${u('total')}</span><span>${fmtE(Math.round(tot*100)/100)}</span></div><p class="note-bas">${u('acompte').replace('{a}',fmtE(Math.round(tot*30)/100))}</p>`:'')+aver.map(a=>`<p class="avert">${a}</p>`).join('');
+  const dep=new Date(d+'T12:00');dep.setDate(dep.getDate()+n);const depS=dep.toLocaleDateString(LANGS[L]+'-'+(L==1?'GB':LANGS[L].toUpperCase()),{weekday:'long',day:'numeric',month:'long'});
+  box.innerHTML=`<p class="note-bas" style="margin:0 0 8px">${u('depart')} : <b>${depS}</b></p>`+(lignes.length?`<ul class="num">${lignes.map(l=>`<li><span>${l[0]}</span><span>${fmtE(Math.round(l[1]*100)/100)}</span></li>`).join('')}</ul><div class="tot num"><span>${u('total')}</span><span>${fmtE(Math.round(tot*100)/100)}</span></div><p class="note-bas">${u('acompte').replace('{a}',fmtE(Math.round(tot*30)/100))}</p>`:'')+aver.map(a=>`<p class="avert">${a}</p>`).join('');
 }
 function ouvrirSejour(c){if(c){choix=c;$('#sj-h').value=c}else if(ficheId&&!$('#sj-h').value){$('#sj-h').value=ficheId}const s=$('#sejour');s.classList.add('on');s.setAttribute('aria-hidden','false');$('#voile').classList.add('on');if(!$('#sj-d').value){}calc();setTimeout(()=>$('#sj-h').focus(),300)}
 function fermerSejour(){const s=$('#sejour');s.classList.remove('on');s.setAttribute('aria-hidden','true');$('#voile').classList.remove('on')}
@@ -1452,6 +1465,7 @@ r_inconnu:["Je n'ai pas cette information, et je préfère ne pas inventer. L'é
 calc:["Calculer mon séjour","Work out my stay","Calcular mi estancia","Aufenthalt berechnen","Calcola il soggiorno","Mijn verblijf berekenen"]
 };
 const INT=[
+ ['r_inconnu',/recharg|borne|charging|ladestat|laadpaal|ricaric|cargador|meteo|weather|tiempo|wetter|weer\b/],
  ['r_inconnu',/(lou|location|rent|hire|alquil|verleih|miet|noleggi|huur)\w*.{0,25}(velo|vtt|bike|bici|fahrrad|rad\b|fiets|kayak|canoe|voiture|car\b|auto)/],
  ['r_animal',/chien|chat|animal|animaux|dog|pet|perro|mascota|hund|haustier|cane|animale|hond|huisdier/],
  ['r_piscine',/piscine|pool|piscina|schwimm|zwembad|toboggan|slide|baignade|nager|swim|bad\b|bermuda|short|maillot/],
@@ -1468,7 +1482,7 @@ const INT=[
  ['r_anim',/anima|soiree|enfant|kids|child|nino|kinder|bambin|jeux|play|spiel|gioc|spel|loto|karaoke/],
  ['r_faire',/faire|visit|activ|canoe|kayak|rando|hike|walk|gorge|tarn|jonte|aigoual|grotte|cave|vautour|vulture|velo|vtt|bike|escalade|climb|peche|fish|riviere|river|rio|fluss|fiume|rivier|excursion|ausflug|uitstap/],
  ['r_contact',/contact|telephone|phone|mail|appeler|call|llamar|anrufen|chiamar|bellen|joindre/],
- ['r_tente',/tente|tent|tienda|zelt|tenda|caravan|camping-car|camper|motorhome|autocaravana|wohnmobil|emplacement|pitch|parcela|stellplatz|piazzol|kampeerplaats|electri/],
+ ['r_tente',/tente|tent|tienda|zelt|tenda|caravan|camping-car|camper|motorhome|autocaravana|wohnmobil|emplacement|pitch|parcela|stellplatz|piazzol|kampeerplaats/],
  ['r_prix',/prix|tarif|price|cost|cout|combien|precio|cuanto|preis|kostet|prezzo|quanto|prijs|kost|euro|€|budget|cher|cheap|pas cher|economique/],
  ['choix',/choisir|choix|hebergement|mobil|location|louer|rent|accommodation|alojamiento|unterkunft|alloggio|accommodatie|bikini|fidji|oakley|bermudes|coco|tithome|famille|family|familia|famili|gezin|couple|pareja|paar|coppia|stel|personnes|people|personas|personen|persone/]
 ];
@@ -1484,7 +1498,7 @@ function repondre(k){
     if(k=='choix'){bulle(cu('q_combien'));puces([['n2','2'],['n4','3 – 4'],['n5','5'],['n6','6'],['n7','7 +'],['r_tente',cu('q_tente')]]);return}
     const map={n2:['r_2',['coco','bikini','oakley']],n4:['r_4',['bikini','fidji','oakley']],n5:['r_5',['tithome','bermudes']],n6:['r_6',['bermudes','emp']],n7:['r_7',['bermudes','emp']],r_tente:['r_tente',['emp']]};
     if(map[k]){const [rk,ids]=map[k];const d=bulle(cu(rk)+reco(ids));lier(d);pucesBase();return}
-    if(k=='r_prix'){const d=bulle(cu('r_prix')+`<div class="reco"><button data-sejour-cs>${cu('calc')} →</button></div>`);lier(d);pucesBase();return}
+    if(k=='r_prix'){const d=bulle(cu('r_prix')+`<div class="reco"><button data-sejour-cs>${cu('calc')} →</button></div>`);lier(d);bulle(cu('q_combien'));puces([['n2','2'],['n4','3 – 4'],['n5','5'],['n6','6'],['n7','7 +'],['r_tente',cu('q_tente')]]);return}
     bulle(cu(k));pucesBase();
   },380);
 }
