@@ -13,7 +13,7 @@
 @font-face{font-family:"Jost";font-weight:500;font-display:swap;src:url(fonts/j500.woff2) format("woff2")}
 @font-face{font-family:"Figtree";font-weight:400;font-display:swap;src:url(fonts/f400.woff2) format("woff2")}
 @font-face{font-family:"Figtree";font-weight:600;font-display:swap;src:url(fonts/f600.woff2) format("woff2")}
-:root{--couloir:#181715;--couloir-2:#23211E;--pierre:#EEEAE3;--pierre-2:#E3DDD3;--blanc:#F8F6F2;--encre:#1E1C19;--gris:#5C564E;--gris-clair:#B8B0A4;--chene:#7A5A3A;--chene-clair:#A8835C;--olive:#535B43;--lueur:#F0C688;
+:root{--couloir:#181715;--couloir-2:#23211E;--pierre:#E6E5E0;--pierre-2:#D9D8D1;--blanc:#F5F5F2;--encre:#1E1C19;--gris:#5C564E;--gris-clair:#B8B0A4;--chene:#4C553F;--chene-clair:#8A927B;--olive:#535B43;--lueur:#F0C688;
 --titre:"Jost",system-ui,sans-serif;--texte:"Figtree",system-ui,sans-serif;--ease:cubic-bezier(.16,1,.3,1);--marge:clamp(20px,5vw,72px)}
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth;scrollbar-color:var(--chene-clair) var(--pierre-2)}
@@ -79,8 +79,8 @@ p{max-width:66ch;text-wrap:pretty}
 /* beau bien bon */
 .bbb{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.1fr);gap:clamp(32px,6vw,96px);align-items:start}
 .bbb .mots{display:grid}
-.mot{display:grid;grid-template-columns:clamp(130px,15vw,250px) 1fr;gap:6px 28px;align-items:baseline;padding:26px 0;border-top:1px solid #cfc7bb;cursor:pointer;background:none;border-left:0;border-right:0;border-bottom:0;text-align:left;color:inherit}
-.mot:last-child{border-bottom:1px solid #cfc7bb}
+.mot{display:grid;grid-template-columns:clamp(130px,15vw,250px) 1fr;gap:6px 28px;align-items:baseline;padding:26px 0;border-top:1px solid #C6C5BD;cursor:pointer;background:none;border-left:0;border-right:0;border-bottom:0;text-align:left;color:inherit}
+.mot:last-child{border-bottom:1px solid #C6C5BD}
 .mot strong{font-family:var(--titre);font-weight:300;font-size:clamp(3.2rem,8vw,7rem);line-height:.85;letter-spacing:-.04em;grid-row:span 2;transition:color .3s}
 .mot span{font-size:1.05rem;color:var(--gris);max-width:40ch}
 .mot em{font-style:normal;font-family:var(--titre);font-weight:500;font-size:.98rem;color:var(--chene)}
@@ -97,6 +97,7 @@ p{max-width:66ch;text-wrap:pretty}
 .plan .ph{position:relative;aspect-ratio:3/2;overflow:hidden;border-radius:2px}
 .plan img{width:100%;height:100%;object-fit:cover;transition:transform 1.2s var(--ease)}
 .plan:hover img{transform:scale(1.035)}
+.cote span{white-space:nowrap}
 .cote{position:absolute;left:14px;right:14px;bottom:14px;display:flex;align-items:center;gap:10px;color:var(--blanc);font-family:var(--titre);font-size:.95rem;text-shadow:0 1px 8px rgba(0,0,0,.5)}
 .cote i{flex:1;height:1px;background:currentColor;position:relative}
 .cote i::before,.cote i::after{content:"";position:absolute;top:-4px;width:1px;height:9px;background:currentColor}.cote i::before{left:0}.cote i::after{right:0}
@@ -113,7 +114,7 @@ p{max-width:66ch;text-wrap:pretty}
 .sombre .liste svg{color:var(--lueur)}
 .encart{border:1px solid #5d574f;padding:22px 24px;border-radius:2px;margin:22px 0;display:grid;gap:8px}
 .encart strong{font-family:var(--titre);font-weight:400;font-size:1.3rem}
-.pierre-enc{border-color:#cfc7bb}
+.pierre-enc{border-color:#C6C5BD}
 /* restaurant */
 .resto{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:clamp(18px,2.5vw,36px);align-items:end}
 .resto .r1{grid-column:1/span 5}.resto .r2{grid-column:6/span 4}.resto .r3{grid-column:10/span 3;align-self:start}
@@ -136,7 +137,7 @@ p{max-width:66ch;text-wrap:pretty}
 /* séminaires, alpilles */
 .duo{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(32px,6vw,90px);align-items:center}
 .duo img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:2px}
-.carte-alp{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:2px;margin-top:40px;background:#cfc7bb;border:1px solid #cfc7bb}
+.carte-alp{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:2px;margin-top:40px;background:#C6C5BD;border:1px solid #C6C5BD}
 .lieu{background:var(--pierre);padding:22px;display:grid;gap:8px;align-content:start}
 .lieu .km{font-family:var(--titre);font-size:2rem;font-weight:300;letter-spacing:-.02em;color:var(--chene)}
 .lieu p{font-size:.95rem;color:var(--gris)}
@@ -164,18 +165,18 @@ p{max-width:66ch;text-wrap:pretty}
 .tete .in{position:relative;padding:0 var(--marge) clamp(36px,7vh,72px);max-width:1100px}
 .tete h1{font-size:clamp(2.5rem,6.5vw,5.4rem);margin-bottom:.25em}
 .tete p{font-size:1.1rem}
-.sous-nav{display:flex;flex-wrap:wrap;gap:10px 28px;padding:28px 0;font-family:var(--titre);font-size:1rem}.sous-nav a{text-decoration:none;border-bottom:1px solid #cfc7bb;padding-bottom:3px}.sous-nav a:hover{border-color:var(--chene);color:var(--chene)}
-.bloc{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:clamp(28px,5vw,80px);align-items:start;padding:clamp(56px,8vw,110px) 0;border-top:1px solid #cfc7bb}
+.sous-nav{display:flex;flex-wrap:wrap;gap:10px 28px;padding:28px 0;font-family:var(--titre);font-size:1rem}.sous-nav a{text-decoration:none;border-bottom:1px solid #C6C5BD;padding-bottom:3px}.sous-nav a:hover{border-color:var(--chene);color:var(--chene)}
+.bloc{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:clamp(28px,5vw,80px);align-items:start;padding:clamp(56px,8vw,110px) 0;border-top:1px solid #C6C5BD}
 .bloc:first-child,.sous-nav+.bloc{border-top:0}
 .bloc img{width:100%;border-radius:2px;object-fit:cover;aspect-ratio:4/3}
 .bloc p+p{margin-top:1em}
 .serv{columns:2;column-gap:40px;list-style:none;margin-top:18px}
-.serv li{break-inside:avoid;padding:9px 0;border-bottom:1px solid #d8d1c6;font-size:.98rem}
+.serv li{break-inside:avoid;padding:9px 0;border-bottom:1px solid #CFCEC6;font-size:.98rem}
 .fiche{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:clamp(28px,5vw,72px);align-items:start}
 .galerie-fiche{display:grid;grid-template-columns:1fr 1fr;gap:10px}
 .galerie-fiche img{width:100%;aspect-ratio:3/2;object-fit:cover;border-radius:2px;cursor:zoom-in}
 .galerie-fiche img:first-child{grid-column:span 2;aspect-ratio:16/10}
-.fiche aside{position:sticky;top:140px;display:grid;gap:18px;padding:28px;border:1px solid #cfc7bb;border-radius:2px;background:var(--blanc)}
+.fiche aside{position:sticky;top:140px;display:grid;gap:18px;padding:28px;border:1px solid #C6C5BD;border-radius:2px;background:var(--blanc)}
 .puces{list-style:none;display:grid;gap:6px;font-size:.97rem}
 .puces li::before{content:"";display:inline-block;width:10px;height:1px;background:var(--chene);vertical-align:middle;margin-right:10px}
 .mur{columns:3 260px;column-gap:12px}
@@ -189,7 +190,7 @@ p{max-width:66ch;text-wrap:pretty}
 .form{display:grid;grid-template-columns:1fr 1fr;gap:14px 18px;margin-top:20px}
 .form .plein{grid-column:1/-1}
 .form label{display:grid;gap:6px;font-size:.9rem;color:var(--gris)}
-.form input,.form select,.form textarea{background:var(--blanc);border:1px solid #cbc3b7;border-radius:2px;padding:.75em .85em;color:var(--encre);font-size:1rem}
+.form input,.form select,.form textarea{background:var(--blanc);border:1px solid #C2C1B9;border-radius:2px;padding:.75em .85em;color:var(--encre);font-size:1rem}
 .form input:focus,.form select:focus,.form textarea:focus{outline:2px solid var(--chene);outline-offset:0;border-color:var(--chene)}
 .form .case{display:flex;gap:10px;align-items:flex-start;font-size:.9rem}
 .form .case input{margin-top:4px;accent-color:var(--chene)}
@@ -204,14 +205,14 @@ p{max-width:66ch;text-wrap:pretty}
 .voilage.on{opacity:1;pointer-events:auto}
 .tiroir{position:fixed;top:0;right:0;bottom:0;width:min(460px,100vw);background:var(--blanc);z-index:90;transform:translateX(102%);transition:transform .5s var(--ease);display:flex;flex-direction:column;box-shadow:-12px 0 40px rgba(0,0,0,.18)}
 .tiroir.on{transform:none}
-.tiroir header{display:flex;justify-content:space-between;align-items:center;padding:20px 24px;border-bottom:1px solid #ddd6cb}
+.tiroir header{display:flex;justify-content:space-between;align-items:center;padding:20px 24px;border-bottom:1px solid #D3D2CA}
 .tiroir header h2{font-size:1.8rem;margin:0}
 .tiroir .corps{flex:1;overflow:auto;padding:20px 24px;display:grid;gap:16px;align-content:start}
-.tiroir .pied-t{padding:18px 24px;border-top:1px solid #ddd6cb;display:grid;gap:10px}
-.fermer{background:none;border:1px solid #cbc3b7;width:40px;height:40px;border-radius:50%;cursor:pointer;display:grid;place-items:center}
+.tiroir .pied-t{padding:18px 24px;border-top:1px solid #D3D2CA;display:grid;gap:10px}
+.fermer{background:none;border:1px solid #C2C1B9;width:40px;height:40px;border-radius:50%;cursor:pointer;display:grid;place-items:center}
 .fermer svg{width:16px;height:16px}
 .opts{display:grid;gap:8px}
-.opt{display:flex;justify-content:space-between;gap:12px;align-items:center;padding:12px 14px;border:1px solid #ddd6cb;border-radius:2px;font-size:.95rem}
+.opt{display:flex;justify-content:space-between;gap:12px;align-items:center;padding:12px 14px;border:1px solid #D3D2CA;border-radius:2px;font-size:.95rem}
 .opt button{background:none;border:0;color:var(--chene);cursor:pointer;font-weight:600;font-size:.9rem}
 .compteur{position:absolute;top:-6px;right:-6px;background:var(--lueur);color:var(--couloir);font-size:.72rem;font-weight:600;border-radius:10px;padding:1px 6px;display:none}
 .btn-sej{position:relative}
@@ -241,8 +242,8 @@ p{max-width:66ch;text-wrap:pretty}
 .choix{display:flex;flex-wrap:wrap;gap:6px}
 .choix button{background:var(--blanc);border:1px solid var(--chene);color:var(--chene);border-radius:20px;padding:6px 12px;font-size:.88rem;cursor:pointer}
 .choix button:hover{background:var(--chene);color:var(--blanc)}
-.saisie{display:flex;gap:8px;padding:12px;border-top:1px solid #ddd6cb}
-.saisie input{flex:1;min-width:0;border:1px solid #cbc3b7;border-radius:2px;padding:.65em .8em}
+.saisie{display:flex;gap:8px;padding:12px;border-top:1px solid #D3D2CA}
+.saisie input{flex:1;min-width:0;border:1px solid #C2C1B9;border-radius:2px;padding:.65em .8em}
 /* visionneuse */
 dialog.vision{border:0;padding:0;background:transparent;max-width:94vw;max-height:92vh;margin:auto}
 dialog.vision::backdrop{background:rgba(24,23,21,.92)}
@@ -294,8 +295,10 @@ body{font-size:16px}
 .scene .situ,.scene .sous,.scene h1{text-shadow:0 1px 18px rgba(0,0,0,.45)}
 .defile{position:relative}.defile::after{content:"";position:absolute;top:0;right:0;bottom:16px;width:60px;background:linear-gradient(90deg,transparent,var(--pierre));pointer-events:none}
 .fleches{display:flex;gap:10px;justify-content:flex-end;margin-top:14px}
-.fleche{width:46px;height:46px;border-radius:50%;border:1px solid #bdb4a7;background:none;cursor:pointer;display:grid;place-items:center;color:var(--encre)}.fleche:hover{background:var(--encre);color:var(--blanc)}.fleche svg{width:18px;height:18px}
+.fleche{width:46px;height:46px;border-radius:50%;border:1px solid #B5B4AC;background:none;cursor:pointer;display:grid;place-items:center;color:var(--encre)}.fleche:hover{background:var(--encre);color:var(--blanc)}.fleche svg{width:18px;height:18px}
 @media (max-width:620px){.scene .avant{top:12%;max-width:none;right:var(--marge)}.scene .avant p:first-child{font-size:1.6rem}}
+.scene .offre-l{font-size:.98rem;color:var(--pierre);opacity:.85}
+@media (max-width:620px){.l1{flex-wrap:nowrap}.langue{order:0;padding:3px 6px}.langue svg{display:none}.langue select{font-size:.88rem;max-width:96px}.marque small{display:none}.bulle{display:none!important}}
 </style>
 </head>
 <body>
@@ -329,7 +332,7 @@ body{font-size:16px}
   <div class="scene">
    <div class="ouverture"><img src="img/hero-a.jpg" alt="Suite ouverte du b design & spa : lit, baignoire et niches lumineuses" fetchpriority="high"></div>
    <div class="rai"></div><div class="voile"></div>
-   <div class="avant"><p data-i="c_a"></p><p class="situ" data-i="etoiles"></p></div>
+   <div class="avant"><p data-i="c_a"></p><p class="situ" data-i="etoiles"></p><p class="offre-l" data-i="c_offre"></p></div>
    <p class="indice" data-i="c_scroll"></p>
    <div class="txt">
     <h1><span data-i="c_b"></span></h1>
@@ -421,7 +424,7 @@ body{font-size:16px}
  <div class="tete"><img src="img/suite-salon.jpg" alt=""><div class="in"><h1 data-i="nav_ch"></h1><p data-i="b_beau_t"></p></div></div>
  <div class="cadre"><div class="etroit"><p class="mince" data-i="suites_i"></p><div class="plans" id="plans-2"></div><p class="prix-dem" data-i="prix_dem"></p><p class="mince" style="margin-top:10px" data-i="regles"></p></div></div>
 </div>
-<div class="vue" data-vue="chambre"><div class="cadre"><div class="etroit" id="fiche"></div></div></div>
+<div class="vue" data-vue="chambre"><div class="cadre" style="padding-top:40px"><div class="etroit" id="fiche"></div></div></div>
 
 <div class="vue" data-vue="restaurant">
  <div class="tete"><img src="img/salon-attente.jpg" alt=""><div class="in"><h1>Nancy Bourguignon</h1><p data-i="b_bon_t"></p></div></div>
@@ -813,7 +816,13 @@ cadeaux:{fr:"Bons cadeaux",en:"Gift vouchers",es:"Tarjetas regalo",de:"Gutschein
 Object.assign(I,{douceurs:{fr:"Douceurs et gourmandises",en:"Sweet treats",es:"Dulzuras y golosinas",de:"Süßes und Naschwerk",it:"Dolcezze e golosità",nl:"Zoetigheden en lekkernijen"}});
 Object.assign(I,{cinq:{fr:"Hôtel 5 étoiles",en:"5-star hotel",es:"Hotel 5 estrellas",de:"5-Sterne-Hotel",it:"Hotel 5 stelle",nl:"5-sterrenhotel"},
 cinq_prov:{fr:"hôtel 5 étoiles en Provence",en:"5-star hotel in Provence",es:"hotel 5 estrellas en Provenza",de:"5-Sterne-Hotel in der Provence",it:"hotel 5 stelle in Provenza",nl:"5-sterrenhotel in de Provence"}});
+Object.assign(I,{
+c_offre:{fr:"15 chambres et suites · spa de 250 m² · restaurant Nancy Bourguignon",en:"15 rooms and suites · 250 m² spa · Nancy Bourguignon restaurant",es:"15 habitaciones y suites · spa de 250 m² · restaurante Nancy Bourguignon",de:"15 Zimmer und Suiten · 250 m² Spa · Restaurant Nancy Bourguignon",it:"15 camere e suite · spa di 250 m² · ristorante Nancy Bourguignon",nl:"15 kamers en suites · spa van 250 m² · restaurant Nancy Bourguignon"},
+r_petitdej:{fr:"Le petit-déjeuner se prend en terrasse, face aux Alpilles et à la piscine, avec des produits frais et faits maison. Room service possible.",en:"Breakfast is served on the terrace facing the Alpilles and the pool, with fresh, homemade produce. Room service available.",es:"El desayuno se sirve en la terraza frente a los Alpilles y la piscina, con productos frescos y caseros. Room service posible.",de:"Frühstück gibt es auf der Terrasse mit Blick auf die Alpilles und den Pool, frisch und hausgemacht. Zimmerservice möglich.",it:"La colazione si fa in terrazza di fronte alle Alpilles e alla piscina, con prodotti freschi e fatti in casa. Room service disponibile.",nl:"Het ontbijt wordt op het terras geserveerd, met zicht op de Alpilles en het zwembad, vers en huisgemaakt. Roomservice mogelijk."}
+});
 
+I.envoye={"fr": "Votre messagerie s’ouvre avec la demande prête à partir. Notre équipe vous confirme tout par e-mail ou par téléphone.", "en": "Your email app opens with the request ready to send. Our team will confirm by email or phone.", "es": "Su correo se abre con la solicitud lista para enviar. El equipo le confirmará por correo o teléfono.", "de": "Ihr E-Mail-Programm öffnet sich mit der fertigen Anfrage. Wir bestätigen per E-Mail oder Telefon.", "it": "Si apre la vostra posta con la richiesta pronta da inviare. Il team vi confermerà via e-mail o telefono.", "nl": "Uw e-mailprogramma opent met de aanvraag klaar om te versturen. Ons team bevestigt per e-mail of telefoon."};
+I.sej_ok={"fr": "Votre demande de séjour est prête : votre messagerie s’ouvre pour l’envoyer à la réception, qui vous répond 7 j/7.", "en": "Your stay request is ready: your email app opens to send it to reception, who reply 7 days a week.", "es": "Su solicitud está lista: su correo se abre para enviarla a recepción, que responde 7 días a la semana.", "de": "Ihre Anfrage ist fertig: Ihr E-Mail-Programm öffnet sich, um sie an die Rezeption zu senden, die 7 Tage die Woche antwortet.", "it": "La richiesta è pronta: si apre la vostra posta per inviarla alla reception, che risponde 7 giorni su 7.", "nl": "Uw aanvraag is klaar: uw e-mailprogramma opent om ze naar de receptie te sturen, die 7 dagen per week antwoordt."};
 const ROOMS=[
 {id:"exception",m2:48,cap:"1 – 2",img:["exception-lit","exception-entree","suite-vitree-2","exception-produits"],
 n:{fr:"Chambre design d’exception",en:"Exceptional design room",es:"Habitación design de excepción",de:"Außergewöhnliches Designzimmer",it:"Camera design d’eccezione",nl:"Uitzonderlijke designkamer"},
@@ -995,6 +1004,8 @@ function act(a){const R={
  spa:()=>msg(t("r_spa"),"ia",[[t("ouvrir_form"),"go:spa#rdv"]]),
  resto:()=>msg(t("r_resto"),"ia",[["+33 4 90 54 58 66","tel"],[t("nav_resto"),"go:restaurant"]]),
  acces:()=>msg(t("r_acces"),"ia",[[t("nav_contact"),"go:contact"]]),
+ regles:()=>msg(t("regles"),"ia",[[t("q_ch"),"ch"]]),
+ petitdej:()=>msg(t("r_petitdej"),"ia",[[t("reserver"),"sej:suite"]]),
  sem:()=>msg(t("r_sem"),"ia",[[t("devis"),"go:seminaires#devis"]])};
  if(R[a])return R[a]();
  const [k,v]=a.split(":");
@@ -1005,11 +1016,12 @@ function act(a){const R={
  else if(a==="bonkdo")open("https://hotelbdesign.bonkdo.com/fr/","_blank","noopener");
  else if(a==="tel")location.href="tel:+33490545866";
 }
-const MOTS={ch:/chambr|suite|room|habita|zimmer|camer|kamer|dorm|nuit|night|lit|bed/i,cadeau:/cadeau|gift|regal|geschenk|offrir|bon /i,spa:/spa|soin|massage|hammam|bassin|piscin|pool|wellness/i,resto:/resto|dîner|diner|déjeuner|table|cuisine|manger|eat|dinner|lunch|essen|cena|pranzo|eten|vin|wine/i,acces:/accès|acces|venir|adresse|gare|train|aéroport|parking|route|directions|anfahrt|llegar|arriv|komen/i,sem:/séminaire|seminaire|seminar|réunion|mariage|wedding|événement|evenement|event|groupe|boda|hochzeit|matrimonio|bruiloft/i};
+const MOTS={r4:/enfant|famille|bébé|bebe|kid|child|famil|niño|kinder|bambin|figli|gezin/i,regles:/animal|animaux|chien|chat|dog|pet|perro|hund|cane|hond|fumeur|smok/i,acces:/parking|garer|taxi/i,petitdej:/petit-déj|petit déj|breakfast|desayun|frühstück|colazion|ontbijt/i,ch:/chambr|suite|room|habita|zimmer|camer|kamer|dorm|nuit|night|lit|bed/i,cadeau:/cadeau|gift|regal|geschenk|offrir|bon /i,spa:/spa|soin|massage|hammam|bassin|piscin|pool|wellness/i,resto:/resto|dîner|diner|déjeuner|table|cuisine|manger|eat|dinner|lunch|essen|cena|pranzo|eten|vin|wine/i,acces:/accès|acces|venir|adresse|gare|train|aéroport|parking|route|directions|anfahrt|llegar|arriv|komen/i,sem:/séminaire|seminaire|seminar|réunion|mariage|wedding|événement|evenement|event|groupe|boda|hochzeit|matrimonio|bruiloft/i};
 function repondre(q){msg(q.replace(/[<>&]/g,""),"moi");for(const[k,re]of Object.entries(MOTS))if(re.test(q))return setTimeout(()=>act(k),350);setTimeout(()=>msg(t("r_defaut"),"ia",[[t("nav_contact"),"go:contact"]]),350)}
 /* formulaires */
+function mailto(sujet,corps){location.href="mailto:reservation@hotelbdesign.fr?subject="+encodeURIComponent(sujet)+"&body="+encodeURIComponent(corps)}
 function envoyerForm(f){const req=$$("[required]",f);let ok=true;req.forEach(i=>{const v=i.type==="checkbox"?i.checked:i.value.trim()&&i.checkValidity();i.setAttribute("aria-invalid",v?"false":"true");if(!v)ok=false});
- const m=$(".msg",f);m.className="msg plein "+(ok?"ok":"err");m.textContent=ok?t("envoye"):t("err_champs");if(ok){f.reset();$$("button",f).forEach(b=>b.disabled=true);setTimeout(()=>$$("button",f).forEach(b=>b.disabled=false),4000)}}
+ const m=$(".msg",f);m.className="msg plein "+(ok?"ok":"err");m.textContent=ok?t("envoye"):t("err_champs");if(ok){const corps=$$("input,select,textarea",f).filter(i=>i.name&&i.value).map(i=>(i.closest("label")?.querySelector("span")?.textContent||i.name)+" : "+i.value).join("\n");mailto((f.closest(".bloc")?.querySelector("h2")?.textContent||t("contact_t"))+" — b design & spa",corps);f.reset();$$("button",f).forEach(b=>b.disabled=true);setTimeout(()=>$$("button",f).forEach(b=>b.disabled=false),4000)}}
 /* couloir */
 const reduit=matchMedia("(prefers-reduced-motion: reduce)").matches;
 function hdr(){document.documentElement.style.setProperty('--hdr',$('.entete').offsetHeight+'px')}
@@ -1049,7 +1061,7 @@ $("[data-news]").addEventListener("submit",e=>{e.preventDefault();const i=$("inp
 $("#saisie").addEventListener("submit",e=>{e.preventDefault();const q=$("#q").value.trim();if(q){repondre(q);$("#q").value=""}});
 $("#s-ch").addEventListener("change",e=>{sej.room=e.target.value;renderSej()});
 ["#s-arr","#s-dep"].forEach(s=>$(s).addEventListener("change",renderSej));
-$("#s-go").addEventListener("click",()=>{const m=$("#s-msg");const n=nuits();if(n<1){m.className="msg err";m.textContent=t("sej_err");return}if(!sej.room)sej.room=$("#s-ch").value;renderSej();m.className="msg ok";m.textContent=t("sej_ok")});
+$("#s-go").addEventListener("click",()=>{const m=$("#s-msg");const n=nuits();if(n<1){m.className="msg err";m.textContent=t("sej_err");return}if(!sej.room)sej.room=$("#s-ch").value;renderSej();const r=ROOMS.find(x=>x.id===sej.room);const opts=sej.add.map(id=>{const o=OFFERS.find(x=>x.id===id);return "- "+T(o.n)+(o.prix?" ("+eur(o.prix)+")":"")});const rec=[t("sej_arr")+" : "+$("#s-arr").value,t("sej_dep")+" : "+$("#s-dep").value+" ("+n+" "+t("sej_nuits")+")",t("adultes")+" : "+$("#s-ad").value+" · "+t("enfants")+" : "+$("#s-en").value,t("sej_ch")+" : "+T(r.n)+" ("+r.m2+" m²)"].concat(opts.length?[t("sej_total")+" :"].concat(opts):[]);m.className="msg ok";m.innerHTML="<strong>"+t("sej_ok")+"</strong><br>"+rec.join("<br>");mailto(t("sej_t")+" — b design & spa",rec.join("\n"))});
 const sel=$("#lang");sel.innerHTML=LANGS.map(l=>`<option value="${l}">${LN[l]}</option>`).join("");sel.value=lang;
 sel.addEventListener("change",()=>{lang=sel.value;try{localStorage.setItem("bd-lang",lang)}catch(e){}applyI18n();if(conseilOuvert)accueilConseil();else $("#fil").innerHTML=""});
 const today=new Date().toISOString().slice(0,10);$("#s-arr").min=today;$("#s-dep").min=today;
