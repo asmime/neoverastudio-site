@@ -1,0 +1,998 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Océance Piscines — Proposition Neovera Studio</title>
+<meta name="description" content="Océance Piscines, pose de liner PVC armé soudé sur place en Bretagne : rénovation, réparation, construction de piscine, matériel. Fouesnant (29).">
+<link rel="icon" href="img/logo.png">
+<style>
+@font-face{font-family:'Geologica';src:url(fonts/geologica.woff2) format('woff2');font-weight:100 900;font-display:swap}
+@font-face{font-family:'Readex Pro';src:url(fonts/readex.woff2) format('woff2');font-weight:160 700;font-display:swap}
+@font-face{font-family:'Martian Mono';src:url(fonts/martian.woff2) format('woff2');font-weight:400;font-display:swap}
+:root{
+  --nuit:#0E181D;--ardoise:#1B2A31;--ardoise-2:#2A3B43;
+  --membrane:#E7EAE9;--papier:#F6F7F6;--trame:#C6CDCD;--trait:#D5DBDA;
+  --bleu:#1D4E73;--bleu-clair:#9CC3D6;
+  --soudure:#D9481F;--chaud:#FF9A3D;--froid:#F3F1EA;
+  --texte:#1B2A31;--doux:#4F5F66;
+  --titre:'Geologica',system-ui,sans-serif;--corps:'Readex Pro',system-ui,sans-serif;--cote:'Martian Mono',ui-monospace,monospace;
+  --r:4px;--ombre:0 1px 2px rgba(14,24,29,.06),0 8px 24px -8px rgba(14,24,29,.18);
+  --max:1240px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation:none!important;transition:none!important}}
+body{margin:0;background:var(--membrane);color:var(--texte);font-family:var(--corps);font-size:17px;line-height:1.6;font-weight:330}
+::selection{background:var(--soudure);color:#fff}
+::-webkit-scrollbar{width:10px;height:8px}::-webkit-scrollbar-track{background:var(--membrane)}::-webkit-scrollbar-thumb{background:var(--ardoise-2);border-radius:10px}
+html{scrollbar-color:var(--ardoise-2) var(--membrane)}
+:focus-visible{outline:2px solid var(--soudure);outline-offset:3px}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration-color:var(--soudure);text-underline-offset:.22em;text-decoration-thickness:1.5px}
+h1,h2,h3,h4{font-family:var(--titre);font-weight:700;letter-spacing:-.022em;line-height:1.08;margin:0;text-wrap:balance}
+p{margin:0 0 1em;text-wrap:pretty}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 24px}
+.cote{font-family:var(--cote);font-size:12px;letter-spacing:.02em;font-weight:400}
+.btn{display:inline-flex;align-items:center;gap:.6em;font:600 15px/1 var(--corps);padding:15px 22px;border-radius:var(--r);border:1.5px solid transparent;cursor:pointer;text-decoration:none;transition:background .2s,color .2s,border-color .2s,transform .2s}
+.btn:active{transform:translateY(1px)}
+.btn-soudure{background:var(--soudure);color:#fff}.btn-soudure:hover{background:#B83A15}
+.btn-ligne{border-color:currentColor;background:transparent}.btn-ligne:hover{background:rgba(255,255,255,.08)}
+.btn-ardoise{background:var(--ardoise);color:#fff}.btn-ardoise:hover{background:var(--nuit)}
+.btn svg{width:16px;height:16px}
+.suite{font-weight:600;text-decoration:none;border-bottom:1.5px solid var(--soudure);padding-bottom:2px}
+.suite:hover{color:var(--soudure)}
+
+/* En-tête */
+header.tete{position:sticky;top:0;z-index:40;background:rgba(246,247,246,.96);backdrop-filter:saturate(1.2);border-bottom:1px solid var(--trait)}
+.tete-l1{display:flex;align-items:center;gap:18px;height:68px}
+.tete-l1 .logo img{height:34px;width:auto}
+.tete-l1 .tel{margin-left:auto;font-weight:600;font-size:15px;text-decoration:none;white-space:nowrap}
+.tete-l1 .tel span{color:var(--doux);font-weight:400}
+.langue{position:relative}
+.langue select{appearance:none;-webkit-appearance:none;font:500 14px var(--corps);color:var(--texte);background:var(--papier);border:1.5px solid var(--ardoise);border-radius:var(--r);padding:8px 32px 8px 12px;cursor:pointer}
+.langue::after{content:"";position:absolute;right:12px;top:50%;width:7px;height:7px;border-right:1.5px solid var(--ardoise);border-bottom:1.5px solid var(--ardoise);transform:translateY(-70%) rotate(45deg);pointer-events:none}
+nav.menu{display:flex;gap:4px;align-items:center;height:48px;border-top:1px solid var(--trait)}
+nav.menu a{text-decoration:none;font-size:15px;font-weight:450;padding:8px 12px;border-radius:var(--r);white-space:nowrap;position:relative}
+nav.menu a:hover{background:var(--membrane)}
+nav.menu a[aria-current=page]{font-weight:600}
+nav.menu a[aria-current=page]::after{content:"";position:absolute;left:12px;right:12px;bottom:2px;height:2px;background:var(--soudure)}
+nav.menu a.conseil{margin-left:auto;color:var(--bleu);font-weight:600}
+@media (max-width:900px){
+  .tete-l1 .tel span{display:none}
+  nav.menu{overflow-x:auto;scrollbar-width:none;-webkit-mask-image:linear-gradient(90deg,#000 85%,transparent);mask-image:linear-gradient(90deg,#000 85%,transparent);padding-right:30px}
+  nav.menu::-webkit-scrollbar{display:none}
+  nav.menu a.conseil{margin-left:0}
+}
+@media (max-width:620px){.tete-l1{gap:10px;height:60px}.tete-l1 .logo img{height:26px}.tete-l1 .btn{display:none}.langue select{padding:7px 28px 7px 9px;font-size:13px}.tete-l1 .tel{font-size:14px}}
+@media (max-width:420px){.tete-l1 .tel{display:none}.langue{margin-left:auto}}
+
+/* Pages */
+main>section.page{display:none}main>section.page.actif{display:block}
+
+/* Héros */
+.heros{background:var(--nuit);color:var(--froid);overflow:hidden}
+.heros .wrap{display:grid;grid-template-columns:1fr 1.05fr;gap:56px;align-items:center;min-height:min(78vh,720px);padding-top:40px;padding-bottom:40px}
+.heros h1{font-size:clamp(36px,4.6vw,64px);font-weight:750}
+.heros h1 em{font-style:normal;color:var(--chaud)}
+.heros .chapo{font-size:19px;line-height:1.55;color:#C9D3D5;max-width:34em;margin:22px 0 30px}
+.heros .actions{display:flex;flex-wrap:wrap;gap:12px}
+.heros .preuves{display:flex;flex-wrap:wrap;gap:8px 22px;margin-top:34px;padding-top:20px;border-top:1px solid rgba(255,255,255,.12);color:#AEBBBF}
+.heros .preuves span::before{content:"";display:inline-block;width:6px;height:6px;background:var(--chaud);border-radius:50%;margin-right:8px;vertical-align:2px}
+.chantier{position:relative;aspect-ratio:1/1;border-radius:6px;overflow:hidden;background:#000}
+.chantier img{width:100%;height:100%;object-fit:cover}
+.chantier svg{position:absolute;inset:0;width:100%;height:100%}
+.chantier .legende{position:absolute;left:14px;bottom:12px;right:14px;display:flex;justify-content:space-between;gap:10px;color:#D8DFE0;text-shadow:0 1px 2px #000}
+#cordon{fill:none;stroke:var(--chaud);stroke-width:5;stroke-linecap:round;stroke-linejoin:round;transition:stroke 1.6s ease}
+#cordon.froid{stroke:#F3EEDF}
+#point{fill:#FFF3D6}
+.lueur{filter:drop-shadow(0 0 6px #FFB347) drop-shadow(0 0 16px #FF7A1A)}
+@media (max-width:900px){.heros .wrap{grid-template-columns:1fr;gap:28px;min-height:0;padding-top:28px}.chantier{aspect-ratio:4/3.4}}
+
+/* Sections */
+.bloc{padding:96px 0}
+.bloc.papier{background:var(--papier)}
+.bloc.sombre{background:var(--ardoise);color:var(--froid)}
+.bloc h2{font-size:clamp(30px,3.4vw,46px);max-width:18em}
+.bloc .intro{font-size:19px;max-width:38em;color:var(--doux);margin-top:18px}
+.bloc.sombre .intro{color:#B9C6CA}
+.deux{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
+@media (max-width:860px){.bloc{padding:64px 0}.deux{grid-template-columns:1fr;gap:32px}}
+.liste-trait{list-style:none;padding:0;margin:24px 0;border-top:1px solid var(--trame)}
+.liste-trait li{padding:13px 0;border-bottom:1px solid var(--trame);display:flex;gap:16px;align-items:baseline}
+.liste-trait li .cote{color:var(--soudure);min-width:6.5em}
+.bloc.sombre .liste-trait,.bloc.sombre .liste-trait li{border-color:rgba(255,255,255,.14)}
+.photo{border-radius:6px;overflow:hidden;background:var(--trame)}
+.photo img{width:100%;height:100%;object-fit:cover}
+.coloris-photo{aspect-ratio:1/1.05;max-width:520px}
+
+/* Frise des 4 photos */
+.frise{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:44px}
+.frise figure{margin:0}
+.frise .photo{aspect-ratio:1/1}
+.frise figcaption{margin-top:12px;display:flex;flex-direction:column;gap:2px}
+.frise figcaption b{font-family:var(--titre);font-size:18px;letter-spacing:-.01em}
+.frise figcaption .cote{color:var(--doux)}
+@media (max-width:860px){.frise{grid-template-columns:repeat(4,72%);overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:10px}.frise figure{scroll-snap-align:start}}
+
+/* Coupe de membrane */
+.coupe{display:grid;grid-template-columns:1.1fr 1fr;gap:56px;align-items:center;margin-top:40px}
+.coupe svg{width:100%;height:auto}
+.coupe .pt{border-top:1px solid rgba(255,255,255,.16);padding:18px 0}
+.coupe .pt h3{font-size:22px;margin-bottom:6px;color:#fff}
+.coupe .pt p{color:#B9C6CA;margin:0}
+@media (max-width:860px){.coupe{grid-template-columns:1fr;gap:20px}}
+
+/* Promesses */
+.promesses{display:grid;grid-template-columns:1.25fr 1fr;gap:56px;margin-top:44px;align-items:start}
+.promesses .photo{aspect-ratio:1/1}
+.prom{padding:22px 0;border-top:1px solid var(--trame)}
+.prom h3{font-size:22px;margin-bottom:6px}
+.prom p{margin:0;color:var(--doux)}
+@media (max-width:860px){.promesses{grid-template-columns:1fr;gap:24px}}
+
+/* Déroulé */
+.deroule{list-style:none;padding:0;margin:44px 0 0;position:relative;display:grid;grid-template-columns:repeat(4,1fr);gap:28px}
+.deroule::before{content:"";position:absolute;left:0;right:0;top:9px;height:2px;background:repeating-linear-gradient(90deg,var(--ardoise) 0 10px,transparent 10px 16px);opacity:.35}
+.deroule li{position:relative;padding-top:34px}
+.deroule li::before{content:"";position:absolute;top:2px;left:0;width:16px;height:16px;border-radius:50%;background:var(--papier);border:2px solid var(--soudure)}
+.deroule .cote{color:var(--soudure);display:block;margin:4px 0 8px}
+.deroule h3{font-size:21px;margin-bottom:8px}
+.deroule p{color:var(--doux);margin:0;font-size:16px}
+@media (max-width:860px){.deroule{grid-template-columns:1fr;gap:6px}.deroule::before{left:7px;right:auto;top:0;bottom:0;width:2px;height:auto;background:repeating-linear-gradient(180deg,var(--ardoise) 0 10px,transparent 10px 16px)}.deroule li{padding:0 0 26px 38px}.deroule li::before{top:4px}}
+
+/* Pros, zones */
+.pros{display:grid;grid-template-columns:1.2fr 1fr;gap:56px;align-items:end}
+@media (max-width:860px){.pros{grid-template-columns:1fr;gap:28px}}
+.zones{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
+.zones span{border:1.5px solid currentColor;border-radius:999px;padding:6px 14px;font-size:15px}
+.clef{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:40px}
+.clef a{display:grid;grid-template-columns:150px 1fr;gap:22px;align-items:center;background:var(--papier);border-radius:6px;overflow:hidden;text-decoration:none;box-shadow:var(--ombre);transition:transform .25s}
+.clef a:hover{transform:translateY(-3px)}
+.clef a .photo{position:relative;align-self:stretch;min-height:150px;border-radius:0}.clef a .photo img{position:absolute;inset:0}
+.clef a div{padding:18px 18px 18px 0}
+.clef h3{font-size:21px;margin-bottom:6px}
+.clef p{margin:0 0 8px;color:var(--doux);font-size:15.5px}
+@media (max-width:760px){.clef{grid-template-columns:1fr}.clef a{grid-template-columns:110px 1fr}}
+
+.relance{display:flex;flex-wrap:wrap;align-items:center;gap:12px 14px;margin-top:40px;padding:22px 24px;background:var(--papier);border-radius:6px;box-shadow:var(--ombre)}
+.relance p{margin:0 auto 0 0;font-weight:500;font-size:18px;max-width:30em}
+.relance .btn-ligne{color:var(--ardoise)}
+.barre-mobile{display:none}
+@media (max-width:620px){
+ .barre-mobile{display:grid;grid-template-columns:1fr 1.3fr;gap:8px;position:fixed;left:0;right:0;bottom:0;z-index:55;padding:8px 10px calc(8px + env(safe-area-inset-bottom));background:rgba(246,247,246,.97);border-top:1px solid var(--trait)}
+ .barre-mobile .btn{justify-content:center;padding:13px 10px}
+ body{padding-bottom:66px}
+ .conseiller-btn{bottom:74px;right:12px}
+ .invite{bottom:134px}
+ .fenetre{bottom:74px;height:min(560px,calc(100vh - 150px))}
+ form.devis button[type=submit]{width:100%;justify-content:center}
+}
+/* Appel final */
+.appel{background:var(--nuit);color:var(--froid);padding:84px 0}
+.appel .wrap{display:flex;justify-content:space-between;align-items:center;gap:32px;flex-wrap:wrap}
+.appel h2{font-size:clamp(28px,3.2vw,42px);max-width:16em}
+.appel p{color:#B9C6CA;margin:12px 0 0;max-width:34em}
+
+/* Sous-pages */
+.tete-page{background:var(--nuit);color:var(--froid);padding:64px 0 56px}
+.tete-page .wrap{display:grid;grid-template-columns:1.2fr 1fr;gap:48px;align-items:center}
+.tete-page h1{font-size:clamp(34px,4vw,56px)}
+.tete-page p{color:#C2CDD0;font-size:18.5px;margin:18px 0 0;max-width:34em}
+.tete-page .photo{aspect-ratio:3/2}
+@media (max-width:860px){.tete-page{padding:40px 0}.tete-page .wrap{grid-template-columns:1fr;gap:24px}}
+.etapes{counter-reset:e;list-style:none;padding:0;margin:40px 0 0;max-width:900px}
+.etapes li{display:grid;grid-template-columns:200px 1fr;gap:28px;padding:28px 0;border-top:1px solid var(--trame)}
+.etapes h3{font-size:22px}
+.etapes .cote{display:block;color:var(--soudure);margin-top:8px}
+.etapes p{margin:0;color:var(--doux)}
+@media (max-width:700px){.etapes li{grid-template-columns:1fr;gap:8px}}
+.galerie{display:grid;grid-template-columns:2fr 1fr 1fr;grid-template-rows:240px 240px;gap:12px;margin-top:36px}
+.galerie .photo:first-child{grid-row:span 2}
+.galerie .photo:nth-child(4){grid-column:span 2}
+@media (max-width:700px){.galerie{grid-template-columns:1fr 1fr;grid-template-rows:auto}.galerie .photo{aspect-ratio:1/1}.galerie .photo:first-child{grid-column:span 2;grid-row:auto;aspect-ratio:4/3}.galerie .photo:nth-child(4){grid-column:span 2;aspect-ratio:3/2}}
+
+.familles{margin-top:36px;border-top:1px solid var(--trame)}
+.famille{display:grid;grid-template-columns:64px 220px 1fr auto;gap:24px;align-items:center;padding:26px 0;border-bottom:1px solid var(--trame)}
+.famille svg{width:44px;height:44px;stroke:var(--ardoise);stroke-width:1.6;fill:none}
+.famille h3{font-size:24px}
+.famille p{margin:0;color:var(--doux)}
+.famille .cote{color:var(--bleu);white-space:nowrap}
+@media (max-width:760px){.famille{grid-template-columns:48px 1fr;gap:10px 16px}.famille svg{width:36px;height:36px}.famille p,.famille .cote{grid-column:2}}
+
+/* Mon bassin */
+.atelier{display:grid;grid-template-columns:360px 1fr;gap:40px;margin-top:40px;align-items:start}
+.reglages{background:var(--papier);border-radius:6px;padding:26px;box-shadow:var(--ombre)}
+.champ{display:block;margin-bottom:18px}
+.champ>span{display:flex;justify-content:space-between;font-weight:500;font-size:15px;margin-bottom:6px}
+.champ output{font-family:var(--cote);font-size:13px;color:var(--soudure)}
+input[type=range]{width:100%;accent-color:var(--soudure)}
+.choix{display:grid;gap:8px}
+.choix input{position:absolute;opacity:0}
+.choix span{display:block;text-align:left;border:1.5px solid var(--trame);border-radius:var(--r);padding:10px 8px;font-size:14px;cursor:pointer;background:#fff}
+.choix input:checked+span{border-color:var(--ardoise);background:var(--ardoise);color:#fff}
+.choix input:focus-visible+span{outline:2px solid var(--soudure);outline-offset:2px}
+.plan{background:var(--papier);border-radius:6px;padding:20px;box-shadow:var(--ombre)}
+.plan svg{width:100%;height:auto;display:block}
+.plan .eau{fill:#16323D}
+.plan .cot{font-family:var(--cote);font-size:13px;fill:var(--doux)}
+.plan .lig{stroke:var(--doux);stroke-width:1}
+#planCordon{fill:none;stroke:var(--chaud);stroke-width:4;stroke-linejoin:round;filter:drop-shadow(0 0 4px #FF9A3D)}
+#planCordon.froid{stroke:#F3EEDF;filter:none;transition:stroke 1s,filter 1s}
+#planPoint{fill:#FFF3D6;filter:drop-shadow(0 0 6px #FFB347) drop-shadow(0 0 12px #FF7A1A)}
+.plan .cot.clair{fill:#C9D3D5}
+.mesures{font-size:20px;line-height:1.55;margin:20px 0 0;max-width:38em}
+.mesures b{font-family:var(--titre);font-weight:700;color:var(--soudure);white-space:nowrap}
+.note{font-size:14px;color:var(--doux);margin-top:14px}
+@media (max-width:900px){.atelier{grid-template-columns:1fr}.mesures{font-size:18px}}
+
+/* Contact */
+.contact{display:grid;grid-template-columns:1fr 1.25fr;gap:56px;align-items:start}
+.coord{list-style:none;padding:0;margin:26px 0 0}
+.coord li{padding:16px 0;border-top:1px solid var(--trame)}
+.coord .cote{display:block;color:var(--doux);margin-bottom:2px;font-family:var(--corps);font-size:14px;letter-spacing:0}
+.coord a{font-weight:600;font-size:19px;text-decoration:none}
+.coord a:hover{color:var(--soudure)}
+form.devis{background:var(--papier);border-radius:6px;padding:30px;box-shadow:var(--ombre);display:grid;grid-template-columns:1fr 1fr;gap:16px 18px}
+form.devis .plein{grid-column:1/-1}
+form.devis label{display:flex;flex-direction:column;gap:6px;font-size:14.5px;font-weight:500}
+form.devis input,form.devis select,form.devis textarea{font:inherit;font-size:16px;font-weight:350;color:var(--texte);background:#fff;border:1.5px solid var(--trame);border-radius:var(--r);padding:12px 13px;width:100%}
+form.devis input:focus,form.devis select:focus,form.devis textarea:focus{border-color:var(--ardoise);outline:none;box-shadow:0 0 0 3px rgba(217,72,31,.2)}
+form.devis input:user-invalid{border-color:var(--soudure)}
+form.devis .ok{grid-column:1/-1;background:#E3EFE6;border-radius:var(--r);padding:14px 16px;display:none}
+form.devis .ok.vu{display:block}
+@media (max-width:860px){.contact{grid-template-columns:1fr;gap:32px}form.devis{grid-template-columns:1fr;padding:22px}}
+
+.texte-long{max-width:760px}
+.texte-long h2{font-size:26px;margin:36px 0 12px}
+.texte-long p,.texte-long li{color:var(--doux)}
+
+/* Pied */
+footer.pied{background:var(--nuit);color:#B9C6CA;padding:64px 0 32px;font-size:15.5px}
+.pied-g{display:grid;grid-template-columns:1.4fr 1fr 1fr 1.2fr;gap:36px}
+.pied h4{font-family:var(--titre);color:#fff;font-size:16px;margin-bottom:14px;letter-spacing:0}
+.pied ul{list-style:none;padding:0;margin:0}.pied li{margin:7px 0}
+.pied a{text-decoration:none}.pied a:hover{color:#fff;text-decoration:underline}
+.pied .logo-b{height:30px;width:auto;margin-bottom:16px}
+.reseaux{display:flex;gap:10px;margin-top:16px}
+.reseaux a{display:grid;place-items:center;width:40px;height:40px;border:1px solid rgba(255,255,255,.2);border-radius:50%}
+.reseaux svg{width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:1.7}
+.pied-b{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;margin-top:48px;padding-top:22px;border-top:1px solid rgba(255,255,255,.1);font-size:14px}
+@media (max-width:860px){.pied-g{grid-template-columns:1fr 1fr}}
+@media (max-width:520px){.pied-g{grid-template-columns:1fr}}
+
+/* Conseiller */
+.conseiller-btn{position:fixed;right:18px;bottom:18px;z-index:60;display:flex;align-items:center;gap:12px;background:var(--ardoise);color:#fff;border:0;border-radius:999px;padding:9px 20px 9px 9px;cursor:pointer;box-shadow:0 10px 30px -8px rgba(14,24,29,.5);text-align:left;font-family:var(--corps)}
+.conseiller-btn .pastille{width:40px;height:40px;border-radius:50%;background:var(--soudure);display:grid;place-items:center;flex:none}
+.conseiller-btn .pastille svg{width:22px;height:22px;stroke:#fff;fill:none;stroke-width:1.8}
+.conseiller-btn b{display:block;font-size:15px;font-weight:600}
+.conseiller-btn small{display:block;font-size:12.5px;color:#C2CDD0}
+.invite{position:fixed;right:18px;bottom:86px;z-index:60;max-width:300px;background:#fff;border-radius:8px;padding:16px 38px 16px 16px;box-shadow:var(--ombre);font-size:15px;display:none}
+.invite.vu{display:block;animation:monte .35s ease}
+.invite button{position:absolute;top:6px;right:6px;border:0;background:none;font-size:20px;cursor:pointer;color:var(--doux);width:30px;height:30px}
+@keyframes monte{from{opacity:0;transform:translateY(8px)}}
+.fenetre{position:fixed;right:18px;bottom:18px;z-index:70;width:min(400px,calc(100vw - 24px));height:min(600px,calc(100vh - 100px));background:var(--papier);border-radius:10px;box-shadow:0 24px 60px -12px rgba(14,24,29,.5);display:none;flex-direction:column;overflow:hidden}
+.fenetre.ouvert{display:flex}
+.fen-tete{background:var(--ardoise);color:#fff;padding:14px 16px;display:flex;align-items:center;gap:12px}
+.fen-tete b{display:block;font-size:16px}.fen-tete small{color:#C2CDD0;font-size:12.5px}
+.fen-tete button{margin-left:auto;background:none;border:0;color:#fff;font-size:24px;cursor:pointer;width:36px;height:36px}
+.fil{flex:1;overflow-y:auto;padding:16px;display:flex;flex-direction:column;gap:10px}
+.msg{max-width:88%;padding:11px 14px;border-radius:12px;font-size:15px;line-height:1.5}
+.msg.lui{background:#fff;border:1px solid var(--trait);align-self:flex-start;border-bottom-left-radius:3px}
+.msg.moi{background:var(--ardoise);color:#fff;align-self:flex-end;border-bottom-right-radius:3px}
+.msg a{color:var(--soudure);font-weight:600}
+.puces{display:flex;flex-wrap:wrap;gap:6px;padding:0 16px 10px}
+.puces button{font:500 13.5px var(--corps);border:1.5px solid var(--ardoise);background:#fff;border-radius:999px;padding:6px 12px;cursor:pointer}
+.puces button:hover{background:var(--ardoise);color:#fff}
+.saisie{display:flex;gap:8px;padding:12px;border-top:1px solid var(--trait);background:#fff}
+.saisie input{flex:1;font:inherit;font-size:15px;border:1.5px solid var(--trame);border-radius:var(--r);padding:10px 12px}
+.saisie button{background:var(--soudure);color:#fff;border:0;border-radius:var(--r);padding:0 16px;font:600 14px var(--corps);cursor:pointer}
+@media (max-width:620px){.conseiller-btn small{font-size:11.5px}.conseiller-btn{padding:7px 16px 7px 7px}.conseiller-btn .pastille{width:36px;height:36px}.invite{right:12px;left:12px;max-width:none;bottom:74px}}
+.apparait{opacity:0;transform:translateY(14px);transition:opacity .7s ease,transform .7s ease}
+.apparait.vu{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.apparait{opacity:1;transform:none}}
+.bloc[id]{scroll-margin-top:110px}
+@media (max-width:620px){.conseiller-btn{bottom:74px;right:12px}.invite{bottom:134px}.fenetre{bottom:74px;height:min(560px,calc(100vh - 150px))}}
+</style>
+</head>
+<body>
+<header class="tete">
+  <div class="wrap tete-l1">
+    <a class="logo" href="#accueil" aria-label="Océance Piscines — accueil"><img src="img/logo.png" alt="Océance Piscines" width="300" height="72"></a>
+    <a class="tel" href="tel:+33677942160">06 77 94 21 60 <span data-i="horaires">· Lun–ven 9 h–18 h</span></a>
+    <div class="langue"><select id="langue" aria-label="Langue">
+      <option value="fr">Français</option><option value="en">English</option><option value="es">Español</option><option value="de">Deutsch</option><option value="it">Italiano</option><option value="nl">Nederlands</option>
+    </select></div>
+    <a class="btn btn-soudure" href="#contact" data-i="devis">Demander un devis</a>
+  </div>
+  <div class="wrap"><nav class="menu" aria-label="Menu principal">
+    <a href="#accueil" data-i="m1">Liner armé</a>
+    <a href="#projet" data-i="m2">Construction</a>
+    <a href="#materiel" data-i="m3">Matériel</a>
+    <a href="#bassin" data-i="m4">Mesurer mon bassin</a>
+    <a href="#contact" data-i="m5">Devis et contact</a>
+    <a href="#" class="conseil" data-ouvre-conseil data-i="m6">Océance Conseil</a>
+  </nav></div>
+</header>
+
+<main>
+<!-- ACCUEIL -->
+<section class="page" id="p-accueil">
+  <div class="heros">
+    <div class="wrap">
+      <div>
+        <h1 data-i="h1">Un liner armé, <em>soudé sur place</em>, partout en Bretagne.</h1>
+        <p class="chapo" data-i="h1p">Rénovation, réparation ou bassin neuf : Océance Piscines pose une membrane PVC armée de 1,5 mm d’épaisseur, découpée à la mesure de votre piscine et garantie 10 ans.</p>
+        <div class="actions">
+          <a class="btn btn-soudure" href="#contact" data-i="h1b1">Demander un devis gratuit</a>
+          <a class="btn btn-ligne" href="#bassin" data-i="h1b2">Mesurer mon bassin</a>
+        </div>
+        <div class="preuves cote">
+          <span data-i="pr1">Garantie 10 ans</span><span data-i="pr2">Devis gratuit</span><span data-i="pr3">Pose en 2 à 3 jours</span><span data-i="pr4">Chantier possible en toute saison</span>
+        </div>
+      </div>
+      <figure class="chantier" style="margin:0">
+        <img src="img/bassin-nuit.webp" width="1200" height="1200" alt="Piscine rénovée par Océance Piscines, liner neuf éclairé de nuit" data-alt="alt1" fetchpriority="high">
+        <svg viewBox="0 0 1200 1200" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+          <path id="cordon" class="lueur" d="M40,872 L355,322 L800,334 L1196,800"/>
+          <circle id="point" r="9" class="lueur" cx="40" cy="872" opacity="0"/>
+        </svg>
+        <figcaption class="legende cote"><span data-i="lg1">Bassin terminé</span><span data-i="lg2">Rénovation de liner</span></figcaption>
+      </figure>
+    </div>
+  </div>
+
+  <section class="bloc papier" id="particuliers">
+    <div class="wrap deux">
+      <div>
+        <h2 data-i="s1t">Votre liner, choisi parmi plus de 30 coloris.</h2>
+        <p class="intro" data-i="s1p">Pour les particuliers, nous posons une membrane haut de gamme, sélectionnée pour durer.</p>
+        <ul class="liste-trait">
+          <li><span class="cote">150/100e</span><span data-i="s1a">Épaisseur haut de gamme, sans vernis</span></li>
+          <li><span class="cote" data-i="s1kb">Durée</span><span data-i="s1b">Très grande longévité</span></li>
+          <li><span class="cote" data-i="s1kc">Traitement</span><span data-i="s1c">Anti-microbien et anti-fongicide</span></li>
+          <li><span class="cote">UV</span><span data-i="s1d">Résistant aux UV</span></li>
+          <li><span class="cote">30+</span><span data-i="s1e">Coloris et motifs (nous consulter pour le détail)</span></li>
+          <li><span class="cote" data-i="s1kf">Bassins</span><span data-i="s1f">Gamme spéciale pour les étangs et bassins d’agrément</span></li>
+        </ul>
+        <a class="suite" href="#contact" data-i="s1l">Voir les coloris avec nous</a>
+      </div>
+      <div class="photo coloris-photo"><img src="img/coloris.webp" width="1024" height="1189" loading="lazy" alt="Échantillons de liner PVC armé en éventail : sable, gris, anthracite, bleus" data-alt="alt2"></div>
+    </div>
+  </section>
+
+  <section class="bloc" id="chantier">
+    <div class="wrap">
+      <h2 data-i="s2t">Du vieux liner au bassin terminé.</h2>
+      <p class="intro" data-i="s2p">Une rénovation photographiée chez un client : quelques jours, et la piscine change de vie.</p>
+      <div class="frise">
+        <figure><div class="photo"><img src="img/retrait.webp" width="600" height="600" loading="lazy" alt="Ancien liner verdi retiré du bassin" data-alt="alt3"></div><figcaption><b data-i="f1">Retrait de l’ancien liner</b><span class="cote" data-i="f1c">Avant</span></figcaption></figure>
+        <figure><div class="photo"><img src="img/dome.webp" width="600" height="600" loading="lazy" alt="Pose du liner sous dôme gonflable" data-alt="alt4"></div><figcaption><b data-i="f2">Pose à l’abri des intempéries</b><span class="cote" data-i="f2c">Sous le dôme</span></figcaption></figure>
+        <figure><div class="photo"><img src="img/remplissage.webp" width="600" height="600" loading="lazy" alt="Remplissage du bassin après la pose" data-alt="alt5"></div><figcaption><b data-i="f3">Remplissage</b><span class="cote" data-i="f3c">Mise en eau</span></figcaption></figure>
+        <figure><div class="photo"><img src="img/bassin-nuit.webp" width="1200" height="1200" loading="lazy" alt="Bassin terminé, éclairé" data-alt="alt6"></div><figcaption><b data-i="f4">Bassin terminé</b><span class="cote" data-i="f4c">Après</span></figcaption></figure>
+      </div>
+      <div class="relance"><p data-i="rl">Votre liner a fait son temps ? Décrivez-nous votre bassin, le devis est gratuit.</p><a class="btn btn-soudure" href="#contact" data-i="h1b1">Demander un devis gratuit</a><a class="btn btn-ligne" href="tel:+33677942160">06 77 94 21 60</a></div>
+    </div>
+  </section>
+
+  <section class="bloc papier" id="renovation">
+    <div class="wrap deux" style="align-items:start">
+      <div>
+        <h2 data-i="s3t">En rénovation</h2>
+        <p class="intro" data-i="s3p">Votre liner est décoloré, devient cassant, ou des plis apparaissent au fond ? Il est sans doute temps de le remplacer.</p>
+        <ul class="liste-trait">
+          <li data-i="s3a">Piscine en béton</li><li data-i="s3b">Piscine à ossature bois ou métallique</li><li data-i="s3c">Étang, mare</li>
+        </ul>
+        <p data-i="s3d">Nos tarifs de rénovation se font sur devis : décrivez-nous votre bassin, nous revenons vers vous.</p>
+        <a class="suite" href="#contact" data-i="devis">Demander un devis</a>
+      </div>
+      <div>
+        <h2 data-i="s4t">En auto-construction</h2>
+        <p class="intro" data-i="s4p">Vous avez fait vous-même le terrassement et la maçonnerie ? Nous prenons la suite sur les parties techniques, qui demandent un savoir-faire et un outillage particuliers.</p>
+        <p data-i="s4q">Pas encore commencé ? Nous vous conseillons sur l’emplacement du bassin et les étapes de sa construction. Avec nos partenaires, nous pouvons aussi chiffrer la réalisation du bassin.</p>
+        <a class="suite" href="#projet" data-i="s4l">Voir la construction pas à pas</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="bloc sombre" id="avantages">
+    <div class="wrap">
+      <h2 data-i="s5t">Pourquoi une membrane armée tient plus longtemps.</h2>
+      <div class="coupe">
+        <svg viewBox="0 0 560 300" role="img" aria-labelledby="coupeT">
+          <title id="coupeT">Coupe d’une membrane PVC armée : une trame prise entre deux couches de PVC</title>
+          <defs><pattern id="trame" width="14" height="14" patternUnits="userSpaceOnUse"><path d="M0 7h14M7 0v14" stroke="#E7EAE9" stroke-width="1.4" opacity=".75"/></pattern></defs>
+          <g transform="translate(14 50) scale(.84)">
+            <path d="M0 40 L380 0 L480 60 L100 100Z" fill="#9CC3D6"/>
+            <path d="M0 40 L100 100 L100 118 L0 58Z" fill="#7FA9BD"/>
+            <path d="M100 100 L480 60 L480 78 L100 118Z" fill="#6E98AC"/>
+            <path d="M0 78 L380 38 L480 98 L100 138Z" fill="url(#trame)" stroke="#E7EAE9" stroke-width="1"/>
+            <path d="M0 116 L380 76 L480 136 L100 176Z" fill="#9CC3D6"/>
+            <path d="M0 116 L100 176 L100 194 L0 134Z" fill="#7FA9BD"/>
+            <path d="M100 194 L480 154 L480 136 L100 176Z" fill="#6E98AC"/>
+          </g>
+          <g font-family="Martian Mono,monospace" font-size="13" fill="#E7EAE9">
+            <line x1="420" y1="110" x2="458" y2="110" stroke="#FF9A3D"/><text x="466" y="114" data-i="c1">PVC</text>
+            <line x1="420" y1="132" x2="458" y2="150" stroke="#FF9A3D"/><text x="466" y="154" data-i="c2">Trame</text>
+            <line x1="420" y1="172" x2="458" y2="190" stroke="#FF9A3D"/><text x="466" y="194" data-i="c3">PVC</text>
+            <text x="14" y="268" fill="#FF9A3D">100/150e · ≈ 1,5 mm</text>
+          </g>
+        </svg>
+        <div>
+          <div class="pt"><h3 data-i="a1t">Résistant</h3><p data-i="a1p">Deux fois plus épaisse qu’un liner classique, la membrane armée 100/150e enferme une trame entre deux couches de PVC.</p></div>
+          <div class="pt"><h3 data-i="a2t">Réparable</h3><p data-i="a2p">Un liner standard est assemblé en usine. La membrane armée est soudée sur place et se répare facilement : elle dure.</p></div>
+          <div class="pt"><h3 data-i="a3t">Polyvalent</h3><p data-i="a3p">Étang ou piscine : nous travaillons avec des marques choisies pour leur rapport qualité-prix, dont Delifol et Alkorplan, pour un grand choix de couleurs et de textures.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="bloc papier" id="pourquoi">
+    <div class="wrap">
+      <h2 data-i="s6t">Pourquoi choisir Océance Piscines ?</h2>
+      <p class="intro" data-i="s6p">Nous posons du liner en neuf comme en rénovation, et travaillons régulièrement avec des clients professionnels.</p>
+      <div class="promesses">
+        <div class="photo"><img src="img/dome.webp" width="600" height="600" loading="lazy" alt="Dôme gonflable installé au-dessus du bassin pendant la pose" data-alt="alt7"></div>
+        <div>
+          <div class="prom"><h3 data-i="p1t">Un bassin prêt pour l’été</h3><p data-i="p1p">Avec notre dôme gonflable et notre chauffage, nous travaillons quelle que soit la saison.</p></div>
+          <div class="prom"><h3 data-i="p2t">Garantie décennale</h3><p data-i="p2p">À la fin du chantier, vous recevez un certificat de garantie valable 10 ans.</p></div>
+          <div class="prom"><h3 data-i="p3t">Conseil et savoir-faire</h3><p data-i="p3p">Envie de réduire la facture ? Nous vous disons quelles étapes faire vous-même (retirer l’ancien liner, par exemple) et quelles options choisir selon l’état de votre bassin.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="bloc" id="deroule">
+    <div class="wrap">
+      <h2 data-i="s7t">Un nouveau liner, en quatre temps.</h2>
+      <p class="intro" data-i="s7p">En neuf comme en rénovation, tout commence par un simple contact.</p>
+      <ol class="deroule">
+        <li><h3 data-i="d1t">Prenez contact avec nous</h3><span class="cote" data-i="d1c">Premier contact</span><p data-i="d1p">Nous cherchons ensemble la meilleure solution. Vous recevez une proposition sur mesure.</p></li>
+        <li><h3 data-i="d2t">Acceptez le devis</h3><span class="cote" data-i="d2c">2 à 3 jours de pose</span><p data-i="d2p">Nous fixons une date d’intervention. La pose d’un liner armé prend en général 2 ou 3 jours.</p></li>
+        <li><h3 data-i="d3t">Après la pose</h3><span class="cote" data-i="d3c">Mise en eau</span><p data-i="d3p">Nous remplissons votre bassin. Vous recevez le certificat de garantie et nos conseils.</p></li>
+        <li><h3 data-i="d4t">Le bridage final</h3><span class="cote" data-i="d4c">1 à 2 jours plus tard</span><p data-i="d4p">Quand l’eau est assez haute et la membrane bien en place, nous revenons brider définitivement les éléments.</p></li>
+      </ol>
+      <p style="margin-top:36px"><a class="btn btn-ardoise" href="#contact" data-i="d5">Nous contacter</a></p>
+    </div>
+  </section>
+
+  <section class="bloc sombre" id="pros">
+    <div class="wrap pros">
+      <div>
+        <h2 data-i="s8t">Piscinistes : un poseur de membrane armée quand vous en avez besoin.</h2>
+        <p class="intro" data-i="s8p">Besoin de renfort ponctuel ? Nous intervenons en sous-traitance pour la pose de membrane armée en Bretagne, sur tout type d’ouvrage.</p>
+        <ul class="liste-trait">
+          <li data-i="s8a">Sous-traitance de pose de membrane armée</li><li data-i="s8b">Maintenance et entretien</li><li data-i="s8c">Rénovation</li>
+        </ul>
+      </div>
+      <div>
+        <p data-i="s8z">Nous intervenons dans toute la Bretagne, depuis Fouesnant :</p>
+        <div class="zones"><span>Finistère</span><span>Morbihan</span><span>Ille-et-Vilaine</span><span>Côtes-d’Armor</span></div>
+        <p style="margin-top:28px"><a class="btn btn-soudure" href="#contact" data-i="s8l">Proposer un chantier</a></p>
+      </div>
+    </div>
+  </section>
+
+  <section class="bloc papier" id="clef">
+    <div class="wrap">
+      <h2 data-i="s9t">Nos services clé en main</h2>
+      <div class="clef">
+        <a href="#projet"><div class="photo"><img src="img/construction.webp" width="1000" height="667" loading="lazy" alt="Bassin en béton en construction" data-alt="alt8"></div><div><h3 data-i="k1t">Suivi de projet</h3><p data-i="k1p">Avec nos partenaires terrassier et maçon, nous prenons en charge toute la construction, sous garantie décennale. Nos partenaires d’aménagement extérieur (espaces verts, terrasse) peuvent embellir le bassin.</p><span class="suite" data-i="voir">En savoir plus</span></div></a>
+        <a href="#materiel"><div class="photo"><img src="img/marches.webp" width="500" height="333" loading="lazy" alt="Escalier d’angle d’une piscine habillée de liner" data-alt="alt9"></div><div><h3 data-i="k2t">Matériel et équipement</h3><p data-i="k2p">Épuisette, robot, pompe à chaleur, produits d’entretien… nous fournissons tout ce qu’il faut pour entretenir votre bassin.</p><span class="suite" data-i="voir">En savoir plus</span></div></a>
+      </div>
+    </div>
+  </section>
+</section>
+
+<!-- CONSTRUCTION -->
+<section class="page" id="p-projet">
+  <div class="tete-page"><div class="wrap">
+    <div><h1 data-i="g1">Construction de piscine en Bretagne</h1><p data-i="g1p">Pour vous offrir le meilleur rapport qualité-prix, nous nous concentrons sur les piscines en béton, enterrées ou semi-enterrées. Profitez de notre expérience pour faire les bons choix.</p><p style="margin-top:26px"><a class="btn btn-soudure" href="#contact" data-i="g1b">Obtenir un devis</a></p></div>
+    <div class="photo"><img src="img/construction.webp" width="1000" height="667" alt="Bassin en béton en cours de construction dans une maison" data-alt="alt8"></div>
+  </div></div>
+  <section class="bloc">
+    <div class="wrap">
+      <h2 data-i="g2t">Les étapes de création de votre piscine</h2>
+      <p class="intro" data-i="g2p">Une piscine apporte de la valeur à votre maison et des soirées d’été au bord de l’eau. Voici le chemin, pas à pas.</p>
+      <ol class="etapes">
+        <li><div><h3 data-i="e1t">L’étude personnalisée</h3><span class="cote" data-i="e1c">Devis gratuit</span></div><p data-i="e1p">Vous avez sans doute une idée de l’emplacement et des dimensions. Nous venons sur place faire le relevé nécessaire au permis de construire, puis nous vous proposons plusieurs options selon vos envies, dans le respect des normes.</p></li>
+        <li><div><h3 data-i="e2t">Le terrassement</h3><span class="cote" data-i="e2c">Après accord du permis</span></div><p data-i="e2p">Une fois le permis ou la déclaration de travaux acceptés, nous creusons le futur bassin. Une étape clé : la piscine doit durer des années, voire des décennies.</p></li>
+        <li><div><h3 data-i="e3t">La maçonnerie</h3><span class="cote" data-i="e3c">Béton armé</span></div><p data-i="e3p">Après les fondations en béton armé, notre partenaire maçon monte les murs en blocs à bancher, renforcés par un chaînage horizontal et vertical pour bien résister à la pression de l’eau.</p></li>
+        <li><div><h3 data-i="e4t">La pose du liner</h3><span class="cote" data-i="e4c">100/150e · ≈ 1,5 mm · 10 ans</span></div><p data-i="e4p">Le PVC armé est préparé sur mesure puis soudé sur place, pour une étanchéité parfaite, garantie 10 ans. Quelques jours suffisent. Grand choix de coloris, résistance aux UV, réparation facile.</p></li>
+        <li><div><h3 data-i="e5t">Filtration et pompe à chaleur</h3><span class="cote" data-i="e5c">Avec nos partenaires</span></div><p data-i="e5p">Nos partenaires installent la filtration, le chauffage, le pompage et l’éclairage. À la réception, nous vous donnons tous nos conseils d’entretien et de traitement.</p></li>
+      </ol>
+    </div>
+  </section>
+  <section class="bloc papier">
+    <div class="wrap deux">
+      <div>
+        <h2 data-i="q1t">Votre artisan pisciniste, dans le Finistère Sud.</h2>
+        <p class="intro" data-i="q1p">Océance Piscines est une entreprise artisanale qui crée et rénove des piscines pour les particuliers : pose de liner armé, gestion de projet pour la construction de bassin, fourniture de matériel et de spas d’extérieur.</p>
+        <p data-i="q1q">Nous intervenons dans toute la Bretagne et coordonnons les corps de métier nécessaires à votre projet. Tous les artisans du chantier sont couverts par une garantie décennale. Votre avantage : réaliser vous-même une partie des travaux, en vous appuyant sur un réseau d’artisans de confiance.</p>
+      </div>
+      <div class="photo" style="aspect-ratio:1/1"><img src="img/plongeon.webp" width="691" height="700" loading="lazy" alt="Enfant qui plonge dans une piscine" data-alt="alt10"></div>
+    </div>
+  </section>
+  <section class="bloc">
+    <div class="wrap">
+      <h2 data-i="r1t">Nos dernières réalisations</h2>
+      <div class="galerie">
+        <div class="photo"><img src="img/bassin-bois.webp" width="800" height="470" loading="lazy" alt="Piscine liner armé avec plage en bois et jardin" data-alt="alt11"></div>
+        <div class="photo"><img src="img/marches.webp" width="500" height="333" loading="lazy" alt="Marches d’angle sous l’eau" data-alt="alt9"></div>
+        <div class="photo"><img src="img/remplissage.webp" width="600" height="600" loading="lazy" alt="Bassin en remplissage" data-alt="alt5"></div>
+        <div class="photo"><img src="img/bassin-nuit.webp" width="1200" height="1200" loading="lazy" alt="Bassin rénové éclairé de nuit" data-alt="alt6" style="object-position:center 60%"></div>
+      </div>
+    </div>
+  </section>
+  <section class="appel"><div class="wrap"><div><h2 data-i="x1">Demandez une estimation.</h2><p data-i="x1p">Devis gratuit et sans engagement, pour les particuliers comme pour les professionnels : quelques questions, vos coordonnées, et nous vous rappelons.</p></div><a class="btn btn-soudure" href="#contact" data-i="devis">Demander un devis</a></div></section>
+</section>
+
+<!-- MATÉRIEL -->
+<section class="page" id="p-materiel">
+  <div class="tete-page"><div class="wrap">
+    <div><h1 data-i="mt1">Matériel de piscine</h1><p data-i="mt1p">Une large gamme de produits de qualité professionnelle. Pour connaître les modèles disponibles, il suffit de nous demander.</p><p style="margin-top:26px"><a class="btn btn-soudure" href="#contact" data-i="g1b">Obtenir un devis</a></p></div>
+    <div class="photo"><img src="img/marches.webp" width="500" height="333" alt="Piscine équipée, eau claire" data-alt="alt9"></div>
+  </div></div>
+  <section class="bloc">
+    <div class="wrap">
+      <h2 data-i="mt2">Quatre familles, un seul interlocuteur.</h2>
+      <div class="familles">
+        <div class="famille"><svg viewBox="0 0 48 48"><ellipse cx="24" cy="18" rx="18" ry="7"/><path d="M6 18v14c0 4 8 7 18 7s18-3 18-7V18"/><path d="M16 12c0-3 2-5 2-8M24 11c0-3 2-5 2-8M32 12c0-3 2-5 2-8"/></svg><h3 data-i="fa1">Spa</h3><p data-i="fa1p">Spas d’extérieur de fabrication européenne.</p><span class="cote" data-i="fa1c">Garantie 5 ans</span></div>
+        <div class="famille"><svg viewBox="0 0 48 48"><rect x="6" y="10" width="36" height="28" rx="3"/><circle cx="20" cy="24" r="8"/><path d="M20 16v16M12 24h16M33 16h4M33 22h4M33 28h4"/></svg><h3 data-i="fa2">Chauffage</h3><p data-i="fa2p">Pompes à chaleur et pièces de rechange, chauffage solaire, échangeur, réchauffeur, déshumidification.</p><span class="cote" data-i="fa2c">PAC</span></div>
+        <div class="famille"><svg viewBox="0 0 48 48"><path d="M8 40L30 18"/><circle cx="34" cy="14" r="8"/><path d="M28 10l12 8M30 20l8-12"/></svg><h3 data-i="fa3">Accessoires</h3><p data-i="fa3p">Pompes de filtration, volets de protection, accessoires d’hivernage, épuisettes, robots…</p><span class="cote" data-i="fa3c">Filtration · hivernage</span></div>
+        <div class="famille"><svg viewBox="0 0 48 48"><path d="M18 6h12M20 6v10L10 38a3 3 0 003 4h22a3 3 0 003-4L28 16V6"/><path d="M14 30h20"/></svg><h3 data-i="fa4">Entretien</h3><p data-i="fa4p">Traitement automatisé, produits de traitement et d’analyse de l’eau.</p><span class="cote" data-i="fa4c">Eau claire</span></div>
+      </div>
+    </div>
+  </section>
+  <section class="appel"><div class="wrap"><div><h2 data-i="x2">Un modèle en tête ?</h2><p data-i="x2p">Dites-nous ce que vous cherchez : nous vous indiquons les modèles disponibles et leur prix.</p></div><a class="btn btn-soudure" href="#contact" data-i="x2b">Nous écrire</a></div></section>
+</section>
+
+<!-- MESURER MON BASSIN -->
+<section class="page" id="p-bassin">
+  <section class="bloc">
+    <div class="wrap">
+      <h1 style="font-size:clamp(32px,3.8vw,52px);max-width:16em" data-i="b1">Mesurez votre bassin, nous préparons le devis.</h1>
+      <p class="intro" data-i="b1p">Indiquez les dimensions de votre piscine : vous voyez tout de suite la surface de membrane à prévoir. Ces mesures partent ensuite avec votre demande de devis.</p>
+      <div class="atelier">
+        <div class="reglages">
+          <div class="champ"><span data-i="b2">Votre projet</span>
+            <div class="choix" role="radiogroup">
+              <label><input type="radio" name="projet" value="0" checked><span data-i="o1">Membrane en rénovation</span></label>
+              <label><input type="radio" name="projet" value="1"><span data-i="o2">Membrane en neuf</span></label>
+              <label><input type="radio" name="projet" value="2"><span data-i="o3">Création de bassin</span></label>
+            </div>
+          </div>
+          <label class="champ"><span><span data-i="b3">Longueur</span><output id="oL">8,0 m</output></span><input type="range" id="L" min="2" max="15" step="0.5" value="8"></label>
+          <label class="champ"><span><span data-i="b4">Largeur</span><output id="ol">4,0 m</output></span><input type="range" id="l" min="2" max="8" step="0.5" value="4"></label>
+          <label class="champ"><span><span data-i="b5">Profondeur moyenne</span><output id="op">1,4 m</output></span><input type="range" id="p" min="0.6" max="2.5" step="0.1" value="1.4"></label>
+          <a class="btn btn-soudure" style="width:100%;justify-content:center" href="#contact" id="envoyerMesures" data-i="b6">Joindre ces mesures à mon devis</a>
+        </div>
+        <div>
+          <div class="plan"><svg id="planSvg" viewBox="0 0 640 380" role="img" aria-label="Plan du bassin"></svg></div>
+          <p class="mesures" aria-live="polite"><b id="mS">—</b> <span data-i="b7">de membrane à prévoir</span>, <span data-i="b8">pour</span> <b id="mF">—</b> <span data-i="b8b">de fond</span>, <b id="mP">—</b> <span data-i="b8c">de périmètre à souder</span> <span data-i="b9a">et</span> <b id="mV">—</b> <span data-i="b9">d’eau environ</span>.</p>
+          <p class="note" data-i="b10">Estimation indicative pour un bassin rectangulaire, hors escalier et recouvrements. Les mesures exactes sont relevées sur place, et le devis reste gratuit.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</section>
+
+<!-- CONTACT -->
+<section class="page" id="p-contact">
+  <section class="bloc">
+    <div class="wrap contact">
+      <div>
+        <h1 style="font-size:clamp(32px,3.8vw,52px)" data-i="c0">Parlons de votre bassin.</h1>
+        <p class="intro" data-i="c0p">Une question, un projet ? Remplissez le formulaire pour recevoir une estimation, ou appelez-nous directement.</p>
+        <ul class="coord">
+          <li><span class="cote" data-i="ct1">Téléphone · Yannick Penven</span><a href="tel:+33677942160">06 77 94 21 60</a></li>
+          <li><span class="cote" data-i="ct2">E-mail</span><a href="mailto:oceance.piscines@outlook.fr">oceance.piscines@outlook.fr</a></li>
+          <li><span class="cote" data-i="ct3">Horaires</span><span data-i="ct3v">Du lundi au vendredi, de 9 h à 18 h</span></li>
+          <li><span class="cote" data-i="ct4">Adresse</span>47 VC Hent Nod Gwen, 29170 Fouesnant</li>
+          <li><span class="cote">Instagram</span><a href="https://www.instagram.com/oceance_piscines/" target="_blank" rel="noopener">@oceance_piscines</a></li>
+        </ul>
+      </div>
+      <form class="devis" id="devis" novalidate>
+        <label class="plein"><span data-i="fq">Quel est votre projet ?</span>
+          <select name="projet" id="fProjet"><option data-i="o2">Pose de membrane en neuf</option><option data-i="o1" selected>Pose de membrane en rénovation</option><option data-i="o3">Création de bassin</option></select></label>
+        <label><span data-i="fv">Ville du chantier</span><input name="ville" autocomplete="address-level2"></label>
+        <label><span data-i="fd">Dimensions du bassin</span><input name="dims" id="fDims" placeholder="8 × 4 m, 1,4 m"></label>
+        <label><span data-i="fn">Nom</span><input name="nom" required autocomplete="family-name"></label>
+        <label><span data-i="fp">Prénom</span><input name="prenom" autocomplete="given-name"></label>
+        <label><span data-i="fe">E-mail</span><input name="email" type="email" required autocomplete="email"></label>
+        <label><span data-i="ft">Téléphone</span><input name="tel" type="tel" autocomplete="tel"></label>
+        <label class="plein"><span data-i="fc">Commentaire</span><textarea name="com" rows="4"></textarea></label>
+        <div class="plein"><button class="btn btn-soudure" type="submit" data-i="fs">Envoyer ma demande</button></div>
+        <p class="ok" id="ok" role="status" data-i="fok">Merci ! Sur le site en ligne, votre demande partira directement chez Océance Piscines. (Maquette : aucun envoi réel.)</p>
+      </form>
+    </div>
+  </section>
+</section>
+
+<!-- MENTIONS -->
+<section class="page" id="p-mentions">
+  <section class="bloc"><div class="wrap texte-long">
+    <h1 style="font-size:40px" data-i="ml">Mentions légales</h1>
+    <h2 data-i="ml1">Éditeur</h2><p>Océance Piscines — 47 VC Hent Nod Gwen, 29170 Fouesnant — Tél. 06 77 94 21 60 — SIRET 904 444 544 00012<br><span data-i="ml1b">Responsable de la publication</span> : M. Yannick Penven</p>
+    <h2 data-i="ml2">Agence web</h2><p>Armada communication — Tél. 02 98 53 06 33 — <a href="https://armadacommunication.fr/" target="_blank" rel="noopener">armadacommunication.fr</a></p>
+    <h2 data-i="ml3">Hébergement</h2><p>MonArobase, SARL au capital de 1 500 euros — SIRET 500 518 543 00011 — 3 avenue René Laënnec, 72000 Le Mans — Tél. 09 72 21 22 90</p>
+    <h2 data-i="ml4">Droits d’auteur</h2><p data-i="ml4p">L’ensemble de ce site relève de la législation française et internationale sur le droit d’auteur et la propriété intellectuelle. Tous droits de reproduction sont réservés, y compris pour les photographies. Toute reproduction sur un support électronique est interdite sauf autorisation expresse du directeur de la publication.</p>
+    <h2 data-i="ml5">Informatique et libertés</h2><p data-i="ml5p">Le droit d’accès, de modification, de rectification et de suppression des données qui vous concernent (article 34 de la loi 78-17 du 6 janvier 1978) s’exerce auprès du responsable de la publication.</p>
+  </div></section>
+</section>
+<section class="page" id="p-confidentialite">
+  <section class="bloc"><div class="wrap texte-long">
+    <h1 style="font-size:40px" data-i="pc">Politique de confidentialité</h1>
+    <p data-i="pc1">Océance Piscines s’engage à respecter ses obligations au titre du Règlement général sur la protection des données (RGPD).</p>
+    <h2>Cookies</h2>
+    <p data-i="pc2">Nous utilisons un outil de statistiques respectueux de la vie privée : les données sont anonymisées et servent uniquement à compter les visites. Vous pouvez vous opposer à ce suivi à tout moment ; si vous effacez vos cookies ou changez de navigateur, il faudra renouveler ce choix.</p>
+  </div></section>
+</section>
+</main>
+
+<footer class="pied">
+  <div class="wrap">
+    <div class="pied-g">
+      <div><img class="logo-b" src="img/logo-blanc.png" alt="Océance Piscines" width="300" height="72"><p data-i="pd">Pose de liner de piscine dans le Grand Ouest, depuis Fouesnant.</p>
+        <div class="reseaux"><a href="https://www.instagram.com/oceance_piscines/" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".8" fill="currentColor"/></svg></a></div></div>
+      <div><h4>Services</h4><ul><li><a href="#accueil" data-i="pf1">Réparation, rénovation, pose de liner armé</a></li><li><a href="#projet" data-i="pf2">Gestion de projet</a></li><li><a href="#bassin" data-i="m4">Mesurer mon bassin</a></li></ul></div>
+      <div><h4 data-i="pf3">Produits</h4><ul><li><a href="#materiel">Spas</a></li><li><a href="#materiel" data-i="pf4">Pompes à chaleur</a></li><li><a href="#materiel" data-i="fa3">Accessoires</a></li><li><a href="#materiel" data-i="fa4">Entretien</a></li></ul></div>
+      <div><h4>Contact</h4><ul><li>Yannick Penven</li><li><a href="tel:+33677942160">06 77 94 21 60</a></li><li><a href="mailto:oceance.piscines@outlook.fr">oceance.piscines@outlook.fr</a></li><li data-i="ct3v">Du lundi au vendredi, de 9 h à 18 h</li></ul></div>
+    </div>
+    <div class="pied-b"><span>© Océance Piscines</span><span><a href="#mentions" data-i="ml">Mentions légales</a> · <a href="#confidentialite" data-i="pc">Politique de confidentialité</a></span></div>
+  </div>
+</footer>
+
+<button class="conseiller-btn" data-ouvre-conseil aria-haspopup="dialog"><span class="pastille"><svg viewBox="0 0 24 24"><path d="M3 15c3-2 6-2 9 0s6 2 9 0M3 10c3-2 6-2 9 0s6 2 9 0"/></svg></span><span><b>Océance Conseil</b><small><span data-i="av">Assistant virtuel</span> · <span data-i="cb">Je vous aide à choisir</span></small></span></button>
+<div class="barre-mobile"><a class="btn btn-ligne" style="color:var(--ardoise)" href="tel:+33677942160" data-i="appel">Appeler</a><a class="btn btn-soudure" href="#contact" data-i="devis">Demander un devis</a></div>
+<div class="invite" id="invite" role="status"><button aria-label="Fermer" id="inviteX">×</button><span data-i="inv">Liner fatigué, bassin à construire ? Posez-moi votre question, je vous oriente.</span></div>
+<div class="fenetre" id="fenetre" role="dialog" aria-label="Océance Conseil">
+  <div class="fen-tete"><span class="pastille" style="width:36px;height:36px;border-radius:50%;background:var(--soudure);display:grid;place-items:center"><svg viewBox="0 0 24 24" width="20" height="20" stroke="#fff" fill="none" stroke-width="1.8"><path d="M3 15c3-2 6-2 9 0s6 2 9 0M3 10c3-2 6-2 9 0s6 2 9 0"/></svg></span><div><b>Océance Conseil</b><small data-i="av">Assistant virtuel</small></div><button id="fermer" aria-label="Fermer">×</button></div>
+  <div class="fil" id="fil" aria-live="polite"></div>
+  <div class="puces" id="puces"></div>
+  <form class="saisie" id="saisie"><input id="q" autocomplete="off" aria-label="Votre question"><button data-i="env">Envoyer</button></form>
+</div>
+
+<script>
+const LG=['fr','en','es','de','it','nl'];let lang='fr';
+const D={
+horaires:['· Lun–ven 9 h–18 h','· Mon–Fri 9am–6pm','· Lun–vie 9–18 h','· Mo–Fr 9–18 Uhr','· Lun–ven 9–18','· Ma–vr 9–18 u'],
+devis:['Demander un devis','Request a quote','Pedir presupuesto','Angebot anfragen','Richiedi un preventivo','Offerte aanvragen'],
+m1:['Liner armé','Reinforced liner','Liner armado','Armierte Folie','Liner armato','Versterkte liner'],
+m2:['Construction','Pool building','Construcción','Poolbau','Costruzione','Zwembadbouw'],
+m3:['Matériel','Equipment','Material','Zubehör','Attrezzatura','Materiaal'],
+m4:['Mesurer mon bassin','Measure my pool','Medir mi piscina','Mein Becken messen','Misura la mia piscina','Mijn bad opmeten'],
+m5:['Devis et contact','Quote & contact','Presupuesto y contacto','Angebot & Kontakt','Preventivo e contatti','Offerte & contact'],
+m6:['Océance Conseil','Océance Conseil','Océance Conseil','Océance Conseil','Océance Conseil','Océance Conseil'],
+h1:['Un liner armé, <em>soudé sur place</em>, partout en Bretagne.','A reinforced liner, <em>welded on site</em>, all over Brittany.','Un liner armado, <em>soldado in situ</em>, en toda Bretaña.','Armierte Poolfolie, <em>vor Ort verschweißt</em>, in der ganzen Bretagne.','Un liner armato, <em>saldato sul posto</em>, in tutta la Bretagna.','Een versterkte liner, <em>ter plekke gelast</em>, in heel Bretagne.'],
+h1p:['Rénovation, réparation ou bassin neuf : Océance Piscines pose une membrane PVC armée de 1,5 mm d’épaisseur, découpée à la mesure de votre piscine et garantie 10 ans.','Renovation, repair or a brand-new pool: Océance Piscines fits a 1.5 mm reinforced PVC membrane, cut to the size of your pool and guaranteed for 10 years.','Renovación, reparación o piscina nueva: Océance Piscines instala una membrana de PVC armado de 1,5 mm, cortada a la medida de su piscina y garantizada 10 años.','Renovierung, Reparatur oder neues Becken: Océance Piscines verlegt eine 1,5 mm starke armierte PVC-Membran, passgenau zugeschnitten und mit 10 Jahren Garantie.','Ristrutturazione, riparazione o piscina nuova: Océance Piscines posa una membrana in PVC armato da 1,5 mm, tagliata su misura e garantita 10 anni.','Renovatie, reparatie of een nieuw bad: Océance Piscines legt een versterkt PVC-membraan van 1,5 mm, op maat gesneden en met 10 jaar garantie.'],
+h1b1:['Demander un devis gratuit','Get a free quote','Pedir presupuesto gratis','Kostenloses Angebot','Preventivo gratuito','Gratis offerte aanvragen'],
+h1b2:['Mesurer mon bassin','Measure my pool','Medir mi piscina','Mein Becken messen','Misura la mia piscina','Mijn bad opmeten'],
+pr1:['Garantie 10 ans','10-year guarantee','Garantía 10 años','10 Jahre Garantie','Garanzia 10 anni','10 jaar garantie'],
+pr2:['Devis gratuit','Free quote','Presupuesto gratuito','Kostenloses Angebot','Preventivo gratuito','Gratis offerte'],
+pr3:['Pose en 2 à 3 jours','Fitted in 2 to 3 days','Instalación en 2 o 3 días','Verlegung in 2–3 Tagen','Posa in 2–3 giorni','Gelegd in 2 à 3 dagen'],
+pr4:['Chantier possible en toute saison','Work possible in any season','Obras en cualquier estación','Arbeiten zu jeder Jahreszeit','Lavori in ogni stagione','Werken in elk seizoen'],
+lg1:['Bassin terminé','Finished pool','Piscina terminada','Fertiges Becken','Piscina finita','Klaar bad'],
+rl:['Votre liner a fait son temps ? Décrivez-nous votre bassin, le devis est gratuit.','Liner past its best? Describe your pool, the quote is free.','¿Su liner ya ha cumplido? Descríbanos su piscina, el presupuesto es gratis.','Hat Ihre Folie ausgedient? Beschreiben Sie Ihr Becken, das Angebot ist kostenlos.','Il liner ha fatto il suo tempo? Descriveteci la piscina, il preventivo è gratuito.','Is uw liner op? Beschrijf uw bad, de offerte is gratis.'],
+lg2:['Rénovation de liner','Liner renovation','Renovación de liner','Folienrenovierung','Ristrutturazione del liner','Linerrenovatie'],
+s1t:['Votre liner, choisi parmi plus de 30 coloris.','Your liner, chosen from over 30 colours.','Su liner, entre más de 30 colores.','Ihre Folie, aus über 30 Farben gewählt.','Il vostro liner, tra oltre 30 colori.','Uw liner, gekozen uit meer dan 30 kleuren.'],
+s1p:['Pour les particuliers, nous posons une membrane haut de gamme, sélectionnée pour durer.','For homeowners, we fit a premium membrane, selected to last.','Para particulares instalamos una membrana de gama alta, elegida para durar.','Für Privatkunden verlegen wir eine hochwertige Membran, ausgewählt für lange Haltbarkeit.','Per i privati posiamo una membrana di alta gamma, scelta per durare.','Voor particulieren leggen we een hoogwaardig membraan, gekozen om lang mee te gaan.'],
+s1a:['Épaisseur haut de gamme, sans vernis','Premium thickness, unvarnished','Espesor de gama alta, sin barniz','Hochwertige Stärke, ohne Lack','Spessore di alta gamma, senza vernice','Hoogwaardige dikte, zonder lak'],
+s1kb:['Durée','Lifespan','Duración','Haltbarkeit','Durata','Levensduur'],
+s1b:['Très grande longévité','Very long life','Gran longevidad','Sehr lange Lebensdauer','Lunghissima durata','Zeer lange levensduur'],
+s1kc:['Traitement','Treatment','Tratamiento','Behandlung','Trattamento','Behandeling'],
+s1c:['Anti-microbien et anti-fongicide','Anti-microbial and anti-fungal','Antimicrobiano y antifúngico','Antimikrobiell und fungizid','Antimicrobico e antifungino','Antimicrobieel en schimmelwerend'],
+s1d:['Résistant aux UV','UV resistant','Resistente a los UV','UV-beständig','Resistente ai raggi UV','UV-bestendig'],
+s1e:['Coloris et motifs (nous consulter pour le détail)','Colours and patterns (ask us for details)','Colores y motivos (consúltenos)','Farben und Muster (Details auf Anfrage)','Colori e motivi (chiedeteci i dettagli)','Kleuren en motieven (vraag ons naar details)'],
+s1kf:['Bassins','Ponds','Estanques','Teiche','Laghetti','Vijvers'],
+s1f:['Gamme spéciale pour les étangs et bassins d’agrément','Special range for ponds and ornamental pools','Gama especial para estanques y estanques ornamentales','Spezielle Linie für Teiche und Zierbecken','Gamma speciale per laghetti e vasche ornamentali','Speciale lijn voor vijvers en siervijvers'],
+s1l:['Voir les coloris avec nous','See the colours with us','Ver los colores con nosotros','Farben mit uns ansehen','Scegliere i colori con noi','Kleuren samen bekijken'],
+s2t:['Du vieux liner au bassin terminé.','From the old liner to the finished pool.','Del liner viejo a la piscina terminada.','Von der alten Folie zum fertigen Becken.','Dal vecchio liner alla piscina finita.','Van oude liner tot afgewerkt bad.'],
+s2p:['Une rénovation photographiée chez un client : quelques jours, et la piscine change de vie.','A renovation photographed at a client’s home: a few days, and the pool starts a new life.','Una renovación fotografiada en casa de un cliente: unos días y la piscina cambia de vida.','Eine Renovierung bei einem Kunden: ein paar Tage, und das Becken beginnt ein neues Leben.','Una ristrutturazione fotografata da un cliente: pochi giorni e la piscina cambia vita.','Een renovatie bij een klant: een paar dagen, en het bad begint een nieuw leven.'],
+f1:['Retrait de l’ancien liner','Removing the old liner','Retirada del liner viejo','Entfernen der alten Folie','Rimozione del vecchio liner','Oude liner verwijderen'],
+f1c:['Avant','Before','Antes','Vorher','Prima','Voor'],
+f2:['Pose à l’abri des intempéries','Fitting sheltered from the weather','Instalación al abrigo del tiempo','Verlegung wettergeschützt','Posa al riparo dalle intemperie','Leggen beschut tegen het weer'],
+f2c:['Sous le dôme','Under the dome','Bajo la cúpula','Unter der Kuppel','Sotto la cupola','Onder de koepel'],
+f3:['Remplissage','Filling','Llenado','Befüllen','Riempimento','Vullen'],
+f3c:['Mise en eau','Water in','Puesta en agua','Wasser marsch','Messa in acqua','Water erin'],
+f4:['Bassin terminé','Finished pool','Piscina terminada','Fertiges Becken','Piscina finita','Klaar bad'],
+f4c:['Après','After','Después','Nachher','Dopo','Na'],
+s3t:['En rénovation','Renovation','Renovación','Renovierung','Ristrutturazione','Renovatie'],
+s3p:['Votre liner est décoloré, devient cassant, ou des plis apparaissent au fond ? Il est sans doute temps de le remplacer.','Is your liner faded, turning brittle, or wrinkling at the bottom? It’s probably time to replace it.','¿Su liner está descolorido, se vuelve quebradizo o tiene pliegues en el fondo? Seguramente es hora de cambiarlo.','Ist Ihre Folie ausgebleicht, spröde oder wirft sie am Boden Falten? Dann ist es wohl Zeit für eine neue.','Il liner è scolorito, diventa fragile o fa pieghe sul fondo? Probabilmente è ora di sostituirlo.','Is uw liner verkleurd, wordt hij bros of plooit hij op de bodem? Dan is het tijd om hem te vervangen.'],
+s3a:['Piscine en béton','Concrete pool','Piscina de hormigón','Betonbecken','Piscina in cemento','Betonnen zwembad'],
+s3b:['Piscine à ossature bois ou métallique','Wood or steel frame pool','Piscina de estructura de madera o metal','Becken mit Holz- oder Metallrahmen','Piscina con struttura in legno o metallo','Zwembad met houten of metalen frame'],
+s3c:['Étang, mare','Pond, garden pool','Estanque, charca','Teich, Weiher','Laghetto, stagno','Vijver, poel'],
+s3d:['Nos tarifs de rénovation se font sur devis : décrivez-nous votre bassin, nous revenons vers vous.','Renovation prices are quoted case by case: describe your pool and we’ll get back to you.','Los precios de renovación se dan por presupuesto: descríbanos su piscina y le contestamos.','Renovierungspreise nach Angebot: Beschreiben Sie Ihr Becken, wir melden uns.','I prezzi di ristrutturazione sono su preventivo: descriveteci la piscina, vi ricontattiamo.','Renovatieprijzen op offerte: beschrijf uw bad, wij nemen contact op.'],
+s4t:['En auto-construction','Self-build','Autoconstrucción','Eigenbau','Autocostruzione','Zelfbouw'],
+s4p:['Vous avez fait vous-même le terrassement et la maçonnerie ? Nous prenons la suite sur les parties techniques, qui demandent un savoir-faire et un outillage particuliers.','Did the earthworks and masonry yourself? We take over the technical parts, which need specific skills and tools.','¿Hizo usted mismo la excavación y la albañilería? Nos encargamos de las partes técnicas, que requieren oficio y herramientas especiales.','Aushub und Mauerwerk selbst gemacht? Wir übernehmen die technischen Arbeiten, die Know-how und Spezialwerkzeug erfordern.','Avete fatto da soli scavo e muratura? Ci occupiamo noi delle parti tecniche, che richiedono competenze e attrezzi specifici.','Zelf gegraven en gemetseld? Wij nemen de technische delen over, die vakmanschap en speciaal gereedschap vragen.'],
+s4q:['Pas encore commencé ? Nous vous conseillons sur l’emplacement du bassin et les étapes de sa construction. Avec nos partenaires, nous pouvons aussi chiffrer la réalisation du bassin.','Not started yet? We advise you on where to put the pool and how to build it. With our partners, we can also quote for building the pool itself.','¿Aún no ha empezado? Le aconsejamos sobre la ubicación y las etapas de construcción. Con nuestros socios también podemos presupuestar la obra.','Noch nicht angefangen? Wir beraten Sie zu Standort und Bauschritten. Mit unseren Partnern erstellen wir auch ein Angebot für den Beckenbau.','Non avete ancora iniziato? Vi consigliamo su posizione e fasi di costruzione. Con i nostri partner possiamo anche preventivare la vasca.','Nog niet begonnen? We adviseren over de plek en de bouwstappen. Met onze partners maken we ook een offerte voor het bad zelf.'],
+s4l:['Voir la construction pas à pas','See the build step by step','Ver la construcción paso a paso','Den Bau Schritt für Schritt','Vedere la costruzione passo passo','De bouw stap voor stap'],
+s5t:['Pourquoi une membrane armée tient plus longtemps.','Why a reinforced membrane lasts longer.','Por qué una membrana armada dura más.','Warum eine armierte Membran länger hält.','Perché una membrana armata dura di più.','Waarom een versterkt membraan langer meegaat.'],
+c1:['PVC','PVC','PVC','PVC','PVC','PVC'],c2:['Trame','Mesh','Malla','Gewebe','Trama','Weefsel'],c3:['PVC','PVC','PVC','PVC','PVC','PVC'],
+a1t:['Résistant','Tough','Resistente','Robust','Resistente','Sterk'],
+a1p:['Deux fois plus épaisse qu’un liner classique, la membrane armée 100/150e enferme une trame entre deux couches de PVC.','Twice as thick as a standard liner, the 100/150 reinforced membrane holds a mesh between two layers of PVC.','El doble de gruesa que un liner clásico, la membrana armada 100/150 encierra una malla entre dos capas de PVC.','Doppelt so stark wie eine normale Folie: Die armierte Membran 100/150 schließt ein Gewebe zwischen zwei PVC-Schichten ein.','Due volte più spessa di un liner classico, la membrana armata 100/150 racchiude una trama tra due strati di PVC.','Twee keer zo dik als een gewone liner: het versterkte membraan 100/150 sluit een weefsel in tussen twee lagen PVC.'],
+a2t:['Réparable','Repairable','Reparable','Reparierbar','Riparabile','Herstelbaar'],
+a2p:['Un liner standard est assemblé en usine. La membrane armée est soudée sur place et se répare facilement : elle dure.','A standard liner is assembled in a factory. The reinforced membrane is welded on site and easy to repair: it lasts.','Un liner estándar se ensambla en fábrica. La membrana armada se suelda in situ y se repara fácilmente: dura.','Eine Standardfolie wird im Werk konfektioniert. Die armierte Membran wird vor Ort verschweißt und lässt sich leicht reparieren: Sie hält.','Un liner standard è assemblato in fabbrica. La membrana armata è saldata sul posto e si ripara facilmente: dura.','Een standaard liner wordt in de fabriek gemaakt. Het versterkte membraan wordt ter plekke gelast en is makkelijk te herstellen: het gaat lang mee.'],
+a3t:['Polyvalent','Versatile','Polivalente','Vielseitig','Versatile','Veelzijdig'],
+a3p:['Étang ou piscine : nous travaillons avec des marques choisies pour leur rapport qualité-prix, dont Delifol et Alkorplan, pour un grand choix de couleurs et de textures.','Pond or pool: we work with brands chosen for value for money, including Delifol and Alkorplan, for a wide choice of colours and textures.','Estanque o piscina: trabajamos con marcas elegidas por su calidad-precio, como Delifol y Alkorplan, con gran variedad de colores y texturas.','Teich oder Pool: Wir arbeiten mit Marken mit gutem Preis-Leistungs-Verhältnis, darunter Delifol und Alkorplan – große Auswahl an Farben und Strukturen.','Laghetto o piscina: lavoriamo con marchi scelti per il rapporto qualità-prezzo, tra cui Delifol e Alkorplan, con ampia scelta di colori e texture.','Vijver of zwembad: we werken met merken met een goede prijs-kwaliteit, waaronder Delifol en Alkorplan, met veel kleuren en texturen.'],
+s6t:['Pourquoi choisir Océance Piscines ?','Why choose Océance Piscines?','¿Por qué elegir Océance Piscines?','Warum Océance Piscines?','Perché scegliere Océance Piscines?','Waarom Océance Piscines?'],
+s6p:['Nous posons du liner en neuf comme en rénovation, et travaillons régulièrement avec des clients professionnels.','We fit liners in new builds and renovations, and work regularly with trade clients.','Instalamos liner en obra nueva y en renovación, y trabajamos a menudo con clientes profesionales.','Wir verlegen Folien im Neubau wie in der Renovierung und arbeiten regelmäßig mit Fachbetrieben.','Posiamo liner nel nuovo e nella ristrutturazione e lavoriamo spesso con clienti professionisti.','We leggen liners in nieuwbouw en renovatie en werken geregeld met professionele klanten.'],
+p1t:['Un bassin prêt pour l’été','A pool ready for summer','Una piscina lista para el verano','Ein Becken, bereit für den Sommer','Una piscina pronta per l’estate','Een bad klaar voor de zomer'],
+p1p:['Avec notre dôme gonflable et notre chauffage, nous travaillons quelle que soit la saison.','With our inflatable dome and heating, we can work whatever the season.','Con nuestra cúpula hinchable y calefacción, trabajamos en cualquier estación.','Mit unserer aufblasbaren Kuppel und Heizung arbeiten wir zu jeder Jahreszeit.','Con la nostra cupola gonfiabile e il riscaldamento lavoriamo in ogni stagione.','Met onze opblaasbare koepel en verwarming werken we in elk seizoen.'],
+p2t:['Garantie décennale','Ten-year insurance guarantee','Garantía decenal','Zehnjährige Garantie','Garanzia decennale','Tienjarige garantie'],
+p2p:['À la fin du chantier, vous recevez un certificat de garantie valable 10 ans.','At the end of the job, you receive a guarantee certificate valid for 10 years.','Al terminar la obra recibe un certificado de garantía válido 10 años.','Nach Abschluss erhalten Sie ein Garantiezertifikat, gültig 10 Jahre.','A fine lavori ricevete un certificato di garanzia valido 10 anni.','Na afloop krijgt u een garantiecertificaat, 10 jaar geldig.'],
+p3t:['Conseil et savoir-faire','Advice and know-how','Consejo y oficio','Beratung und Know-how','Consigli ed esperienza','Advies en vakmanschap'],
+p3p:['Envie de réduire la facture ? Nous vous disons quelles étapes faire vous-même (retirer l’ancien liner, par exemple) et quelles options choisir selon l’état de votre bassin.','Want to cut the bill? We tell you which steps you can do yourself (removing the old liner, for example) and which options suit the state of your pool.','¿Quiere reducir la factura? Le decimos qué etapas puede hacer usted (retirar el liner viejo, por ejemplo) y qué opciones convienen según el estado de su piscina.','Kosten sparen? Wir sagen Ihnen, welche Schritte Sie selbst übernehmen können (z. B. die alte Folie entfernen) und welche Optionen zu Ihrem Becken passen.','Volete risparmiare? Vi diciamo quali fasi fare da soli (togliere il vecchio liner, per esempio) e quali opzioni scegliere secondo lo stato della piscina.','Wilt u besparen? Wij zeggen welke stappen u zelf kunt doen (bijv. de oude liner verwijderen) en welke opties passen bij uw bad.'],
+s7t:['Un nouveau liner, en quatre temps.','A new liner, in four steps.','Un liner nuevo, en cuatro pasos.','Eine neue Folie in vier Schritten.','Un nuovo liner, in quattro tempi.','Een nieuwe liner, in vier stappen.'],
+s7p:['En neuf comme en rénovation, tout commence par un simple contact.','New build or renovation, it all starts with a simple call.','Obra nueva o renovación, todo empieza con un simple contacto.','Neubau oder Renovierung: Alles beginnt mit einem Anruf.','Nuovo o ristrutturazione, tutto inizia con un semplice contatto.','Nieuwbouw of renovatie: alles begint met een eenvoudig contact.'],
+d1c:['Premier contact','First contact','Primer contacto','Erster Kontakt','Primo contatto','Eerste contact'],
+d1t:['Prenez contact avec nous','Get in touch','Contacte con nosotros','Nehmen Sie Kontakt auf','Contattateci','Neem contact op'],
+d1p:['Nous cherchons ensemble la meilleure solution. Vous recevez une proposition sur mesure.','We find the best solution together. You receive a tailor-made proposal.','Buscamos juntos la mejor solución. Recibe una propuesta a medida.','Gemeinsam finden wir die beste Lösung. Sie erhalten ein maßgeschneidertes Angebot.','Cerchiamo insieme la soluzione migliore. Ricevete una proposta su misura.','Samen zoeken we de beste oplossing. U krijgt een voorstel op maat.'],
+d2c:['2 à 3 jours de pose','2 to 3 days of fitting','2 o 3 días de instalación','2–3 Tage Verlegung','2–3 giorni di posa','2 à 3 dagen leggen'],
+d2t:['Acceptez le devis','Accept the quote','Acepte el presupuesto','Angebot annehmen','Accettate il preventivo','Aanvaard de offerte'],
+d2p:['Nous fixons une date d’intervention. La pose d’un liner armé prend en général 2 ou 3 jours.','We set a date. Fitting a reinforced liner usually takes 2 or 3 days.','Fijamos una fecha. Instalar un liner armado suele llevar 2 o 3 días.','Wir legen einen Termin fest. Die Verlegung dauert meist 2 bis 3 Tage.','Fissiamo una data. La posa di un liner armato richiede in genere 2 o 3 giorni.','We plannen een datum. Een versterkte liner leggen duurt meestal 2 à 3 dagen.'],
+d3c:['Mise en eau','Water in','Puesta en agua','Wasser marsch','Messa in acqua','Water erin'],
+d3t:['Après la pose','After fitting','Tras la instalación','Nach der Verlegung','Dopo la posa','Na het leggen'],
+d3p:['Nous remplissons votre bassin. Vous recevez le certificat de garantie et nos conseils.','We fill your pool. You receive the guarantee certificate and our advice.','Llenamos su piscina. Recibe el certificado de garantía y nuestros consejos.','Wir befüllen Ihr Becken. Sie erhalten das Garantiezertifikat und unsere Tipps.','Riempiamo la piscina. Ricevete il certificato di garanzia e i nostri consigli.','We vullen uw bad. U krijgt het garantiecertificaat en ons advies.'],
+d4c:['1 à 2 jours plus tard','1 to 2 days later','1 o 2 días después','1–2 Tage später','1–2 giorni dopo','1 à 2 dagen later'],
+d4t:['Le bridage final','Final clamping','La fijación final','Die Endmontage','Il fissaggio finale','De laatste afwerking'],
+d4p:['Quand l’eau est assez haute et la membrane bien en place, nous revenons brider définitivement les éléments.','Once the water is high enough and the membrane has settled, we come back to clamp the fittings for good.','Cuando el agua ha subido lo suficiente y la membrana se ha asentado, volvemos a fijar definitivamente los elementos.','Wenn das Wasser hoch genug steht und die Membran sitzt, kommen wir zurück und flanschen die Einbauteile endgültig.','Quando l’acqua è abbastanza alta e la membrana si è assestata, torniamo a fissare definitivamente gli elementi.','Als het water hoog genoeg staat en het membraan goed ligt, komen we terug om alles definitief vast te zetten.'],
+d5:['Nous contacter','Contact us','Contactar','Kontakt','Contattaci','Contact opnemen'],
+s8t:['Piscinistes : un poseur de membrane armée quand vous en avez besoin.','Pool builders: a reinforced-membrane fitter when you need one.','Piscineros: un instalador de membrana armada cuando lo necesite.','Poolbauer: ein Verleger für armierte Folie, wenn Sie ihn brauchen.','Piscinisti: un posatore di membrana armata quando serve.','Zwembadbouwers: een legger van versterkt membraan wanneer u hem nodig hebt.'],
+s8p:['Besoin de renfort ponctuel ? Nous intervenons en sous-traitance pour la pose de membrane armée en Bretagne, sur tout type d’ouvrage.','Need extra hands? We subcontract reinforced-membrane fitting across Brittany, on any type of structure.','¿Necesita refuerzo puntual? Subcontratamos la instalación de membrana armada en Bretaña, en cualquier tipo de obra.','Brauchen Sie Verstärkung? Wir verlegen armierte Membranen als Subunternehmer in der ganzen Bretagne, auf jedem Bauwerk.','Serve un rinforzo? Lavoriamo in subappalto per la posa di membrana armata in Bretagna, su ogni tipo di opera.','Extra handen nodig? Wij leggen versterkt membraan in onderaanneming in heel Bretagne, op elk type werk.'],
+s8a:['Sous-traitance de pose de membrane armée','Subcontracted reinforced-membrane fitting','Subcontratación de instalación de membrana armada','Verlegung armierter Membran als Subunternehmer','Posa di membrana armata in subappalto','Leggen van versterkt membraan in onderaanneming'],
+s8b:['Maintenance et entretien','Maintenance and servicing','Mantenimiento','Wartung und Pflege','Manutenzione','Onderhoud'],
+s8c:['Rénovation','Renovation','Renovación','Renovierung','Ristrutturazione','Renovatie'],
+s8z:['Nous intervenons dans toute la Bretagne, depuis Fouesnant :','We work all over Brittany, from Fouesnant:','Trabajamos en toda Bretaña, desde Fouesnant:','Wir arbeiten in der ganzen Bretagne, von Fouesnant aus:','Lavoriamo in tutta la Bretagna, da Fouesnant:','We werken in heel Bretagne, vanuit Fouesnant:'],
+s8l:['Proposer un chantier','Offer us a job','Proponer una obra','Auftrag anfragen','Proporre un cantiere','Een klus voorstellen'],
+s9t:['Nos services clé en main','Our turnkey services','Nuestros servicios llave en mano','Unsere Leistungen schlüsselfertig','I nostri servizi chiavi in mano','Onze diensten sleutel-op-de-deur'],
+k1t:['Suivi de projet','Project management','Seguimiento de obra','Projektbegleitung','Gestione del progetto','Projectbegeleiding'],
+k1p:['Avec nos partenaires terrassier et maçon, nous prenons en charge toute la construction, sous garantie décennale. Nos partenaires d’aménagement extérieur (espaces verts, terrasse) peuvent embellir le bassin.','With our excavation and masonry partners, we handle the whole build, under a ten-year guarantee. Our landscaping partners (gardens, decking) can finish the surroundings.','Con nuestros socios de excavación y albañilería nos encargamos de toda la obra, con garantía decenal. Nuestros socios de exteriores (jardín, terraza) pueden embellecerla.','Mit unseren Partnern für Erdbau und Mauerwerk übernehmen wir den gesamten Bau, mit zehnjähriger Garantie. Partner für Außenanlagen (Garten, Terrasse) runden ab.','Con i nostri partner per scavo e muratura gestiamo tutta la costruzione, con garanzia decennale. I partner per gli esterni (verde, terrazza) completano l’opera.','Met onze partners voor grondwerk en metselwerk regelen we de hele bouw, met tienjarige garantie. Partners voor tuin en terras maken het af.'],
+k2t:['Matériel et équipement','Equipment and supplies','Material y equipamiento','Zubehör und Ausstattung','Attrezzatura e accessori','Materiaal en uitrusting'],
+k2p:['Épuisette, robot, pompe à chaleur, produits d’entretien… nous fournissons tout ce qu’il faut pour entretenir votre bassin.','Skimmer net, robot cleaner, heat pump, cleaning products… we supply all you need to look after your pool.','Recogehojas, robot, bomba de calor, productos de mantenimiento… le suministramos todo lo necesario.','Kescher, Roboter, Wärmepumpe, Pflegeprodukte … wir liefern alles für die Pflege Ihres Beckens.','Retino, robot, pompa di calore, prodotti per la manutenzione… forniamo tutto il necessario.','Schepnet, robot, warmtepomp, onderhoudsproducten… we leveren alles om uw bad te onderhouden.'],
+voir:['En savoir plus','Learn more','Saber más','Mehr erfahren','Scopri di più','Meer weten'],
+g1:['Construction de piscine en Bretagne','Pool building in Brittany','Construcción de piscinas en Bretaña','Poolbau in der Bretagne','Costruzione di piscine in Bretagna','Zwembadbouw in Bretagne'],
+g1p:['Pour vous offrir le meilleur rapport qualité-prix, nous nous concentrons sur les piscines en béton, enterrées ou semi-enterrées. Profitez de notre expérience pour faire les bons choix.','To give you the best value, we focus on concrete pools, in-ground or semi-in-ground. Use our experience to make the right choices.','Para ofrecerle la mejor relación calidad-precio, nos centramos en piscinas de hormigón, enterradas o semienterradas. Aproveche nuestra experiencia.','Für das beste Preis-Leistungs-Verhältnis konzentrieren wir uns auf Betonbecken, eingelassen oder halb eingelassen. Nutzen Sie unsere Erfahrung.','Per il miglior rapporto qualità-prezzo ci concentriamo sulle piscine in cemento, interrate o seminterrate. Approfittate della nostra esperienza.','Voor de beste prijs-kwaliteit richten we ons op betonnen baden, ingegraven of half ingegraven. Profiteer van onze ervaring.'],
+g1b:['Obtenir un devis','Get a quote','Obtener presupuesto','Angebot erhalten','Ottenere un preventivo','Offerte krijgen'],
+g2t:['Les étapes de création de votre piscine','How your pool is built','Las etapas de su piscina','Die Bauschritte Ihres Pools','Le fasi della vostra piscina','De bouwstappen van uw zwembad'],
+g2p:['Une piscine apporte de la valeur à votre maison et des soirées d’été au bord de l’eau. Voici le chemin, pas à pas.','A pool adds value to your home and summer evenings by the water. Here is the path, step by step.','Una piscina revaloriza su casa y le regala tardes de verano junto al agua. Este es el camino, paso a paso.','Ein Pool steigert den Wert Ihres Hauses und schenkt Sommerabende am Wasser. Hier der Weg, Schritt für Schritt.','Una piscina valorizza la casa e regala serate d’estate in riva all’acqua. Ecco il percorso, passo dopo passo.','Een zwembad geeft uw huis meerwaarde en zomeravonden aan het water. Hier de weg, stap voor stap.'],
+e1t:['L’étude personnalisée','Tailored survey','El estudio personalizado','Die individuelle Planung','Lo studio personalizzato','De persoonlijke studie'],
+e1c:['Devis gratuit','Free quote','Presupuesto gratuito','Kostenloses Angebot','Preventivo gratuito','Gratis offerte'],
+e1p:['Vous avez sans doute une idée de l’emplacement et des dimensions. Nous venons sur place faire le relevé nécessaire au permis de construire, puis nous vous proposons plusieurs options selon vos envies, dans le respect des normes.','You probably have an idea of the location and size. We come to survey the site for the planning application, then suggest several options to suit you, in line with regulations.','Seguramente ya tiene una idea del lugar y las medidas. Vamos a tomar las medidas necesarias para el permiso de obra y le proponemos varias opciones, cumpliendo la normativa.','Sie haben wohl schon Standort und Maße im Kopf. Wir vermessen vor Ort für die Baugenehmigung und schlagen Ihnen normgerechte Varianten vor.','Probabilmente avete già un’idea di posizione e misure. Veniamo a fare il rilievo per il permesso di costruire e vi proponiamo varie opzioni, a norma.','U hebt vast al een idee van plek en afmetingen. We meten ter plaatse op voor de bouwvergunning en stellen opties voor, volgens de normen.'],
+e2t:['Le terrassement','Earthworks','La excavación','Der Aushub','Lo scavo','Het grondwerk'],
+e2c:['Après accord du permis','Once permission is granted','Tras el permiso','Nach Genehmigung','Dopo il permesso','Na de vergunning'],
+e2p:['Une fois le permis ou la déclaration de travaux acceptés, nous creusons le futur bassin. Une étape clé : la piscine doit durer des années, voire des décennies.','Once planning is approved, we dig the future pool. A key step: the pool must last for years, even decades.','Aceptado el permiso, excavamos la futura piscina. Una etapa clave: la piscina debe durar años, incluso décadas.','Nach Genehmigung heben wir das Becken aus. Ein entscheidender Schritt: Der Pool soll Jahre, ja Jahrzehnte halten.','Accettato il permesso, scaviamo la futura piscina. Una fase chiave: la piscina deve durare anni, persino decenni.','Na de vergunning graven we het bad uit. Een sleutelstap: het zwembad moet jaren, zelfs decennia meegaan.'],
+e3t:['La maçonnerie','Masonry','La albañilería','Das Mauerwerk','La muratura','Het metselwerk'],
+e3c:['Béton armé','Reinforced concrete','Hormigón armado','Stahlbeton','Cemento armato','Gewapend beton'],
+e3p:['Après les fondations en béton armé, notre partenaire maçon monte les murs en blocs à bancher, renforcés par un chaînage horizontal et vertical pour bien résister à la pression de l’eau.','After the reinforced-concrete foundations, our masonry partner builds the walls in formwork blocks, tied horizontally and vertically to withstand water pressure.','Tras los cimientos de hormigón armado, nuestro albañil asociado levanta los muros con bloques de encofrado, reforzados en horizontal y vertical contra la presión del agua.','Nach dem Stahlbetonfundament mauert unser Partner die Wände aus Schalsteinen, horizontal und vertikal bewehrt gegen den Wasserdruck.','Dopo le fondazioni in cemento armato, il nostro muratore partner alza i muri in blocchi cassero, rinforzati in orizzontale e verticale contro la pressione dell’acqua.','Na de fundering in gewapend beton bouwt onze metselaar de wanden met bekistingsblokken, horizontaal en verticaal verankerd tegen de waterdruk.'],
+e4t:['La pose du liner','Fitting the liner','La instalación del liner','Die Folienverlegung','La posa del liner','Het leggen van de liner'],
+e4c:['100/150e · ≈ 1,5 mm · 10 ans','100/150 · ≈ 1.5 mm · 10 years','100/150 · ≈ 1,5 mm · 10 años','100/150 · ≈ 1,5 mm · 10 Jahre','100/150 · ≈ 1,5 mm · 10 anni','100/150 · ≈ 1,5 mm · 10 jaar'],
+e4p:['Le PVC armé est préparé sur mesure puis soudé sur place, pour une étanchéité parfaite, garantie 10 ans. Quelques jours suffisent. Grand choix de coloris, résistance aux UV, réparation facile.','The reinforced PVC is made to measure then welded on site for a perfect seal, guaranteed 10 years. A few days are enough. Wide colour choice, UV resistance, easy repairs.','El PVC armado se prepara a medida y se suelda in situ, para una estanqueidad perfecta, garantizada 10 años. Bastan unos días. Muchos colores, resistencia UV, reparación fácil.','Das armierte PVC wird nach Maß vorbereitet und vor Ort verschweißt – absolut dicht, 10 Jahre Garantie. Wenige Tage genügen. Große Farbauswahl, UV-beständig, leicht zu reparieren.','Il PVC armato è preparato su misura e saldato sul posto, per una tenuta perfetta garantita 10 anni. Bastano pochi giorni. Tanti colori, resistenza UV, riparazione facile.','Het versterkte PVC wordt op maat gemaakt en ter plekke gelast: perfect waterdicht, 10 jaar garantie. Een paar dagen volstaan. Veel kleuren, UV-bestendig, makkelijk te herstellen.'],
+e5t:['Filtration et pompe à chaleur','Filtration and heat pump','Filtración y bomba de calor','Filter und Wärmepumpe','Filtrazione e pompa di calore','Filtratie en warmtepomp'],
+e5c:['Avec nos partenaires','With our partners','Con nuestros socios','Mit unseren Partnern','Con i nostri partner','Met onze partners'],
+e5p:['Nos partenaires installent la filtration, le chauffage, le pompage et l’éclairage. À la réception, nous vous donnons tous nos conseils d’entretien et de traitement.','Our partners install filtration, heating, pumps and lighting. At handover, we give you all our care and water-treatment tips.','Nuestros socios instalan filtración, calefacción, bombeo e iluminación. En la entrega le damos todos nuestros consejos de mantenimiento.','Unsere Partner installieren Filter, Heizung, Pumpen und Beleuchtung. Bei der Übergabe erhalten Sie alle Pflegetipps.','I nostri partner installano filtrazione, riscaldamento, pompe e illuminazione. Alla consegna vi diamo tutti i consigli di manutenzione.','Onze partners installeren filter, verwarming, pompen en verlichting. Bij oplevering krijgt u al ons onderhoudsadvies.'],
+q1t:['Votre artisan pisciniste, dans le Finistère Sud.','Your pool craftsman in South Finistère.','Su artesano de piscinas en el sur de Finistère.','Ihr Poolhandwerker im Süd-Finistère.','Il vostro artigiano delle piscine nel Finistère del Sud.','Uw zwembadvakman in Zuid-Finistère.'],
+q1p:['Océance Piscines est une entreprise artisanale qui crée et rénove des piscines pour les particuliers : pose de liner armé, gestion de projet pour la construction de bassin, fourniture de matériel et de spas d’extérieur.','Océance Piscines is a craft business building and renovating pools for homeowners: reinforced-liner fitting, project management for pool building, equipment and outdoor spas.','Océance Piscines es una empresa artesanal que crea y renueva piscinas para particulares: liner armado, gestión de obra y suministro de material y spas de exterior.','Océance Piscines ist ein Handwerksbetrieb, der Pools für Privatkunden baut und renoviert: armierte Folie, Projektleitung beim Beckenbau, Zubehör und Außen-Spas.','Océance Piscines è un’impresa artigiana che crea e ristruttura piscine per privati: liner armato, gestione del progetto, attrezzature e spa da esterno.','Océance Piscines is een ambachtelijk bedrijf dat zwembaden bouwt en renoveert voor particulieren: versterkte liner, projectbegeleiding, materiaal en buitenspa’s.'],
+q1q:['Nous intervenons dans toute la Bretagne et coordonnons les corps de métier nécessaires à votre projet. Tous les artisans du chantier sont couverts par une garantie décennale. Votre avantage : réaliser vous-même une partie des travaux, en vous appuyant sur un réseau d’artisans de confiance.','We work all over Brittany and coordinate every trade your project needs. All craftsmen on site carry a ten-year guarantee. Your advantage: do part of the work yourself, backed by a trusted network.','Trabajamos en toda Bretaña y coordinamos los oficios de su proyecto. Todos los artesanos tienen garantía decenal. Su ventaja: hacer usted parte de la obra, con una red de confianza.','Wir arbeiten in der ganzen Bretagne und koordinieren alle Gewerke. Alle Handwerker sind durch eine zehnjährige Garantie abgesichert. Ihr Vorteil: einen Teil selbst machen, mit einem verlässlichen Netzwerk.','Lavoriamo in tutta la Bretagna e coordiniamo i mestieri necessari. Tutti gli artigiani hanno la garanzia decennale. Il vostro vantaggio: fare una parte dei lavori da soli, con una rete di fiducia.','We werken in heel Bretagne en coördineren alle vakmensen. Iedereen op de bouwplaats heeft een tienjarige garantie. Uw voordeel: een deel zelf doen, met een betrouwbaar netwerk.'],
+r1t:['Nos dernières réalisations','Recent work','Nuestras últimas obras','Unsere letzten Projekte','I nostri ultimi lavori','Onze recente projecten'],
+x1:['Demandez une estimation.','Ask for an estimate.','Pida una estimación.','Fordern Sie eine Schätzung an.','Chiedete una stima.','Vraag een raming aan.'],
+x1p:['Devis gratuit et sans engagement, pour les particuliers comme pour les professionnels : quelques questions, vos coordonnées, et nous vous rappelons.','Free, no-obligation quote for homeowners and trade alike: a few questions, your details, and we call you back.','Presupuesto gratuito y sin compromiso, para particulares y profesionales: unas preguntas, sus datos y le llamamos.','Kostenlos und unverbindlich, für Privat und Gewerbe: ein paar Fragen, Ihre Kontaktdaten, und wir rufen zurück.','Preventivo gratuito e senza impegno, per privati e professionisti: qualche domanda, i vostri recapiti e vi richiamiamo.','Gratis en vrijblijvend, voor particulieren en professionals: enkele vragen, uw gegevens, en wij bellen terug.'],
+mt1:['Matériel de piscine','Pool equipment','Material de piscina','Poolzubehör','Attrezzatura per piscine','Zwembadmateriaal'],
+mt1p:['Une large gamme de produits de qualité professionnelle. Pour connaître les modèles disponibles, il suffit de nous demander.','A wide range of professional-grade products. To find out which models are available, just ask.','Una amplia gama de productos de calidad profesional. Para conocer los modelos disponibles, basta con preguntarnos.','Ein breites Sortiment in Profiqualität. Welche Modelle verfügbar sind? Fragen Sie uns einfach.','Un’ampia gamma di prodotti di qualità professionale. Per i modelli disponibili basta chiedere.','Een breed aanbod in professionele kwaliteit. Welke modellen er zijn? Vraag het ons gewoon.'],
+mt2:['Quatre familles, un seul interlocuteur.','Four ranges, one contact.','Cuatro familias, un solo interlocutor.','Vier Bereiche, ein Ansprechpartner.','Quattro famiglie, un solo interlocutore.','Vier families, één aanspreekpunt.'],
+fa1:['Spa','Spa','Spa','Spa','Spa','Spa'],
+fa1p:['Spas d’extérieur de fabrication européenne.','European-made outdoor spas.','Spas de exterior de fabricación europea.','Außen-Spas aus europäischer Fertigung.','Spa da esterno di fabbricazione europea.','Buitenspa’s van Europese makelij.'],
+fa1c:['Garantie 5 ans','5-year guarantee','Garantía 5 años','5 Jahre Garantie','Garanzia 5 anni','5 jaar garantie'],
+fa2:['Chauffage','Heating','Calefacción','Heizung','Riscaldamento','Verwarming'],
+fa2p:['Pompes à chaleur et pièces de rechange, chauffage solaire, échangeur, réchauffeur, déshumidification.','Heat pumps and spare parts, solar heating, heat exchanger, heater, dehumidification.','Bombas de calor y recambios, calefacción solar, intercambiador, calentador, deshumidificación.','Wärmepumpen und Ersatzteile, Solarheizung, Wärmetauscher, Erhitzer, Entfeuchtung.','Pompe di calore e ricambi, riscaldamento solare, scambiatore, riscaldatore, deumidificazione.','Warmtepompen en onderdelen, zonneverwarming, warmtewisselaar, verwarmer, ontvochtiging.'],
+fa2c:['PAC','Heat pumps','Bombas de calor','Wärmepumpen','Pompe di calore','Warmtepompen'],
+fa3:['Accessoires','Accessories','Accesorios','Zubehör','Accessori','Accessoires'],
+fa3p:['Pompes de filtration, volets de protection, accessoires d’hivernage, épuisettes, robots…','Filter pumps, safety covers, winterising kit, skimmer nets, robots…','Bombas de filtración, cubiertas de protección, accesorios de invernaje, recogehojas, robots…','Filterpumpen, Abdeckungen, Überwinterungszubehör, Kescher, Roboter …','Pompe di filtrazione, coperture di sicurezza, accessori per lo svernamento, retini, robot…','Filterpompen, afdekkingen, overwinteringsmateriaal, schepnetten, robots…'],
+fa3c:['Filtration · hivernage','Filtration · winter','Filtración · invierno','Filter · Winter','Filtrazione · inverno','Filtratie · winter'],
+fa4:['Entretien','Care','Mantenimiento','Pflege','Manutenzione','Onderhoud'],
+fa4p:['Traitement automatisé, produits de traitement et d’analyse de l’eau.','Automated treatment, water treatment and testing products.','Tratamiento automatizado, productos de tratamiento y análisis del agua.','Automatische Aufbereitung, Wasserpflege- und Testprodukte.','Trattamento automatico, prodotti per trattare e analizzare l’acqua.','Automatische behandeling, producten voor waterbehandeling en -analyse.'],
+fa4c:['Eau claire','Clear water','Agua clara','Klares Wasser','Acqua limpida','Helder water'],
+x2:['Un modèle en tête ?','Got a model in mind?','¿Tiene un modelo en mente?','Ein Modell im Kopf?','Avete un modello in mente?','Een model in gedachten?'],
+x2p:['Dites-nous ce que vous cherchez : nous vous indiquons les modèles disponibles et leur prix.','Tell us what you’re after: we’ll tell you which models are available and their price.','Díganos qué busca: le indicamos los modelos disponibles y su precio.','Sagen Sie uns, was Sie suchen: Wir nennen verfügbare Modelle und Preise.','Diteci cosa cercate: vi indichiamo i modelli disponibili e il prezzo.','Zeg ons wat u zoekt: wij geven de beschikbare modellen en hun prijs.'],
+x2b:['Nous écrire','Write to us','Escribirnos','Schreiben Sie uns','Scriveteci','Schrijf ons'],
+b1:['Mesurez votre bassin, nous préparons le devis.','Measure your pool, we prepare the quote.','Mida su piscina, preparamos el presupuesto.','Messen Sie Ihr Becken, wir erstellen das Angebot.','Misurate la piscina, prepariamo il preventivo.','Meet uw bad op, wij maken de offerte.'],
+b1p:['Indiquez les dimensions de votre piscine : vous voyez tout de suite la surface de membrane à prévoir. Ces mesures partent ensuite avec votre demande de devis.','Enter your pool’s dimensions to see straight away how much membrane is needed. The measurements then go with your quote request.','Indique las medidas de su piscina y verá al instante la superficie de membrana necesaria. Las medidas se envían con su solicitud.','Geben Sie die Maße ein und sehen Sie sofort die benötigte Folienfläche. Die Maße gehen mit Ihrer Anfrage mit.','Inserite le misure e vedete subito la superficie di membrana necessaria. Le misure partono poi con la richiesta di preventivo.','Vul de afmetingen in en zie meteen hoeveel membraan nodig is. De maten gaan mee met uw offerteaanvraag.'],
+b2:['Votre projet','Your project','Su proyecto','Ihr Projekt','Il vostro progetto','Uw project'],
+o1:['Membrane en rénovation','Membrane, renovation','Membrana en renovación','Membran, Renovierung','Membrana, ristrutturazione','Membraan, renovatie'],
+o2:['Membrane en neuf','Membrane, new build','Membrana en obra nueva','Membran, Neubau','Membrana, nuovo','Membraan, nieuwbouw'],
+o3:['Création de bassin','New pool build','Creación de piscina','Beckenbau','Creazione della vasca','Nieuw bad bouwen'],
+b3:['Longueur','Length','Largo','Länge','Lunghezza','Lengte'],
+b4:['Largeur','Width','Ancho','Breite','Larghezza','Breedte'],
+b5:['Profondeur moyenne','Average depth','Profundidad media','Mittlere Tiefe','Profondità media','Gemiddelde diepte'],
+b6:['Joindre ces mesures à mon devis','Add these measurements to my quote','Añadir estas medidas a mi presupuesto','Maße zum Angebot hinzufügen','Allegare le misure al preventivo','Maten toevoegen aan mijn offerte'],
+b7:['de membrane à prévoir','of membrane to allow for','de membrana a prever','Membran einzuplanen','di membrana da prevedere','membraan te voorzien'],
+b8b:['de fond','of floor','de fondo','Bodenfläche','di fondo','bodem'],
+b8c:['de périmètre à souder','of edge to weld','de perímetro que soldar','Rand zum Verschweißen','di perimetro da saldare','rand om te lassen'],
+b9a:['et','and','y','und','e','en'],
+b8:['pour','for','para','bei','per','voor'],
+b9:['d’eau environ','of water roughly','de agua aprox.','Wasser (ca.)','d’acqua circa','water ongeveer'],
+b10:['Estimation indicative pour un bassin rectangulaire, hors escalier et recouvrements. Les mesures exactes sont relevées sur place, et le devis reste gratuit.','Rough estimate for a rectangular pool, excluding steps and overlaps. Exact measurements are taken on site, and the quote is free.','Estimación orientativa para una piscina rectangular, sin escalera ni solapes. Las medidas exactas se toman in situ y el presupuesto es gratuito.','Richtwert für ein rechteckiges Becken, ohne Treppe und Überlappungen. Genaue Maße nehmen wir vor Ort, das Angebot bleibt kostenlos.','Stima indicativa per una vasca rettangolare, senza scala né sovrapposizioni. Le misure esatte si prendono sul posto e il preventivo è gratuito.','Indicatie voor een rechthoekig bad, zonder trap en overlappen. Exacte maten nemen we ter plaatse, de offerte blijft gratis.'],
+c0:['Parlons de votre bassin.','Let’s talk about your pool.','Hablemos de su piscina.','Sprechen wir über Ihr Becken.','Parliamo della vostra piscina.','Laten we het over uw bad hebben.'],
+c0p:['Une question, un projet ? Remplissez le formulaire pour recevoir une estimation, ou appelez-nous directement.','A question or a project? Fill in the form for an estimate, or call us directly.','¿Una pregunta, un proyecto? Rellene el formulario para recibir una estimación, o llámenos.','Eine Frage, ein Projekt? Füllen Sie das Formular aus oder rufen Sie uns direkt an.','Una domanda, un progetto? Compilate il modulo per una stima, o chiamateci.','Een vraag, een project? Vul het formulier in voor een raming, of bel ons.'],
+ct1:['Téléphone · Yannick Penven','Phone · Yannick Penven','Teléfono · Yannick Penven','Telefon · Yannick Penven','Telefono · Yannick Penven','Telefoon · Yannick Penven'],
+ct2:['E-mail','Email','Correo','E-Mail','E-mail','E-mail'],
+ct3:['Horaires','Opening hours','Horario','Öffnungszeiten','Orari','Openingsuren'],
+ct3v:['Du lundi au vendredi, de 9 h à 18 h','Monday to Friday, 9am to 6pm','De lunes a viernes, de 9 a 18 h','Montag bis Freitag, 9–18 Uhr','Dal lunedì al venerdì, 9–18','Maandag tot vrijdag, 9 tot 18 uur'],
+ct4:['Adresse','Address','Dirección','Adresse','Indirizzo','Adres'],
+fq:['Quel est votre projet ?','What is your project?','¿Cuál es su proyecto?','Was ist Ihr Projekt?','Qual è il vostro progetto?','Wat is uw project?'],
+fv:['Ville du chantier','Town of the job','Ciudad de la obra','Ort der Baustelle','Città del cantiere','Plaats van de klus'],
+fd:['Dimensions du bassin','Pool dimensions','Medidas de la piscina','Beckenmaße','Dimensioni della vasca','Afmetingen van het bad'],
+fn:['Nom','Last name','Apellido','Nachname','Cognome','Achternaam'],
+fp:['Prénom','First name','Nombre','Vorname','Nome','Voornaam'],
+fe:['E-mail','Email','Correo','E-Mail','E-mail','E-mail'],
+ft:['Téléphone','Phone','Teléfono','Telefon','Telefono','Telefoon'],
+fc:['Commentaire','Comment','Comentario','Kommentar','Commento','Opmerking'],
+fs:['Envoyer ma demande','Send my request','Enviar mi solicitud','Anfrage senden','Invia la richiesta','Aanvraag versturen'],
+fok:['Merci ! Sur le site en ligne, votre demande partira directement chez Océance Piscines. (Maquette : aucun envoi réel.)','Thank you! On the live site, your request will go straight to Océance Piscines. (Mock-up: nothing is sent.)','¡Gracias! En el sitio real, su solicitud llegará directamente a Océance Piscines. (Maqueta: no se envía nada.)','Danke! Auf der echten Website geht Ihre Anfrage direkt an Océance Piscines. (Entwurf: kein Versand.)','Grazie! Sul sito reale la richiesta arriverà direttamente a Océance Piscines. (Bozza: nessun invio.)','Bedankt! Op de echte site gaat uw aanvraag rechtstreeks naar Océance Piscines. (Ontwerp: er wordt niets verstuurd.)'],
+ml:['Mentions légales','Legal notice','Aviso legal','Impressum','Note legali','Juridische vermeldingen'],
+ml1:['Éditeur','Publisher','Editor','Herausgeber','Editore','Uitgever'],
+ml1b:['Responsable de la publication','Publication director','Responsable de la publicación','Verantwortlich','Responsabile della pubblicazione','Verantwoordelijke uitgever'],
+ml2:['Agence web','Web agency','Agencia web','Webagentur','Agenzia web','Webbureau'],
+ml3:['Hébergement','Hosting','Alojamiento','Hosting','Hosting','Hosting'],
+ml4:['Droits d’auteur','Copyright','Derechos de autor','Urheberrecht','Diritto d’autore','Auteursrecht'],
+ml4p:['L’ensemble de ce site relève de la législation française et internationale sur le droit d’auteur et la propriété intellectuelle. Tous droits de reproduction sont réservés, y compris pour les photographies. Toute reproduction sur un support électronique est interdite sauf autorisation expresse du directeur de la publication.','This whole site is covered by French and international copyright and intellectual property law. All reproduction rights are reserved, including for photographs. Any electronic reproduction is forbidden without express permission from the publication director.','Todo este sitio está sujeto a la legislación francesa e internacional sobre derechos de autor y propiedad intelectual. Todos los derechos de reproducción están reservados, incluidas las fotografías. Se prohíbe toda reproducción electrónica sin autorización expresa del responsable de la publicación.','Diese Website unterliegt dem französischen und internationalen Urheberrecht. Alle Rechte vorbehalten, auch für Fotos. Jede elektronische Vervielfältigung ist ohne ausdrückliche Genehmigung untersagt.','L’intero sito è soggetto alla legge francese e internazionale sul diritto d’autore. Tutti i diritti di riproduzione sono riservati, comprese le fotografie. È vietata ogni riproduzione elettronica senza autorizzazione espressa.','Deze hele site valt onder het Franse en internationale auteursrecht. Alle rechten voorbehouden, ook voor foto’s. Elektronische reproductie is verboden zonder uitdrukkelijke toestemming.'],
+ml5:['Informatique et libertés','Data protection','Protección de datos','Datenschutz','Protezione dei dati','Gegevensbescherming'],
+ml5p:['Le droit d’accès, de modification, de rectification et de suppression des données qui vous concernent (article 34 de la loi 78-17 du 6 janvier 1978) s’exerce auprès du responsable de la publication.','Your rights to access, modify, correct and delete your data (article 34 of French law 78-17 of 6 January 1978) can be exercised with the publication director.','Los derechos de acceso, modificación, rectificación y supresión de sus datos (artículo 34 de la ley francesa 78-17) se ejercen ante el responsable de la publicación.','Ihre Rechte auf Auskunft, Änderung, Berichtigung und Löschung (Art. 34 des frz. Gesetzes 78-17) üben Sie beim Verantwortlichen aus.','I diritti di accesso, modifica, rettifica e cancellazione dei dati (art. 34 della legge francese 78-17) si esercitano presso il responsabile della pubblicazione.','Uw recht op inzage, wijziging, correctie en verwijdering (art. 34 van de Franse wet 78-17) oefent u uit bij de verantwoordelijke uitgever.'],
+pc:['Politique de confidentialité','Privacy policy','Política de privacidad','Datenschutzerklärung','Informativa sulla privacy','Privacybeleid'],
+pc1:['Océance Piscines s’engage à respecter ses obligations au titre du Règlement général sur la protection des données (RGPD).','Océance Piscines is committed to meeting its obligations under the General Data Protection Regulation (GDPR).','Océance Piscines se compromete a cumplir sus obligaciones según el RGPD.','Océance Piscines verpflichtet sich zur Einhaltung der DSGVO.','Océance Piscines si impegna a rispettare gli obblighi del GDPR.','Océance Piscines leeft de verplichtingen van de AVG na.'],
+pc2:['Nous utilisons un outil de statistiques respectueux de la vie privée : les données sont anonymisées et servent uniquement à compter les visites. Vous pouvez vous opposer à ce suivi à tout moment ; si vous effacez vos cookies ou changez de navigateur, il faudra renouveler ce choix.','We use a privacy-friendly analytics tool: data is anonymised and only used to count visits. You can opt out at any time; if you clear your cookies or change browser, you will need to opt out again.','Usamos una herramienta de estadísticas respetuosa con la privacidad: los datos se anonimizan y solo sirven para contar visitas. Puede oponerse en cualquier momento; si borra las cookies o cambia de navegador, deberá repetirlo.','Wir nutzen ein datenschutzfreundliches Statistiktool: Daten werden anonymisiert und nur zum Zählen von Besuchen genutzt. Sie können jederzeit widersprechen; nach dem Löschen von Cookies oder Browserwechsel erneut.','Usiamo uno strumento statistico rispettoso della privacy: i dati sono anonimi e servono solo a contare le visite. Potete opporvi in qualsiasi momento; cancellando i cookie o cambiando browser occorre ripetere la scelta.','We gebruiken een privacyvriendelijk statistiekprogramma: gegevens zijn anoniem en dienen alleen om bezoeken te tellen. U kunt altijd bezwaar maken; na het wissen van cookies of een andere browser opnieuw.'],
+pd:['Pose de liner de piscine dans le Grand Ouest, depuis Fouesnant.','Pool liner fitting across western France, from Fouesnant.','Instalación de liner de piscina en el oeste de Francia, desde Fouesnant.','Poolfolien im Westen Frankreichs, von Fouesnant aus.','Posa di liner per piscine nell’ovest della Francia, da Fouesnant.','Zwembadliners in West-Frankrijk, vanuit Fouesnant.'],
+pf1:['Réparation, rénovation, pose de liner armé','Repair, renovation, reinforced liner fitting','Reparación, renovación, liner armado','Reparatur, Renovierung, armierte Folie','Riparazione, ristrutturazione, liner armato','Herstelling, renovatie, versterkte liner'],
+pf2:['Gestion de projet','Project management','Gestión de obra','Projektleitung','Gestione del progetto','Projectbegeleiding'],
+pf3:['Produits','Products','Productos','Produkte','Prodotti','Producten'],
+pf4:['Pompes à chaleur','Heat pumps','Bombas de calor','Wärmepumpen','Pompe di calore','Warmtepompen'],
+cb:['Je vous aide à choisir','I’ll help you choose','Le ayudo a elegir','Ich helfe Ihnen','Vi aiuto a scegliere','Ik help u kiezen'],
+inv:['Liner fatigué, bassin à construire ? Posez-moi votre question, je vous oriente.','Tired liner, pool to build? Ask me, I’ll point you the right way.','¿Liner gastado, piscina por construir? Pregúnteme y le oriento.','Folie müde, Becken geplant? Fragen Sie mich, ich helfe weiter.','Liner stanco, piscina da costruire? Chiedetemi, vi oriento.','Liner versleten, bad te bouwen? Vraag het mij, ik help u verder.'],
+appel:['Appeler','Call','Llamar','Anrufen','Chiamare','Bellen'],
+av:['Assistant virtuel','Virtual assistant','Asistente virtual','Virtueller Assistent','Assistente virtuale','Virtuele assistent'],
+env:['Envoyer','Send','Enviar','Senden','Invia','Verstuur'],
+alt1:['Piscine rénovée par Océance Piscines, liner neuf éclairé de nuit','Pool renovated by Océance Piscines, new liner lit at night','Piscina renovada por Océance Piscines, liner nuevo iluminado de noche','Von Océance Piscines renoviertes Becken, neue Folie bei Nacht','Piscina ristrutturata da Océance Piscines, liner nuovo illuminato di notte','Door Océance Piscines gerenoveerd bad, nieuwe liner ’s nachts verlicht'],
+alt2:['Échantillons de liner PVC armé en éventail','Fan of reinforced PVC liner samples','Muestras de liner de PVC armado en abanico','Fächer mit Mustern armierter PVC-Folie','Campioni di liner in PVC armato a ventaglio','Waaier met stalen van versterkte PVC-liner'],
+alt3:['Ancien liner verdi retiré du bassin','Old green-stained liner being removed','Liner viejo ennegrecido retirado','Alte, vergrünte Folie wird entfernt','Vecchio liner annerito rimosso','Oude, groen uitgeslagen liner wordt verwijderd'],
+alt4:['Pose du liner sous dôme gonflable','Liner fitted under an inflatable dome','Instalación bajo cúpula hinchable','Verlegung unter aufblasbarer Kuppel','Posa sotto cupola gonfiabile','Leggen onder opblaasbare koepel'],
+alt5:['Remplissage du bassin après la pose','Filling the pool after fitting','Llenado tras la instalación','Befüllen nach der Verlegung','Riempimento dopo la posa','Vullen na het leggen'],
+alt6:['Bassin terminé, éclairé','Finished pool, lit','Piscina terminada, iluminada','Fertiges Becken, beleuchtet','Piscina finita, illuminata','Klaar bad, verlicht'],
+alt7:['Dôme gonflable installé au-dessus du bassin','Inflatable dome over the pool','Cúpula hinchable sobre la piscina','Aufblasbare Kuppel über dem Becken','Cupola gonfiabile sopra la vasca','Opblaasbare koepel boven het bad'],
+alt8:['Bassin en béton en construction','Concrete pool under construction','Piscina de hormigón en construcción','Betonbecken im Bau','Vasca in cemento in costruzione','Betonnen bad in aanbouw'],
+alt9:['Escalier d’angle d’une piscine habillée de liner','Corner steps of a lined pool','Escalera de esquina de una piscina con liner','Ecktreppe eines Beckens mit Folie','Scala angolare di una piscina con liner','Hoektrap van een bad met liner'],
+alt10:['Enfant qui plonge dans une piscine','Child diving into a pool','Niño que se zambulle en una piscina','Kind taucht in den Pool','Bambino che si tuffa in piscina','Kind duikt in het zwembad'],
+alt11:['Piscine liner armé avec plage en bois et jardin','Reinforced-liner pool with timber deck and garden','Piscina con liner armado, tarima de madera y jardín','Becken mit armierter Folie, Holzdeck und Garten','Piscina con liner armato, bordo in legno e giardino','Zwembad met versterkte liner, houten terras en tuin']
+};
+function t(k){const v=D[k];return v?v[LG.indexOf(lang)]:''}
+function appliquer(){
+  document.documentElement.lang=lang;
+  document.querySelectorAll('[data-i]').forEach(e=>{const v=t(e.dataset.i);if(!v)return;if(/<em>/.test(v))e.innerHTML=v;else e.textContent=v});
+  document.querySelectorAll('[data-alt]').forEach(e=>e.alt=t(e.dataset.alt));
+  document.getElementById('q').placeholder=Q.ph[LG.indexOf(lang)];
+  majPlan(false);
+  if(document.getElementById('fenetre').classList.contains('ouvert'))accueilConseil();
+}
+document.getElementById('langue').addEventListener('change',e=>{lang=e.target.value;try{localStorage.setItem('oc-lang',lang)}catch(_){};appliquer()});
+try{const s=localStorage.getItem('oc-lang');if(s&&LG.includes(s)){lang=s;document.getElementById('langue').value=s}}catch(_){}
+
+/* Navigation */
+const pages=['accueil','projet','materiel','bassin','contact','mentions','confidentialite'];
+function route(){
+  let h=(location.hash||'#accueil').slice(1);let ancre=null;
+  if(!pages.includes(h)){ancre=document.getElementById(h);h=ancre&&ancre.closest('.page')?ancre.closest('.page').id.slice(2):'accueil'}
+  document.querySelectorAll('main>.page').forEach(p=>p.classList.toggle('actif',p.id==='p-'+h));
+  document.querySelectorAll('nav.menu a').forEach(a=>{if(a.getAttribute('href')==='#'+h)a.setAttribute('aria-current','page');else a.removeAttribute('aria-current')});
+  if(ancre&&!pages.includes(ancre.id))ancre.scrollIntoView();else window.scrollTo(0,0);
+  if(h==='accueil')souder();
+  if(h==='bassin')majPlan(true);
+  observer();
+}
+addEventListener('hashchange',route);
+
+/* Geste signature : le cordon de soudure */
+const reduit=matchMedia('(prefers-reduced-motion: reduce)').matches;
+let soude=false;
+function souder(){
+  if(soude)return;soude=true;
+  const c=document.getElementById('cordon'),pt=document.getElementById('point'),L=c.getTotalLength();
+  if(reduit){c.classList.add('froid');return}
+  c.style.strokeDasharray=L;c.style.strokeDashoffset=L;pt.setAttribute('opacity','1');
+  const d=2800,t0=performance.now()+500;
+  function f(now){const k=Math.min(1,Math.max(0,(now-t0)/d));const e=k<.5?2*k*k:1-Math.pow(-2*k+2,2)/2;
+    c.style.strokeDashoffset=L*(1-e);const p=c.getPointAtLength(L*e);pt.setAttribute('cx',p.x);pt.setAttribute('cy',p.y);
+    if(k<1)requestAnimationFrame(f);else{pt.setAttribute('opacity','0');setTimeout(()=>{c.classList.add('froid');c.classList.remove('lueur')},250)}}
+  requestAnimationFrame(f);
+}
+
+/* Mesurer mon bassin */
+const fmt=(n,d=1)=>n.toLocaleString(lang==='en'?'en-GB':lang,{minimumFractionDigits:d,maximumFractionDigits:d});
+function majPlan(anim){
+  const L=+document.getElementById('L').value,l=+document.getElementById('l').value,p=+document.getElementById('p').value;
+  document.getElementById('oL').textContent=fmt(L)+' m';document.getElementById('ol').textContent=fmt(l)+' m';document.getElementById('op').textContent=fmt(p)+' m';
+  const fond=L*l,S=fond+2*(L+l)*p,V=fond*p;
+  document.getElementById('mS').textContent='≈ '+fmt(S,0)+' m²';document.getElementById('mF').textContent=fmt(fond,0)+' m²';document.getElementById('mV').textContent='≈ '+fmt(V,0)+' m³';document.getElementById('mP').textContent=fmt(2*(L+l),0)+' m';
+  const W=640,H=380,sc=Math.min((W-150)/L,(H-100)/l),w=L*sc,h=l*sc,x=40+((W-150)-w)/2,y=60+((H-100)-h)/2;
+  const svg=document.getElementById('planSvg');
+  svg.innerHTML=`<rect class="eau" x="${x}" y="${y}" width="${w}" height="${h}" rx="3"/>
+  <line class="lig" x1="${x}" y1="${y-24}" x2="${x+w}" y2="${y-24}"/><line class="lig" x1="${x}" y1="${y-30}" x2="${x}" y2="${y-18}"/><line class="lig" x1="${x+w}" y1="${y-30}" x2="${x+w}" y2="${y-18}"/>
+  <text class="cot" x="${x+w/2}" y="${y-32}" text-anchor="middle">${fmt(L)} m</text>
+  <line class="lig" x1="${x+w+24}" y1="${y}" x2="${x+w+24}" y2="${y+h}"/><line class="lig" x1="${x+w+18}" y1="${y}" x2="${x+w+30}" y2="${y}"/><line class="lig" x1="${x+w+18}" y1="${y+h}" x2="${x+w+30}" y2="${y+h}"/>
+  <text class="cot" x="${x+w+36}" y="${y+h/2+4}">${fmt(l)} m</text>
+  <text class="cot clair" x="${x+12}" y="${y+h-12}">↓ ${fmt(p)} m</text>
+  <path id="planCordon" d="M${x},${y}h${w}v${h}h${-w}Z"/><circle id="planPoint" r="6" cx="${x}" cy="${y}" opacity="0"/>`;
+  const c=document.getElementById('planCordon');
+  if(anim&&!reduit){const T=c.getTotalLength(),pt=document.getElementById('planPoint');c.style.strokeDasharray=T;c.style.strokeDashoffset=T;pt.setAttribute('opacity','1');const t0=performance.now(),d=1500;(function f(n){const k=Math.min(1,(n-t0)/d),e=k<.5?2*k*k:1-Math.pow(-2*k+2,2)/2;c.style.strokeDashoffset=T*(1-e);const q=c.getPointAtLength(T*e);pt.setAttribute('cx',q.x);pt.setAttribute('cy',q.y);if(k<1)requestAnimationFrame(f);else{pt.setAttribute('opacity','0');setTimeout(()=>c.classList.add('froid'),200)}})(t0)}else c.classList.add('froid');
+  const proj=document.querySelector('input[name=projet]:checked').value;
+}
+let tm;['L','l','p'].forEach(id=>document.getElementById(id).addEventListener('input',()=>{clearTimeout(tm);majPlan(false);tm=setTimeout(()=>majPlan(true),350)}));
+document.getElementById('envoyerMesures').addEventListener('click',()=>{const L=+document.getElementById('L').value,l=+document.getElementById('l').value,p=+document.getElementById('p').value;document.getElementById('fDims').value=`${fmt(L)} × ${fmt(l)} m, ${fmt(p)} m`;document.getElementById('fProjet').selectedIndex=[1,0,2][+document.querySelector('input[name=projet]:checked').value]});
+
+/* Formulaire */
+document.getElementById('devis').addEventListener('submit',e=>{e.preventDefault();const f=e.target;if(!f.checkValidity()){f.reportValidity();return}document.getElementById('ok').classList.add('vu')});
+
+/* Apparitions */
+let io;function observer(){if(reduit||!('IntersectionObserver' in window))return;io=io||new IntersectionObserver(es=>es.forEach(x=>{if(x.isIntersecting){x.target.classList.add('vu');io.unobserve(x.target)}}),{threshold:.12});
+  document.querySelectorAll('.page.actif .bloc h2, .page.actif .frise figure, .page.actif .deroule li, .page.actif .famille, .page.actif .etapes li').forEach(el=>{if(!el.classList.contains('vu')){el.classList.add('apparait');io.observe(el)}})}
+
+/* Océance Conseil */
+const Q={
+ ph:['Votre question…','Your question…','Su pregunta…','Ihre Frage…','La vostra domanda…','Uw vraag…'],
+ hello:['Bonjour, je suis Océance Conseil, l’assistant virtuel d’Océance Piscines. Liner, construction, matériel : je vous oriente, et je vous dis franchement quand seul Yannick peut répondre.','Hello, I’m Océance Conseil, Océance Piscines’ virtual assistant. Liner, building, equipment: I’ll guide you, and tell you honestly when only Yannick can answer.','Hola, soy Océance Conseil, el asistente virtual de Océance Piscines. Liner, construcción, material: le oriento, y le digo con franqueza cuándo solo Yannick puede responder.','Hallo, ich bin Océance Conseil, der virtuelle Assistent von Océance Piscines. Folie, Bau, Zubehör: Ich helfe weiter und sage ehrlich, wenn nur Yannick antworten kann.','Buongiorno, sono Océance Conseil, l’assistente virtuale di Océance Piscines. Liner, costruzione, attrezzatura: vi oriento, e vi dico francamente quando solo Yannick può rispondere.','Hallo, ik ben Océance Conseil, de virtuele assistent van Océance Piscines. Liner, bouw, materiaal: ik help u verder, en zeg eerlijk wanneer alleen Yannick kan antwoorden.'],
+ puces:[['Mon liner est abîmé','Combien ça coûte ?','Combien de temps ?','Travaux en hiver ?','Je suis pisciniste'],['My liner is damaged','How much does it cost?','How long does it take?','Work in winter?','I’m a pool builder'],['Mi liner está dañado','¿Cuánto cuesta?','¿Cuánto tarda?','¿Obras en invierno?','Soy piscinero'],['Meine Folie ist kaputt','Was kostet das?','Wie lange dauert es?','Arbeiten im Winter?','Ich bin Poolbauer'],['Il mio liner è rovinato','Quanto costa?','Quanto tempo ci vuole?','Lavori in inverno?','Sono un piscinista'],['Mijn liner is beschadigd','Wat kost het?','Hoe lang duurt het?','Werken in de winter?','Ik ben zwembadbouwer']],
+ sorry:['Je préfère ne pas vous répondre au hasard sur ce point. Yannick vous répondra précisément : <a href="tel:+33677942160">06 77 94 21 60</a> (lun–ven, 9 h–18 h) ou par le <a href="#contact">formulaire de devis</a>.','I’d rather not guess on that one. Yannick will give you a precise answer: <a href="tel:+33677942160">+33 6 77 94 21 60</a> (Mon–Fri, 9am–6pm) or via the <a href="#contact">quote form</a>.','Prefiero no responder al azar. Yannick le contestará con precisión: <a href="tel:+33677942160">+33 6 77 94 21 60</a> (lun–vie, 9–18 h) o en el <a href="#contact">formulario</a>.','Dazu möchte ich nicht raten. Yannick antwortet Ihnen genau: <a href="tel:+33677942160">+33 6 77 94 21 60</a> (Mo–Fr, 9–18 Uhr) oder über das <a href="#contact">Formular</a>.','Preferisco non rispondere a caso. Yannick vi risponderà con precisione: <a href="tel:+33677942160">+33 6 77 94 21 60</a> (lun–ven, 9–18) o tramite il <a href="#contact">modulo</a>.','Daar wil ik niet naar gissen. Yannick antwoordt u precies: <a href="tel:+33677942160">+33 6 77 94 21 60</a> (ma–vr, 9–18 u) of via het <a href="#contact">formulier</a>.']
+};
+const R=[
+ {k:/^\s*(bonjour|bonsoir|salut|hello|hi|hey|hola|buenas|hallo|guten tag|ciao|buongiorno|goedendag|dag)\b[\s!.,]*$/,a:['Bonjour ! Dites-moi où en est votre bassin : liner à changer, piscine à construire, matériel à trouver ?','Hello! Tell me about your pool: liner to replace, pool to build, equipment to find?','¡Hola! Cuénteme: ¿liner que cambiar, piscina que construir, material que encontrar?','Hallo! Erzählen Sie: Folie erneuern, Becken bauen oder Zubehör finden?','Buongiorno! Mi dica: liner da cambiare, piscina da costruire, attrezzatura da trovare?','Hallo! Vertel eens: liner vervangen, bad bouwen of materiaal zoeken?']},
+ {k:/abim|vieux|vieil|decolor|cass|\bplis?\b|fuite|\btrous?\b|dechir|damag|\bold\b|faded|leak|\btear|wrinkl|dan[oa]|viejo|fuga|pliegue|kaputt|\balte?\b|undicht|falte|\briss|rovinat|vecchi|perdit|piega|beschadig|\boude?\b|\blek|plooi|scheur|renov|replace|cambiar|ersetz|sostitu|vervang|remplac/,a:['Un liner décoloré, cassant ou qui fait des plis est à remplacer. La membrane armée se pose sur béton, ossature bois ou métal, et même sur un étang. Pour une petite fuite, elle se répare aussi. <a href="#bassin">Mesurez votre bassin</a> puis demandez votre devis gratuit.','A faded, brittle or wrinkled liner needs replacing. The reinforced membrane goes on concrete, wood or steel frames, even ponds, and small leaks can be repaired. <a href="#bassin">Measure your pool</a> then ask for a free quote.','Un liner descolorido, quebradizo o con pliegues hay que cambiarlo. La membrana armada va sobre hormigón, estructura de madera o metal, incluso estanques; una fuga pequeña se repara. <a href="#bassin">Mida su piscina</a> y pida presupuesto gratis.','Eine ausgebleichte, spröde oder faltige Folie sollte ersetzt werden. Die armierte Membran passt auf Beton, Holz- oder Metallrahmen, sogar Teiche; kleine Lecks lassen sich reparieren. <a href="#bassin">Becken messen</a> und kostenloses Angebot anfragen.','Un liner scolorito, fragile o con pieghe va sostituito. La membrana armata si posa su cemento, legno, metallo e persino laghetti; le piccole perdite si riparano. <a href="#bassin">Misurate la piscina</a> e chiedete il preventivo gratuito.','Een verkleurde, brosse of plooiende liner moet vervangen worden. Het versterkte membraan past op beton, hout- of metaalframe, zelfs vijvers; kleine lekken zijn te herstellen. <a href="#bassin">Meet uw bad op</a> en vraag een gratis offerte.']},
+ {k:/prix|tarif|\bcout|combien(?! de temps)|\bcher\b|budget|price|cost|how much|precio|cuanto|cuesta|preis|kost|was kostet|prezz|quanto|costa|prijs|wat kost/,a:['Océance Piscines ne publie pas de prix : chaque bassin est différent. Le devis est gratuit et sans engagement. Astuce : vous pouvez réduire la facture en faisant vous-même certaines étapes, comme retirer l’ancien liner. <a href="#contact">Demander mon devis</a>.','Océance Piscines doesn’t publish prices: every pool is different. The quote is free with no obligation. Tip: you can lower the bill by doing some steps yourself, like removing the old liner. <a href="#contact">Get my quote</a>.','Océance Piscines no publica precios: cada piscina es distinta. El presupuesto es gratuito y sin compromiso. Consejo: puede ahorrar haciendo usted algunas etapas, como retirar el liner viejo. <a href="#contact">Pedir presupuesto</a>.','Océance Piscines veröffentlicht keine Preise: Jedes Becken ist anders. Das Angebot ist kostenlos und unverbindlich. Tipp: Sie sparen, wenn Sie Schritte wie das Entfernen der alten Folie selbst übernehmen. <a href="#contact">Angebot anfragen</a>.','Océance Piscines non pubblica prezzi: ogni piscina è diversa. Il preventivo è gratuito e senza impegno. Consiglio: potete risparmiare facendo da soli alcune fasi, come togliere il vecchio liner. <a href="#contact">Chiedere il preventivo</a>.','Océance Piscines publiceert geen prijzen: elk bad is anders. De offerte is gratis en vrijblijvend. Tip: u bespaart door zelf stappen te doen, zoals de oude liner verwijderen. <a href="#contact">Offerte aanvragen</a>.']},
+ {k:/temps|duree|delai|jour|long|combien de temps|how long|days|cuanto tarda|dias|wie lange|dauer|tage|quanto tempo|giorni|hoe lang|dagen/,a:['La pose d’un liner armé prend en général 2 ou 3 jours. On remplit ensuite le bassin, puis 1 à 2 jours plus tard nous revenons brider définitivement les éléments.','Fitting a reinforced liner usually takes 2 or 3 days. Then we fill the pool, and 1 to 2 days later we return for the final clamping.','Instalar un liner armado suele llevar 2 o 3 días. Luego se llena la piscina y, 1 o 2 días después, volvemos para la fijación final.','Die Verlegung dauert meist 2–3 Tage. Dann wird befüllt, und 1–2 Tage später kommen wir zur Endmontage zurück.','La posa richiede in genere 2 o 3 giorni. Poi si riempie la vasca e 1–2 giorni dopo torniamo per il fissaggio finale.','Het leggen duurt meestal 2 à 3 dagen. Daarna vullen we het bad en 1 à 2 dagen later komen we terug voor de afwerking.']},
+ {k:/hiver|saison|pluie|froid|meteo|dome|winter|season|rain|cold|invierno|lluvia|frio|regen|kalt|inverno|pioggia|freddo|regen|koud|seizoen/,a:['Oui, toute l’année : nous avons un dôme gonflable et un chauffage pour poser à l’abri, quelle que soit la météo. C’est le meilleur moyen d’avoir un bassin prêt pour l’été.','Yes, all year round: we have an inflatable dome and heating to work sheltered, whatever the weather. The best way to have your pool ready for summer.','Sí, todo el año: tenemos una cúpula hinchable y calefacción para trabajar a cubierto, haga el tiempo que haga. Ideal para tener la piscina lista en verano.','Ja, das ganze Jahr: Mit aufblasbarer Kuppel und Heizung arbeiten wir geschützt, bei jedem Wetter – so ist Ihr Becken zum Sommer fertig.','Sì, tutto l’anno: con la cupola gonfiabile e il riscaldamento lavoriamo al riparo con ogni tempo. Così la piscina è pronta per l’estate.','Ja, het hele jaar: met een opblaasbare koepel en verwarming werken we beschut, bij elk weer. Zo is uw bad klaar voor de zomer.']},
+ {k:/garanti|guarant|garantia|garanzia|garantie/,a:['La membrane armée est garantie 10 ans, et vous recevez un certificat de garantie à la fin du chantier. Tous les artisans qui interviennent sont couverts par une garantie décennale. Les spas sont garantis 5 ans.','The reinforced membrane is guaranteed for 10 years, with a certificate at the end of the job. All craftsmen involved carry a ten-year guarantee. Spas come with a 5-year guarantee.','La membrana armada tiene 10 años de garantía, con certificado al final de la obra. Todos los artesanos tienen garantía decenal. Los spas, 5 años.','Die armierte Membran hat 10 Jahre Garantie, mit Zertifikat zum Abschluss. Alle Handwerker sind zehnjährig versichert. Spas: 5 Jahre Garantie.','La membrana armata è garantita 10 anni, con certificato a fine lavori. Tutti gli artigiani hanno la garanzia decennale. Le spa sono garantite 5 anni.','Het versterkte membraan heeft 10 jaar garantie, met certificaat bij oplevering. Alle vakmensen hebben een tienjarige garantie. Spa’s: 5 jaar.']},
+ {k:/epais|\d\s?mm|150|trame|arme|pvc|liner|membran|thick|mesh|espesor|malla|dicke|stark|gewebe|spessor|trama|dikte|weefsel/,a:['Nous posons du PVC armé 100/150e, soit environ 1,5 mm : deux fois plus épais qu’un liner classique, avec une trame prise entre deux couches de PVC. Il est soudé sur place et se répare facilement.','We fit 100/150 reinforced PVC, about 1.5 mm: twice as thick as a standard liner, with a mesh between two PVC layers. It’s welded on site and easy to repair.','Instalamos PVC armado 100/150, unos 1,5 mm: el doble que un liner clásico, con una malla entre dos capas de PVC. Se suelda in situ y se repara fácilmente.','Wir verlegen armiertes PVC 100/150, etwa 1,5 mm: doppelt so stark wie normale Folie, mit Gewebe zwischen zwei PVC-Schichten. Vor Ort verschweißt, leicht zu reparieren.','Posiamo PVC armato 100/150, circa 1,5 mm: il doppio di un liner classico, con una trama tra due strati di PVC. Saldato sul posto, facile da riparare.','We leggen versterkt PVC 100/150, ongeveer 1,5 mm: twee keer zo dik als een gewone liner, met een weefsel tussen twee lagen PVC. Ter plekke gelast, makkelijk te herstellen.']},
+ {k:/couleur|coloris|motif|teinte|blanc|sable|gris|bleu|colou?r|pattern|color|farbe|muster|colore|kleur/,a:['Il y a plus de 30 coloris et motifs, chez des marques comme Delifol et Alkorplan. Le détail se voit avec nous, échantillons en main : <a href="#contact">prenez contact</a> pour les voir.','There are over 30 colours and patterns, from brands like Delifol and Alkorplan. Best seen with us, samples in hand: <a href="#contact">get in touch</a>.','Hay más de 30 colores y motivos, de marcas como Delifol y Alkorplan. Mejor verlos con nosotros, con muestras: <a href="#contact">contáctenos</a>.','Über 30 Farben und Muster, u. a. von Delifol und Alkorplan. Am besten mit Mustern bei uns ansehen: <a href="#contact">Kontakt</a>.','Oltre 30 colori e motivi, di marchi come Delifol e Alkorplan. Meglio vederli con noi, campioni alla mano: <a href="#contact">contattateci</a>.','Meer dan 30 kleuren en motieven, van merken als Delifol en Alkorplan. Het best samen bekeken, met stalen: <a href="#contact">neem contact op</a>.']},
+ {k:/\bpros?\b|professionn|piscinist|sous.trait|subcontract|trade|subcontrat|piscinero|poolbauer|subunternehm|subappalt|zwembadbouwer|onderaanneming/,a:['Bonne nouvelle : Océance Piscines travaille en sous-traitance pour les piscinistes, partout en Bretagne (pose de membrane armée, maintenance, rénovation). Appelez Yannick au <a href="tel:+33677942160">06 77 94 21 60</a> ou <a href="#contact">proposez un chantier</a>.','Good news: Océance Piscines subcontracts for pool builders across Brittany (membrane fitting, maintenance, renovation). Call Yannick on <a href="tel:+33677942160">+33 6 77 94 21 60</a> or <a href="#contact">offer us a job</a>.','Buena noticia: Océance Piscines trabaja en subcontratación para piscineros en toda Bretaña. Llame a Yannick al <a href="tel:+33677942160">+33 6 77 94 21 60</a> o <a href="#contact">proponga una obra</a>.','Gute Nachricht: Océance Piscines arbeitet als Subunternehmer für Poolbauer in der ganzen Bretagne. Rufen Sie Yannick an: <a href="tel:+33677942160">+33 6 77 94 21 60</a>, oder <a href="#contact">Auftrag anfragen</a>.','Ottima notizia: Océance Piscines lavora in subappalto per i piscinisti in tutta la Bretagna. Chiamate Yannick al <a href="tel:+33677942160">+33 6 77 94 21 60</a> o <a href="#contact">proponete un cantiere</a>.','Goed nieuws: Océance Piscines werkt in onderaanneming voor zwembadbouwers in heel Bretagne. Bel Yannick: <a href="tel:+33677942160">+33 6 77 94 21 60</a> of <a href="#contact">stel een klus voor</a>.']},
+ {k:/constru|neuf|creer|creation|beton|terrass|macon|permis|build|new pool|concrete|construir|nueva|hormigon|bauen|neu|beton|costru|nuova|cemento|bouwen|nieuw/,a:['Pour un bassin neuf, Océance Piscines se concentre sur les piscines en béton, enterrées ou semi-enterrées, avec ses partenaires terrassier et maçon. Tout est expliqué sur la page <a href="#projet">Construction</a>.','For a new pool, Océance Piscines focuses on concrete pools, in-ground or semi-in-ground, with its excavation and masonry partners. See the <a href="#projet">Pool building</a> page.','Para una piscina nueva, Océance Piscines se centra en piscinas de hormigón, enterradas o semienterradas, con sus socios. Todo en <a href="#projet">Construcción</a>.','Für ein neues Becken konzentriert sich Océance Piscines auf Betonbecken, eingelassen oder halb eingelassen, mit Partnern für Erdbau und Mauerwerk. Mehr unter <a href="#projet">Poolbau</a>.','Per una piscina nuova, Océance Piscines si concentra sulle vasche in cemento, interrate o seminterrate, con i suoi partner. Tutto in <a href="#projet">Costruzione</a>.','Voor een nieuw bad richt Océance Piscines zich op betonnen baden, ingegraven of half ingegraven, met partners voor grond- en metselwerk. Zie <a href="#projet">Zwembadbouw</a>.']},
+ {k:/moi.meme|auto|soi.meme|myself|self|yo mismo|selbst|da solo|zelf/,a:['C’est possible et même encouragé : vous pouvez faire le terrassement et la maçonnerie, ou retirer l’ancien liner vous-même. Océance Piscines s’occupe des parties techniques et vous conseille sur les étapes.','Yes, and it’s encouraged: you can do the earthworks and masonry, or remove the old liner yourself. Océance Piscines handles the technical parts and advises you.','Es posible y se anima: puede hacer la excavación y albañilería, o retirar el liner viejo. Océance Piscines se encarga de lo técnico y le aconseja.','Möglich und sogar erwünscht: Aushub und Mauerwerk oder das Entfernen der alten Folie können Sie selbst übernehmen. Océance Piscines erledigt das Technische und berät Sie.','È possibile, anzi consigliato: potete fare scavo e muratura, o togliere il vecchio liner. Océance Piscines si occupa delle parti tecniche e vi consiglia.','Dat kan, en het wordt aangemoedigd: u kunt zelf graven en metselen, of de oude liner verwijderen. Océance Piscines doet het technische werk en adviseert u.']},
+ {k:/\bspas?\b|jacuzzi|pompe a chaleur|\bpac\b|chauff|robot|volet|filtr|produit|materiel|heat pump|equipment|bomba|material|warmepumpe|zubehor|pompa|attrezz|warmtepomp|materiaal/,a:['Océance Piscines fournit spas (fabrication européenne, garantie 5 ans), pompes à chaleur, filtration, volets, hivernage, robots et produits d’entretien. Les modèles et prix se donnent sur demande : voir la page <a href="#materiel">Matériel</a>.','Océance Piscines supplies spas (European-made, 5-year guarantee), heat pumps, filtration, covers, winterising, robots and care products. Models and prices on request: see <a href="#materiel">Equipment</a>.','Océance Piscines suministra spas (fabricación europea, 5 años de garantía), bombas de calor, filtración, cubiertas, invernaje, robots y productos. Modelos y precios bajo pedido: <a href="#materiel">Material</a>.','Océance Piscines liefert Spas (europäische Fertigung, 5 Jahre Garantie), Wärmepumpen, Filter, Abdeckungen, Überwinterung, Roboter und Pflegemittel. Modelle und Preise auf Anfrage: <a href="#materiel">Zubehör</a>.','Océance Piscines fornisce spa (fabbricazione europea, garanzia 5 anni), pompe di calore, filtrazione, coperture, svernamento, robot e prodotti. Modelli e prezzi su richiesta: <a href="#materiel">Attrezzatura</a>.','Océance Piscines levert spa’s (Europese makelij, 5 jaar garantie), warmtepompen, filtratie, afdekkingen, overwintering, robots en onderhoudsproducten. Modellen en prijzen op aanvraag: <a href="#materiel">Materiaal</a>.']},
+ {k:/intervene|ou etes|ou se trouve|\bzones?\b|region|bretagne|finistere|morbihan|vilaine|armor|quimper|brest|lorient|rennes|vannes|where|area|brittany|donde|bretana|wo |gebiet|bretagne|dove|bretagna|waar|regio/,a:['Océance Piscines est basée à Fouesnant (Finistère Sud) et intervient dans toute la Bretagne : Finistère, Morbihan, Ille-et-Vilaine et Côtes-d’Armor. Hors de ces départements, le plus simple est de demander à Yannick.','Océance Piscines is based in Fouesnant (South Finistère) and works all over Brittany: Finistère, Morbihan, Ille-et-Vilaine and Côtes-d’Armor. Elsewhere, best ask Yannick.','Océance Piscines está en Fouesnant (sur de Finistère) y trabaja en toda Bretaña: Finistère, Morbihan, Ille-et-Vilaine y Côtes-d’Armor. Fuera de ahí, pregunte a Yannick.','Océance Piscines sitzt in Fouesnant (Süd-Finistère) und arbeitet in der ganzen Bretagne: Finistère, Morbihan, Ille-et-Vilaine, Côtes-d’Armor. Anderswo fragen Sie am besten Yannick.','Océance Piscines ha sede a Fouesnant (Finistère del Sud) e lavora in tutta la Bretagna: Finistère, Morbihan, Ille-et-Vilaine e Côtes-d’Armor. Altrove, chiedete a Yannick.','Océance Piscines zit in Fouesnant (Zuid-Finistère) en werkt in heel Bretagne: Finistère, Morbihan, Ille-et-Vilaine en Côtes-d’Armor. Elders? Vraag het Yannick.']},
+ {k:/etang|mare|bassin d.agrement|pond|estanque|teich|laghetto|vijver/,a:['Oui, la membrane armée convient aussi aux étangs, mares et bassins d’agrément, avec une gamme spéciale. Dites-nous la forme et les dimensions dans le <a href="#contact">formulaire</a>.','Yes, the reinforced membrane also suits ponds and ornamental pools, with a special range. Tell us the shape and size in the <a href="#contact">form</a>.','Sí, la membrana armada también sirve para estanques, con una gama especial. Indíquenos forma y medidas en el <a href="#contact">formulario</a>.','Ja, die armierte Membran eignet sich auch für Teiche und Zierbecken, mit einer eigenen Linie. Form und Maße bitte im <a href="#contact">Formular</a>.','Sì, la membrana armata va bene anche per laghetti e vasche ornamentali, con una gamma speciale. Indicate forma e misure nel <a href="#contact">modulo</a>.','Ja, het versterkte membraan past ook bij vijvers, met een speciale lijn. Geef vorm en maten op in het <a href="#contact">formulier</a>.']},
+ {k:/contact|telephone|appel|mail|horaire|joindre|phone|call|hours|llamar|horario|anrufen|telefon|chiamare|orari|bellen|openingsuren/,a:['Yannick Penven répond au <a href="tel:+33677942160">06 77 94 21 60</a>, du lundi au vendredi de 9 h à 18 h, et par e-mail : <a href="mailto:oceance.piscines@outlook.fr">oceance.piscines@outlook.fr</a>.','Yannick Penven answers on <a href="tel:+33677942160">+33 6 77 94 21 60</a>, Monday to Friday 9am–6pm, and by email: <a href="mailto:oceance.piscines@outlook.fr">oceance.piscines@outlook.fr</a>.','Yannick Penven atiende en el <a href="tel:+33677942160">+33 6 77 94 21 60</a>, de lunes a viernes de 9 a 18 h, y por correo: <a href="mailto:oceance.piscines@outlook.fr">oceance.piscines@outlook.fr</a>.','Yannick Penven erreichen Sie unter <a href="tel:+33677942160">+33 6 77 94 21 60</a>, Mo–Fr 9–18 Uhr, und per E-Mail: <a href="mailto:oceance.piscines@outlook.fr">oceance.piscines@outlook.fr</a>.','Yannick Penven risponde al <a href="tel:+33677942160">+33 6 77 94 21 60</a>, dal lunedì al venerdì 9–18, e per e-mail: <a href="mailto:oceance.piscines@outlook.fr">oceance.piscines@outlook.fr</a>.','Yannick Penven is bereikbaar op <a href="tel:+33677942160">+33 6 77 94 21 60</a>, ma–vr 9–18 u, en per e-mail: <a href="mailto:oceance.piscines@outlook.fr">oceance.piscines@outlook.fr</a>.']}
+];
+const sans=s=>s.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'');
+const fil=document.getElementById('fil');
+function dire(h,qui){const m=document.createElement('div');m.className='msg '+qui;if(qui==='moi')m.textContent=h;else m.innerHTML=h;fil.appendChild(m);fil.scrollTop=fil.scrollHeight}
+function accueilConseil(){fil.innerHTML='';dire(Q.hello[LG.indexOf(lang)],'lui');const pz=document.getElementById('puces');pz.innerHTML='';Q.puces[LG.indexOf(lang)].forEach(p=>{const b=document.createElement('button');b.type='button';b.textContent=p;b.onclick=()=>repondre(p);pz.appendChild(b)})}
+function repondre(q){dire(q,'moi');const s=' '+sans(q)+' ';const r=R.find(x=>x.k.test(s));setTimeout(()=>dire(r?r.a[LG.indexOf(lang)]:Q.sorry[LG.indexOf(lang)],'lui'),280)}
+document.getElementById('saisie').addEventListener('submit',e=>{e.preventDefault();const i=document.getElementById('q');if(i.value.trim()){repondre(i.value.trim());i.value=''}});
+function ouvrir(e){if(e)e.preventDefault();document.getElementById('invite').classList.remove('vu');const f=document.getElementById('fenetre');f.classList.add('ouvert');if(!fil.children.length)accueilConseil();document.getElementById('q').focus()}
+document.querySelectorAll('[data-ouvre-conseil]').forEach(b=>b.addEventListener('click',ouvrir));
+document.getElementById('fermer').onclick=()=>document.getElementById('fenetre').classList.remove('ouvert');
+fil.addEventListener('click',e=>{if(e.target.matches('a[href^="#"]'))document.getElementById('fenetre').classList.remove('ouvert')});
+document.getElementById('inviteX').onclick=()=>document.getElementById('invite').classList.remove('vu');
+document.getElementById('invite').addEventListener('click',e=>{if(e.target.id!=='inviteX')ouvrir()});
+let dejaVu=false;try{dejaVu=sessionStorage.getItem('oc-inv')==='1'}catch(_){}
+if(!dejaVu)setTimeout(()=>{if(!document.getElementById('fenetre').classList.contains('ouvert'))document.getElementById('invite').classList.add('vu');try{sessionStorage.setItem('oc-inv','1')}catch(_){}},4000);
+addEventListener('keydown',e=>{if(e.key==='Escape')document.getElementById('fenetre').classList.remove('ouvert')});
+
+appliquer();route();
+</script>
+<script id="nv-track">(function(){try{if(location.protocol!=='https:')return;if(/[?&]moi\b/.test(location.search)){localStorage.setItem('nv_moi','1');addEventListener('load',function(){var d=document.createElement('div');d.textContent='✓ Appareil reconnu : vos visites ne sont plus comptées';d.style.cssText='position:fixed;left:50%;bottom:24px;transform:translateX(-50%);z-index:2147483647;background:#1E3A2B;color:#fff;font:600 14px/1.3 system-ui,sans-serif;padding:12px 18px;border-radius:999px;box-shadow:0 8px 24px rgba(0,0,0,.25)';document.body.appendChild(d);setTimeout(function(){d.remove()},6000)})}if(localStorage.getItem('nv_moi')||navigator.webdriver)return;}catch(x){}
+var m=location.pathname.split('/').filter(Boolean)[0]||'';if(!m)return;var s=Math.random().toString(36).slice(2,12),t0=Date.now(),u='/_t.php',last='home',seen={};
+function send(e,p){var b=JSON.stringify({m:m,e:e,s:s,p:p||'',t:Math.round((Date.now()-t0)/1000),l:(document.documentElement.lang||'').slice(0,2)});try{if(navigator.sendBeacon)navigator.sendBeacon(u,new Blob([b],{type:'text/plain'}));else fetch(u,{method:'POST',body:b,keepalive:true})}catch(x){}}
+function once(k){k=String(k).toLowerCase().replace(/[^a-z0-9_-]/g,'').slice(0,24);if(!k||seen[k])return;seen[k]=1;send('ev',k)}
+send('open');setInterval(function(){if(document.visibilityState==='visible')send('ping')},45000);
+document.addEventListener('visibilitychange',function(){if(document.visibilityState==='hidden')send('ping')});
+window.__nvView=function(p){p=String(p||'');if(p&&p!==last){last=p;send('view',p)}};
+addEventListener('scroll',function(){var h=document.documentElement,max=h.scrollHeight-innerHeight;if(max<200)return;var r=(scrollY/max)*100;[25,50,75,100].forEach(function(q){if(r>=q-2)once('defil'+q+'-'+last)})},{passive:true});
+document.addEventListener('click',function(e){var el=e.target.closest('a,button,[data-add],[data-go],[role=button],summary');if(!el)return;var t=((el.getAttribute('aria-label')||'')+' '+(el.textContent||'')+' '+(el.className||'')+' '+(el.id||'')).toLowerCase(),h=el.getAttribute&&el.getAttribute('href')||'';
+if(el.hasAttribute('data-add')||/ajouter|add to|añadir|hinzuf|aggiungi|加入/.test(t))once('panier-'+(el.getAttribute('data-add')||'ajout')),send('ev','panier');
+else if(/conseil|advisor|assistant|chat/.test(t))once('conseiller');
+else if(/instagram|facebook|youtube|pinterest|linkedin|tiktok/.test(h))once('reseau-'+(h.match(/instagram|facebook|youtube|pinterest|linkedin|tiktok/)||[''])[0]);
+else if(/réserv|reserv|visite|book/.test(t))once('reservation');
+else if(/coffret|gift|cadeau/.test(t))once('coffret')},true);
+document.addEventListener('play',function(e){if(e.target&&e.target.tagName==='VIDEO'&&!e.target.muted)once('video-son')},true);
+try{new MutationObserver(function(){var l=(document.documentElement.lang||'').slice(0,2);if(l&&l!=='fr')once('langue-'+l)}).observe(document.documentElement,{attributes:true,attributeFilter:['lang']})}catch(x){}
+addEventListener('load',function(){try{if(typeof window.go==='function'&&!window.go.__nv){var g=window.go;window.go=function(v){try{window.__nvView(v)}catch(x){}return g.apply(this,arguments)};window.go.__nv=1}}catch(x){}});})();</script>
+</body>
+</html>
