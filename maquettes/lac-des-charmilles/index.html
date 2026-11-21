@@ -994,7 +994,7 @@ function nav(){
  const r=route().p;
  document.getElementById("nav").innerHTML='<ul class="w">'+items.map(([k])=>`<li><a href="#/${k}" ${r===k||(k==="hebs"&&r==="h")?'aria-current="page"':''}>${esc(U(k))}</a></li>`).join("")+`<li><a href="#" class="cons" data-cons>${esc(U("cons"))}</a></li></ul>`;
  document.getElementById("nav").setAttribute("aria-label",U("menu"));const ac=document.querySelector('.nav [aria-current="page"]');if(ac){const ul=ac.closest("ul");ul.scrollLeft=ac.parentElement.offsetLeft-24}
- document.getElementById("resaTop").innerHTML=`<span class="btn-txt">${esc(U("reserver"))}</span> ${ext}`;
+ document.getElementById("resaTop").href=resa();document.getElementById("resaTop").innerHTML=`<span class="btn-txt">${esc(U("reserver"))}</span> ${ext}`;
  document.getElementById("resaTop").setAttribute("aria-label",U("reserver"));
  document.getElementById("sous").textContent=U("sous");
  document.getElementById("lgl").textContent=U("langue");
