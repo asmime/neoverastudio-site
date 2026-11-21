@@ -309,18 +309,24 @@ footer ul{list-style:none;padding:0;margin:0;display:grid;gap:6px}
 .sel-btn .n:empty,.sel-btn .n[data-zero]{display:none}
 @media (max-width:860px){.poncif .scene{position:relative;top:0}.etapes-p li{min-height:auto;padding:22px 0;opacity:1}.cons-invite{display:none!important}}
 body{padding-bottom:84px}
+
+.sombre .btn-or,.manga .btn-or{color:var(--charbon)}.sombre .btn-vert{color:#fff}
+.tel-btn{display:none;width:42px;height:42px;border-radius:var(--r);border:1.5px solid var(--trait);background:var(--blanc);color:var(--vert);place-items:center}
+@media (max-width:620px){.tel-btn{display:grid}.sel-btn{min-width:46px;justify-content:center}.entete .l1{gap:8px}.outils{gap:6px}}
+.toast{bottom:auto;top:130px}
+@media (max-width:420px){.langue select{padding:.5em 1.7em .5em .55em;font-size:.82rem;min-height:40px}.langue:after{right:.6em}.tel-btn,.sel-btn{width:40px;min-width:40px;height:40px;min-height:40px;padding:0}.marque b{font-size:1.3rem}.marque small{font-size:.52rem;letter-spacing:.06em}}
 </style>
 </head>
 <body>
-<a class="sr" href="#contenu">Aller au contenu</a>
+<a class="sr" href="#contenu" data-t="skip"></a>
 <header class="entete">
  <div class="wrap l1">
   <a class="marque" href="#accueil" aria-label="Atelier Céramique Régnier"><b>Régnier</b><small data-t="sous_marque"></small></a>
   <nav class="nav" aria-label="Menu principal" data-menu></nav>
   <div class="outils">
-   <span class="langue"><label class="sr" for="langue">Langue</label><select id="langue">
+   <span class="langue"><label class="sr" for="langue" data-t="lng"></label><select id="langue">
     <option value="fr">Français</option><option value="en">English</option><option value="es">Español</option><option value="de">Deutsch</option><option value="it">Italiano</option><option value="nl">Nederlands</option></select></span>
-   <button class="sel-btn" type="button" data-go="selection" aria-label="Ma sélection"><span class="t" data-t="n_sel"></span><span class="n" data-nsel>0</span></button>
+   <a class="tel-btn" href="tel:+33321303090" aria-label="03 21 30 30 90"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path fill="currentColor" d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1z"/></svg></a><button class="sel-btn" type="button" data-go="selection" aria-label="Ma sélection"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" d="M8 6h12M8 12h12M8 18h12M4 6h.01M4 12h.01M4 18h.01"/></svg><span class="t" data-t="n_sel"></span><span class="n" data-nsel>0</span></button>
    <a class="btn btn-vert cta-cat" href="#catalogue" data-t="n_cat"></a>
   </div>
  </div>
@@ -744,7 +750,7 @@ r_four:"Avec four, vous cuisinez au feu de bois : rôtis, gratins, madeleines. N
 r_petit:"Pour un petit espace, deux modèles compacts : Émile (93 cm de haut, 5 kW) et le poêle à granulés PIN (82 cm, 7 kW).",
 r_kw:"La bonne puissance dépend de la pièce, de l’isolation et du conduit : l’atelier la calcule avec vous à la visite technique. Nos modèles vont de 5 kW (Émile) à 11 kW (Julia).",
 r_prix:"Les prix ne sont pas affichés : chaque poêle est fabriqué sur mesure, et le chiffrage se fait après la visite technique. La fabrication demande plusieurs semaines. Pour une date précise : 03 21 30 30 90.",
-r_vis:"Le showroom (600 m², plus de 35 modèles dont plusieurs allumés) est au 20 rue de l’Épinoy, 62240 Menneville-Desvres. Lundi au vendredi 9 h-12 h, 14 h-18 h ; samedi 10 h-12 h, 14 h-18 h.",
+r_vis:"Le showroom (600 m², plus de 35 modèles dont plusieurs allumés) est au 20 rue de l’Épinoy, 62240 Menneville-Desvres. Lundi au vendredi 9 h-12 h, 14 h-18 h ; samedi 10 h-12 h, 14 h-18 h. Fermé le dimanche.",
 r_pose:"Nos propres équipes posent partout en France et en Belgique : visite technique, travaux (tubage, maçonnerie, mise aux normes), pose et mise en service.",
 r_deco:"Tout se personnalise : émaux (vert anglais, satin noir, ivoire, rouge opale…), décors peints à main levée dans la tradition de Rouen, Delft, Strasbourg, Moustiers ou Bérain, rehausse, four, portes laiton ou étain.",
 r_cat:"Le catalogue présente tous les modèles, coloris et options. Je vous ouvre le formulaire.",
@@ -821,7 +827,7 @@ r_four:"With an oven, you cook over wood: roasts, gratins, madeleines. Our stove
 r_petit:"For a small space, two compact models: Émile (93 cm high, 5 kW) and the PIN pellet stove (82 cm, 7 kW).",
 r_kw:"The right output depends on the room, the insulation and the flue: the workshop calculates it with you during the survey visit. Our models range from 5 kW (Émile) to 11 kW (Julia).",
 r_prix:"Prices aren’t published: each stove is made to measure, and the quote comes after the survey visit. Making takes several weeks. For a precise date: +33 3 21 30 30 90.",
-r_vis:"The showroom (600 m², over 35 stoves, several lit) is at 20 rue de l’Épinoy, 62240 Menneville-Desvres. Monday to Friday 9am-12pm, 2pm-6pm; Saturday 10am-12pm, 2pm-6pm.",
+r_vis:"The showroom (600 m², over 35 stoves, several lit) is at 20 rue de l’Épinoy, 62240 Menneville-Desvres. Monday to Friday 9am-12pm, 2pm-6pm; Saturday 10am-12pm, 2pm-6pm. Closed on Sundays.",
 r_pose:"Our own teams install anywhere in France and Belgium: survey visit, works (flue lining, masonry, compliance), installation and commissioning.",
 r_deco:"Everything can be customised: glazes (English green, satin black, ivory, opal red…), freehand patterns in the tradition of Rouen, Delft, Strasbourg, Moustiers or Bérain, top extension, oven, brass or pewter doors.",
 r_cat:"The brochure shows every model, colour and option. I’ll open the form for you.",
@@ -899,7 +905,7 @@ r_four:"Con horno, cocina al fuego de leña: asados, gratinados, magdalenas. Nue
 r_petit:"Para un espacio pequeño, dos modelos compactos: Émile (93 cm de alto, 5 kW) y la estufa de pellets PIN (82 cm, 7 kW).",
 r_kw:"La potencia adecuada depende de la estancia, el aislamiento y el conducto: el taller la calcula con usted en la visita técnica. Nuestros modelos van de 5 kW (Émile) a 11 kW (Julia).",
 r_prix:"Los precios no se publican: cada estufa se fabrica a medida y el presupuesto se hace tras la visita técnica. La fabricación lleva varias semanas. Para una fecha precisa: +33 3 21 30 30 90.",
-r_vis:"La sala (600 m², más de 35 modelos, varios encendidos) está en 20 rue de l’Épinoy, 62240 Menneville-Desvres. Lunes a viernes 9-12 h, 14-18 h; sábado 10-12 h, 14-18 h.",
+r_vis:"La sala (600 m², más de 35 modelos, varios encendidos) está en 20 rue de l’Épinoy, 62240 Menneville-Desvres. Lunes a viernes 9-12 h, 14-18 h; sábado 10-12 h, 14-18 h. Cerrado los domingos.",
 r_pose:"Nuestros propios equipos instalan en toda Francia y Bélgica: visita técnica, obras (entubado, albañilería, normativa), instalación y puesta en marcha.",
 r_deco:"Todo se personaliza: esmaltes (verde inglés, negro satinado, marfil, rojo ópalo…), decorados a mano alzada en la tradición de Rouen, Delft, Estrasburgo, Moustiers o Bérain, realce, horno, puertas de latón o estaño.",
 r_cat:"El catálogo presenta todos los modelos, colores y opciones. Le abro el formulario.",
@@ -976,7 +982,7 @@ r_four:"Mit Backofen kochen Sie über Holzfeuer: Braten, Gratins, Madeleines. Un
 r_petit:"Für kleine Räume zwei kompakte Modelle: Émile (93 cm hoch, 5 kW) und der Pelletofen PIN (82 cm, 7 kW).",
 r_kw:"Die richtige Leistung hängt von Raum, Dämmung und Schornstein ab: Die Werkstatt berechnet sie mit Ihnen beim Vor-Ort-Termin. Unsere Modelle reichen von 5 kW (Émile) bis 11 kW (Julia).",
 r_prix:"Preise werden nicht veröffentlicht: Jeder Ofen ist eine Maßanfertigung, das Angebot folgt nach dem Vor-Ort-Termin. Die Fertigung dauert mehrere Wochen. Für ein genaues Datum: +33 3 21 30 30 90.",
-r_vis:"Der Showroom (600 m², über 35 Modelle, mehrere in Betrieb) liegt in der 20 rue de l’Épinoy, 62240 Menneville-Desvres. Montag bis Freitag 9-12, 14-18 Uhr; Samstag 10-12, 14-18 Uhr.",
+r_vis:"Der Showroom (600 m², über 35 Modelle, mehrere in Betrieb) liegt in der 20 rue de l’Épinoy, 62240 Menneville-Desvres. Montag bis Freitag 9-12, 14-18 Uhr; Samstag 10-12, 14-18 Uhr. Sonntags geschlossen.",
 r_pose:"Unsere eigenen Teams montieren in ganz Frankreich und Belgien: Vor-Ort-Termin, Arbeiten (Schornsteinsanierung, Maurerarbeiten, Normen), Montage und Inbetriebnahme.",
 r_deco:"Alles ist gestaltbar: Glasuren (Englischgrün, Satinschwarz, Elfenbein, Opalrot…), freihändige Dekore in der Tradition von Rouen, Delft, Straßburg, Moustiers oder Bérain, Aufsatz, Backofen, Türen aus Messing oder Zinn.",
 r_cat:"Der Katalog zeigt alle Modelle, Farben und Optionen. Ich öffne Ihnen das Formular.",
@@ -1054,7 +1060,7 @@ r_four:"Con il forno cucinate sul fuoco di legna: arrosti, gratin, madeleine. Le
 r_petit:"Per uno spazio piccolo, due modelli compatti: Émile (93 cm di altezza, 5 kW) e la stufa a pellet PIN (82 cm, 7 kW).",
 r_kw:"La potenza giusta dipende da stanza, isolamento e canna fumaria: il laboratorio la calcola con voi al sopralluogo. I nostri modelli vanno da 5 kW (Émile) a 11 kW (Julia).",
 r_prix:"I prezzi non sono pubblicati: ogni stufa è fatta su misura e il preventivo arriva dopo il sopralluogo. La lavorazione richiede diverse settimane. Per una data precisa: +33 3 21 30 30 90.",
-r_vis:"Lo showroom (600 m², oltre 35 modelli, molti accesi) è al 20 rue de l’Épinoy, 62240 Menneville-Desvres. Lunedì-venerdì 9-12, 14-18; sabato 10-12, 14-18.",
+r_vis:"Lo showroom (600 m², oltre 35 modelli, molti accesi) è al 20 rue de l’Épinoy, 62240 Menneville-Desvres. Lunedì-venerdì 9-12, 14-18; sabato 10-12, 14-18. Chiuso la domenica.",
 r_pose:"Le nostre squadre installano in tutta la Francia e il Belgio: sopralluogo, lavori (intubamento, opere murarie, norme), posa e messa in servizio.",
 r_deco:"Tutto si personalizza: smalti (verde inglese, nero satinato, avorio, rosso opale…), decori a mano libera nella tradizione di Rouen, Delft, Strasburgo, Moustiers o Bérain, alzata, forno, ante in ottone o peltro.",
 r_cat:"Il catalogo presenta tutti i modelli, colori e opzioni. Vi apro il modulo.",
@@ -1131,7 +1137,7 @@ r_four:"Met een oven kookt u op houtvuur: gebraad, gratins, madeleines. Onze kac
 r_petit:"Voor een kleine ruimte, twee compacte modellen: Émile (93 cm hoog, 5 kW) en de pelletkachel PIN (82 cm, 7 kW).",
 r_kw:"Het juiste vermogen hangt af van de ruimte, de isolatie en het rookkanaal: het atelier berekent het samen met u bij het technisch bezoek. Onze modellen gaan van 5 kW (Émile) tot 11 kW (Julia).",
 r_prix:"Prijzen worden niet vermeld: elke kachel is maatwerk, de offerte volgt na het technisch bezoek. Het maken duurt enkele weken. Voor een precieze datum: +33 3 21 30 30 90.",
-r_vis:"De showroom (600 m², meer dan 35 modellen, verschillende branden) ligt in de 20 rue de l’Épinoy, 62240 Menneville-Desvres. Maandag tot vrijdag 9-12 u, 14-18 u; zaterdag 10-12 u, 14-18 u.",
+r_vis:"De showroom (600 m², meer dan 35 modellen, verschillende branden) ligt in de 20 rue de l’Épinoy, 62240 Menneville-Desvres. Maandag tot vrijdag 9-12 u, 14-18 u; zaterdag 10-12 u, 14-18 u. Zondag gesloten.",
 r_pose:"Onze eigen ploegen plaatsen overal in Frankrijk en België: technisch bezoek, werken (buisvoering, metselwerk, normen), plaatsing en ingebruikname.",
 r_deco:"Alles is te personaliseren: glazuren (Engels groen, satijnzwart, ivoor, opaalrood…), decors uit de vrije hand in de traditie van Rouen, Delft, Straatsburg, Moustiers of Bérain, opzetstuk, oven, deuren in messing of tin.",
 r_cat:"De catalogus toont alle modellen, kleuren en opties. Ik open het formulier voor u.",
@@ -1141,6 +1147,11 @@ r_aj:"Toevoegen",r_ouvrir:"Catalogusformulier openen"
 };
 
 (function(){const G={
+skip:["Aller au contenu","Skip to content","Ir al contenido","Zum Inhalt","Vai al contenuto","Naar de inhoud"],
+lng:["Langue","Language","Idioma","Sprache","Lingua","Taal"],
+r_ia:["Oui : je suis l’assistant virtuel de l’atelier, un programme. Pour un vrai conseil personnalisé, l’équipe vous répond au 03 21 30 30 90.","Yes: I’m the workshop’s virtual assistant, a program. For real personal advice, the team is on +33 3 21 30 30 90.","Sí: soy el asistente virtual del taller, un programa. Para un consejo personalizado de verdad, el equipo le atiende en el +33 3 21 30 30 90.","Ja: Ich bin der virtuelle Assistent der Werkstatt, ein Programm. Persönliche Beratung erhalten Sie vom Team unter +33 3 21 30 30 90.","Sì: sono l’assistente virtuale del laboratorio, un programma. Per un vero consiglio personalizzato, la squadra risponde al +33 3 21 30 30 90.","Ja: ik ben de virtuele assistent van het atelier, een programma. Voor echt persoonlijk advies helpt de ploeg u op +33 3 21 30 30 90."],
+r_noir:["Pour un style contemporain : Laëtitia (noir, façade droite chromée), Léa (damier noir et blanc) et Douglas. Et tous les modèles existent en satin noir ou noir brillant.","For a contemporary look: Laëtitia (black, straight chrome front), Léa (black-and-white checkerboard) and Douglas. And every model comes in satin or gloss black.","Para un estilo contemporáneo: Laëtitia (negra, frontal cromado), Léa (damero blanco y negro) y Douglas. Y todos los modelos existen en negro satinado o brillante.","Für einen modernen Stil: Laëtitia (schwarz, verchromte Front), Léa (schwarz-weißes Schachbrett) und Douglas. Jedes Modell gibt es auch in Satin- oder Glanzschwarz.","Per uno stile contemporaneo: Laëtitia (nera, frontale cromato), Léa (scacchiera bianca e nera) e Douglas. E ogni modello esiste in nero satinato o lucido.","Voor een eigentijdse stijl: Laëtitia (zwart, verchroomde voorkant), Léa (zwart-wit dambord) en Douglas. Elk model bestaat ook in satijn- of glanzend zwart."],
+r_mod:["Teinte et décor au choix, sur échantillons.","Any colour and pattern, chosen from samples.","Color y decorado a elegir, con muestras.","Farbe und Dekor nach Wahl, nach Mustern.","Colore e decoro a scelta, su campioni.","Kleur en decor naar keuze, op stalen."],
 g_rose:["rose","pink","rosa","Rosé","rosa","roze"],
 g_voliere:["décor volière bleue","blue aviary pattern","decorado pajarera azul","Dekor blaue Voliere","decoro voliera blu","decor blauwe volière"],
 g_gs:["décor Grand Siècle","Grand Siècle pattern","decorado Grand Siècle","Dekor Grand Siècle","decoro Grand Siècle","decor Grand Siècle"],
@@ -1280,11 +1291,16 @@ const INT=[
  ["vis",/visit|showroom|horaire|ouvert|adresse|hours|open|address|horario|direcc|offnung|adresse|orari|indirizz|openingsu|adres|ou etes|where|donde|wo |dove|waar/],["pose",/pose|install|monta|plaats|tubage|conduit|flue|belgi|livr|deliver|entreg|liefer|consegn|lever/],
  ["deco",/decor|couleur|email|colou|color|glaze|esmalt|farbe|glasur|smalt|kleur|glazuur|motif|pattern|perso|rouen|delft|moustiers/],["cat",/catalog|brochure|katalog|catalogus/],["fr",/france|fabriqu|made|epv|patrimoine|heritage|frankreich|francia|frankrijk/],
  ["bois",/bois|wood|lena|holz|legna|hout|buche|log|flamme|flame/]];
-const RECO={gra:[1212,1216,1217],bois:[1184,1186,1188],four:[2269,3552,2714,1196],petit:[2177,3589],kw:[2177,1184,3600]};
+const RECO={noir:[1192,3559,1214],gra:[1212,1216,1217],bois:[1184,1186,1188],four:[2269,3552,2714,1196],petit:[2177,3589],kw:[2177,1184,3600]};
 function repondre(q){
- const s=slug(q);let k=null;for(const [n,re] of INT){if(re.test(s)){k=n;break}}
+ const s=slug(q);let k=null;const pm=P.find(p=>p.s.length>3&&new RegExp("\\b"+p.s+"\\b").test(s));for(const [n,re] of INT){if(re.test(s)){k=n;break}}
+ if(/^(bonjour|bonsoir|salut|hello|hi|hey|hola|buenos|hallo|guten|ciao|buongiorno|goedendag|dag)\b/.test(s))k="hi";
+ if(/\b(ia|ai|robot|bot|humain|human|humano|mensch|umano|mens|ki)\b/.test(s))k="ia";
+ if(/noir|black|negr|schwarz|nero|zwart|modern|contempor|design/.test(s))k="noir";
+ if(pm&&!["hi","ia"].includes(k))k="mod";
  if(/bois ou|wood or|lena o|holz oder|legna o|hout of/.test(s))k="gra";
- const r={gra:"r_gra",bois:"r_bois",four:"r_four",petit:"r_petit",kw:"r_kw",prix:"r_prix",vis:"r_vis",pose:"r_pose",deco:"r_deco",cat:"r_cat",fr:"r_fr"}[k]||"r_sais";
+ if(k==="mod"){const ty=pm.type==="g"?t("lbl_g"):t("lbl_b");const sp=[pm.kw,pm.dim,pm.kg].filter(Boolean).join(" · ");return `<p style="margin:0"><b>${pm.nom}</b> — ${ty}${pm.four?" · "+t("lbl_four"):""}. ${pm.acc[li()]} ${sp?sp+".":t("fi_nc")+"."} ${t("r_mod")}</p><p style="margin:.5em 0 0"><a href="#modele/${pm.s}">${t("b_voir")}</a></p>`}
+ const r={hi:"cs_w",ia:"r_ia",noir:"r_noir",gra:"r_gra",bois:"r_bois",four:"r_four",petit:"r_petit",kw:"r_kw",prix:"r_prix",vis:"r_vis",pose:"r_pose",deco:"r_deco",cat:"r_cat",fr:"r_fr"}[k]||"r_sais";
  let h=`<p style="margin:0">${t(r)}</p>`;
  if(RECO[k])h+=RECO[k].map(id=>{const p=P.find(p=>p.id===id);return `<div class="mini"><img src="${img(id)}" alt=""><span><b>${p.nom}</b><br><small>${p.kw||(p.type==="g"?t("lbl_g"):t("lbl_b"))}</small></span><button type="button" data-btnsel="${id}">${inSel(id)?t("b_ret"):t("r_aj")}</button></div>`}).join("");
  if(k==="cat")setTimeout(()=>{location.hash="catalogue"},900);
@@ -1317,7 +1333,7 @@ function route(garder){
  $$(".vue").forEach(x=>x.classList.toggle("on",x.dataset.vue===vue));
  $$(".nav a").forEach(x=>x.setAttribute("aria-current",x.getAttribute("href")==="#"+vue||(vue==="modele"&&x.getAttribute("href")==="#modeles")?"page":"false"));
  if(vue==="modeles"){const f={bois:"bois",granules:"granules",four:"four"}[a];if(f){filtre=f;renderGrille()}}
- if(vue==="modele")renderFiche(parSlug(a));else document.title=vue==="accueil"?"Atelier Céramique Régnier — Poêles en faïence peints à la main, Desvres":t({modeles:"mo_t",cuisine:"cu_t","sur-mesure":"sm_t",carrelage:"ca_t",atelier:"vi_t",histoire:"hs_t",installation:"is_t",realisations:"rl_t",actualites:"ac_t",catalogue:"ct_t",contact:"cn_t",selection:"se_t",mentions:"ml_t"}[vue]||"mo_t")+" — Atelier Céramique Régnier";
+ if(vue==="modele")renderFiche(parSlug(a));else document.title=vue==="accueil"?"Atelier Céramique Régnier — "+t("h_t"):t({modeles:"mo_t",cuisine:"cu_t","sur-mesure":"sm_t",carrelage:"ca_t",atelier:"vi_t",histoire:"hs_t",installation:"is_t",realisations:"rl_t",actualites:"ac_t",catalogue:"ct_t",contact:"cn_t",selection:"se_t",mentions:"ml_t"}[vue]||"mo_t")+" — Atelier Céramique Régnier";
  const ancre=a&&document.getElementById(a);
  if(ancre)setTimeout(()=>ancre.scrollIntoView({behavior:reduit?"auto":"smooth"}),60);else if(garder!==true)scrollTo(0,0);
  observer();
@@ -1339,7 +1355,7 @@ document.addEventListener("click",e=>{
 document.addEventListener("keydown",e=>{if(e.key==="Escape"){$(".visio").classList.remove("on");$(".cons").classList.remove("on")}});
 $("#co-modele").addEventListener("change",e=>{co.m=+e.target.value});
 $("#co-ajout").addEventListener("click",()=>toggleSel(null,{m:co.m,e:co.e,d:co.d,o:[...co.o]}));
-$$("form.f").forEach(f=>f.addEventListener("submit",e=>{e.preventDefault();const k=f.dataset.form==="selection"?"se_ok":"fm_ok";let o=f.querySelector(".ok");if(!o){o=document.createElement("p");o.className="ok plein";f.appendChild(o)}o.textContent=t(k);o.setAttribute("role","status")}));
+$$("form.f").forEach(f=>f.addEventListener("submit",e=>{e.preventDefault();const k=f.dataset.form==="selection"?"se_ok":"fm_ok";let o=f.querySelector(".ok");if(!o){o=document.createElement("p");o.className="ok plein";f.appendChild(o)}o.textContent=t(k);o.setAttribute("role","status");o.scrollIntoView({block:"center",behavior:reduit?"auto":"smooth"})}));
 $("#langue").addEventListener("change",e=>{lang=e.target.value;try{localStorage.setItem("rg-lang",lang)}catch(x){}traduire()});
 addEventListener("hashchange",()=>route());
 saveSel();initPoncif();initCons();traduire();
