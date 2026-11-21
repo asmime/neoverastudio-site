@@ -1,0 +1,1241 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Camping Les Truffières — Proposition Neovera Studio</title>
+<meta name="description" content="Camping 3 étoiles ouvert 365 jours à Saint-Marcel-d'Ardèche : emplacements de plus de 100 m², mobil-homes climatisés, piscine, The Pub et L'Oustaou, vue sur le Ventoux et les Alpes.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap" rel="stylesheet">
+<style>
+:root{
+ --chene:#2F4A34; --chene-2:#3D5E42; --genet:#F2C230; --genet-2:#FFD95A; --calcaire:#E9E6DE; --calcaire-2:#F6F4EF;
+ --truffe:#221B17; --truffe-2:#4A3F38; --ventoux:#8B97B3; --ciel:#C9D6E8; --brique:#B65A3A;
+ --ff-t:'Bricolage Grotesque',system-ui,sans-serif; --ff-x:'Source Serif 4',Georgia,serif;
+ --r:14px; --sh:0 10px 30px -12px rgba(34,27,23,.35);
+}
+*{box-sizing:border-box} html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--calcaire-2);color:var(--truffe);font:400 17px/1.6 var(--ff-x);overflow-x:hidden}
+::selection{background:var(--genet);color:var(--truffe)}
+:focus-visible{outline:3px solid var(--genet);outline-offset:3px;border-radius:6px}
+::-webkit-scrollbar{width:11px;height:8px}::-webkit-scrollbar-thumb{background:var(--chene);border-radius:8px;border:2px solid var(--calcaire-2)}::-webkit-scrollbar-track{background:var(--calcaire-2)}
+img{max-width:100%;display:block} a{color:inherit;text-underline-offset:4px;text-decoration-thickness:1.5px}
+h1,h2,h3,h4{font-family:var(--ff-t);font-weight:800;line-height:1.05;letter-spacing:-.02em;margin:0 0 .5em;text-wrap:balance}
+h1{font-size:clamp(2.5rem,6.4vw,5.6rem)} h2{font-size:clamp(2rem,4.2vw,3.5rem)} h3{font-size:clamp(1.3rem,2vw,1.6rem);letter-spacing:-.01em}
+p{margin:0 0 1em;text-wrap:pretty;max-width:66ch}
+.skip{position:absolute;left:-999px;top:8px;background:var(--genet);padding:8px 14px;z-index:99}.skip:focus{left:8px}
+.wrap{width:min(1240px,100% - 32px);margin-inline:auto}
+.btn{display:inline-flex;align-items:center;gap:.55em;font:600 1rem/1 var(--ff-t);padding:.95em 1.4em;border-radius:999px;border:2px solid transparent;cursor:pointer;text-decoration:none;transition:transform .2s cubic-bezier(.2,.8,.2,1),background .2s}
+.btn:hover{transform:translateY(-2px)} .btn:active{transform:none}
+.btn-g{background:var(--genet);color:var(--truffe)} .btn-g:hover{background:var(--genet-2)}
+.btn-o{border-color:currentColor;background:transparent} .btn-d{background:var(--truffe);color:var(--calcaire-2)}
+.btn[disabled]{opacity:.45;cursor:not-allowed;transform:none}
+svg.i{width:1.15em;height:1.15em;stroke:currentColor;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;flex:none}
+/* en-tête */
+header.top{position:sticky;top:0;z-index:50;background:rgba(246,244,239,.96);border-bottom:1px solid rgba(34,27,23,.1)}
+.bar{display:flex;align-items:center;gap:14px;padding:10px 0}
+.logo{display:flex;align-items:baseline;gap:8px;text-decoration:none;font-family:var(--ff-t);font-weight:800;font-size:1.35rem;letter-spacing:-.02em;white-space:nowrap}
+.logo small{font-size:.75rem;color:var(--brique);letter-spacing:.12em}
+.bar .sp{flex:1}
+.tel{display:inline-flex;align-items:center;gap:6px;font:600 .95rem var(--ff-t);text-decoration:none;white-space:nowrap}
+.lang{font:600 .9rem var(--ff-t);border:2px solid var(--truffe);border-radius:10px;padding:.45em .6em;background:var(--calcaire-2);color:var(--truffe);cursor:pointer}
+nav.menu{position:relative}
+nav.menu ul{display:flex;gap:4px;list-style:none;margin:0;padding:0 0 8px;overflow-x:auto;scrollbar-width:none}
+nav.menu ul::-webkit-scrollbar{display:none}
+nav.menu a{display:block;padding:.5em .85em;border-radius:999px;font:600 .95rem var(--ff-t);text-decoration:none;white-space:nowrap}
+nav.menu a:hover{background:var(--calcaire)} nav.menu a[aria-current=page]{background:var(--chene);color:var(--calcaire-2)}
+nav.menu a.cons{color:var(--chene);border:1.5px dashed var(--chene)}
+@media(max-width:900px){nav.menu:after{content:"";position:absolute;right:0;top:0;bottom:8px;width:40px;background:linear-gradient(90deg,transparent,var(--calcaire-2));pointer-events:none}.tel span{display:none}}
+@media(max-width:560px){.bar .btn-g{display:none}.logo{font-size:1.15rem}.logo small{display:none}}
+/* vues */
+.view{display:none} .view.on{display:block;animation:vin .5s cubic-bezier(.16,1,.3,1)}
+@keyframes vin{from{opacity:0;filter:blur(6px)}to{opacity:1;filter:none}}
+section{padding:clamp(56px,9vw,112px) 0}
+.dark{background:var(--chene);color:var(--calcaire-2)} .dark a{color:var(--genet)}
+.truffe{background:var(--truffe);color:var(--calcaire-2)}
+.lead{font-size:1.2rem;max-width:58ch}
+/* héros */
+.hero{position:relative;min-height:min(92vh,860px);display:grid;align-items:end;color:#fff;overflow:hidden;padding:0}
+.hero video,.hero .poster{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:35% 70%;transition:opacity .8s}
+.hero:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(20,26,18,.15) 30%,rgba(20,26,18,.78))}
+.hero .in{position:relative;z-index:2;padding:0 0 56px}
+.hero h1{max-width:13ch;color:#fff}
+.hero .lead{color:#F3F0E8}
+.hero .acts{display:flex;flex-wrap:wrap;gap:12px;margin-top:22px}
+.hero .facts{display:flex;flex-wrap:wrap;gap:8px 22px;margin-top:26px;font:600 .95rem var(--ff-t);color:#F3F0E8}
+.hero .facts span{display:inline-flex;gap:7px;align-items:center}
+.hero .btn-o{color:#fff}
+/* horizon des saisons */
+.horizon{background:var(--ciel);transition:background .9s;position:relative;overflow:hidden;padding-bottom:0}
+.horizon h2{max-width:16ch}
+.hz-stage{position:relative;margin-top:14px;height:clamp(170px,24vw,280px)}
+.hz-stage svg{position:absolute;inset:0;width:100%;height:100%}
+.sun{transition:cx .9s cubic-bezier(.16,1,.3,1),cy .9s cubic-bezier(.16,1,.3,1),fill .9s}
+.ridge{transition:fill .9s}
+.hzl{position:absolute;font:600 .78rem var(--ff-t);letter-spacing:.08em;text-transform:uppercase;color:var(--truffe);white-space:nowrap}@media(max-width:600px){.hzl{font-size:.62rem}}
+.months{display:grid;grid-template-columns:repeat(12,1fr);gap:4px;margin:0;padding:0;list-style:none}
+.months button{width:100%;border:0;background:rgba(255,255,255,.55);padding:.7em 0;border-radius:10px;font:600 .9rem var(--ff-t);cursor:pointer;color:var(--truffe)}
+.months button[aria-pressed=true]{background:var(--truffe);color:var(--genet)}
+.months button:hover{background:#fff}
+.hz-panel{display:grid;grid-template-columns:1.1fr 1fr 1fr;gap:18px;padding:26px 0 56px}
+.hz-panel .box{background:rgba(255,255,255,.7);border-radius:var(--r);padding:20px 22px}
+.hz-panel .big{font:800 clamp(2rem,4vw,2.8rem)/1 var(--ff-t);font-variant-numeric:tabular-nums;letter-spacing:-.03em}
+.hz-panel .sm{font-size:.9rem;color:var(--truffe-2)}
+.hz-open{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+.hz-open li{display:flex;gap:10px;align-items:flex-start;font-size:.98rem}
+.hz-open li.off{opacity:.5;text-decoration:line-through;text-decoration-thickness:1px}
+@media(max-width:820px){.months{grid-template-columns:repeat(6,1fr)}.hz-panel{grid-template-columns:1fr}}
+/* blocs */
+.split{display:grid;grid-template-columns:1fr 1fr;gap:clamp(24px,5vw,72px);align-items:center}
+.split.rev>:first-child{order:2}
+@media(max-width:820px){.split{grid-template-columns:1fr}.split.rev>:first-child{order:0}}
+.ph{border-radius:var(--r);overflow:hidden;box-shadow:var(--sh);position:relative}
+.ph img{width:100%;height:100%;object-fit:cover}
+.ph figcaption{position:absolute;left:10px;bottom:10px;background:rgba(34,27,23,.75);color:#fff;font:600 .78rem var(--ff-t);padding:.35em .7em;border-radius:8px}
+.stack{display:grid;grid-template-columns:1.3fr 1fr;gap:12px}.stack .ph:first-child{grid-row:span 2}
+.types{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:28px}
+.types a{text-decoration:none;display:block;background:#fff;border-radius:var(--r);overflow:hidden;box-shadow:var(--sh);transition:transform .25s}
+.types a:hover{transform:translateY(-4px)} .types img{aspect-ratio:4/3;object-fit:cover;width:100%}
+.types div{padding:14px 16px} .types h3{margin:0 0 .2em;font-size:1.15rem}.types p{font-size:.92rem;margin:0}
+@media(max-width:900px){.types{grid-template-columns:repeat(2,1fr)}}
+.mh{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:28px}
+.mh article{color:var(--truffe);background:#fff;border-radius:var(--r);overflow:hidden;box-shadow:var(--sh);display:flex;flex-direction:column}
+.mh img{aspect-ratio:3/2;object-fit:cover;width:100%} .mh .c{padding:18px 20px;display:flex;flex-direction:column;gap:6px;flex:1}
+.mh .tag{font:600 .85rem var(--ff-t);color:var(--chene)} .mh .pr{font:800 1.4rem var(--ff-t);margin-top:auto}
+@media(max-width:900px){.mh{grid-template-columns:1fr}}
+.quote{font:italic 400 clamp(1.25rem,2.4vw,1.7rem)/1.4 var(--ff-x);max-width:34ch}
+.quote+cite{font:600 .95rem var(--ff-t);font-style:normal}
+table.tar{width:100%;border-collapse:collapse;font-variant-numeric:tabular-nums;background:#fff;border-radius:var(--r);overflow:hidden;box-shadow:var(--sh);margin:14px 0 26px}
+table.tar th,table.tar td{text-align:left;padding:.7em 1em;border-bottom:1px solid var(--calcaire)} table.tar th{font:600 .9rem var(--ff-t);background:var(--calcaire)}
+table.tar td.n{text-align:right;font-weight:600;white-space:nowrap}
+.tw{overflow-x:auto}
+.note{font-size:.9rem;color:var(--truffe-2);background:var(--calcaire);border-radius:10px;padding:.8em 1em;max-width:none}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0 0;padding:0;list-style:none}
+.chips li{background:var(--calcaire);border-radius:999px;padding:.35em .85em;font:600 .88rem var(--ff-t)}
+.dark .chips li{background:rgba(255,255,255,.12)}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.grid2{display:grid;grid-template-columns:repeat(2,1fr);gap:22px}
+@media(max-width:900px){.grid3,.grid2{grid-template-columns:1fr}}
+.card{background:#fff;border-radius:var(--r);padding:22px;box-shadow:var(--sh)} .dark .card{background:var(--chene-2);box-shadow:none}
+.card img{border-radius:10px;margin:-6px 0 14px;aspect-ratio:16/10;object-fit:cover;width:100%}
+.faq details{border-bottom:1px solid rgba(34,27,23,.15);padding:14px 0}
+.faq summary{font:600 1.08rem var(--ff-t);cursor:pointer;list-style:none;display:flex;justify-content:space-between;gap:12px}
+.faq summary:after{content:"+";font-size:1.4rem;line-height:1}.faq details[open] summary:after{content:"–"}
+.faq details p{margin:.6em 0 0}
+.reviews{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.reviews blockquote{margin:0;background:#fff;border-radius:var(--r);padding:20px;box-shadow:var(--sh)}
+.reviews blockquote p{font-size:.98rem}.reviews footer{font:600 .88rem var(--ff-t);color:var(--chene)}
+@media(max-width:900px){.reviews{grid-template-columns:1fr}}
+.timeline{display:grid;gap:26px;border-left:3px solid var(--genet);padding-left:24px;margin-top:20px}
+.timeline .y{font:800 1.9rem var(--ff-t);color:var(--genet)}
+.family{display:grid;grid-template-columns:repeat(6,1fr);gap:12px;margin-top:24px}
+.family figure{margin:0;text-align:center;font:600 .88rem var(--ff-t)} .family img{border-radius:12px;aspect-ratio:3/4;object-fit:cover;width:100%;background:#fff;margin-bottom:6px}
+@media(max-width:900px){.family{grid-template-columns:repeat(3,1fr)}}
+.form{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+.form label{display:grid;gap:6px;font:600 .92rem var(--ff-t)}
+.form input,.form select,.form textarea{font:400 1rem var(--ff-x);padding:.75em .8em;border:2px solid #CFC9BC;border-radius:10px;background:#fff;color:var(--truffe);width:100%}
+.form input:focus,.form select:focus,.form textarea:focus{border-color:var(--chene);outline:none}
+.form .full{grid-column:1/-1} .err{color:#A3341A;font:600 .9rem var(--ff-t);min-height:1.2em}
+.est{background:var(--truffe);color:var(--calcaire-2);border-radius:var(--r);padding:22px}
+.est .big{font:800 2.4rem var(--ff-t);color:var(--genet);font-variant-numeric:tabular-nums}
+@media(max-width:700px){.form{grid-template-columns:1fr}}
+.guide{columns:3 220px;gap:24px;padding:0;list-style:none;font-size:.95rem}.guide li{break-inside:avoid;padding:.25em 0}
+footer.site{background:var(--truffe);color:#D9D3C7;padding:64px 0 120px;font-size:.95rem}
+footer.site h3{color:#fff;font-size:1.1rem} footer.site a{color:#fff}
+.fgrid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:28px}@media(max-width:900px){.fgrid{grid-template-columns:1fr 1fr}}
+.soc{display:flex;gap:10px;margin-top:10px}.soc a{display:inline-grid;place-items:center;width:42px;height:42px;border-radius:50%;border:1.5px solid rgba(255,255,255,.35)}
+.legal{margin-top:36px;font-size:.82rem;opacity:.8}
+/* conseiller */
+.cs-btn{position:fixed;right:18px;bottom:18px;z-index:60;display:flex;align-items:center;gap:10px;background:var(--chene);color:#fff;border:0;border-radius:999px;padding:10px 18px 10px 10px;box-shadow:0 12px 30px -10px rgba(0,0,0,.5);cursor:pointer;text-align:left}
+.cs-btn .av{width:40px;height:40px;border-radius:50%;background:var(--genet);display:grid;place-items:center;color:var(--truffe)}
+.cs-btn b{display:block;font:800 .98rem var(--ff-t)} .cs-btn small{font:400 .82rem var(--ff-x);opacity:.9}
+.cs-invite{position:fixed;right:18px;bottom:86px;z-index:60;max-width:300px;background:#fff;border-radius:16px;padding:16px 38px 16px 16px;box-shadow:var(--sh);font-size:.95rem;display:none}
+.cs-invite.on{display:block;animation:vin .4s}
+.cs-invite button{position:absolute;right:8px;top:8px;border:0;background:none;cursor:pointer;font-size:1.2rem;color:var(--truffe)}
+.cs-pan{position:fixed;right:18px;bottom:86px;z-index:70;width:min(390px,calc(100% - 24px));height:min(600px,calc(100vh - 110px));background:#fff;border-radius:18px;box-shadow:0 24px 60px -20px rgba(0,0,0,.55);display:none;flex-direction:column;overflow:hidden}
+.cs-pan.on{display:flex}
+.cs-h{background:var(--chene);color:#fff;padding:14px 16px;display:flex;gap:10px;align-items:center}.cs-h b{font:800 1.02rem var(--ff-t)}.cs-h small{display:block;font-size:.8rem;opacity:.9}
+.cs-h button{margin-left:auto;background:none;border:0;color:#fff;font-size:1.4rem;cursor:pointer}
+.cs-log{flex:1;overflow:auto;padding:14px;display:flex;flex-direction:column;gap:10px;background:var(--calcaire-2)}
+.msg{max-width:88%;padding:10px 13px;border-radius:14px;font-size:.95rem;line-height:1.45}
+.msg.b{background:#fff;box-shadow:0 2px 8px -4px rgba(0,0,0,.2)} .msg.u{background:var(--chene);color:#fff;align-self:flex-end}
+.msg a{color:var(--chene);font-weight:600}
+.cs-q{display:flex;flex-wrap:wrap;gap:6px;padding:8px 12px 0;background:#fff}
+.cs-q button{border:1.5px solid var(--chene);background:#fff;color:var(--chene);border-radius:999px;padding:.35em .75em;font:600 .82rem var(--ff-t);cursor:pointer}
+.cs-f{display:flex;gap:8px;padding:10px 12px 12px;background:#fff}.cs-f input{flex:1;border:2px solid #CFC9BC;border-radius:999px;padding:.6em .9em;font:400 .95rem var(--ff-x)}
+.cs-f button{border:0;background:var(--genet);border-radius:999px;padding:0 14px;cursor:pointer;font:600 .9rem var(--ff-t)}
+.mbar{display:none}
+@media(max-width:700px){.mbar{display:grid;grid-template-columns:1fr 1fr;gap:8px;position:fixed;left:0;right:0;bottom:0;z-index:55;padding:8px 10px;background:var(--calcaire-2);border-top:1px solid rgba(0,0,0,.1)}.mbar .btn{justify-content:center;padding:.85em}.cs-btn{bottom:76px;padding:8px}.cs-btn span{display:none}.cs-invite{bottom:136px}.cs-pan{bottom:76px;height:calc(100vh - 150px)}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<a class="skip" href="#main" data-i="skip">Aller au contenu</a>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+ <symbol id="ic-tel" viewBox="0 0 24 24"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></symbol>
+ <symbol id="ic-cal" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M16 3v4M8 3v4M3 10h18"/></symbol>
+ <symbol id="ic-pin" viewBox="0 0 24 24"><path d="M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></symbol>
+ <symbol id="ic-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></symbol>
+ <symbol id="ic-ok" viewBox="0 0 24 24"><path d="M4 12l5 5L20 6"/></symbol>
+ <symbol id="ic-x" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></symbol>
+ <symbol id="ic-leaf" viewBox="0 0 24 24"><path d="M5 19c0-9 5-14 15-14 0 10-5 15-14 15"/><path d="M5 19l7-7"/></symbol>
+ <symbol id="ic-chat" viewBox="0 0 24 24"><path d="M4 5h16v11H9l-5 4z"/><path d="M8 9h8M8 12h5"/></symbol>
+ <symbol id="ic-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+ <symbol id="ic-fb" viewBox="0 0 24 24"><path d="M14 8h3V4h-3a4 4 0 0 0-4 4v3H7v4h3v6h4v-6h3l1-4h-4V8.5c0-.3.2-.5.5-.5"/></symbol>
+ <symbol id="ic-ig" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".6"/></symbol>
+ <symbol id="ic-yt" viewBox="0 0 24 24"><rect x="2.5" y="5.5" width="19" height="13" rx="4"/><path d="M10 9.5v5l4.5-2.5z"/></symbol>
+ <symbol id="ic-photo" viewBox="0 0 24 24"><rect x="3" y="6" width="18" height="14" rx="2"/><circle cx="12" cy="13" r="3.5"/><path d="M8 6l1.5-2h5L16 6"/></symbol>
+</svg>
+<header class="top">
+ <div class="wrap">
+  <div class="bar">
+   <a class="logo" href="#/" aria-label="Les Truffières, accueil">Les Truffières <small>★★★ ARDÈCHE</small></a>
+   <span class="sp"></span>
+   <a class="tel" href="tel:+33475046835"><svg class="i"><use href="#ic-tel"/></svg><span>04 75 04 68 35</span></a>
+   <label class="vh" for="lang" style="position:absolute;left:-999px" data-i="langLabel">Langue</label>
+   <select id="lang" class="lang" aria-label="Langue">
+    <option value="fr">Français</option><option value="en">English</option><option value="es">Español</option><option value="de">Deutsch</option><option value="it">Italiano</option><option value="nl">Nederlands</option>
+   </select>
+   <a class="btn btn-g" href="#/reserver"><svg class="i"><use href="#ic-cal"/></svg><span data-i="ctaBook">Réserver</span></a>
+  </div>
+  <nav class="menu" aria-label="Menu principal"><ul>
+   <li><a href="#/" data-r="" data-i="nHome">Accueil</a></li>
+   <li><a href="#/emplacements" data-r="emplacements" data-i="nPitch">Emplacements</a></li>
+   <li><a href="#/mobil-homes" data-r="mobil-homes" data-i="nMh">Mobil-homes</a></li>
+   <li><a href="#/tarifs" data-r="tarifs" data-i="nRates">Tarifs</a></li>
+   <li><a href="#/piscine" data-r="piscine" data-i="nPool">Piscine</a></li>
+   <li><a href="#/se-restaurer" data-r="se-restaurer" data-i="nFood">The Pub &amp; L'Oustaou</a></li>
+   <li><a href="#/region" data-r="region" data-i="nRegion">La région</a></li>
+   <li><a href="#/histoire" data-r="histoire" data-i="nStory">Depuis 1966</a></li>
+   <li><a href="#/infos" data-r="infos" data-i="nInfo">Infos &amp; FAQ</a></li>
+   <li><a href="#/reserver" data-r="reserver" data-i="nBook">Réserver</a></li>
+   <li><a href="#" class="cons" data-open-cs data-i="nCons">Truffières Conseil</a></li>
+  </ul></nav>
+ </div>
+</header>
+<main id="main">
+
+<!-- ACCUEIL -->
+<div class="view" data-v="">
+ <section class="hero">
+  <img class="poster" src="img/hero.jpg" alt="Emplacements en herbe sous les chênes, une 2CV et un fourgon au soleil" data-i-alt="aHero">
+  <video id="heroVid" muted playsinline loop preload="none" poster="img/hero.jpg" aria-hidden="true"></video>
+  <div class="wrap in">
+   <h1 data-i="h1">Le camping des Truffières, ouvert les 365 jours de l'année</h1>
+   <p class="lead" data-i="heroLead">Des emplacements de plus de 100 m² en terrasses, trois mobil-homes climatisés et l'horizon du Ventoux aux Alpes. À Saint-Marcel-d'Ardèche, à 4 km des Gorges.</p>
+   <div class="acts">
+    <a class="btn btn-g" href="#/reserver"><svg class="i"><use href="#ic-cal"/></svg><span data-i="heroCta1">Voir les disponibilités</span></a>
+    <a class="btn btn-o" href="#saisons"><svg class="i"><use href="#ic-sun"/></svg><span data-i="heroCta2">Choisir son mois</span></a>
+   </div>
+   <div class="facts">
+    <span><svg class="i"><use href="#ic-ok"/></svg><span data-i="f1">Emplacement dès 22 € la nuit</span></span>
+    <span><svg class="i"><use href="#ic-ok"/></svg><span data-i="f2">Mobil-home dès 400 € la semaine</span></span>
+    <span><svg class="i"><use href="#ic-ok"/></svg><span data-i="f3">4,4/5 sur 261 avis Google</span></span>
+   </div>
+  </div>
+ </section>
+
+ <section class="horizon" id="saisons" aria-labelledby="hzT">
+  <div class="wrap">
+   <h2 id="hzT" data-i="hzT">Quel mois vous fait envie ?</h2>
+   <p class="lead" data-i="hzLead">Ici, on ne ferme jamais. Choisissez un mois : le soleil se place sur notre horizon, et vous voyez le tarif et ce qui vous attend sur place.</p>
+   <div class="hz-stage" aria-hidden="true">
+    <svg viewBox="0 0 1200 280" preserveAspectRatio="none">
+     <circle class="sun" id="sun" cx="600" cy="80" r="30" fill="#F2C230"/>
+     <path class="ridge" id="r1" d="M0 205 L120 192 L210 170 L300 182 L390 150 L455 160 L520 118 L585 140 L640 104 L700 126 L760 98 L800 112 L860 70 L905 92 L960 80 L1020 118 L1090 134 L1200 150 L1200 280 L0 280Z" fill="#9AA6C0"/>
+     <path class="ridge" id="r2" d="M0 236 L150 222 L260 212 L360 220 L470 200 L560 214 L640 196 L760 210 L880 192 L1000 206 L1100 198 L1200 210 L1200 280 L0 280Z" fill="#6F8A62"/>
+     <path class="ridge" id="r3" d="M0 262 L200 252 L420 258 L640 248 L860 256 L1060 246 L1200 252 L1200 280 L0 280Z" fill="#2F4A34"/>
+    </svg>
+    <span class="hzl" style="left:16%;top:44%">Mont Ventoux</span><span class="hzl" style="left:44%;top:22%" data-i="hzAlpes">Les Alpes</span><span class="hzl" style="left:68%;top:6%">Mont-Blanc</span>
+   </div>
+   <ul class="months" id="months"></ul>
+   <div class="hz-panel" aria-live="polite">
+    <div class="box">
+     <div class="sm" id="hzMonth">—</div>
+     <div class="big" id="hzSeason">—</div>
+     <p class="sm" id="hzMood" style="margin:.6em 0 0"></p>
+    </div>
+    <div class="box">
+     <div class="sm" data-i="hzP1">Emplacement · 2 pers. + 1 véhicule</div>
+     <div class="big" id="hzPitch">—</div>
+     <div class="sm" data-i="hzP2">Mobil-home · 4 pers. · la semaine</div>
+     <div class="big" id="hzMh">—</div>
+     <p class="sm" style="margin:.5em 0 0" data-i="hzNote">Tarifs 2026 publiés, au 15 du mois.</p>
+    </div>
+    <div class="box">
+     <div class="sm" data-i="hzOpen">Ce mois-ci au camping</div>
+     <ul class="hz-open" id="hzList"></ul>
+     <a class="btn btn-d" id="hzBook" href="#/reserver" style="margin-top:14px"><span data-i="hzBook">Réserver ce mois-là</span><svg class="i"><use href="#ic-arrow"/></svg></a>
+    </div>
+   </div>
+  </div>
+ </section>
+
+ <section>
+  <div class="wrap split">
+   <div>
+    <h2 data-i="hSpace">De l'espace, vraiment</h2>
+    <p class="lead" data-i="hSpaceP">Cinq hectares de terrasses, une centaine d'emplacements de plus de 100 m², à l'ombre ou au soleil. Les plus grands camping-cars et caravanes y tiennent sans manœuvre.</p>
+    <ul class="chips"><li data-i="c1">Ombre ou soleil</li><li data-i="c2">Électricité 4 à 10 A</li><li data-i="c3">Wi-Fi gratuit</li><li data-i="c4">Aire Flot Bleu</li><li data-i="c5">Sanitaires chauffés l'hiver</li></ul>
+    <p style="margin-top:22px"><a class="btn btn-d" href="#/emplacements"><span data-i="hSpaceCta">Choisir son emplacement</span><svg class="i"><use href="#ic-arrow"/></svg></a></p>
+   </div>
+   <div class="stack">
+    <figure class="ph" style="margin:0"><img src="img/terrasses.jpg" alt="Les terrasses herbeuses du camping" data-i-alt="aTerr" loading="lazy"></figure>
+    <figure class="ph" style="margin:0"><img src="img/tente.jpg" alt="Une tente sous les chênes" data-i-alt="aTente" loading="lazy"></figure>
+    <figure class="ph" style="margin:0"><img src="img/campingcar.jpg" alt="Un camping-car sur un grand emplacement" data-i-alt="aCc" loading="lazy"></figure>
+   </div>
+  </div>
+ </section>
+
+ <section class="dark">
+  <div class="wrap">
+   <h2 data-i="hMh">Arriver léger, poser ses valises</h2>
+   <p class="lead" data-i="hMhP">Trois mobil-homes climatisés pour 4 personnes, linge de lit fourni, terrasse au calme. Valérie et Stéphane les préparent eux-mêmes.</p>
+   <div class="mh" id="mhHome"></div>
+  </div>
+ </section>
+
+ <section>
+  <div class="wrap split rev">
+   <div>
+    <h2 data-i="hPool">Une piscine sans toboggan, et c'est voulu</h2>
+    <p class="lead" data-i="hPoolP">Un bassin de 17 × 7 m chauffé au soleil de juin à septembre, 1,30 m partout, et une pataugeoire flottante pour les bébés dès 6 mois. On peut s'y baigner jusqu'à la fermeture du Pub.</p>
+    <p><a class="btn btn-d" href="#/piscine"><span data-i="hPoolCta">Voir l'espace piscine</span><svg class="i"><use href="#ic-arrow"/></svg></a></p>
+   </div>
+   <figure class="ph" style="margin:0;aspect-ratio:4/3"><img src="img/piscine.jpg" alt="La piscine du camping et ses transats" data-i-alt="aPool" loading="lazy"></figure>
+  </div>
+ </section>
+
+ <section class="truffe">
+  <div class="wrap split">
+   <figure class="ph" style="margin:0;aspect-ratio:4/3"><img src="img/pub-bar.jpg" alt="Le comptoir du Pub" data-i-alt="aPub" loading="lazy"></figure>
+   <div>
+    <h2 data-i="hFood">Le soir, on se retrouve au Pub</h2>
+    <p class="lead" data-i="hFoodP">Bières d'Ardèche, vins de la vallée et cocktails maison, toute l'année. En juillet et août, L'Oustaou sert une cuisine de producteurs voisins sur sa terrasse ombragée.</p>
+    <p><a class="btn btn-g" href="#/se-restaurer"><span data-i="hFoodCta">Découvrir The Pub et L'Oustaou</span><svg class="i"><use href="#ic-arrow"/></svg></a></p>
+   </div>
+  </div>
+ </section>
+
+ <section>
+  <div class="wrap">
+   <h2 data-i="hReg">Les Gorges à 4 km, le reste à portée de vélo</h2>
+   <p class="lead" data-i="hRegP">Canoë avec navette gratuite depuis le camping, grottes et avens, villages de caractère, marchés provençaux. Tout se réserve ou se prépare à l'accueil.</p>
+   <div class="grid3" style="margin-top:24px">
+    <a class="card" href="#/region" style="text-decoration:none"><img src="img/canoe.jpg" alt="Canoës sous le Pont d'Arc" data-i-alt="aCanoe" loading="lazy"><h3 data-i="rg1">Descendre les Gorges</h3><p data-i="rg1p">De 25 € à 90 €, matériel et navette compris, réservé aux vacanciers du camping.</p></a>
+    <a class="card" href="#/region" style="text-decoration:none"><img src="img/rando.jpg" alt="Randonneurs au-dessus des Gorges" data-i-alt="aRando" loading="lazy"><h3 data-i="rg2">Marcher, pédaler</h3><p data-i="rg2p">Sentiers au départ du camping, ViaRhôna à deux pas, circuits par QR code à l'accueil.</p></a>
+    <a class="card" href="#/region" style="text-decoration:none"><img src="img/pont-arc.jpg" alt="Le Pont d'Arc" data-i-alt="aArc" loading="lazy"><h3 data-i="rg3">Grottes et avens</h3><p data-i="rg3p">Grotte de Saint-Marcel à 6 km, Aven Marzal à 10 km, Chauvet 2 à 21 km.</p></a>
+   </div>
+  </div>
+ </section>
+
+ <section style="background:var(--calcaire)">
+  <div class="wrap">
+   <h2 data-i="hRev">4,4 sur 5, et ce qu'on retient</h2>
+   <ul class="chips" style="margin-bottom:26px"><li data-i="rv1">La taille des emplacements</li><li data-i="rv2">L'accueil chaleureux</li><li data-i="rv3">L'épicerie et les commerces proches</li><li data-i="rv4">La vue du Ventoux au Mont-Blanc</li><li data-i="rv5">Le calme absolu</li></ul>
+   <div class="reviews" id="revHome"></div>
+   <p style="margin-top:22px"><a href="#/infos" data-i="rvAll">Lire tous les avis repris du site</a></p>
+  </div>
+ </section>
+
+ <section class="dark">
+  <div class="wrap split">
+   <div>
+    <p class="quote" data-i="hQuote">« Depuis 1966, notre priorité est de vous offrir des vacances qui vous ressemblent. »</p>
+    <cite data-i="hQuoteBy">Valérie et Stéphane Soulier, deuxième génération</cite>
+    <p style="margin-top:22px"><a class="btn btn-g" href="#/histoire"><span data-i="hStoryCta">De la ferme au camping, l'histoire</span><svg class="i"><use href="#ic-arrow"/></svg></a></p>
+   </div>
+   <figure class="ph" style="margin:0;aspect-ratio:4/3"><img src="img/h1964.jpg" alt="L'entrée du camping dans les années 1960" data-i-alt="a1964" loading="lazy"></figure>
+  </div>
+ </section>
+</div>
+
+<!-- EMPLACEMENTS -->
+<div class="view" data-v="emplacements">
+ <section>
+  <div class="wrap">
+   <h1 data-i="pH">Emplacements de plus de 100 m²</h1>
+   <p class="lead" data-i="pLead">Tentes, caravanes, camping-cars et vans : environ 75 parcelles détaillées sur le plan (53 « confort » et 22 « nature »), en terrasses, avec la vue sur la vallée du Rhône, le Ventoux et les Alpes. Jusqu'à 6 personnes par emplacement.</p>
+   <div class="types">
+    <a href="#tente"><img src="img/empl-tente.jpg" alt="Emplacement pour tente" data-i-alt="aT1" loading="lazy"><div><h3 data-i="t1">Tentes &amp; bivouac</h3><p data-i="t1p">De vastes parcelles ombragées pour revenir à l'essentiel.</p></div></a>
+    <a href="#tente"><img src="img/empl-caravane.jpg" alt="Emplacement pour caravane" data-i-alt="aT2" loading="lazy"><div><h3 data-i="t2">Caravanes &amp; auvents</h3><p data-i="t2p">Terrains stabilisés, place pour l'auvent et la voiture.</p></div></a>
+    <a href="#tente"><img src="img/empl-cc.jpg" alt="Emplacement pour camping-car" data-i-alt="aT3" loading="lazy"><div><h3 data-i="t3">Camping-cars</h3><p data-i="t3p">Parcelles XXL pour grands gabarits, vidange Flot Bleu.</p></div></a>
+    <a href="#tente"><img src="img/empl-van.jpg" alt="Van aménagé sur un emplacement" data-i-alt="aT4" loading="lazy"><div><h3 data-i="t4">Vans aménagés</h3><p data-i="t4p">Liberté d'accès et sanitaires chauffés en toute saison.</p></div></a>
+   </div>
+  </div>
+ </section>
+ <section style="background:var(--calcaire)" id="tente">
+  <div class="wrap split">
+   <div>
+    <h2 data-i="pInc">Tout est compris dans le prix</h2>
+    <ul class="hz-open">
+     <li><svg class="i"><use href="#ic-ok"/></svg><span data-i="pi1">Piscine et eau chaude gratuites</span></li>
+     <li><svg class="i"><use href="#ic-ok"/></svg><span data-i="pi2">Wi-Fi haut débit</span></li>
+     <li><svg class="i"><use href="#ic-ok"/></svg><span data-i="pi3">Deux blocs sanitaires, dont un chauffé hors saison, cabine bébé, accès PMR</span></li>
+     <li><svg class="i"><use href="#ic-ok"/></svg><span data-i="pi4">Prêt de matériel pour les activités</span></li>
+     <li><svg class="i"><use href="#ic-ok"/></svg><span data-i="pi5">Aire de vidange Flot Bleu</span></li>
+     <li><svg class="i"><use href="#ic-ok"/></svg><span data-i="pi6">Points d'eau et tables de pique-nique en bois</span></li>
+    </ul>
+    <p style="margin-top:18px" data-i="pFridge">Location de réfrigérateur possible. Ciel étoilé sans pollution lumineuse, offert.</p>
+    <p><a class="btn btn-d" href="#/tarifs"><span data-i="pRatesCta">Voir les tarifs des emplacements</span><svg class="i"><use href="#ic-arrow"/></svg></a></p>
+   </div>
+   <figure class="ph" style="margin:0"><img src="img/sanitaires.jpg" alt="Le bloc sanitaire en pierre" data-i-alt="aSan" loading="lazy"></figure>
+  </div>
+ </section>
+ <section>
+  <div class="wrap">
+   <h2 data-i="pPlan">Le plan du domaine</h2>
+   <p data-i="pPlanP">Indiquez vos envies à la réservation : dans la mesure des disponibilités, l'équipe vous attribue l'emplacement le plus adapté.</p>
+   <figure class="ph" style="margin:0;background:#fff"><img src="img/plan.jpg" alt="Plan du camping Les Truffières" data-i-alt="aPlan" loading="lazy" style="object-fit:contain"></figure>
+   <p class="note" style="margin-top:14px" data-i="pPlanN">Plan repris tel quel du site actuel ; une version redessinée et traduite est prévue à l'installation.</p>
+  </div>
+ </section>
+</div>
+
+<!-- MOBIL-HOMES -->
+<div class="view" data-v="mobil-homes">
+ <section>
+  <div class="wrap">
+   <h1 data-i="mH">Trois mobil-homes climatisés</h1>
+   <p class="lead" data-i="mLead">Pour 1 à 4 personnes, deux chambres chacun, linge de lit fourni, non-fumeurs. Animaux non admis dans les locations. Arrivée dès 16 h, départ avant 10 h.</p>
+  </div>
+  <div class="wrap" id="mhFull"></div>
+ </section>
+</div>
+
+<!-- TARIFS -->
+<div class="view" data-v="tarifs">
+ <section>
+  <div class="wrap">
+   <h1 data-i="tH">Tarifs 2026</h1>
+   <p class="lead" data-i="tLead">Emplacements dès 22 € la nuit, mobil-homes dès 400 € la semaine. Piscine, Wi-Fi, sanitaires chauffés et prêt de matériel compris.</p>
+   <h2 data-i="tP">Emplacements nature</h2>
+   <div class="tw"><table class="tar"><thead><tr><th data-i="tSeason">Saison</th><th data-i="t1v">1 pers. + 1 véhicule</th><th data-i="t2v">2 pers. + 1 véhicule</th></tr></thead><tbody>
+    <tr><td data-i="tHigh">Haute saison, du 27/06 au 04/09</td><td class="n">28 €</td><td class="n">34 €</td></tr>
+    <tr><td data-i="tLow">Basse saison, du 05/09 au 31/12</td><td class="n">22 €</td><td class="n">28 €</td></tr>
+    <tr><td data-i="tJan">Du 01/01 au 26/06</td><td class="n" colspan="2" data-i="tAsk">Sur demande</td></tr>
+   </tbody></table></div>
+   <div class="grid2">
+    <div><h3 data-i="tElec">Électricité et réfrigérateur</h3><div class="tw"><table class="tar"><tbody>
+     <tr><td>4 A (920 W)</td><td class="n" data-i="pn3">3,00 € / nuit</td></tr><tr><td>6 A (1380 W)</td><td class="n" data-i="pn5">5,00 € / nuit</td></tr><tr><td>10 A (2300 W)</td><td class="n" data-i="pn7">7,00 € / nuit</td></tr><tr><td data-i="tFr">Réfrigérateur + 4 A</td><td class="n" data-i="pn10">10,00 € / nuit</td></tr></tbody></table></div></div>
+    <div><h3 data-i="tSup">Suppléments</h3><div class="tw"><table class="tar"><tbody>
+     <tr><td data-i="tS1">Personne supplémentaire</td><td class="n" data-i="pn65">6,50 € / nuit</td></tr><tr><td data-i="tS2">Animal domestique</td><td class="n" data-i="pn2">2,00 € / nuit</td></tr><tr><td data-i="tS3">Visiteur (plus de 2 h)</td><td class="n">4,00 €</td></tr><tr><td data-i="tS4">Voiture ou tente supplémentaire</td><td class="n" data-i="pn45">4,50 € / nuit</td></tr><tr><td data-i="tS5">Taxe de séjour (+ 18 ans)</td><td class="n" data-i="pd066">0,66 € / jour</td></tr><tr><td data-i="tS6">Frais de dossier</td><td class="n">5,00 €</td></tr></tbody></table></div></div>
+   </div>
+   <h2 data-i="tM">Mobil-homes Trigano et Watipi</h2>
+   <div class="tw"><table class="tar"><thead><tr><th data-i="tPer">Période</th><th data-i="tWeek">La semaine</th></tr></thead><tbody>
+    <tr><td data-i="tm1">Hors saison, du 27/09 au 24/04</td><td class="n">400 €</td></tr>
+    <tr><td data-i="tm2">Basse saison, du 25/04 au 05/06</td><td class="n">450 €</td></tr>
+    <tr><td data-i="tm3">Moyenne saison, du 06/06 au 26/06 et du 06/09 au 26/09</td><td class="n">550 €</td></tr>
+    <tr><td data-i="tm4">Haute saison, du 27/06 au 10/07 et du 22/08 au 04/09</td><td class="n">650 €</td></tr>
+    <tr><td data-i="tm5">Très haute saison, du 11/07 au 24/07 et du 15/08 au 21/08</td><td class="n">750 €</td></tr>
+    <tr><td data-i="tm6">Le cœur de l'été, du 25/07 au 15/08</td><td class="n">850 €</td></tr>
+   </tbody></table></div>
+   <h3 data-i="tG">Mobil-home Le Garrigue</h3>
+   <div class="tw"><table class="tar"><tbody>
+    <tr><td data-i="tg1">Du 14/06 au 27/06 et du 06/09 au 19/09</td><td class="n">500 €</td></tr>
+    <tr><td data-i="tg2">Du 28/06 au 11/07 et du 23/08 au 05/09</td><td class="n">600 €</td></tr>
+    <tr><td data-i="tg3">Du 12/07 au 25/07 et du 16/08 au 22/08</td><td class="n">700 €</td></tr>
+    <tr><td data-i="tg4">Du 26/07 au 15/08</td><td class="n">800 €</td></tr>
+   </tbody></table></div>
+   <p class="note" data-i="tNote">Cautions : 700 € (hébergement) et 120 € (ménage), non encaissées et rendues sous deux semaines. Frais de dossier location : 25 €. Taxe de séjour 0,66 € par jour et par adulte. Recharge de véhicule électrique interdite sur le camping.</p>
+   <h2 style="margin-top:40px" data-i="tCmp">Emplacement ou mobil-home ?</h2>
+   <div class="tw"><table class="tar"><thead><tr><th></th><th data-i="tc0a">Emplacement</th><th data-i="tc0b">Mobil-home</th></tr></thead><tbody>
+    <tr><td data-i="tc1">Pour qui</td><td data-i="tc1a">Les amoureux du vrai camping et de la nature</td><td data-i="tc1b">Les familles qui veulent le confort d'une maison</td></tr>
+    <tr><td data-i="tc2">Capacité</td><td data-i="tc2a">Jusqu'à 6 personnes</td><td data-i="tc2b">Jusqu'à 4 personnes</td></tr>
+    <tr><td data-i="tc3">Surface</td><td data-i="tc3a">Plus de 100 m², ombragé</td><td data-i="tc3b">31 à 41 m², 2 chambres</td></tr>
+    <tr><td data-i="tc4">Sanitaires</td><td data-i="tc4a">2 blocs, dont 1 chauffé l'hiver</td><td data-i="tc4b">Douche et WC séparés intégrés</td></tr>
+    <tr><td data-i="tc5">Animaux</td><td data-i="tc5a">Bienvenus (sauf 1re et 2e catégories)</td><td data-i="tc5b">Non admis</td></tr>
+    <tr><td data-i="tc6">Budget</td><td data-i="tc6a">Environ 28 € la nuit à deux</td><td data-i="tc6b">De 400 € à 850 € la semaine</td></tr>
+   </tbody></table></div>
+   <p><a class="btn btn-g" href="#/reserver"><span data-i="ctaBook2">Calculer mon séjour</span><svg class="i"><use href="#ic-arrow"/></svg></a></p>
+  </div>
+ </section>
+</div>
+
+<!-- PISCINE -->
+<div class="view" data-v="piscine">
+ <section>
+  <div class="wrap split">
+   <div>
+    <h1 data-i="plH">L'eau, le soleil, et c'est tout</h1>
+    <p class="lead" data-i="plLead">Un bassin familial de 17 × 7 m, loin du tumulte des parcs aquatiques. Profondeur constante de 1,30 m, chauffage solaire de juin à septembre, transats face à la garrigue.</p>
+    <ul class="hz-open">
+     <li><svg class="i"><use href="#ic-ok"/></svg><span data-i="pl1">Baignade tardive : ouverte jusqu'à la fermeture du Pub</span></li>
+     <li><svg class="i"><use href="#ic-ok"/></svg><span data-i="pl2">Pataugeoire flottante sécurisée, de 6 mois à 3 ans (norme NF EN ISO 25649-1, système breveté)</span></li>
+     <li><svg class="i"><use href="#ic-ok"/></svg><span data-i="pl3">Slips et boxers de bain uniquement, shorts interdits</span></li>
+    </ul>
+   </div>
+   <figure class="ph" style="margin:0;aspect-ratio:4/3"><img src="img/piscine-soir.jpg" alt="La piscine sous les parasols" data-i-alt="aPool2" loading="lazy"></figure>
+  </div>
+ </section>
+ <section style="background:var(--calcaire)">
+  <div class="wrap grid2">
+   <figure class="ph" style="margin:0;aspect-ratio:4/3"><img src="img/piscine-bebe.jpg" alt="Un bébé dans la pataugeoire flottante" data-i-alt="aBaby" loading="lazy"></figure>
+   <div>
+    <p class="quote" data-i="plQ">« Pas de parc aquatique bruyant, juste le bonheur simple de l'eau sous le soleil. »</p>
+    <cite data-i="plQBy">Valérie et Stéphane</cite>
+    <h3 style="margin-top:28px" data-i="plSwim">Se baigner ailleurs</h3>
+    <p data-i="plSwimP">À 10 minutes : les plages surveillées de Saint-Martin-d'Ardèche et du Pont Cassé à Saint-Just.</p>
+   </div>
+  </div>
+ </section>
+</div>
+
+<!-- SE RESTAURER -->
+<div class="view" data-v="se-restaurer">
+ <section class="truffe">
+  <div class="wrap split">
+   <div>
+    <h1 data-i="fH">The Pub, ouvert toute l'année</h1>
+    <p class="lead" data-i="fLead">Une sélection courte de bières artisanales d'Ardèche, des vins régionaux et des cocktails maison. Salle climatisée, terrasse pour les apéritifs qui s'étirent.</p>
+    <p data-i="fP2">Soirées à thème, dégustations et concerts acoustiques rythment la haute saison, dans le respect du calme de la nuit. Arrivée tardive ? Vos clés vous attendent au bar.</p>
+   </div>
+   <div class="stack">
+    <figure class="ph" style="margin:0"><img src="img/pub-salle.jpg" alt="La salle du Pub" data-i-alt="aPubS" loading="lazy"></figure>
+    <figure class="ph" style="margin:0"><img src="img/pub-terrasse.jpg" alt="La terrasse du Pub" data-i-alt="aPubT" loading="lazy"></figure>
+    <figure class="ph" style="margin:0"><img src="img/pub-bar.jpg" alt="Le bar" data-i-alt="aPub" loading="lazy"></figure>
+   </div>
+  </div>
+ </section>
+ <section>
+  <div class="wrap split rev">
+   <div>
+    <h2 data-i="oH">L'Oustaou, la table de l'été</h2>
+    <p class="note" data-i="oClosed">Le restaurant annonce une fermeture pour 2026 et donne rendez-vous en 2027.</p>
+    <p class="lead" data-i="oLead">En juillet et août, une cuisine de terroir en circuit court, avec les maraîchers, éleveurs et vignerons d'Ardèche. Salle climatisée ou grande terrasse ombragée.</p>
+    <p data-i="oSign">Les plats signatures : le nougat de foie gras aux fruits secs, la provençale de calargots, et des desserts en trompe-l'œil, comme « Juste une pêche ».</p>
+    <p class="sm" data-i="oAw">Recommandé par Restaurant Guru en 2024, partenaire Vignobles &amp; Découvertes.</p>
+    <p><a class="btn btn-d" href="tel:+33475046835"><svg class="i"><use href="#ic-tel"/></svg><span data-i="oBook">Réserver une table</span></a></p>
+   </div>
+   <div class="stack">
+    <figure class="ph" style="margin:0"><img src="img/oustaou-salle.jpg" alt="La salle de L'Oustaou" data-i-alt="aOust" loading="lazy"></figure>
+    <figure class="ph" style="margin:0"><img src="img/dessert-peche.jpg" alt="Le dessert Juste une pêche" data-i-alt="aPeche" loading="lazy"></figure>
+    <figure class="ph" style="margin:0"><img src="img/truffes.jpg" alt="Des truffes noires sur une planche" data-i-alt="aTruf" loading="lazy"></figure>
+   </div>
+  </div>
+ </section>
+ <section style="background:var(--calcaire)">
+  <div class="wrap split">
+   <figure class="ph" style="margin:0;aspect-ratio:4/3"><img src="img/epicerie.jpg" alt="L'épicerie d'appoint à l'accueil" data-i-alt="aEpi" loading="lazy"></figure>
+   <div><h2 data-i="eH">Et pour le reste</h2><p data-i="eP">Une épicerie d'appoint à l'accueil. Supermarché, boulangerie et boucherie à moins de 3 km. Barbecues individuels interdits par arrêté préfectoral.</p></div>
+  </div>
+ </section>
+</div>
+
+<!-- REGION -->
+<div class="view" data-v="region">
+ <section>
+  <div class="wrap">
+   <h1 data-i="gH">Le Sud-Ardèche depuis votre emplacement</h1>
+   <p class="lead" data-i="gLead">Au cœur de la réserve naturelle des Gorges, à deux pas de la ViaRhôna. Grottes, villages, marchés, rivière : voici ce que l'équipe conseille le plus souvent.</p>
+   <div class="grid3" style="margin-top:28px" id="regionCards"></div>
+  </div>
+ </section>
+ <section style="background:var(--calcaire)">
+  <div class="wrap">
+   <h2 data-i="gGuide">Le guide des alentours</h2>
+   <p data-i="gGuideP">Le site actuel compte plus de soixante fiches locales (villages, restaurants, grottes, sorties d'autoroute, saisons). Elles sont toutes reprises, en français, à l'installation du nouveau site.</p>
+   <ul class="guide" id="guide"></ul>
+  </div>
+ </section>
+</div>
+
+<!-- HISTOIRE -->
+<div class="view" data-v="histoire">
+ <section>
+  <div class="wrap split">
+   <div>
+    <h1 data-i="sH">Au début, il y avait une ferme</h1>
+    <p class="lead" data-i="sLead">Jean-François vendait sur les marchés provençaux. En 1966, avec l'accord de ses parents agriculteurs, il ouvre dix emplacements sur la ferme familiale. Soixante ans plus tard, la quatrième génération est là.</p>
+   </div>
+   <figure class="ph" style="margin:0;aspect-ratio:4/3"><img src="img/h-marche.jpg" alt="Jean-François sur un marché, photo d'archive" data-i-alt="aMarche" loading="lazy"></figure>
+  </div>
+  <div class="wrap">
+   <div class="timeline">
+    <div><div class="y">1966</div><p data-i="s1">Dix emplacements sur la ferme de Saint-Marcel-d'Ardèche, l'un des tout premiers campings du département.</p></div>
+    <div><div class="y" data-i="s2y">Les décennies suivantes</div><p data-i="s2">De 10 à 30, puis une centaine d'emplacements. Jean-François bâtit les terrasses avec ses enfants, avec une règle : ne pas dénaturer le bois.</p></div>
+    <div><div class="y">2007</div><p data-i="s3">Valérie, sa fille, et Stéphane Soulier reprennent le camping. Le Pub ouvre à l'année, puis le restaurant.</p></div>
+    <div><div class="y">2012</div><p data-i="s4">Le camping obtient ses trois étoiles.</p></div>
+    <div><div class="y">2024</div><p data-i="s5">Rénovation des locatifs, nouvelle signalétique, et un reportage de BFM sur le « vrai camping ».</p></div>
+   </div>
+  </div>
+ </section>
+ <section style="background:var(--calcaire)">
+  <div class="wrap">
+   <h2 data-i="sFam">La famille, en dessins</h2>
+   <p data-i="sFamP">Les portraits de l'équipe, tels qu'ils figurent sur le site actuel.</p>
+   <div class="family">
+    <figure><img src="img/p-jeanfrancois.jpg" alt="Portrait dessiné de Jean-François" loading="lazy">Jean-François</figure>
+    <figure><img src="img/p-jeanine.jpg" alt="Portrait dessiné de Jeanine" loading="lazy">Jeanine</figure>
+    <figure><img src="img/p-valerie.jpg" alt="Portrait dessiné de Valérie" loading="lazy">Valérie</figure>
+    <figure><img src="img/p-stephane.jpg" alt="Portrait dessiné de Stéphane" loading="lazy">Stéphane</figure>
+    <figure><img src="img/p-joris.jpg" alt="Portrait dessiné de Joris" loading="lazy">Joris</figure>
+    <figure><img src="img/p-anais.jpg" alt="Portrait dessiné d'Anaïs" loading="lazy">Anaïs</figure>
+   </div>
+  </div>
+ </section>
+ <section>
+  <div class="wrap split">
+   <figure class="ph" style="margin:0;aspect-ratio:4/3"><img src="img/h1974.jpg" alt="La piscine du camping en 1974" data-i-alt="a1974" loading="lazy"></figure>
+   <div>
+    <h2 data-i="dH">Ce qu'on fait pour le lieu</h2>
+    <p data-i="dP">Éclairage solaire, réducteurs d'eau, récupération des eaux de pluie, tri et compost, poules et lapins pour les restes, bois et pierre pour construire, produits locaux à table.</p>
+    <p class="sm" data-i="dSator">Et un carré Sator, installé en 2024 dans le décor : à vous de le trouver.</p>
+   </div>
+  </div>
+ </section>
+</div>
+
+<!-- INFOS -->
+<div class="view" data-v="infos">
+ <section>
+  <div class="wrap grid2">
+   <div>
+    <h1 data-i="iH">Infos pratiques</h1>
+    <ul class="hz-open">
+     <li><svg class="i"><use href="#ic-pin"/></svg><span>252 Impasse Les Truffières, 07700 Saint-Marcel-d'Ardèche · GPS 44.344183, 4.604771</span></li>
+     <li><svg class="i"><use href="#ic-tel"/></svg><a href="tel:+33475046835">+33 (0)4 75 04 68 35</a></li>
+     <li><svg class="i"><use href="#ic-chat"/></svg><a href="mailto:soulier.valerie@wanadoo.fr">soulier.valerie@wanadoo.fr</a></li>
+     <li><svg class="i"><use href="#ic-cal"/></svg><span data-i="iRec">Accueil tous les jours, de 9 h à 12 h et de 13 h à 20 h (le plan du site actuel indique 9 h – 21 h). Arrivée tardive possible jusqu'à 23 h sur appel.</span></li>
+     <li><svg class="i"><use href="#ic-ok"/></svg><span data-i="iGate">Barrière à digicode de 7 h à 23 h, sortie libre 24 h/24.</span></li>
+     <li><svg class="i"><use href="#ic-ok"/></svg><span data-i="iPay">Carte bancaire (dès 15 €), espèces, chèques, chèques-vacances ANCV, virement.</span></li>
+    </ul>
+    <p style="margin-top:20px"><a class="btn btn-d" href="https://www.google.com/maps/dir/?api=1&amp;destination=44.344183,4.604771" target="_blank" rel="noopener"><svg class="i"><use href="#ic-pin"/></svg><span data-i="iRoute">Itinéraire</span></a></p>
+    <p class="sm" data-i="iRoad">Depuis l'A7 : sorties Montélimar-Sud, Bollène ou Orange. Attention à vélo, la montée finale est raide.</p>
+   </div>
+   <div class="faq" id="faq"><h2 data-i="iFaq">Vos questions</h2></div>
+  </div>
+ </section>
+ <section style="background:var(--calcaire)">
+  <div class="wrap">
+   <h2 data-i="iRev">Ce que disent les vacanciers</h2>
+   <div class="reviews" id="revAll"></div>
+  </div>
+ </section>
+ <section>
+  <div class="wrap grid2">
+   <div>
+    <h2 data-i="iNews">Actualités</h2>
+    <p data-i="n1"><b>28/05/2024 · Reportage BFM.</b> Le camping soutient la pétition « Sauvons le vrai camping » ; BFM est venu filmer et interroger les vacanciers.</p>
+    <p data-i="n2"><b>2024 · Rénovations.</b> Tous les locatifs rénovés, et une nouvelle signalétique.</p>
+    <p data-i="n3"><b>2024 · Le carré Sator.</b> Ce palindrome latin, connu depuis Pompéi (an 79), fait désormais partie du décor.</p>
+   </div>
+   <div>
+    <h2 data-i="iDocs">Documents</h2>
+    <p data-i="iDocsP">Mentions légales, confidentialité, cookies, règlement intérieur, CGV, sécurité, équipements bébé et animaux : repris intégralement du site actuel à l'installation.</p>
+    <ul class="chips"><li data-i="dc1">Mentions légales</li><li data-i="dc2">Règlement</li><li data-i="dc3">CGV</li><li data-i="dc4">Sécurité</li><li data-i="dc5">Kits bébé &amp; animaux</li><li data-i="dc6">Confidentialité</li></ul>
+    <p class="sm" style="margin-top:16px" data-i="iPart">Partenaires : Ardèche Découverte, Campings Ardèche, Camping2Be (Award 2024).</p>
+   </div>
+  </div>
+ </section>
+</div>
+
+<!-- RESERVER -->
+<div class="view" data-v="reserver">
+ <section>
+  <div class="wrap grid2">
+   <div>
+    <h1 data-i="bH">Votre séjour, chiffré tout de suite</h1>
+    <p class="lead" data-i="bLead">Calculez une estimation d'après les tarifs 2026, puis envoyez votre demande à l'accueil. Réponse par e-mail ; un acompte de 30 % est demandé pour les locations.</p>
+    <form class="form" id="bk" novalidate>
+     <label class="full"><span data-i="bType">Hébergement</span>
+      <select id="bkType"><option value="pitch" data-i="bo1">Emplacement (tente, caravane, camping-car, van)</option><option value="trigano" data-i="bo2">Mobil-home Trigano (31 m²)</option><option value="watipi" data-i="bo3">Mobil-home Watipi (41 m²)</option><option value="garrigue" data-i="bo4">Mobil-home Le Garrigue (31 m²)</option></select></label>
+     <label><span data-i="bIn">Arrivée</span><input type="date" id="bkIn" required></label>
+     <label><span data-i="bOut">Départ</span><input type="date" id="bkOut" required></label>
+     <label><span data-i="bAd">Adultes</span><input type="number" id="bkAd" min="1" max="6" value="2"></label>
+     <label><span data-i="bCh">Enfants</span><input type="number" id="bkCh" min="0" max="5" value="0"></label>
+     <label id="lbElec"><span data-i="bElec">Électricité</span><select id="bkElec"><option value="0" data-i="be0">Sans</option><option value="3">4 A</option><option value="5">6 A</option><option value="7">10 A</option><option value="10" data-i="be4">Réfrigérateur + 4 A</option></select></label>
+     <label id="lbPet"><span data-i="bPet">Animaux</span><input type="number" id="bkPet" min="0" max="3" value="0"></label>
+     <label class="full"><span data-i="bMail">Votre e-mail</span><input type="email" id="bkMail" autocomplete="email" placeholder="nom@exemple.fr"></label>
+     <p class="err full" id="bkErr" role="alert"></p>
+     <div class="full" style="display:flex;gap:10px;flex-wrap:wrap"><button class="btn btn-g" type="submit" data-i="bSend">Envoyer ma demande</button><a class="btn btn-o" href="tel:+33475046835"><svg class="i"><use href="#ic-tel"/></svg><span data-i="bCall">Appeler l'accueil</span></a></div>
+    </form>
+   </div>
+   <div>
+    <div class="est" aria-live="polite">
+     <div data-i="bEst">Estimation</div>
+     <div class="big" id="estVal">—</div>
+     <p id="estDet" style="margin:.4em 0 0;opacity:.9"></p>
+    </div>
+    <p class="note" style="margin-top:14px" data-i="bNote">Démonstration : la réservation réelle passe aujourd'hui par le module Secureholiday du camping. Les tarifs non publiés (emplacements de janvier à juin) sont confirmés par l'accueil.</p>
+    <figure class="ph" style="margin:18px 0 0;aspect-ratio:16/10"><img src="img/survol.jpg" alt="Le camping vu du ciel" data-i-alt="aSurvol" loading="lazy"></figure>
+   </div>
+  </div>
+ </section>
+</div>
+</main>
+
+<footer class="site">
+ <div class="wrap fgrid">
+  <div>
+   <h3>Camping Les Truffières ★★★</h3>
+   <p data-i="ftA">Établissement familial fondé en 1966, géré par Valérie et Stéphane Soulier. Ouvert toute l'année.</p>
+   <p>252 Impasse Les Truffières<br>07700 Saint-Marcel-d'Ardèche<br><a href="tel:+33475046835">+33 (0)4 75 04 68 35</a><br><a href="mailto:soulier.valerie@wanadoo.fr">soulier.valerie@wanadoo.fr</a></p>
+   <div class="soc">
+    <a href="https://www.facebook.com/camping.lestruffieres.9" target="_blank" rel="noopener" aria-label="Facebook"><svg class="i"><use href="#ic-fb"/></svg></a>
+    <a href="https://www.instagram.com/lestruffieres/" target="_blank" rel="noopener" aria-label="Instagram"><svg class="i"><use href="#ic-ig"/></svg></a>
+    <a href="https://www.youtube.com/channel/UCOQU7DwR10dWuIjTBXctU2g" target="_blank" rel="noopener" aria-label="YouTube"><svg class="i"><use href="#ic-yt"/></svg></a>
+    <a href="https://photos.google.com/share/AF1QipPYEoLDMsS0QrdceycbyAVtDIqsGYZnarI_jhKWMvDEQjrUPjV-tvBlyru42t4G6g?pli=1&amp;key=Zy1GZkd3WGQzTE5UZmo3c1RfVGdKMFJQWnpsWm5R" target="_blank" rel="noopener" aria-label="Album photo"><svg class="i"><use href="#ic-photo"/></svg></a>
+   </div>
+  </div>
+  <div><h3 data-i="ftS">Séjourner</h3><p><a href="#/emplacements" data-i="nPitch">Emplacements</a><br><a href="#/mobil-homes" data-i="nMh">Mobil-homes</a><br><a href="#/tarifs" data-i="nRates">Tarifs</a><br><a href="#/reserver" data-i="nBook">Réserver</a></p></div>
+  <div><h3 data-i="ftV">Sur place</h3><p><a href="#/piscine" data-i="nPool">Piscine</a><br><a href="#/se-restaurer" data-i="nFood">The Pub &amp; L'Oustaou</a><br><a href="#/region" data-i="nRegion">La région</a><br><a href="#/histoire" data-i="nStory">Depuis 1966</a></p></div>
+  <div><h3 data-i="ftI">Informations</h3><p><a href="#/infos" data-i="nInfo">Infos &amp; FAQ</a><br><a href="#/infos" data-i="dc1">Mentions légales</a><br><a href="#/infos" data-i="dc3">CGV</a><br><a href="#/infos" data-i="dc2">Règlement</a></p></div>
+ </div>
+ <div class="wrap legal" data-i="ftL">Proposition de refonte réalisée par Neovera Studio pour le Camping Les Truffières. Contenus, photos et tarifs repris du site actuel du camping.</div>
+</footer>
+
+<div class="mbar"><a class="btn btn-o" href="tel:+33475046835"><svg class="i"><use href="#ic-tel"/></svg><span data-i="mCall">Appeler</span></a><a class="btn btn-g" href="#/reserver"><svg class="i"><use href="#ic-cal"/></svg><span data-i="ctaBook">Réserver</span></a></div>
+
+<button class="cs-btn" id="csBtn" aria-controls="csPan" aria-expanded="false"><span class="av"><svg class="i"><use href="#ic-leaf"/></svg></span><span><b>Truffières Conseil</b><small data-i="csSub">Je vous aide à choisir</small></span></button>
+<div class="cs-invite" id="csInv"><button aria-label="Fermer" id="csInvX">×</button><span data-i="csInv">Bonjour ! Emplacement ou mobil-home, quel mois, quel prix ? Je réponds en quelques secondes.</span></div>
+<div class="cs-pan" id="csPan" role="dialog" aria-label="Truffières Conseil">
+ <div class="cs-h"><span class="av" style="width:36px;height:36px;border-radius:50%;background:var(--genet);display:grid;place-items:center;color:var(--truffe)"><svg class="i"><use href="#ic-leaf"/></svg></span><div><b>Truffières Conseil</b><small data-i="csVA">Assistant virtuel du camping</small></div><button id="csX" aria-label="Fermer">×</button></div>
+ <div class="cs-log" id="csLog"></div>
+ <div class="cs-q" id="csQ"></div>
+ <form class="cs-f" id="csF"><input id="csIn" autocomplete="off" aria-label="Votre question"><button type="submit" data-i="csSend">Envoyer</button></form>
+</div>
+<script>
+const I18N_RAW={
+skip:['Skip to content','Ir al contenido','Zum Inhalt','Vai al contenuto','Naar de inhoud'],
+langLabel:['Language','Idioma','Sprache','Lingua','Taal'],
+ctaBook:['Book','Reservar','Buchen','Prenota','Boeken'],
+nHome:['Home','Inicio','Start','Home','Home'],
+nPitch:['Pitches','Parcelas','Stellplätze','Piazzole','Plaatsen'],
+nMh:['Mobile homes','Mobil-homes','Mobilheime','Case mobili','Stacaravans'],
+nRates:['Rates','Tarifas','Preise','Tariffe','Tarieven'],
+nPool:['Pool','Piscina','Pool','Piscina','Zwembad'],
+nFood:['The Pub &amp; L\'Oustaou','The Pub y L\'Oustaou','The Pub &amp; L\'Oustaou','The Pub e L\'Oustaou','The Pub &amp; L\'Oustaou'],
+nRegion:['The area','La región','Die Region','La zona','De streek'],
+nStory:['Since 1966','Desde 1966','Seit 1966','Dal 1966','Sinds 1966'],
+nInfo:['Info &amp; FAQ','Info y preguntas','Infos &amp; FAQ','Info e FAQ','Info &amp; FAQ'],
+nBook:['Book','Reservar','Buchen','Prenota','Boeken'],
+nCons:['Truffières Conseil','Truffières Conseil','Truffières Conseil','Truffières Conseil','Truffières Conseil'],
+h1:['Les Truffières campsite, open 365 days a year','El camping Les Truffières, abierto los 365 días del año','Camping Les Truffières, an 365 Tagen im Jahr geöffnet','Il campeggio Les Truffières, aperto 365 giorni l\'anno','Camping Les Truffières, 365 dagen per jaar open'],
+heroLead:['Terraced pitches of over 100 m², three air-conditioned mobile homes and a skyline from Mont Ventoux to the Alps. In Saint-Marcel-d\'Ardèche, 4 km from the Gorges.','Parcelas en terrazas de más de 100 m², tres mobil-homes climatizados y el horizonte del Ventoux a los Alpes. En Saint-Marcel-d\'Ardèche, a 4 km de las Gargantas.','Terrassierte Stellplätze über 100 m², drei klimatisierte Mobilheime und ein Horizont vom Mont Ventoux bis zu den Alpen. In Saint-Marcel-d\'Ardèche, 4 km von den Schluchten.','Piazzole a terrazze di oltre 100 m², tre case mobili climatizzate e l\'orizzonte dal Ventoux alle Alpi. A Saint-Marcel-d\'Ardèche, a 4 km dalle Gole.','Terrasplaatsen van meer dan 100 m², drie stacaravans met airco en een horizon van de Mont Ventoux tot de Alpen. In Saint-Marcel-d\'Ardèche, op 4 km van de kloven.'],
+heroCta1:['Check availability','Ver disponibilidad','Verfügbarkeit prüfen','Vedi disponibilità','Beschikbaarheid bekijken'],
+heroCta2:['Pick your month','Elegir el mes','Monat wählen','Scegli il mese','Kies uw maand'],
+f1:['Pitch from €22 a night','Parcela desde 22 € la noche','Stellplatz ab 22 € pro Nacht','Piazzola da 22 € a notte','Plaats vanaf € 22 per nacht'],
+f2:['Mobile home from €400 a week','Mobil-home desde 400 € la semana','Mobilheim ab 400 € pro Woche','Casa mobile da 400 € a settimana','Stacaravan vanaf € 400 per week'],
+f3:['4.4/5 from 261 Google reviews','4,4/5 en 261 opiniones de Google','4,4/5 bei 261 Google-Bewertungen','4,4/5 su 261 recensioni Google','4,4/5 uit 261 Google-reviews'],
+hzT:['Which month do you fancy?','¿Qué mes le apetece?','Welcher Monat reizt Sie?','Quale mese vi tenta?','Welke maand trekt u?'],
+hzLead:['We never close. Pick a month: the sun moves along our skyline, and you see the price and what awaits you.','Aquí nunca cerramos. Elija un mes: el sol se sitúa en nuestro horizonte y verá la tarifa y lo que le espera.','Hier wird nie geschlossen. Wählen Sie einen Monat: Die Sonne wandert über unseren Horizont, und Sie sehen Preis und Angebot vor Ort.','Qui non chiudiamo mai. Scegliete un mese: il sole si sposta sul nostro orizzonte e vedete la tariffa e cosa vi aspetta.','Wij sluiten nooit. Kies een maand: de zon schuift over onze horizon en u ziet het tarief en wat u te wachten staat.'],
+hzAlpes:['The Alps','Los Alpes','Die Alpen','Le Alpi','De Alpen'],
+hzP1:['Pitch · 2 people + 1 vehicle','Parcela · 2 pers. + 1 vehículo','Stellplatz · 2 Pers. + 1 Fahrzeug','Piazzola · 2 pers. + 1 veicolo','Plaats · 2 pers. + 1 voertuig'],
+hzP2:['Mobile home · 4 people · per week','Mobil-home · 4 pers. · por semana','Mobilheim · 4 Pers. · pro Woche','Casa mobile · 4 pers. · a settimana','Stacaravan · 4 pers. · per week'],
+hzNote:['Published 2026 rates, on the 15th of the month.','Tarifas 2026 publicadas, al día 15 del mes.','Veröffentlichte Preise 2026, jeweils am 15. des Monats.','Tariffe 2026 pubblicate, al 15 del mese.','Gepubliceerde tarieven 2026, op de 15e van de maand.'],
+hzOpen:['This month at the campsite','Este mes en el camping','Diesen Monat auf dem Platz','Questo mese al campeggio','Deze maand op de camping'],
+hzBook:['Book for this month','Reservar ese mes','Für diesen Monat buchen','Prenota per questo mese','Boek voor deze maand'],
+hSpace:['Space, for real','Espacio de verdad','Wirklich Platz','Spazio, davvero','Echt ruimte'],
+hSpaceP:['Five hectares of terraces, around a hundred pitches of over 100 m², in shade or sun. Even the largest motorhomes and caravans fit without manoeuvring.','Cinco hectáreas de terrazas, un centenar de parcelas de más de 100 m², a la sombra o al sol. Caben las autocaravanas y caravanas más grandes sin maniobras.','Fünf Hektar Terrassen, rund hundert Stellplätze über 100 m², im Schatten oder in der Sonne. Auch die größten Wohnmobile und Wohnwagen passen ohne Rangieren.','Cinque ettari di terrazze, un centinaio di piazzole di oltre 100 m², all\'ombra o al sole. Anche i camper e le roulotte più grandi entrano senza manovre.','Vijf hectare terrassen, zo\'n honderd plaatsen van meer dan 100 m², in de schaduw of de zon. Zelfs de grootste campers en caravans passen zonder manoeuvreren.'],
+c1:['Shade or sun','Sombra o sol','Schatten oder Sonne','Ombra o sole','Schaduw of zon'],
+c2:['Electricity 4 to 10 A','Electricidad de 4 a 10 A','Strom 4 bis 10 A','Elettricità da 4 a 10 A','Stroom 4 tot 10 A'],
+c3:['Free Wi-Fi','Wi-Fi gratis','Kostenloses WLAN','Wi-Fi gratuito','Gratis wifi'],
+c4:['Flot Bleu service point','Área Flot Bleu','Entsorgung Flot Bleu','Area Flot Bleu','Flot Bleu-servicepunt'],
+c5:['Heated showers in winter','Sanitarios con calefacción en invierno','Beheizte Sanitäranlagen im Winter','Servizi riscaldati d\'inverno','Verwarmd sanitair in de winter'],
+hSpaceCta:['Choose your pitch','Elegir parcela','Stellplatz wählen','Scegli la piazzola','Kies uw plaats'],
+hMh:['Travel light, unpack and relax','Llegar ligero y deshacer la maleta','Leicht anreisen, Koffer abstellen','Arrivare leggeri, posare le valigie','Licht reizen, koffers neerzetten'],
+hMhP:['Three air-conditioned mobile homes for 4, bed linen provided, a quiet deck. Valérie and Stéphane prepare them personally.','Tres mobil-homes climatizados para 4, ropa de cama incluida, terraza tranquila. Valérie y Stéphane los preparan ellos mismos.','Drei klimatisierte Mobilheime für 4, Bettwäsche inklusive, ruhige Terrasse. Valérie und Stéphane bereiten sie selbst vor.','Tre case mobili climatizzate per 4, biancheria inclusa, terrazza tranquilla. Valérie e Stéphane le preparano di persona.','Drie stacaravans met airco voor 4, beddengoed inbegrepen, rustig terras. Valérie en Stéphane maken ze zelf klaar.'],
+hPool:['A pool without slides, on purpose','Una piscina sin toboganes, a propósito','Ein Pool ohne Rutschen, mit Absicht','Una piscina senza scivoli, di proposito','Een zwembad zonder glijbanen, met opzet'],
+hPoolP:['A 17 × 7 m pool, solar-heated from June to September, 1.30 m deep throughout, and a floating paddling area for babies from 6 months. You can swim until the Pub closes.','Una piscina de 17 × 7 m con calefacción solar de junio a septiembre, 1,30 m de profundidad, y un chapoteadero flotante para bebés desde 6 meses. Se puede nadar hasta que cierra el Pub.','Ein 17 × 7 m großes Becken, solarbeheizt von Juni bis September, überall 1,30 m tief, dazu ein schwimmendes Planschbecken für Babys ab 6 Monaten. Baden bis der Pub schließt.','Una vasca di 17 × 7 m riscaldata dal sole da giugno a settembre, profonda 1,30 m ovunque, e una vasca galleggiante per neonati da 6 mesi. Si nuota fino alla chiusura del Pub.','Een bad van 17 × 7 m, door de zon verwarmd van juni tot september, overal 1,30 m diep, en een drijvend pierenbad voor baby\'s vanaf 6 maanden. Zwemmen tot de Pub sluit.'],
+hPoolCta:['See the pool','Ver la piscina','Zum Pool','Vedi la piscina','Bekijk het zwembad'],
+hFood:['In the evening, we meet at the Pub','Por la noche, nos vemos en el Pub','Abends trifft man sich im Pub','La sera ci si ritrova al Pub','\'s Avonds zien we elkaar in de Pub'],
+hFoodP:['Ardèche beers, valley wines and house cocktails, all year round. In July and August, L\'Oustaou serves food from neighbouring producers on its shaded terrace.','Cervezas de Ardèche, vinos del valle y cócteles de la casa, todo el año. En julio y agosto, L\'Oustaou sirve cocina de productores vecinos en su terraza a la sombra.','Ardèche-Biere, Weine aus dem Tal und Hauscocktails, das ganze Jahr. Im Juli und August kocht L\'Oustaou mit Produkten aus der Nachbarschaft auf der schattigen Terrasse.','Birre dell\'Ardèche, vini della valle e cocktail della casa, tutto l\'anno. A luglio e agosto L\'Oustaou serve cucina di produttori vicini sulla terrazza ombreggiata.','Ardèche-bieren, wijnen uit de vallei en huiscocktails, het hele jaar. In juli en augustus serveert L\'Oustaou gerechten van buurtproducenten op het schaduwrijke terras.'],
+hFoodCta:['Discover The Pub and L\'Oustaou','Descubrir The Pub y L\'Oustaou','The Pub und L\'Oustaou entdecken','Scopri The Pub e L\'Oustaou','Ontdek The Pub en L\'Oustaou'],
+hReg:['The Gorges 4 km away, the rest within cycling distance','Las Gargantas a 4 km, el resto en bici','Die Schluchten 4 km entfernt, der Rest per Rad','Le Gole a 4 km, il resto in bici','De kloven op 4 km, de rest op fietsafstand'],
+hRegP:['Canoeing with a free shuttle from the campsite, caves and potholes, villages full of character, Provençal markets. All booked or planned at reception.','Canoa con lanzadera gratuita desde el camping, cuevas y simas, pueblos con encanto, mercados provenzales. Todo se reserva o prepara en recepción.','Kanu mit kostenlosem Shuttle ab dem Platz, Höhlen und Schlünde, Dörfer mit Charakter, provenzalische Märkte. Alles an der Rezeption buchbar.','Canoa con navetta gratuita dal campeggio, grotte e abissi, borghi di carattere, mercati provenzali. Tutto si prenota o si prepara alla reception.','Kanoën met gratis shuttle vanaf de camping, grotten, karakteristieke dorpen, Provençaalse markten. Alles te boeken of te plannen bij de receptie.'],
+rg1:['Paddle the Gorges','Bajar las Gargantas','Die Schluchten hinunter','Scendere le Gole','De kloven afvaren'],
+rg1p:['€25 to €90, equipment and shuttle included, for campsite guests only.','De 25 € a 90 €, material y lanzadera incluidos, solo para clientes del camping.','25 € bis 90 €, Ausrüstung und Shuttle inklusive, nur für Campinggäste.','Da 25 € a 90 €, attrezzatura e navetta incluse, solo per gli ospiti.','€ 25 tot € 90, materiaal en shuttle inbegrepen, alleen voor campinggasten.'],
+rg2:['Walk, cycle','Caminar, pedalear','Wandern, radeln','Camminare, pedalare','Wandelen, fietsen'],
+rg2p:['Trails from the campsite, the ViaRhôna close by, QR-code routes at reception.','Senderos desde el camping, la ViaRhôna al lado, rutas con código QR en recepción.','Wege ab dem Platz, die ViaRhôna nebenan, QR-Code-Touren an der Rezeption.','Sentieri dal campeggio, la ViaRhôna a due passi, percorsi con QR code alla reception.','Paden vanaf de camping, de ViaRhôna vlakbij, QR-routes bij de receptie.'],
+rg3:['Caves and potholes','Cuevas y simas','Höhlen und Schlünde','Grotte e abissi','Grotten en ravijnen'],
+rg3p:['Saint-Marcel cave 6 km away, Aven Marzal 10 km, Chauvet 2 21 km.','Cueva de Saint-Marcel a 6 km, Aven Marzal a 10 km, Chauvet 2 a 21 km.','Höhle Saint-Marcel 6 km, Aven Marzal 10 km, Chauvet 2 21 km.','Grotta di Saint-Marcel a 6 km, Aven Marzal a 10 km, Chauvet 2 a 21 km.','Grot van Saint-Marcel op 6 km, Aven Marzal op 10 km, Chauvet 2 op 21 km.'],
+hRev:['4.4 out of 5, and what guests remember','4,4 sobre 5, y lo que se recuerda','4,4 von 5, und was in Erinnerung bleibt','4,4 su 5, e cosa si ricorda','4,4 op 5, en wat gasten onthouden'],
+rv1:['The size of the pitches','El tamaño de las parcelas','Die Größe der Stellplätze','La grandezza delle piazzole','De grootte van de plaatsen'],
+rv2:['The warm welcome','La acogida cálida','Der herzliche Empfang','L\'accoglienza calorosa','Het hartelijke onthaal'],
+rv3:['The grocery and nearby shops','La tienda y los comercios cercanos','Der Laden und die Geschäfte in der Nähe','L\'emporio e i negozi vicini','De winkel en de zaken in de buurt'],
+rv4:['The view from Ventoux to Mont Blanc','La vista del Ventoux al Mont Blanc','Der Blick vom Ventoux bis zum Mont Blanc','La vista dal Ventoux al Monte Bianco','Het uitzicht van de Ventoux tot de Mont Blanc'],
+rv5:['Absolute calm','La calma absoluta','Absolute Ruhe','La calma assoluta','De absolute rust'],
+rvAll:['Read all the reviews from the current site','Leer todas las opiniones del sitio','Alle Bewertungen der Website lesen','Leggi tutte le recensioni del sito','Lees alle recensies van de site'],
+hQuote:['“Since 1966, our priority has been to give you holidays that suit you.”','«Desde 1966, nuestra prioridad es ofrecerle unas vacaciones a su medida.»','„Seit 1966 ist es unser Ziel, Ihnen Ferien zu bieten, die zu Ihnen passen.“','«Dal 1966 la nostra priorità è offrirvi vacanze che vi somiglino.»','“Sinds 1966 is onze prioriteit u een vakantie te bieden die bij u past.”'],
+hQuoteBy:['Valérie and Stéphane Soulier, second generation','Valérie y Stéphane Soulier, segunda generación','Valérie und Stéphane Soulier, zweite Generation','Valérie e Stéphane Soulier, seconda generazione','Valérie en Stéphane Soulier, tweede generatie'],
+hStoryCta:['From farm to campsite: the story','De la granja al camping: la historia','Vom Bauernhof zum Campingplatz','Dalla fattoria al campeggio: la storia','Van boerderij tot camping: het verhaal'],
+pH:['Pitches of over 100 m²','Parcelas de más de 100 m²','Stellplätze über 100 m²','Piazzole di oltre 100 m²','Plaatsen van meer dan 100 m²'],
+pLead:['Tents, caravans, motorhomes and vans: about 75 plots shown on the map (53 “comfort” and 22 “nature”), on terraces overlooking the Rhône valley, Mont Ventoux and the Alps. Up to 6 people per pitch.','Tiendas, caravanas, autocaravanas y furgonetas: unas 75 parcelas en el plano (53 «confort» y 22 «naturaleza»), en terrazas con vista al valle del Ródano, el Ventoux y los Alpes. Hasta 6 personas por parcela.','Zelte, Wohnwagen, Wohnmobile und Vans: rund 75 Parzellen auf dem Plan (53 „Komfort“ und 22 „Natur“), auf Terrassen mit Blick auf das Rhônetal, den Ventoux und die Alpen. Bis zu 6 Personen pro Platz.','Tende, roulotte, camper e van: circa 75 piazzole sulla mappa (53 «comfort» e 22 «natura»), a terrazze con vista sulla valle del Rodano, il Ventoux e le Alpi. Fino a 6 persone per piazzola.','Tenten, caravans, campers en busjes: zo\'n 75 plaatsen op de kaart (53 „comfort” en 22 „natuur”), op terrassen met uitzicht op het Rhônedal, de Ventoux en de Alpen. Tot 6 personen per plaats.'],
+t1:['Tents &amp; bivouac','Tiendas y vivac','Zelte &amp; Biwak','Tende e bivacco','Tenten &amp; bivak'],
+t1p:['Large shaded plots to get back to basics.','Amplias parcelas a la sombra para volver a lo esencial.','Große schattige Parzellen für das Wesentliche.','Ampie piazzole ombreggiate per tornare all\'essenziale.','Ruime schaduwrijke plaatsen, terug naar de basis.'],
+t2:['Caravans &amp; awnings','Caravanas y avances','Wohnwagen &amp; Vorzelte','Roulotte e verande','Caravans &amp; voortenten'],
+t2p:['Level ground, room for the awning and the car.','Terreno estabilizado, sitio para el avance y el coche.','Ebener Untergrund, Platz für Vorzelt und Auto.','Terreno stabilizzato, spazio per veranda e auto.','Vlakke grond, ruimte voor voortent en auto.'],
+t3:['Motorhomes','Autocaravanas','Wohnmobile','Camper','Campers'],
+t3p:['XXL plots for large vehicles, Flot Bleu service point.','Parcelas XXL para grandes vehículos, área Flot Bleu.','XXL-Parzellen für große Fahrzeuge, Entsorgung Flot Bleu.','Piazzole XXL per grandi mezzi, area Flot Bleu.','XXL-plaatsen voor grote voertuigen, Flot Bleu-servicepunt.'],
+t4:['Converted vans','Furgonetas camperizadas','Ausgebaute Vans','Van attrezzati','Campervans'],
+t4p:['Easy access and heated showers in every season.','Acceso libre y sanitarios con calefacción todo el año.','Freier Zugang und beheizte Sanitäranlagen zu jeder Jahreszeit.','Accesso libero e servizi riscaldati in ogni stagione.','Vrije toegang en verwarmd sanitair in elk seizoen.'],
+pInc:['Everything is included','Todo está incluido','Alles inklusive','Tutto è incluso','Alles is inbegrepen'],
+pi1:['Pool and free hot water','Piscina y agua caliente gratuita','Pool und kostenloses Warmwasser','Piscina e acqua calda gratuita','Zwembad en gratis warm water'],
+pi2:['High-speed Wi-Fi','Wi-Fi de alta velocidad','Schnelles WLAN','Wi-Fi ad alta velocità','Snelle wifi'],
+pi3:['Two shower blocks, one heated off season, baby room, wheelchair access','Dos bloques sanitarios, uno con calefacción fuera de temporada, cambiador, acceso PMR','Zwei Sanitärblöcke, einer beheizt in der Nebensaison, Babyraum, barrierefrei','Due blocchi servizi, uno riscaldato fuori stagione, fasciatoio, accesso disabili','Twee sanitairgebouwen, één verwarmd buiten het seizoen, babyruimte, rolstoeltoegankelijk'],
+pi4:['Free loan of activity equipment','Préstamo de material para actividades','Leihmaterial für Aktivitäten','Prestito di materiale per le attività','Gratis leenmateriaal voor activiteiten'],
+pi5:['Flot Bleu service point','Área de vaciado Flot Bleu','Entsorgungsstation Flot Bleu','Area di scarico Flot Bleu','Flot Bleu-lozingspunt'],
+pi6:['Water points and wooden picnic tables','Puntos de agua y mesas de pícnic de madera','Wasserstellen und Picknicktische aus Holz','Punti acqua e tavoli da picnic in legno','Waterpunten en houten picknicktafels'],
+pFridge:['Fridge hire available. A starry sky with no light pollution, free of charge.','Alquiler de nevera disponible. Cielo estrellado sin contaminación lumínica, gratis.','Kühlschrankmiete möglich. Sternenhimmel ohne Lichtverschmutzung, gratis.','Noleggio frigorifero disponibile. Cielo stellato senza inquinamento luminoso, gratis.','Koelkast te huur. Sterrenhemel zonder lichtvervuiling, gratis.'],
+pRatesCta:['See pitch rates','Ver tarifas de parcelas','Stellplatzpreise ansehen','Vedi le tariffe delle piazzole','Bekijk de plaatstarieven'],
+pPlan:['Site map','El plano del camping','Lageplan','La mappa del campeggio','Plattegrond van de camping'],
+pPlanP:['Tell us your wishes when booking: subject to availability, the team assigns the best-suited pitch.','Indique sus preferencias al reservar: según disponibilidad, el equipo le asigna la parcela más adecuada.','Nennen Sie Ihre Wünsche bei der Buchung: je nach Verfügbarkeit teilt Ihnen das Team den passendsten Platz zu.','Indicate le preferenze alla prenotazione: secondo disponibilità, il team assegna la piazzola più adatta.','Geef uw wensen door bij het boeken: afhankelijk van beschikbaarheid kiest het team de best passende plaats.'],
+pPlanN:['Map taken as is from the current site; a redrawn, translated version is planned when the site goes live.','Plano tomado tal cual del sitio actual; se prevé una versión redibujada y traducida en la instalación.','Plan unverändert von der aktuellen Website; eine neu gezeichnete, übersetzte Version folgt bei der Umsetzung.','Mappa ripresa così com\'è dal sito attuale; una versione ridisegnata e tradotta è prevista all\'installazione.','Plattegrond ongewijzigd van de huidige site; een hertekende, vertaalde versie volgt bij de installatie.'],
+mH:['Three air-conditioned mobile homes','Tres mobil-homes climatizados','Drei klimatisierte Mobilheime','Tre case mobili climatizzate','Drie stacaravans met airco'],
+mLead:['For 1 to 4 people, two bedrooms each, bed linen provided, non-smoking. No pets in rentals. Check-in from 4 pm, check-out by 10 am.','Para 1 a 4 personas, dos dormitorios cada uno, ropa de cama incluida, no fumadores. Sin animales en los alquileres. Llegada desde las 16 h, salida antes de las 10 h.','Für 1 bis 4 Personen, je zwei Schlafzimmer, Bettwäsche inklusive, Nichtraucher. Keine Haustiere. Anreise ab 16 Uhr, Abreise bis 10 Uhr.','Per 1-4 persone, due camere ciascuna, biancheria inclusa, non fumatori. Niente animali negli affitti. Arrivo dalle 16, partenza entro le 10.','Voor 1 tot 4 personen, elk twee slaapkamers, beddengoed inbegrepen, rookvrij. Geen huisdieren. Aankomst vanaf 16 uur, vertrek vóór 10 uur.'],
+tH:['2026 rates','Tarifas 2026','Preise 2026','Tariffe 2026','Tarieven 2026'],
+tLead:['Pitches from €22 a night, mobile homes from €400 a week. Pool, Wi-Fi, heated showers and equipment loan included.','Parcelas desde 22 € la noche, mobil-homes desde 400 € la semana. Piscina, Wi-Fi, sanitarios con calefacción y préstamo de material incluidos.','Stellplätze ab 22 € pro Nacht, Mobilheime ab 400 € pro Woche. Pool, WLAN, beheizte Sanitäranlagen und Leihmaterial inklusive.','Piazzole da 22 € a notte, case mobili da 400 € a settimana. Piscina, Wi-Fi, servizi riscaldati e prestito materiale inclusi.','Plaatsen vanaf € 22 per nacht, stacaravans vanaf € 400 per week. Zwembad, wifi, verwarmd sanitair en leenmateriaal inbegrepen.'],
+tP:['Nature pitches','Parcelas naturaleza','Natur-Stellplätze','Piazzole natura','Natuurplaatsen'],
+tSeason:['Season','Temporada','Saison','Stagione','Seizoen'],
+t1v:['1 person + 1 vehicle','1 pers. + 1 vehículo','1 Pers. + 1 Fahrzeug','1 pers. + 1 veicolo','1 pers. + 1 voertuig'],
+t2v:['2 people + 1 vehicle','2 pers. + 1 vehículo','2 Pers. + 1 Fahrzeug','2 pers. + 1 veicolo','2 pers. + 1 voertuig'],
+tHigh:['High season, 27/06 to 04/09','Temporada alta, del 27/06 al 04/09','Hauptsaison, 27.06. bis 04.09.','Alta stagione, dal 27/06 al 04/09','Hoogseizoen, 27/06 tot 04/09'],
+tLow:['Low season, 05/09 to 31/12','Temporada baja, del 05/09 al 31/12','Nebensaison, 05.09. bis 31.12.','Bassa stagione, dal 05/09 al 31/12','Laagseizoen, 05/09 tot 31/12'],
+tJan:['01/01 to 26/06','Del 01/01 al 26/06','01.01. bis 26.06.','Dal 01/01 al 26/06','01/01 tot 26/06'],
+tAsk:['On request','Bajo petición','Auf Anfrage','Su richiesta','Op aanvraag'],
+tElec:['Electricity and fridge','Electricidad y nevera','Strom und Kühlschrank','Elettricità e frigorifero','Stroom en koelkast'],
+pn3:['€3.00 / night','3,00 € / noche','3,00 € / Nacht','3,00 € / notte','€ 3,00 / nacht'],
+pn5:['€5.00 / night','5,00 € / noche','5,00 € / Nacht','5,00 € / notte','€ 5,00 / nacht'],
+pn7:['€7.00 / night','7,00 € / noche','7,00 € / Nacht','7,00 € / notte','€ 7,00 / nacht'],
+tFr:['Fridge + 4 A','Nevera + 4 A','Kühlschrank + 4 A','Frigorifero + 4 A','Koelkast + 4 A'],
+pn10:['€10.00 / night','10,00 € / noche','10,00 € / Nacht','10,00 € / notte','€ 10,00 / nacht'],
+tSup:['Extras','Suplementos','Zuschläge','Supplementi','Toeslagen'],
+tS1:['Extra person','Persona adicional','Zusätzliche Person','Persona in più','Extra persoon'],
+pn65:['€6.50 / night','6,50 € / noche','6,50 € / Nacht','6,50 € / notte','€ 6,50 / nacht'],
+tS2:['Pet','Animal doméstico','Haustier','Animale domestico','Huisdier'],
+pn2:['€2.00 / night','2,00 € / noche','2,00 € / Nacht','2,00 € / notte','€ 2,00 / nacht'],
+tS3:['Visitor (over 2 hours)','Visitante (más de 2 h)','Besucher (über 2 Std.)','Visitatore (oltre 2 ore)','Bezoeker (meer dan 2 uur)'],
+tS4:['Extra car or tent','Coche o tienda adicional','Zusätzliches Auto oder Zelt','Auto o tenda in più','Extra auto of tent'],
+pn45:['€4.50 / night','4,50 € / noche','4,50 € / Nacht','4,50 € / notte','€ 4,50 / nacht'],
+tS5:['Tourist tax (18+)','Tasa turística (mayores de 18)','Kurtaxe (ab 18)','Tassa di soggiorno (18+)','Toeristenbelasting (18+)'],
+pd066:['€0.66 / day','0,66 € / día','0,66 € / Tag','0,66 € / giorno','€ 0,66 / dag'],
+tS6:['Booking fee','Gastos de gestión','Buchungsgebühr','Spese di prenotazione','Boekingskosten'],
+tM:['Trigano and Watipi mobile homes','Mobil-homes Trigano y Watipi','Mobilheime Trigano und Watipi','Case mobili Trigano e Watipi','Stacaravans Trigano en Watipi'],
+tPer:['Period','Periodo','Zeitraum','Periodo','Periode'],
+tWeek:['Per week','Por semana','Pro Woche','A settimana','Per week'],
+tm1:['Off season, 27/09 to 24/04','Fuera de temporada, del 27/09 al 24/04','Nebensaison, 27.09. bis 24.04.','Fuori stagione, dal 27/09 al 24/04','Buiten het seizoen, 27/09 tot 24/04'],
+tm2:['Low season, 25/04 to 05/06','Temporada baja, del 25/04 al 05/06','Vorsaison, 25.04. bis 05.06.','Bassa stagione, dal 25/04 al 05/06','Laagseizoen, 25/04 tot 05/06'],
+tm3:['Mid season, 06/06 to 26/06 and 06/09 to 26/09','Temporada media, del 06/06 al 26/06 y del 06/09 al 26/09','Zwischensaison, 06.06. bis 26.06. und 06.09. bis 26.09.','Media stagione, dal 06/06 al 26/06 e dal 06/09 al 26/09','Middenseizoen, 06/06 tot 26/06 en 06/09 tot 26/09'],
+tm4:['High season, 27/06 to 10/07 and 22/08 to 04/09','Temporada alta, del 27/06 al 10/07 y del 22/08 al 04/09','Hauptsaison, 27.06. bis 10.07. und 22.08. bis 04.09.','Alta stagione, dal 27/06 al 10/07 e dal 22/08 al 04/09','Hoogseizoen, 27/06 tot 10/07 en 22/08 tot 04/09'],
+tm5:['Very high season, 11/07 to 24/07 and 15/08 to 21/08','Temporada muy alta, del 11/07 al 24/07 y del 15/08 al 21/08','Hochsaison, 11.07. bis 24.07. und 15.08. bis 21.08.','Altissima stagione, dal 11/07 al 24/07 e dal 15/08 al 21/08','Zeer hoogseizoen, 11/07 tot 24/07 en 15/08 tot 21/08'],
+tm6:['The heart of summer, 25/07 to 15/08','Pleno verano, del 25/07 al 15/08','Mitten im Sommer, 25.07. bis 15.08.','Il cuore dell\'estate, dal 25/07 al 15/08','Hartje zomer, 25/07 tot 15/08'],
+tG:['Le Garrigue mobile home','Mobil-home Le Garrigue','Mobilheim Le Garrigue','Casa mobile Le Garrigue','Stacaravan Le Garrigue'],
+tg1:['14/06 to 27/06 and 06/09 to 19/09','Del 14/06 al 27/06 y del 06/09 al 19/09','14.06. bis 27.06. und 06.09. bis 19.09.','Dal 14/06 al 27/06 e dal 06/09 al 19/09','14/06 tot 27/06 en 06/09 tot 19/09'],
+tg2:['28/06 to 11/07 and 23/08 to 05/09','Del 28/06 al 11/07 y del 23/08 al 05/09','28.06. bis 11.07. und 23.08. bis 05.09.','Dal 28/06 all\'11/07 e dal 23/08 al 05/09','28/06 tot 11/07 en 23/08 tot 05/09'],
+tg3:['12/07 to 25/07 and 16/08 to 22/08','Del 12/07 al 25/07 y del 16/08 al 22/08','12.07. bis 25.07. und 16.08. bis 22.08.','Dal 12/07 al 25/07 e dal 16/08 al 22/08','12/07 tot 25/07 en 16/08 tot 22/08'],
+tg4:['26/07 to 15/08','Del 26/07 al 15/08','26.07. bis 15.08.','Dal 26/07 al 15/08','26/07 tot 15/08'],
+tNote:['Deposits: €700 (accommodation) and €120 (cleaning), not cashed and returned within two weeks. Rental booking fee: €25. Tourist tax €0.66 per adult per day. Electric vehicle charging is not allowed on site.','Fianzas: 700 € (alojamiento) y 120 € (limpieza), no cobradas y devueltas en dos semanas. Gastos de gestión de alquiler: 25 €. Tasa turística 0,66 € por adulto y día. Prohibido recargar vehículos eléctricos en el camping.','Kautionen: 700 € (Unterkunft) und 120 € (Reinigung), nicht eingelöst, Rückgabe binnen zwei Wochen. Buchungsgebühr Miete: 25 €. Kurtaxe 0,66 € pro Erwachsenem und Tag. Laden von E-Autos auf dem Platz verboten.','Cauzioni: 700 € (alloggio) e 120 € (pulizie), non incassate e restituite entro due settimane. Spese di prenotazione affitto: 25 €. Tassa di soggiorno 0,66 € per adulto al giorno. Vietata la ricarica di veicoli elettrici.','Borg: € 700 (accommodatie) en € 120 (schoonmaak), niet geïnd en binnen twee weken terug. Boekingskosten huur: € 25. Toeristenbelasting € 0,66 per volwassene per dag. Elektrische auto\'s opladen is verboden.'],
+tCmp:['Pitch or mobile home?','¿Parcela o mobil-home?','Stellplatz oder Mobilheim?','Piazzola o casa mobile?','Plaats of stacaravan?'],
+tc0a:['Pitch','Parcela','Stellplatz','Piazzola','Plaats'],
+tc0b:['Mobile home','Mobil-home','Mobilheim','Casa mobile','Stacaravan'],
+tc1:['For whom','Para quién','Für wen','Per chi','Voor wie'],
+tc1a:['Lovers of real camping and nature','Amantes del camping de verdad y la naturaleza','Liebhaber von echtem Camping und Natur','Amanti del vero campeggio e della natura','Liefhebbers van echt kamperen en natuur'],
+tc1b:['Families who want the comfort of a home','Familias que quieren la comodidad de una casa','Familien, die den Komfort eines Hauses wollen','Famiglie che vogliono il comfort di una casa','Gezinnen die het comfort van een huis willen'],
+tc2:['Capacity','Capacidad','Kapazität','Capienza','Capaciteit'],
+tc2a:['Up to 6 people','Hasta 6 personas','Bis 6 Personen','Fino a 6 persone','Tot 6 personen'],
+tc2b:['Up to 4 people','Hasta 4 personas','Bis 4 Personen','Fino a 4 persone','Tot 4 personen'],
+tc3:['Size','Superficie','Fläche','Superficie','Oppervlakte'],
+tc3a:['Over 100 m², shaded','Más de 100 m², con sombra','Über 100 m², schattig','Oltre 100 m², ombreggiata','Meer dan 100 m², schaduwrijk'],
+tc3b:['31 to 41 m², 2 bedrooms','31 a 41 m², 2 dormitorios','31 bis 41 m², 2 Schlafzimmer','31-41 m², 2 camere','31 tot 41 m², 2 slaapkamers'],
+tc4:['Showers','Sanitarios','Sanitär','Servizi','Sanitair'],
+tc4a:['2 blocks, 1 heated in winter','2 bloques, 1 con calefacción en invierno','2 Blöcke, 1 im Winter beheizt','2 blocchi, 1 riscaldato d\'inverno','2 gebouwen, 1 verwarmd in de winter'],
+tc4b:['Built-in shower and separate WC','Ducha y WC separados integrados','Eigene Dusche und separates WC','Doccia e WC separati interni','Eigen douche en apart toilet'],
+tc5:['Pets','Animales','Haustiere','Animali','Huisdieren'],
+tc5a:['Welcome (except category 1 and 2 dogs)','Bienvenidos (salvo perros de 1.ª y 2.ª categoría)','Willkommen (außer Hunde der Kategorien 1 und 2)','Benvenuti (tranne cani di 1a e 2a categoria)','Welkom (behalve honden van categorie 1 en 2)'],
+tc5b:['Not allowed','No admitidos','Nicht erlaubt','Non ammessi','Niet toegestaan'],
+tc6:['Budget','Presupuesto','Budget','Budget','Budget'],
+tc6a:['About €28 a night for two','Unos 28 € la noche para dos','Etwa 28 € pro Nacht zu zweit','Circa 28 € a notte in due','Ongeveer € 28 per nacht met z\'n tweeën'],
+tc6b:['€400 to €850 a week','De 400 € a 850 € la semana','400 € bis 850 € pro Woche','Da 400 € a 850 € a settimana','€ 400 tot € 850 per week'],
+ctaBook2:['Work out my stay','Calcular mi estancia','Meinen Aufenthalt berechnen','Calcola il mio soggiorno','Bereken mijn verblijf'],
+plH:['Water, sunshine, and that\'s all','Agua, sol, y nada más','Wasser, Sonne, sonst nichts','Acqua, sole, e basta','Water, zon, meer niet'],
+plLead:['A 17 × 7 m family pool, far from the bustle of water parks. Constant 1.30 m depth, solar heating from June to September, loungers facing the garrigue.','Una piscina familiar de 17 × 7 m, lejos del bullicio de los parques acuáticos. Profundidad constante de 1,30 m, calefacción solar de junio a septiembre, tumbonas frente a la garriga.','Ein 17 × 7 m großes Familienbecken, fern vom Trubel der Wasserparks. Konstante Tiefe 1,30 m, Solarheizung von Juni bis September, Liegen mit Blick auf die Garrigue.','Una vasca familiare di 17 × 7 m, lontana dal caos dei parchi acquatici. Profondità costante di 1,30 m, riscaldamento solare da giugno a settembre, lettini rivolti alla gariga.','Een gezinsbad van 17 × 7 m, ver van de drukte van waterparken. Overal 1,30 m diep, zonneverwarming van juni tot september, ligbedden met uitzicht op de garrigue.'],
+pl1:['Late swimming: open until the Pub closes','Baño hasta tarde: abierta hasta que cierra el Pub','Spätes Baden: geöffnet bis der Pub schließt','Bagno serale: aperta fino alla chiusura del Pub','Laat zwemmen: open tot de Pub sluit'],
+pl2:['Secure floating paddling area, from 6 months to 3 years (NF EN ISO 25649-1, patented system)','Chapoteadero flotante seguro, de 6 meses a 3 años (norma NF EN ISO 25649-1, sistema patentado)','Sicheres schwimmendes Planschbecken, 6 Monate bis 3 Jahre (Norm NF EN ISO 25649-1, patentiert)','Vasca galleggiante sicura, da 6 mesi a 3 anni (norma NF EN ISO 25649-1, sistema brevettato)','Veilig drijvend pierenbad, van 6 maanden tot 3 jaar (norm NF EN ISO 25649-1, gepatenteerd)'],
+pl3:['Swim briefs and trunks only, no board shorts','Solo bañador slip o bóxer, prohibidos los shorts','Nur Badeslips und enge Badehosen, keine Shorts','Solo slip e boxer da bagno, vietati i pantaloncini','Alleen zwemslips en -boxers, geen zwemshorts'],
+plQ:['“No noisy water park, just the simple joy of water under the sun.”','«Nada de parque acuático ruidoso, solo el placer sencillo del agua bajo el sol.»','„Kein lauter Wasserpark, nur die einfache Freude am Wasser in der Sonne.“','«Niente parco acquatico rumoroso, solo la semplice gioia dell\'acqua sotto il sole.»','“Geen lawaaiig waterpark, gewoon het simpele plezier van water in de zon.”'],
+plQBy:['Valérie and Stéphane','Valérie y Stéphane','Valérie und Stéphane','Valérie e Stéphane','Valérie en Stéphane'],
+plSwim:['Swimming elsewhere','Bañarse en otro sitio','Woanders baden','Fare il bagno altrove','Elders zwemmen'],
+plSwimP:['10 minutes away: the supervised beaches of Saint-Martin-d\'Ardèche and Pont Cassé in Saint-Just.','A 10 minutos: las playas vigiladas de Saint-Martin-d\'Ardèche y del Pont Cassé en Saint-Just.','10 Minuten entfernt: die bewachten Strände von Saint-Martin-d\'Ardèche und am Pont Cassé in Saint-Just.','A 10 minuti: le spiagge sorvegliate di Saint-Martin-d\'Ardèche e del Pont Cassé a Saint-Just.','Op 10 minuten: de bewaakte stranden van Saint-Martin-d\'Ardèche en Pont Cassé in Saint-Just.'],
+fH:['The Pub, open all year','The Pub, abierto todo el año','The Pub, ganzjährig geöffnet','The Pub, aperto tutto l\'anno','The Pub, het hele jaar open'],
+fLead:['A short list of craft beers from the Ardèche, regional wines and house cocktails. Air-conditioned room, a terrace for long aperitifs.','Una selección corta de cervezas artesanas de Ardèche, vinos regionales y cócteles de la casa. Sala climatizada y terraza para aperitivos largos.','Eine kleine Auswahl an Craft-Bieren aus der Ardèche, regionalen Weinen und Hauscocktails. Klimatisierter Raum, Terrasse für lange Aperitifs.','Una selezione breve di birre artigianali dell\'Ardèche, vini regionali e cocktail della casa. Sala climatizzata, terrazza per aperitivi lunghi.','Een korte selectie ambachtelijke bieren uit de Ardèche, streekwijnen en huiscocktails. Zaal met airco, terras voor lange aperitieven.'],
+fP2:['Theme nights, tastings and acoustic concerts set the pace in high season, while respecting the quiet of the night. Arriving late? Your keys are waiting at the bar.','Noches temáticas, catas y conciertos acústicos animan la temporada alta, respetando la calma nocturna. ¿Llega tarde? Sus llaves le esperan en el bar.','Themenabende, Verkostungen und Akustikkonzerte prägen die Hochsaison, mit Rücksicht auf die Nachtruhe. Späte Ankunft? Ihre Schlüssel liegen an der Bar.','Serate a tema, degustazioni e concerti acustici animano l\'alta stagione, nel rispetto della quiete notturna. Arrivate tardi? Le chiavi vi aspettano al bar.','Themaavonden, proeverijen en akoestische concerten in het hoogseizoen, met respect voor de nachtrust. Laat aankomen? Uw sleutels liggen bij de bar.'],
+oH:['L\'Oustaou, the summer table','L\'Oustaou, la mesa del verano','L\'Oustaou, die Sommerküche','L\'Oustaou, la tavola dell\'estate','L\'Oustaou, de zomertafel'],
+oClosed:['The restaurant announces it is closed for 2026 and will be back in 2027.','El restaurante anuncia su cierre en 2026 y vuelve en 2027.','Das Restaurant kündigt für 2026 eine Schließung an und öffnet 2027 wieder.','Il ristorante annuncia la chiusura nel 2026 e il ritorno nel 2027.','Het restaurant meldt sluiting in 2026 en is terug in 2027.'],
+oLead:['In July and August, local food from short supply chains, with Ardèche market gardeners, farmers and winemakers. Air-conditioned room or large shaded terrace.','En julio y agosto, cocina de proximidad con hortelanos, ganaderos y viticultores de Ardèche. Sala climatizada o gran terraza a la sombra.','Im Juli und August regionale Küche mit Gemüsebauern, Viehzüchtern und Winzern aus der Ardèche. Klimatisierter Saal oder große schattige Terrasse.','A luglio e agosto, cucina a filiera corta con orticoltori, allevatori e viticoltori dell\'Ardèche. Sala climatizzata o grande terrazza ombreggiata.','In juli en augustus streekkeuken met tuinders, veehouders en wijnboeren uit de Ardèche. Zaal met airco of groot schaduwrijk terras.'],
+oSign:['Signature dishes: foie gras nougat with dried fruit, Provençal-style snails, and trompe-l\'œil desserts such as “Just a peach”.','Platos estrella: turrón de foie gras con frutos secos, caracoles a la provenzal y postres trampantojo como «Solo un melocotón».','Spezialitäten: Foie-gras-Nougat mit Trockenfrüchten, Schnecken provenzalisch und Trompe-l\'œil-Desserts wie „Nur ein Pfirsich“.','Piatti firma: torrone di foie gras alla frutta secca, lumache alla provenzale e dessert trompe-l\'œil come «Solo una pesca».','Signatuurgerechten: nougat van foie gras met gedroogd fruit, slakken op Provençaalse wijze en trompe-l\'oeildesserts zoals „Gewoon een perzik”.'],
+oAw:['Recommended by Restaurant Guru in 2024, Vignobles &amp; Découvertes partner.','Recomendado por Restaurant Guru en 2024, socio de Vignobles &amp; Découvertes.','Empfohlen von Restaurant Guru 2024, Partner von Vignobles &amp; Découvertes.','Consigliato da Restaurant Guru nel 2024, partner Vignobles &amp; Découvertes.','Aanbevolen door Restaurant Guru in 2024, partner van Vignobles &amp; Découvertes.'],
+oBook:['Book a table','Reservar mesa','Tisch reservieren','Prenota un tavolo','Tafel reserveren'],
+eH:['And for everything else','Y para lo demás','Und für alles andere','E per il resto','En voor de rest'],
+eP:['A small grocery at reception. Supermarket, bakery and butcher less than 3 km away. Individual barbecues are banned by prefectoral order.','Una pequeña tienda en recepción. Supermercado, panadería y carnicería a menos de 3 km. Barbacoas individuales prohibidas por decreto.','Ein kleiner Laden an der Rezeption. Supermarkt, Bäckerei und Metzger weniger als 3 km entfernt. Private Grills per Präfekturerlass verboten.','Un piccolo emporio alla reception. Supermercato, panetteria e macelleria a meno di 3 km. Barbecue individuali vietati da ordinanza.','Een kleine winkel bij de receptie. Supermarkt, bakker en slager op minder dan 3 km. Eigen barbecues verboden bij prefectoraal besluit.'],
+gH:['Southern Ardèche from your pitch','El sur de Ardèche desde su parcela','Die Süd-Ardèche ab Ihrem Stellplatz','L\'Ardèche del sud dalla vostra piazzola','Zuid-Ardèche vanaf uw plaats'],
+gLead:['In the heart of the Gorges nature reserve, close to the ViaRhôna. Caves, villages, markets, river: here is what the team recommends most often.','En el corazón de la reserva natural de las Gargantas, junto a la ViaRhôna. Cuevas, pueblos, mercados, río: esto es lo que el equipo aconseja más a menudo.','Im Herzen des Naturschutzgebiets der Schluchten, nahe der ViaRhôna. Höhlen, Dörfer, Märkte, Fluss: das empfiehlt das Team am häufigsten.','Nel cuore della riserva naturale delle Gole, vicino alla ViaRhôna. Grotte, borghi, mercati, fiume: ecco cosa consiglia più spesso il team.','In het hart van het natuurreservaat van de kloven, vlak bij de ViaRhôna. Grotten, dorpen, markten, rivier: dit raadt het team het vaakst aan.'],
+gGuide:['The local guide','La guía de los alrededores','Der Umgebungsführer','La guida dei dintorni','De omgevingsgids'],
+gGuideP:['The current site has over sixty local pages (villages, restaurants, caves, motorway exits, seasons). They are all carried over, in French, when the new site goes live.','El sitio actual tiene más de sesenta fichas locales (pueblos, restaurantes, cuevas, salidas de autopista, temporadas). Se mantienen todas, en francés, en la instalación.','Die aktuelle Website hat über sechzig lokale Seiten (Dörfer, Restaurants, Höhlen, Autobahnausfahrten, Jahreszeiten). Alle werden bei der Umsetzung auf Französisch übernommen.','Il sito attuale conta oltre sessanta schede locali (borghi, ristoranti, grotte, uscite autostradali, stagioni). Sono tutte riprese, in francese, all\'installazione.','De huidige site telt meer dan zestig lokale pagina\'s (dorpen, restaurants, grotten, snelwegafritten, seizoenen). Ze worden allemaal, in het Frans, overgenomen bij de installatie.'],
+sH:['It all began with a farm','Al principio había una granja','Am Anfang war ein Bauernhof','All\'inizio c\'era una fattoria','In het begin was er een boerderij'],
+sLead:['Jean-François sold at the Provençal markets. In 1966, with his farming parents\' blessing, he opened ten pitches on the family farm. Sixty years on, the fourth generation is here.','Jean-François vendía en los mercados provenzales. En 1966, con el permiso de sus padres agricultores, abre diez parcelas en la granja familiar. Sesenta años después, la cuarta generación está aquí.','Jean-François verkaufte auf provenzalischen Märkten. 1966 eröffnete er mit dem Einverständnis seiner Bauerneltern zehn Stellplätze auf dem Familienhof. Sechzig Jahre später ist die vierte Generation da.','Jean-François vendeva nei mercati provenzali. Nel 1966, con il permesso dei genitori agricoltori, apre dieci piazzole nella fattoria di famiglia. Sessant\'anni dopo c\'è la quarta generazione.','Jean-François verkocht op Provençaalse markten. In 1966 opende hij met instemming van zijn boerenouders tien plaatsen op de familieboerderij. Zestig jaar later is de vierde generatie er.'],
+s1:['Ten pitches on the farm in Saint-Marcel-d\'Ardèche, one of the very first campsites in the département.','Diez parcelas en la granja de Saint-Marcel-d\'Ardèche, uno de los primeros campings del departamento.','Zehn Stellplätze auf dem Hof in Saint-Marcel-d\'Ardèche, einer der allerersten Campingplätze des Departements.','Dieci piazzole nella fattoria di Saint-Marcel-d\'Ardèche, uno dei primissimi campeggi del dipartimento.','Tien plaatsen op de boerderij in Saint-Marcel-d\'Ardèche, een van de allereerste campings van het departement.'],
+s2y:['The decades that followed','Las décadas siguientes','Die folgenden Jahrzehnte','I decenni successivi','De decennia daarna'],
+s2:['From 10 to 30, then around a hundred pitches. Jean-François built the terraces with his children, with one rule: don\'t spoil the woods.','De 10 a 30, luego un centenar de parcelas. Jean-François construye las terrazas con sus hijos, con una regla: no desnaturalizar el bosque.','Von 10 auf 30, dann rund hundert Stellplätze. Jean-François baute die Terrassen mit seinen Kindern, mit einer Regel: den Wald nicht verschandeln.','Da 10 a 30, poi un centinaio di piazzole. Jean-François costruisce le terrazze con i figli, con una regola: non snaturare il bosco.','Van 10 naar 30, daarna zo\'n honderd plaatsen. Jean-François bouwde de terrassen met zijn kinderen, met één regel: het bos niet aantasten.'],
+s3:['Valérie, his daughter, and Stéphane Soulier take over the campsite. The Pub opens all year, then the restaurant.','Valérie, su hija, y Stéphane Soulier toman el relevo. El Pub abre todo el año, luego el restaurante.','Seine Tochter Valérie und Stéphane Soulier übernehmen den Platz. Der Pub öffnet ganzjährig, dann das Restaurant.','Valérie, sua figlia, e Stéphane Soulier rilevano il campeggio. Il Pub apre tutto l\'anno, poi il ristorante.','Zijn dochter Valérie en Stéphane Soulier nemen de camping over. De Pub gaat het hele jaar open, daarna het restaurant.'],
+s4:['The campsite earns its three stars.','El camping obtiene sus tres estrellas.','Der Platz erhält seine drei Sterne.','Il campeggio ottiene le tre stelle.','De camping krijgt drie sterren.'],
+s5:['Rentals renovated, new signage, and a BFM TV report on “real camping”.','Renovación de los alquileres, nueva señalización y un reportaje de BFM sobre el «verdadero camping».','Renovierte Mietunterkünfte, neue Beschilderung und eine BFM-Reportage über „echtes Camping“.','Rinnovo degli alloggi, nuova segnaletica e un servizio di BFM sul «vero campeggio».','Renovatie van de huuraccommodaties, nieuwe bewegwijzering en een BFM-reportage over „echt kamperen”.'],
+sFam:['The family, in drawings','La familia, en dibujos','Die Familie, gezeichnet','La famiglia, a disegni','De familie, getekend'],
+sFamP:['The team portraits, as they appear on the current site.','Los retratos del equipo, tal como aparecen en el sitio actual.','Die Porträts des Teams, wie auf der aktuellen Website.','I ritratti del team, come compaiono sul sito attuale.','De portretten van het team, zoals op de huidige site.'],
+dH:['What we do for the place','Lo que hacemos por el lugar','Was wir für den Ort tun','Cosa facciamo per il luogo','Wat we voor de plek doen'],
+dP:['Solar lighting, water savers, rainwater harvesting, sorting and compost, hens and rabbits for leftovers, wood and stone for building, local produce on the table.','Iluminación solar, reductores de agua, recuperación de agua de lluvia, reciclaje y compost, gallinas y conejos para las sobras, madera y piedra para construir, productos locales en la mesa.','Solarbeleuchtung, Wassersparer, Regenwassernutzung, Mülltrennung und Kompost, Hühner und Kaninchen für Essensreste, Holz und Stein zum Bauen, regionale Produkte auf dem Tisch.','Illuminazione solare, riduttori d\'acqua, recupero dell\'acqua piovana, raccolta differenziata e compost, galline e conigli per gli avanzi, legno e pietra per costruire, prodotti locali a tavola.','Zonneverlichting, waterbesparing, regenwateropvang, afvalscheiding en compost, kippen en konijnen voor etensresten, hout en steen om te bouwen, lokale producten op tafel.'],
+dSator:['And a Sator square, placed in the décor in 2024: see if you can find it.','Y un cuadrado Sator, colocado en 2024 en la decoración: a ver si lo encuentra.','Und ein Sator-Quadrat, 2024 in die Deko eingebaut: Finden Sie es?','E un quadrato del Sator, inserito nell\'arredo nel 2024: provate a trovarlo.','En een Sator-vierkant, in 2024 in het decor geplaatst: vindt u het?'],
+iH:['Practical info','Información práctica','Praktische Infos','Info pratiche','Praktische info'],
+iRec:['Reception open daily, 9 am–12 pm and 1–8 pm (the current site map page says 9 am–9 pm). Late arrival until 11 pm if you call ahead.','Recepción abierta todos los días de 9 a 12 h y de 13 a 20 h (la página del plano indica 9–21 h). Llegada tardía hasta las 23 h llamando antes.','Rezeption täglich 9–12 und 13–20 Uhr (auf der Lageplan-Seite steht 9–21 Uhr). Späte Ankunft bis 23 Uhr nach Anruf.','Reception aperta tutti i giorni 9-12 e 13-20 (la pagina della mappa indica 9-21). Arrivo tardivo fino alle 23 su chiamata.','Receptie dagelijks open 9–12 en 13–20 uur (de plattegrondpagina vermeldt 9–21 uur). Late aankomst tot 23 uur na telefoontje.'],
+iGate:['Code barrier from 7 am to 11 pm, free exit 24/7.','Barrera con código de 7 a 23 h, salida libre las 24 h.','Schranke mit Code von 7 bis 23 Uhr, Ausfahrt rund um die Uhr.','Sbarra con codice dalle 7 alle 23, uscita libera 24 ore su 24.','Slagboom met code van 7 tot 23 uur, vrij uitrijden 24/7.'],
+iPay:['Bank card (from €15), cash, cheques, ANCV holiday vouchers, bank transfer.','Tarjeta (desde 15 €), efectivo, cheques, cheques vacaciones ANCV, transferencia.','Bankkarte (ab 15 €), bar, Scheck, ANCV-Urlaubsschecks, Überweisung.','Carta (da 15 €), contanti, assegni, buoni vacanza ANCV, bonifico.','Bankkaart (vanaf € 15), contant, cheques, ANCV-vakantiecheques, overschrijving.'],
+iRoute:['Directions','Itinerario','Anfahrt','Percorso','Route'],
+iRoad:['From the A7: exits Montélimar-Sud, Bollène or Orange. By bike, beware: the last climb is steep.','Desde la A7: salidas Montélimar-Sud, Bollène u Orange. En bici, cuidado: la última subida es dura.','Von der A7: Ausfahrten Montélimar-Sud, Bollène oder Orange. Mit dem Rad Vorsicht: der letzte Anstieg ist steil.','Dalla A7: uscite Montélimar-Sud, Bollène o Orange. In bici attenzione: l\'ultima salita è ripida.','Vanaf de A7: afritten Montélimar-Sud, Bollène of Orange. Per fiets opgelet: de laatste klim is steil.'],
+iFaq:['Your questions','Sus preguntas','Ihre Fragen','Le vostre domande','Uw vragen'],
+iRev:['What holidaymakers say','Lo que dicen los clientes','Was Gäste sagen','Cosa dicono gli ospiti','Wat gasten zeggen'],
+iNews:['News','Novedades','Neuigkeiten','Novità','Nieuws'],
+n1:['<b>28/05/2024 · BFM TV report.</b> The campsite supports the “Save real camping” petition; BFM came to film and interview guests.','<b>28/05/2024 · Reportaje de BFM.</b> El camping apoya la petición «Salvemos el verdadero camping»; BFM vino a grabar y entrevistar a los clientes.','<b>28.05.2024 · BFM-Reportage.</b> Der Platz unterstützt die Petition „Rettet das echte Camping“; BFM hat gefilmt und Gäste interviewt.','<b>28/05/2024 · Servizio BFM.</b> Il campeggio sostiene la petizione «Salviamo il vero campeggio»; BFM è venuta a filmare e intervistare gli ospiti.','<b>28/05/2024 · BFM-reportage.</b> De camping steunt de petitie „Red het echte kamperen”; BFM kwam filmen en gasten interviewen.'],
+n2:['<b>2024 · Renovations.</b> All rentals renovated, plus new signage.','<b>2024 · Renovaciones.</b> Todos los alquileres renovados y nueva señalización.','<b>2024 · Renovierungen.</b> Alle Mietunterkünfte renoviert, dazu neue Beschilderung.','<b>2024 · Rinnovi.</b> Tutti gli alloggi rinnovati e nuova segnaletica.','<b>2024 · Renovaties.</b> Alle huuraccommodaties gerenoveerd en nieuwe bewegwijzering.'],
+n3:['<b>2024 · The Sator square.</b> This Latin palindrome, known since Pompeii (AD 79), is now part of the décor.','<b>2024 · El cuadrado Sator.</b> Este palíndromo latino, conocido desde Pompeya (año 79), forma parte de la decoración.','<b>2024 · Das Sator-Quadrat.</b> Dieses lateinische Palindrom, seit Pompeji (79 n. Chr.) bekannt, gehört jetzt zur Deko.','<b>2024 · Il quadrato del Sator.</b> Questo palindromo latino, noto da Pompei (anno 79), fa ora parte dell\'arredo.','<b>2024 · Het Sator-vierkant.</b> Dit Latijnse palindroom, bekend sinds Pompeii (79 n.Chr.), hoort nu bij het decor.'],
+iDocs:['Documents','Documentos','Dokumente','Documenti','Documenten'],
+iDocsP:['Legal notice, privacy, cookies, site rules, terms and conditions, safety, baby and pet kits: carried over in full from the current site when the new one goes live.','Aviso legal, privacidad, cookies, reglamento, condiciones generales, seguridad, kits bebé y animales: se mantienen íntegramente en la instalación.','Impressum, Datenschutz, Cookies, Platzordnung, AGB, Sicherheit, Baby- und Tier-Sets: bei der Umsetzung vollständig übernommen.','Note legali, privacy, cookie, regolamento, condizioni generali, sicurezza, kit neonati e animali: ripresi integralmente all\'installazione.','Juridische info, privacy, cookies, reglement, algemene voorwaarden, veiligheid, baby- en huisdierpakketten: volledig overgenomen bij de installatie.'],
+dc1:['Legal notice','Aviso legal','Impressum','Note legali','Juridische info'],
+dc2:['Site rules','Reglamento','Platzordnung','Regolamento','Reglement'],
+dc3:['Terms','Condiciones','AGB','Condizioni','Voorwaarden'],
+dc4:['Safety','Seguridad','Sicherheit','Sicurezza','Veiligheid'],
+dc5:['Baby &amp; pet kits','Kits bebé y animales','Baby- &amp; Tier-Sets','Kit neonati e animali','Baby- &amp; huisdierpakketten'],
+dc6:['Privacy','Privacidad','Datenschutz','Privacy','Privacy'],
+iPart:['Partners: Ardèche Découverte, Campings Ardèche, Camping2Be (2024 Award).','Socios: Ardèche Découverte, Campings Ardèche, Camping2Be (premio 2024).','Partner: Ardèche Découverte, Campings Ardèche, Camping2Be (Award 2024).','Partner: Ardèche Découverte, Campings Ardèche, Camping2Be (premio 2024).','Partners: Ardèche Découverte, Campings Ardèche, Camping2Be (Award 2024).'],
+bH:['Your stay, priced right away','Su estancia, calculada al momento','Ihr Aufenthalt, sofort berechnet','Il vostro soggiorno, calcolato subito','Uw verblijf, meteen berekend'],
+bLead:['Get an estimate based on the 2026 rates, then send your request to reception. Reply by e-mail; a 30% deposit is required for rentals.','Obtenga una estimación según las tarifas 2026 y envíe su solicitud a recepción. Respuesta por e-mail; se pide un anticipo del 30 % para alquileres.','Berechnen Sie eine Schätzung nach den Preisen 2026 und senden Sie Ihre Anfrage an die Rezeption. Antwort per E-Mail; für Mietunterkünfte 30 % Anzahlung.','Calcolate una stima secondo le tariffe 2026, poi inviate la richiesta alla reception. Risposta via e-mail; per gli affitti è richiesto un acconto del 30 %.','Bereken een schatting op basis van de tarieven 2026 en stuur uw aanvraag naar de receptie. Antwoord per e-mail; voor verhuur 30 % aanbetaling.'],
+bType:['Accommodation','Alojamiento','Unterkunft','Alloggio','Accommodatie'],
+bo1:['Pitch (tent, caravan, motorhome, van)','Parcela (tienda, caravana, autocaravana, furgoneta)','Stellplatz (Zelt, Wohnwagen, Wohnmobil, Van)','Piazzola (tenda, roulotte, camper, van)','Plaats (tent, caravan, camper, bus)'],
+bo2:['Trigano mobile home (31 m²)','Mobil-home Trigano (31 m²)','Mobilheim Trigano (31 m²)','Casa mobile Trigano (31 m²)','Stacaravan Trigano (31 m²)'],
+bo3:['Watipi mobile home (41 m²)','Mobil-home Watipi (41 m²)','Mobilheim Watipi (41 m²)','Casa mobile Watipi (41 m²)','Stacaravan Watipi (41 m²)'],
+bo4:['Le Garrigue mobile home (31 m²)','Mobil-home Le Garrigue (31 m²)','Mobilheim Le Garrigue (31 m²)','Casa mobile Le Garrigue (31 m²)','Stacaravan Le Garrigue (31 m²)'],
+bIn:['Arrival','Llegada','Anreise','Arrivo','Aankomst'],
+bOut:['Departure','Salida','Abreise','Partenza','Vertrek'],
+bAd:['Adults','Adultos','Erwachsene','Adulti','Volwassenen'],
+bCh:['Children','Niños','Kinder','Bambini','Kinderen'],
+bElec:['Electricity','Electricidad','Strom','Elettricità','Stroom'],
+be0:['None','Sin','Ohne','Senza','Geen'],
+be4:['Fridge + 4 A','Nevera + 4 A','Kühlschrank + 4 A','Frigorifero + 4 A','Koelkast + 4 A'],
+bPet:['Pets','Animales','Haustiere','Animali','Huisdieren'],
+bMail:['Your e-mail','Su e-mail','Ihre E-Mail','La vostra e-mail','Uw e-mail'],
+bSend:['Send my request','Enviar mi solicitud','Anfrage senden','Invia la richiesta','Aanvraag versturen'],
+bCall:['Call reception','Llamar a recepción','Rezeption anrufen','Chiama la reception','Bel de receptie'],
+bEst:['Estimate','Estimación','Schätzung','Stima','Schatting'],
+bNote:['Demo: real bookings currently go through the campsite\'s Secureholiday module. Unpublished rates (pitches from January to June) are confirmed by reception.','Demostración: hoy la reserva real pasa por el módulo Secureholiday del camping. Las tarifas no publicadas (parcelas de enero a junio) las confirma recepción.','Demo: Echte Buchungen laufen derzeit über das Secureholiday-Modul des Platzes. Nicht veröffentlichte Preise (Stellplätze Januar bis Juni) bestätigt die Rezeption.','Dimostrazione: oggi la prenotazione reale passa dal modulo Secureholiday del campeggio. Le tariffe non pubblicate (piazzole da gennaio a giugno) le conferma la reception.','Demo: echte boekingen lopen nu via de Secureholiday-module van de camping. Niet-gepubliceerde tarieven (plaatsen januari tot juni) bevestigt de receptie.'],
+ftA:['Family-run since 1966, managed by Valérie and Stéphane Soulier. Open all year.','Establecimiento familiar fundado en 1966, gestionado por Valérie y Stéphane Soulier. Abierto todo el año.','Familienbetrieb seit 1966, geführt von Valérie und Stéphane Soulier. Ganzjährig geöffnet.','Struttura familiare fondata nel 1966, gestita da Valérie e Stéphane Soulier. Aperta tutto l\'anno.','Familiebedrijf sinds 1966, gerund door Valérie en Stéphane Soulier. Het hele jaar open.'],
+ftS:['Stay','Alojarse','Übernachten','Soggiornare','Verblijven'],
+ftV:['On site','En el camping','Vor Ort','Sul posto','Ter plaatse'],
+ftI:['Information','Información','Informationen','Informazioni','Informatie'],
+ftL:['Redesign proposal by Neovera Studio for Camping Les Truffières. Content, photos and rates taken from the campsite\'s current site.','Propuesta de rediseño de Neovera Studio para el Camping Les Truffières. Contenidos, fotos y tarifas tomados del sitio actual del camping.','Redesign-Vorschlag von Neovera Studio für Camping Les Truffières. Inhalte, Fotos und Preise von der aktuellen Website des Platzes.','Proposta di restyling di Neovera Studio per il Camping Les Truffières. Contenuti, foto e tariffe ripresi dal sito attuale del campeggio.','Herontwerpvoorstel van Neovera Studio voor Camping Les Truffières. Inhoud, foto\'s en tarieven van de huidige site van de camping.'],
+mCall:['Call','Llamar','Anrufen','Chiama','Bellen'],
+csSub:['I\'ll help you choose','Le ayudo a elegir','Ich helfe bei der Wahl','Vi aiuto a scegliere','Ik help u kiezen'],
+csInv:['Hello! Pitch or mobile home, which month, what price? I answer in seconds.','¡Hola! Parcela o mobil-home, qué mes, qué precio: respondo en segundos.','Hallo! Stellplatz oder Mobilheim, welcher Monat, welcher Preis? Ich antworte in Sekunden.','Buongiorno! Piazzola o casa mobile, quale mese, quale prezzo? Rispondo in pochi secondi.','Hallo! Plaats of stacaravan, welke maand, welke prijs? Ik antwoord binnen enkele seconden.'],
+csVA:['The campsite\'s virtual assistant','Asistente virtual del camping','Virtueller Assistent des Platzes','Assistente virtuale del campeggio','Virtuele assistent van de camping'],
+csSend:['Send','Enviar','Senden','Invia','Verstuur'],
+aHero:['Grass pitches under the oaks, a 2CV and a van in the sun','Parcelas de hierba bajo los robles, un 2CV y una furgoneta al sol','Grasstellplätze unter Eichen, ein 2CV und ein Van in der Sonne','Piazzole erbose sotto le querce, una 2CV e un furgone al sole','Grasplaatsen onder de eiken, een 2CV en een busje in de zon'],
+aTerr:['The grassy terraces of the campsite','Las terrazas de hierba del camping','Die Grasterrassen des Platzes','Le terrazze erbose del campeggio','De grasterrassen van de camping'],
+aTente:['A tent under the oaks','Una tienda bajo los robles','Ein Zelt unter Eichen','Una tenda sotto le querce','Een tent onder de eiken'],
+aCc:['A motorhome on a large pitch','Una autocaravana en una gran parcela','Ein Wohnmobil auf einem großen Platz','Un camper su una grande piazzola','Een camper op een grote plaats'],
+aPool:['The campsite pool and its loungers','La piscina del camping y sus tumbonas','Der Pool mit Liegen','La piscina del campeggio con i lettini','Het zwembad met ligbedden'],
+aPub:['The Pub counter','La barra del Pub','Die Theke des Pubs','Il bancone del Pub','De bar van de Pub'],
+aCanoe:['Canoes under the Pont d\'Arc','Canoas bajo el Pont d\'Arc','Kanus unter dem Pont d\'Arc','Canoe sotto il Pont d\'Arc','Kano\'s onder de Pont d\'Arc'],
+aRando:['Hikers above the Gorges','Senderistas sobre las Gargantas','Wanderer über den Schluchten','Escursionisti sopra le Gole','Wandelaars boven de kloven'],
+aArc:['The Pont d\'Arc','El Pont d\'Arc','Der Pont d\'Arc','Il Pont d\'Arc','De Pont d\'Arc'],
+a1964:['The campsite entrance in the 1960s','La entrada del camping en los años 60','Die Einfahrt des Platzes in den 1960er-Jahren','L\'ingresso del campeggio negli anni Sessanta','De ingang van de camping in de jaren 60'],
+aT1:['Tent pitch','Parcela para tienda','Zeltplatz','Piazzola per tenda','Tentplaats'],
+aT2:['Caravan pitch','Parcela para caravana','Wohnwagenplatz','Piazzola per roulotte','Caravanplaats'],
+aT3:['Motorhome pitch','Parcela para autocaravana','Wohnmobilplatz','Piazzola per camper','Camperplaats'],
+aT4:['Converted van on a pitch','Furgoneta camperizada en una parcela','Van auf einem Stellplatz','Van su una piazzola','Campervan op een plaats'],
+aSan:['The stone shower block','El bloque sanitario de piedra','Der Sanitärblock aus Stein','Il blocco servizi in pietra','Het stenen sanitairgebouw'],
+aPlan:['Map of Les Truffières campsite','Plano del camping Les Truffières','Lageplan von Les Truffières','Mappa del campeggio Les Truffières','Plattegrond van Les Truffières'],
+aPool2:['The pool under the parasols','La piscina bajo las sombrillas','Der Pool unter Sonnenschirmen','La piscina sotto gli ombrelloni','Het zwembad onder de parasols'],
+aBaby:['A baby in the floating paddling pool','Un bebé en el chapoteadero flotante','Ein Baby im schwimmenden Planschbecken','Un neonato nella vasca galleggiante','Een baby in het drijvende pierenbad'],
+aPubS:['Inside the Pub','La sala del Pub','Der Gastraum des Pubs','La sala del Pub','De zaal van de Pub'],
+aPubT:['The Pub terrace','La terraza del Pub','Die Terrasse des Pubs','La terrazza del Pub','Het terras van de Pub'],
+aOust:['Inside L\'Oustaou','La sala de L\'Oustaou','Der Saal von L\'Oustaou','La sala de L\'Oustaou','De zaal van L\'Oustaou'],
+aPeche:['The “Just a peach” dessert','El postre «Solo un melocotón»','Das Dessert „Nur ein Pfirsich“','Il dessert «Solo una pesca»','Het dessert „Gewoon een perzik”'],
+aTruf:['Black truffles on a board','Trufas negras sobre una tabla','Schwarze Trüffel auf einem Brett','Tartufi neri su un tagliere','Zwarte truffels op een plank'],
+aEpi:['The small grocery at reception','La tienda de recepción','Der kleine Laden an der Rezeption','L\'emporio alla reception','Het winkeltje bij de receptie'],
+aMarche:['Jean-François at a market, archive photo','Jean-François en un mercado, foto de archivo','Jean-François auf einem Markt, Archivfoto','Jean-François al mercato, foto d\'archivio','Jean-François op een markt, archieffoto'],
+a1974:['The campsite pool in 1974','La piscina del camping en 1974','Der Pool des Platzes 1974','La piscina del campeggio nel 1974','Het zwembad van de camping in 1974'],
+aSurvol:['The campsite from the air','El camping visto desde el cielo','Der Platz von oben','Il campeggio visto dall\'alto','De camping vanuit de lucht']
+};
+const I18N={};const _LL=['en','es','de','it','nl'];for(const k in I18N_RAW){I18N[k]={};I18N_RAW[k].forEach((v,i)=>I18N[k][_LL[i]]=v);}
+
+const LANGS=['fr','en','es','de','it','nl'];
+let L='fr';
+const $=s=>document.querySelector(s), $$=s=>[...document.querySelectorAll(s)];
+const t=o=>o&&typeof o==='object'?(o[L]??o.fr):o;
+const eur=n=>{const f=new Intl.NumberFormat({fr:'fr-FR',en:'en-GB',es:'es-ES',de:'de-DE',it:'it-IT',nl:'nl-NL'}[L],{style:'currency',currency:'EUR',maximumFractionDigits:n%1?2:0});return f.format(n)};
+
+/* ---------- données du site actuel ---------- */
+const MONTHS={fr:['Janv.','Févr.','Mars','Avr.','Mai','Juin','Juil.','Août','Sept.','Oct.','Nov.','Déc.'],en:['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'],es:['Ene','Feb','Mar','Abr','May','Jun','Jul','Ago','Sep','Oct','Nov','Dic'],de:['Jan.','Feb.','März','Apr.','Mai','Juni','Juli','Aug.','Sept.','Okt.','Nov.','Dez.'],it:['Gen','Feb','Mar','Apr','Mag','Giu','Lug','Ago','Set','Ott','Nov','Dic'],nl:['Jan','Feb','Mrt','Apr','Mei','Jun','Jul','Aug','Sep','Okt','Nov','Dec']};
+const MONTHS_L={fr:['janvier','février','mars','avril','mai','juin','juillet','août','septembre','octobre','novembre','décembre'],en:['January','February','March','April','May','June','July','August','September','October','November','December'],es:['enero','febrero','marzo','abril','mayo','junio','julio','agosto','septiembre','octubre','noviembre','diciembre'],de:['Januar','Februar','März','April','Mai','Juni','Juli','August','September','Oktober','November','Dezember'],it:['gennaio','febbraio','marzo','aprile','maggio','giugno','luglio','agosto','settembre','ottobre','novembre','dicembre'],nl:['januari','februari','maart','april','mei','juni','juli','augustus','september','oktober','november','december']};
+// tarif emplacement 2 pers. au 15 du mois (null = non publié) ; mobil-home Trigano/Watipi au 15 du mois
+const PITCH=[null,null,null,null,null,null,34,34,28,28,28,28];
+const MH=[400,400,400,400,450,550,750,850,550,400,400,400];
+const SEASON={
+ hiver:{fr:'Hiver au calme',en:'Quiet winter',es:'Invierno tranquilo',de:'Ruhiger Winter',it:'Inverno tranquillo',nl:'Rustige winter'},
+ printemps:{fr:'Printemps',en:'Spring',es:'Primavera',de:'Frühling',it:'Primavera',nl:'Lente'},
+ ete:{fr:'Plein été',en:'High summer',es:'Pleno verano',de:'Hochsommer',it:'Piena estate',nl:'Hoogzomer'},
+ automne:{fr:'Arrière-saison',en:'Late season',es:'Temporada baja',de:'Nachsaison',it:'Bassa stagione',nl:'Naseizoen'}};
+const MOOD={
+ hiver:{fr:'Le soleil passe bas sur le Ventoux, le Pub chauffe la salle, et le bloc sanitaire aussi.',en:'The sun skims low over Mont Ventoux; the Pub and one shower block are heated.',es:'El sol pasa bajo sobre el Ventoux; el Pub y un bloque sanitario están climatizados.',de:'Die Sonne steht tief über dem Ventoux; Pub und ein Sanitärblock sind beheizt.',it:'Il sole passa basso sul Ventoux; il Pub e un blocco sanitario sono riscaldati.',nl:'De zon staat laag boven de Ventoux; de Pub en één sanitairgebouw zijn verwarmd.'},
+ printemps:{fr:'La garrigue fleurit, les grottes ouvrent leurs visites, et les emplacements sont à vous.',en:'The garrigue blooms, the caves open for visits and the pitches are all yours.',es:'La garriga florece, las cuevas abren y las parcelas son todas suyas.',de:'Die Garrigue blüht, die Höhlen öffnen, und die Stellplätze gehören Ihnen.',it:'La gariga fiorisce, le grotte aprono e le piazzole sono tutte vostre.',nl:'De garrigue bloeit, de grotten gaan open en de plaatsen zijn van u.'},
+ ete:{fr:'Piscine chauffée au soleil, canoë dans les Gorges, L\'Oustaou sur la terrasse le soir.',en:'Sun-warmed pool, canoeing in the Gorges, evenings on the terrace.',es:'Piscina templada por el sol, canoa en las Gargantas, noches en la terraza.',de:'Sonnengewärmter Pool, Kanu in den Schluchten, Abende auf der Terrasse.',it:'Piscina scaldata dal sole, canoa nelle Gole, serate in terrazza.',nl:'Door de zon verwarmd zwembad, kanoën in de kloven, avonden op het terras.'},
+ automne:{fr:'Les vendanges dans la vallée du Rhône, la lumière dorée, et les prix qui redescendent.',en:'Grape harvest in the Rhône valley, golden light and lower prices.',es:'Vendimia en el valle del Ródano, luz dorada y precios más bajos.',de:'Weinlese im Rhônetal, goldenes Licht und niedrigere Preise.',it:'Vendemmia nella valle del Rodano, luce dorata e prezzi più bassi.',nl:'Druivenoogst in het Rhônedal, gouden licht en lagere prijzen.'}};
+const seasonOf=m=>m<=1||m==11?'hiver':m<=4?'printemps':m<=7?'ete':'automne';
+const OPEN=[
+ {k:{fr:'The Pub, ouvert toute l\'année',en:'The Pub, open all year',es:'The Pub, abierto todo el año',de:'The Pub, ganzjährig geöffnet',it:'The Pub, aperto tutto l\'anno',nl:'The Pub, het hele jaar open'},m:[0,1,2,3,4,5,6,7,8,9,10,11]},
+ {k:{fr:'Piscine chauffée au soleil (juin à septembre)',en:'Solar-heated pool (June to September)',es:'Piscina con calefacción solar (junio a septiembre)',de:'Solarbeheizter Pool (Juni bis September)',it:'Piscina a riscaldamento solare (giugno-settembre)',nl:'Zonneverwarmd zwembad (juni tot september)'},m:[5,6,7,8]},
+ {k:{fr:'L\'Oustaou (juillet-août, fermé en 2026)',en:'L\'Oustaou (July-August, closed in 2026)',es:'L\'Oustaou (julio-agosto, cerrado en 2026)',de:'L\'Oustaou (Juli-August, 2026 geschlossen)',it:'L\'Oustaou (luglio-agosto, chiuso nel 2026)',nl:'L\'Oustaou (juli-augustus, gesloten in 2026)'},m:[6,7]},
+ {k:{fr:'Sanitaires chauffés',en:'Heated shower block',es:'Sanitarios con calefacción',de:'Beheizte Sanitäranlagen',it:'Servizi riscaldati',nl:'Verwarmd sanitair'},m:[0,1,2,3,4,9,10,11]},
+ {k:{fr:'Grottes Chauvet 2, Orgnac et Salamandre ouvertes',en:'Chauvet 2, Orgnac and Salamandre caves open',es:'Cuevas Chauvet 2, Orgnac y Salamandre abiertas',de:'Höhlen Chauvet 2, Orgnac und Salamandre geöffnet',it:'Grotte Chauvet 2, Orgnac e Salamandre aperte',nl:'Grotten Chauvet 2, Orgnac en Salamandre open'},m:[0,1,2,3,4,5,6,7,8,9,10,11]}];
+
+const MHS=[
+ {id:'trigano',img:'trigano',plan:'trigano-plan',name:'Trigano Évolution 31',m2:31,from:400,to:850,
+  tag:{fr:'1 à 4 pers. · 31 m² · 2 chambres',en:'1 to 4 guests · 31 m² · 2 bedrooms',es:'1 a 4 pers. · 31 m² · 2 dormitorios',de:'1 bis 4 Pers. · 31 m² · 2 Schlafzimmer',it:'1-4 pers. · 31 m² · 2 camere',nl:'1 tot 4 pers. · 31 m² · 2 slaapkamers'},
+  d:{fr:'Le séjour avec cuisine sépare les deux chambres : chacun a son coin. Terrasse en bois de 20 m², à moitié couverte, orientée sud-est.',en:'The living room and kitchen sit between the two bedrooms, so everyone has their own space. 20 m² wooden deck, half covered, facing south-east.',es:'El salón con cocina separa los dos dormitorios: cada uno tiene su rincón. Terraza de madera de 20 m², medio cubierta, orientada al sureste.',de:'Wohnraum mit Küche trennt die beiden Schlafzimmer: Jeder hat seine Ecke. 20 m² Holzterrasse, halb überdacht, nach Südosten.',it:'Il soggiorno con cucina separa le due camere: ognuno ha il suo spazio. Terrazza in legno di 20 m², per metà coperta, esposta a sud-est.',nl:'De woonkamer met keuken scheidt de twee slaapkamers: ieder heeft zijn plek. Houten terras van 20 m², half overdekt, op het zuidoosten.'},
+  eq:{fr:['Lit 140 × 190 et deux lits 80 × 190','Draps, oreillers et couettes fournis','Climatisation réversible, double vitrage','Plaque 4 feux gaz, hotte, réfrigérateur-congélateur, micro-ondes, cafetière','TV, Wi-Fi partiel','Salle de bain avec grande douche, WC indépendant'],en:['One 140 × 190 bed and two 80 × 190 beds','Sheets, pillows and duvets provided','Reversible air conditioning, double glazing','4-burner gas hob, hood, fridge-freezer, microwave, coffee maker','TV, partial Wi-Fi','Bathroom with large shower, separate WC'],es:['Cama 140 × 190 y dos camas 80 × 190','Sábanas, almohadas y edredones incluidos','Aire acondicionado reversible, doble acristalamiento','Placa de gas de 4 fuegos, campana, frigorífico-congelador, microondas, cafetera','TV, Wi-Fi parcial','Baño con ducha grande, WC independiente'],de:['Ein Bett 140 × 190 und zwei Betten 80 × 190','Bettwäsche, Kissen und Decken inklusive','Klimaanlage mit Heizfunktion, Doppelverglasung','4-Flammen-Gasherd, Dunstabzug, Kühl-Gefrierschrank, Mikrowelle, Kaffeemaschine','TV, teilweise WLAN','Bad mit großer Dusche, separates WC'],it:['Letto 140 × 190 e due letti 80 × 190','Lenzuola, cuscini e piumoni forniti','Climatizzazione reversibile, doppi vetri','Piano cottura a gas 4 fuochi, cappa, frigo-congelatore, microonde, macchina del caffè','TV, Wi-Fi parziale','Bagno con doccia grande, WC separato'],nl:['Bed 140 × 190 en twee bedden 80 × 190','Lakens, kussens en dekbedden inbegrepen','Omkeerbare airco, dubbele beglazing','Gaskookplaat met 4 pitten, afzuigkap, koel-vriescombinatie, magnetron, koffiezetapparaat','Tv, gedeeltelijke wifi','Badkamer met grote douche, apart toilet']}},
+ {id:'watipi',img:'watipi',plan:'watipi-plan',name:'Watipi',m2:41,from:400,to:850,
+  tag:{fr:'4 pers. · 41 m² · idéal jeunes parents',en:'4 guests · 41 m² · ideal for young parents',es:'4 pers. · 41 m² · ideal con bebé',de:'4 Pers. · 41 m² · ideal für junge Eltern',it:'4 pers. · 41 m² · ideale per giovani genitori',nl:'4 pers. · 41 m² · ideaal voor jonge ouders'},
+  d:{fr:'Le plus grand : de la place pour la poussette et un lit parapluie installé avant votre arrivée, sur demande. Terrasse entièrement couverte et parking réservé.',en:'The largest one: room for the pushchair and a travel cot set up before you arrive, on request. Fully covered deck and reserved parking.',es:'El más grande: sitio para el carrito y una cuna de viaje instalada antes de su llegada, bajo petición. Terraza totalmente cubierta y aparcamiento reservado.',de:'Das größte: Platz für den Kinderwagen und ein Reisebett, auf Wunsch vor Ihrer Ankunft aufgebaut. Vollständig überdachte Terrasse und eigener Parkplatz.',it:'Il più grande: spazio per il passeggino e un lettino da viaggio montato prima dell\'arrivo, su richiesta. Terrazza interamente coperta e parcheggio riservato.',nl:'De grootste: ruimte voor de kinderwagen en een campingbedje dat op aanvraag vóór aankomst klaarstaat. Volledig overdekt terras en eigen parkeerplaats.'},
+  eq:{fr:['Lit 140 × 190 avec dressing et coin bureau, deux lits 80 × 190','Draps, oreillers, protège-matelas et couettes fournis','Cuisine américaine équipée (micro-ondes, cafetière, grille-pain)','Climatisation réversible, double vitrage, TV, Wi-Fi gratuit','Housse de canapé lavable, kit de nettoyage fourni','Salle de bain et WC séparés'],en:['140 × 190 bed with wardrobe and desk, two 80 × 190 beds','Sheets, pillows, mattress protectors and duvets provided','Open-plan fitted kitchen (microwave, coffee maker, toaster)','Reversible air conditioning, double glazing, TV, free Wi-Fi','Washable sofa cover, cleaning kit provided','Separate bathroom and WC'],es:['Cama 140 × 190 con vestidor y escritorio, dos camas 80 × 190','Sábanas, almohadas, protectores y edredones incluidos','Cocina americana equipada (microondas, cafetera, tostadora)','Aire acondicionado reversible, doble acristalamiento, TV, Wi-Fi gratis','Funda de sofá lavable, kit de limpieza incluido','Baño y WC separados'],de:['Bett 140 × 190 mit Ankleide und Schreibecke, zwei Betten 80 × 190','Bettwäsche, Kissen, Matratzenschoner und Decken inklusive','Offene Küche (Mikrowelle, Kaffeemaschine, Toaster)','Klimaanlage mit Heizfunktion, Doppelverglasung, TV, kostenloses WLAN','Abwaschbarer Sofabezug, Putzset vorhanden','Bad und WC getrennt'],it:['Letto 140 × 190 con cabina armadio e scrivania, due letti 80 × 190','Lenzuola, cuscini, coprimaterassi e piumoni forniti','Cucina a vista attrezzata (microonde, macchina del caffè, tostapane)','Climatizzazione reversibile, doppi vetri, TV, Wi-Fi gratuito','Fodera del divano lavabile, kit pulizia fornito','Bagno e WC separati'],nl:['Bed 140 × 190 met kledingkast en bureau, twee bedden 80 × 190','Lakens, kussens, matrasbeschermers en dekbedden inbegrepen','Open keuken (magnetron, koffiezetapparaat, broodrooster)','Omkeerbare airco, dubbele beglazing, tv, gratis wifi','Afwasbare bankhoes, schoonmaakset aanwezig','Badkamer en toilet gescheiden']}},
+ {id:'garrigue',img:'garrigue',plan:'garrigue-plan',name:'Le Garrigue',m2:31,from:500,to:800,
+  tag:{fr:'2 à 4 pers. · 31 m² · au calme, sous les arbres',en:'2 to 4 guests · 31 m² · quiet, under the trees',es:'2 a 4 pers. · 31 m² · tranquilo, bajo los árboles',de:'2 bis 4 Pers. · 31 m² · ruhig unter Bäumen',it:'2-4 pers. · 31 m² · tranquillo, sotto gli alberi',nl:'2 tot 4 pers. · 31 m² · rustig onder de bomen'},
+  d:{fr:'Simple, chaleureux, à l\'ombre de la forêt. Terrasse privative semi-couverte de 20 m². Aucun couchage dans le salon, pour garder de l\'espace.',en:'Simple and warm, in the shade of the woods. Private 20 m² half-covered deck. No bed in the living room, to keep the space free.',es:'Sencillo y acogedor, a la sombra del bosque. Terraza privada semicubierta de 20 m². Sin cama en el salón, para conservar el espacio.',de:'Schlicht und gemütlich im Schatten des Waldes. Eigene, halb überdachte 20 m² Terrasse. Kein Schlafplatz im Wohnraum, damit Platz bleibt.',it:'Semplice e accogliente, all\'ombra del bosco. Terrazza privata semicoperta di 20 m². Nessun posto letto in soggiorno, per lasciare spazio.',nl:'Eenvoudig en gezellig, in de schaduw van het bos. Eigen half overdekt terras van 20 m². Geen slaapplaats in de woonkamer, zodat er ruimte blijft.'},
+  eq:{fr:['Lit 140 × 190 et deux lits 80 × 190','Draps, oreillers, protège-matelas et couettes fournis','Lit parapluie gratuit sur demande','Cuisine américaine équipée','Climatisation réversible, TV, Wi-Fi gratuit','Salle de douche et WC séparés'],en:['One 140 × 190 bed and two 80 × 190 beds','Sheets, pillows, mattress protectors and duvets provided','Free travel cot on request','Fitted open-plan kitchen','Reversible air conditioning, TV, free Wi-Fi','Shower room and separate WC'],es:['Cama 140 × 190 y dos camas 80 × 190','Sábanas, almohadas, protectores y edredones incluidos','Cuna de viaje gratuita bajo petición','Cocina americana equipada','Aire acondicionado reversible, TV, Wi-Fi gratis','Ducha y WC separados'],de:['Ein Bett 140 × 190 und zwei Betten 80 × 190','Bettwäsche, Kissen, Matratzenschoner und Decken inklusive','Reisebett kostenlos auf Anfrage','Offene, ausgestattete Küche','Klimaanlage mit Heizfunktion, TV, kostenloses WLAN','Duschraum und separates WC'],it:['Letto 140 × 190 e due letti 80 × 190','Lenzuola, cuscini, coprimaterassi e piumoni forniti','Lettino da viaggio gratuito su richiesta','Cucina a vista attrezzata','Climatizzazione reversibile, TV, Wi-Fi gratuito','Doccia e WC separati'],nl:['Bed 140 × 190 en twee bedden 80 × 190','Lakens, kussens, matrasbeschermers en dekbedden inbegrepen','Gratis campingbedje op aanvraag','Ingerichte open keuken','Omkeerbare airco, tv, gratis wifi','Doucheruimte en apart toilet']}}];
+const UI={
+ from:{fr:'dès',en:'from',es:'desde',de:'ab',it:'da',nl:'vanaf'},
+ week:{fr:'la semaine',en:'per week',es:'por semana',de:'pro Woche',it:'a settimana',nl:'per week'},
+ night:{fr:'la nuit',en:'per night',es:'por noche',de:'pro Nacht',it:'a notte',nl:'per nacht'},
+ ask:{fr:'Sur demande',en:'On request',es:'Bajo petición',de:'Auf Anfrage',it:'Su richiesta',nl:'Op aanvraag'},
+ see:{fr:'Voir la fiche',en:'See details',es:'Ver la ficha',de:'Details ansehen',it:'Vedi la scheda',nl:'Bekijk details'},
+ book:{fr:'Réserver ce mobil-home',en:'Book this mobile home',es:'Reservar este mobil-home',de:'Dieses Mobilheim buchen',it:'Prenota questa casa mobile',nl:'Deze stacaravan boeken'},
+ planOf:{fr:'Plan vu de dessus',en:'Floor plan',es:'Plano visto desde arriba',de:'Grundriss',it:'Pianta dall\'alto',nl:'Plattegrond'},
+ grid:{fr:'Grille propre au Garrigue (dates différentes)',en:'Garrigue has its own price grid (different dates)',es:'El Garrigue tiene su propia tarifa (fechas distintas)',de:'Eigene Preisliste für das Garrigue (andere Daten)',it:'Il Garrigue ha un proprio listino (date diverse)',nl:'De Garrigue heeft een eigen prijslijst (andere data)'},
+ orig:{fr:'Avis publié en français',en:'Review published in French',es:'Opinión publicada en francés',de:'Bewertung auf Französisch veröffentlicht',it:'Recensione pubblicata in francese',nl:'Recensie in het Frans gepubliceerd'},
+ month:{fr:'Mois choisi',en:'Selected month',es:'Mes elegido',de:'Gewählter Monat',it:'Mese scelto',nl:'Gekozen maand'}};
+
+const REGION=[
+ {img:'canoe',t:{fr:'Canoë dans les Gorges',en:'Canoeing the Gorges',es:'Canoa en las Gargantas',de:'Kanu in den Schluchten',it:'Canoa nelle Gole',nl:'Kanoën in de kloven'},p:{fr:'Réservé aux vacanciers du camping : de 25 € à 90 € (du parcours de 6 km au Grand Raid de 2 nuits), canoë, gilets et bidons étanches compris. Un car gratuit vous emmène à Vallon-Pont-d\'Arc, la navette vous récupère à Sauze.',en:'For camping guests only: €25 to €90 (from the 6 km run to the 2-night Grand Raid), canoe, life jackets and dry barrels included. A free coach takes you to Vallon-Pont-d\'Arc; the shuttle picks you up at Sauze.',es:'Solo para clientes del camping: de 25 € a 90 € (del recorrido de 6 km al Grand Raid de 2 noches), canoa, chalecos y bidones estancos incluidos. Un autocar gratuito le lleva a Vallon-Pont-d\'Arc y la lanzadera le recoge en Sauze.',de:'Nur für Campinggäste: 25 € bis 90 € (von 6 km bis zum Grand Raid mit 2 Nächten), Kanu, Westen und wasserdichte Tonnen inklusive. Ein kostenloser Bus bringt Sie nach Vallon-Pont-d\'Arc, das Shuttle holt Sie in Sauze ab.',it:'Riservato agli ospiti del campeggio: da 25 € a 90 € (dal percorso di 6 km al Grand Raid di 2 notti), canoa, giubbotti e bidoni stagni inclusi. Un pullman gratuito vi porta a Vallon-Pont-d\'Arc, la navetta vi riprende a Sauze.',nl:'Alleen voor campinggasten: € 25 tot € 90 (van 6 km tot de Grand Raid van 2 nachten), kano, zwemvesten en waterdichte tonnen inbegrepen. Een gratis bus brengt u naar Vallon-Pont-d\'Arc, de shuttle haalt u op in Sauze.'}},
+ {img:'pont-arc',t:{fr:'Grottes et avens',en:'Caves and potholes',es:'Cuevas y simas',de:'Höhlen und Schlünde',it:'Grotte e abissi',nl:'Grotten en ravijnen'},p:{fr:'Neuf cavités de 6 à 65 km : Saint-Marcel (6 km, 16 €), Aven Marzal (10 km, 15 €), Chauvet 2 et Aven d\'Orgnac (21 km), Salamandre accessible en poussette. Prévoyez un pull : 10 à 15 °C sous terre.',en:'Nine caves 6 to 65 km away: Saint-Marcel (6 km, €16), Aven Marzal (10 km, €15), Chauvet 2 and Aven d\'Orgnac (21 km), Salamandre accessible with a pushchair. Bring a jumper: 10 to 15 °C underground.',es:'Nueve cavidades de 6 a 65 km: Saint-Marcel (6 km, 16 €), Aven Marzal (10 km, 15 €), Chauvet 2 y Aven d\'Orgnac (21 km), Salamandre accesible con carrito. Lleve un jersey: de 10 a 15 °C bajo tierra.',de:'Neun Höhlen in 6 bis 65 km: Saint-Marcel (6 km, 16 €), Aven Marzal (10 km, 15 €), Chauvet 2 und Aven d\'Orgnac (21 km), Salamandre kinderwagengerecht. Pullover mitnehmen: 10 bis 15 °C unter Tage.',it:'Nove cavità tra 6 e 65 km: Saint-Marcel (6 km, 16 €), Aven Marzal (10 km, 15 €), Chauvet 2 e Aven d\'Orgnac (21 km), Salamandre accessibile col passeggino. Portate un maglione: 10-15 °C sottoterra.',nl:'Negen grotten op 6 tot 65 km: Saint-Marcel (6 km, € 16), Aven Marzal (10 km, € 15), Chauvet 2 en Aven d\'Orgnac (21 km), Salamandre toegankelijk met kinderwagen. Neem een trui mee: 10 tot 15 °C onder de grond.'}},
+ {img:'villages',t:{fr:'26 villages de caractère',en:'26 villages full of character',es:'26 pueblos con encanto',de:'26 Dörfer mit Charakter',it:'26 borghi di carattere',nl:'26 karakteristieke dorpen'},p:{fr:'D\'Aiguèze à Grignan, de Labeaume à Montclus : huit secteurs entre Ardèche, Gard, Drôme et Vaucluse, avec les trajets depuis le camping en van, camping-car, vélo ou à pied.',en:'From Aiguèze to Grignan, Labeaume to Montclus: eight areas across Ardèche, Gard, Drôme and Vaucluse, with routes from the campsite by van, motorhome, bike or on foot.',es:'De Aiguèze a Grignan, de Labeaume a Montclus: ocho zonas entre Ardèche, Gard, Drôme y Vaucluse, con los trayectos desde el camping en furgoneta, autocaravana, bici o a pie.',de:'Von Aiguèze bis Grignan, von Labeaume bis Montclus: acht Gebiete zwischen Ardèche, Gard, Drôme und Vaucluse, mit Routen ab dem Platz per Van, Wohnmobil, Rad oder zu Fuß.',it:'Da Aiguèze a Grignan, da Labeaume a Montclus: otto zone tra Ardèche, Gard, Drôme e Vaucluse, con i percorsi dal campeggio in van, camper, bici o a piedi.',nl:'Van Aiguèze tot Grignan, van Labeaume tot Montclus: acht gebieden tussen Ardèche, Gard, Drôme en Vaucluse, met routes vanaf de camping per bus, camper, fiets of te voet.'}},
+ {img:'marches',t:{fr:'Les marchés, jour par jour',en:'Markets, day by day',es:'Los mercados, día a día',de:'Märkte, Tag für Tag',it:'I mercati, giorno per giorno',nl:'Markten, dag voor dag'},p:{fr:'Barjac le lundi soir, Vallon-Pont-d\'Arc le mardi soir, Bourg-Saint-Andéol le mercredi… La liste complète, avec horaires et saisons, est reprise du site.',en:'Barjac on Monday evening, Vallon-Pont-d\'Arc on Tuesday evening, Bourg-Saint-Andéol on Wednesday… The full list with times and seasons is carried over from the current site.',es:'Barjac el lunes por la tarde, Vallon-Pont-d\'Arc el martes por la tarde, Bourg-Saint-Andéol el miércoles… La lista completa, con horarios y temporadas, se mantiene.',de:'Barjac am Montagabend, Vallon-Pont-d\'Arc am Dienstagabend, Bourg-Saint-Andéol am Mittwoch… Die komplette Liste mit Zeiten und Saisons wird übernommen.',it:'Barjac il lunedì sera, Vallon-Pont-d\'Arc il martedì sera, Bourg-Saint-Andéol il mercoledì… L\'elenco completo, con orari e stagioni, è ripreso dal sito.',nl:'Barjac op maandagavond, Vallon-Pont-d\'Arc op dinsdagavond, Bourg-Saint-Andéol op woensdag… De volledige lijst met tijden en seizoenen wordt overgenomen.'}},
+ {img:'rando',t:{fr:'Randonnée, VTT, ViaRhôna',en:'Hiking, mountain biking, ViaRhôna',es:'Senderismo, BTT, ViaRhôna',de:'Wandern, Mountainbike, ViaRhôna',it:'Escursioni, MTB, ViaRhôna',nl:'Wandelen, mountainbiken, ViaRhôna'},p:{fr:'Sentiers au départ du camping, circuits par QR code à l\'accueil, location de VTT à proximité. Pêche à la truite et aux carnassiers dans les rivières voisines.',en:'Trails from the campsite, QR-code routes at reception, bike hire nearby. Trout and predator fishing in nearby rivers.',es:'Senderos desde el camping, rutas con código QR en recepción, alquiler de BTT cerca. Pesca de trucha y depredadores en los ríos cercanos.',de:'Wege ab dem Platz, QR-Code-Touren an der Rezeption, Mountainbike-Verleih in der Nähe. Forellen- und Raubfischangeln in den Flüssen.',it:'Sentieri dal campeggio, percorsi con QR code alla reception, noleggio MTB nelle vicinanze. Pesca alla trota e ai predatori nei fiumi vicini.',nl:'Paden vanaf de camping, QR-routes bij de receptie, mountainbikeverhuur vlakbij. Vissen op forel en roofvis in de rivieren.'}},
+ {img:'jeux2',t:{fr:'En famille',en:'With the family',es:'En familia',de:'Mit der Familie',it:'In famiglia',nl:'Met het gezin'},p:{fr:'Trampoline, ping-pong, baby-foot, slackline, billard, pétanque à l\'ombre, mini-golf. Ferme aux crocodiles à 13 km : venez au nourrissage de 11 h.',en:'Trampoline, table tennis, table football, slackline, pool, shaded pétanque, mini-golf. Crocodile farm 13 km away: come for the 11 am feeding.',es:'Cama elástica, ping-pong, futbolín, slackline, billar, petanca a la sombra, minigolf. Granja de cocodrilos a 13 km: vaya a la comida de las 11 h.',de:'Trampolin, Tischtennis, Kicker, Slackline, Billard, Boule im Schatten, Minigolf. Krokodilfarm in 13 km: Fütterung um 11 Uhr.',it:'Trampolino, ping-pong, calcio balilla, slackline, biliardo, bocce all\'ombra, minigolf. Fattoria dei coccodrilli a 13 km: il pasto è alle 11.',nl:'Trampoline, tafeltennis, tafelvoetbal, slackline, biljart, jeu de boules in de schaduw, minigolf. Krokodillenboerderij op 13 km: voederen om 11 uur.'}},
+ {img:'gorges-affiche',t:{fr:'Châteaux',en:'Castles',es:'Castillos',de:'Burgen',it:'Castelli',nl:'Kastelen'},p:{fr:'Vogüé et sa forteresse médiévale, Montréal et sa Renaissance, les vestiges de Crussol : le guide des châteaux du site est repris en entier.',en:'Vogüé\'s medieval fortress, Renaissance Montréal, the ruins of Crussol: the full castle guide is kept.',es:'La fortaleza medieval de Vogüé, el Montréal renacentista, las ruinas de Crussol: se conserva la guía completa.',de:'Die mittelalterliche Burg von Vogüé, das Renaissance-Schloss Montréal, die Ruinen von Crussol: der ganze Burgenführer bleibt erhalten.',it:'La fortezza medievale di Vogüé, il Montréal rinascimentale, i resti di Crussol: la guida completa ai castelli è ripresa.',nl:'Het middeleeuwse fort van Vogüé, renaissance-Montréal, de ruïnes van Crussol: de volledige kastelengids blijft behouden.'}},
+ {img:'oustaou-vin',t:{fr:'Vins et vignobles',en:'Wines and vineyards',es:'Vinos y viñedos',de:'Weine und Weinberge',it:'Vini e vigneti',nl:'Wijnen en wijngaarden'},p:{fr:'Côtes-du-Rhône et vins d\'Ardèche : le guide des appellations et la sélection de crus locaux sont repris du site.',en:'Côtes-du-Rhône and Ardèche wines: the appellation guide and local selection are kept.',es:'Côtes-du-Rhône y vinos de Ardèche: se conservan la guía de denominaciones y la selección local.',de:'Côtes-du-Rhône und Ardèche-Weine: der Führer zu den Appellationen und die lokale Auswahl bleiben erhalten.',it:'Côtes-du-Rhône e vini dell\'Ardèche: la guida alle denominazioni e la selezione locale sono riprese.',nl:'Côtes-du-Rhône en Ardèche-wijnen: de gids over de appellations en de lokale selectie blijven behouden.'}},
+ {img:'canoe2',t:{fr:'Hors saison',en:'Off season',es:'Fuera de temporada',de:'Nebensaison',it:'Fuori stagione',nl:'Buiten het seizoen'},p:{fr:'Week-end au calme, séjour en amoureux, étape sur l\'A7 (sorties Montélimar-Sud, Bollène, Orange) : le camping reste ouvert du 1er janvier au 31 décembre.',en:'Quiet weekend, romantic break, stopover on the A7 (exits Montélimar-Sud, Bollène, Orange): the campsite is open from 1 January to 31 December.',es:'Fin de semana tranquilo, escapada romántica, parada en la A7 (salidas Montélimar-Sud, Bollène, Orange): abierto del 1 de enero al 31 de diciembre.',de:'Ruhiges Wochenende, Auszeit zu zweit, Zwischenstopp an der A7 (Ausfahrten Montélimar-Sud, Bollène, Orange): geöffnet vom 1. Januar bis 31. Dezember.',it:'Weekend tranquillo, fuga romantica, tappa sulla A7 (uscite Montélimar-Sud, Bollène, Orange): aperto dal 1° gennaio al 31 dicembre.',nl:'Rustig weekend, romantisch uitje, tussenstop aan de A7 (afritten Montélimar-Sud, Bollène, Orange): open van 1 januari tot 31 december.'}}];
+
+const GUIDE={
+ v:[{fr:'Villages et communes',en:'Villages and towns',es:'Pueblos y municipios',de:'Dörfer und Orte',it:'Borghi e comuni',nl:'Dorpen en gemeenten'},'Aiguèze · Alba-la-Romaine · Antraigues-sur-Volane · Aubenas · Avignon · Bollène · Bourg-Saint-Andéol · Goudargues · Grignan · Joyeuse · La Garde-Adhémar · La Roque-sur-Cèze · Labeaume · Lagorce · Montclus · Montélimar · Rochemaure · Ruoms · Saint-Marcel-d\'Ardèche · Saint-Martin-d\'Ardèche · Saint-Montan · Saint-Remèze · Vallon-Pont-d\'Arc · Villeneuve-de-Berg · Viviers · Vogüé · Cirque de Gens'],
+ g:[{fr:'Grottes et avens',en:'Caves',es:'Cuevas',de:'Höhlen',it:'Grotte',nl:'Grotten'},'Grotte de Saint-Marcel · Aven Marzal · Grotte Chauvet 2 · Aven d\'Orgnac · Grotte de la Salamandre · Grotte de la Madeleine · Aven-Grotte la Forestière · Grotte de la Cocalière · Grotte de Thouzon · Réserve naturelle des Gorges'],
+ r:[{fr:'Restaurants des villages',en:'Village restaurants',es:'Restaurantes de los pueblos',de:'Restaurants der Dörfer',it:'Ristoranti dei borghi',nl:'Restaurants in de dorpen'},'Aiguèze · Alba-la-Romaine · Aubenas · Balazuc · Bourg-Saint-Andéol · Chauzon · Joyeuse · Labeaume · Lagorce · Largentière · Ruoms · Saint-Just · Saint-Marcel · Saint-Martin · Saint-Remèze · Vallon-Pont-d\'Arc · Vogüé'],
+ e:[{fr:'Séjours et itinéraires',en:'Stays and routes',es:'Estancias e itinerarios',de:'Aufenthalte und Routen',it:'Soggiorni e itinerari',nl:'Verblijven en routes'},'Étape sur l\'autoroute du soleil · A7 sortie Montélimar-Sud · Sortie Bollène · Sortie Orange · ViaRhôna à vélo · Où garer son camping-car · Vanlife · Week-end · Séjour romantique · L\'Ardèche hors saison · Activités en famille · Pêche · Œnologie · Vins d\'Ardèche · Hôtellerie de plein air · Bien choisir son camping']};
+
+const FAQ=[
+ [{fr:'Comment réserver ?',en:'How do I book?',es:'¿Cómo reservar?',de:'Wie buche ich?',it:'Come prenotare?',nl:'Hoe boek ik?'},{fr:'En ligne ou par téléphone au 04 75 04 68 35. Un acompte de 30 % est demandé pour les locations ; le solde se règle 30 jours avant l\'arrivée.',en:'Online or by phone on +33 4 75 04 68 35. A 30% deposit is required for rentals; the balance is due 30 days before arrival.',es:'En línea o por teléfono al +33 4 75 04 68 35. Se pide un anticipo del 30 % para los alquileres; el resto se paga 30 días antes de la llegada.',de:'Online oder telefonisch unter +33 4 75 04 68 35. Für Mietunterkünfte wird eine Anzahlung von 30 % verlangt; der Rest ist 30 Tage vor Anreise fällig.',it:'Online o al telefono +33 4 75 04 68 35. Per gli affitti è richiesto un acconto del 30 %; il saldo si paga 30 giorni prima dell\'arrivo.',nl:'Online of telefonisch via +33 4 75 04 68 35. Voor verhuur vragen we 30 % aanbetaling; het saldo betaalt u 30 dagen vóór aankomst.'}],
+ [{fr:'Que comprend le prix d\'un emplacement ?',en:'What does a pitch include?',es:'¿Qué incluye el precio de una parcela?',de:'Was ist im Stellplatzpreis enthalten?',it:'Cosa include il prezzo della piazzola?',nl:'Wat is inbegrepen bij een plaats?'},{fr:'Piscine, Wi-Fi, sanitaires, aire de vidange et prêt de matériel pour les activités.',en:'Pool, Wi-Fi, shower blocks, service point and free loan of activity equipment.',es:'Piscina, Wi-Fi, sanitarios, área de vaciado y préstamo de material para actividades.',de:'Pool, WLAN, Sanitäranlagen, Entsorgungsstation und Leihmaterial für Aktivitäten.',it:'Piscina, Wi-Fi, servizi, area di scarico e prestito di materiale per le attività.',nl:'Zwembad, wifi, sanitair, lozingspunt en gratis leenmateriaal voor activiteiten.'}],
+ [{fr:'Les chiens sont-ils acceptés ?',en:'Are dogs allowed?',es:'¿Se admiten perros?',de:'Sind Hunde erlaubt?',it:'I cani sono ammessi?',nl:'Zijn honden welkom?'},{fr:'Oui sur les emplacements (2 € par nuit, chiens de 1re et 2e catégories interdits), non dans les mobil-homes.',en:'Yes on pitches (€2 a night, category 1 and 2 dogs not allowed), not in mobile homes.',es:'Sí en las parcelas (2 € por noche, perros de 1.ª y 2.ª categoría prohibidos), no en los mobil-homes.',de:'Ja auf Stellplätzen (2 € pro Nacht, Kampfhunde der Kategorien 1 und 2 verboten), nicht in Mobilheimen.',it:'Sì nelle piazzole (2 € a notte, cani di 1a e 2a categoria vietati), non nelle case mobili.',nl:'Ja op de plaatsen (€ 2 per nacht, honden van categorie 1 en 2 niet toegestaan), niet in de stacaravans.'}],
+ [{fr:'Faut-il verser une caution ?',en:'Is there a deposit?',es:'¿Hay que dejar fianza?',de:'Gibt es eine Kaution?',it:'Serve una cauzione?',nl:'Is er een borg?'},{fr:'Oui pour les mobil-homes : 700 € et 120 € pour le ménage, non encaissés, rendus sous deux semaines après l\'état des lieux.',en:'Yes for mobile homes: €700 plus €120 for cleaning, not cashed, returned within two weeks of check-out.',es:'Sí para los mobil-homes: 700 € y 120 € de limpieza, no cobrados, devueltos en dos semanas.',de:'Ja für Mobilheime: 700 € und 120 € für die Reinigung, nicht eingelöst, Rückgabe innerhalb von zwei Wochen.',it:'Sì per le case mobili: 700 € e 120 € per le pulizie, non incassati, restituiti entro due settimane.',nl:'Ja voor stacaravans: € 700 en € 120 voor schoonmaak, niet geïnd, binnen twee weken terug.'}],
+ [{fr:'Peut-on camper toute l\'année ?',en:'Can I camp all year round?',es:'¿Se puede acampar todo el año?',de:'Kann man das ganze Jahr campen?',it:'Si può campeggiare tutto l\'anno?',nl:'Kan ik het hele jaar kamperen?'},{fr:'Oui, le camping est ouvert du 1er janvier au 31 décembre, avec un bloc sanitaire chauffé hors saison.',en:'Yes, the campsite is open from 1 January to 31 December, with a heated shower block off season.',es:'Sí, el camping abre del 1 de enero al 31 de diciembre, con un bloque sanitario climatizado fuera de temporada.',de:'Ja, der Platz ist vom 1. Januar bis 31. Dezember geöffnet, mit beheiztem Sanitärblock in der Nebensaison.',it:'Sì, il campeggio è aperto dal 1° gennaio al 31 dicembre, con un blocco servizi riscaldato fuori stagione.',nl:'Ja, de camping is open van 1 januari tot 31 december, met een verwarmd sanitairgebouw buiten het seizoen.'}],
+ [{fr:'Et si nous arrivons tard ?',en:'What if we arrive late?',es:'¿Y si llegamos tarde?',de:'Und wenn wir spät ankommen?',it:'E se arriviamo tardi?',nl:'En als we laat aankomen?'},{fr:'Prévenez l\'accueil : arrivée possible jusqu\'à 23 h, vos clés vous attendent au bar.',en:'Let reception know: arrival possible until 11 pm, your keys will be waiting at the bar.',es:'Avise a recepción: llegada posible hasta las 23 h, sus llaves le esperan en el bar.',de:'Sagen Sie der Rezeption Bescheid: Ankunft bis 23 Uhr möglich, Ihre Schlüssel liegen an der Bar.',it:'Avvisate la reception: arrivo possibile fino alle 23, le chiavi vi aspettano al bar.',nl:'Laat het de receptie weten: aankomst tot 23 uur mogelijk, uw sleutels liggen bij de bar.'}],
+ [{fr:'Peut-on apporter son barbecue ?',en:'Can I bring a barbecue?',es:'¿Puedo traer barbacoa?',de:'Darf ich einen Grill mitbringen?',it:'Posso portare il barbecue?',nl:'Mag ik een barbecue meenemen?'},{fr:'Non, les barbecues individuels sont interdits par arrêté préfectoral.',en:'No, individual barbecues are banned by prefectoral order.',es:'No, las barbacoas individuales están prohibidas por decreto de la prefectura.',de:'Nein, private Grills sind per Präfekturerlass verboten.',it:'No, i barbecue individuali sono vietati da un\'ordinanza prefettizia.',nl:'Nee, eigen barbecues zijn bij prefectoraal besluit verboden.'}],
+ [{fr:'Peut-on choisir son emplacement ?',en:'Can I choose my pitch?',es:'¿Puedo elegir mi parcela?',de:'Kann ich meinen Platz wählen?',it:'Posso scegliere la piazzola?',nl:'Kan ik mijn plaats kiezen?'},{fr:'Indiquez vos envies à la réservation : l\'équipe vous attribue le plus adapté selon les disponibilités.',en:'Tell us your wishes when booking: the team assigns the best match available.',es:'Indique sus preferencias al reservar: el equipo le asigna la más adecuada según disponibilidad.',de:'Nennen Sie Ihre Wünsche bei der Buchung: Das Team teilt Ihnen den passendsten freien Platz zu.',it:'Indicate le vostre preferenze alla prenotazione: il team assegna la più adatta secondo disponibilità.',nl:'Geef uw wensen door bij het boeken: het team kiest de best passende vrije plaats.'}]];
+
+const REVIEWS=[
+ ['Patricia Bertrand','09/2024',"Bien ombragé, paisible, un grand espace pour le camping-car et la remorque moto, une très belle vue panoramique relaxante, des sanitaires propres. Les propriétaires sont vraiment très sympathiques."],
+ ['Yves Lozano','09/2024',"Nous nous sommes arrêtés plusieurs nuits lors de notre périple à VTT (ViaRhôna) : les emplacements sont grands, sanitaires et douches tip top. Attention, l'accès en vélo : grosse montée."],
+ ['Marcel Schel','07/2024',"Un superbe camping typiquement français, hospitalier, avec de superbes emplacements camping-car et une vue fantastique sur le Mont Blanc."],
+ ['Megane Gautheret','08/2024',"J'ai malheureusement eu mes deux enfants très malades, mais l'écoute et la bienveillance des propriétaires m'ont permis de passer malgré tout un bon week-end. Personnel aux petits soins et lieux extrêmement propres !"],
+ ['Cecile Lagache','08/2024',"Super camping. Les gérants sont adorables. Je recommande +++ !"],
+ ['Faustine Garnier','07/2024',"Mon séjour était parfait ! Environnement plutôt calme et détente et le personnel au top, merci beaucoup !"]];
+
+
+/* ---------- rendu ---------- */
+function mhCard(m,full){
+ const pr=`<div class="pr">${t(UI.from)} ${eur(m.from)} <span style="font:400 .95rem var(--ff-x)">${t(UI.week)}</span></div>`;
+ if(!full) return `<article><img src="img/${m.img}.jpg" alt="${m.name}" loading="lazy"><div class="c"><h3>${m.name}</h3><div class="tag">${t(m.tag)}</div><p style="font-size:.95rem;margin:0">${t(m.d)}</p>${pr}<a class="btn btn-g" href="#/mobil-homes" style="align-self:flex-start;margin-top:8px">${t(UI.see)}</a></div></article>`;
+ return `<article class="split" id="mh-${m.id}" style="padding:36px 0;border-top:1px solid rgba(34,27,23,.12)">
+  <div><h2>${m.name}</h2><div class="tag" style="font:600 1rem var(--ff-t);color:var(--chene);margin-bottom:12px">${t(m.tag)}</div><p>${t(m.d)}</p>
+  <ul class="hz-open">${t(m.eq).map(x=>`<li><svg class="i"><use href="#ic-ok"/></svg><span>${x}</span></li>`).join('')}</ul>
+  <p style="margin-top:16px;font:800 1.5rem var(--ff-t)">${eur(m.from)} – ${eur(m.to)} <span style="font:400 1rem var(--ff-x)">${t(UI.week)}</span></p>
+  ${m.id==='garrigue'?`<p class="note">${t(UI.grid)}</p>`:''}
+  <a class="btn btn-g" href="#/reserver" data-mh="${m.id}">${t(UI.book)}</a></div>
+  <div style="display:grid;gap:12px"><figure class="ph" style="margin:0;aspect-ratio:3/2"><img src="img/${m.img}.jpg" alt="${m.name}" loading="lazy"></figure>
+  <figure class="ph" style="margin:0;background:#fff"><img src="img/${m.plan}.jpg" alt="${t(UI.planOf)} ${m.name}" loading="lazy" style="object-fit:contain"><figcaption>${t(UI.planOf)}</figcaption></figure>
+  ${m.id==='watipi'?'<figure class="ph" style="margin:0;aspect-ratio:16/9"><img src="img/watipi-terrasse.jpg" alt="" loading="lazy"></figure>':''}</div></article>`;
+}
+function renderDyn(){
+ $('#mhHome').innerHTML=MHS.map(m=>mhCard(m,false)).join('');
+ $('#mhFull').innerHTML=MHS.map(m=>mhCard(m,true)).join('');
+ $('#regionCards').innerHTML=REGION.map(r=>`<article class="card"><img src="img/${r.img}.jpg" alt="${t(r.t)}" loading="lazy"><h3>${t(r.t)}</h3><p style="font-size:.95rem;margin:0">${t(r.p)}</p></article>`).join('');
+ $('#guide').innerHTML=Object.values(GUIDE).map(g=>`<li><b style="font-family:var(--ff-t)">${t(g[0])}</b><br><span lang="fr">${g[1]}</span></li>`).join('');
+ $('#faq').innerHTML=`<h2>${t(I18N.iFaq)||'Vos questions'}</h2>`+FAQ.map(f=>`<details><summary>${t(f[0])}</summary><p>${t(f[1])}</p></details>`).join('');
+ const rv=(r)=>`<blockquote lang="fr"><p>« ${r[2]} »</p><footer>${r[0]} · ${r[1]}${L!=='fr'?` · <span lang="${L}" style="font-weight:400">${t(UI.orig)}</span>`:''}</footer></blockquote>`;
+ $('#revHome').innerHTML=REVIEWS.slice(0,3).map(rv).join('');
+ $('#revAll').innerHTML=REVIEWS.map(rv).join('');
+ $('#months').innerHTML=MONTHS[L].map((m,i)=>`<li><button type="button" data-m="${i}" aria-pressed="${i===curM}" aria-label="${MONTHS_L[L][i]}">${m}</button></li>`).join('');
+ setMonth(curM,true); estimate();
+}
+
+/* ---------- geste signature : l'horizon des saisons ---------- */
+let curM=new Date().getMonth();
+const SKY=['#B9C4D6','#C3CCDB','#CCD9E6','#C9DCEB','#BFDDEF','#A9D4F0','#9FCFF2','#A8D2EF','#D5D9E4','#E2D3C2','#CDC6C4','#B6BED0'];
+const R1=['#8792AD','#8B97B0','#93A0B6','#98A9BB','#9AAFBD','#9DB3C2','#A0B6C4','#9FB2C0','#A79FA9','#AE9790','#9B95A0','#8590AA'];
+const R2=['#5F7158','#62765A','#6E8A5E','#79975F','#76955A','#6F8D52','#6D8650','#73824F','#86834F','#8E7A4A','#6E6D55','#5D6D57'];
+function setMonth(m,quiet){
+ curM=m; const s=seasonOf(m);
+ const el=Math.sin(Math.PI*(m+.5)/12); // hauteur du soleil
+ const sun=$('#sun'); sun.setAttribute('cx',String(150+m*82)); sun.setAttribute('cy',String(100-el*68)); sun.setAttribute('fill',el>.7?'#FFD95A':el>.4?'#F2C230':'#E89A4B');
+ $('.horizon').style.background=SKY[m]; $('#r1').setAttribute('fill',R1[m]); $('#r2').setAttribute('fill',R2[m]);
+ $$('#months button').forEach(b=>b.setAttribute('aria-pressed',String(+b.dataset.m===m)));
+ $('#hzMonth').textContent=t(UI.month)+' · '+MONTHS_L[L][m];
+ $('#hzSeason').textContent=t(SEASON[s]); $('#hzMood').textContent=t(MOOD[s]);
+ $('#hzPitch').textContent=PITCH[m]?eur(PITCH[m])+' / '+t(UI.night).replace(/^(la |per |por |pro |a |per )/,''):t(UI.ask);
+ $('#hzMh').textContent=eur(MH[m]);
+ $('#hzList').innerHTML=OPEN.map(o=>{const on=o.m.includes(m);return `<li class="${on?'':'off'}"><svg class="i"><use href="#${on?'ic-ok':'ic-x'}"/></svg><span>${t(o.k)}</span></li>`}).join('');
+ $('#hzBook').dataset.month=m;
+}
+document.addEventListener('click',e=>{
+ const b=e.target.closest('#months button'); if(b){setMonth(+b.dataset.m);}
+ const hb=e.target.closest('#hzBook'); if(hb){const y=new Date().getFullYear()+(curM<new Date().getMonth()?1:0);const d=new Date(Date.UTC(y,curM,15));$('#bkIn').value=d.toISOString().slice(0,10);d.setUTCDate(22);$('#bkOut').value=d.toISOString().slice(0,10);setTimeout(estimate,50);}
+ const mb=e.target.closest('[data-mh]'); if(mb){$('#bkType').value=mb.dataset.mh;setTimeout(()=>{toggleBk();estimate()},50);}
+ if(e.target.closest('[data-open-cs]')){e.preventDefault();openCs();}
+});
+$('#months').addEventListener('keydown',e=>{if(e.key==='ArrowRight'||e.key==='ArrowLeft'){e.preventDefault();const n=(curM+(e.key==='ArrowRight'?1:11))%12;setMonth(n);$(`#months button[data-m="${n}"]`).focus();}});
+
+/* ---------- réservation : estimation d'après les grilles publiées ---------- */
+function mhWeek(type,d){ // d : Date UTC
+ const md=(d.getUTCMonth()+1)*100+d.getUTCDate();
+ if(type==='garrigue'){ if(md>=726&&md<=815)return 800; if((md>=712&&md<=725)||(md>=816&&md<=822))return 700; if((md>=628&&md<=711)||(md>=823&&md<=905))return 600; if((md>=614&&md<=627)||(md>=906&&md<=919))return 500; return null;}
+ if(md>=725&&md<=815)return 850; if((md>=711&&md<=724)||(md>=816&&md<=821))return 750; if((md>=627&&md<=710)||(md>=822&&md<=904))return 650; if((md>=606&&md<=626)||(md>=905&&md<=926))return 550; if(md>=425&&md<=605)return 450; return 400;
+}
+function pitchNight(d,pers){const md=(d.getUTCMonth()+1)*100+d.getUTCDate(); let base; if(md>=627&&md<=904)base=pers>=2?34:28; else if(md>=905)base=pers>=2?28:22; else return null; return base+Math.max(0,pers-2)*6.5;}
+const EST={nights:{fr:'nuits',en:'nights',es:'noches',de:'Nächte',it:'notti',nl:'nachten'},weeks:{fr:'semaine(s) de location',en:'rental week(s)',es:'semana(s) de alquiler',de:'Mietwoche(n)',it:'settimana/e di affitto',nl:'huurweek/weken'},tax:{fr:'taxe de séjour et frais de dossier inclus',en:'tourist tax and booking fee included',es:'tasa turística y gastos de gestión incluidos',de:'inkl. Kurtaxe und Buchungsgebühr',it:'tassa di soggiorno e spese di prenotazione incluse',nl:'inclusief toeristenbelasting en boekingskosten'},na:{fr:'Tarif non publié pour ces dates : l\'accueil vous le confirme.',en:'No published rate for these dates: reception will confirm.',es:'Tarifa no publicada para estas fechas: recepción se la confirma.',de:'Für diese Daten ist kein Preis veröffentlicht: die Rezeption bestätigt ihn.',it:'Tariffa non pubblicata per queste date: ve la conferma la reception.',nl:'Geen gepubliceerd tarief voor deze data: de receptie bevestigt het.'},
+ e1:{fr:'Choisissez une date de départ après l\'arrivée.',en:'Choose a departure date after arrival.',es:'Elija una fecha de salida posterior a la llegada.',de:'Wählen Sie ein Abreisedatum nach der Ankunft.',it:'Scegliete una data di partenza dopo l\'arrivo.',nl:'Kies een vertrekdatum na de aankomst.'},
+ e2:{fr:'Les mobil-homes accueillent 4 personnes au maximum, bébés compris. Au-delà, pensez à un emplacement ou appelez-nous.',en:'Mobile homes sleep 4 people maximum, babies included. For more, choose a pitch or call us.',es:'Los mobil-homes admiten 4 personas como máximo, bebés incluidos. Si son más, elija una parcela o llámenos.',de:'Mobilheime fassen höchstens 4 Personen, Babys inklusive. Für mehr wählen Sie einen Stellplatz oder rufen Sie uns an.',it:'Le case mobili ospitano al massimo 4 persone, neonati compresi. Oltre, scegliete una piazzola o chiamateci.',nl:'Stacaravans zijn voor maximaal 4 personen, baby\'s inbegrepen. Met meer? Kies een plaats of bel ons.'},
+ e3:{fr:'Un emplacement accueille 6 personnes au maximum.',en:'A pitch takes 6 people maximum.',es:'Una parcela admite 6 personas como máximo.',de:'Ein Stellplatz fasst höchstens 6 Personen.',it:'Una piazzola ospita al massimo 6 persone.',nl:'Een plaats is voor maximaal 6 personen.'},
+ e4:{fr:'Indiquez une adresse e-mail valide pour recevoir la réponse.',en:'Enter a valid e-mail address to receive the reply.',es:'Indique un e-mail válido para recibir la respuesta.',de:'Geben Sie eine gültige E-Mail-Adresse für die Antwort an.',it:'Indicate un indirizzo e-mail valido per ricevere la risposta.',nl:'Vul een geldig e-mailadres in om het antwoord te ontvangen.'},
+ e5:{fr:'Pas d\'animaux dans les mobil-homes.',en:'No pets in mobile homes.',es:'No se admiten animales en los mobil-homes.',de:'Keine Haustiere in Mobilheimen.',it:'Niente animali nelle case mobili.',nl:'Geen huisdieren in stacaravans.'},
+ ok:{fr:'Merci ! Dans le site réel, votre demande part à l\'accueil, qui vous répond par e-mail avec la disponibilité et le lien d\'acompte.',en:'Thank you! On the live site, your request goes to reception, who reply by e-mail with availability and the deposit link.',es:'¡Gracias! En el sitio real, su solicitud llega a recepción, que le responde por e-mail con la disponibilidad y el enlace del anticipo.',de:'Danke! Auf der echten Website geht Ihre Anfrage an die Rezeption, die per E-Mail mit Verfügbarkeit und Anzahlungslink antwortet.',it:'Grazie! Sul sito reale la richiesta arriva alla reception, che risponde via e-mail con disponibilità e link per l\'acconto.',nl:'Bedankt! Op de echte site gaat uw aanvraag naar de receptie, die per e-mail antwoordt met beschikbaarheid en de aanbetalingslink.'}};
+function toggleBk(){const p=$('#bkType').value==='pitch';$('#lbElec').style.display=p?'':'none';$('#lbPet').style.display=p?'':'none';}
+function estimate(){
+ const ty=$('#bkType').value,a=$('#bkIn').value,b=$('#bkOut').value,pers=(+$('#bkAd').value||0)+(+$('#bkCh').value||0),ad=+$('#bkAd').value||0;
+ const out=$('#estVal'),det=$('#estDet'),err=$('#bkErr'); err.textContent='';
+ if(!a||!b){out.textContent='—';det.textContent='';return null;}
+ const d1=new Date(a+'T00:00:00Z'),d2=new Date(b+'T00:00:00Z'),n=Math.round((d2-d1)/864e5);
+ if(n<=0){err.textContent=t(EST.e1);out.textContent='—';det.textContent='';return null;}
+ if(ty!=='pitch'&&pers>4){err.textContent=t(EST.e2);out.textContent='—';return null;}
+ if(ty==='pitch'&&pers>6){err.textContent=t(EST.e3);out.textContent='—';return null;}
+ if(ty!=='pitch'&&+$('#bkPet').value>0){err.textContent=t(EST.e5);}
+ let tot=0;
+ if(ty==='pitch'){for(let i=0;i<n;i++){const d=new Date(d1);d.setUTCDate(d.getUTCDate()+i);const v=pitchNight(d,pers);if(v==null){out.textContent=t(UI.ask);det.textContent=t(EST.na);return null;}tot+=v+(+$('#bkElec').value)+(+$('#bkPet').value)*2;}tot+=5;}
+ else{const w=Math.ceil(n/7);for(let i=0;i<w;i++){const d=new Date(d1);d.setUTCDate(d.getUTCDate()+i*7);const v=mhWeek(ty,d);if(v==null){out.textContent=t(UI.ask);det.textContent=t(EST.na);return null;}tot+=v;}tot+=25;det.dataset.w=w;}
+ tot+=ad*0.66*n;
+ out.textContent=eur(Math.round(tot*100)/100);
+ det.textContent=ty==='pitch'?`${n} ${t(EST.nights)} · ${t(EST.tax)}`:`${Math.ceil(n/7)} ${t(EST.weeks)} · ${t(EST.tax)}`;
+ return tot;
+}
+['#bkType','#bkIn','#bkOut','#bkAd','#bkCh','#bkElec','#bkPet'].forEach(s=>$(s).addEventListener('input',()=>{toggleBk();estimate()}));
+$('#bk').addEventListener('submit',e=>{e.preventDefault();const err=$('#bkErr');if(!$('#bkIn').value||!$('#bkOut').value){err.textContent=t(EST.e1);return;}if(estimate()===null&&err.textContent)return;if(!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test($('#bkMail').value)){err.textContent=t(EST.e4);return;}err.style.color='var(--chene)';err.textContent=t(EST.ok);setTimeout(()=>err.style.color='',6000);});
+
+/* ---------- routeur ---------- */
+function route(){
+ const r=(location.hash.match(/^#\/([\w-]*)/)||[,''])[1];
+ const v=$$('.view').find(x=>x.dataset.v===r)||$('.view[data-v=""]');
+ $$('.view').forEach(x=>x.classList.toggle('on',x===v));
+ $$('nav.menu a[data-r]').forEach(a=>a.toggleAttribute('aria-current',a.dataset.r===v.dataset.v)||a.removeAttribute('aria-current'));
+ $$('nav.menu a[data-r]').forEach(a=>{if(a.dataset.r===v.dataset.v)a.setAttribute('aria-current','page');else a.removeAttribute('aria-current')});
+ const cur=$('nav.menu a[aria-current]'); if(cur) cur.scrollIntoView({block:'nearest',inline:'center'});
+ if(location.hash.startsWith('#/')) window.scrollTo(0,0);
+ const vid=$('#heroVid'); if(vid&&v.dataset.v===''){if(!vid.src&&!matchMedia('(prefers-reduced-motion: reduce)').matches&&innerWidth>700){vid.src='https://www.camping-les-truffieres.com/wa_res/files/Camping-ardeche-les-truffieres.webm';vid.play().catch(()=>{});vid.addEventListener('playing',()=>$('.hero .poster').style.opacity=0,{once:true});vid.addEventListener('error',()=>{vid.remove()},{once:true});}}
+}
+addEventListener('hashchange',route);
+
+/* ---------- langues ---------- */
+const ORIG={};
+function applyLang(l){
+ L=LANGS.includes(l)?l:'fr'; document.documentElement.lang=L;
+ $$('[data-i]').forEach(el=>{const k=el.dataset.i;if(!(k in ORIG))ORIG[k]=el.innerHTML;const v=L==='fr'?ORIG[k]:(I18N[k]&&I18N[k][L]);if(v!=null)el.innerHTML=v;});
+ $$('[data-i-alt]').forEach(el=>{const k=el.dataset.iAlt;if(!('alt:'+k in ORIG))ORIG['alt:'+k]=el.alt;el.alt=L==='fr'?ORIG['alt:'+k]:(I18N[k]&&I18N[k][L])||ORIG['alt:'+k];});
+ $('#lang').value=L; $('#csIn').placeholder=t(CS.ph); renderDyn(); csReset();
+ try{localStorage.setItem('tr-lang',L)}catch(e){}
+}
+$('#lang').addEventListener('change',e=>applyLang(e.target.value));
+
+
+/* ---------- Truffières Conseil (assistant virtuel) ---------- */
+const CS={
+ ph:{fr:'Posez votre question…',en:'Ask your question…',es:'Haga su pregunta…',de:'Ihre Frage…',it:'Fate la vostra domanda…',nl:'Stel uw vraag…'},
+ hello:{fr:'Bonjour, je suis Truffières Conseil, l\'assistant virtuel du camping. Je connais les tarifs 2026, les hébergements et la région. Pour une réservation ferme, l\'équipe reste au 04 75 04 68 35.',en:'Hello, I\'m Truffières Conseil, the campsite\'s virtual assistant. I know the 2026 rates, the accommodation and the area. For a confirmed booking, the team is on +33 4 75 04 68 35.',es:'Hola, soy Truffières Conseil, el asistente virtual del camping. Conozco las tarifas 2026, los alojamientos y la región. Para una reserva en firme, el equipo atiende en el +33 4 75 04 68 35.',de:'Hallo, ich bin Truffières Conseil, der virtuelle Assistent des Campingplatzes. Ich kenne die Preise 2026, die Unterkünfte und die Gegend. Für eine feste Buchung erreichen Sie das Team unter +33 4 75 04 68 35.',it:'Buongiorno, sono Truffières Conseil, l\'assistente virtuale del campeggio. Conosco le tariffe 2026, gli alloggi e la zona. Per una prenotazione definitiva, il team risponde al +33 4 75 04 68 35.',nl:'Hallo, ik ben Truffières Conseil, de virtuele assistent van de camping. Ik ken de tarieven 2026, de accommodaties en de omgeving. Voor een vaste boeking is het team bereikbaar op +33 4 75 04 68 35.'},
+ q:{fr:['Emplacement ou mobil-home ?','Prix en août','Avec un bébé','Chiens acceptés ?','Ouvert en hiver ?'],en:['Pitch or mobile home?','Price in August','With a baby','Are dogs allowed?','Open in winter?'],es:['¿Parcela o mobil-home?','Precio en agosto','Con un bebé','¿Se admiten perros?','¿Abierto en invierno?'],de:['Stellplatz oder Mobilheim?','Preis im August','Mit Baby','Hunde erlaubt?','Im Winter geöffnet?'],it:['Piazzola o casa mobile?','Prezzo ad agosto','Con un neonato','Cani ammessi?','Aperto in inverno?'],nl:['Plaats of stacaravan?','Prijs in augustus','Met een baby','Honden welkom?','Open in de winter?']}};
+const INT=[
+ {k:['bonjour','salut','hello','hi','hola','hallo','ciao','buongiorno','goedendag','hoi','guten tag'],a:{fr:'Bonjour ! Dites-moi vos dates, combien vous êtes et si vous venez avec tente, camping-car ou valises : je vous oriente.',en:'Hello! Tell me your dates, how many you are and whether you bring a tent, a motorhome or just suitcases: I\'ll point you the right way.',es:'¡Hola! Dígame sus fechas, cuántos son y si vienen con tienda, autocaravana o solo maletas: le oriento.',de:'Hallo! Nennen Sie mir Ihre Daten, wie viele Sie sind und ob Sie mit Zelt, Wohnmobil oder nur Koffern kommen: ich helfe weiter.',it:'Buongiorno! Ditemi le date, quanti siete e se venite con tenda, camper o solo valigie: vi oriento.',nl:'Hallo! Vertel me uw data, met hoeveel u bent en of u met tent, camper of alleen koffers komt: ik help u verder.'}},
+ {k:['merci','thanks','thank','gracias','danke','grazie','bedankt','dank'],a:{fr:'Avec plaisir. Bon séjour en Ardèche !',en:'You\'re welcome. Enjoy the Ardèche!',es:'De nada. ¡Buena estancia en Ardèche!',de:'Gern geschehen. Schöne Zeit in der Ardèche!',it:'Prego. Buon soggiorno in Ardèche!',nl:'Graag gedaan. Fijn verblijf in de Ardèche!'}},
+ {k:['bébé','bebe','baby','bebé','neonato','enfant','enfants','kids','child','children','niños','kinder','bambini','kinderen','pataugeoire','poussette'],a:{fr:'Avec un bébé, je conseille le Watipi (41 m²) : de la place pour la poussette et un lit parapluie installé avant votre arrivée, sur demande. À la piscine, une pataugeoire flottante accueille les petits de 6 mois à 3 ans. <a href="#/mobil-homes">Voir le Watipi</a>',en:'With a baby, I recommend the Watipi (41 m²): room for the pushchair and a travel cot set up before you arrive, on request. At the pool, a floating paddling area welcomes little ones from 6 months to 3 years. <a href="#/mobil-homes">See the Watipi</a>',es:'Con un bebé, recomiendo el Watipi (41 m²): sitio para el carrito y cuna de viaje instalada antes de su llegada, bajo petición. En la piscina, un chapoteadero flotante acoge a los pequeños de 6 meses a 3 años. <a href="#/mobil-homes">Ver el Watipi</a>',de:'Mit Baby empfehle ich das Watipi (41 m²): Platz für den Kinderwagen und ein Reisebett, auf Wunsch vor Ankunft aufgebaut. Am Pool gibt es ein schwimmendes Planschbecken für Kleine von 6 Monaten bis 3 Jahren. <a href="#/mobil-homes">Zum Watipi</a>',it:'Con un neonato consiglio il Watipi (41 m²): spazio per il passeggino e lettino da viaggio montato prima dell\'arrivo, su richiesta. In piscina, una vasca galleggiante accoglie i piccoli da 6 mesi a 3 anni. <a href="#/mobil-homes">Vedi il Watipi</a>',nl:'Met een baby raad ik de Watipi (41 m²) aan: ruimte voor de kinderwagen en een campingbedje dat op aanvraag vóór aankomst klaarstaat. Bij het zwembad is een drijvend pierenbad voor kleintjes van 6 maanden tot 3 jaar. <a href="#/mobil-homes">Bekijk de Watipi</a>'}},
+ {k:['chien','chiens','chat','animal','animaux','dog','dogs','pet','pets','perro','perros','mascota','hund','hunde','haustier','cane','cani','animali','hond','honden','huisdier'],a:{fr:'Les animaux sont bienvenus sur les emplacements (2 € par nuit ; chiens de 1re et 2e catégories interdits), mais pas dans les mobil-homes.',en:'Pets are welcome on pitches (€2 a night; category 1 and 2 dogs not allowed), but not in mobile homes.',es:'Los animales son bienvenidos en las parcelas (2 € por noche; perros de 1.ª y 2.ª categoría prohibidos), pero no en los mobil-homes.',de:'Haustiere sind auf Stellplätzen willkommen (2 € pro Nacht; Hunde der Kategorien 1 und 2 verboten), nicht aber in Mobilheimen.',it:'Gli animali sono benvenuti nelle piazzole (2 € a notte; cani di 1a e 2a categoria vietati), ma non nelle case mobili.',nl:'Huisdieren zijn welkom op de plaatsen (€ 2 per nacht; honden van categorie 1 en 2 niet toegestaan), maar niet in de stacaravans.'}},
+ {k:['hiver','winter','invierno','inverno','janvier','février','décembre','january','february','december','hors saison','off season','ouvert','open','abierto','geöffnet','aperto'],a:{fr:'Oui, le camping est ouvert les 365 jours. L\'hiver, un bloc sanitaire est chauffé et le Pub reste ouvert. Les mobil-homes sont à 400 € la semaine ; pour les emplacements de janvier à juin, le tarif n\'est pas publié : l\'accueil vous le donne au 04 75 04 68 35.',en:'Yes, the campsite is open 365 days a year. In winter one shower block is heated and the Pub stays open. Mobile homes are €400 a week; pitch rates from January to June aren\'t published, so reception will give you the price on +33 4 75 04 68 35.',es:'Sí, el camping abre los 365 días. En invierno, un bloque sanitario tiene calefacción y el Pub sigue abierto. Los mobil-homes cuestan 400 € la semana; las parcelas de enero a junio no tienen tarifa publicada: recepción se la da en el +33 4 75 04 68 35.',de:'Ja, der Platz ist an 365 Tagen geöffnet. Im Winter ist ein Sanitärblock beheizt und der Pub bleibt offen. Mobilheime kosten 400 € pro Woche; Stellplatzpreise von Januar bis Juni sind nicht veröffentlicht, die Rezeption nennt sie Ihnen unter +33 4 75 04 68 35.',it:'Sì, il campeggio è aperto 365 giorni l\'anno. D\'inverno un blocco servizi è riscaldato e il Pub resta aperto. Le case mobili costano 400 € a settimana; le piazzole da gennaio a giugno non hanno tariffa pubblicata: ve la dà la reception al +33 4 75 04 68 35.',nl:'Ja, de camping is 365 dagen per jaar open. In de winter is één sanitairgebouw verwarmd en blijft de Pub open. Stacaravans kosten € 400 per week; plaatstarieven van januari tot juni zijn niet gepubliceerd, de receptie geeft ze u op +33 4 75 04 68 35.'}},
+ {k:['août','aout','august','agosto','augustus','juillet','july','julio','juli','luglio','été','summer','verano','sommer','estate','zomer'],a:{fr:'En été, un emplacement pour 2 personnes et un véhicule coûte 34 € la nuit. Un mobil-home Trigano ou Watipi va de 650 € à 850 € la semaine (850 € du 25 juillet au 15 août), le Garrigue de 600 € à 800 €. <a href="#/tarifs">Toutes les grilles</a>',en:'In summer, a pitch for 2 people and one vehicle is €34 a night. A Trigano or Watipi mobile home costs €650 to €850 a week (€850 from 25 July to 15 August), the Garrigue €600 to €800. <a href="#/tarifs">All rates</a>',es:'En verano, una parcela para 2 personas y un vehículo cuesta 34 € la noche. Un mobil-home Trigano o Watipi va de 650 € a 850 € la semana (850 € del 25 de julio al 15 de agosto), el Garrigue de 600 € a 800 €. <a href="#/tarifs">Todas las tarifas</a>',de:'Im Sommer kostet ein Stellplatz für 2 Personen und ein Fahrzeug 34 € pro Nacht. Ein Trigano- oder Watipi-Mobilheim kostet 650 € bis 850 € pro Woche (850 € vom 25. Juli bis 15. August), das Garrigue 600 € bis 800 €. <a href="#/tarifs">Alle Preise</a>',it:'In estate una piazzola per 2 persone e un veicolo costa 34 € a notte. Una casa mobile Trigano o Watipi va da 650 € a 850 € a settimana (850 € dal 25 luglio al 15 agosto), il Garrigue da 600 € a 800 €. <a href="#/tarifs">Tutte le tariffe</a>',nl:'In de zomer kost een plaats voor 2 personen en één voertuig € 34 per nacht. Een Trigano- of Watipi-stacaravan kost € 650 tot € 850 per week (€ 850 van 25 juli tot 15 augustus), de Garrigue € 600 tot € 800. <a href="#/tarifs">Alle tarieven</a>'}},
+ {k:['prix','tarif','tarifs','combien','coût','price','prices','rate','rates','cost','precio','tarifa','cuánto','preis','preise','kosten','prezzo','prezzi','quanto','prijs','prijzen','kost'],a:{fr:'Emplacements : 22 € à 34 € la nuit pour 2 personnes (publiés du 27 juin au 31 décembre). Mobil-homes : de 400 € à 850 € la semaine. Essayez l\'horizon des saisons sur l\'accueil, ou le calcul sur <a href="#/reserver">Réserver</a>.',en:'Pitches: €22 to €34 a night for 2 people (published from 27 June to 31 December). Mobile homes: €400 to €850 a week. Try the seasons horizon on the home page, or the calculator under <a href="#/reserver">Book</a>.',es:'Parcelas: de 22 € a 34 € la noche para 2 personas (publicadas del 27 de junio al 31 de diciembre). Mobil-homes: de 400 € a 850 € la semana. Pruebe el horizonte de las estaciones en la portada o el cálculo en <a href="#/reserver">Reservar</a>.',de:'Stellplätze: 22 € bis 34 € pro Nacht für 2 Personen (veröffentlicht vom 27. Juni bis 31. Dezember). Mobilheime: 400 € bis 850 € pro Woche. Probieren Sie den Jahreszeiten-Horizont auf der Startseite oder den Rechner unter <a href="#/reserver">Buchen</a>.',it:'Piazzole: da 22 € a 34 € a notte per 2 persone (pubblicate dal 27 giugno al 31 dicembre). Case mobili: da 400 € a 850 € a settimana. Provate l\'orizzonte delle stagioni in home o il calcolo in <a href="#/reserver">Prenota</a>.',nl:'Plaatsen: € 22 tot € 34 per nacht voor 2 personen (gepubliceerd van 27 juni tot 31 december). Stacaravans: € 400 tot € 850 per week. Probeer de seizoenshorizon op de homepage of de berekening bij <a href="#/reserver">Boeken</a>.'}},
+ {k:['mobil-home','mobilhome','mobil','mobile','emplacement','emplacements','pitch','parcela','stellplatz','piazzola','plaats','tente','tent','tienda','zelt','tenda','camping-car','motorhome','autocaravana','wohnmobil','camper','caravane','caravan'],a:{fr:'Vous venez avec votre matériel ? Un emplacement de plus de 100 m², jusqu\'à 6 personnes, dès 22 € la nuit. Vous voulez arriver léger ? Un mobil-home climatisé pour 4, linge fourni, dès 400 € la semaine (animaux non admis). <a href="#/emplacements">Emplacements</a> · <a href="#/mobil-homes">Mobil-homes</a>',en:'Bringing your own gear? A pitch of over 100 m², up to 6 people, from €22 a night. Prefer to travel light? An air-conditioned mobile home for 4, bed linen included, from €400 a week (no pets). <a href="#/emplacements">Pitches</a> · <a href="#/mobil-homes">Mobile homes</a>',es:'¿Viene con su equipo? Una parcela de más de 100 m², hasta 6 personas, desde 22 € la noche. ¿Prefiere llegar ligero? Un mobil-home climatizado para 4, ropa de cama incluida, desde 400 € la semana (sin animales). <a href="#/emplacements">Parcelas</a> · <a href="#/mobil-homes">Mobil-homes</a>',de:'Mit eigener Ausrüstung? Ein Stellplatz über 100 m², bis 6 Personen, ab 22 € pro Nacht. Lieber mit leichtem Gepäck? Ein klimatisiertes Mobilheim für 4, Bettwäsche inklusive, ab 400 € pro Woche (keine Haustiere). <a href="#/emplacements">Stellplätze</a> · <a href="#/mobil-homes">Mobilheime</a>',it:'Venite con la vostra attrezzatura? Una piazzola di oltre 100 m², fino a 6 persone, da 22 € a notte. Preferite viaggiare leggeri? Una casa mobile climatizzata per 4, biancheria inclusa, da 400 € a settimana (niente animali). <a href="#/emplacements">Piazzole</a> · <a href="#/mobil-homes">Case mobili</a>',nl:'Komt u met eigen spullen? Een plaats van meer dan 100 m², tot 6 personen, vanaf € 22 per nacht. Liever licht reizen? Een stacaravan met airco voor 4, beddengoed inbegrepen, vanaf € 400 per week (geen huisdieren). <a href="#/emplacements">Plaatsen</a> · <a href="#/mobil-homes">Stacaravans</a>'}},
+ {k:['piscine','pool','piscina','schwimmbad','zwembad','baignade','swim','nager','bain'],a:{fr:'Bassin de 17 × 7 m, 1,30 m de profondeur partout, chauffé au soleil de juin à septembre, ouvert jusqu\'à la fermeture du Pub. Slips et boxers de bain uniquement.',en:'17 × 7 m pool, 1.30 m deep throughout, solar-heated from June to September, open until the Pub closes. Swim briefs or trunks only, no board shorts.',es:'Piscina de 17 × 7 m, 1,30 m de profundidad, con calefacción solar de junio a septiembre, abierta hasta el cierre del Pub. Solo bañadores slip o bóxer.',de:'Becken 17 × 7 m, überall 1,30 m tief, solarbeheizt von Juni bis September, geöffnet bis der Pub schließt. Nur Badeslips oder enge Badehosen.',it:'Vasca di 17 × 7 m, profonda 1,30 m ovunque, riscaldata dal sole da giugno a settembre, aperta fino alla chiusura del Pub. Solo slip o boxer da bagno.',nl:'Bad van 17 × 7 m, overal 1,30 m diep, door de zon verwarmd van juni tot september, open tot de Pub sluit. Alleen zwemslips of -boxers.'}},
+ {k:['restaurant','manger','pub','bar','bière','biere','beer','eat','dinner','cerveza','comer','bier','essen','birra','mangiare','eten','oustaou'],a:{fr:'The Pub est ouvert toute l\'année : bières d\'Ardèche, vins régionaux, cocktails. L\'Oustaou ouvre en juillet-août, mais son site annonce une fermeture pour 2026 et un retour en 2027 : je vous conseille d\'appeler pour vérifier.',en:'The Pub is open all year: Ardèche beers, regional wines, cocktails. L\'Oustaou opens in July and August, but its page says it is closed for 2026 and back in 2027: best to call and check.',es:'The Pub abre todo el año: cervezas de Ardèche, vinos regionales, cócteles. L\'Oustaou abre en julio y agosto, pero su página anuncia cierre en 2026 y vuelta en 2027: mejor llamar para comprobarlo.',de:'The Pub ist ganzjährig geöffnet: Ardèche-Biere, regionale Weine, Cocktails. L\'Oustaou öffnet im Juli und August, seine Seite meldet aber eine Schließung für 2026 und Rückkehr 2027: am besten anrufen.',it:'The Pub è aperto tutto l\'anno: birre dell\'Ardèche, vini regionali, cocktail. L\'Oustaou apre a luglio e agosto, ma la sua pagina annuncia la chiusura nel 2026 e il ritorno nel 2027: meglio chiamare per verificare.',nl:'The Pub is het hele jaar open: Ardèche-bieren, streekwijnen, cocktails. L\'Oustaou is open in juli en augustus, maar de pagina meldt sluiting in 2026 en terugkeer in 2027: bel even om het na te gaan.'}},
+ {k:['canoë','canoe','canoa','kanu','kano','kayak','gorges','rivière','river'],a:{fr:'La descente des Gorges se réserve à l\'accueil, pour les vacanciers du camping : de 25 € à 90 €, matériel et navette compris. Les plages surveillées de Saint-Martin-d\'Ardèche sont à 10 minutes.',en:'The Gorges canoe trip is booked at reception, for campsite guests: €25 to €90, equipment and shuttle included. The supervised beaches of Saint-Martin-d\'Ardèche are 10 minutes away.',es:'El descenso de las Gargantas se reserva en recepción, para clientes del camping: de 25 € a 90 €, material y lanzadera incluidos. Las playas vigiladas de Saint-Martin-d\'Ardèche están a 10 minutos.',de:'Die Kanutour durch die Schluchten buchen Campinggäste an der Rezeption: 25 € bis 90 €, Ausrüstung und Shuttle inklusive. Die bewachten Strände von Saint-Martin-d\'Ardèche sind 10 Minuten entfernt.',it:'La discesa delle Gole si prenota alla reception, per gli ospiti del campeggio: da 25 € a 90 €, attrezzatura e navetta incluse. Le spiagge sorvegliate di Saint-Martin-d\'Ardèche sono a 10 minuti.',nl:'De kanotocht door de kloven boekt u bij de receptie, voor campinggasten: € 25 tot € 90, materiaal en shuttle inbegrepen. De bewaakte stranden van Saint-Martin-d\'Ardèche liggen op 10 minuten.'}},
+ {k:['grotte','grottes','cave','caves','cueva','höhle','grotta','grot','chauvet','aven'],a:{fr:'La Grotte de Saint-Marcel est à 6 km (16 €), l\'Aven Marzal à 10 km (15 €), Chauvet 2 à 21 km (18 €, gratuit pour les moins de 10 ans). Prévoyez un pull : il fait 10 à 15 °C dessous.',en:'Saint-Marcel cave is 6 km away (€16), Aven Marzal 10 km (€15), Chauvet 2 21 km (€18, free under 10). Bring a jumper: it\'s 10 to 15 °C underground.',es:'La cueva de Saint-Marcel está a 6 km (16 €), el Aven Marzal a 10 km (15 €), Chauvet 2 a 21 km (18 €, gratis para menores de 10 años). Lleve un jersey: hace de 10 a 15 °C.',de:'Die Höhle Saint-Marcel liegt 6 km entfernt (16 €), Aven Marzal 10 km (15 €), Chauvet 2 21 km (18 €, unter 10 Jahren frei). Pullover mitnehmen: 10 bis 15 °C.',it:'La grotta di Saint-Marcel è a 6 km (16 €), l\'Aven Marzal a 10 km (15 €), Chauvet 2 a 21 km (18 €, gratis sotto i 10 anni). Portate un maglione: 10-15 °C.',nl:'De grot van Saint-Marcel ligt op 6 km (€ 16), Aven Marzal op 10 km (€ 15), Chauvet 2 op 21 km (€ 18, gratis onder 10 jaar). Neem een trui mee: 10 tot 15 °C.'}},
+ {k:['barbecue','bbq','plancha','grill','grillen','barbacoa'],a:{fr:'Les barbecues individuels sont interdits par arrêté préfectoral. Le Pub et, l\'été, L\'Oustaou sont là pour les soirs sans cuisine.',en:'Individual barbecues are banned by prefectoral order. The Pub, and L\'Oustaou in summer, are there for evenings off.',es:'Las barbacoas individuales están prohibidas por decreto. El Pub y, en verano, L\'Oustaou están para las noches sin cocinar.',de:'Private Grills sind per Präfekturerlass verboten. Der Pub und im Sommer L\'Oustaou sind für kochfreie Abende da.',it:'I barbecue individuali sono vietati da ordinanza prefettizia. Il Pub e, d\'estate, L\'Oustaou ci sono per le serate senza cucinare.',nl:'Eigen barbecues zijn bij prefectoraal besluit verboden. De Pub en in de zomer L\'Oustaou zijn er voor avonden zonder koken.'}},
+ {k:['annuler','annulation','cancel','cancellation','cancelar','stornieren','storno','annullare','annuleren','assurance','insurance'],a:{fr:'Les conditions d\'annulation figurent dans les CGV du camping, que je n\'ai pas sous les yeux en détail. L\'accueil vous les précise au 04 75 04 68 35.',en:'Cancellation terms are in the campsite\'s terms and conditions, which I don\'t have in detail. Reception will explain them on +33 4 75 04 68 35.',es:'Las condiciones de anulación están en las condiciones generales, que no tengo en detalle. Recepción se las explica en el +33 4 75 04 68 35.',de:'Die Stornobedingungen stehen in den AGB des Platzes, die ich nicht im Detail kenne. Die Rezeption erklärt sie unter +33 4 75 04 68 35.',it:'Le condizioni di annullamento sono nelle condizioni generali, che non ho nel dettaglio. La reception ve le spiega al +33 4 75 04 68 35.',nl:'De annuleringsvoorwaarden staan in de algemene voorwaarden, die ik niet in detail ken. De receptie legt ze uit op +33 4 75 04 68 35.'}},
+ {k:['wifi','wi-fi','internet','électricité','electricite','electricity','electricidad','strom','elettricità','stroom','ampères','prise'],a:{fr:'Le Wi-Fi est gratuit. Sur les emplacements, l\'électricité coûte 3 € (4 A), 5 € (6 A) ou 7 € (10 A) la nuit, 10 € avec réfrigérateur. La recharge de véhicule électrique est interdite.',en:'Wi-Fi is free. On pitches, electricity costs €3 (4 A), €5 (6 A) or €7 (10 A) a night, €10 with a fridge. Electric vehicle charging is not allowed.',es:'El Wi-Fi es gratuito. En las parcelas, la electricidad cuesta 3 € (4 A), 5 € (6 A) o 7 € (10 A) la noche, 10 € con nevera. Prohibida la recarga de vehículos eléctricos.',de:'WLAN ist kostenlos. Strom auf dem Stellplatz kostet 3 € (4 A), 5 € (6 A) oder 7 € (10 A) pro Nacht, 10 € mit Kühlschrank. Laden von E-Autos ist verboten.',it:'Il Wi-Fi è gratuito. Nelle piazzole l\'elettricità costa 3 € (4 A), 5 € (6 A) o 7 € (10 A) a notte, 10 € con frigorifero. Vietata la ricarica di veicoli elettrici.',nl:'Wifi is gratis. Op de plaatsen kost stroom € 3 (4 A), € 5 (6 A) of € 7 (10 A) per nacht, € 10 met koelkast. Elektrische auto\'s opladen is niet toegestaan.'}},
+ {k:['arrivée','arriver','heure','horaire','horaires','arrival','check-in','llegada','ankunft','arrivo','aankomst','accueil','réception','reception'],a:{fr:'L\'accueil est ouvert tous les jours, de 9 h à 12 h et de 13 h à 20 h. En location, arrivée dès 16 h et départ avant 10 h. Arrivée tardive jusqu\'à 23 h sur appel : vos clés sont au bar.',en:'Reception is open daily 9 am–12 pm and 1–8 pm. Rentals: check-in from 4 pm, check-out by 10 am. Late arrival until 11 pm if you call ahead: your keys are at the bar.',es:'Recepción abre todos los días de 9 a 12 h y de 13 a 20 h. Alquileres: llegada desde las 16 h, salida antes de las 10 h. Llegada tardía hasta las 23 h avisando: sus llaves están en el bar.',de:'Rezeption täglich 9–12 und 13–20 Uhr. Mietunterkünfte: Anreise ab 16 Uhr, Abreise bis 10 Uhr. Späte Ankunft bis 23 Uhr nach Anruf: Ihre Schlüssel liegen an der Bar.',it:'Reception aperta tutti i giorni 9-12 e 13-20. Affitti: arrivo dalle 16, partenza entro le 10. Arrivo tardivo fino alle 23 su chiamata: le chiavi sono al bar.',nl:'Receptie dagelijks open van 9 tot 12 en van 13 tot 20 uur. Verhuur: aankomst vanaf 16 uur, vertrek vóór 10 uur. Late aankomst tot 23 uur na telefoontje: uw sleutels liggen bij de bar.'}},
+ {k:['payer','paiement','carte','chèque','ancv','pay','payment','card','pago','tarjeta','zahlung','karte','pagamento','carta','betalen','betaling','acompte','deposit'],a:{fr:'Carte bancaire (dès 15 €), espèces, chèques, chèques-vacances ANCV et virement. Acompte de 30 % pour les locations, solde 30 jours avant l\'arrivée.',en:'Bank card (from €15), cash, cheques, ANCV holiday vouchers and bank transfer. 30% deposit for rentals, balance 30 days before arrival.',es:'Tarjeta (desde 15 €), efectivo, cheques, cheques vacaciones ANCV y transferencia. Anticipo del 30 % en alquileres, resto 30 días antes.',de:'Bankkarte (ab 15 €), bar, Scheck, ANCV-Urlaubsschecks und Überweisung. 30 % Anzahlung für Mietunterkünfte, Rest 30 Tage vor Anreise.',it:'Carta (da 15 €), contanti, assegni, buoni vacanza ANCV e bonifico. Acconto del 30 % per gli affitti, saldo 30 giorni prima.',nl:'Bankkaart (vanaf € 15), contant, cheques, ANCV-vakantiecheques en overschrijving. 30 % aanbetaling voor verhuur, saldo 30 dagen vóór aankomst.'}},
+ {k:['courses','supermarché','épicerie','boulangerie','pain','shop','supermarket','bakery','bread','supermercado','panadería','supermarkt','bäckerei','brot','supermercato','pane','bakker','brood'],a:{fr:'Une épicerie d\'appoint est à l\'accueil. Supermarché, boulangerie et boucherie sont à moins de 3 km.',en:'There\'s a small grocery at reception. Supermarket, bakery and butcher are less than 3 km away.',es:'Hay una pequeña tienda en recepción. Supermercado, panadería y carnicería a menos de 3 km.',de:'An der Rezeption gibt es einen kleinen Laden. Supermarkt, Bäckerei und Metzger sind weniger als 3 km entfernt.',it:'C\'è un piccolo emporio alla reception. Supermercato, panetteria e macelleria a meno di 3 km.',nl:'Bij de receptie is een kleine winkel. Supermarkt, bakker en slager liggen op minder dan 3 km.'}},
+ {k:['adresse','accès','venir','autoroute','where','address','directions','donde','dirección','wo','adresse','anfahrt','dove','indirizzo','waar','adres','route'],a:{fr:'252 Impasse Les Truffières, 07700 Saint-Marcel-d\'Ardèche, à 4 km des Gorges. Depuis l\'A7 : sorties Montélimar-Sud, Bollène ou Orange. <a href="#/infos">Itinéraire</a>',en:'252 Impasse Les Truffières, 07700 Saint-Marcel-d\'Ardèche, 4 km from the Gorges. From the A7: exits Montélimar-Sud, Bollène or Orange. <a href="#/infos">Directions</a>',es:'252 Impasse Les Truffières, 07700 Saint-Marcel-d\'Ardèche, a 4 km de las Gargantas. Desde la A7: salidas Montélimar-Sud, Bollène u Orange. <a href="#/infos">Itinerario</a>',de:'252 Impasse Les Truffières, 07700 Saint-Marcel-d\'Ardèche, 4 km von den Schluchten. Von der A7: Ausfahrten Montélimar-Sud, Bollène oder Orange. <a href="#/infos">Anfahrt</a>',it:'252 Impasse Les Truffières, 07700 Saint-Marcel-d\'Ardèche, a 4 km dalle Gole. Dalla A7: uscite Montélimar-Sud, Bollène o Orange. <a href="#/infos">Percorso</a>',nl:'252 Impasse Les Truffières, 07700 Saint-Marcel-d\'Ardèche, op 4 km van de kloven. Vanaf de A7: afritten Montélimar-Sud, Bollène of Orange. <a href="#/infos">Route</a>'}}];
+const NOPE={fr:'Je ne connais pas la réponse avec certitude, et je préfère ne pas inventer. L\'équipe vous répond au <a href="tel:+33475046835">04 75 04 68 35</a> ou par <a href="mailto:soulier.valerie@wanadoo.fr">e-mail</a>.',en:'I don\'t know the answer for sure, and I\'d rather not make it up. The team will answer on <a href="tel:+33475046835">+33 4 75 04 68 35</a> or by <a href="mailto:soulier.valerie@wanadoo.fr">e-mail</a>.',es:'No conozco la respuesta con certeza y prefiero no inventarla. El equipo le responde en el <a href="tel:+33475046835">+33 4 75 04 68 35</a> o por <a href="mailto:soulier.valerie@wanadoo.fr">e-mail</a>.',de:'Das weiß ich nicht sicher, und ich möchte nichts erfinden. Das Team antwortet unter <a href="tel:+33475046835">+33 4 75 04 68 35</a> oder per <a href="mailto:soulier.valerie@wanadoo.fr">E-Mail</a>.',it:'Non conosco la risposta con certezza e preferisco non inventarla. Il team risponde al <a href="tel:+33475046835">+33 4 75 04 68 35</a> o via <a href="mailto:soulier.valerie@wanadoo.fr">e-mail</a>.',nl:'Dat weet ik niet zeker, en ik verzin liever niets. Het team antwoordt op <a href="tel:+33475046835">+33 4 75 04 68 35</a> of per <a href="mailto:soulier.valerie@wanadoo.fr">e-mail</a>.'};
+const norm=s=>s.toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g,'');
+function answer(q){
+ const n=' '+norm(q).replace(/[^a-z0-9\- ]+/g,' ')+' ';
+ let best=null,score=0;
+ INT.forEach(it=>{let s=0;it.k.forEach(k=>{const kk=norm(k);if(n.includes(' '+kk+' ')||(kk.length>5&&n.includes(' '+kk)))s+=kk.length>3?2:1;});if(s>score){score=s;best=it;}});
+ return best?t(best.a):t(NOPE);
+}
+function say(h,c){const d=document.createElement('div');d.className='msg '+c;d.innerHTML=h;$('#csLog').appendChild(d);$('#csLog').scrollTop=1e6;}
+function csReset(){$('#csLog').innerHTML='';say(t(CS.hello),'b');$('#csQ').innerHTML=t(CS.q).map(x=>`<button type="button">${x}</button>`).join('');}
+function openCs(){$('#csPan').classList.add('on');$('#csBtn').setAttribute('aria-expanded','true');$('#csInv').classList.remove('on');setTimeout(()=>$('#csIn').focus(),50);}
+$('#csBtn').addEventListener('click',()=>{$('#csPan').classList.contains('on')?($('#csPan').classList.remove('on'),$('#csBtn').setAttribute('aria-expanded','false')):openCs()});
+$('#csX').addEventListener('click',()=>{$('#csPan').classList.remove('on');$('#csBtn').setAttribute('aria-expanded','false')});
+$('#csInvX').addEventListener('click',()=>$('#csInv').classList.remove('on'));
+$('#csInv').addEventListener('click',e=>{if(e.target.id!=='csInvX')openCs()});
+$('#csQ').addEventListener('click',e=>{const b=e.target.closest('button');if(!b)return;say(b.textContent,'u');setTimeout(()=>say(answer(b.textContent),'b'),250);});
+$('#csF').addEventListener('submit',e=>{e.preventDefault();const v=$('#csIn').value.trim();if(!v)return;say(v.replace(/</g,'&lt;'),'u');$('#csIn').value='';setTimeout(()=>say(answer(v),'b'),250);});
+document.addEventListener('keydown',e=>{if(e.key==='Escape'&&$('#csPan').classList.contains('on')){$('#csPan').classList.remove('on');$('#csBtn').focus();}});
+
+/* ---------- démarrage ---------- */
+let startL='fr';try{startL=localStorage.getItem('tr-lang')||'fr'}catch(e){}
+applyLang(LANGS.includes(startL)?startL:'fr'); toggleBk(); route();
+try{if(!sessionStorage.getItem('tr-inv'))setTimeout(()=>{if(!$('#csPan').classList.contains('on'))$('#csInv').classList.add('on');sessionStorage.setItem('tr-inv','1')},4000)}catch(e){setTimeout(()=>$('#csInv').classList.add('on'),4000)}
+
+</script>
+<script id="nv-track">(function(){try{if(location.protocol!=='https:')return;if(/[?&]moi\b/.test(location.search)){localStorage.setItem('nv_moi','1');addEventListener('load',function(){var d=document.createElement('div');d.textContent='✓ Appareil reconnu : vos visites ne sont plus comptées';d.style.cssText='position:fixed;left:50%;bottom:24px;transform:translateX(-50%);z-index:2147483647;background:#1E3A2B;color:#fff;font:600 14px/1.3 system-ui,sans-serif;padding:12px 18px;border-radius:999px;box-shadow:0 8px 24px rgba(0,0,0,.25)';document.body.appendChild(d);setTimeout(function(){d.remove()},6000)})}if(localStorage.getItem('nv_moi')||navigator.webdriver)return;}catch(x){}
+var m=location.pathname.split('/').filter(Boolean)[0]||'';if(!m)return;var s=Math.random().toString(36).slice(2,12),t0=Date.now(),u='/_t.php',last='home',seen={};
+function send(e,p){var b=JSON.stringify({m:m,e:e,s:s,p:p||'',t:Math.round((Date.now()-t0)/1000),l:(document.documentElement.lang||'').slice(0,2)});try{if(navigator.sendBeacon)navigator.sendBeacon(u,new Blob([b],{type:'text/plain'}));else fetch(u,{method:'POST',body:b,keepalive:true})}catch(x){}}
+function once(k){k=String(k).toLowerCase().replace(/[^a-z0-9_-]/g,'').slice(0,24);if(!k||seen[k])return;seen[k]=1;send('ev',k)}
+send('open');setInterval(function(){if(document.visibilityState==='visible')send('ping')},45000);
+document.addEventListener('visibilitychange',function(){if(document.visibilityState==='hidden')send('ping')});
+window.__nvView=function(p){p=String(p||'');if(p&&p!==last){last=p;send('view',p)}};
+addEventListener('scroll',function(){var h=document.documentElement,max=h.scrollHeight-innerHeight;if(max<200)return;var r=(scrollY/max)*100;[25,50,75,100].forEach(function(q){if(r>=q-2)once('defil'+q+'-'+last)})},{passive:true});
+document.addEventListener('click',function(e){var el=e.target.closest('a,button,[data-add],[data-go],[role=button],summary');if(!el)return;var t=((el.getAttribute('aria-label')||'')+' '+(el.textContent||'')+' '+(el.className||'')+' '+(el.id||'')).toLowerCase(),h=el.getAttribute&&el.getAttribute('href')||'';
+if(el.hasAttribute('data-add')||/ajouter|add to|añadir|hinzuf|aggiungi|加入/.test(t))once('panier-'+(el.getAttribute('data-add')||'ajout')),send('ev','panier');
+else if(/conseil|advisor|assistant|chat/.test(t))once('conseiller');
+else if(/instagram|facebook|youtube|pinterest|linkedin|tiktok/.test(h))once('reseau-'+(h.match(/instagram|facebook|youtube|pinterest|linkedin|tiktok/)||[''])[0]);
+else if(/réserv|reserv|visite|book/.test(t))once('reservation');
+else if(/coffret|gift|cadeau/.test(t))once('coffret')},true);
+document.addEventListener('play',function(e){if(e.target&&e.target.tagName==='VIDEO'&&!e.target.muted)once('video-son')},true);
+try{new MutationObserver(function(){var l=(document.documentElement.lang||'').slice(0,2);if(l&&l!=='fr')once('langue-'+l)}).observe(document.documentElement,{attributes:true,attributeFilter:['lang']})}catch(x){}
+addEventListener('load',function(){try{if(typeof window.go==='function'&&!window.go.__nv){var g=window.go;window.go=function(v){try{window.__nvView(v)}catch(x){}return g.apply(this,arguments)};window.go.__nv=1}}catch(x){}});})();</script>
+</body>
+</html>
