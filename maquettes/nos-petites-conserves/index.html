@@ -1,0 +1,638 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Nos Petites Conserves — Proposition Neovera Studio</title>
+<meta name="description" content="Conserverie artisanale à Alban (Tarn) : jambonneaux, terrines, plats cuisinés et desserts en verrines, sans colorant ni conservateur.">
+<link rel="preload" href="fonts/corben-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
+<style>
+@font-face{font-family:"Corben";font-weight:400;font-display:swap;src:url(fonts/corben-latin-400-normal.woff2) format("woff2")}
+@font-face{font-family:"Corben";font-weight:700;font-display:swap;src:url(fonts/corben-latin-700-normal.woff2) format("woff2")}
+@font-face{font-family:"Corben";font-weight:700;font-display:swap;src:url(fonts/corben-latin-ext-700-normal.woff2) format("woff2");unicode-range:U+0100-02BA,U+1E00-1EFF}
+@font-face{font-family:"Corben";font-weight:400;font-display:swap;src:url(fonts/corben-latin-ext-400-normal.woff2) format("woff2");unicode-range:U+0100-02BA,U+1E00-1EFF}
+@font-face{font-family:"Albert Sans";font-weight:400;font-display:swap;src:url(fonts/albert-sans-latin-400-normal.woff2) format("woff2")}
+@font-face{font-family:"Albert Sans";font-weight:400;font-display:swap;src:url(fonts/albert-sans-latin-ext-400-normal.woff2) format("woff2");unicode-range:U+0100-02BA,U+1E00-1EFF}
+@font-face{font-family:"Albert Sans";font-weight:500;font-display:swap;src:url(fonts/albert-sans-latin-500-normal.woff2) format("woff2")}
+@font-face{font-family:"Albert Sans";font-weight:700;font-display:swap;src:url(fonts/albert-sans-latin-700-normal.woff2) format("woff2")}
+:root{
+ --verre:#F2F4EE;--blanc:#fff;--etiquette:#4F7A25;--etiquette-f:#365618;--feuille:#DDE8CB;--or:#C9A03A;--or-f:#8C6A12;--bois:#3A2517;--bois2:#5B3C27;--encre:#1E211B;--gris:#50564A;--ligne:#D5DACB;
+ --titre:"Corben",Georgia,serif;--texte:"Albert Sans",system-ui,sans-serif;--ease:cubic-bezier(.16,1,.3,1);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;scrollbar-color:var(--etiquette) var(--feuille)}
+::-webkit-scrollbar{width:10px;height:8px}::-webkit-scrollbar-track{background:var(--feuille)}::-webkit-scrollbar-thumb{background:var(--etiquette);border-radius:6px}
+body{margin:0;background:var(--verre);color:var(--encre);font:400 1.05rem/1.6 var(--texte);font-variant-numeric:lining-nums}
+img{max-width:100%;display:block}
+a{color:var(--etiquette-f);text-underline-offset:.2em}
+a:hover{color:var(--or-f)}
+::selection{background:var(--or);color:var(--bois)}
+:focus-visible{outline:3px solid var(--or);outline-offset:2px;border-radius:3px}
+h1,h2,h3{font-family:var(--titre);font-weight:700;line-height:1.08;margin:0 0 .45em;text-wrap:balance;overflow-wrap:break-word;hyphens:auto}
+h2{font-size:clamp(1.9rem,4vw,3.1rem)}
+h3{font-size:clamp(1.15rem,1.7vw,1.35rem)}
+p{margin:0 0 1em;max-width:64ch;text-wrap:pretty}
+.wrap{max-width:1240px;margin:0 auto;padding:0 24px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.5em;font:700 .95rem/1 var(--texte);padding:.95em 1.3em;border-radius:8px;border:2px solid var(--bois);background:var(--bois);color:#fff;text-decoration:none;cursor:pointer;transition:background .2s,color .2s,transform .2s var(--ease)}
+.btn:hover{background:var(--etiquette-f);border-color:var(--etiquette-f);color:#fff;transform:translateY(-1px)}
+.btn.or{background:var(--or);border-color:var(--or);color:var(--bois)}
+.btn.or:hover{background:#DDB54C;border-color:#DDB54C;color:var(--bois)}
+.btn.clair{background:transparent;color:#fff;border-color:rgba(255,255,255,.8)}
+.btn.clair:hover{background:#fff;color:var(--etiquette-f)}
+.btn.ligne{background:transparent;color:var(--bois)}
+.btn.ligne:hover{background:var(--bois);color:#fff}
+.btn[disabled]{opacity:.45;cursor:not-allowed;transform:none}
+.suite{font-weight:700;color:var(--etiquette-f);text-decoration:none;border-bottom:2px solid var(--or);padding-bottom:2px}
+svg.i{width:1.15em;height:1.15em;stroke:currentColor;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;flex:none}
+
+header.top{position:sticky;top:0;z-index:40;background:rgba(242,244,238,.97);border-bottom:1px solid var(--ligne)}
+.bar1{display:flex;align-items:center;gap:16px;padding:10px 24px;max-width:1400px;margin:0 auto}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--encre)}
+.logo img{height:46px;width:auto}
+.sp{flex:1}
+.tel{font-weight:700;text-decoration:none;color:var(--encre);display:flex;gap:.4em;align-items:center;white-space:nowrap}
+.langue{display:flex;align-items:center;gap:6px;border:2px solid var(--bois);border-radius:8px;padding:0 6px 0 10px;background:#fff}
+.langue select{border:0;background:transparent;font:600 .9rem var(--texte);color:var(--encre);padding:8px 4px;cursor:pointer}
+.panier-btn{position:relative}
+.panier-btn .n{position:absolute;top:-8px;right:-8px;background:var(--or);color:var(--bois);font:700 .75rem var(--texte);min-width:22px;height:22px;border-radius:11px;display:grid;place-items:center;border:2px solid var(--verre)}
+.panier-btn .n[data-v="0"]{display:none}
+nav.menu{border-top:1px solid var(--ligne);position:relative;background:#fff}
+nav.menu ul{list-style:none;margin:0 auto;padding:0 24px;display:flex;gap:2px;max-width:1400px;overflow-x:auto;scrollbar-width:none}
+nav.menu ul::-webkit-scrollbar{display:none}
+nav.menu a{display:block;padding:11px 12px;white-space:nowrap;text-decoration:none;color:var(--encre);font:600 .95rem var(--texte);border-bottom:3px solid transparent}
+nav.menu a:hover{color:var(--etiquette-f)}
+nav.menu a[aria-current=page]{border-color:var(--etiquette);color:var(--etiquette-f)}
+nav.menu a.conseil{color:var(--or-f)}
+nav.menu::after{content:"";position:absolute;right:0;top:0;bottom:0;width:40px;background:linear-gradient(90deg,rgba(255,255,255,0),#fff);pointer-events:none}
+
+/* Ouverture + bocal qui se visse */
+.ouverture{background:var(--etiquette);color:#fff;overflow:hidden}
+.ouverture .g{display:grid;grid-template-columns:1.05fr .95fr;gap:48px;align-items:center;padding-top:56px;padding-bottom:64px}
+.ouverture h1{font-size:clamp(2.6rem,6.2vw,5.2rem);line-height:.98;margin:0 0 .3em;display:flex;align-items:flex-end;gap:.18em;flex-wrap:wrap}
+.ouverture .lead{font-size:clamp(1.1rem,1.6vw,1.28rem);color:#EEF5E3;max-width:36ch}
+.ouverture .act{display:flex;gap:12px;flex-wrap:wrap;margin-top:20px}
+.promesse{list-style:none;padding:0;margin:26px 0 0;display:flex;flex-wrap:wrap;gap:8px 22px;font-weight:600;color:#fff}
+.promesse li{display:flex;gap:.45em;align-items:center}
+.promesse svg{color:var(--or)}
+.ouverture figure{margin:0;position:relative}
+.ouverture figure img{border-radius:14px;aspect-ratio:4/3;object-fit:cover;width:100%;box-shadow:0 26px 50px -26px rgba(0,0,0,.6)}
+.ouverture figcaption{position:absolute;left:16px;bottom:16px;background:#fff;color:var(--bois);border-radius:8px;padding:10px 14px;font:700 .95rem var(--texte);box-shadow:0 10px 20px -12px rgba(0,0,0,.5)}
+.bocal{width:.9em;height:1.05em;flex:none;transform:translateY(-.06em)}
+.ouverture h1 .bocal{width:1.05em;height:1.2em}
+.produit h3{hyphens:manual}
+.bocal .verre{fill:rgba(255,255,255,.16);stroke:#fff;stroke-width:3}
+.bocal.ray .verre{stroke:var(--etiquette)}
+.bocal .contenu{fill:var(--bois2)}
+.bocal .etq{fill:#fff}
+.bocal .couv{fill:var(--or)}
+.bocal .stries line{stroke:var(--or-f);stroke-width:2.2}
+.bocal .gc{transform-box:fill-box;transform-origin:50% 100%}
+.anim .bocal .gc{animation:visse 1.6s var(--ease) .3s both}
+.anim .bocal .stries{animation:tourne 1.6s cubic-bezier(.3,.7,.2,1) .3s both}
+@keyframes visse{0%{transform:translateY(-26%)}70%{transform:translateY(2%)}84%{transform:translateY(-2%)}100%{transform:none}}
+@keyframes tourne{from{transform:translateX(-14px)}to{transform:none}}
+.panier-btn.clic .stries{animation:tourne .7s cubic-bezier(.3,.7,.2,1) both}
+.panier-btn.clic .gc{animation:visse .7s var(--ease) both}
+
+section{padding:84px 0}
+.rayons{display:grid;grid-template-columns:repeat(5,1fr);gap:16px}
+.rayon{background:#fff;border-radius:14px;overflow:hidden;text-decoration:none;color:var(--encre);border:1px solid var(--ligne);transition:transform .3s var(--ease),box-shadow .3s}
+.rayon:hover{transform:translateY(-3px);box-shadow:0 18px 30px -20px rgba(0,0,0,.35);color:var(--encre)}
+.rayon img{aspect-ratio:1;object-fit:cover;width:100%}
+.rayon b{display:block;font:700 1.05rem/1.2 var(--titre);padding:14px 14px 4px}
+.rayon span{display:block;padding:0 14px 14px;color:var(--gris);font-size:.92rem}
+.deux{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+.deux.inv>:first-child{order:2}
+.photo img{border-radius:14px;width:100%;aspect-ratio:4/3;object-fit:cover}
+.valeurs{list-style:none;padding:0;margin:0;display:grid;gap:14px}
+.valeurs li{border-top:2px solid var(--etiquette);padding-top:12px}
+.valeurs b{font:700 1.15rem var(--titre);display:block;color:var(--etiquette-f)}
+.bois{background:var(--bois);color:#F1E9DF}
+.bois h2,.bois h3{color:#fff}
+.bois .suite{color:#fff}
+.noel{background:var(--feuille)}
+.presse{display:flex;flex-wrap:wrap;gap:8px 20px;color:var(--gris);font-size:.95rem;list-style:none;padding:0;margin:0}
+
+/* Boutique */
+.tete{background:var(--etiquette);color:#fff;padding:52px 0 40px}
+.tete h1{font-size:clamp(2.3rem,5.5vw,4rem);margin-bottom:.2em}
+.tete p{color:#EEF5E3;font-size:1.12rem}
+.filtres{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 28px}
+.filtres button{border:2px solid var(--bois);background:#fff;border-radius:999px;padding:8px 14px;font:700 .9rem var(--texte);cursor:pointer;color:var(--bois)}
+.filtres button[aria-pressed=true]{background:var(--bois);color:#fff}
+.grille{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:18px}
+.produit{background:#fff;border:1px solid var(--ligne);border-radius:14px;overflow:hidden;display:flex;flex-direction:column}
+.produit .im{aspect-ratio:3/2;background:var(--feuille);position:relative}
+.produit .im img{width:100%;height:100%;object-fit:cover}
+.produit .im .sans{position:absolute;inset:0;display:grid;place-items:center;text-align:center;padding:18px;font:700 1.25rem/1.2 var(--titre);color:var(--etiquette-f);background:repeating-linear-gradient(135deg,var(--feuille) 0 14px,#E6EED9 14px 28px)}
+.produit .corps{padding:16px;display:flex;flex-direction:column;gap:10px;flex:1}
+.produit h3{margin:0}
+.produit small{color:var(--gris)}
+.produit .indispo{display:inline-block;background:#F3E2D7;color:#7A3B16;border-radius:6px;padding:2px 8px;font:700 .78rem var(--texte);align-self:flex-start}
+.produit select{font:500 .95rem var(--texte);border:2px solid var(--ligne);border-radius:8px;padding:8px;background:#fff;width:100%}
+.produit .bas{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-top:auto}
+.produit .px{font:700 1.3rem var(--titre);color:var(--bois);font-variant-numeric:tabular-nums}
+.produit .kg{font-size:.82rem;color:var(--gris)}
+.produit .fiche{font-size:.88rem}
+.produit .btn{padding:.75em 1em}
+/* Panier */
+.voile{position:fixed;inset:0;background:rgba(20,15,10,.45);z-index:70;display:none}
+.voile.on{display:block}
+.panier{position:fixed;top:0;right:0;bottom:0;width:min(440px,100vw);background:var(--verre);z-index:71;transform:translateX(100%);transition:transform .45s var(--ease);display:flex;flex-direction:column}
+.panier.on{transform:none}
+.panier header{display:flex;align-items:center;justify-content:space-between;padding:16px 18px;background:var(--etiquette);color:#fff}
+.panier header h2{font-size:1.4rem;margin:0}
+.panier header button{background:none;border:0;color:#fff;cursor:pointer;width:38px;height:38px;display:grid;place-items:center}
+.lignes{flex:1;overflow-y:auto;padding:14px 18px}
+.ligne{display:grid;grid-template-columns:1fr auto;gap:4px 10px;padding:12px 0;border-bottom:1px solid var(--ligne)}
+.ligne b{font-size:.98rem}
+.ligne small{color:var(--gris)}
+.qte{display:flex;align-items:center;gap:6px}
+.qte button{width:30px;height:30px;border-radius:6px;border:2px solid var(--bois);background:#fff;cursor:pointer;font:700 1rem var(--texte)}
+.vide{color:var(--gris);padding:30px 0;text-align:center}
+.total{padding:16px 18px;border-top:2px solid var(--bois);background:#fff}
+.total .l{display:flex;justify-content:space-between;font:700 1.2rem var(--titre);margin-bottom:10px}
+.total p{font-size:.88rem;color:var(--gris);margin:0 0 12px}
+.total .btn{width:100%}
+.form{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.form .plein{grid-column:1/-1}
+label.ch{display:flex;flex-direction:column;gap:5px;font:700 .82rem var(--texte);color:var(--gris)}
+input,select,textarea{min-width:0;font:400 1rem var(--texte);color:var(--encre);border:2px solid var(--ligne);border-radius:8px;padding:10px 11px;background:#fff;width:100%}
+input:focus,select:focus,textarea:focus{outline:none;border-color:var(--etiquette)}
+.err{color:#9B2C1C;font-size:.9rem;min-height:1.2em;margin:.5em 0 0}
+.ok{color:var(--etiquette-f);font-weight:700}
+.coord{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;border-top:3px solid var(--bois);padding-top:20px}
+.coord h3{color:var(--etiquette-f);font-size:1.1rem;margin-bottom:.3em}
+.coord p{margin:0;overflow-wrap:anywhere}
+.tarifs{width:100%;border-collapse:collapse;background:#fff;border-radius:12px;overflow:hidden}
+.tarifs td{padding:12px 14px;border-bottom:1px solid var(--ligne)}
+.tarifs td:last-child{text-align:right;font:700 1.1rem var(--titre);white-space:nowrap}
+
+footer{background:var(--bois);color:#E2D8CC;padding:60px 0 110px}
+footer a{color:#fff}
+footer .g{display:grid;grid-template-columns:1.3fr 1fr 1fr 1fr;gap:32px}
+footer h4{font:700 1.05rem var(--titre);color:#fff;margin:0 0 12px}
+footer ul{list-style:none;padding:0;margin:0}footer li{margin:6px 0}
+.signature{border-top:1px solid #5a4231;margin-top:36px;padding-top:18px;font-size:.85rem;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.reseaux a{display:inline-grid;place-items:center;width:42px;height:42px;border:1px solid #7a5d48;border-radius:50%;margin-top:8px}
+
+.barre{position:fixed;left:0;right:0;bottom:0;z-index:45;display:none;gap:8px;padding:10px 12px calc(10px + env(safe-area-inset-bottom));background:rgba(242,244,238,.97);border-top:1px solid var(--ligne)}
+.barre .btn{flex:1;padding:.85em .5em;font-size:.9rem}
+
+.cons-btn{position:fixed;right:20px;top:132px;z-index:50;display:flex;align-items:center;gap:10px;background:#fff;color:var(--bois);border:2px solid var(--bois);border-radius:12px;padding:7px 16px 7px 7px;cursor:pointer;font:inherit;text-align:left;box-shadow:0 12px 24px -14px rgba(0,0,0,.45)}
+.cons-btn .av{width:38px;height:38px;border-radius:8px;background:var(--etiquette);color:#fff;display:grid;place-items:center;font:700 1.1rem var(--titre)}
+.cons-btn b{display:block;font-size:.95rem}
+.cons-btn small{font-size:.8rem;color:var(--gris)}
+.cons-bulle{position:fixed;right:20px;top:196px;z-index:50;max-width:300px;background:#fff;border:2px solid var(--bois);border-radius:12px;padding:14px 40px 14px 16px;font-size:.93rem;display:none;box-shadow:0 14px 30px -16px rgba(0,0,0,.4)}
+.cons-bulle.on{display:block;animation:monte .5s var(--ease)}
+.cons-bulle button{position:absolute;top:6px;right:6px;border:0;background:none;cursor:pointer;width:32px;height:32px;display:grid;place-items:center}
+@keyframes monte{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+.cons{position:fixed;right:20px;top:132px;z-index:60;width:min(400px,calc(100vw - 24px));height:min(600px,calc(100vh - 150px));background:var(--verre);border:2px solid var(--bois);border-radius:14px;box-shadow:0 24px 60px -20px rgba(0,0,0,.45);display:none;flex-direction:column;overflow:hidden}
+.cons.on{display:flex;animation:monte .45s var(--ease)}
+.cons header{background:var(--etiquette);color:#fff;padding:12px 14px;display:flex;align-items:center;gap:12px}
+.cons header b{display:block;font:700 1.1rem var(--titre)}
+.cons header small{color:#E3EED3;font-size:.8rem}
+.cons header button{margin-left:auto;background:none;border:0;color:#fff;cursor:pointer;width:36px;height:36px;display:grid;place-items:center}
+.fil{flex:1;overflow-y:auto;padding:14px;display:flex;flex-direction:column;gap:10px}
+.msg{max-width:88%;padding:10px 13px;border-radius:12px;font-size:.95rem;line-height:1.5}
+.msg.b{background:#fff;align-self:flex-start}
+.msg.u{background:var(--etiquette-f);color:#fff;align-self:flex-end}
+.msg button{margin-top:8px}
+.chips{display:flex;flex-wrap:wrap;gap:6px;padding:0 14px 10px}
+.chips button{border:2px solid var(--bois);background:#fff;border-radius:999px;padding:6px 11px;font:700 .84rem var(--texte);cursor:pointer}
+.chips button:hover{background:var(--feuille)}
+.cons form{display:flex;gap:8px;padding:12px;border-top:1px solid var(--ligne);background:#fff}
+.cons form button{flex:none;padding:0 14px}
+.toast{position:fixed;left:50%;bottom:24px;transform:translate(-50%,20px);opacity:0;background:var(--bois);color:#fff;padding:12px 18px;border-radius:10px;z-index:80;transition:all .35s var(--ease);pointer-events:none;font-weight:600}
+.toast.on{opacity:1;transform:translate(-50%,0)}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+.apparait{opacity:1}
+.js .apparait{opacity:0;transform:translateY(14px);transition:opacity .7s var(--ease),transform .7s var(--ease)}
+.js .apparait.vu{opacity:1;transform:none}
+@media (max-width:1024px){
+ .ouverture .g,.deux,.deux.inv{grid-template-columns:minmax(0,1fr);gap:32px}.deux.inv>:first-child{order:0}
+ .rayons{grid-template-columns:repeat(3,minmax(0,1fr))}
+ footer .g{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media (max-width:820px){
+ .bar1{padding:8px 14px;gap:10px}.tel span{display:none}.bar1 .tel{display:none}
+ nav.menu ul{padding:0 14px}.wrap{padding:0 16px}
+ section{padding:58px 0}
+ .barre{display:flex}
+ .ouverture .act{display:none}
+ .panier-btn .lbl{display:none}
+ .langue{padding-left:8px}.langue .i{display:none}
+ .cons-btn{top:auto;right:auto;left:12px;bottom:76px;padding:5px 12px 5px 5px}
+ .cons-btn .av{width:32px;height:32px}
+ .cons-bulle{top:auto;right:auto;left:12px;bottom:136px}
+ .cons{top:auto;right:auto;left:12px;bottom:12px;height:min(600px,calc(100vh - 24px))}
+ .form,footer .g,.coord{grid-template-columns:minmax(0,1fr)}
+ .toast{bottom:84px}
+}
+@media (max-width:480px){
+ .logo img{height:36px}
+ .rayons{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .cons-btn small{display:none}
+}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}.js .apparait{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+ <symbol id="i-tel" viewBox="0 0 24 24"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></symbol>
+ <symbol id="i-globe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></symbol>
+ <symbol id="i-x" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18"/></symbol>
+ <symbol id="i-ok" viewBox="0 0 24 24"><path d="m5 12 4 4 10-10"/></symbol>
+ <symbol id="i-send" viewBox="0 0 24 24"><path d="M4 12 20 4l-4 16-4-7z"/><path d="m12 13 8-9"/></symbol>
+ <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s-7-6.5-7-12a7 7 0 0 1 14 0c0 5.5-7 12-7 12z"/><circle cx="12" cy="9" r="2.5"/></symbol>
+ <symbol id="i-fb" viewBox="0 0 24 24"><path d="M14 8h3V4h-3a4 4 0 0 0-4 4v3H7v4h3v6h4v-6h3l1-4h-4V8z"/></symbol>
+ <symbol id="i-doc" viewBox="0 0 24 24"><path d="M6 3h8l4 4v14H6z"/><path d="M14 3v4h4M9 13h6M9 17h6"/></symbol>
+ <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></symbol>
+ <symbol id="i-pot" viewBox="0 0 40 46"><g class="gc"><rect class="couv" x="6" y="2" width="28" height="9" rx="2"/><g class="stries" clip-path="url(#cpc)"><line x1="4" y1="3" x2="4" y2="10"/><line x1="9" y1="3" x2="9" y2="10"/><line x1="14" y1="3" x2="14" y2="10"/><line x1="19" y1="3" x2="19" y2="10"/><line x1="24" y1="3" x2="24" y2="10"/><line x1="29" y1="3" x2="29" y2="10"/><line x1="34" y1="3" x2="34" y2="10"/><line x1="39" y1="3" x2="39" y2="10"/><line x1="44" y1="3" x2="44" y2="10"/><line x1="49" y1="3" x2="49" y2="10"/></g></g><path class="verre" d="M8 12h24v4c3 2 4 5 4 9v14a5 5 0 0 1-5 5H9a5 5 0 0 1-5-5V25c0-4 1-7 4-9z"/><path class="contenu" d="M6 28h28v11a3 3 0 0 1-3 3H9a3 3 0 0 1-3-3z"/><rect class="etq" x="9" y="22" width="22" height="10" rx="2"/></symbol>
+ <clipPath id="cpc"><rect x="6" y="2" width="28" height="9" rx="2"/></clipPath>
+</svg>
+<div id="app"></div>
+<div class="voile" id="voile"></div>
+<aside class="panier" id="panier" aria-label="Panier"></aside>
+<div class="toast" id="toast" role="status"></div>
+<script>
+const LANGS={fr:"Français",en:"English",es:"Español",de:"Deutsch",it:"Italiano",nl:"Nederlands"};
+const D=(fr,en,es,de,it,nl)=>({fr,en,es,de,it,nl});
+const U='https://www.nospetitesconserves.fr/wp-content/uploads/';
+const CGV=U+'2021/01/CGV-internet-avec-retractation.pdf', BON=U+'2023/02/bon-de-commande-2023-3.pdf';
+const FB='https://www.facebook.com/SARL-Nos-Petites-Conserves-1582888362041490/';
+const MAPS='https://www.google.fr/maps/dir/%27%27/sarl+nos+petites+conserves+google+maps/@43.8865646,2.3705912,12z/data=!3m1!4b1!4m8!4m7!1m0!1m5!1m1!1s0x12adf86773e69f85:0x662768800600328c!2m2!1d2.440631!2d43.886586';
+const CATS=[['jb',D("Jambonneaux, rôti, melsat","Ham hock, roast, melsat","Codillo, asado, melsat","Eisbein, Braten, Melsat","Stinco, arrosto, melsat","Schenkel, gebraad, melsat"),'jambonneau'],
+ ['tr',D("Terrines","Terrines","Terrinas","Terrinen","Terrine","Terrines"),'t-echalote'],
+ ['lg',D("Légumes et soupes","Vegetables and soups","Verduras y sopas","Gemüse und Suppen","Verdure e zuppe","Groenten en soepen"),null],
+ ['pc',D("Plats cuisinés","Ready meals","Platos cocinados","Fertiggerichte","Piatti pronti","Kant-en-klare gerechten"),'p-daube'],
+ ['ds',D("Desserts","Desserts","Postres","Desserts","Dessert","Desserts"),'d-flan-caramel'],
+ ['lot',D("Lots et coffrets","Bundles and gift sets","Lotes y cofres","Sets und Geschenkboxen","Lotti e confezioni","Pakketten en geschenkdozen"),'lot-sac']];
+/* v : [type b=boîte v=verrine, grammes, personnes, prix, prix au kg] */
+const P=[
+ {id:'jambonneau',cat:'jb',img:'jambonneau',pdf:'2020/10/fiche-technique-JB-internet.pdf',n:D("Jambonneau","Ham hock","Codillo","Eisbein","Stinco","Hamschenkel"),v:[['b',400,'6',7.65,19.13],['b',180,'4',3.55,19.72],['v',180,'4',3.85,21.39],['v',360,'6',7.65,21.25]]},
+ {id:'roti',cat:'jb',img:'roti',pdf:'2020/10/fiche-technique-roti-internet-1.pdf',n:D("Rôti","Roast","Asado","Braten","Arrosto","Gebraad"),v:[['v',180,'4',3.75,20.83],['v',360,'4',7.50,20.83]]},
+ {id:'melsat',cat:'jb',img:'melsat',pdf:'2020/10/fiche-technique-melsat-internet.pdf',off:1,n:D("Melsat","Melsat (Tarn white sausage)","Melsat (embutido blanco del Tarn)","Melsat (weiße Wurst aus dem Tarn)","Melsat (salsiccia bianca del Tarn)","Melsat (witte worst uit de Tarn)"),v:[['b',400,'4',6.00,15.00]]},
+ {id:'t-campagne',cat:'tr',img:'t-campagne',pdf:'2020/10/fiche-technique-Campagne-internet.pdf',n:D("Terrine de campagne","Country terrine","Terrina de campo","Landterrine","Terrina di campagna","Boerenterrine"),v:[['v',180,'6',2.60,14.40]]},
+ {id:'t-forestiere',cat:'tr',img:'t-forestiere',pdf:'2020/10/fiche-technique-forestiere-internet.pdf',n:D("Terrine forestière","Forest mushroom terrine","Terrina forestal","Waldpilzterrine","Terrina ai funghi di bosco","Bospaddenstoelenterrine"),v:[['v',180,'6',2.80,15.56]]},
+ {id:'t-espelette',cat:'tr',img:'t-espelette',pdf:'2020/10/fiche-technique-espelette-internet.pdf',n:D("Terrine au piment d'Espelette","Espelette pepper terrine","Terrina con pimiento de Espelette","Terrine mit Espelette-Pfeffer","Terrina al peperoncino d'Espelette","Terrine met Espelette-peper"),v:[['v',180,'6',2.70,15.00]]},
+ {id:'t-roquefort',cat:'tr',img:'t-roquefort',pdf:'2021/01/fiche-technique-roquefort-internet.pdf',n:D("Terrine au roquefort","Roquefort terrine","Terrina al roquefort","Terrine mit Roquefort","Terrina al roquefort","Terrine met roquefort"),v:[['v',180,'6',2.70,15.00]]},
+ {id:'t-cepes',cat:'tr',img:'t-cepes',pdf:'2020/10/fiche-technique-cepes-internet.pdf',n:D("Terrine aux cèpes","Porcini terrine","Terrina de boletus","Steinpilzterrine","Terrina ai porcini","Eekhoorntjesbroodterrine"),v:[['v',180,'6',2.80,15.56]]},
+ {id:'t-echalote',cat:'tr',img:'t-echalote',pdf:'2020/10/fiche-technique-echalotes-internet.pdf',n:D("Terrine à l'échalote","Shallot terrine","Terrina con chalota","Schalottenterrine","Terrina allo scalogno","Sjalotterrine"),v:[['v',180,'6',2.70,15.00]]},
+ {id:'t-herbes',cat:'tr',img:'t-herbes',pdf:'2020/10/fiche-technique-hbp-internet.pdf',n:D("Terrine aux herbes de Provence","Herbes de Provence terrine","Terrina a las hierbas provenzales","Terrine mit Kräutern der Provence","Terrina alle erbe di Provenza","Terrine met Provençaalse kruiden"),v:[['v',180,'6',2.70,15.00]]},
+ {id:'t-olives',cat:'tr',img:'t-olives',pdf:'2021/01/fiche-technique-olives-internet.pdf',n:D("Terrine aux olives","Olive terrine","Terrina con aceitunas","Oliventerrine","Terrina alle olive","Olijventerrine"),v:[['v',180,'6',2.70,15.00]]},
+ {id:'t-chataignes',cat:'tr',img:'t-chataignes',pdf:'2020/10/fiche-technique-chataignes-internet.pdf',n:D("Terrine aux châtaignes","Chestnut terrine","Terrina de castañas","Kastanienterrine","Terrina alle castagne","Kastanjeterrine"),v:[['v',180,'6',2.80,15.56]]},
+ {id:'t-noix',cat:'tr',img:'t-noix',pdf:'2020/10/fiche-technique-noix-internet.pdf',n:D("Terrine aux noix","Walnut terrine","Terrina de nueces","Walnussterrine","Terrina alle noci","Walnotenterrine"),v:[['v',180,'6',2.80,15.56]]},
+ {id:'t-canard',cat:'tr',img:'t-canard',pdf:'2020/10/fiche-technique-canard-internet.pdf',n:D("Terrine de canard","Duck terrine","Terrina de pato","Ententerrine","Terrina d'anatra","Eendenterrine"),v:[['v',180,'6',3.30,18.33]]},
+ {id:'t-sanglier',cat:'tr',img:'t-sanglier',pdf:'2020/10/fiche-technique-sanglier-internet.pdf',n:D("Terrine de sanglier","Wild boar terrine","Terrina de jabalí","Wildschweinterrine","Terrina di cinghiale","Wildzwijnterrine"),v:[['v',180,'6',3.30,18.33]]},
+ {id:'t-chevreuil',cat:'tr',img:'t-chevreuil',pdf:'2020/10/fiche-technique-chevreuil-internet.pdf',n:D("Terrine de chevreuil","Venison terrine","Terrina de corzo","Rehterrine","Terrina di capriolo","Reeterrine"),v:[['v',180,'6',3.30,18.33]]},
+ {id:'t-foie',cat:'tr',img:'t-foie',pdf:'2020/10/fiche-technique-cfv-internet.pdf',n:D("Terrine confit de foie de volaille","Chicken liver confit terrine","Terrina de confit de hígado de ave","Terrine von Geflügelleber-Confit","Terrina di fegatini confit","Terrine van gekonfijte kippenlever"),v:[['v',180,'6',3.00,16.67]]},
+ {id:'t-lapin',cat:'tr',img:'t-lapin',pdf:'2020/10/fiche-technique-lapin-internet.pdf',n:D("Terrine de lapin","Rabbit terrine","Terrina de conejo","Kaninchenterrine","Terrina di coniglio","Konijnenterrine"),v:[['v',180,'6',3.60,20.00]]},
+ {id:'pdt-lacaune',cat:'lg',img:null,off:1,ing:D("Pommes de terre, jambon sec, oignons, sel, poivre","Potatoes, dry-cured ham, onions, salt, pepper","Patatas, jamón curado, cebolla, sal, pimienta","Kartoffeln, Rohschinken, Zwiebeln, Salz, Pfeffer","Patate, prosciutto crudo, cipolle, sale, pepe","Aardappelen, gedroogde ham, ui, zout, peper"),n:D("Pommes de terre au jambon sec de Lacaune","Potatoes with Lacaune dry-cured ham","Patatas con jamón curado de Lacaune","Kartoffeln mit Lacaune-Rohschinken","Patate al prosciutto crudo di Lacaune","Aardappelen met gedroogde ham uit Lacaune"),v:[['v',360,'2',6.30,17.50]]},
+ {id:'p-canard-cepes',cat:'pc',img:'p-canard-cepes',pdf:'2021/01/fiche-technique-scc-internet.pdf',off:1,n:D("Sauté de canard aux cèpes","Duck sauté with porcini","Salteado de pato con boletus","Entenragout mit Steinpilzen","Spezzatino d'anatra ai porcini","Eendenragout met eekhoorntjesbrood"),v:[['v',750,'4',14.00,18.67],['v',360,'1-2',7.40,20.56]]},
+ {id:'p-daube',cat:'pc',img:'p-daube',pdf:'2021/01/fiche-technique-daube-de-boeuf-internet.pdf',n:D("Daube de bœuf","Beef daube","Estofado de ternera","Rinderschmorbraten","Stufato di manzo","Runderstoofpot"),v:[['v',750,'4',16.00,21.33],['v',360,'1-2',8.00,22.22]]},
+ {id:'p-porc-curry',cat:'pc',img:'p-porc-curry',pdf:'2021/01/fiche-technique-porc-curry-internet.pdf',n:D("Porc au curry","Pork curry","Cerdo al curry","Schweinefleisch mit Curry","Maiale al curry","Varkensvlees met curry"),v:[['v',750,'4',14.00,18.67],['v',360,'1-2',7.00,19.44]]},
+ {id:'p-coq',cat:'pc',img:'p-coq',pdf:'2021/01/fiche-technique-coq-au-vin-internet.pdf',off:1,n:D("Coq au vin","Coq au vin","Gallo al vino","Coq au vin","Galletto al vino","Coq au vin"),v:[['v',750,'4',13.70,18.27],['v',360,'1-2',6.90,19.17]]},
+ {id:'p-veau',cat:'pc',img:'p-veau',pdf:'2021/01/fiche-technique-veau-marengo-internet.pdf',n:D("Veau marengo","Veal marengo","Ternera marengo","Kalb Marengo","Vitello alla Marengo","Kalfsvlees marengo"),v:[['v',750,'4',20.00,26.67],['v',360,'1-2',10.00,27.78]]},
+ {id:'p-porc-olives',cat:'pc',img:'p-porc-olives',pdf:'2021/01/fiche-technique-porc-olives-internet.pdf',n:D("Porc aux olives","Pork with olives","Cerdo con aceitunas","Schweinefleisch mit Oliven","Maiale alle olive","Varkensvlees met olijven"),v:[['v',750,'4',14.00,18.67],['v',360,'1-2',7.00,19.44]]},
+ {id:'p-lapin',cat:'pc',img:'p-lapin',pdf:'2021/01/fiche-technique-lapin-à-la-moutarde-internet.pdf',n:D("Lapin à la moutarde à l'ancienne","Rabbit in wholegrain mustard","Conejo a la mostaza antigua","Kaninchen in grobkörnigem Senf","Coniglio alla senape in grani","Konijn met grove mosterd"),v:[['v',750,'4',17.00,22.67],['v',360,'1-2',8.50,23.61]]},
+ {id:'p-tripes',cat:'pc',img:'p-tripes',pdf:'2021/01/fiche-technique-tripes-internet.pdf',n:D("Tripes à la tomate","Tripe in tomato sauce","Callos con tomate","Kutteln in Tomatensauce","Trippa al pomodoro","Pens in tomatensaus"),v:[['v',750,'4',13.00,17.33],['v',360,'1-2',6.70,18.61]]},
+ {id:'d-flan',cat:'ds',img:'d-flan',pdf:'2021/01/fiche-technique-dessert-internet-pdf-flan.pdf',n:D("Flan aux œufs","Egg custard","Flan de huevo","Eierflan","Flan all'uovo","Eierflan"),v:[['v',100,'',2.25,22.50]]},
+ {id:'d-flan-caramel',cat:'ds',img:'d-flan-caramel',pdf:'2021/01/fiche-technique-flan-caramel-internet.pdf',n:D("Flan au caramel","Caramel custard","Flan de caramelo","Karamellflan","Flan al caramello","Karamelflan"),v:[['v',100,'',2.30,23.00]]},
+ {id:'d-flan-choco',cat:'ds',img:null,pdf:'2021/01/fiche-technique-flan-chocolat-internet.pdf',n:D("Flan au chocolat","Chocolate custard","Flan de chocolate","Schokoladenflan","Flan al cioccolato","Chocoladeflan"),v:[['v',100,'',2.30,23.00]]},
+ {id:'d-riz',cat:'ds',img:'d-riz',pdf:'2021/01/fiche-technique-riz-lait-internet.pdf',n:D("Riz au lait à l'orange","Orange rice pudding","Arroz con leche a la naranja","Milchreis mit Orange","Riso al latte all'arancia","Rijstpudding met sinaasappel"),v:[['v',100,'',2.10,21.00]]},
+ {id:'d-pain-perdu',cat:'ds',img:'d-pain-perdu',pdf:'2021/01/fiche-technique-pppf-internet.pdf',n:D("Pain perdu pommes, framboises","Apple and raspberry bread pudding","Torrija de manzana y frambuesa","Arme Ritter mit Apfel und Himbeere","Pane perduto mele e lamponi","Wentelteefje met appel en framboos"),v:[['v',100,'',2.30,23.00]]},
+ {id:'d-moelleux',cat:'ds',img:'d-moelleux',pdf:'2021/01/fiche-technique-moelleux-choco-internet.pdf',n:D("Moelleux au chocolat","Chocolate fondant cake","Bizcocho de chocolate","Schokoladenküchlein","Tortino al cioccolato","Chocoladecakeje"),v:[['v',60,'',2.85,47.50]]},
+ {id:'d-moelleux-framboise',cat:'ds',img:'d-moelleux-framboise',pdf:'2021/01/fiche-technique-moelleux-framb-internet.pdf',n:D("Moelleux chocolat framboises","Chocolate and raspberry fondant cake","Bizcocho de chocolate y frambuesa","Schokoladenküchlein mit Himbeeren","Tortino cioccolato e lamponi","Chocoladecakeje met framboos"),v:[['v',60,'',2.98,49.67]]},
+ {id:'d-friand',cat:'ds',img:null,pdf:'2021/01/fiche-technique-Friand-internet.pdf',n:D("Friand aux amandes","Almond friand","Friand de almendras","Mandel-Friand","Friand alle mandorle","Amandelgebakje"),v:[['v',70,'',2.75,39.29]]},
+ {id:'lot-desserts',cat:'lot',img:'lot-pile',n:D("Lot de 6 desserts différents","Set of 6 different desserts","Lote de 6 postres distintos","Set mit 6 verschiedenen Desserts","Lotto di 6 dessert diversi","Pakket met 6 verschillende desserts"),v:[['l',0,'',10.00,0]]},
+ {id:'lot-verrines',cat:'lot',img:'lot-sac',n:D("Lot de 4 verrines 180 g au choix (sans canard)","Set of 4 jars of 180 g of your choice (no duck)","Lote de 4 tarros de 180 g a elegir (sin pato)","Set mit 4 Gläsern à 180 g nach Wahl (ohne Ente)","Lotto di 4 vasetti da 180 g a scelta (senza anatra)","Pakket met 4 potjes van 180 g naar keuze (zonder eend)"),v:[['l',0,'',10.00,0]]}
+];
+
+const T={
+fr:{lang:"Langue",nav:["Accueil","La boutique","Lots et coffrets","Conserves à façon","La conserverie","Contact","Petites Conserves Conseil"],cart:"Panier",
+ h1:"Nos Petites Conserves",lead:"De l'entrée au dessert, des verrines faites à Alban, dans le Tarn. Sans colorant ni conservateur, avec les producteurs du coin.",
+ shop:"Voir la boutique",visit:"Venir à l'atelier",prom:["Sans colorant ni conservateur","Producteurs locaux, circuits courts","Fabrication artisanale à Alban"],
+ cap:"Daube de bœuf, verrine 750 g · 16 €",
+ rayT:"De l'entrée au dessert",rayP:"Jambonneaux, terrines, plats mijotés, flans et moelleux : choisissez un rayon.",
+ nbP:"produits",
+ noelT:"Noël : composez vos coffrets à la boutique",noelP:"Toute la gamme, et aussi du vin, du foie gras et des tisanes, pour des cadeaux faits ici. Lots prêts à offrir dès 10 €.",noelA:"Voir les lots",
+ valT:"Quatre règles pour chaque bocal",val:[["Un produit","sans colorant ni conservateur ajoutés"],["L'origine","des produits au maximum locale"],["L'artisanat","le savoir-faire de transformateurs"],["La qualité","des ingrédients rigoureusement sélectionnés"]],
+ atT:"L'atelier, zone du Dolmen",atP:"Vente directe à l'atelier de fabrication, du lundi au vendredi de 8 h à 15 h. Vous trouvez aussi nos verrines chez des épiceries fines et supérettes, et sur Naturodrive, Au drive en pot et jemangefrançais.com.",atA:"Itinéraire",
+ facT:"Agriculteurs, professionnels : vos conserves à façon",facP:"Nous transformons vos viandes, légumes, fruits et desserts en conserves.",facL:["Une meilleure conservation, donc une meilleure valorisation de vos produits","La sécurité d'un outil moderne, aux normes européennes"],facA:"Parler de votre projet",
+ presseT:"On parle de nous",presse:["France 3, reportage du 29/09/2016","Le Journal d'ici, été 2016","Foire gourmande d'Alban, juillet 2016","OKAOU présenté par les acteurs de Plus belle la vie","Tarn libre, 17/06/2016","Inauguration, Tarn libre, 10/06/2016","Bulletin de la communauté de communes des Monts d'Alban et du Villefranchois, 09/06/2016","La Dépêche, 31/05/2016","Bulletin de la communauté de communes, janvier 2016","La Dépêche, 03/09/2015"],
+ boutT:"La boutique",boutL:"Tous nos produits, avec leurs formats et leurs prix. Ajoutez au panier, puis envoyez votre commande à la conserverie.",tous:"Tout",
+ box:"Boîte",verr:"Verrine",pers:"pers.",kg:"/kg",add:"Ajouter",added:"Ajouté au panier",off:"Momentanément indisponible",fiche:"Fiche produit (PDF)",nophoto:"Photo à venir",lot:"Lot",
+ cartT:"Votre panier",empty:"Votre panier est vide.",total:"Total des produits",cartN:"Votre commande part par e-mail à la conserverie, qui vous répond pour le paiement et l'expédition. Vous pouvez aussi venir la retirer à l'atelier.",order:"Envoyer ma commande",cgv:"Conditions générales de vente (PDF)",bon:"Bon de commande à imprimer (PDF)",
+ oNom:"Nom et prénom",oMail:"E-mail",oTel:"Téléphone",oAdr:"Adresse de livraison (ou « retrait à l'atelier »)",oErr:"Indiquez votre nom, votre e-mail et l'adresse.",oOk:"Votre messagerie s'ouvre avec la commande prête à partir.",
+ lotsT:"Lots et coffrets",lotsL:"Pour offrir ou pour goûter toute la gamme. À Noël, composez votre coffret à la boutique avec nos conserves, du vin, du foie gras et des tisanes.",
+ facPT:"Conserves à façon",facPL:"Une prestation pour les agriculteurs et les professionnels qui veulent diversifier leur activité.",
+ consT:"La conserverie",consL:"Une conserverie artisanale à Alban, dans le Tarn, créée en 2015.",
+ coT:"Contact",coL:"4 rue des Frères Lumière, 81250 Alban. Vente directe du lundi au vendredi, de 8 h à 15 h.",coF:"Nous écrire",coNom:"Votre nom",coMail:"Votre e-mail",coSuj:"Sujet",coMsg:"Votre message",coSend:"Envoyer",coErr:"Indiquez votre e-mail et votre message.",coOk:"Votre messagerie s'ouvre avec le message prêt à partir.",
+ cAdr:"L'atelier",cTel:"Téléphone",cHor:"Vente directe",hor:"Du lundi au vendredi, 8 h – 15 h",conserverie:"Conserverie",
+ partT:"Nos partenaires",legT:"Mentions légales",fNav:"La maison",fInfo:"Infos pratiques",propo:"Proposition de nouveau site imaginée par Neovera Studio",
+ cName:"Petites Conserves Conseil",cSub:"Je vous aide à choisir",cVirt:"assistant virtuel",cHello:"Bonjour, je suis Petites Conserves Conseil, l'assistant virtuel de la conserverie. Un repas, un cadeau, une question sur nos verrines ?",cBubble:"Bonjour ! Je suis l'assistant virtuel de la conserverie. Je vous aide à choisir un plat, un dessert ou un cadeau.",cPh:"Votre question…",cClose:"Fermer",cAdd:"Ajouter au panier",
+ chips:["Un plat pour 4","Une idée cadeau","Sans porc ?","Les horaires de la boutique","Livrez-vous ?"]},
+en:{lang:"Language",nav:["Home","Shop","Bundles & gift sets","Contract canning","The cannery","Contact","Petites Conserves Advisor"],cart:"Basket",
+ h1:"Nos Petites Conserves",lead:"From starter to dessert, jars made in Alban, in the Tarn. No colourings or preservatives, with local producers.",
+ shop:"Visit the shop",visit:"Come to the workshop",prom:["No colourings or preservatives","Local producers, short supply chains","Handmade in Alban"],
+ cap:"Beef daube, 750 g jar · €16",
+ rayT:"From starter to dessert",rayP:"Ham hock, terrines, slow-cooked dishes, custards and fondants: pick a section.",
+ nbP:"products",
+ noelT:"Christmas: build your gift boxes at the shop",noelP:"The whole range, plus wine, foie gras and herbal teas, for gifts made here. Ready-to-give bundles from €10.",noelA:"See the bundles",
+ valT:"Four rules for every jar",val:[["A product","with no added colourings or preservatives"],["Origin","ingredients as local as possible"],["Craft","the know-how of food makers"],["Quality","carefully selected ingredients"]],
+ atT:"The workshop, Dolmen business park",atP:"Direct sales at the production workshop, Monday to Friday, 8 am to 3 pm. Our jars are also sold in delicatessens and local shops, and on Naturodrive, Au drive en pot and jemangefrançais.com.",atA:"Directions",
+ facT:"Farmers and professionals: contract canning",facP:"We turn your meat, vegetables, fruit and desserts into preserves.",facL:["Longer keeping, so more value for your products","The safety of a modern facility, to European standards"],facA:"Discuss your project",
+ presseT:"In the press",presse:["France 3, report of 29/09/2016","Le Journal d'ici, summer 2016","Alban food fair, July 2016","OKAOU presented by the cast of Plus belle la vie","Tarn libre, 17/06/2016","Opening, Tarn libre, 10/06/2016","Monts d'Alban et Villefranchois community bulletin, 09/06/2016","La Dépêche, 31/05/2016","Community bulletin, January 2016","La Dépêche, 03/09/2015"],
+ boutT:"Shop",boutL:"All our products, with sizes and prices. Add to your basket, then send your order to the cannery.",tous:"All",
+ box:"Tin",verr:"Jar",pers:"servings",kg:"/kg",add:"Add",added:"Added to basket",off:"Temporarily unavailable",fiche:"Product sheet (PDF)",nophoto:"Photo coming soon",lot:"Bundle",
+ cartT:"Your basket",empty:"Your basket is empty.",total:"Products total",cartN:"Your order is emailed to the cannery, which replies about payment and shipping. You can also collect it at the workshop.",order:"Send my order",cgv:"Terms of sale (PDF)",bon:"Printable order form (PDF)",
+ oNom:"Full name",oMail:"Email",oTel:"Phone",oAdr:"Delivery address (or “collect at the workshop”)",oErr:"Please give your name, email and address.",oOk:"Your email app opens with the order ready to send.",
+ lotsT:"Bundles & gift sets",lotsL:"To give, or to taste the whole range. At Christmas, build your gift box at the shop with our preserves, wine, foie gras and herbal teas.",
+ facPT:"Contract canning",facPL:"A service for farmers and professionals who want to diversify.",
+ consT:"The cannery",consL:"An artisan cannery in Alban, in the Tarn, founded in 2015.",
+ coT:"Contact",coL:"4 rue des Frères Lumière, 81250 Alban, France. Direct sales Monday to Friday, 8 am to 3 pm.",coF:"Write to us",coNom:"Your name",coMail:"Your email",coSuj:"Subject",coMsg:"Your message",coSend:"Send",coErr:"Please give your email and message.",coOk:"Your email app opens with the message ready to send.",
+ cAdr:"The workshop",cTel:"Phone",cHor:"Direct sales",hor:"Monday to Friday, 8 am – 3 pm",conserverie:"Cannery",
+ partT:"Our partners",legT:"Legal notice",fNav:"The house",fInfo:"Practical",propo:"New website proposal designed by Neovera Studio",
+ cName:"Petites Conserves Advisor",cSub:"Let me help you choose",cVirt:"virtual assistant",cHello:"Hello, I'm Petites Conserves Advisor, the cannery's virtual assistant. A meal, a gift, a question about our jars?",cBubble:"Hello! I'm the cannery's virtual assistant. I can help you choose a dish, a dessert or a gift.",cPh:"Your question…",cClose:"Close",cAdd:"Add to basket",
+ chips:["A dish for 4","A gift idea","Pork-free?","Shop opening hours","Do you deliver?"]},
+es:{lang:"Idioma",nav:["Inicio","Tienda","Lotes y cofres","Conservas por encargo","La conservera","Contacto","Petites Conserves Consejo"],cart:"Cesta",
+ h1:"Nos Petites Conserves",lead:"Del entrante al postre, tarros hechos en Alban, en el Tarn. Sin colorantes ni conservantes, con productores de la zona.",
+ shop:"Ver la tienda",visit:"Visitar el taller",prom:["Sin colorantes ni conservantes","Productores locales, circuito corto","Elaboración artesanal en Alban"],
+ cap:"Estofado de ternera, tarro de 750 g · 16 €",
+ rayT:"Del entrante al postre",rayP:"Codillo, terrinas, guisos, flanes y bizcochos: elija una sección.",
+ nbP:"productos",
+ noelT:"Navidad: componga sus cofres en la tienda",noelP:"Toda la gama, y también vino, foie gras e infusiones, para regalos hechos aquí. Lotes listos para regalar desde 10 €.",noelA:"Ver los lotes",
+ valT:"Cuatro reglas para cada tarro",val:[["Un producto","sin colorantes ni conservantes añadidos"],["El origen","ingredientes lo más locales posible"],["La artesanía","el saber hacer de transformadores"],["La calidad","ingredientes rigurosamente seleccionados"]],
+ atT:"El taller, zona del Dolmen",atP:"Venta directa en el taller, de lunes a viernes de 8:00 a 15:00. También encontrará nuestros tarros en tiendas gourmet y supermercados de proximidad, y en Naturodrive, Au drive en pot y jemangefrançais.com.",atA:"Itinerario",
+ facT:"Agricultores y profesionales: conservas por encargo",facP:"Transformamos en conserva sus carnes, verduras, frutas y postres.",facL:["Mejor conservación, y por tanto más valor para sus productos","La seguridad de una herramienta moderna, conforme a las normas europeas"],facA:"Hablar de su proyecto",
+ presseT:"Hablan de nosotros",presse:["France 3, reportaje del 29/09/2016","Le Journal d'ici, verano 2016","Feria gastronómica de Alban, julio 2016","OKAOU presentado por los actores de Plus belle la vie","Tarn libre, 17/06/2016","Inauguración, Tarn libre, 10/06/2016","Boletín de la mancomunidad Monts d'Alban et Villefranchois, 09/06/2016","La Dépêche, 31/05/2016","Boletín de la mancomunidad, enero 2016","La Dépêche, 03/09/2015"],
+ boutT:"La tienda",boutL:"Todos nuestros productos, con formatos y precios. Añada a la cesta y envíe su pedido a la conservera.",tous:"Todo",
+ box:"Lata",verr:"Tarro",pers:"pers.",kg:"/kg",add:"Añadir",added:"Añadido a la cesta",off:"No disponible por ahora",fiche:"Ficha de producto (PDF)",nophoto:"Foto próximamente",lot:"Lote",
+ cartT:"Su cesta",empty:"Su cesta está vacía.",total:"Total de productos",cartN:"Su pedido se envía por correo a la conservera, que le responde para el pago y el envío. También puede recogerlo en el taller.",order:"Enviar mi pedido",cgv:"Condiciones generales de venta (PDF)",bon:"Hoja de pedido para imprimir (PDF)",
+ oNom:"Nombre y apellidos",oMail:"Correo",oTel:"Teléfono",oAdr:"Dirección de entrega (o «recogida en el taller»)",oErr:"Indique su nombre, correo y dirección.",oOk:"Se abre su correo con el pedido listo para enviar.",
+ lotsT:"Lotes y cofres",lotsL:"Para regalar o probar toda la gama. En Navidad, componga su cofre en la tienda con nuestras conservas, vino, foie gras e infusiones.",
+ facPT:"Conservas por encargo",facPL:"Un servicio para agricultores y profesionales que quieren diversificar su actividad.",
+ consT:"La conservera",consL:"Una conservera artesanal en Alban, en el Tarn, fundada en 2015.",
+ coT:"Contacto",coL:"4 rue des Frères Lumière, 81250 Alban (Francia). Venta directa de lunes a viernes, de 8:00 a 15:00.",coF:"Escríbanos",coNom:"Su nombre",coMail:"Su correo",coSuj:"Asunto",coMsg:"Su mensaje",coSend:"Enviar",coErr:"Indique su correo y su mensaje.",coOk:"Se abre su correo con el mensaje listo para enviar.",
+ cAdr:"El taller",cTel:"Teléfono",cHor:"Venta directa",hor:"De lunes a viernes, 8:00 – 15:00",conserverie:"Conservera",
+ partT:"Nuestros socios",legT:"Aviso legal",fNav:"La casa",fInfo:"Información práctica",propo:"Propuesta de nuevo sitio imaginada por Neovera Studio",
+ cName:"Petites Conserves Consejo",cSub:"Le ayudo a elegir",cVirt:"asistente virtual",cHello:"Hola, soy Petites Conserves Consejo, el asistente virtual de la conservera. ¿Una comida, un regalo, una pregunta sobre nuestros tarros?",cBubble:"¡Hola! Soy el asistente virtual de la conservera. Le ayudo a elegir un plato, un postre o un regalo.",cPh:"Su pregunta…",cClose:"Cerrar",cAdd:"Añadir a la cesta",
+ chips:["Un plato para 4","Una idea de regalo","¿Sin cerdo?","Horario de la tienda","¿Hacen envíos?"]},
+de:{lang:"Sprache",nav:["Start","Shop","Sets & Geschenkboxen","Lohnkonservierung","Die Konservenmanufaktur","Kontakt","Petites Conserves Beratung"],cart:"Warenkorb",
+ h1:"Nos Petites Conserves",lead:"Von der Vorspeise bis zum Dessert, Gläser aus Alban im Tarn. Ohne Farb- und Konservierungsstoffe, mit Erzeugern aus der Region.",
+ shop:"Zum Shop",visit:"Die Werkstatt besuchen",prom:["Ohne Farb- und Konservierungsstoffe","Regionale Erzeuger, kurze Wege","Handwerklich hergestellt in Alban"],
+ cap:"Rinderschmorbraten, Glas 750 g · 16 €",
+ rayT:"Von der Vorspeise bis zum Dessert",rayP:"Eisbein, Terrinen, Schmorgerichte, Flans und Küchlein: wählen Sie eine Abteilung.",
+ nbP:"Produkte",
+ noelT:"Weihnachten: Geschenkboxen im Laden zusammenstellen",noelP:"Das ganze Sortiment, dazu Wein, Foie gras und Kräutertees, für Geschenke von hier. Fertige Sets ab 10 €.",noelA:"Die Sets ansehen",
+ valT:"Vier Regeln für jedes Glas",val:[["Ein Produkt","ohne zugesetzte Farb- und Konservierungsstoffe"],["Die Herkunft","Zutaten möglichst aus der Region"],["Das Handwerk","das Können von Verarbeitern"],["Die Qualität","sorgfältig ausgewählte Zutaten"]],
+ atT:"Die Werkstatt im Gewerbegebiet Dolmen",atP:"Direktverkauf in der Produktionswerkstatt, Montag bis Freitag von 8 bis 15 Uhr. Unsere Gläser gibt es auch in Feinkostläden und kleinen Supermärkten sowie bei Naturodrive, Au drive en pot und jemangefrançais.com.",atA:"Route",
+ facT:"Landwirte und Profis: Lohnkonservierung",facP:"Wir verarbeiten Ihr Fleisch, Gemüse, Obst und Ihre Desserts zu Konserven.",facL:["Längere Haltbarkeit, also mehr Wert für Ihre Produkte","Die Sicherheit einer modernen Anlage nach europäischen Normen"],facA:"Über Ihr Projekt sprechen",
+ presseT:"Man spricht über uns",presse:["France 3, Reportage vom 29.09.2016","Le Journal d'ici, Sommer 2016","Feinschmeckermesse Alban, Juli 2016","OKAOU vorgestellt von den Schauspielern von Plus belle la vie","Tarn libre, 17.06.2016","Eröffnung, Tarn libre, 10.06.2016","Gemeindeblatt Monts d'Alban et Villefranchois, 09.06.2016","La Dépêche, 31.05.2016","Gemeindeblatt, Januar 2016","La Dépêche, 03.09.2015"],
+ boutT:"Der Shop",boutL:"Alle Produkte mit Formaten und Preisen. In den Warenkorb legen und die Bestellung an die Manufaktur senden.",tous:"Alle",
+ box:"Dose",verr:"Glas",pers:"Pers.",kg:"/kg",add:"Hinzufügen",added:"In den Warenkorb gelegt",off:"Vorübergehend nicht verfügbar",fiche:"Produktblatt (PDF)",nophoto:"Foto folgt",lot:"Set",
+ cartT:"Ihr Warenkorb",empty:"Ihr Warenkorb ist leer.",total:"Summe der Produkte",cartN:"Ihre Bestellung geht per E-Mail an die Manufaktur, die sich wegen Zahlung und Versand meldet. Sie können sie auch in der Werkstatt abholen.",order:"Bestellung senden",cgv:"Allgemeine Geschäftsbedingungen (PDF)",bon:"Bestellschein zum Ausdrucken (PDF)",
+ oNom:"Vor- und Nachname",oMail:"E-Mail",oTel:"Telefon",oAdr:"Lieferadresse (oder „Abholung in der Werkstatt“)",oErr:"Bitte Name, E-Mail und Adresse angeben.",oOk:"Ihr E-Mail-Programm öffnet sich mit der fertigen Bestellung.",
+ lotsT:"Sets & Geschenkboxen",lotsL:"Zum Verschenken oder zum Probieren des ganzen Sortiments. Zu Weihnachten stellen Sie Ihre Box im Laden zusammen: Konserven, Wein, Foie gras und Kräutertees.",
+ facPT:"Lohnkonservierung",facPL:"Eine Dienstleistung für Landwirte und Betriebe, die sich breiter aufstellen wollen.",
+ consT:"Die Manufaktur",consL:"Eine handwerkliche Konservenmanufaktur in Alban im Tarn, gegründet 2015.",
+ coT:"Kontakt",coL:"4 rue des Frères Lumière, 81250 Alban, Frankreich. Direktverkauf Montag bis Freitag, 8 bis 15 Uhr.",coF:"Schreiben Sie uns",coNom:"Ihr Name",coMail:"Ihre E-Mail",coSuj:"Betreff",coMsg:"Ihre Nachricht",coSend:"Senden",coErr:"Bitte E-Mail und Nachricht angeben.",coOk:"Ihr E-Mail-Programm öffnet sich mit der fertigen Nachricht.",
+ cAdr:"Die Werkstatt",cTel:"Telefon",cHor:"Direktverkauf",hor:"Montag bis Freitag, 8 – 15 Uhr",conserverie:"Manufaktur",
+ partT:"Unsere Partner",legT:"Impressum",fNav:"Das Haus",fInfo:"Praktisches",propo:"Vorschlag für eine neue Website, entworfen von Neovera Studio",
+ cName:"Petites Conserves Beratung",cSub:"Ich helfe bei der Wahl",cVirt:"virtueller Assistent",cHello:"Guten Tag, ich bin Petites Conserves Beratung, der virtuelle Assistent der Manufaktur. Ein Essen, ein Geschenk, eine Frage zu unseren Gläsern?",cBubble:"Guten Tag! Ich bin der virtuelle Assistent der Manufaktur. Ich helfe bei der Wahl eines Gerichts, Desserts oder Geschenks.",cPh:"Ihre Frage…",cClose:"Schließen",cAdd:"In den Warenkorb",
+ chips:["Ein Gericht für 4","Eine Geschenkidee","Ohne Schwein?","Öffnungszeiten des Ladens","Liefern Sie?"]},
+it:{lang:"Lingua",nav:["Home","Negozio","Lotti e confezioni","Conserve conto terzi","Il laboratorio","Contatti","Petites Conserves Consiglio"],cart:"Carrello",
+ h1:"Nos Petites Conserves",lead:"Dall'antipasto al dessert, vasetti fatti ad Alban, nel Tarn. Senza coloranti né conservanti, con i produttori della zona.",
+ shop:"Vai al negozio",visit:"Visita il laboratorio",prom:["Senza coloranti né conservanti","Produttori locali, filiera corta","Produzione artigianale ad Alban"],
+ cap:"Stufato di manzo, vasetto da 750 g · 16 €",
+ rayT:"Dall'antipasto al dessert",rayP:"Stinco, terrine, piatti in umido, flan e tortini: scegliete un reparto.",
+ nbP:"prodotti",
+ noelT:"Natale: componete le vostre confezioni in negozio",noelP:"Tutta la gamma, e anche vino, foie gras e tisane, per regali fatti qui. Lotti pronti da regalare da 10 €.",noelA:"Vedi i lotti",
+ valT:"Quattro regole per ogni vasetto",val:[["Un prodotto","senza coloranti né conservanti aggiunti"],["L'origine","ingredienti il più possibile locali"],["L'artigianato","il saper fare dei trasformatori"],["La qualità","ingredienti rigorosamente selezionati"]],
+ atT:"Il laboratorio, zona del Dolmen",atP:"Vendita diretta nel laboratorio, dal lunedì al venerdì dalle 8 alle 15. Trovate i nostri vasetti anche in gastronomie e piccoli supermercati, e su Naturodrive, Au drive en pot e jemangefrançais.com.",atA:"Percorso",
+ facT:"Agricoltori e professionisti: conserve conto terzi",facP:"Trasformiamo in conserva le vostre carni, verdure, frutta e dessert.",facL:["Una migliore conservazione, quindi più valore ai vostri prodotti","La sicurezza di un impianto moderno, a norma europea"],facA:"Parliamo del progetto",
+ presseT:"Parlano di noi",presse:["France 3, servizio del 29/09/2016","Le Journal d'ici, estate 2016","Fiera gastronomica di Alban, luglio 2016","OKAOU presentato dagli attori di Plus belle la vie","Tarn libre, 17/06/2016","Inaugurazione, Tarn libre, 10/06/2016","Bollettino della comunità dei comuni Monts d'Alban et Villefranchois, 09/06/2016","La Dépêche, 31/05/2016","Bollettino della comunità dei comuni, gennaio 2016","La Dépêche, 03/09/2015"],
+ boutT:"Il negozio",boutL:"Tutti i prodotti, con formati e prezzi. Aggiungete al carrello e inviate l'ordine al laboratorio.",tous:"Tutto",
+ box:"Scatola",verr:"Vasetto",pers:"pers.",kg:"/kg",add:"Aggiungi",added:"Aggiunto al carrello",off:"Momentaneamente non disponibile",fiche:"Scheda prodotto (PDF)",nophoto:"Foto in arrivo",lot:"Lotto",
+ cartT:"Il vostro carrello",empty:"Il carrello è vuoto.",total:"Totale prodotti",cartN:"L'ordine parte via e-mail al laboratorio, che vi risponde per pagamento e spedizione. Potete anche ritirarlo in laboratorio.",order:"Invia l'ordine",cgv:"Condizioni generali di vendita (PDF)",bon:"Modulo d'ordine da stampare (PDF)",
+ oNom:"Nome e cognome",oMail:"E-mail",oTel:"Telefono",oAdr:"Indirizzo di consegna (o «ritiro in laboratorio»)",oErr:"Indicate nome, e-mail e indirizzo.",oOk:"Si apre la vostra posta con l'ordine pronto.",
+ lotsT:"Lotti e confezioni",lotsL:"Da regalare o per assaggiare tutta la gamma. A Natale, componete la vostra confezione in negozio con conserve, vino, foie gras e tisane.",
+ facPT:"Conserve conto terzi",facPL:"Un servizio per agricoltori e professionisti che vogliono diversificare l'attività.",
+ consT:"Il laboratorio",consL:"Un laboratorio artigianale di conserve ad Alban, nel Tarn, nato nel 2015.",
+ coT:"Contatti",coL:"4 rue des Frères Lumière, 81250 Alban (Francia). Vendita diretta dal lunedì al venerdì, dalle 8 alle 15.",coF:"Scriveteci",coNom:"Il vostro nome",coMail:"La vostra e-mail",coSuj:"Oggetto",coMsg:"Il vostro messaggio",coSend:"Invia",coErr:"Indicate e-mail e messaggio.",coOk:"Si apre la vostra posta con il messaggio pronto.",
+ cAdr:"Il laboratorio",cTel:"Telefono",cHor:"Vendita diretta",hor:"Dal lunedì al venerdì, 8 – 15",conserverie:"Laboratorio",
+ partT:"I nostri partner",legT:"Note legali",fNav:"La casa",fInfo:"Info pratiche",propo:"Proposta di nuovo sito ideata da Neovera Studio",
+ cName:"Petites Conserves Consiglio",cSub:"Vi aiuto a scegliere",cVirt:"assistente virtuale",cHello:"Buongiorno, sono Petites Conserves Consiglio, l'assistente virtuale del laboratorio. Un pasto, un regalo, una domanda sui nostri vasetti?",cBubble:"Buongiorno! Sono l'assistente virtuale del laboratorio. Vi aiuto a scegliere un piatto, un dessert o un regalo.",cPh:"La vostra domanda…",cClose:"Chiudi",cAdd:"Aggiungi al carrello",
+ chips:["Un piatto per 4","Un'idea regalo","Senza maiale?","Orari del negozio","Spedite?"]},
+nl:{lang:"Taal",nav:["Home","Winkel","Pakketten & geschenkdozen","Inmaken in opdracht","De conservenmakerij","Contact","Petites Conserves Advies"],cart:"Winkelmand",
+ h1:"Nos Petites Conserves",lead:"Van voorgerecht tot dessert, potjes gemaakt in Alban, in de Tarn. Zonder kleur- of conserveermiddelen, met boeren uit de buurt.",
+ shop:"Naar de winkel",visit:"Kom naar het atelier",prom:["Zonder kleur- of conserveermiddelen","Lokale boeren, korte keten","Ambachtelijk gemaakt in Alban"],
+ cap:"Runderstoofpot, pot van 750 g · € 16",
+ rayT:"Van voorgerecht tot dessert",rayP:"Hamschenkel, terrines, stoofgerechten, flans en cakejes: kies een afdeling.",
+ nbP:"producten",
+ noelT:"Kerst: stel uw geschenkdozen samen in de winkel",noelP:"Het hele assortiment, en ook wijn, foie gras en kruidenthee, voor cadeaus van hier. Kant-en-klare pakketten vanaf € 10.",noelA:"Bekijk de pakketten",
+ valT:"Vier regels voor elke pot",val:[["Een product","zonder toegevoegde kleur- of conserveermiddelen"],["De herkomst","ingrediënten zo lokaal mogelijk"],["Het ambacht","het vakmanschap van verwerkers"],["De kwaliteit","zorgvuldig geselecteerde ingrediënten"]],
+ atT:"Het atelier, bedrijventerrein Dolmen",atP:"Directe verkoop in het productieatelier, maandag tot vrijdag van 8 tot 15 uur. Onze potjes vindt u ook bij delicatessenzaken en buurtsupers, en op Naturodrive, Au drive en pot en jemangefrançais.com.",atA:"Route",
+ facT:"Boeren en professionals: inmaken in opdracht",facP:"Wij maken uw vlees, groenten, fruit en desserts in.",facL:["Langer houdbaar, dus meer waarde voor uw producten","De zekerheid van een moderne installatie volgens Europese normen"],facA:"Bespreek uw project",
+ presseT:"In de pers",presse:["France 3, reportage van 29/09/2016","Le Journal d'ici, zomer 2016","Culinaire beurs van Alban, juli 2016","OKAOU voorgesteld door de acteurs van Plus belle la vie","Tarn libre, 17/06/2016","Opening, Tarn libre, 10/06/2016","Gemeenteblad Monts d'Alban et Villefranchois, 09/06/2016","La Dépêche, 31/05/2016","Gemeenteblad, januari 2016","La Dépêche, 03/09/2015"],
+ boutT:"De winkel",boutL:"Al onze producten, met formaten en prijzen. Leg in de winkelmand en stuur uw bestelling naar de conservenmakerij.",tous:"Alles",
+ box:"Blik",verr:"Pot",pers:"pers.",kg:"/kg",add:"Toevoegen",added:"In de winkelmand",off:"Tijdelijk niet beschikbaar",fiche:"Productblad (PDF)",nophoto:"Foto volgt",lot:"Pakket",
+ cartT:"Uw winkelmand",empty:"Uw winkelmand is leeg.",total:"Totaal producten",cartN:"Uw bestelling gaat per e-mail naar de conservenmakerij, die reageert over betaling en verzending. U kunt ze ook ophalen in het atelier.",order:"Bestelling versturen",cgv:"Algemene verkoopvoorwaarden (PDF)",bon:"Bestelformulier om af te drukken (PDF)",
+ oNom:"Voor- en achternaam",oMail:"E-mail",oTel:"Telefoon",oAdr:"Leveradres (of ‘afhalen in het atelier’)",oErr:"Vul uw naam, e-mail en adres in.",oOk:"Uw mailprogramma opent met de bestelling klaar.",
+ lotsT:"Pakketten & geschenkdozen",lotsL:"Om cadeau te doen of om het hele assortiment te proeven. Met Kerst stelt u uw doos samen in de winkel: conserven, wijn, foie gras en kruidenthee.",
+ facPT:"Inmaken in opdracht",facPL:"Een dienst voor boeren en bedrijven die hun activiteit willen verbreden.",
+ consT:"De conservenmakerij",consL:"Een ambachtelijke conservenmakerij in Alban, in de Tarn, opgericht in 2015.",
+ coT:"Contact",coL:"4 rue des Frères Lumière, 81250 Alban, Frankrijk. Directe verkoop maandag tot vrijdag, 8 tot 15 uur.",coF:"Schrijf ons",coNom:"Uw naam",coMail:"Uw e-mail",coSuj:"Onderwerp",coMsg:"Uw bericht",coSend:"Versturen",coErr:"Vul uw e-mail en bericht in.",coOk:"Uw mailprogramma opent met het bericht klaar.",
+ cAdr:"Het atelier",cTel:"Telefoon",cHor:"Directe verkoop",hor:"Maandag tot vrijdag, 8 – 15 uur",conserverie:"Conservenmakerij",
+ partT:"Onze partners",legT:"Juridische vermeldingen",fNav:"Het huis",fInfo:"Praktisch",propo:"Voorstel voor een nieuwe website, ontworpen door Neovera Studio",
+ cName:"Petites Conserves Advies",cSub:"Ik help u kiezen",cVirt:"virtuele assistent",cHello:"Hallo, ik ben Petites Conserves Advies, de virtuele assistent van de conservenmakerij. Een maaltijd, een cadeau, een vraag over onze potjes?",cBubble:"Hallo! Ik ben de virtuele assistent van de conservenmakerij. Ik help u een gerecht, dessert of cadeau kiezen.",cPh:"Uw vraag…",cClose:"Sluiten",cAdd:"In de winkelmand",
+ chips:["Een gerecht voor 4","Een cadeau-idee","Zonder varkensvlees?","Openingstijden van de winkel","Bezorgen jullie?"]}
+};
+
+const TELC='<a href="tel:+33563606288">05 63 60 62 88</a>',MAILC='<a href="mailto:contact@nospetitesconserves.fr">contact@nospetitesconserves.fr</a>';
+const G=(r,t)=>`<a href="#/${r}" data-go>${t}</a>`;
+const ADD=(id,vi)=>`<br><button class="btn or" type="button" data-add="${id}:${vi}"></button>`;
+const INT=[
+ ["inconnu",/gluten|lactose|allerg|arachide|peanut|halal|casher|kosher|bio\b|organic|ecol[óo]gic|[öo]kolog|biologic|dlc|date limite|best before|consumir|haltbar|scadenza|houdbaar|conserv(e|ation) combien|how long|frais de port|shipping cost|gastos de env|versandkosten|spese di spedizione|verzendkosten|paiement|payment|pago|zahlung|pagamento|betaling|carte bancaire/i],
+ ["porc",/porc|pork|cerdo|schwein|maiale|varken|halal|sans viande|v[ée]g[ée]|vegan|vegetar/i],
+ ["cadeau",/cadeau|gift|regalo|geschenk|coffret|box|confezione|cadeaudoos|no[eë]l|christmas|navidad|weihnacht|natale|kerst/i],
+ ["livraison",/livr|exp[ée]di|envoi|deliver|ship|post|env[íi]o|liefer|versand|spedi|consegn|bezorg|verzend/i],
+ ["horaires",/horaire|heure|ouvert|ferm|boutique|magasin|atelier|visite|hour|open|shop|horario|tienda|abierto|[öo]ffnung|laden|orari|negozio|aperto|openingstijd|winkel|alban|adresse|address|where|o[ùu] (vous|êtes|se)/i],
+ ["facon",/fa[çc]on|prestation|agricult|farmer|agricultor|landwirt|agricoltor|boer|professionn|transform/i],
+ ["revend",/revendeur|[ée]picerie|supermarch|carrefour|spar|drive|naturodrive|jemange|stockist|reseller|tienda|h[äa]ndler|rivendit|verkooppunt/i],
+ ["dessert",/dessert|flan|riz|moelleux|friand|g[âa]teau|sucr|sweet|postre|dulce|s[üu][ßs]|dolce|zoet|nagerecht|chocolat|chocolate|schokolade|cioccolat|chocola/i],
+ ["terrine",/terrine|terrina|p[âa]t[ée]|ap[ée]ro|gibier|game|caza|wild|selvaggina|sanglier|chevreuil|boar|venison/i],
+ ["jambon",/jambonneau|ham hock|codillo|eisbein|stinco|melsat|r[ôo]ti|roast/i],
+ ["contact",/t[ée]l[ée]phone|phone|appeler|call|llamar|anrufen|chiamare|bellen|contact|kontakt|contatt|mail|nathalie/i],
+ ["prix",/prix|tarif|price|cost|combien|how much|precio|preis|prezzo|prijs|pas cher|cheap|barat|g[üu]nstig|econom|goedkoop/i],
+ ["plat",/plat|repas|d[îi]ner|d[ée]jeuner|meal|dinner|lunch|comida|cena|essen|gericht|pasto|piatto|maaltijd|gerecht|daube|curry|lapin|veau|coq|tripe|pers|people|personas|personen|persone|famil/i]
+];
+const R={
+ inconnu:{fr:`Je n'ai pas cette information et je préfère ne pas vous répondre au hasard. La composition de chaque produit est dans sa fiche (PDF) en boutique ; pour le reste, la conserverie vous répond au ${TELC} ou à ${MAILC}.`,en:`I don't have that information and would rather not guess. Each product's composition is in its product sheet (PDF) in the shop; for anything else, the cannery will answer on ${TELC} or at ${MAILC}.`,es:`No tengo esa información y prefiero no responder al azar. La composición de cada producto está en su ficha (PDF) en la tienda; para lo demás, la conservera le responde en el ${TELC} o en ${MAILC}.`,de:`Diese Information habe ich nicht, und raten möchte ich nicht. Die Zusammensetzung steht im Produktblatt (PDF) im Shop; für alles andere hilft die Manufaktur unter ${TELC} oder ${MAILC}.`,it:`Non ho questa informazione e preferisco non rispondere a caso. La composizione di ogni prodotto è nella scheda (PDF) nel negozio; per il resto il laboratorio risponde al ${TELC} o a ${MAILC}.`,nl:`Die informatie heb ik niet, en ik gok liever niet. De samenstelling staat in het productblad (PDF) in de winkel; voor de rest helpt de conservenmakerij via ${TELC} of ${MAILC}.`},
+ porc:{fr:`Je ne peux pas vous garantir la composition de chaque recette : elle est détaillée dans la fiche produit (PDF). Côté plats, la daube de bœuf, le veau marengo et le lapin à la moutarde ne sont pas des plats de porc ; vérifiez la fiche avant de commander, ou appelez le ${TELC}.`,en:`I can't vouch for every recipe's composition: it's detailed in the product sheet (PDF). Among the dishes, beef daube, veal marengo and rabbit in mustard are not pork dishes; check the sheet before ordering, or call ${TELC}.`,es:`No puedo garantizarle la composición de cada receta: está en la ficha (PDF). Entre los platos, el estofado de ternera, la ternera marengo y el conejo a la mostaza no son platos de cerdo; consulte la ficha antes de pedir o llame al ${TELC}.`,de:`Für die Zusammensetzung jedes Rezepts kann ich nicht garantieren: Sie steht im Produktblatt (PDF). Bei den Gerichten sind Rinderschmorbraten, Kalb Marengo und Kaninchen in Senf keine Schweinegerichte; prüfen Sie das Blatt vor der Bestellung oder rufen Sie ${TELC} an.`,it:`Non posso garantire la composizione di ogni ricetta: è nella scheda (PDF). Tra i piatti, stufato di manzo, vitello alla Marengo e coniglio alla senape non sono piatti di maiale; controllate la scheda prima di ordinare o chiamate il ${TELC}.`,nl:`Ik kan de samenstelling van elk recept niet garanderen: die staat in het productblad (PDF). Bij de gerechten zijn runderstoofpot, kalfsvlees marengo en konijn met mosterd geen varkensgerechten; controleer het blad voor u bestelt, of bel ${TELC}.`},
+ cadeau:{fr:`Deux lots prêts à offrir à 10 € : 6 desserts différents, ou 4 verrines de 180 g au choix. Pour Noël, vous pouvez aussi composer un coffret à la boutique, avec vin, foie gras et tisanes.`+ADD('lot-desserts',0),en:`Two ready-to-give bundles at €10: 6 different desserts, or 4 jars of 180 g of your choice. For Christmas you can also build a gift box at the shop, with wine, foie gras and herbal teas.`+ADD('lot-desserts',0),es:`Dos lotes listos para regalar a 10 €: 6 postres distintos, o 4 tarros de 180 g a elegir. En Navidad también puede componer un cofre en la tienda, con vino, foie gras e infusiones.`+ADD('lot-desserts',0),de:`Zwei fertige Sets zu 10 €: 6 verschiedene Desserts oder 4 Gläser à 180 g nach Wahl. Zu Weihnachten können Sie im Laden auch eine Box mit Wein, Foie gras und Kräutertees zusammenstellen.`+ADD('lot-desserts',0),it:`Due lotti pronti da regalare a 10 €: 6 dessert diversi, o 4 vasetti da 180 g a scelta. A Natale potete anche comporre una confezione in negozio, con vino, foie gras e tisane.`+ADD('lot-desserts',0),nl:`Twee kant-en-klare pakketten van € 10: 6 verschillende desserts, of 4 potjes van 180 g naar keuze. Met Kerst kunt u in de winkel ook een doos samenstellen, met wijn, foie gras en kruidenthee.`+ADD('lot-desserts',0)},
+ livraison:{fr:`Oui : la conserverie expédie à domicile, avec un bon de commande. Envoyez votre panier depuis le site, elle vous répond pour les frais et le paiement. Je n'ai pas le montant des frais de port ; demandez-le au ${TELC}.`,en:`Yes: the cannery ships to your home with an order form. Send your basket from the site and it will reply about costs and payment. I don't know the shipping cost; ask on ${TELC}.`,es:`Sí: la conservera envía a domicilio con una hoja de pedido. Envíe su cesta desde la web y le responderá sobre gastos y pago. No sé el importe del envío; pregunte en el ${TELC}.`,de:`Ja: Die Manufaktur verschickt nach Hause, mit einem Bestellschein. Senden Sie Ihren Warenkorb über die Website, sie meldet sich wegen Kosten und Zahlung. Die Versandkosten kenne ich nicht; fragen Sie unter ${TELC}.`,it:`Sì: il laboratorio spedisce a domicilio con un modulo d'ordine. Inviate il carrello dal sito e vi risponderà per spese e pagamento. Non conosco le spese di spedizione; chiedetele al ${TELC}.`,nl:`Ja: de conservenmakerij verzendt aan huis, met een bestelformulier. Stuur uw winkelmand via de site, dan krijgt u antwoord over kosten en betaling. De verzendkosten ken ik niet; vraag ze via ${TELC}.`},
+ horaires:{fr:`La vente directe se fait à l'atelier, 4 rue des Frères Lumière, zone du Dolmen à Alban, du lundi au vendredi de 8 h à 15 h. <a href="${MAPS}" target="_blank" rel="noopener">Itinéraire</a>`,en:`Direct sales take place at the workshop, 4 rue des Frères Lumière, Dolmen business park, Alban, Monday to Friday, 8 am to 3 pm. <a href="${MAPS}" target="_blank" rel="noopener">Directions</a>`,es:`La venta directa es en el taller, 4 rue des Frères Lumière, zona del Dolmen en Alban, de lunes a viernes de 8:00 a 15:00. <a href="${MAPS}" target="_blank" rel="noopener">Itinerario</a>`,de:`Direktverkauf in der Werkstatt, 4 rue des Frères Lumière, Gewerbegebiet Dolmen in Alban, Montag bis Freitag von 8 bis 15 Uhr. <a href="${MAPS}" target="_blank" rel="noopener">Route</a>`,it:`La vendita diretta è in laboratorio, 4 rue des Frères Lumière, zona del Dolmen ad Alban, dal lunedì al venerdì dalle 8 alle 15. <a href="${MAPS}" target="_blank" rel="noopener">Percorso</a>`,nl:`Directe verkoop in het atelier, 4 rue des Frères Lumière, bedrijventerrein Dolmen in Alban, maandag tot vrijdag van 8 tot 15 uur. <a href="${MAPS}" target="_blank" rel="noopener">Route</a>`},
+ facon:{fr:`La conserverie transforme en conserves les viandes, légumes, fruits et desserts des agriculteurs et des professionnels. ${G('facon','En savoir plus')} ou appelez le ${TELC}.`,en:`The cannery turns farmers' and professionals' meat, vegetables, fruit and desserts into preserves. ${G('facon','Find out more')} or call ${TELC}.`,es:`La conservera transforma en conserva carnes, verduras, frutas y postres de agricultores y profesionales. ${G('facon','Saber más')} o llame al ${TELC}.`,de:`Die Manufaktur verarbeitet Fleisch, Gemüse, Obst und Desserts von Landwirten und Betrieben zu Konserven. ${G('facon','Mehr erfahren')} oder rufen Sie ${TELC} an.`,it:`Il laboratorio trasforma in conserva carni, verdure, frutta e dessert di agricoltori e professionisti. ${G('facon','Scopri di più')} o chiamate il ${TELC}.`,nl:`De conservenmakerij maakt vlees, groenten, fruit en desserts van boeren en bedrijven in. ${G('facon','Meer weten')} of bel ${TELC}.`},
+ revend:{fr:`Vous trouvez nos verrines chez des revendeurs de produits régionaux (épiceries fines, supérettes), dont Carrefour Contact et SPAR à Alban, et en ligne sur Naturodrive, Au drive en pot et jemangefrançais.com.`,en:`Our jars are sold by regional food stockists (delicatessens, local shops), including Carrefour Contact and SPAR in Alban, and online on Naturodrive, Au drive en pot and jemangefrançais.com.`,es:`Nuestros tarros están en tiendas de productos regionales (gourmet, supermercados de proximidad), entre ellas Carrefour Contact y SPAR en Alban, y en línea en Naturodrive, Au drive en pot y jemangefrançais.com.`,de:`Unsere Gläser gibt es bei Händlern regionaler Produkte (Feinkost, kleine Supermärkte), darunter Carrefour Contact und SPAR in Alban, und online bei Naturodrive, Au drive en pot und jemangefrançais.com.`,it:`I nostri vasetti sono da rivenditori di prodotti regionali (gastronomie, piccoli supermercati), tra cui Carrefour Contact e SPAR ad Alban, e online su Naturodrive, Au drive en pot e jemangefrançais.com.`,nl:`Onze potjes liggen bij verkopers van streekproducten (delicatessen, buurtsupers), waaronder Carrefour Contact en SPAR in Alban, en online bij Naturodrive, Au drive en pot en jemangefrançais.com.`},
+ dessert:{fr:`Huit desserts en verrine, de 2,10 € (riz au lait à l'orange) à 2,98 € (moelleux chocolat framboises). Le flan au caramel est un bon début.`+ADD('d-flan-caramel',0),en:`Eight desserts in jars, from €2.10 (orange rice pudding) to €2.98 (chocolate and raspberry fondant). The caramel custard is a good start.`+ADD('d-flan-caramel',0),es:`Ocho postres en tarro, de 2,10 € (arroz con leche a la naranja) a 2,98 € (bizcocho de chocolate y frambuesa). El flan de caramelo es un buen comienzo.`+ADD('d-flan-caramel',0),de:`Acht Desserts im Glas, von 2,10 € (Milchreis mit Orange) bis 2,98 € (Schokoküchlein mit Himbeeren). Der Karamellflan ist ein guter Anfang.`+ADD('d-flan-caramel',0),it:`Otto dessert in vasetto, da 2,10 € (riso al latte all'arancia) a 2,98 € (tortino cioccolato e lamponi). Il flan al caramello è un buon inizio.`+ADD('d-flan-caramel',0),nl:`Acht desserts in een potje, van € 2,10 (rijstpudding met sinaasappel) tot € 2,98 (chocoladecakeje met framboos). De karamelflan is een goed begin.`+ADD('d-flan-caramel',0)},
+ terrine:{fr:`Quinze terrines en verrine de 180 g (pour 6), de 2,60 € à 3,60 €. Pour le gibier : sanglier ou chevreuil à 3,30 €.`+ADD('t-sanglier',0),en:`Fifteen terrines in 180 g jars (serves 6), from €2.60 to €3.60. For game: wild boar or venison at €3.30.`+ADD('t-sanglier',0),es:`Quince terrinas en tarro de 180 g (para 6), de 2,60 € a 3,60 €. Para caza: jabalí o corzo a 3,30 €.`+ADD('t-sanglier',0),de:`Fünfzehn Terrinen im 180-g-Glas (für 6), von 2,60 € bis 3,60 €. Für Wild: Wildschwein oder Reh zu 3,30 €.`+ADD('t-sanglier',0),it:`Quindici terrine in vasetto da 180 g (per 6), da 2,60 € a 3,60 €. Per la selvaggina: cinghiale o capriolo a 3,30 €.`+ADD('t-sanglier',0),nl:`Vijftien terrines in potjes van 180 g (voor 6), van € 2,60 tot € 3,60. Voor wild: wildzwijn of ree voor € 3,30.`+ADD('t-sanglier',0)},
+ jambon:{fr:`Le jambonneau existe en boîte (180 g ou 400 g) et en verrine (180 g ou 360 g), de 3,55 € à 7,65 €. Le melsat est momentanément indisponible.`+ADD('jambonneau',0),en:`Ham hock comes in tins (180 g or 400 g) and jars (180 g or 360 g), from €3.55 to €7.65. Melsat is temporarily unavailable.`+ADD('jambonneau',0),es:`El codillo existe en lata (180 g o 400 g) y en tarro (180 g o 360 g), de 3,55 € a 7,65 €. El melsat no está disponible por ahora.`+ADD('jambonneau',0),de:`Eisbein gibt es in der Dose (180 g oder 400 g) und im Glas (180 g oder 360 g), von 3,55 € bis 7,65 €. Melsat ist vorübergehend nicht verfügbar.`+ADD('jambonneau',0),it:`Lo stinco è in scatola (180 g o 400 g) e in vasetto (180 g o 360 g), da 3,55 € a 7,65 €. Il melsat è momentaneamente non disponibile.`+ADD('jambonneau',0),nl:`Hamschenkel bestaat in blik (180 g of 400 g) en in pot (180 g of 360 g), van € 3,55 tot € 7,65. Melsat is tijdelijk niet beschikbaar.`+ADD('jambonneau',0)},
+ contact:{fr:`Conserverie : ${TELC}. Nathalie : <a href="tel:+33670421343">06 70 42 13 43</a>. E-mail : ${MAILC}.`,en:`Cannery: ${TELC}. Nathalie: <a href="tel:+33670421343">06 70 42 13 43</a>. Email: ${MAILC}.`,es:`Conservera: ${TELC}. Nathalie: <a href="tel:+33670421343">06 70 42 13 43</a>. Correo: ${MAILC}.`,de:`Manufaktur: ${TELC}. Nathalie: <a href="tel:+33670421343">06 70 42 13 43</a>. E-Mail: ${MAILC}.`,it:`Laboratorio: ${TELC}. Nathalie: <a href="tel:+33670421343">06 70 42 13 43</a>. E-mail: ${MAILC}.`,nl:`Conservenmakerij: ${TELC}. Nathalie: <a href="tel:+33670421343">06 70 42 13 43</a>. E-mail: ${MAILC}.`},
+ prix:{fr:`Les terrines vont de 2,60 € à 3,60 €, les desserts de 2,10 € à 2,98 €, les plats cuisinés de 6,70 € (360 g) à 20 € (750 g). ${G('boutique','Tous les prix')}`,en:`Terrines range from €2.60 to €3.60, desserts from €2.10 to €2.98, ready meals from €6.70 (360 g) to €20 (750 g). ${G('boutique','All prices')}`,es:`Las terrinas van de 2,60 € a 3,60 €, los postres de 2,10 € a 2,98 €, los platos cocinados de 6,70 € (360 g) a 20 € (750 g). ${G('boutique','Todos los precios')}`,de:`Terrinen kosten 2,60 € bis 3,60 €, Desserts 2,10 € bis 2,98 €, Fertiggerichte 6,70 € (360 g) bis 20 € (750 g). ${G('boutique','Alle Preise')}`,it:`Le terrine vanno da 2,60 € a 3,60 €, i dessert da 2,10 € a 2,98 €, i piatti pronti da 6,70 € (360 g) a 20 € (750 g). ${G('boutique','Tutti i prezzi')}`,nl:`Terrines kosten € 2,60 tot € 3,60, desserts € 2,10 tot € 2,98, kant-en-klare gerechten € 6,70 (360 g) tot € 20 (750 g). ${G('boutique','Alle prijzen')}`},
+ plat4:{fr:`Pour 4, prenez une verrine de 750 g. La daube de bœuf (16 €) est un classique ; le lapin à la moutarde à l'ancienne (17 €) change.`+ADD('p-daube',0),en:`For 4, take a 750 g jar. Beef daube (€16) is a classic; rabbit in wholegrain mustard (€17) makes a change.`+ADD('p-daube',0),es:`Para 4, elija un tarro de 750 g. El estofado de ternera (16 €) es un clásico; el conejo a la mostaza (17 €) cambia.`+ADD('p-daube',0),de:`Für 4 nehmen Sie ein 750-g-Glas. Rinderschmorbraten (16 €) ist ein Klassiker; Kaninchen in Senf (17 €) bringt Abwechslung.`+ADD('p-daube',0),it:`Per 4, prendete un vasetto da 750 g. Lo stufato di manzo (16 €) è un classico; il coniglio alla senape (17 €) cambia.`+ADD('p-daube',0),nl:`Voor 4 neemt u een pot van 750 g. Runderstoofpot (€ 16) is een klassieker; konijn met grove mosterd (€ 17) is eens wat anders.`+ADD('p-daube',0)},
+ plat2:{fr:`Pour 1 à 2 personnes, la verrine de 360 g suffit : daube de bœuf à 8 €, porc au curry à 7 €.`+ADD('p-daube',1),en:`For 1 to 2 people, the 360 g jar is enough: beef daube at €8, pork curry at €7.`+ADD('p-daube',1),es:`Para 1 o 2 personas basta el tarro de 360 g: estofado de ternera a 8 €, cerdo al curry a 7 €.`+ADD('p-daube',1),de:`Für 1 bis 2 Personen reicht das 360-g-Glas: Rinderschmorbraten zu 8 €, Schweinefleisch mit Curry zu 7 €.`+ADD('p-daube',1),it:`Per 1 o 2 persone basta il vasetto da 360 g: stufato di manzo a 8 €, maiale al curry a 7 €.`+ADD('p-daube',1),nl:`Voor 1 à 2 personen volstaat de pot van 360 g: runderstoofpot voor € 8, varkensvlees met curry voor € 7.`+ADD('p-daube',1)},
+ defaut:{fr:`Je ne sais pas répondre précisément à cela. Je peux vous aider à choisir un plat, une terrine, un dessert ou un cadeau. Sinon, la conserverie vous répond au ${TELC}.`,en:`I can't answer that precisely. I can help you choose a dish, a terrine, a dessert or a gift. Otherwise, the cannery will answer on ${TELC}.`,es:`No sé responder con precisión a eso. Puedo ayudarle a elegir un plato, una terrina, un postre o un regalo. Si no, la conservera le responde en el ${TELC}.`,de:`Darauf kann ich nicht genau antworten. Ich helfe bei der Wahl eines Gerichts, einer Terrine, eines Desserts oder eines Geschenks. Sonst hilft die Manufaktur unter ${TELC}.`,it:`Non so rispondere con precisione. Posso aiutarvi a scegliere un piatto, una terrina, un dessert o un regalo. Altrimenti il laboratorio risponde al ${TELC}.`,nl:`Daar kan ik geen precies antwoord op geven. Ik help u een gerecht, terrine, dessert of cadeau kiezen. Anders helpt de conservenmakerij via ${TELC}.`}
+};
+function repondre(q,l){
+ const s=q.toLowerCase();
+ for(const [k,re] of INT){if(re.test(s)){
+  if(k==='plat'){const m=s.match(/\b(\d{1,2})\b/);const n=m?+m[1]:(/\b(deux|two|dos|zwei|due|twee|1|un|une|seul|alone|solo|allein|da solo|alleen)\b/.test(s)?2:4);return (n<=2?R.plat2:R.plat4)[l]}
+  return R[k][l]}}
+ return R.defaut[l];
+}
+
+document.documentElement.classList.add('js');
+const img=id=>'img/'+id+'.jpg';
+const store={get(k){try{return localStorage.getItem(k)}catch(e){return null}},set(k,v){try{localStorage.setItem(k,v)}catch(e){}}};
+let lang=store.get('npc-lang')||'fr'; if(!T[lang])lang='fr';
+const t=k=>T[lang][k];
+const ico=n=>`<svg class="i" aria-hidden="true"><use href="#i-${n}"/></svg>`;
+const num=v=>v.toFixed(2);
+const eur=v=>{const s=num(v);return lang==='en'?'€'+s:(lang==='nl'?'€ '+s.replace('.',','):s.replace('.',',')+' €')};
+let panier=[];try{panier=JSON.parse(store.get('npc-panier')||'[]')}catch(e){panier=[]}
+const sauve=()=>store.set('npc-panier',JSON.stringify(panier));
+const fmt=v=>v[0]==='l'?t('lot'):`${v[0]==='b'?t('box'):t('verr')} ${v[1]} g${v[2]?' · '+v[2]+' '+t('pers'):''}`;
+function pot(cls=''){return `<svg class="bocal ${cls}" viewBox="0 0 40 46" aria-hidden="true"><defs><clipPath id="cp${cls}"><rect x="6" y="2" width="28" height="9" rx="2"/></clipPath></defs><g class="gc"><rect class="couv" x="6" y="2" width="28" height="9" rx="2"/><g clip-path="url(#cp${cls})"><g class="stries">${[...Array(10)].map((_,i)=>`<line x1="${i*5+2}" y1="3" x2="${i*5+2}" y2="10"/>`).join('')}</g></g></g><path class="verre" d="M8 12h24v4c3 2 4 5 4 9v14a5 5 0 0 1-5 5H9a5 5 0 0 1-5-5V25c0-4 1-7 4-9z"/><path class="contenu" d="M6 28h28v11a3 3 0 0 1-3 3H9a3 3 0 0 1-3-3z"/><rect class="etq" x="9" y="22" width="22" height="10" rx="2"/></svg>`}
+function header(r){const n=t('nav');const L=['','boutique','lots','facon','conserverie','contact'];const nb=panier.reduce((a,x)=>a+x.q,0);
+ return `<header class="top"><div class="bar1"><a class="logo" href="#/"><img src="img/logo.png" alt="Nos Petites Conserves, fabrication artisanale"></a><span class="sp"></span>
+ <a class="tel" href="tel:+33563606288">${ico('tel')}<span>05 63 60 62 88</span></a>
+ <label class="langue">${ico('globe')}<span class="sr">${t('lang')}</span><select id="lg" aria-label="${t('lang')}">${Object.entries(LANGS).map(([k,v])=>`<option value="${k}"${k===lang?' selected':''}>${v}</option>`).join('')}</select></label>
+ <button class="btn panier-btn" type="button" id="ouvrePanier" style="--x:0">${pot('mini').replace('class="bocal mini"','class="bocal mini" style="width:1.1em;height:1.25em"')}<span class="lbl">${t('cart')}</span><span class="n" data-v="${nb}">${nb}</span></button></div>
+ <nav class="menu" aria-label="Menu"><ul>${L.map((l,i)=>`<li><a href="#/${l}"${r===l?' aria-current="page"':''}>${n[i]}</a></li>`).join('')}<li><a href="#" class="conseil" data-cons>${n[6]}</a></li></ul></nav></header>`}
+function carte(p){
+ const im=p.img?`<img src="${img(p.img)}" alt="${p.n[lang]}" loading="lazy">`:`<div class="sans">${p.n[lang]}<br><small style="font:500 .85rem var(--texte);color:var(--gris)">${t('nophoto')}</small></div>`;
+ const sel=p.v.length>1?`<select data-var="${p.id}" aria-label="${p.n[lang]}">${p.v.map((v,i)=>`<option value="${i}">${fmt(v)} — ${eur(v[3])}</option>`).join('')}</select>`:`<small>${fmt(p.v[0])}</small>`;
+ const v=p.v[0];
+ return `<article class="produit apparait"><div class="im">${im}</div><div class="corps"><h3>${p.n[lang]}</h3>${p.ing?`<small>${p.ing[lang]}</small>`:''}${p.off?`<span class="indispo">${t('off')}</span>`:''}${sel}
+ <div class="bas"><div><div class="px" data-px="${p.id}">${eur(v[3])}</div>${v[4]?`<div class="kg" data-kg="${p.id}">${eur(v[4])}${t('kg')}</div>`:''}</div><button class="btn" type="button" data-add="${p.id}"${p.off?' disabled':''}>${t('add')}</button></div>
+ ${p.pdf?`<a class="fiche" href="${U+p.pdf}" target="_blank" rel="noopener">${ico('doc')} ${t('fiche')}</a>`:''}</div></article>`}
+function accueil(){
+ const rays=CATS.filter(c=>c[0]!=='lot');
+ return `<section class="ouverture" style="padding:0"><div class="wrap g"><div><h1 class="anim">${pot('grand')}<span>${t('h1')}</span></h1><p class="lead">${t('lead')}</p><div class="act"><a class="btn or" href="#/boutique">${t('shop')}</a><a class="btn clair" href="#/contact">${t('visit')}</a></div><ul class="promesse">${t('prom').map(x=>`<li>${ico('ok')}${x}</li>`).join('')}</ul></div>
+ <figure><img src="${img('p-daube')}" alt="${P.find(x=>x.id==='p-daube').n[lang]}" fetchpriority="high"><figcaption>${t('cap')}</figcaption></figure></div></section>
+ <section><div class="wrap"><h2>${t('rayT')}</h2><p>${t('rayP')}</p><div class="rayons">${rays.map(([k,n,im])=>{const nb=P.filter(p=>p.cat===k).length;return `<a class="rayon apparait" href="#/boutique?${k}">${im?`<img src="${img(im)}" alt="" loading="lazy">`:`<div style="aspect-ratio:1;background:repeating-linear-gradient(135deg,var(--feuille) 0 14px,#E6EED9 14px 28px);display:grid;place-items:center">${pot('ray').replace('class="bocal ray"','class="bocal ray" style="width:56px;height:64px"')}</div>`}<b>${n[lang]}</b><span>${nb} ${t('nbP')}</span></a>`}).join('')}</div></div></section>
+ <section class="noel"><div class="wrap deux"><figure class="photo apparait" style="margin:0"><img src="${img('lot-sac')}" alt="${P.find(x=>x.id==='lot-verrines').n[lang]}" loading="lazy" style="aspect-ratio:4/3;object-position:50% 40%"></figure><div class="apparait"><h2>${t('noelT')}</h2><p>${t('noelP')}</p><a class="btn" href="#/lots">${t('noelA')}</a></div></div></section>
+ <section><div class="wrap deux inv"><figure class="photo apparait" style="margin:0"><img src="${img('t-roquefort')}" alt="${P.find(x=>x.id==='t-roquefort').n[lang]}" loading="lazy"></figure><div class="apparait"><h2>${t('valT')}</h2><ul class="valeurs">${t('val').map(([a,b])=>`<li><b>${a}</b>${b}</li>`).join('')}</ul></div></div></section>
+ <section class="bois"><div class="wrap deux"><figure class="photo" style="margin:0"><img src="${img('atelier')}" alt="${t('atT')}" loading="lazy"></figure><div><h2>${t('atT')}</h2><p>${t('atP')}</p><a class="btn or" href="${MAPS}" target="_blank" rel="noopener">${ico('pin')}${t('atA')}</a></div></div></section>
+ <section><div class="wrap deux"><div><h2>${t('facT')}</h2><p>${t('facP')}</p><a class="suite" href="#/facon">${t('facA')}</a></div><div><h3>${t('presseT')}</h3><ul class="presse">${t('presse').slice(0,5).map(x=>`<li>${x}</li>`).join('')}</ul><p style="margin-top:12px"><a class="suite" href="#/conserverie">${t('nav')[4]}</a></p></div></div></section>`}
+function tete(h,p,act=''){return `<div class="tete"><div class="wrap"><h1>${h}</h1>${p?`<p>${p}</p>`:''}${act}</div></div>`}
+function boutique(){
+ const c=(location.hash.split('?')[1]||'').trim();
+ const cats=CATS.filter(x=>x[0]!=='lot');
+ return tete(t('boutT'),t('boutL'))+`<section style="padding-top:36px"><div class="wrap"><div class="filtres" role="group">${[['',{[lang]:t('tous')}]].concat(cats).map(([k,n])=>`<button type="button" data-f="${k}" aria-pressed="${k===c}">${n[lang]}</button>`).join('')}</div>
+ ${cats.filter(([k])=>!c||k===c).map(([k,n])=>`<h2 style="font-size:1.7rem;margin-top:24px">${n[lang]}</h2><div class="grille">${P.filter(p=>p.cat===k).map(carte).join('')}</div>`).join('')}
+ <p style="margin-top:28px"><a class="fiche" href="${CGV}" target="_blank" rel="noopener">${ico('doc')} ${t('cgv')}</a> · <a class="fiche" href="${BON}" target="_blank" rel="noopener">${ico('doc')} ${t('bon')}</a></p></div></section>`}
+function lots(){return tete(t('lotsT'),t('lotsL'))+`<section><div class="wrap"><div class="grille" style="grid-template-columns:repeat(auto-fill,minmax(300px,1fr))">${P.filter(p=>p.cat==='lot').map(carte).join('')}</div></div></section>
+ <section class="noel"><div class="wrap deux"><figure class="photo" style="margin:0"><img src="${img('marche')}" alt="${t('nav')[4]}" loading="lazy"></figure><div><h2>${t('noelT')}</h2><p>${t('noelP')}</p><p><b>${t('cHor')} :</b> ${t('hor')}</p><a class="btn" href="${MAPS}" target="_blank" rel="noopener">${ico('pin')}${t('atA')}</a></div></div></section>`}
+function facon(){return tete(t('facPT'),t('facPL'))+`<section><div class="wrap deux"><div><h2>${t('facT')}</h2><p>${t('facP')}</p><ul class="valeurs">${t('facL').map(x=>`<li>${x}</li>`).join('')}</ul><p style="margin-top:22px"><a class="btn" href="mailto:contact@nospetitesconserves.fr?subject=${encodeURIComponent(t('facPT'))}">${ico('mail')}${t('facA')}</a> <a class="btn ligne" href="tel:+33563606288">${ico('tel')}05 63 60 62 88</a></p></div><figure class="photo" style="margin:0"><img src="${img('atelier')}" alt="${t('atT')}" loading="lazy"></figure></div></section>`}
+function conserverie(){return tete(t('consT'),t('consL'))+`<section><div class="wrap deux"><div><h2>${t('valT')}</h2><ul class="valeurs">${t('val').map(([a,b])=>`<li><b>${a}</b>${b}</li>`).join('')}</ul></div><figure class="photo" style="margin:0"><img src="${img('marche')}" alt="${t('consT')}" loading="lazy"></figure></div></section>
+ <section class="bois"><div class="wrap"><h2>${t('presseT')}</h2><ul class="valeurs" style="grid-template-columns:repeat(auto-fill,minmax(280px,1fr));display:grid">${t('presse').map(x=>`<li style="border-color:var(--or)">${x}</li>`).join('')}</ul></div></section>
+ <section><div class="wrap deux"><div><h2>${t('atT')}</h2><p>${t('atP')}</p></div><div><h3>${t('partT')}</h3><ul class="valeurs"><li><a href="http://www.saveursdutarn.fr/fr/" target="_blank" rel="noopener">Saveurs du Tarn</a></li><li>Carrefour Contact Alban</li><li><a href="http://spar-alban.fr/" target="_blank" rel="noopener">SPAR Alban</a></li><li><a href="https://jemangefrancais.com/42__nos-petites-conserves" target="_blank" rel="noopener">jemangefrançais.com</a></li></ul></div></div></section>`}
+function coord(){return `<div class="coord"><div><h3>${t('cAdr')}</h3><p>4 rue des Frères Lumière<br>81250 Alban</p></div><div><h3>${t('cTel')}</h3><p>${t('conserverie')} : <a href="tel:+33563606288">05 63 60 62 88</a><br>Nathalie : <a href="tel:+33670421343">06 70 42 13 43</a><br><a href="mailto:contact@nospetitesconserves.fr">contact@nospetitesconserves.fr</a></p></div><div><h3>${t('cHor')}</h3><p>${t('hor')}</p></div></div>`}
+function contact(){return tete(t('coT'),t('coL'),`<p><a class="btn or" href="${MAPS}" target="_blank" rel="noopener">${ico('pin')}${t('atA')}</a></p>`)+`<section><div class="wrap">${coord()}</div></section>
+ <section style="padding-top:0"><div class="wrap deux" style="align-items:start"><form class="form" id="fco" novalidate><h2 class="plein">${t('coF')}</h2><label class="ch">${t('coNom')}<input name="n" autocomplete="name"></label><label class="ch">${t('coMail')}<input name="e" type="email" autocomplete="email"></label><label class="ch plein">${t('coSuj')}<input name="s"></label><label class="ch plein">${t('coMsg')}<textarea name="m" rows="5"></textarea></label><div class="plein"><button class="btn" type="submit">${ico('send')}${t('coSend')}</button><p class="err" aria-live="polite"></p></div></form>
+ <figure class="photo" style="margin:0"><img src="${img('atelier')}" alt="${t('atT')}" loading="lazy"></figure></div></section>`}
+function mentions(){return tete(t('legT'),'')+`<section><div class="wrap"><p>SARL NOS PETITES CONSERVES, capital 8 000 €<br>4 rue des Frères Lumière, 81250 Alban, France<br>SIREN 809 253 917 · SIRET 809 253 917 00011 · RCS Albi B 809 253 917 · TVA FR 809 253 917 · APE 1013A<br>05 63 60 62 88 · contact@nospetitesconserves.fr<br>Nathalie Jaïs, gérante</p><p><a href="${CGV}" target="_blank" rel="noopener">${t('cgv')}</a></p></div></section>`}
+function footer(){const n=t('nav');
+ return `<footer><div class="wrap"><div class="g"><div><img src="img/logo.png" alt="Nos Petites Conserves" style="height:48px;background:#fff;border-radius:8px;padding:4px"><p style="margin-top:14px">4 rue des Frères Lumière<br>81250 Alban<br><a href="tel:+33563606288">05 63 60 62 88</a><br><a href="mailto:contact@nospetitesconserves.fr">contact@nospetitesconserves.fr</a></p><div class="reseaux"><a href="${FB}" target="_blank" rel="noopener" aria-label="Facebook">${ico('fb')}</a></div></div>
+ <div><h4>${t('fNav')}</h4><ul>${['boutique','lots','facon','conserverie','contact'].map((r,i)=>`<li><a href="#/${r}">${n[i+1]}</a></li>`).join('')}</ul></div>
+ <div><h4>${t('fInfo')}</h4><ul><li>${t('cHor')} : ${t('hor')}</li><li><a href="${CGV}" target="_blank" rel="noopener">${t('cgv')}</a></li><li><a href="${BON}" target="_blank" rel="noopener">${t('bon')}</a></li><li><a href="#/mentions">${t('legT')}</a></li></ul></div>
+ <div><h4>${t('partT')}</h4><ul><li><a href="http://www.saveursdutarn.fr/fr/" target="_blank" rel="noopener">Saveurs du Tarn</a></li><li><a href="http://spar-alban.fr/" target="_blank" rel="noopener">SPAR Alban</a></li><li><a href="https://jemangefrancais.com/42__nos-petites-conserves" target="_blank" rel="noopener">jemangefrançais.com</a></li></ul></div></div>
+ <div class="signature"><span>© SARL Nos Petites Conserves · Alban</span><span>${t('propo')}</span></div></div></footer>
+ <div class="barre"><a class="btn or" href="#/boutique">${t('shop')}</a><a class="btn ligne" href="tel:+33563606288">${ico('tel')}05 63 60 62 88</a></div>`}
+function conseiller(){return `<button class="cons-btn" type="button" data-cons><span class="av">P</span><span><b>${t('cName')}</b><small>${t('cSub')}</small></span></button>
+ <div class="cons-bulle" id="bulle" role="status"><button type="button" id="bulleX" aria-label="${t('cClose')}">${ico('x')}</button>${t('cBubble')}</div>
+ <div class="cons" id="cons" role="dialog" aria-label="${t('cName')}"><header><span class="av" style="width:36px;height:36px;border-radius:8px;background:var(--or);color:var(--bois);display:grid;place-items:center;font:700 1.05rem var(--titre)">P</span><div><b>${t('cName')}</b><small>${t('cVirt')}</small></div><button type="button" id="consX" aria-label="${t('cClose')}">${ico('x')}</button></header>
+ <div class="fil" id="fil" aria-live="polite"></div><div class="chips" id="chips">${t('chips').map(c=>`<button type="button">${c}</button>`).join('')}</div>
+ <form id="consF"><label class="sr" for="consQ">${t('cPh')}</label><input id="consQ" placeholder="${t('cPh')}" autocomplete="off"><button class="btn" type="submit" aria-label="${t('cPh')}">${ico('send')}</button></form></div>`}
+/* Panier */
+function rendPanier(){
+ const el=document.getElementById('panier');let tot=0;
+ const lignes=panier.map((x,i)=>{const p=P.find(y=>y.id===x.id),v=p.v[x.v];tot+=v[3]*x.q;return `<div class="ligne"><div><b>${p.n[lang]}</b><br><small>${fmt(v)} · ${eur(v[3])}</small></div><div class="qte"><button type="button" data-q="${i}:-1" aria-label="−">−</button><span>${x.q}</span><button type="button" data-q="${i}:1" aria-label="+">+</button></div></div>`}).join('');
+ el.innerHTML=`<header><h2>${t('cartT')}</h2><button type="button" id="fermePanier" aria-label="${t('cClose')}">${ico('x')}</button></header><div class="lignes">${lignes||`<p class="vide">${t('empty')}</p>`}</div>
+ <div class="total"><div class="l"><span>${t('total')}</span><span>${eur(tot)}</span></div><p>${t('cartN')}</p>
+ <form class="form" id="fcmd" novalidate><label class="ch plein">${t('oNom')}<input name="n" autocomplete="name"></label><label class="ch">${t('oMail')}<input name="e" type="email" autocomplete="email"></label><label class="ch">${t('oTel')}<input name="t" type="tel" autocomplete="tel"></label><label class="ch plein">${t('oAdr')}<textarea name="a" rows="2"></textarea></label><div class="plein"><button class="btn or" type="submit"${panier.length?'':' disabled'}>${ico('send')}${t('order')}</button><p class="err" aria-live="polite"></p><p style="font-size:.85rem;margin:0"><a href="${CGV}" target="_blank" rel="noopener">${t('cgv')}</a></p></div></form></div>`;
+ document.getElementById('fermePanier').onclick=fermePanier;
+ el.querySelectorAll('[data-q]').forEach(b=>b.onclick=()=>{const [i,d]=b.dataset.q.split(':').map(Number);panier[i].q+=d;if(panier[i].q<=0)panier.splice(i,1);sauve();rendPanier();majCompteur()});
+ const f=document.getElementById('fcmd');f.onsubmit=e=>{e.preventDefault();const er=f.querySelector('.err');er.className='err';
+  if(!f.n.value.trim()||!/.+@.+\..+/.test(f.e.value)||!f.a.value.trim()){er.textContent=t('oErr');return}
+  const corps=panier.map(x=>{const p=P.find(y=>y.id===x.id),v=p.v[x.v];return `${x.q} × ${p.n.fr} — ${fmt(v)} — ${eur(v[3]*x.q)}`}).join('\n');
+  er.className='err ok';er.textContent=t('oOk');
+  location.href='mailto:contact@nospetitesconserves.fr?subject='+encodeURIComponent('Commande — '+f.n.value)+'&body='+encodeURIComponent(`${corps}\n\n${t('total')} : ${eur(tot)}\n\n${f.n.value}\n${f.e.value}\n${f.t.value}\n${f.a.value}`)};
+}
+function ouvrePanier(){rendPanier();document.getElementById('panier').classList.add('on');document.getElementById('voile').classList.add('on')}
+function fermePanier(){document.getElementById('panier').classList.remove('on');document.getElementById('voile').classList.remove('on')}
+function majCompteur(){const nb=panier.reduce((a,x)=>a+x.q,0);const n=document.querySelector('.panier-btn .n');if(n){n.textContent=nb;n.dataset.v=nb}}
+function ajoute(id,vi){const p=P.find(x=>x.id===id);if(!p||p.off)return;const l=panier.find(x=>x.id===id&&x.v===vi);if(l)l.q++;else panier.push({id,v:vi,q:1});sauve();majCompteur();
+ const b=document.getElementById('ouvrePanier');b.classList.remove('clic');void b.offsetWidth;b.classList.add('clic');
+ const to=document.getElementById('toast');to.textContent=t('added')+' · '+p.n[lang];to.classList.add('on');clearTimeout(window.__tt);window.__tt=setTimeout(()=>to.classList.remove('on'),1800)}
+const PAGES={'':accueil,boutique,lots,facon,conserverie,contact,mentions};
+let bulleVue=store.get('npc-bulle')==='1';
+function render(){
+ let r=(location.hash.replace(/^#\/?/,'').split(/[?#]/)[0])||''; if(!PAGES[r])r='';
+ const on=document.getElementById('cons')?.classList.contains('on'),fil=document.getElementById('fil')?.innerHTML;
+ document.documentElement.lang=lang;
+ document.getElementById('app').innerHTML=header(r)+`<main>${PAGES[r]()}</main>`+footer()+conseiller();
+ if(fil){document.getElementById('fil').innerHTML=fil;libelles()} if(on)document.getElementById('cons').classList.add('on');
+ brancher();
+}
+function libelles(){document.querySelectorAll('#fil [data-add]').forEach(b=>{const [id,vi]=b.dataset.add.split(':');const p=P.find(x=>x.id===id);b.textContent=t('cAdd')+' · '+p.n[lang]+' · '+eur(p.v[+vi][3])})}
+function brancher(){
+ document.getElementById('lg').onchange=e=>{lang=e.target.value;store.set('npc-lang',lang);document.getElementById('fil').innerHTML='';render()};
+ document.getElementById('ouvrePanier').onclick=ouvrePanier;
+ document.getElementById('voile').onclick=fermePanier;
+ document.querySelectorAll('[data-var]').forEach(s=>s.onchange=()=>{const p=P.find(x=>x.id===s.dataset.var),v=p.v[+s.value];document.querySelector(`[data-px="${p.id}"]`).textContent=eur(v[3]);const kg=document.querySelector(`[data-kg="${p.id}"]`);if(kg)kg.textContent=eur(v[4])+t('kg')});
+ document.querySelectorAll('main [data-add]').forEach(b=>b.onclick=()=>{const s=document.querySelector(`[data-var="${b.dataset.add}"]`);ajoute(b.dataset.add,s?+s.value:0)});
+ document.querySelectorAll('[data-f]').forEach(b=>b.onclick=()=>{location.hash='#/boutique'+(b.dataset.f?'?'+b.dataset.f:'')});
+ const fc=document.getElementById('fco');
+ if(fc)fc.onsubmit=e=>{e.preventDefault();const er=fc.querySelector('.err');er.className='err';if(!/.+@.+\..+/.test(fc.e.value)||!fc.m.value.trim()){er.textContent=t('coErr');return}er.className='err ok';er.textContent=t('coOk');location.href='mailto:contact@nospetitesconserves.fr?subject='+encodeURIComponent(fc.s.value||t('coF'))+'&body='+encodeURIComponent(fc.m.value+'\n\n'+fc.n.value+'\n'+fc.e.value)};
+ document.querySelectorAll('[data-cons]').forEach(b=>b.onclick=e=>{e.preventDefault();ouvrir()});
+ document.getElementById('consX').onclick=()=>document.getElementById('cons').classList.remove('on');
+ document.getElementById('bulleX').onclick=()=>{document.getElementById('bulle').classList.remove('on')};
+ document.getElementById('chips').onclick=e=>{if(e.target.tagName==='BUTTON')poser(e.target.textContent)};
+ document.getElementById('consF').onsubmit=e=>{e.preventDefault();const q=document.getElementById('consQ');if(q.value.trim()){poser(q.value.trim());q.value=''}};
+ document.getElementById('fil').onclick=e=>{const b=e.target.closest('[data-add]');if(b){const [id,vi]=b.dataset.add.split(':');ajoute(id,+vi);return}const a=e.target.closest('a[data-go]');if(a&&innerWidth<820)document.getElementById('cons').classList.remove('on')};
+ const io=new IntersectionObserver(es=>es.forEach(x=>{if(x.isIntersecting){x.target.classList.add('vu');io.unobserve(x.target)}}),{rootMargin:'0px 0px -6% 0px'});
+ document.querySelectorAll('.apparait').forEach(el=>io.observe(el));
+}
+function ouvrir(){document.getElementById('cons').classList.add('on');document.getElementById('bulle').classList.remove('on');const f=document.getElementById('fil');if(!f.children.length)dire(t('cHello'),'b');setTimeout(()=>document.getElementById('consQ').focus(),50)}
+function dire(h,w){const f=document.getElementById('fil'),d=document.createElement('div');d.className='msg '+w;if(w==='u')d.textContent=h;else d.innerHTML=h;f.appendChild(d);libelles();f.scrollTop=f.scrollHeight}
+function poser(q){dire(q,'u');setTimeout(()=>dire(repondre(q,lang),'b'),350)}
+addEventListener('keydown',e=>{if(e.key==='Escape'){fermePanier();document.getElementById('cons')?.classList.remove('on')}});
+addEventListener('hashchange',()=>{render();scrollTo(0,0)});
+render();
+setTimeout(()=>{if(!bulleVue&&!document.getElementById('cons').classList.contains('on')){document.getElementById('bulle').classList.add('on');bulleVue=true;store.set('npc-bulle','1')}},4000);
+
+</script>
+<script id="nv-track">(function(){try{if(location.protocol!=='https:')return;if(/[?&]moi\b/.test(location.search)){localStorage.setItem('nv_moi','1');addEventListener('load',function(){var d=document.createElement('div');d.textContent='✓ Appareil reconnu : vos visites ne sont plus comptées';d.style.cssText='position:fixed;left:50%;bottom:24px;transform:translateX(-50%);z-index:2147483647;background:#1E3A2B;color:#fff;font:600 14px/1.3 system-ui,sans-serif;padding:12px 18px;border-radius:999px;box-shadow:0 8px 24px rgba(0,0,0,.25)';document.body.appendChild(d);setTimeout(function(){d.remove()},6000)})}if(localStorage.getItem('nv_moi')||navigator.webdriver)return;}catch(x){}
+var m=location.pathname.split('/').filter(Boolean)[0]||'';if(!m)return;var s=Math.random().toString(36).slice(2,12),t0=Date.now(),u='/_t.php',last='home',seen={};
+function send(e,p){var b=JSON.stringify({m:m,e:e,s:s,p:p||'',t:Math.round((Date.now()-t0)/1000),l:(document.documentElement.lang||'').slice(0,2)});try{if(navigator.sendBeacon)navigator.sendBeacon(u,new Blob([b],{type:'text/plain'}));else fetch(u,{method:'POST',body:b,keepalive:true})}catch(x){}}
+function once(k){k=String(k).toLowerCase().replace(/[^a-z0-9_-]/g,'').slice(0,24);if(!k||seen[k])return;seen[k]=1;send('ev',k)}
+send('open');setInterval(function(){if(document.visibilityState==='visible')send('ping')},45000);
+document.addEventListener('visibilitychange',function(){if(document.visibilityState==='hidden')send('ping')});
+window.__nvView=function(p){p=String(p||'');if(p&&p!==last){last=p;send('view',p)}};
+addEventListener('scroll',function(){var h=document.documentElement,max=h.scrollHeight-innerHeight;if(max<200)return;var r=(scrollY/max)*100;[25,50,75,100].forEach(function(q){if(r>=q-2)once('defil'+q+'-'+last)})},{passive:true});
+document.addEventListener('click',function(e){var el=e.target.closest('a,button,[data-add],[data-go],[role=button],summary');if(!el)return;var t=((el.getAttribute('aria-label')||'')+' '+(el.textContent||'')+' '+(el.className||'')+' '+(el.id||'')).toLowerCase(),h=el.getAttribute&&el.getAttribute('href')||'';
+if(el.hasAttribute('data-add')||/ajouter|add to|añadir|hinzuf|aggiungi|加入/.test(t))once('panier-'+(el.getAttribute('data-add')||'ajout')),send('ev','panier');
+else if(/conseil|advisor|assistant|chat/.test(t))once('conseiller');
+else if(/instagram|facebook|youtube|pinterest|linkedin|tiktok/.test(h))once('reseau-'+(h.match(/instagram|facebook|youtube|pinterest|linkedin|tiktok/)||[''])[0]);
+else if(/réserv|reserv|visite|book/.test(t))once('reservation');
+else if(/coffret|gift|cadeau/.test(t))once('coffret')},true);
+document.addEventListener('play',function(e){if(e.target&&e.target.tagName==='VIDEO'&&!e.target.muted)once('video-son')},true);
+try{new MutationObserver(function(){var l=(document.documentElement.lang||'').slice(0,2);if(l&&l!=='fr')once('langue-'+l)}).observe(document.documentElement,{attributes:true,attributeFilter:['lang']})}catch(x){}
+addEventListener('load',function(){try{if(typeof window.go==='function'&&!window.go.__nv){var g=window.go;window.go=function(v){try{window.__nvView(v)}catch(x){}return g.apply(this,arguments)};window.go.__nv=1}}catch(x){}});})();</script>
+</body>
+</html>
