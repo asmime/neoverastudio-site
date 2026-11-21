@@ -19,7 +19,7 @@
 @font-face{font-family:"Fragment Mono";font-weight:400;font-display:swap;src:url(fonts/fragment-mono-latin-400-normal.woff2) format("woff2")}
 @font-face{font-family:"Fragment Mono";font-weight:400;font-display:swap;src:url(fonts/fragment-mono-latin-ext-400-normal.woff2) format("woff2");unicode-range:U+0100-02BA,U+1E00-1EFF}
 :root{
---vert:#0F4A44;--vert2:#14605A;--vert3:#0A3632;--amf:#33A08F;--platre:#EEF1EF;--platre2:#E2E8E5;--graphite:#172120;--gris:#4F5D5A;--chene:#C08B55;--chene2:#8E5D2E;--trait:rgba(238,241,239,.5);
+--vert:#0F4A44;--vert2:#14605A;--vert3:#0A3632;--amf:#33A08F;--platre:#EEF1EF;--platre2:#E2E8E5;--graphite:#172120;--gris:#4F5D5A;--chene:#B57C4A;--chene2:#86552A;--trait:rgba(238,241,239,.5);
 --t:"Bricolage Grotesque",ui-sans-serif,sans-serif;--m:"Fragment Mono",ui-monospace,monospace;
 --r:2px;--max:1240px;--g:clamp(16px,4vw,48px)}
 *{box-sizing:border-box}
@@ -67,6 +67,7 @@ a:hover .fleche,button:hover .fleche{transform:translateX(4px)}
  .nav{grid-column:1/-1;justify-content:flex-start;overflow-x:auto;scrollbar-width:none;margin:0 calc(-1*var(--g));padding:6px var(--g) 8px;-webkit-mask-image:linear-gradient(90deg,#000 85%,transparent);mask-image:linear-gradient(90deg,#000 85%,transparent)}
  .nav::-webkit-scrollbar{display:none}
 }
+@media (max-width:1120px){.nav a.nav-devis{order:-1}.nav a:first-child{order:-2}}
 @media (max-width:620px){.logo img{height:36px}.tel .tel-num{display:none}.langue select{max-width:104px}}
 /* héros */
 .heros{background:var(--vert);color:var(--platre);overflow:hidden}
@@ -171,7 +172,7 @@ section{position:relative}
 .appel{background:var(--chene);color:var(--graphite)}
 .appel .wrap{display:grid;grid-template-columns:1.3fr 1fr;gap:32px;align-items:center}
 .appel .lead{margin-top:14px}
-.appel .actions{display:flex;flex-direction:column;gap:12px;align-items:flex-start}
+.appel .actions{display:flex;flex-wrap:wrap;gap:12px;align-items:center}.appel .actions .mono{flex-basis:100%}
 .appel .mono{display:block}
 .appel .btn-ligne:hover{background:var(--graphite);color:var(--chene)}
 @media (max-width:760px){.appel .wrap{grid-template-columns:1fr}}
@@ -182,7 +183,7 @@ section{position:relative}
 .pied ul{list-style:none;margin:0;padding:0}
 .pied li{margin:.3em 0}
 .pied a{text-decoration:none}.pied a:hover{text-decoration:underline}
-.pied .reseau{columns:2;column-gap:20px;font-size:.84rem}
+.pied .reseau{columns:2;column-gap:20px;font-size:.84rem;margin-top:12px}.pied summary{cursor:pointer;font-weight:500;min-height:32px}.pied summary:hover{color:var(--platre)}
 .pied .bas{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;margin-top:48px;padding-top:20px;border-top:1px solid rgba(238,241,239,.18);font-size:.85rem}
 .pied .logo-b{background:var(--platre);display:inline-block;padding:8px 10px;border-radius:var(--r);margin-bottom:16px}
 .pied .logo-b img{height:34px}
@@ -201,17 +202,17 @@ section{position:relative}
 .page-tete.simple .wrap{grid-template-columns:1fr}
 @media (max-width:760px){.page-tete .wrap{grid-template-columns:1fr}.page-tete figure img{aspect-ratio:4/3;border-radius:0}}
 .modeles{margin-top:40px;border-top:1px solid rgba(23,33,32,.25)}
-.modele{display:grid;grid-template-columns:120px 1fr 1.3fr;gap:28px;align-items:center;padding:26px 0;border-bottom:1px solid rgba(23,33,32,.25)}
+.modele{display:grid;grid-template-columns:150px 1fr 1.3fr;gap:28px;align-items:center;padding:16px 0;border-bottom:1px solid rgba(23,33,32,.25)}
 .modele.photo{grid-template-columns:160px 1fr 1.3fr}
 .modele img{width:160px;height:160px;object-fit:cover}
 .modele h3{font-size:1.55rem}
 .modele p{color:var(--gris)}
 @media (max-width:760px){.modele,.modele.photo{grid-template-columns:84px 1fr;gap:6px 16px}.modele img{width:84px;height:84px}.modele>p{grid-column:2}.modele>.schema,.modele>img{grid-row:span 2}}
-.schema{width:110px;height:110px;color:var(--vert)}
+.schema{width:150px;height:150px;color:var(--vert)}
 @media (max-width:760px){.schema{width:84px;height:84px}}
 .schema .mur{stroke:var(--graphite);stroke-width:3}
 .schema .arc{stroke:var(--chene);stroke-width:1;stroke-dasharray:3 3;fill:none}
-.schema .vt{stroke:var(--vert);stroke-width:4;stroke-linecap:round}
+.schema .vt{stroke:var(--vert);stroke-width:5;stroke-linecap:round}
 .schema .vt{transition:transform 1.1s cubic-bezier(.6,.05,.2,1)}
 .modele:hover .schema .vt,.schema.joue .vt{transform:var(--fin)}
 .specs{margin-top:36px;border:1.5px solid var(--graphite)}
@@ -267,9 +268,9 @@ legend{font-weight:800;font-size:1.25rem;letter-spacing:-.01em;margin-bottom:12p
 @media (max-width:860px){.form-grille{grid-template-columns:1fr}.champs{grid-template-columns:1fr}}
 .plan-devis{position:sticky;top:120px;background:var(--vert);color:var(--platre);padding:28px 28px 22px}
 .plan-devis h2{font-size:1.4rem}
-.plan-devis svg{width:100%;height:auto;margin-top:16px}
+.plan-devis svg{width:100%;height:auto;margin-top:16px}#planD{transition:opacity .2s}
 .plan-devis .resume{margin-top:12px;font:400 .8rem/1.6 var(--m);color:rgba(238,241,239,.85)}
-@media (max-width:860px){.plan-devis{position:relative;top:0;order:-1}}
+@media (max-width:860px){.plan-devis{position:relative;top:0;order:-1;padding:18px;display:grid;grid-template-columns:120px 1fr;gap:4px 16px;align-items:center}.plan-devis h2{grid-column:2;font-size:1.15rem}.plan-devis #planD{grid-row:1/3;grid-column:1}.plan-devis svg{margin:0}.plan-devis .resume{grid-column:2;margin:0}}
 .etoiles{display:flex;gap:4px;flex-direction:row-reverse;justify-content:flex-end}
 .etoiles input{position:absolute;opacity:0}
 .etoiles label{font-size:0;width:34px;height:34px;cursor:pointer;background:currentColor;color:#c9d1ce;-webkit-mask:var(--et) center/contain no-repeat;mask:var(--et) center/contain no-repeat}
@@ -315,7 +316,7 @@ legend{font-weight:800;font-size:1.25rem;letter-spacing:-.01em;margin-bottom:12p
 .chat input{flex:1;border:0;padding:14px;background:#fff;min-width:0}
 .chat input:focus{outline:2px solid var(--chene);outline-offset:-2px}
 .chat form button{border:0;background:var(--graphite);color:var(--platre);padding:0 16px;font-weight:700;cursor:pointer}
-@media (max-width:520px){.conseil-btn{right:12px;bottom:12px;padding-right:14px}.conseil-btn small{display:none}.bulle{right:12px;bottom:76px}.chat{right:12px;bottom:12px;height:calc(100dvh - 90px)}}
+@media (max-width:520px){.conseil-btn{right:10px;bottom:10px;padding:6px 14px 6px 6px;gap:8px}.conseil-btn .ico{width:36px;height:36px}.conseil-btn small{display:none}.bulle{right:10px;bottom:62px;max-width:230px;font-size:.88rem}.chat{right:12px;bottom:12px;height:calc(100dvh - 90px)}}
 /* apparitions */
 .js .apparait{opacity:0;transform:translateY(18px);transition:opacity .7s,transform .7s cubic-bezier(.2,.7,.2,1)}
 .js .apparait.vu{opacity:1;transform:none}
@@ -863,9 +864,9 @@ const LANGS=['fr','en','es','de','it','pt'];
 const PIMG={'porte-entree':'porte-entree-maison',placard:'placard-dressing',portail:'portail',interieure:'interieure-coulissante',haussmann:'haussmann','porte-fenetre':'porte-fenetre'};
 const RENO={'porte-entree':'hero-porte-bleue',placard:'placard-renovation',portail:'bois-detail',interieure:'interieure-poignee',haussmann:'porte-pointes-diamant','porte-fenetre':'entree-massive'};
 const DUO={placard:['placard-bois','placard-chevrons'],interieure:['interieure-chambre','entree-massive'],'porte-fenetre':['bois-detail','planches']};
-DUO.interieure=['interieure-chambre','interieure-poignee'];RENO.interieure='planches';DUO['porte-fenetre']=null;
-const VIS={'porte-entree':[{i:'entree-pleine'},{i:'entree-semi-vitree'},{i:'entree-vitree'}],placard:[{s:'battante'},{s:'pliante'},{s:'coulissante'}],portail:[{s:'battant2'},{s:'coulissant'}],interieure:[{s:'battante'},{s:'coulissante'},{s:'pivotante'},{s:'pliante'}],haussmann:[{s:'el-droite'},{s:'el-arc'},{s:'coulissante'}],'porte-fenetre':[{s:'el-vitree'},{s:'el-soub'},{s:'battant2'}]};
-const GAL=[['hero-porte-bleue','porte-entree'],['porte-entree-maison','porte-entree'],['entree-massive','porte-entree'],['entree-pleine','porte-entree'],['entree-semi-vitree','porte-entree'],['entree-vitree','porte-entree'],['placard-dressing','placard'],['placard-bois','placard'],['placard-chevrons','placard'],['placard-renovation','placard'],['portail','portail'],['interieure-coulissante','interieure'],['interieure-chambre','interieure'],['interieure-poignee','interieure'],['haussmann','haussmann'],['porte-pointes-diamant','haussmann'],['porte-fenetre','porte-fenetre']];
+DUO.interieure=null;RENO.interieure='interieure-poignee';DUO['porte-fenetre']=null;
+const VIS={'porte-entree':[{i:'entree-pleine'},{i:'entree-semi-vitree'},{s:'el-vitree'}],placard:[{s:'battante'},{s:'pliante'},{s:'coulissante'}],portail:[{s:'battant2'},{s:'coulissant'}],interieure:[{s:'battante'},{s:'coulissante'},{s:'pivotante'},{s:'pliante'}],haussmann:[{s:'el-droite'},{s:'el-arc'},{s:'coulissante'}],'porte-fenetre':[{s:'el-vitree'},{s:'el-soub'},{s:'battant2'}]};
+const GAL=[['hero-porte-bleue','porte-entree'],['porte-entree-maison','porte-entree'],['entree-massive','porte-entree'],['entree-pleine','porte-entree'],['entree-semi-vitree','porte-entree'],['placard-dressing','placard'],['placard-bois','placard'],['placard-chevrons','placard'],['placard-renovation','placard'],['portail','portail'],['interieure-coulissante','interieure'],['haussmann','haussmann'],['porte-pointes-diamant','haussmann'],['porte-fenetre','porte-fenetre']];
 const RESEAU=[["Façade de magasin en alu à Paris","http://www.facade-magasin-aluminium.fr/"],["Menuisier 95","http://www.menuisier-95.fr/"],["Façade sur mesure en bois","http://www.facade-sur-mesure-bois.fr/"],["Façade en bois Versailles","http://www.facade-bois-versailles.fr/"],["Façade sur mesure","http://www.facade-sur-mesure.fr/"],["Meubles en bois sur mesure","http://www.meuble-bois-sur-mesure.fr/"],["Menuisier 94","http://www.menuisier-94.fr/"],["Escalier en bois sur mesure Paris","http://www.escalier-bois-sur-mesure-paris.fr/"],["Façade de magasin en bois Oise 60","http://www.facade-magasin-bois-oise-60.fr/"],["Devanture de magasin Paris","http://www.devanture-magasin-paris.fr/"],["Devanture de magasin en bois sur mesure Paris","http://www.devanture-bois-sur-mesure-paris.fr/"],["Façade de boutique en bois Paris","http://www.facade-boutique-bois-paris.fr/"],["Devanture de magasin 94","http://www.devanture-magasin-94.fr/"],["Boutique façadier en bois 92","http://www.boutique-facadier-bois-92.fr/"],["Devanture de boutique en bois 95","http://www.devanture-boutique-bois-95.fr/"],["Porte en bois sur mesure Paris","http://www.porte-bois-sur-mesure-paris.fr/"],["Menuisier 92","http://www.menuisier-92.fr/"],["Rénovation de vitrine et boutique","http://www.renovation-vitrine-boutique.fr/"],["Menuisier 93","http://www.menuisier-93.fr/"],["Menuisier 77","http://www.menuisier-77.fr/"],["Fabricant de vitrine et magasin","http://www.fabricant-vitrine-magasin.fr/"],["Menuisier 78","http://www.menuisier-78.fr/"],["Véranda en bois sur mesure","http://www.veranda-en-bois-sur-mesure.fr/"],["Rénovation escalier en bois","http://www.renovation-escalier-bois.fr/"],["Menuisier 91","http://www.menuisier-91.fr/"],["Dressing sur mesure","http://www.dressing-sur-mesure-paris.fr/"],["Porte cochère en bois","http://www.porte-cochere-bois.fr/"],["Menuiserie Paris 75","http://www.menuisier-paris-75.fr/"],["AMF Fenêtres","http://www.amf-fenetres.fr/"],["Volets en bois sur mesure","http://www.volet-bois-sur-mesure.fr/"]];
 let lg='fr';
 try{const q=new URLSearchParams(location.search).get('lang');const s=localStorage.getItem('amf-lang');lg=LANGS.includes(q)?q:(LANGS.includes(s)?s:'fr')}catch(e){}
@@ -893,7 +894,7 @@ function schema(k){
 
 /* la porte cotée */
 function porteCotee(){
- return '<figure class="plan" id="porteH"><span class="rappel">AMF · 75012</span><div class="baie" role="img" aria-label="'+esc(T().P['porte-entree'].t)+'"><img src="'+img('hero-porte-bleue')+'" alt="" fetchpriority="high"><div class="vantail" aria-hidden="true"><i></i><i></i><b></b></div></div><span class="cote cote-h"><span>'+U('heroH')+' · '+U('heroCote')+'</span></span><span class="cote cote-l"><span>'+U('heroL')+' · '+U('heroCote')+'</span></span></figure>';
+ return '<figure class="plan" id="porteH"><div class="baie" role="img" aria-label="'+esc(T().P['porte-entree'].t)+'"><img src="'+img('hero-porte-bleue')+'" alt="" fetchpriority="high"><div class="vantail" aria-hidden="true"><i></i><i></i><b></b></div></div><span class="cote cote-h"><span>'+U('heroH')+' · '+U('heroCote')+'</span></span><span class="cote cote-l"><span>'+U('heroL')+' · '+U('heroCote')+'</span></span></figure>';
 }
 function jouerPorte(){
  const p=$('#porteH');if(!p)return;
@@ -930,10 +931,10 @@ function accueil(){
  return '<section class="heros"><div class="wrap"><div><h1>'+u.heroT+'</h1><p class="lead">'+u.heroP+'</p><div class="actions"><a class="btn btn-chene" href="#/devis">'+u.heroCta+' '+fl+'</a><a class="btn btn-ligne" href="tel:+33184144517">01 84 14 45 17</a></div><div class="preuves mono">'+u.heroPreuves.map(p=>'<span>'+p+'</span>').join('')+'</div></div>'+porteCotee()+'</div></section>'
  +'<section class="bloc"><div class="wrap"><div class="intro apparait"><h2>'+u.introT+'</h2><div><p class="lead">'+u.introP+'</p></div></div>'+indexPortes()+'</div></section>'
  +'<section class="bloc etapes"><div class="wrap"><h2 class="apparait">'+u.etapesT+'</h2><div class="chaine apparait">'+u.etapes.map((e,i)=>'<div><span class="mono">'+['1/3','2/3','3/3'][i]+'</span><h3>'+e[0]+'</h3><p>'+e[1]+'</p></div>').join('')+'</div><p class="fin apparait">'+u.etapesFin+'</p><a class="lien" href="#/devis">'+u.heroCta+' '+fl+'</a></div></section>'
- +'<section class="bloc"><div class="wrap"><h2 class="apparait">'+u.cartoucheT+'</h2><div class="cartouche apparait"><div class="tetec mono"><span>'+u.cartoucheT+'</span><span>'+u.cartoucheRef+'</span></div>'+u.engagements.map((e,i)=>'<div class="c"><span class="mono">'+String.fromCharCode(65+i)+'</span>'+e+'</div>').join('')+'</div></div></section>'
+ +'<section class="bloc"><div class="wrap"><h2 class="apparait">'+u.cartoucheT+'</h2><div class="cartouche apparait"><div class="tetec mono"><span>'+u.cartoucheRef+'</span><span>'+u.heroPreuves[1]+'</span></div>'+u.engagements.map((e,i)=>'<div class="c">'+e+'</div>').join('')+'</div></div></section>'
  +'<section class="bloc avis"><div class="wrap"><h2 class="apparait">'+u.avisT+'</h2><div class="avis-grille">'+t.avis.map(a=>'<blockquote class="apparait"><p>« '+a[1]+' »</p><cite>'+a[0]+'</cite></blockquote>').join('')+'</div>'+(t.avisNote?'<p class="note-trad mono">'+t.avisNote+'</p>':'')+'<a class="lien" href="#/livre-dor">'+u.avisLien+' '+fl+'</a></div></section>'
  +'<section class="bloc bois"><div class="wrap"><h2 class="apparait">'+u.boisT+'</h2><p class="lead apparait">'+u.boisP+'</p><div class="essences apparait">'+u.bois.map(b=>'<div><h3>'+b[0]+'</h3><p>'+b[1]+'</p></div>').join('')+'</div></div></section>'
- +'<section class="bloc"><div class="wrap"><div class="entete-sec apparait"><h2>'+u.galT+'</h2><a class="lien" style="margin:0" href="#/realisations">'+u.galLien+' '+fl+'</a></div><div class="mosaique apparait">'+['haussmann','portail','placard-dressing','entree-semi-vitree','interieure-chambre'].map(n=>'<img src="'+img(n)+'" alt="" loading="lazy">').join('')+'</div></div></section>'
+ +'<section class="bloc"><div class="wrap"><div class="entete-sec apparait"><h2>'+u.galT+'</h2><a class="lien" style="margin:0" href="#/realisations">'+u.galLien+' '+fl+'</a></div><div class="mosaique apparait">'+['haussmann','portail','placard-dressing','entree-semi-vitree','placard-chevrons'].map(n=>'<img src="'+img(n)+'" alt="" loading="lazy">').join('')+'</div></div></section>'
  +appel();
 }
 function indexPortes(){
@@ -973,8 +974,8 @@ function devis(q){
  +'<fieldset><legend>'+u.dQuoi+'</legend><div class="choix">'+ORDRE.map(k=>'<label><input type="radio" name="type" value="'+k+'"'+(k===type?' checked':'')+'><span>'+T().P[k].t+'</span></label>').join('')+'</div></fieldset>'
  +'<fieldset><legend>'+u.dProjet+'</legend>'+radios('projet',u.projets,pj)+'</fieldset>'
  +'<fieldset><legend>'+u.dCotes+'</legend><div class="champs"><label class="champ">'+u.hauteur+'<input type="number" inputmode="numeric" min="20" max="600" name="h"></label><label class="champ">'+u.largeur+'<input type="number" inputmode="numeric" min="20" max="900" name="w"></label></div><label class="coche"><input type="checkbox" name="nsp"> '+u.nsp+'</label></fieldset>'
- +'<fieldset><legend>'+u.dOuv+'</legend>'+radios('ouv',u.ouvertures,4)+'</fieldset>'
- +'<fieldset><legend>'+u.dBois+'</legend>'+radios('bois',u.essences,4)+'</fieldset>'
+ +'<fieldset><legend>'+u.dOuv+'</legend>'+radios('ouv',u.ouvertures,-1)+'</fieldset>'
+ +'<fieldset><legend>'+u.dBois+'</legend>'+radios('bois',u.essences,-1)+'</fieldset>'
  +'<fieldset><legend>'+u.dMsg+'</legend><label class="champ large"><textarea name="msg" aria-label="'+esc(u.dMsg)+'"></textarea></label></fieldset>'
  +'<fieldset><legend>'+u.dVous+'</legend><div class="champs"><label class="champ">'+u.nom+'<input name="nom" autocomplete="name"></label><label class="champ">'+u.tel+'<input type="tel" name="tel" autocomplete="tel"></label><label class="champ">'+u.email+'<input type="email" name="email" autocomplete="email"></label><label class="champ">'+u.cp+'<input name="cp" autocomplete="postal-code" inputmode="numeric"></label></div></fieldset>'
  +'<button class="btn btn-chene" type="submit">'+u.envoyer+' '+fl+'</button><p class="msg" id="devisMsg" role="status"></p></form>'
@@ -999,7 +1000,7 @@ function nav(route){
 }
 function pied(){
  const u=T().ui;
- $('#pied').innerHTML='<div class="wrap"><div class="grille"><div><span class="logo-b"><img src="img/logo.png" alt="AMF Menuiserie" loading="lazy"></span><h3>'+u.coordT+'</h3><p>AMF - Menuiserie<br>3 bis rue Louis Braille<br>75012 Paris</p><p style="margin-top:10px"><a href="tel:+33184144517">01 84 14 45 17</a><br><a href="mailto:artisan.amf@gmail.com">artisan.amf@gmail.com</a></p></div><div><h3>'+u.horairesT+'</h3><p>'+u.horaires+'</p><p style="margin-top:8px">'+u.telJours+'</p><h3 style="margin-top:24px">'+u.devis+'</h3><p><a href="#/devis">'+u.heroCta+'</a></p></div><div><h3>'+u.prestations+'</h3><ul>'+ORDRE.map(k=>'<li><a href="#/'+k+'">'+T().P[k].t+'</a></li>').join('')+'<li><a href="#/realisations">'+u.realisations+'</a></li><li><a href="#/livre-dor">'+u.livre+'</a></li></ul></div><div><h3>'+u.reseauT+'</h3><ul class="reseau">'+RESEAU.map(r=>'<li><a href="'+r[1]+'" rel="noopener" target="_blank">'+r[0]+'</a></li>').join('')+'</ul></div></div><div class="bas"><span>© AMF Menuiserie · Paris 12e</span><span><a href="#/mentions">'+u.mentions+'</a> · <a href="#/plan">'+u.plan+'</a> · <a href="#top" id="haut">'+u.retour+'</a></span></div></div>';
+ $('#pied').innerHTML='<div class="wrap"><div class="grille"><div><span class="logo-b"><img src="img/logo.png" alt="AMF Menuiserie" loading="lazy"></span><h3>'+u.coordT+'</h3><p>AMF - Menuiserie<br>3 bis rue Louis Braille<br>75012 Paris</p><p style="margin-top:10px"><a href="tel:+33184144517">01 84 14 45 17</a><br><a href="mailto:artisan.amf@gmail.com">artisan.amf@gmail.com</a></p></div><div><h3>'+u.horairesT+'</h3><p>'+u.horaires+'</p><p style="margin-top:8px">'+u.telJours+'</p><h3 style="margin-top:24px">'+u.devis+'</h3><p><a href="#/devis">'+u.heroCta+'</a></p></div><div><h3>'+u.prestations+'</h3><ul>'+ORDRE.map(k=>'<li><a href="#/'+k+'">'+T().P[k].t+'</a></li>').join('')+'<li><a href="#/realisations">'+u.realisations+'</a></li><li><a href="#/livre-dor">'+u.livre+'</a></li></ul></div><div><h3>'+u.reseauT+'</h3><details><summary>'+u.autresSites+' ('+RESEAU.length+')</summary><ul class="reseau">'+RESEAU.map(r=>'<li><a href="'+r[1]+'" rel="noopener" target="_blank">'+r[0]+'</a></li>').join('')+'</ul></details></div></div><div class="bas"><span>© AMF Menuiserie · Paris 12e</span><span><a href="#/mentions">'+u.mentions+'</a> · <a href="#/plan">'+u.plan+'</a> · <a href="#top" id="haut">'+u.retour+'</a></span></div></div>';
  $('#haut').onclick=e=>{e.preventDefault();scrollTo({top:0,behavior:'smooth'})};
 }
 
@@ -1018,11 +1019,11 @@ function brancher(r,q){
  const f=$('#filtres');if(f)f.onclick=e=>{const b=e.target.closest('button');if(!b)return;filtre=b.dataset.f;const y=scrollY;$('#contenu').innerHTML=realisations();brancher('realisations');observer();scrollTo(0,y)};
  const g=$('#galerie');if(g)g.onclick=e=>{const fi=e.target.closest('figure');if(!fi)return;$('#boiteImg').src=fi.dataset.src;$('#boiteImg').alt=fi.querySelector('img').alt;$('#boite').classList.add('on');$('#boiteX').focus()};
  const fd=$('#formDevis');if(fd){
-  const maj=()=>{const d=new FormData(fd);const nsp=d.get('nsp');const h=nsp?0:+d.get('h')||0,w=nsp?0:+d.get('w')||0;const ty=d.get('type');$('#planD').innerHTML=planDevis(ty,h,w);const u=T().ui;$('#resume').textContent=T().P[ty].t+' · '+u.projets[+d.get('projet')]+' · '+u.ouvertures[+d.get('ouv')]+' · '+u.essences[+d.get('bois')]};
+  const maj=()=>{const d=new FormData(fd);const nsp=d.get('nsp');const h=nsp?0:+d.get('h')||0,w=nsp?0:+d.get('w')||0;const ty=d.get('type');const pd=$('#planD');pd.style.opacity=.35;pd.innerHTML=planDevis(ty,h,w);requestAnimationFrame(()=>pd.style.opacity=1);const u=T().ui;$('#resume').textContent=[T().P[ty].t,u.projets[+d.get('projet')],d.get('ouv')!=null?u.ouvertures[+d.get('ouv')]:'',d.get('bois')!=null?u.essences[+d.get('bois')]:''].filter(Boolean).join(' · ')};
   fd.addEventListener('input',maj);fd.addEventListener('change',maj);maj();
   fd.onsubmit=e=>{e.preventDefault();const d=new FormData(fd),u=T().ui,m=$('#devisMsg');
    if(!d.get('nom').trim()||!(d.get('tel').trim()||d.get('email').trim())){m.textContent=u.requis;m.className='msg on err';return}
-   const ty=T().P[d.get('type')].t;const corps=[ty,u.projets[+d.get('projet')],(d.get('nsp')?u.nsp:(u.hauteur+' : '+(d.get('h')||'—')+' / '+u.largeur+' : '+(d.get('w')||'—'))),u.dOuv+' : '+u.ouvertures[+d.get('ouv')],u.dBois+' : '+u.essences[+d.get('bois')],'',d.get('msg'),'',d.get('nom')+' · '+d.get('tel')+' · '+d.get('email')+' · '+d.get('cp')].join('\n');
+   const ty=T().P[d.get('type')].t;const corps=[ty,u.projets[+d.get('projet')],(d.get('nsp')?u.nsp:(u.hauteur+' : '+(d.get('h')||'—')+' / '+u.largeur+' : '+(d.get('w')||'—'))),u.dOuv+' : '+(d.get('ouv')!=null?u.ouvertures[+d.get('ouv')]:'—'),u.dBois+' : '+(d.get('bois')!=null?u.essences[+d.get('bois')]:'—'),'',d.get('msg'),'',d.get('nom')+' · '+d.get('tel')+' · '+d.get('email')+' · '+d.get('cp')].join('\n');
    location.href='mailto:artisan.amf@gmail.com?subject='+encodeURIComponent(u.devis+' — '+ty)+'&body='+encodeURIComponent(corps);m.textContent=u.devisMerci;m.className='msg on'};
  }
  const fa=$('#formAvis');if(fa)fa.onsubmit=e=>{e.preventDefault();const d=new FormData(fa),u=T().ui;location.href='mailto:artisan.amf@gmail.com?subject='+encodeURIComponent(u.livre)+'&body='+encodeURIComponent((d.get('note')||'–')+'/5\n'+d.get('avis')+'\n\n'+d.get('nom')+' · '+d.get('email'));const m=$('#avisMsg');m.textContent=u.avisMerci;m.className='msg on'};
@@ -1059,13 +1060,13 @@ const K=[
 ['fsc',['fsc','pefc','ecolog','foret','sustainab','forest','sostenib','bosque','nachhaltig','wald','foresta','sustentav','floresta','environnement']],
 ['garantie',['garanti','decennale','assurance','warrant','guarantee','gewahr','garanzia']],
 ['france',['en france','francais','fabrique','made in','origine','fabricad','hergestellt','frankreich','fatto in','prodott','franca']],
+['bois',['bois','essence','chene','sapin',' pin ','exotiq','iroko','teck','noyer','merisier','wood','oak','pine','teak','walnut','madera','roble','pino','holz','eiche','kiefer','legno','rovere','noce','madeira','carvalho','nogueira']],
 ['haussmann',['haussman','moulur','parisien','molding','moulding','moldura','zierleist','modanatur','tableaux']],
 ['placard',['placard','dressing','rangement','cupboard','wardrobe','closet','armario','schrank','armadio','roupeiro']],
 ['portail',['portail','gate','porton',' tor ','tores','cancell','portao','motoris','motoriz','antrieb']],
 ['fenetre',['porte-fenetre','porte fenetre','balcon','terrasse','french window','patio','puertaventana','balkon','portafinestra','sacada','terraco','terrazza','terraza']],
 ['ouverture',['coulissant','galandage','pivotant','pliant','battant','accordeon','ouverture','sliding','pocket','pivot','folding','hinged','opening','corredera','plegable','batiente','apertura','schiebe','falttur','drehtur','offnung','scorrevol','pieghevol','battente','correr','dobravel','batente','soffietto','abertura']],
 ['entree',["porte d'entree",'porte dentree',' entree','front door','entrance','puerta de entrada','haustur','eingang','ingresso','porta de entrada']],
-['bois',['bois','essence','chene','sapin',' pin ','exotiq','iroko','teck','noyer','merisier','wood','oak','pine','teak','walnut','madera','roble','pino','holz','eiche','kiefer','legno','rovere','noce','madeira','carvalho','nogueira']],
 ['renovation',['renov','repar','restaur','abime','ancien','vieille','repair','damaged','reparar','renovieren','reparieren','riparar','rovinat','vecchia','reformar','velha','danific']],
 ['zone',['ou etes','zone','deplac','intervenez','banlieue','ile-de-france','ile de france','versailles','oise','where','area','do you cover','donde','zona','gebiet','dove','onde','region',' 92',' 93',' 94',' 95',' 77',' 78',' 91']],
 ['contact',['horaire','ouvert','joindre','telephone','appeler','mail','adresse','contact','rendez','hours','phone','call','address','horario','telefono','llamar','direccion','offnungszeit','telefon','anrufen','orari','chiamare','indirizzo','telefone','ligar','morada','endereco']],
@@ -1095,7 +1096,7 @@ $('#chatForm').onsubmit=e=>{e.preventDefault();const v=$('#chatIn').value.trim()
 $('#bulleX').onclick=()=>$('#bulle').classList.remove('on');
 $('#bulle').addEventListener('click',e=>{if(e.target.id!=='bulleX')ouvrirChat()});
 let vu=false;try{vu=sessionStorage.getItem('amf-bulle')}catch(e){}
-if(!vu)setTimeout(()=>{if(!$('#chat').classList.contains('on')){$('#bulle').classList.add('on');try{sessionStorage.setItem('amf-bulle','1')}catch(e){}}},4000);
+if(!vu)setTimeout(()=>{if(!$('#chat').classList.contains('on')&&!location.hash.startsWith('#/devis')){$('#bulle').classList.add('on');try{sessionStorage.setItem('amf-bulle','1')}catch(e){}}},4000);
 $('#boiteX').onclick=()=>$('#boite').classList.remove('on');$('#boite').onclick=e=>{if(e.target.id==='boite')$('#boite').classList.remove('on')};
 document.addEventListener('keydown',e=>{if(e.key==='Escape'){$('#boite').classList.remove('on');if($('#chat').classList.contains('on'))fermerChat()}});
 addEventListener('hashchange',()=>{if(location.hash.startsWith('#conseil'))return;route();scrollTo(0,0)});
