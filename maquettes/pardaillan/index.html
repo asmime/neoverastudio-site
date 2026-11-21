@@ -33,7 +33,7 @@ a:hover{color:var(--ambre-f)}
 :focus-visible{outline:2px solid var(--ambre);outline-offset:3px;border-radius:2px}
 html{scrollbar-color:var(--lac2) var(--pierre)}
 ::-webkit-scrollbar{width:10px;height:8px}::-webkit-scrollbar-track{background:var(--pierre)}::-webkit-scrollbar-thumb{background:var(--lac2);border-radius:6px}
-h1,h2,h3{font-family:var(--serif);font-weight:500;line-height:1.08;letter-spacing:-.01em;margin:0 0 .5em;text-wrap:balance}
+h1,h2,h3{overflow-wrap:break-word;hyphens:auto;font-family:var(--serif);font-weight:500;line-height:1.08;letter-spacing:-.01em;margin:0 0 .5em;text-wrap:balance}
 h2{font-size:clamp(2rem,4.2vw,3.4rem)}
 h3{font-size:clamp(1.35rem,2vw,1.7rem)}
 p{margin:0 0 1em;max-width:66ch;text-wrap:pretty}
@@ -75,7 +75,7 @@ nav.menu::after{content:"";position:absolute;right:0;top:0;bottom:0;width:42px;b
 .hero .photo::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(10,25,30,.05) 40%,rgba(10,25,30,.55))}
 .hero .titre{position:absolute;left:0;right:0;bottom:0;z-index:2}
 .hero h1{font-size:clamp(3rem,11vw,6rem);font-weight:500;margin:0;line-height:.86;letter-spacing:-.02em;padding-bottom:.02em}
-.eau{position:relative;overflow:hidden;height:clamp(3rem,9vw,5.6rem);margin-top:-2px}
+.eau{position:relative;overflow:hidden;background:repeating-linear-gradient(180deg,transparent 0 9px,rgba(255,255,255,.045) 9px 10px);height:clamp(3rem,9vw,5.6rem);margin-top:-2px}
 .reflet{font:500 clamp(3rem,11vw,6rem)/.86 var(--serif);letter-spacing:-.02em;transform:scaleY(-1);transform-origin:50% 50%;margin:0;color:#fff;opacity:.25;filter:url(#onde);white-space:nowrap;-webkit-mask-image:linear-gradient(180deg,#000 0%,transparent 75%);mask-image:linear-gradient(180deg,#000 0%,transparent 75%);user-select:none}
 .hero .bas{display:grid;grid-template-columns:1.1fr 1fr;gap:40px;align-items:start;padding:8px 0 56px}
 .hero .bas p{font-size:1.2rem;color:#E8F0F1;max-width:34ch}
@@ -274,6 +274,7 @@ footer .logo b{color:#fff}
  .carte{grid-template-columns:1fr}
  .form{grid-template-columns:1fr}
  .barre{display:flex}
+ .hero .actions{display:none}
  .cons-btn{top:auto;right:auto;bottom:78px;left:12px;padding:8px 14px 8px 8px}
  .mg3{grid-template-columns:1fr}
  .cons-btn .av{width:36px;height:36px}
@@ -300,7 +301,7 @@ footer .logo b{color:#fff}
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
  <filter id="onde" x="-5%" y="-20%" width="110%" height="140%">
   <feTurbulence id="ondeT" type="fractalNoise" baseFrequency="0.006 0.09" numOctaves="2" seed="7"/>
-  <feDisplacementMap in="SourceGraphic" scale="9" xChannelSelector="R" yChannelSelector="G"/>
+  <feDisplacementMap in="SourceGraphic" scale="12" xChannelSelector="R" yChannelSelector="G"/>
  </filter>
  <symbol id="i-tel" viewBox="0 0 24 24"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></symbol>
  <symbol id="i-globe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></symbol>
@@ -672,6 +673,7 @@ const TEL='<a href="tel:+33562287259">05 62 28 72 59</a>';
 const MAIL='<a href="mailto:restaurantlepardaillan@orange.fr">restaurantlepardaillan@orange.fr</a>';
 const L=(r,t)=>`<a href="#/${r}" data-go>${t}</a>`;
 const INTENTS=[
+ ["ardoise",/menu du jour|ardoise|plat du jour|daily|today.s menu|del d[íi]a|tagesmen|tagesgericht|del giorno|dagmenu|dagschotel/i],
  ["inconnu",/parking|garer|stationn|parkplatz|aparca|parcheggi|parkeer|check.?in|check.?out|heure d.arriv|arrival time|hora de llegada|anreisezeit|orario di arrivo|aankomsttijd|ascenseur|lift|elevator|ascensor|aufzug|ascensore|\bspa\b|sauna|hammam|borne|recharge|charging|ladestation|ricarica|laadpaal|navette|shuttle/i],
  ["pmr",/pmr|handicap|fauteuil|wheelchair|mobilit|silla de ruedas|rollstuhl|barrierefrei|carrozzina|rolstoel|accessib|toegankelijk/i],
  ["animal",/chien|chat|animal|animaux|dog|cat\b|\bpets?\b|perro|gato|mascota|hund|katze|haustier|cane|gatto|hond|kat\b|huisdier/i],
@@ -690,10 +692,11 @@ const INTENTS=[
  ["carte",/carte|menu|men[úu]|plat|dish|gericht|piatt|gerecht|manger|eat|comer|essen|mangiare|eten|foie|magret|canard|duck|dessert|croustade|cuisine|food|comida|k[üu]che|cucina|keuken/i],
  ["wifi",/wifi|wi-fi|internet|clim|air cond|aire acond|klima|aria cond|airco|t[ée]l[ée]|tv/i],
  ["contact",/adresse|address|(^|\s)où(\s|$)|where|venir|direcci|indirizzo|adres|t[ée]l[ée]phone|phone|appeler|call|llamar|anrufen|chiamare|bellen|contact|kontakt|contatt|mail/i],
- ["prix",/prix|tarif|price|cost|combien|how much|precio|cu[áa]nto|preis|kost|prezzo|quanto|prijs|hoeveel/i],
+ ["prix",/prix|tarif|pas cher|cheap|barat|g[üu]nstig|econom|goedkoop|price|cost|combien|how much|precio|cu[áa]nto|preis|kost|prezzo|quanto|prijs|hoeveel/i],
  ["chambre",/chambre|room|habitaci|zimmer|camera|kamer|dormir|nuit|night|noche|nacht|notte|sleep|slapen|schlafen|r[ée]serv|book|buchen|prenot|boeken|\d+\s*(pers|people|personas|personen|persone|adult|gast|guest)|couple|pareja|paar|coppia|stel|studio|appart/i]
 ];
 const A={
+ardoise:{fr:`L'ardoise du jour change chaque jour : je ne peux pas vous dire ce qu'elle propose aujourd'hui. La maison vous la donne au ${TEL}. En attendant, ${L('restaurant','la carte')} est en ligne.`,en:`Today's slate changes every day, so I can't tell you what's on it today. The restaurant will tell you on ${TEL}. Meanwhile, ${L('restaurant','the à la carte menu')} is online.`,es:`La pizarra del día cambia cada día: no puedo decirle qué hay hoy. La casa se lo dice en el ${TEL}. Mientras tanto, ${L('restaurant','la carta')} está en línea.`,de:`Die Tagestafel wechselt täglich, deshalb kann ich Ihnen das heutige Angebot nicht nennen. Das Haus sagt es Ihnen unter ${TEL}. Die ${L('restaurant','Speisekarte')} finden Sie online.`,it:`La lavagna del giorno cambia ogni giorno: non posso dirvi cosa propone oggi. La casa ve lo dice al ${TEL}. Intanto ${L('restaurant','la carta')} è online.`,nl:`Het dagbord wisselt elke dag, dus wat er vandaag op staat weet ik niet. Het restaurant vertelt het u via ${TEL}. Intussen staat ${L('restaurant','de kaart')} online.`},
  inconnu:{fr:`Je n'ai pas cette information, et je préfère ne pas vous répondre au hasard. La maison vous renseignera au ${TEL} ou par e-mail : ${MAIL}.`,en:`I don't have that information and would rather not guess. The hotel will help you on ${TEL} or by email: ${MAIL}.`,es:`No tengo esa información y prefiero no responder al azar. La casa le informará en el ${TEL} o por correo: ${MAIL}.`,de:`Diese Information habe ich nicht, und raten möchte ich nicht. Das Haus hilft Ihnen gern unter ${TEL} oder per E-Mail: ${MAIL}.`,it:`Non ho questa informazione e preferisco non rispondere a caso. La casa vi risponderà al ${TEL} o via e-mail: ${MAIL}.`,nl:`Die informatie heb ik niet, en ik gok liever niet. Het hotel helpt u via ${TEL} of per e-mail: ${MAIL}.`},
  pmr:{fr:`Bonne nouvelle : une chambre en rez-de-chaussée est accessible aux personnes à mobilité réduite, et le ${L('hotel','studio PMR de 40 m²')} est de plain-pied, avec douche sans marche et véranda privative (dès 109 € la nuit).`,en:`Good news: a ground-floor room is accessible to guests with reduced mobility, and the ${L('hotel','40 m² accessible studio')} is on one level, with a step-free shower and private veranda (from €109 a night).`,es:`Buena noticia: una habitación en planta baja es accesible para personas con movilidad reducida, y el ${L('hotel','estudio adaptado de 40 m²')} está a ras de suelo, con ducha sin escalón y veranda privada (desde 109 € la noche).`,de:`Gute Nachricht: Ein Zimmer im Erdgeschoss ist barrierefrei, und das ${L('hotel','barrierefreie Studio mit 40 m²')} ist ebenerdig, mit stufenloser Dusche und eigener Veranda (ab 109 € pro Nacht).`,it:`Buona notizia: una camera al piano terra è accessibile alle persone a mobilità ridotta, e lo ${L('hotel','studio accessibile di 40 m²')} è tutto su un livello, con doccia senza gradino e veranda privata (da 109 € a notte).`,nl:`Goed nieuws: een kamer op de begane grond is toegankelijk voor gasten met beperkte mobiliteit, en de ${L('hotel','toegankelijke studio van 40 m²')} is gelijkvloers, met drempelloze douche en eigen serre (vanaf € 109 per nacht).`},
  animal:{fr:`Vos animaux sont les bienvenus, avec un supplément de 9 € par jour. Et la voie verte, juste à côté, fait de belles promenades.`,en:`Your pets are welcome, with a supplement of €9 per day. And the greenway right nearby makes for lovely walks.`,es:`Sus mascotas son bienvenidas, con un suplemento de 9 € por día. Y la vía verde, muy cerca, es ideal para pasear.`,de:`Ihre Tiere sind willkommen, gegen einen Aufpreis von 9 € pro Tag. Und der Grüne Weg gleich nebenan lädt zu schönen Spaziergängen ein.`,it:`I vostri animali sono i benvenuti, con un supplemento di 9 € al giorno. E la via verde, lì accanto, è perfetta per le passeggiate.`,nl:`Uw huisdieren zijn welkom, met een toeslag van € 9 per dag. En de groene route vlakbij is ideaal om te wandelen.`},
@@ -720,6 +723,8 @@ const A={
 };
 function repondre(q,lang){
  const s=q.toLowerCase();
+ if(/(\b(2[5-9]|[3-9]\d|1\d\d)\b)/.test(s)&&/menu|repas|pers|people|personas|personen|persone|guests|group|groupe/.test(s))return A.groupe[lang];
+ if(/pas cher|cheap|barat|g[üu]nstig|econom|goedkoop/.test(s))return A.prix[lang];
  const ordre=(/chambre|room|habitaci|zimmer|\bcamera|kamer|dormir|schlafen|slapen|sleep/.test(s)&&/\d|trois|three|tres|drei|\btre\b|drie|quatre|four|cuatro|vier|quattro|famil|enfant|kid|child|ni[ñn]o|kind|bambin|couple|deux|two|dos|zwei|due|twee/.test(s))?[INTENTS.find(x=>x[0]==='chambre')]:[];
  for(const [k,re] of ordre.concat(INTENTS)){ if(re.test(s)){
    if(k==="chambre"){const m=s.match(/(\d+)|\b(trois|three|tres|drei|tre|drie)\b|\b(quatre|four|cuatro|vier|quattro|cinq|five|six)\b/); if(m){const n=m[1]?+m[1]:(m[2]?3:4); if(n>=4)return A.chambre4[lang]; if(n===3)return A.chambre3[lang];} if(/famil|enfant|kid|child|ni[ñn]o|kind|bambin/.test(s))return A.chambre3[lang]; return A.chambre[lang];}
