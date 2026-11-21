@@ -1935,7 +1935,7 @@ function geste(){
  if(gDone)return;gDone=true;
  $$('.tl',p).forEach(l=>{let n=1000;try{n=l.getTotalLength()}catch(e){}l.style.setProperty('--len',n);});
  p.classList.add('arm');
- requestAnimationFrame(()=>requestAnimationFrame(()=>{p.classList.add('go');setTimeout(()=>p.classList.add('done'),3600);}));
+ void p.offsetWidth;setTimeout(()=>{p.classList.add('go');setTimeout(()=>p.classList.add('done'),3600);},80);
 }
 
 /* conseiller ES Conseil */
