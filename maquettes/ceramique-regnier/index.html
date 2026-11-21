@@ -46,18 +46,18 @@ p{margin:0 0 1em;max-width:68ch;text-wrap:pretty}
 .btn-ligne{border-color:currentColor;color:inherit;background:transparent}
 .btn-ligne:hover{background:rgba(255,255,255,.08)}
 .btn[disabled]{opacity:.45;cursor:not-allowed}
-.lien{font-weight:600;color:var(--manganese);text-decoration:none;border-bottom:1.5px solid var(--laiton);padding-bottom:2px}
+.lien{display:inline-block;padding-block:10px 4px;font-weight:600;color:var(--manganese);text-decoration:none;border-bottom:1.5px solid var(--laiton);padding-bottom:2px}
 .lien:hover{color:var(--manganese-f);border-color:var(--manganese)}
 .lien:after{content:" →"}
 
 /* EN-TÊTE */
-.entete{position:sticky;top:0;z-index:50;background:rgba(243,243,238,.96);backdrop-filter:saturate(1.2) blur(6px);border-bottom:1px solid var(--trait)}
+.entete{position:sticky;top:0;z-index:50;background:var(--engobe);border-bottom:1px solid var(--trait)}
 .entete .l1{display:flex;align-items:center;gap:18px;padding:10px 0}
 .marque{display:flex;flex-direction:column;text-decoration:none;color:var(--vert);line-height:1;margin-right:auto}
 .marque b{font:400 1.75rem/1 "Gloock",serif;letter-spacing:.005em}
 .marque small{font:600 .68rem/1.2 "Hanken Grotesk",sans-serif;letter-spacing:.16em;text-transform:uppercase;color:var(--gris);margin-top:5px}
 .nav{display:flex;gap:2px;align-items:center}
-.nav a{padding:.55em .7em;font-weight:560;font-size:.95rem;color:var(--encre);text-decoration:none;border-radius:var(--r);white-space:nowrap}
+.nav a{padding:.75em .7em;min-height:44px;display:inline-flex;align-items:center;font-weight:560;font-size:.95rem;color:var(--encre);text-decoration:none;border-radius:var(--r);white-space:nowrap}
 .nav a:hover{background:var(--engobe-2)}
 .nav a[aria-current=page]{color:var(--manganese);box-shadow:inset 0 -2px 0 var(--laiton)}
 .outils{display:flex;align-items:center;gap:10px}
@@ -80,14 +80,14 @@ p{margin:0 0 1em;max-width:68ch;text-wrap:pretty}
 .vue{display:none}.vue.on{display:block;animation:entree .5s var(--ease)}
 @keyframes entree{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
 section{padding:clamp(56px,8vw,110px) 0}
-.sombre{background:var(--vert);color:#EEF1EC}
+.sombre{background:#3B2232;color:#F1E9ED}
 .sombre h2,.sombre h3{color:#fff}
 .sombre a{color:var(--laiton-c)}
 .sombre .lien{color:#fff;border-color:var(--laiton-c)}
 .manga{background:var(--manganese);color:#F4ECF0}
 .manga h2{color:#fff}
 .intro{font-size:clamp(1.08rem,1.5vw,1.25rem);color:var(--gris)}
-.sombre .intro{color:#C9D6CE}
+.sombre .intro{color:#DCCBD4}
 
 /* HÉROS */
 .heros{position:relative;min-height:min(92vh,880px);display:grid;align-items:end;color:#fff;overflow:hidden;padding:0}
@@ -107,7 +107,7 @@ section{padding:clamp(56px,8vw,110px) 0}
 .poncif{background:var(--engobe);position:relative}
 .poncif .grille{display:grid;grid-template-columns:1fr 1fr;gap:clamp(30px,6vw,90px);align-items:start}
 .poncif .scene{position:sticky;top:150px}
-.carreau{width:min(100%,470px);aspect-ratio:1;margin-inline:auto;filter:drop-shadow(0 22px 30px rgba(22,58,46,.22))}
+.carreau{width:min(100%,470px);aspect-ratio:1;margin-inline:auto}
 .carreau svg{width:100%;height:100%;display:block}
 .carreau .contour-pts{fill:none;stroke:var(--charbon);stroke-width:2.6;stroke-linecap:round;stroke-dasharray:0 7}
 .carreau .trait{fill:none;stroke:var(--manganese-f);stroke-width:2.4;stroke-linecap:round;stroke-linejoin:round}
@@ -161,14 +161,15 @@ section{padding:clamp(56px,8vw,110px) 0}
 .duo figure img{width:100%;border-radius:var(--r);aspect-ratio:4/5;object-fit:cover}
 .duo figure.paysage img{aspect-ratio:4/3}
 @media (max-width:860px){.duo{grid-template-columns:1fr}.duo.inv>:first-child{order:0}}
-.familles{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:34px}
+.familles{display:grid;grid-template-columns:repeat(5,1fr);gap:16px;margin-top:34px}
 .famille{position:relative;display:block;aspect-ratio:3/4;border-radius:var(--r);overflow:hidden;color:#fff;text-decoration:none}
 .famille img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .7s var(--ease)}
 .famille:hover img{transform:scale(1.05)}
-.famille:after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(14,36,28,.85),rgba(14,36,28,0) 60%)}
+.famille:after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(30,16,25,.85),rgba(30,16,25,0) 55%)}
+.famille:first-child{grid-column:span 2;aspect-ratio:auto}
 .famille span{position:absolute;left:16px;right:16px;bottom:14px;z-index:2;font:400 1.4rem/1.1 "Gloock",serif}
 .famille small{display:block;font:500 .85rem/1.3 "Hanken Grotesk",sans-serif;color:#D6E2DA;margin-top:4px}
-@media (max-width:900px){.familles{grid-template-columns:1fr 1fr}}
+@media (max-width:900px){.familles{grid-template-columns:1fr 1fr}.famille:first-child{aspect-ratio:16/10}}
 
 /* FABRICATION */
 .dix{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:26px 22px;counter-reset:e}
@@ -177,7 +178,7 @@ section{padding:clamp(56px,8vw,110px) 0}
 .dix h3{margin:6px 0 0;font-size:1.3rem}
 .dix h3 em{font-style:normal;color:var(--laiton)}
 .dix p{font-size:.95rem;color:var(--gris);margin:0}
-.sombre .dix p{color:#C3D1C8}
+.sombre .dix p{color:#D8C7D0}
 .qui{font-size:.82rem;font-weight:650;letter-spacing:.06em;text-transform:uppercase;color:var(--vert-3)}
 .sombre .qui{color:var(--laiton-c)}
 
@@ -220,7 +221,7 @@ form.f input:user-invalid{border-color:#A23B3B}
 form.f .cases{display:flex;flex-wrap:wrap;gap:14px;font-weight:500}
 form.f .cases label,form.f .rgpd{flex-direction:row;align-items:flex-start;gap:10px;font-weight:500}
 form.f input[type=checkbox],form.f input[type=radio]{min-height:auto;width:20px;height:20px;accent-color:var(--vert);margin-top:2px}
-.ok{background:var(--vert-p);border-left:3px solid var(--vert);padding:14px 16px;border-radius:var(--r);margin-top:14px}
+.ok{background:var(--vert-p);padding:14px 16px;border-radius:var(--r);margin-top:14px}
 @media (max-width:620px){form.f{grid-template-columns:1fr}}
 
 /* INFOS / FAQ */
@@ -231,7 +232,7 @@ details summary{cursor:pointer;font-weight:650;list-style:none;display:flex;just
 details summary:after{content:"+";font:400 1.4rem/1 "Gloock",serif;color:var(--laiton)}
 details[open] summary:after{content:"–"}
 details p{margin:10px 0 0;color:var(--gris)}
-.sombre details{border-color:rgba(255,255,255,.18)}.sombre details p{color:#C3D1C8}
+.sombre details{border-color:rgba(255,255,255,.18)}.sombre details p{color:#D8C7D0}
 .trois{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
 .trois article{border-top:2px solid var(--laiton);padding-top:16px}
 @media (max-width:860px){.trois{grid-template-columns:1fr}}
@@ -301,8 +302,13 @@ footer ul{list-style:none;padding:0;margin:0;display:grid;gap:6px}
  .poncif .carreau{width:min(52vw,210px)}
  .poncif .legende{font-size:.72rem;margin-top:6px}
 }
-.co-sel{font:600 1rem "Hanken Grotesk",sans-serif;min-height:48px;padding:.6em .9em;border-radius:var(--r);border:1.5px solid rgba(255,255,255,.4);background:var(--vert-2);color:#fff;width:min(100%,360px)}
+.co-sel{font:600 1rem "Hanken Grotesk",sans-serif;min-height:48px;padding:.6em .9em;border-radius:var(--r);border:1.5px solid rgba(255,255,255,.4);background:rgba(255,255,255,.08);color:#fff;width:min(100%,360px)}
 .co-sel option{color:var(--encre);background:#fff}
+
+.modele .type{order:3}
+.sel-btn .n:empty,.sel-btn .n[data-zero]{display:none}
+@media (max-width:860px){.poncif .scene{position:relative;top:0}.etapes-p li{min-height:auto;padding:22px 0;opacity:1}.cons-invite{display:none!important}}
+body{padding-bottom:84px}
 </style>
 </head>
 <body>
@@ -364,7 +370,7 @@ footer ul{list-style:none;padding:0;margin:0;display:grid;gap:6px}
  <section>
   <div class="wrap duo">
    <figure class="apparait"><img loading="lazy" src="img/amb1.jpg" alt="" data-alt="ch_t"></figure>
-   <div class="apparait"><h2 data-t="ch_t"></h2><p data-t="ch_p"></p><p data-t="ch_p2"></p><p><a class="lien" href="#atelier" data-t="ch_b"></a></p></div>
+   <div class="apparait"><h2 data-t="ch_t"></h2><p data-t="ch_p"></p><p><a class="lien" href="#atelier" data-t="ch_b"></a></p></div>
   </div>
  </section>
 
@@ -672,7 +678,7 @@ const T={};
 T.fr={
 n_mod:"Modèles",n_cui:"Espace cuisine",n_sm:"Sur mesure",n_car:"Carrelage",n_at:"L’atelier",n_hist:"Histoire",n_ins:"Installation",n_real:"Réalisations",n_act:"Actualités",n_con:"Contact",n_cons:"Régnier Conseil",n_sel:"Ma sélection",n_cat:"Catalogue",sous_marque:"Atelier Céramique · Desvres",
 h_t:"Le feu, habillé de faïence peinte à la main.",h_p:"Poêles à bois et à granulés façonnés, peints et cuits dans notre atelier de Desvres depuis 1989. Chaque pièce est numérotée et signée par son décorateur.",h_b1:"Voir les 32 modèles",h_b2:"Recevoir le catalogue",h_pr1:"Entreprise du Patrimoine Vivant",h_pr2:"Fabriqué à Desvres (62)",h_pr3:"Posé par nos équipes, en France et en Belgique",
-p_t:"Du poncif au pinceau",p_i:"Le décor d’un carreau se transmet comme autrefois. Faites défiler : il naît sous vos yeux.",p1t:"Le poncif",p1:"Une feuille de calque percée de petits trous suit le contour du décor.",p2t:"Le charbon",p2:"On tamponne une bourse de charbon de bois : le dessin passe en pointillés sur la pièce.",p3t:"Le pinceau",p3:"Le décorateur trace les contours, puis pose les couleurs, à main levée.",p4t:"Le feu",p4:"Une nuit au four, jusqu’à 1 200 °C. L’émail se vitrifie, les couleurs s’éveillent.",p_cap:"Esquisse d’illustration. Les vrais décors se choisissent sur échantillons, au showroom.",p_cta:"Les 10 étapes de fabrication",
+p_t:"Du poncif au pinceau",p_i:"Le décor d’un carreau se transmet comme autrefois : du papier percé au pinceau, puis au feu.",p1t:"Le poncif",p1:"Une feuille de calque percée de petits trous suit le contour du décor.",p2t:"Le charbon",p2:"On tamponne une bourse de charbon de bois : le dessin passe en pointillés sur la pièce.",p3t:"Le pinceau",p3:"Le décorateur trace les contours, puis pose les couleurs, à main levée.",p4t:"Le feu",p4:"Une nuit au four, jusqu’à 1 200 °C. L’émail se vitrifie, les couleurs s’éveillent.",p_cap:"Esquisse d’illustration. Les vrais décors se choisissent sur échantillons, au showroom.",p_cta:"Les 10 étapes de fabrication",
 fa_t:"Choisissez votre feu",fa_i:"Bois, granulés, cuisine ou cheminée existante : tout est fabriqué ici, à la commande.",fam1:"Poêles à bois",fam1s:"25 modèles",fam2:"Poêles à granulés",fam2s:"7 modèles",fam3:"Espace cuisine",fam3s:"Cuisinières et fours",fam4:"Sur mesure",fam4s:"Poêles et habillages de cheminée",
 ch_t:"Une chaleur qui reste, longtemps après le feu",ch_p:"La céramique emmagasine la chaleur du foyer, puis la rend doucement pendant de longues heures. Le métal chauffe vite et refroidit aussi vite ; la faïence, elle, diffuse une chaleur douce et homogène, même feu éteint.",ch_p2:"L’air n’est ni desséché ni surchauffé, la poussière n’est pas brassée. Et la faïence ne se déforme pas : elle garde son éclat des décennies.",ch_b:"Comment naît un poêle",
 co_t:"Composez votre poêle",co_i:"Un modèle, un émail, un décor : esquissez votre idée, l’atelier la rendra réelle.",co_m:"Modèle",co_e:"Émail",co_d:"Décor",co_o:"Options",co_btn:"Ajouter cette idée à ma sélection",co_cap:"Esquisse indicative : teintes et décors réels sur échantillons, au showroom.",
@@ -749,7 +755,7 @@ r_aj:"Ajouter",r_ouvrir:"Ouvrir le catalogue"
 T.en={
 n_mod:"Stoves",n_cui:"Kitchen",n_sm:"Made to measure",n_car:"Wall tiles",n_at:"The workshop",n_hist:"Our story",n_ins:"Installation",n_real:"Our work",n_act:"News",n_con:"Contact",n_cons:"Régnier Advisor",n_sel:"My selection",n_cat:"Brochure",sous_marque:"Ceramic workshop · Desvres",
 h_t:"Fire, dressed in hand-painted faience.",h_p:"Wood and pellet stoves shaped, painted and fired in our Desvres workshop since 1989. Every piece is numbered and signed by its decorator.",h_b1:"See the 32 stoves",h_b2:"Get the brochure",h_pr1:"Living Heritage Company",h_pr2:"Made in Desvres, France",h_pr3:"Installed by our own teams in France and Belgium",
-p_t:"From pounce to brush",p_i:"A tile’s pattern is passed on the old way. Scroll down and watch it come to life.",p1t:"The pounce",p1:"A tracing sheet pricked with tiny holes follows the outline of the pattern.",p2t:"The charcoal",p2:"A pouch of charcoal is dabbed over it: the drawing appears on the piece as dots.",p3t:"The brush",p3:"The decorator traces the outlines, then lays the colours, freehand.",p4t:"The fire",p4:"One night in the kiln, up to 1,200 °C. The glaze vitrifies, the colours wake up.",p_cap:"Illustrative sketch. Real patterns are chosen from samples in the showroom.",p_cta:"The 10 making steps",
+p_t:"From pounce to brush",p_i:"A tile’s pattern is passed on the old way: from pricked paper to brush, then to the fire.",p1t:"The pounce",p1:"A tracing sheet pricked with tiny holes follows the outline of the pattern.",p2t:"The charcoal",p2:"A pouch of charcoal is dabbed over it: the drawing appears on the piece as dots.",p3t:"The brush",p3:"The decorator traces the outlines, then lays the colours, freehand.",p4t:"The fire",p4:"One night in the kiln, up to 1,200 °C. The glaze vitrifies, the colours wake up.",p_cap:"Illustrative sketch. Real patterns are chosen from samples in the showroom.",p_cta:"The 10 making steps",
 fa_t:"Choose your fire",fa_i:"Wood, pellets, cooking or an existing fireplace: everything is made here, to order.",fam1:"Wood stoves",fam1s:"25 models",fam2:"Pellet stoves",fam2s:"7 models",fam3:"Kitchen",fam3s:"Cookers and ovens",fam4:"Made to measure",fam4s:"Stoves and fireplace cladding",
 ch_t:"Warmth that stays, long after the fire",ch_p:"Ceramic stores the heat of the fire and gives it back slowly for hours. Metal heats up fast and cools just as fast; faience spreads a gentle, even warmth, even once the fire is out.",ch_p2:"The air is neither dried out nor overheated, and dust isn’t stirred up. And faience never warps: it keeps its sheen for decades.",ch_b:"How a stove is born",
 co_t:"Design your stove",co_i:"A model, a glaze, a pattern: sketch your idea, and the workshop will make it real.",co_m:"Model",co_e:"Glaze",co_d:"Pattern",co_o:"Options",co_btn:"Add this idea to my selection",co_cap:"Indicative sketch: real colours and patterns on samples in the showroom.",
@@ -827,7 +833,7 @@ r_aj:"Add",r_ouvrir:"Open the brochure form"
 T.es={
 n_mod:"Modelos",n_cui:"Cocina",n_sm:"A medida",n_car:"Azulejos",n_at:"El taller",n_hist:"Historia",n_ins:"Instalación",n_real:"Realizaciones",n_act:"Noticias",n_con:"Contacto",n_cons:"Régnier Consejo",n_sel:"Mi selección",n_cat:"Catálogo",sous_marque:"Taller de cerámica · Desvres",
 h_t:"El fuego, vestido de loza pintada a mano.",h_p:"Estufas de leña y de pellets modeladas, pintadas y cocidas en nuestro taller de Desvres desde 1989. Cada pieza va numerada y firmada por su decorador.",h_b1:"Ver los 32 modelos",h_b2:"Recibir el catálogo",h_pr1:"Empresa del Patrimonio Vivo",h_pr2:"Fabricado en Desvres (Francia)",h_pr3:"Instalado por nuestros equipos en Francia y Bélgica",
-p_t:"Del estarcido al pincel",p_i:"El decorado de un azulejo se transmite como antaño. Desplácese: nace ante sus ojos.",p1t:"El estarcido",p1:"Una hoja de papel calco perforada sigue el contorno del decorado.",p2t:"El carbón",p2:"Se golpea con una bolsita de carbón vegetal: el dibujo pasa a la pieza en puntitos.",p3t:"El pincel",p3:"El decorador traza los contornos y luego aplica los colores, a mano alzada.",p4t:"El fuego",p4:"Una noche en el horno, hasta 1.200 °C. El esmalte se vitrifica, los colores despiertan.",p_cap:"Boceto ilustrativo. Los decorados reales se eligen con muestras en la sala de exposición.",p_cta:"Las 10 etapas de fabricación",
+p_t:"Del estarcido al pincel",p_i:"El decorado de un azulejo se transmite como antaño: del papel perforado al pincel, y luego al fuego.",p1t:"El estarcido",p1:"Una hoja de papel calco perforada sigue el contorno del decorado.",p2t:"El carbón",p2:"Se golpea con una bolsita de carbón vegetal: el dibujo pasa a la pieza en puntitos.",p3t:"El pincel",p3:"El decorador traza los contornos y luego aplica los colores, a mano alzada.",p4t:"El fuego",p4:"Una noche en el horno, hasta 1.200 °C. El esmalte se vitrifica, los colores despiertan.",p_cap:"Boceto ilustrativo. Los decorados reales se eligen con muestras en la sala de exposición.",p_cta:"Las 10 etapas de fabricación",
 fa_t:"Elija su fuego",fa_i:"Leña, pellets, cocina o chimenea existente: todo se fabrica aquí, por encargo.",fam1:"Estufas de leña",fam1s:"25 modelos",fam2:"Estufas de pellets",fam2s:"7 modelos",fam3:"Cocina",fam3s:"Cocinas y hornos",fam4:"A medida",fam4s:"Estufas y revestimiento de chimeneas",
 ch_t:"Un calor que se queda, mucho después del fuego",ch_p:"La cerámica almacena el calor del hogar y lo devuelve poco a poco durante horas. El metal calienta rápido y se enfría igual de rápido; la loza difunde un calor suave y homogéneo, incluso con el fuego apagado.",ch_p2:"El aire no se reseca ni se sobrecalienta, el polvo no se remueve. Y la loza no se deforma: conserva su brillo durante décadas.",ch_b:"Cómo nace una estufa",
 co_t:"Componga su estufa",co_i:"Un modelo, un esmalte, un decorado: esboce su idea, el taller la hará realidad.",co_m:"Modelo",co_e:"Esmalte",co_d:"Decorado",co_o:"Opciones",co_btn:"Añadir esta idea a mi selección",co_cap:"Boceto orientativo: colores y decorados reales con muestras en la sala.",
@@ -904,7 +910,7 @@ r_aj:"Añadir",r_ouvrir:"Abrir el formulario del catálogo"
 T.de={
 n_mod:"Modelle",n_cui:"Küche",n_sm:"Maßanfertigung",n_car:"Wandfliesen",n_at:"Die Werkstatt",n_hist:"Geschichte",n_ins:"Montage",n_real:"Referenzen",n_act:"Aktuelles",n_con:"Kontakt",n_cons:"Régnier Beratung",n_sel:"Meine Auswahl",n_cat:"Katalog",sous_marque:"Keramikwerkstatt · Desvres",
 h_t:"Feuer im Kleid aus handbemalter Fayence.",h_p:"Holz- und Pelletöfen, seit 1989 in unserer Werkstatt in Desvres geformt, bemalt und gebrannt. Jedes Stück ist nummeriert und vom Dekormaler signiert.",h_b1:"Alle 32 Modelle",h_b2:"Katalog anfordern",h_pr1:"Unternehmen des lebendigen Erbes",h_pr2:"Hergestellt in Desvres (Frankreich)",h_pr3:"Montage durch unsere Teams in Frankreich und Belgien",
-p_t:"Von der Pause zum Pinsel",p_i:"Das Dekor einer Kachel wird wie früher übertragen. Scrollen Sie: Es entsteht vor Ihren Augen.",p1t:"Die Pause",p1:"Ein mit feinen Löchern durchstochenes Pauspapier folgt der Kontur des Dekors.",p2t:"Die Kohle",p2:"Ein Beutel Holzkohle wird aufgetupft: Die Zeichnung erscheint gepunktet auf dem Stück.",p3t:"Der Pinsel",p3:"Der Dekormaler zieht die Konturen nach und setzt dann freihändig die Farben.",p4t:"Das Feuer",p4:"Eine Nacht im Ofen, bis 1.200 °C. Die Glasur verglast, die Farben erwachen.",p_cap:"Illustrative Skizze. Die echten Dekore wählen Sie anhand von Mustern im Showroom.",p_cta:"Die 10 Fertigungsschritte",
+p_t:"Von der Pause zum Pinsel",p_i:"Das Dekor einer Kachel wird wie früher übertragen: vom gelochten Papier zum Pinsel, dann ins Feuer.",p1t:"Die Pause",p1:"Ein mit feinen Löchern durchstochenes Pauspapier folgt der Kontur des Dekors.",p2t:"Die Kohle",p2:"Ein Beutel Holzkohle wird aufgetupft: Die Zeichnung erscheint gepunktet auf dem Stück.",p3t:"Der Pinsel",p3:"Der Dekormaler zieht die Konturen nach und setzt dann freihändig die Farben.",p4t:"Das Feuer",p4:"Eine Nacht im Ofen, bis 1.200 °C. Die Glasur verglast, die Farben erwachen.",p_cap:"Illustrative Skizze. Die echten Dekore wählen Sie anhand von Mustern im Showroom.",p_cta:"Die 10 Fertigungsschritte",
 fa_t:"Wählen Sie Ihr Feuer",fa_i:"Holz, Pellets, Kochen oder ein vorhandener Kamin: Alles wird hier auf Bestellung gefertigt.",fam1:"Holzöfen",fam1s:"25 Modelle",fam2:"Pelletöfen",fam2s:"7 Modelle",fam3:"Küche",fam3s:"Herde und Backöfen",fam4:"Maßanfertigung",fam4s:"Öfen und Kaminverkleidungen",
 ch_t:"Wärme, die bleibt – lange nach dem Feuer",ch_p:"Keramik speichert die Wärme des Feuers und gibt sie stundenlang sanft ab. Metall wird schnell heiß und ebenso schnell kalt; Fayence verbreitet eine sanfte, gleichmäßige Wärme, auch wenn das Feuer aus ist.",ch_p2:"Die Luft wird weder ausgetrocknet noch überhitzt, Staub wird nicht aufgewirbelt. Und Fayence verzieht sich nicht: Sie behält jahrzehntelang ihren Glanz.",ch_b:"Wie ein Ofen entsteht",
 co_t:"Gestalten Sie Ihren Ofen",co_i:"Ein Modell, eine Glasur, ein Dekor: Skizzieren Sie Ihre Idee, die Werkstatt macht sie wahr.",co_m:"Modell",co_e:"Glasur",co_d:"Dekor",co_o:"Optionen",co_btn:"Diese Idee zur Auswahl hinzufügen",co_cap:"Unverbindliche Skizze: echte Farben und Dekore als Muster im Showroom.",
@@ -982,7 +988,7 @@ r_aj:"Hinzufügen",r_ouvrir:"Katalogformular öffnen"
 T.it={
 n_mod:"Modelli",n_cui:"Cucina",n_sm:"Su misura",n_car:"Piastrelle",n_at:"Il laboratorio",n_hist:"Storia",n_ins:"Installazione",n_real:"Realizzazioni",n_act:"Notizie",n_con:"Contatti",n_cons:"Régnier Consiglio",n_sel:"La mia selezione",n_cat:"Catalogo",sous_marque:"Laboratorio di ceramica · Desvres",
 h_t:"Il fuoco, vestito di maiolica dipinta a mano.",h_p:"Stufe a legna e a pellet modellate, dipinte e cotte nel nostro laboratorio di Desvres dal 1989. Ogni pezzo è numerato e firmato dal suo decoratore.",h_b1:"Vedi i 32 modelli",h_b2:"Ricevi il catalogo",h_pr1:"Impresa del Patrimonio Vivente",h_pr2:"Fatto a Desvres (Francia)",h_pr3:"Installato dalle nostre squadre in Francia e in Belgio",
-p_t:"Dallo spolvero al pennello",p_i:"Il decoro di una piastrella si tramanda come un tempo. Scorrete: nasce sotto i vostri occhi.",p1t:"Lo spolvero",p1:"Un foglio di carta da lucido forato segue il contorno del decoro.",p2t:"Il carbone",p2:"Si tampona un sacchetto di carbone di legna: il disegno passa sul pezzo a puntini.",p3t:"Il pennello",p3:"Il decoratore traccia i contorni, poi stende i colori, a mano libera.",p4t:"Il fuoco",p4:"Una notte in forno, fino a 1.200 °C. Lo smalto vetrifica, i colori si risvegliano.",p_cap:"Schizzo illustrativo. I veri decori si scelgono sui campioni, in showroom.",p_cta:"Le 10 fasi di lavorazione",
+p_t:"Dallo spolvero al pennello",p_i:"Il decoro di una piastrella si tramanda come un tempo: dalla carta forata al pennello, poi al fuoco.",p1t:"Lo spolvero",p1:"Un foglio di carta da lucido forato segue il contorno del decoro.",p2t:"Il carbone",p2:"Si tampona un sacchetto di carbone di legna: il disegno passa sul pezzo a puntini.",p3t:"Il pennello",p3:"Il decoratore traccia i contorni, poi stende i colori, a mano libera.",p4t:"Il fuoco",p4:"Una notte in forno, fino a 1.200 °C. Lo smalto vetrifica, i colori si risvegliano.",p_cap:"Schizzo illustrativo. I veri decori si scelgono sui campioni, in showroom.",p_cta:"Le 10 fasi di lavorazione",
 fa_t:"Scegliete il vostro fuoco",fa_i:"Legna, pellet, cucina o camino esistente: tutto è fatto qui, su ordinazione.",fam1:"Stufe a legna",fam1s:"25 modelli",fam2:"Stufe a pellet",fam2s:"7 modelli",fam3:"Cucina",fam3s:"Cucine e forni",fam4:"Su misura",fam4s:"Stufe e rivestimenti di camini",
 ch_t:"Un calore che resta, molto dopo il fuoco",ch_p:"La ceramica accumula il calore del focolare e lo restituisce piano per lunghe ore. Il metallo si scalda in fretta e si raffredda altrettanto; la maiolica diffonde un calore dolce e uniforme, anche a fuoco spento.",ch_p2:"L’aria non si secca né si surriscalda, la polvere non si solleva. E la maiolica non si deforma: conserva la sua lucentezza per decenni.",ch_b:"Come nasce una stufa",
 co_t:"Componete la vostra stufa",co_i:"Un modello, uno smalto, un decoro: abbozzate la vostra idea, il laboratorio la renderà reale.",co_m:"Modello",co_e:"Smalto",co_d:"Decoro",co_o:"Opzioni",co_btn:"Aggiungi questa idea alla selezione",co_cap:"Schizzo indicativo: colori e decori reali sui campioni in showroom.",
@@ -1059,7 +1065,7 @@ r_aj:"Aggiungi",r_ouvrir:"Apri il modulo del catalogo"
 T.nl={
 n_mod:"Modellen",n_cui:"Keuken",n_sm:"Op maat",n_car:"Wandtegels",n_at:"Het atelier",n_hist:"Geschiedenis",n_ins:"Plaatsing",n_real:"Realisaties",n_act:"Nieuws",n_con:"Contact",n_cons:"Régnier Advies",n_sel:"Mijn selectie",n_cat:"Catalogus",sous_marque:"Keramiekatelier · Desvres",
 h_t:"Vuur, gekleed in handbeschilderde faience.",h_p:"Hout- en pelletkachels, sinds 1989 gevormd, beschilderd en gebakken in ons atelier in Desvres. Elk stuk is genummerd en gesigneerd door de decorateur.",h_b1:"Bekijk de 32 modellen",h_b2:"Catalogus ontvangen",h_pr1:"Bedrijf van Levend Erfgoed",h_pr2:"Gemaakt in Desvres (Frankrijk)",h_pr3:"Geplaatst door onze eigen ploegen in Frankrijk en België",
-p_t:"Van sponsel tot penseel",p_i:"Het decor van een tegel wordt doorgegeven zoals vroeger. Scroll: het ontstaat voor uw ogen.",p1t:"De sponsel",p1:"Een geprikt calqueervel volgt de contour van het decor.",p2t:"De houtskool",p2:"Er wordt met een zakje houtskool getamponneerd: de tekening verschijnt in stippellijn op het stuk.",p3t:"Het penseel",p3:"De decorateur trekt de contouren en legt dan de kleuren, uit de vrije hand.",p4t:"Het vuur",p4:"Een nacht in de oven, tot 1.200 °C. Het glazuur verglaast, de kleuren ontwaken.",p_cap:"Illustratieve schets. De echte decors kiest u op stalen in de showroom.",p_cta:"De 10 productiestappen",
+p_t:"Van sponsel tot penseel",p_i:"Het decor van een tegel wordt doorgegeven zoals vroeger: van geprikt papier naar penseel, dan naar het vuur.",p1t:"De sponsel",p1:"Een geprikt calqueervel volgt de contour van het decor.",p2t:"De houtskool",p2:"Er wordt met een zakje houtskool getamponneerd: de tekening verschijnt in stippellijn op het stuk.",p3t:"Het penseel",p3:"De decorateur trekt de contouren en legt dan de kleuren, uit de vrije hand.",p4t:"Het vuur",p4:"Een nacht in de oven, tot 1.200 °C. Het glazuur verglaast, de kleuren ontwaken.",p_cap:"Illustratieve schets. De echte decors kiest u op stalen in de showroom.",p_cta:"De 10 productiestappen",
 fa_t:"Kies uw vuur",fa_i:"Hout, pellets, koken of een bestaande schouw: alles wordt hier op bestelling gemaakt.",fam1:"Houtkachels",fam1s:"25 modellen",fam2:"Pelletkachels",fam2s:"7 modellen",fam3:"Keuken",fam3s:"Fornuizen en ovens",fam4:"Op maat",fam4s:"Kachels en schouwbekleding",
 ch_t:"Warmte die blijft, lang na het vuur",ch_p:"Keramiek slaat de warmte van het vuur op en geeft ze urenlang zachtjes af. Metaal warmt snel op en koelt even snel af; faience verspreidt een zachte, gelijkmatige warmte, ook als het vuur uit is.",ch_p2:"De lucht droogt niet uit en wordt niet oververhit, stof wordt niet opgejaagd. En faience vervormt niet: ze behoudt haar glans tientallen jaren.",ch_b:"Hoe een kachel ontstaat",
 co_t:"Stel uw kachel samen",co_i:"Een model, een glazuur, een decor: schets uw idee, het atelier maakt het echt.",co_m:"Model",co_e:"Glazuur",co_d:"Decor",co_o:"Opties",co_btn:"Dit idee aan mijn selectie toevoegen",co_cap:"Indicatieve schets: echte kleuren en decors op stalen in de showroom.",
@@ -1161,7 +1167,8 @@ ml_3:["L’ensemble du site relève de la législation sur le droit d’auteur ;
 const $=(s,r=document)=>r.querySelector(s),$$=(s,r=document)=>[...r.querySelectorAll(s)];
 const LANGS=["fr","en","es","de","it","nl"];
 let lang="fr";try{const s=localStorage.getItem("rg-lang");if(LANGS.includes(s))lang=s}catch(e){}
-const t=k=>(T[lang]&&T[lang][k]!=null?T[lang][k]:T.fr[k]!=null?T.fr[k]:k);
+const t0=k=>(T[lang]&&T[lang][k]!=null?T[lang][k]:T.fr[k]!=null?T.fr[k]:k);
+const t=k=>{const v=t0(k);return lang==="fr"&&typeof v==="string"?v.replace(/ ([?!:;»])/g,"\u00a0$1").replace(/« /g,"«\u00a0"):v};
 const li=()=>LANGS.indexOf(lang);
 const slug=s=>s.normalize("NFD").replace(/[̀-ͯ]/g,"").toLowerCase();
 const P=PRODUITS.map(p=>({id:p[0],nom:p[1],type:p[2],four:!!p[3],dim:p[4],kw:p[5],kg:p[6],rdt:p[7],acc:p[8],s:slug(p[1])}));
@@ -1170,7 +1177,7 @@ const img=id=>"img/p"+id+".jpg";
 
 /* ---------- Sélection ---------- */
 let sel=[];try{sel=JSON.parse(localStorage.getItem("rg-sel")||"[]")}catch(e){}
-const saveSel=()=>{try{localStorage.setItem("rg-sel",JSON.stringify(sel))}catch(e){};$$("[data-nsel]").forEach(n=>n.textContent=sel.length)};
+const saveSel=()=>{try{localStorage.setItem("rg-sel",JSON.stringify(sel))}catch(e){};$$("[data-nsel]").forEach(n=>{n.textContent=sel.length;n.toggleAttribute("data-zero",!sel.length)})};
 const inSel=id=>sel.some(x=>x.id===id);
 function toggleSel(id,idee){
  if(idee){sel.push({id:"idee-"+Date.now(),idee});toast(t("se_idee")+" — "+t("aj_ok"))}
@@ -1193,7 +1200,7 @@ function renderGrille(){const g=$("[data-grille]");const l=P.filter(p=>filtre===
 function renderFiche(p){
  const ty=p.type==="g"?t("lbl_g"):t("lbl_b");const v=x=>x||`<span style="color:var(--gris)">${t("fi_nc")}</span>`;
  const aussi=P.filter(x=>x.type===p.type&&x.id!==p.id).slice(0,40).sort((a,b)=>((a.id*7+p.id)%13)-((b.id*7+p.id)%13)).slice(0,4);
- $("[data-fiche]").innerHTML=`<p class="fil"><a href="#modeles">${t("fi_ret")}</a> / ${ty}</p><div class="fiche"><div class="galerie"><div class="grand"><img src="${img(p.id)}" alt="${p.nom} — ${ty}"></div></div><div><span class="qui">${ty}${p.four?" · "+t("lbl_four"):""}</span><h1>${p.nom}</h1><p class="intro">${p.acc[li()]}</p><p>${p.type==="g"?t("fi_txt_g"):t("fi_txt_b")}</p>
+ $("[data-fiche]").innerHTML=`<p class="fil"><a href="#modeles">${t("fi_ret")}</a> / ${ty}</p><div class="fiche"><div class="galerie"><div class="grand"><img src="${img(p.id)}" alt="${p.nom} — ${ty}"></div></div><div><h1 style="margin-bottom:.15em">${p.nom}</h1><span class="qui">${ty}${p.four?" · "+t("lbl_four"):""}</span><p class="intro">${p.acc[li()]}</p><p>${p.type==="g"?t("fi_txt_g"):t("fi_txt_b")}</p>
  <table class="tab-spec"><tr><th>${t("fi_dim")}</th><td>${v(p.dim)}</td></tr><tr><th>${t("fi_kw")}</th><td>${v(p.kw)}</td></tr><tr><th>${t("fi_kg")}</th><td>${v(p.kg)}</td></tr><tr><th>${t("fi_rdt")}</th><td>${v(p.rdt)}</td></tr>${p.four?`<tr><th>${t("fi_four")}</th><td>${t("fi_oui")}</td></tr>`:""}</table>
  <p style="display:flex;gap:10px;flex-wrap:wrap"><button class="btn btn-vert" type="button" data-btnsel="${p.id}">${inSel(p.id)?t("b_ret"):t("fi_b1")}</button><a class="btn btn-ligne" href="#selection" data-demande="${p.id}">${t("fi_b2")}</a></p><p style="font-size:.9rem;color:var(--gris)">${t("fi_prix")}</p>
  <ul class="reassure"><li>${t("fi_r1")}</li><li>${t("fi_r2")}</li><li>${t("fi_r3")}</li><li>${t("fi_r4")}</li></ul></div></div>
@@ -1236,7 +1243,7 @@ function carreauSVG(motif,fond,enc){
  const M=MOTIFS[motif]||MOTIFS.oeillet;const col={v:"#2B6150",m:"#5B3347",o:"#B48C3C",b:"#2B4F86",n:enc};
  const id="g"+Math.random().toString(36).slice(2,7);
  return `<svg viewBox="0 0 400 400" role="img" aria-hidden="true"><defs><linearGradient id="${id}" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fff" stop-opacity="0"/><stop offset=".48" stop-color="#fff" stop-opacity="0"/><stop offset=".5" stop-color="#fff" stop-opacity=".55"/><stop offset=".56" stop-color="#fff" stop-opacity="0"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient><clipPath id="${id}c"><circle cx="200" cy="200" r="0"/></clipPath></defs>
- <rect x="6" y="6" width="388" height="388" rx="10" fill="${fond}"/><rect x="22" y="22" width="356" height="356" rx="6" fill="none" stroke="${enc}" stroke-opacity=".35" stroke-width="1.5"/><rect x="34" y="34" width="332" height="332" rx="4" fill="none" stroke="${enc}" stroke-opacity=".2" stroke-width="1"/>
+ <linearGradient id="${id}b" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fff" stop-opacity=".55"/><stop offset=".5" stop-color="#fff" stop-opacity="0"/><stop offset="1" stop-color="#000" stop-opacity=".28"/></linearGradient><rect x="6" y="6" width="388" height="388" rx="10" fill="${fond}"/><rect x="10" y="10" width="380" height="380" rx="8" fill="none" stroke="url(#${id}b)" stroke-width="8"/><rect x="22" y="22" width="356" height="356" rx="6" fill="none" stroke="${enc}" stroke-opacity=".35" stroke-width="1.5"/><rect x="34" y="34" width="332" height="332" rx="4" fill="none" stroke="${enc}" stroke-opacity=".2" stroke-width="1"/>
  <g class="remp">${M.remp.map(([d,c])=>`<path class="couleur" d="${d}" fill="${col[c]}" fill-rule="evenodd" opacity="0"/>`).join("")}</g>
  <g class="pts" clip-path="url(#${id}c)">${M.trait.map(d=>`<path class="contour-pts" d="${d}" style="stroke:${enc}"/>`).join("")}</g>
  <g class="tr">${M.trait.map(d=>`<path class="trait" d="${d}" pathLength="1" stroke-dasharray="1" stroke-dashoffset="1" style="stroke:${enc}"/>`).join("")}</g>
@@ -1273,7 +1280,7 @@ const INT=[
  ["vis",/visit|showroom|horaire|ouvert|adresse|hours|open|address|horario|direcc|offnung|adresse|orari|indirizz|openingsu|adres|ou etes|where|donde|wo |dove|waar/],["pose",/pose|install|monta|plaats|tubage|conduit|flue|belgi|livr|deliver|entreg|liefer|consegn|lever/],
  ["deco",/decor|couleur|email|colou|color|glaze|esmalt|farbe|glasur|smalt|kleur|glazuur|motif|pattern|perso|rouen|delft|moustiers/],["cat",/catalog|brochure|katalog|catalogus/],["fr",/france|fabriqu|made|epv|patrimoine|heritage|frankreich|francia|frankrijk/],
  ["bois",/bois|wood|lena|holz|legna|hout|buche|log|flamme|flame/]];
-const RECO={gra:[1212,1216,1217],bois:[1184,1186,1188],four:[2269,3552,2714,1196],petit:[2177,3589]};
+const RECO={gra:[1212,1216,1217],bois:[1184,1186,1188],four:[2269,3552,2714,1196],petit:[2177,3589],kw:[2177,1184,3600]};
 function repondre(q){
  const s=slug(q);let k=null;for(const [n,re] of INT){if(re.test(s)){k=n;break}}
  if(/bois ou|wood or|lena o|holz oder|legna o|hout of/.test(s))k="gra";
@@ -1291,7 +1298,7 @@ function initCons(){
  $(".puces").addEventListener("click",e=>{const b=e.target.closest("[data-q]");if(!b)return;const q=t(b.dataset.q);msg(q,"moi");const map={c1:"bois ou granulés",c2:"four",c3:"petit",c4:"prix",c5:"showroom",c6:"pose"};setTimeout(()=>msg(repondre(map[b.dataset.q]),"ia"),350)});
  $(".cons form").addEventListener("submit",e=>{e.preventDefault();const i=$("#cons-q");const q=i.value.trim();if(!q)return;msg(q.replace(/</g,"&lt;"),"moi");i.value="";setTimeout(()=>msg(repondre(q),"ia"),400)});
  let vu=false;try{vu=sessionStorage.getItem("rg-inv")}catch(e){}
- if(!vu)setTimeout(()=>{if(!$(".cons").classList.contains("on"))$(".cons-invite").classList.add("on");try{sessionStorage.setItem("rg-inv",1)}catch(e){}},4000);
+ if(!vu)setTimeout(()=>{if(!$(".cons").classList.contains("on"))$(".cons-invite").classList.add("on");try{sessionStorage.setItem("rg-inv",1)}catch(e){}setTimeout(()=>$(".cons-invite").classList.remove("on"),9000)},4000);
  $(".cons-invite button").addEventListener("click",()=>$(".cons-invite").classList.remove("on"));
 }
 /* ---------- Traduction ---------- */
