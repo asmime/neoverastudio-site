@@ -57,7 +57,7 @@ p{margin:0 0 1em;text-wrap:pretty}
 .lien svg{width:16px;height:16px;transition:transform .3s var(--ease)}.lien:hover svg{transform:translateX(4px)}
 .cobalt .lien,.cobalt-zone .lien{color:var(--sur-cobalt)}
 /* en-tête */
-header.top{position:sticky;top:0;z-index:40;background:color-mix(in srgb,var(--calque) 94%,transparent);backdrop-filter:saturate(1.2) blur(8px);border-bottom:1px solid var(--trait-g)}
+header.top{position:sticky;top:0;z-index:40;background:var(--calque);border-bottom:1px solid var(--trait-g)}
 .top-in{max-width:1440px;margin:0 auto;padding:0 var(--g);display:flex;align-items:center;gap:22px;min-height:72px}
 .logo{display:flex;align-items:center;flex:none}.logo img{height:42px;width:auto}
 nav.menu{flex:1;min-width:0}
@@ -306,7 +306,7 @@ footer .soc{display:flex;gap:10px;margin-top:14px}
 footer .soc a{width:44px;height:44px;display:grid;place-items:center;border:1px solid #4A5458;border-radius:50%}
 footer .soc svg{width:18px;height:18px}
 footer .logo-f{background:#F3F4F1;display:inline-block;padding:10px 12px;border-radius:var(--r);margin-bottom:16px}footer .logo-f img{height:36px;width:auto}
-.ft-b{margin-top:44px;padding-top:20px;border-top:1px solid #394245;display:flex;flex-wrap:wrap;gap:10px 24px;justify-content:space-between;font:400 .74rem var(--mono);color:#8E989C}
+.ft-b{margin-top:44px;padding-top:20px;border-top:1px solid #394245;display:flex;flex-wrap:wrap;gap:10px 24px;justify-content:space-between;font:400 .8rem var(--mono);color:#8E989C}
 @media (max-width:900px){.ft-g{grid-template-columns:1fr 1fr}}
 @media (max-width:520px){.ft-g{grid-template-columns:1fr}}
 /* conseiller */
@@ -342,12 +342,14 @@ footer .logo-f{background:#F3F4F1;display:inline-block;padding:10px 12px;border-
 .mk{position:fixed;left:12px;bottom:12px;z-index:30;font:500 .64rem var(--mono);background:var(--graphite);color:#E9ECEA;padding:5px 8px;border-radius:2px;opacity:.85;pointer-events:none}
 @media (max-width:520px){.mk{display:none}}
 
-@media (max-width:600px){.plan .n2{top:auto;bottom:calc(5% + 34px);left:4%;right:auto}.plan .legende{display:none}.plan .note{font-size:.66rem}}
+@media (max-width:600px){.plan .n2{top:auto;bottom:calc(5% + 34px);left:4%;right:auto}.plan .legende{display:none}.plan .note{font-size:.74rem}}
 
 @media (max-width:900px){.gal{grid-template-columns:repeat(2,minmax(0,1fr))}}
 .top .btn-c .court{display:none}
 @media (max-width:640px){.top .btn-c .court{display:inline}.cs-btn{padding:6px}.cs-btn>span:last-child{display:none}.cs-btn .av{width:46px;height:46px}}
 @media (max-width:999px){.hero .plan{order:-1}}
+
+@media (max-width:640px){header.top{position:relative}body{padding-bottom:76px}.cs-q button:nth-child(n+4){display:none}.mos figcaption,.real-g figcaption{font-size:.8rem}}
 </style>
 </head>
 <body>
@@ -1906,6 +1908,8 @@ D.addEventListener('click',e=>{const p=e.target.closest('[data-preset]');if(p)PR
  const o=e.target.closest('[data-open-chat]');if(o){openChat();}
 });
 function renderProj(){
+ const sp=['Freeflow','Hotspot','Limelight','Highlife'],nw=['RecSport','SwimCross','Endless Pools'];
+ $$('[data-ch=type]').forEach(c=>{if(PROJ.some(x=>sp.includes(x))){const i=c.querySelector('input[value=o_spa]');if(i)i.checked=true;}if(PROJ.some(x=>nw.includes(x))){const i=c.querySelector('input[value=o_nage]');if(i)i.checked=true;}});
  const nb=$('#nb');nb.textContent=PROJ.length;nb.classList.toggle('on',PROJ.length>0);
  $$('[data-proj]').forEach(p=>{p.innerHTML=PROJ.length?`<ul>${PROJ.map(x=>`<li><span>${x}</span><button type="button" data-rm="${x}">${t('proj_remove')}</button></li>`).join('')}</ul>`:`<p class="vide">${t('proj_empty')}</p>`;});
 }
@@ -1957,7 +1961,7 @@ const KW=[
  ['a_hs',['hammam','sauna','vapeur','steam','vapor','dampf','bagno turco','桑拿','蒸汽']],
  ['a_zone',['zone','secteur','région','alsace','strasbourg','colmar','sélestat','area','region','zona','región','gebiet','elsass','regione','区域','阿尔萨斯','斯特拉斯堡']],
  ['a_who',['qui','histoire','fondateur','entreprise','trophée','who','history','founder','award','quién','historia','fundador','premio','wer','geschichte','gründer','auszeichnung','chi','storia','fondatori','premi','是谁','历史','奖']],
- ['a_mini',['piscine','pool','piscina','becken','泳池']]
+ ['a_ent',['vert','verte','trouble','algue','green','cloudy','algae','verde','turbia','algas','grün','trüb','algen','torbida','alghe','发绿','浑浊','藻']]
 ];
 const ACT={a_price:[['go_devis','#devis']],a_delay:[['go_devis','#devis'],['go_call','tel:'+tel1]],a_mini:[['go_page','#mini'],['go_devis','#devis']],a_spa:[['go_page','#spas']],a_nage:[['go_page','#nage']],a_ent:[['go_page','#entretien'],['go_devis','#devis','o_ent']],a_sav:[['go_call','tel:'+tel1],['go_page','#sav']],a_hours:[['go_page','#showrooms']],a_pro:[['go_page','#collectivites']],a_cat:[['go_page','#catalogues']],a_gar:[['go_page','#entreprise']],a_abri:[['go_page','#abris']],a_reno:[['go_page','#renovation']],a_hs:[['go_page','#hammam'],['go_page','#sauna']],a_zone:[['go_page','#showrooms']],a_who:[['go_page','#entreprise']],a_none:[['go_call','tel:'+tel1],['go_devis','#devis']]};
 const SPAADD={a_spa:['Highlife','Limelight','Hotspot','Freeflow'],a_nage:['RecSport','SwimCross','Endless Pools']};
