@@ -83,7 +83,7 @@ p{margin:0 0 1em;max-width:66ch;overflow-wrap:break-word}
 .nav{border-top:1px solid var(--papier2);position:relative}
 .nav ul{list-style:none;margin:0 auto;padding:0;display:flex;gap:2px;overflow-x:auto;scrollbar-width:none}
 .nav ul::-webkit-scrollbar{display:none}
-.nav a{display:block;white-space:nowrap;padding:12px 9px;font-weight:700;font-size:.92rem;text-decoration:none;color:var(--gris);border-bottom:3px solid transparent}
+.nav a{display:block;white-space:nowrap;padding:12px 7px;font-weight:700;font-size:.88rem;text-decoration:none;color:var(--gris);border-bottom:3px solid transparent}
 .nav a:hover{color:var(--encre)}
 .nav a[aria-current="page"]{color:var(--encre);border-bottom-color:var(--soleil)}
 .nav a.cons{color:var(--chene-f)}
@@ -271,6 +271,7 @@ textarea{min-height:130px;resize:vertical}
 .barre-resa{display:none}
 @media (max-width:620px){.barre-resa{display:flex;position:fixed;left:0;right:0;bottom:0;z-index:70;padding:10px 76px 10px 12px;background:rgba(246,241,231,.97);border-top:1px solid var(--papier2)}.barre-resa .btn{width:100%;justify-content:center;min-height:50px}.cons-btn{bottom:12px}body{padding-bottom:72px}.bulle{bottom:84px}.fiche aside{order:-1;position:static}.fiche{display:flex;flex-direction:column}}
 .saisie input{border-color:var(--chene)}
+.barre-resa[hidden]{display:none!important}
 </style>
 </head>
 <body>
@@ -308,7 +309,7 @@ marchesT:[["lun","Les Eyzies · Sainte-Alvère"],["mar","Le Bugue · Cénac · S
 L.fr={nom:"Français",
 ui:{accueil:"Accueil",camping:"Le camping",activites:"Activités et restaurant",piscine:"Piscine",spa:"Massages",hebs:"Hébergements",tarifs:"Tarifs et offres",groupes:"Groupes",dordogne:"La Dordogne",evenements:"Événements",avis:"Avis",faq:"Questions",contact:"Contact",infos:"Mentions légales",cons:"Nauves Conseil",reserver:"Réserver",dispo:"Voir les disponibilités",choisir:"Choisir mon hébergement",langue:"Langue",menu:"Menu principal",sous:"Camping 3 étoiles · Belvès, Périgord noir",
 heroT:"Cinq hectares de chênes, et vous au milieu.",heroP:"Un camping nature et familial à Belvès, en Périgord noir. Piscine chauffée, mini-ferme, potager partagé, et les soirées du bar quand le soleil passe derrière les arbres.",heroAlt:"Les grands chênes du camping Les Nauves",
-faits:["Ouverture le 17 avril 2027","100 emplacements sur 5 ha","Piscine chauffée dès mai","Mini-ferme et potager"],
+faits:["Ouverture le 17 avril 2027","100 emplacements sur 5 ha","Piscine chauffée dès mai","Mini-ferme et potager","Offres Tribu et Couple dès 189 € la semaine, hors juillet-août"],
 arrivee:"Arrivée",depart:"Départ",personnes:"Personnes",
 ardT:"Ce soir aux Nauves",ardP:"En juillet et août, chaque soir a son rendez-vous. Retournez l'ardoise du jour qui vous tente.",ceSoir:"Ce soir",demain:"Demain",retourner:"Retourner l'ardoise",ardNote:"Le dimanche, pot d'accueil ; en journée, club enfants, mini-ferme et tournois.",ardL:"Tout le programme",
 cabT:"Choisir sa cabane",cabP:"Mobil-homes, chalet, lodges en toile ou emplacement à l'ombre : onze locations et trois formules d'emplacement, au milieu des chênes.",toutVoir:"Voir les 14 formules",
@@ -329,7 +330,7 @@ consSous:"Je vous aide à choisir",consAccueil:"Bonjour ! Je suis Nauves Conseil
 consMention:"Assistant virtuel : réponses indicatives, la réception confirme tout.",consPlace:"Votre question…",envoyer:"Envoyer",consBulle:"Mobil-home, chalet ou lodge ? Je vous aide à choisir.",fermer:"Fermer",
 chips:[["choix","Choisir une location"],["chien","Venir avec mon chien"],["soiree","Ce soir au camping"],["piscine","La piscine"],["arrivee","Arrivée et départ"],["paiement","Les paiements"]],
 qPers:"Vous serez combien ?",qStyle:"Plutôt quel style ?",styleConfort:"Avec salle de bains",styleLodge:"Lodge en toile",
-r:{choixRes:"Voici ce qui vous irait :",aucun:"Au-delà de 6 personnes, la réception peut vous proposer plusieurs locations côte à côte, ou une formule groupe.",
+r:{pmr:"Oui : sanitaires adaptés avec accès pour personnes handicapées (baignoire) et accès aux espaces communs. Pour une location adaptée, la réception vous conseille.",choixRes:"Voici ce qui vous irait :",aucun:"Au-delà de 6 personnes, la réception peut vous proposer plusieurs locations côte à côte, ou une formule groupe.",
 danger:"Désolé : les chiens de catégories 1 et 2 (dont rottweiler, pit-bull, staffordshire) ne sont pas acceptés.",
 chien:"Les animaux sont les bienvenus, tenus en laisse, avec leur carnet de vaccination à jour (sauf chiens de catégories 1 et 2). Supplément : 2 € par jour en basse saison, 3 € en haute saison. Selon l'hébergement en location : à confirmer avec la réception.",
 cheval:"Le centre équestre Au Bos Cheval Rouge est juste à côté, avec un accès direct depuis le camping. L'inscription aux activités est obligatoire.",
@@ -416,7 +417,7 @@ avis:[["Excellent accueil, superbe équipe, un bar restaurant délicieux avec un
 L.en={nom:"English",
 ui:{accueil:"Home",camping:"The campsite",activites:"Activities & restaurant",piscine:"Pool",spa:"Massages",hebs:"Accommodation",tarifs:"Prices & offers",groupes:"Groups",dordogne:"The Dordogne",evenements:"Events",avis:"Reviews",faq:"Questions",contact:"Contact",infos:"Legal notice",cons:"Nauves Conseil",reserver:"Book",dispo:"Check availability",choisir:"Choose my accommodation",langue:"Language",menu:"Main menu",sous:"3-star campsite · Belvès, Périgord Noir",
 heroT:"Five hectares of oaks, and you in the middle.",heroP:"A nature-loving family campsite in Belvès, in the Périgord Noir. Heated pool, mini-farm, shared vegetable garden, and evenings at the bar as the sun slips behind the trees.",heroAlt:"The tall oaks of Camping Les Nauves",
-faits:["Opening 17 April 2027","100 pitches on 5 ha","Pool heated from May","Mini-farm and vegetable garden"],
+faits:["Opening 17 April 2027","100 pitches on 5 ha","Pool heated from May","Mini-farm and vegetable garden","Tribe and Couple offers from €189 a week, outside July-August"],
 arrivee:"Arrival",depart:"Departure",personnes:"People",
 ardT:"Tonight at Les Nauves",ardP:"In July and August, every evening has its event. Turn over the slate of the day that tempts you.",ceSoir:"Tonight",demain:"Tomorrow",retourner:"Turn the slate",ardNote:"On Sunday, welcome drink; by day, kids' club, mini-farm and tournaments.",ardL:"The full programme",
 cabT:"Choose your cabin",cabP:"Mobile homes, a chalet, canvas lodges or a shady pitch: eleven rentals and three pitch options, among the oaks.",toutVoir:"See all 14 options",
@@ -437,7 +438,7 @@ consSous:"I'll help you choose",consAccueil:"Hello! I'm Nauves Conseil, the camp
 consMention:"Virtual assistant: answers are indicative, reception confirms everything.",consPlace:"Your question…",envoyer:"Send",consBulle:"Mobile home, chalet or lodge? I'll help you choose.",fermer:"Close",
 chips:[["choix","Choose a rental"],["chien","Coming with my dog"],["soiree","Tonight at the campsite"],["piscine","The pool"],["arrivee","Arrival and departure"],["paiement","Payments"]],
 qPers:"How many of you?",qStyle:"Which style?",styleConfort:"With bathroom",styleLodge:"Canvas lodge",
-r:{choixRes:"Here's what would suit you:",aucun:"For more than 6 people, reception can offer several rentals side by side, or a group package.",
+r:{pmr:"Yes: adapted toilet block with disabled access (bathtub) and access to communal areas. For a suitable rental, reception will advise you.",choixRes:"Here's what would suit you:",aucun:"For more than 6 people, reception can offer several rentals side by side, or a group package.",
 danger:"Sorry: category 1 and 2 dogs (including rottweilers, pit bulls, Staffordshires) are not allowed.",
 chien:"Pets are welcome on a lead, with an up-to-date vaccination record (except category 1 and 2 dogs). Supplement: €2 a day in low season, €3 in high season. For rentals, it depends on the unit: please check with reception.",
 cheval:"The Au Bos Cheval Rouge riding centre is right next door, with direct access from the campsite. Booking for activities is required.",
@@ -524,7 +525,7 @@ avis:[["Excellent welcome, superb team, a delicious bar-restaurant with excellen
 L.es={nom:"Español",
 ui:{accueil:"Inicio",camping:"El camping",activites:"Actividades y restaurante",piscine:"Piscina",spa:"Masajes",hebs:"Alojamientos",tarifs:"Tarifas y ofertas",groupes:"Grupos",dordogne:"La Dordoña",evenements:"Eventos",avis:"Opiniones",faq:"Preguntas",contact:"Contacto",infos:"Aviso legal",cons:"Nauves Conseil",reserver:"Reservar",dispo:"Ver disponibilidad",choisir:"Elegir mi alojamiento",langue:"Idioma",menu:"Menú principal",sous:"Camping de 3 estrellas · Belvès, Périgord Noir",
 heroT:"Cinco hectáreas de robles, y usted en medio.",heroP:"Un camping familiar y de naturaleza en Belvès, en el Périgord Noir. Piscina climatizada, minigranja, huerto compartido y las veladas en el bar cuando el sol se esconde tras los árboles.",heroAlt:"Los grandes robles del camping Les Nauves",
-faits:["Apertura el 17 de abril de 2027","100 parcelas en 5 ha","Piscina climatizada desde mayo","Minigranja y huerto"],
+faits:["Apertura el 17 de abril de 2027","100 parcelas en 5 ha","Piscina climatizada desde mayo","Minigranja y huerto","Ofertas Tribu y Pareja desde 189 € la semana, fuera de julio y agosto"],
 arrivee:"Llegada",depart:"Salida",personnes:"Personas",
 ardT:"Esta noche en Les Nauves",ardP:"En julio y agosto, cada noche tiene su cita. Dé la vuelta a la pizarra del día que le apetezca.",ceSoir:"Esta noche",demain:"Mañana",retourner:"Dar la vuelta a la pizarra",ardNote:"Los domingos, aperitivo de bienvenida; durante el día, club infantil, minigranja y torneos.",ardL:"Todo el programa",
 cabT:"Elija su cabaña",cabP:"Mobil-homes, chalé, lodges de lona o parcela a la sombra: once alojamientos y tres tipos de parcela, entre los robles.",toutVoir:"Ver las 14 opciones",
@@ -545,7 +546,7 @@ consSous:"Le ayudo a elegir",consAccueil:"¡Hola! Soy Nauves Conseil, el asisten
 consMention:"Asistente virtual: respuestas orientativas, la recepción lo confirma todo.",consPlace:"Su pregunta…",envoyer:"Enviar",consBulle:"¿Mobil-home, chalé o lodge? Le ayudo a elegir.",fermer:"Cerrar",
 chips:[["choix","Elegir un alojamiento"],["chien","Venir con mi perro"],["soiree","Esta noche en el camping"],["piscine","La piscina"],["arrivee","Llegada y salida"],["paiement","Los pagos"]],
 qPers:"¿Cuántos serán?",qStyle:"¿Qué estilo prefiere?",styleConfort:"Con cuarto de baño",styleLodge:"Lodge de lona",
-r:{choixRes:"Esto es lo que le iría bien:",aucun:"A partir de 6 personas, la recepción puede proponerle varios alojamientos contiguos o una fórmula para grupos.",
+r:{pmr:"Sí: sanitarios adaptados con acceso para personas con discapacidad (bañera) y acceso a las zonas comunes. Para un alojamiento adaptado, la recepción le aconseja.",choixRes:"Esto es lo que le iría bien:",aucun:"A partir de 6 personas, la recepción puede proponerle varios alojamientos contiguos o una fórmula para grupos.",
 danger:"Lo sentimos: no se aceptan perros de las categorías 1 y 2 (entre ellos rottweiler, pitbull y staffordshire).",
 chien:"Los animales son bienvenidos, con correa y con la cartilla de vacunación al día (excepto perros de las categorías 1 y 2). Suplemento: 2 € al día en temporada baja y 3 € en temporada alta. En los alojamientos de alquiler: a confirmar con la recepción.",
 cheval:"El centro hípico Au Bos Cheval Rouge está justo al lado, con acceso directo desde el camping. Es obligatorio inscribirse en las actividades.",
@@ -632,7 +633,7 @@ avis:[["Excelente acogida, un equipo estupendo, un bar restaurante delicioso con
 L.de={nom:"Deutsch",
 ui:{accueil:"Startseite",camping:"Der Campingplatz",activites:"Aktivitäten und Restaurant",piscine:"Schwimmbad",spa:"Massagen",hebs:"Unterkünfte",tarifs:"Preise und Angebote",groupes:"Gruppen",dordogne:"Die Dordogne",evenements:"Veranstaltungen",avis:"Bewertungen",faq:"Fragen",contact:"Kontakt",infos:"Impressum",cons:"Nauves Conseil",reserver:"Buchen",dispo:"Verfügbarkeit ansehen",choisir:"Meine Unterkunft wählen",langue:"Sprache",menu:"Hauptmenü",sous:"3-Sterne-Campingplatz · Belvès, Périgord Noir",
 heroT:"Fünf Hektar Eichen, und Sie mittendrin.",heroP:"Ein familiärer Naturcampingplatz in Belvès, im Périgord Noir. Beheizter Pool, Mini-Bauernhof, gemeinsamer Gemüsegarten und die Abende an der Bar, wenn die Sonne hinter den Bäumen untergeht.",heroAlt:"Die hohen Eichen des Campingplatzes Les Nauves",
-faits:["Eröffnung am 17. April 2027","100 Stellplätze auf 5 ha","Beheizter Pool ab Mai","Mini-Bauernhof und Gemüsegarten"],
+faits:["Eröffnung am 17. April 2027","100 Stellplätze auf 5 ha","Beheizter Pool ab Mai","Mini-Bauernhof und Gemüsegarten","Angebote Tribu und Couple ab 189 € pro Woche, außerhalb Juli-August"],
 arrivee:"Anreise",depart:"Abreise",personnes:"Personen",
 ardT:"Heute Abend in Les Nauves",ardP:"Im Juli und August hat jeder Abend sein eigenes Programm. Drehen Sie die Tafel des Tages um, der Ihnen gefällt.",ceSoir:"Heute Abend",demain:"Morgen",retourner:"Tafel umdrehen",ardNote:"Sonntags Willkommensdrink; tagsüber Kinderclub, Mini-Bauernhof und Turniere.",ardL:"Das ganze Programm",
 cabT:"Ihre Hütte wählen",cabP:"Mobilheime, Chalet, Zeltlodges oder ein schattiger Stellplatz: elf Mietunterkünfte und drei Stellplatzvarianten, mitten unter den Eichen.",toutVoir:"Alle 14 Angebote ansehen",
@@ -653,7 +654,7 @@ consSous:"Ich helfe Ihnen bei der Wahl",consAccueil:"Guten Tag! Ich bin Nauves C
 consMention:"Virtueller Assistent: unverbindliche Antworten, die Rezeption bestätigt alles.",consPlace:"Ihre Frage…",envoyer:"Senden",consBulle:"Mobilheim, Chalet oder Lodge? Ich helfe Ihnen bei der Wahl.",fermer:"Schließen",
 chips:[["choix","Eine Unterkunft wählen"],["chien","Mit meinem Hund kommen"],["soiree","Heute Abend auf dem Platz"],["piscine","Das Schwimmbad"],["arrivee","An- und Abreise"],["paiement","Die Zahlung"]],
 qPers:"Wie viele Personen sind Sie?",qStyle:"Eher welcher Stil?",styleConfort:"Mit Badezimmer",styleLodge:"Zeltlodge",
-r:{choixRes:"Das könnte Ihnen gefallen:",aucun:"Ab 6 Personen kann Ihnen die Rezeption mehrere nebeneinanderliegende Unterkünfte oder ein Gruppenangebot vorschlagen.",
+r:{pmr:"Ja: angepasste Sanitäranlagen mit Zugang für Menschen mit Behinderung (Badewanne) und Zugang zu den Gemeinschaftsbereichen. Für eine passende Unterkunft berät Sie die Rezeption.",choixRes:"Das könnte Ihnen gefallen:",aucun:"Ab 6 Personen kann Ihnen die Rezeption mehrere nebeneinanderliegende Unterkünfte oder ein Gruppenangebot vorschlagen.",
 danger:"Leider dürfen Hunde der Kategorien 1 und 2 (darunter Rottweiler, Pitbull, Staffordshire) nicht aufgenommen werden.",
 chien:"Haustiere sind willkommen, an der Leine und mit aktuellem Impfpass (außer Hunde der Kategorien 1 und 2). Aufpreis: 2 € pro Tag in der Nebensaison, 3 € in der Hauptsaison. Bei den Mietunterkünften je nach Unterkunft: bitte mit der Rezeption klären.",
 cheval:"Das Reitzentrum Au Bos Cheval Rouge liegt direkt nebenan, mit direktem Zugang vom Campingplatz. Für die Aktivitäten ist eine Anmeldung erforderlich.",
@@ -740,7 +741,7 @@ avis:[["Ausgezeichneter Empfang, tolles Team, ein köstliches Bar-Restaurant mit
 L.it={nom:"Italiano",
 ui:{accueil:"Home",camping:"Il campeggio",activites:"Attività e ristorante",piscine:"Piscina",spa:"Massaggi",hebs:"Alloggi",tarifs:"Tariffe e offerte",groupes:"Gruppi",dordogne:"La Dordogna",evenements:"Eventi",avis:"Recensioni",faq:"Domande",contact:"Contatti",infos:"Note legali",cons:"Nauves Conseil",reserver:"Prenota",dispo:"Vedi la disponibilità",choisir:"Scegli il mio alloggio",langue:"Lingua",menu:"Menu principale",sous:"Campeggio 3 stelle · Belvès, Périgord Noir",
 heroT:"Cinque ettari di querce, e Lei in mezzo.",heroP:"Un campeggio familiare immerso nella natura a Belvès, nel Périgord Noir. Piscina riscaldata, mini-fattoria, orto condiviso e le serate al bar quando il sole scende dietro gli alberi.",heroAlt:"Le grandi querce del campeggio Les Nauves",
-faits:["Apertura il 17 aprile 2027","100 piazzole su 5 ha","Piscina riscaldata da maggio","Mini-fattoria e orto"],
+faits:["Apertura il 17 aprile 2027","100 piazzole su 5 ha","Piscina riscaldata da maggio","Mini-fattoria e orto","Offerte Tribu e Coppia da 189 € a settimana, fuori luglio-agosto"],
 arrivee:"Arrivo",depart:"Partenza",personnes:"Persone",
 ardT:"Stasera a Les Nauves",ardP:"A luglio e ad agosto ogni sera ha il suo appuntamento. Giri la lavagna del giorno che Le piace.",ceSoir:"Stasera",demain:"Domani",retourner:"Giri la lavagna",ardNote:"La domenica, aperitivo di benvenuto; durante il giorno, baby club, mini-fattoria e tornei.",ardL:"Tutto il programma",
 cabT:"Scelga la sua casetta",cabP:"Case mobili, chalet, lodge in tela o piazzola all'ombra: undici alloggi in affitto e tre formule di piazzola, in mezzo alle querce.",toutVoir:"Vedi tutte le 14 formule",
@@ -761,7 +762,7 @@ consSous:"La aiuto a scegliere",consAccueil:"Buongiorno! Sono Nauves Conseil, l'
 consMention:"Assistente virtuale: risposte indicative, la reception conferma tutto.",consPlace:"La sua domanda…",envoyer:"Invia",consBulle:"Casa mobile, chalet o lodge? La aiuto a scegliere.",fermer:"Chiudi",
 chips:[["choix","Scegliere un alloggio"],["chien","Venire con il mio cane"],["soiree","Stasera al campeggio"],["piscine","La piscina"],["arrivee","Arrivo e partenza"],["paiement","I pagamenti"]],
 qPers:"In quanti siete?",qStyle:"Che stile preferisce?",styleConfort:"Con bagno",styleLodge:"Lodge in tela",
-r:{choixRes:"Ecco cosa potrebbe fare per Lei:",aucun:"Oltre le 6 persone, la reception può proporLe più alloggi uno accanto all'altro, oppure una formula per gruppi.",
+r:{pmr:"Sì: servizi igienici adattati con accesso per persone con disabilità (vasca) e accesso agli spazi comuni. Per un alloggio adatto, la reception vi consiglia.",choixRes:"Ecco cosa potrebbe fare per Lei:",aucun:"Oltre le 6 persone, la reception può proporLe più alloggi uno accanto all'altro, oppure una formula per gruppi.",
 danger:"Ci dispiace: i cani di categoria 1 e 2 (tra cui rottweiler, pit bull, staffordshire) non sono ammessi.",
 chien:"Gli animali sono benvenuti, al guinzaglio e con il libretto delle vaccinazioni aggiornato (esclusi i cani di categoria 1 e 2). Supplemento: 2 € al giorno in bassa stagione, 3 € in alta stagione. Per gli alloggi in affitto, dipende dall'alloggio: da confermare con la reception.",
 cheval:"Il centro ippico Au Bos Cheval Rouge è proprio accanto, con accesso diretto dal campeggio. L'iscrizione alle attività è obbligatoria.",
@@ -848,7 +849,7 @@ avis:[["Accoglienza eccellente, squadra splendida, un delizioso bar ristorante c
 L.nl={nom:"Nederlands",
 ui:{accueil:"Home",camping:"De camping",activites:"Activiteiten en restaurant",piscine:"Zwembad",spa:"Massages",hebs:"Accommodaties",tarifs:"Prijzen en aanbiedingen",groupes:"Groepen",dordogne:"De Dordogne",evenements:"Evenementen",avis:"Beoordelingen",faq:"Vragen",contact:"Contact",infos:"Juridische informatie",cons:"Nauves Conseil",reserver:"Boeken",dispo:"Beschikbaarheid bekijken",choisir:"Mijn accommodatie kiezen",langue:"Taal",menu:"Hoofdmenu",sous:"3-sterrencamping · Belvès, Périgord Noir",
 heroT:"Vijf hectare eikenbomen, en u er middenin.",heroP:"Een familiecamping in de natuur bij Belvès, in de Périgord Noir. Verwarmd zwembad, kinderboerderij, gedeelde moestuin en gezellige avonden aan de bar als de zon achter de bomen zakt.",heroAlt:"De hoge eiken van camping Les Nauves",
-faits:["Opening op 17 april 2027","100 plaatsen op 5 ha","Verwarmd zwembad vanaf mei","Kinderboerderij en moestuin"],
+faits:["Opening op 17 april 2027","100 plaatsen op 5 ha","Verwarmd zwembad vanaf mei","Kinderboerderij en moestuin","Aanbiedingen Tribu en Couple vanaf € 189 per week, buiten juli-augustus"],
 arrivee:"Aankomst",depart:"Vertrek",personnes:"Personen",
 ardT:"Vanavond bij Les Nauves",ardP:"In juli en augustus heeft elke avond zijn eigen programma. Draai het krijtbord om van de dag die u aanspreekt.",ceSoir:"Vanavond",demain:"Morgen",retourner:"Draai het bord om",ardNote:"Op zondag een welkomstborrel; overdag kinderclub, kinderboerderij en toernooien.",ardL:"Het hele programma",
 cabT:"Kies uw hutje",cabP:"Stacaravans, chalet, safaritenten of een plek in de schaduw: elf huuraccommodaties en drie soorten kampeerplaatsen, tussen de eiken.",toutVoir:"Alle 14 opties bekijken",
@@ -869,7 +870,7 @@ consSous:"Ik help u kiezen",consAccueil:"Goedendag! Ik ben Nauves Conseil, de vi
 consMention:"Virtuele assistent: antwoorden zijn indicatief, de receptie bevestigt alles.",consPlace:"Uw vraag…",envoyer:"Verzenden",consBulle:"Stacaravan, chalet of lodge? Ik help u kiezen.",fermer:"Sluiten",
 chips:[["choix","Een accommodatie kiezen"],["chien","Met mijn hond komen"],["soiree","Vanavond op de camping"],["piscine","Het zwembad"],["arrivee","Aankomst en vertrek"],["paiement","De betaling"]],
 qPers:"Met hoeveel personen komt u?",qStyle:"Liever welke stijl?",styleConfort:"Met badkamer",styleLodge:"Safaritent",
-r:{choixRes:"Dit zou bij u passen:",aucun:"Vanaf 6 personen kan de receptie u meerdere accommodaties naast elkaar voorstellen, of een groepsarrangement.",
+r:{pmr:"Ja: aangepast sanitair met toegang voor mensen met een beperking (bad) en toegang tot de gemeenschappelijke ruimtes. Voor een geschikte accommodatie adviseert de receptie u.",choixRes:"Dit zou bij u passen:",aucun:"Vanaf 6 personen kan de receptie u meerdere accommodaties naast elkaar voorstellen, of een groepsarrangement.",
 danger:"Helaas: honden van categorie 1 en 2 (waaronder rottweiler, pitbull en staffordshire) zijn niet toegestaan.",
 chien:"Huisdieren zijn welkom, aangelijnd en met een actueel vaccinatieboekje (behalve honden van categorie 1 en 2). Toeslag: € 2 per dag in het laagseizoen, € 3 in het hoogseizoen. Bij de huuraccommodaties hangt het af van de accommodatie: graag bevestigen bij de receptie.",
 cheval:"De manege Au Bos Cheval Rouge ligt direct naast de camping, met directe toegang vanaf het terrein. Aanmelden voor de activiteiten is verplicht.",
@@ -1057,7 +1058,7 @@ function pied(){const u=T().ui;document.getElementById("pied").innerHTML=`<div c
 <h3 style="margin-top:20px">${esc(u.reseauT)}</h3><ul><li><a href="https://www.flowercampings.com/camping-dordogne/camping-les-nauves" target="_blank" rel="noopener">Flower Campings</a></li><li><a href="https://www.anwbcamping.nl/frankrijk/aquitanie/flower-camping-les-nauves" target="_blank" rel="noopener">ANWB</a></li><li><a href="https://www.boschevalrouge.fr/" target="_blank" rel="noopener">Au Bos Cheval Rouge</a></li><li><a href="https://emmenetonchien.com/h%C3%A9bergement-acceptant-les-chiens/camping-les-nauves-flower-campings" target="_blank" rel="noopener">Emmène ton chien</a></li><li>VACAF · ${esc(u.seniors)}</li></ul></div></div>
 <div class="bas"><span>© 2027 SAS Camping Les Nauves II · Pays-de-Belvès</span><span>Neovera Studio</span></div></div>`}
 
-function barre(){let b=document.getElementById("barreResa");if(!b){b=document.createElement("div");b.id="barreResa";b.className="barre-resa";document.body.appendChild(b)}b.innerHTML=btnResa()}
+function barre(){const home=route().p==="";let b=document.getElementById("barreResa");if(!b){b=document.createElement("div");b.id="barreResa";b.className="barre-resa";document.body.appendChild(b)}b.innerHTML=btnResa();b.hidden=home}
 function render(){const {p,q}=route();const f=V[p]||V[""];document.documentElement.lang=lg;document.getElementById("app").innerHTML=f(q);nav();pied();barre();
  document.title=(p&&V[p]&&p!=="h"?U(p)+" · ":p==="h"?(T().h[q]||"")+" · ":"")+"Camping Les Nauves — Proposition Neovera Studio";
  window.scrollTo(0,0);obs();bind();consTexte()}
@@ -1097,11 +1098,12 @@ const KW={
  gare:["gare","train","aéroport","aeroport","airport","station","aeropuerto","flughafen","bahnhof","aeroporto","stazione","luchthaven"],
  groupe:["groupe","group","grupo","gruppe","gruppo","groep","motard"],
  soiree:["soirée","soiree","ce soir","animation","loto","karaoké","karaoke","disco","evening","tonight","noche","abend","sera","avond"],
- prix:["prix","tarif","price","precio","preis","prezzo","prijs","promo","offre"],
+ prix:["prix","tarif","coûte","coute","combien","price","cost","how much","precio","cuesta","cuánto","preis","kostet","prezzo","costa","quanto","prijs","kost","promo","offre"],
+ pmr:["pmr","handicap","fauteuil","mobilité réduite","wheelchair","disab","silla de ruedas","rollstuhl","sedia a rotelle","rolstoel","accessib","toegankelijk","barrierefrei"],
  reserver:["réserver","reserver","réservation","book","reserv","buchen","prenot","boeken"],
  choix:["choisir","hébergement","hebergement","mobil","chalet","lodge","tente","emplacement","dormir","accommodation","stay","alojamiento","unterkunft","alloggio","accommodatie","mobile home","tent","pitch"]
 };
-const ORDRE=["danger","hors","velo","clim","wifi","laverie","linge","bebe","chien","cheval","canoe","spa","ferme","piscine","pain","resto","soiree","paiement","arrivee","gare","groupe","prix","reserver","contact","ouverture","choix"];
+const ORDRE=["danger","hors","pmr","velo","clim","wifi","laverie","linge","bebe","chien","cheval","canoe","spa","ferme","piscine","pain","resto","soiree","paiement","arrivee","gare","groupe","prix","reserver","contact","ouverture","choix"];
 let consOuvert=false;
 function consTexte(){const u=T().ui;document.getElementById("consNom").textContent=u.cons;document.getElementById("consSous").textContent=u.consSous;document.getElementById("pNom").textContent=u.cons;document.getElementById("pSous").textContent=u.consSous;document.getElementById("consMention").textContent=u.consMention;document.getElementById("q").placeholder=u.consPlace;document.getElementById("qBtn").textContent=u.envoyer;document.getElementById("bulleTxt").textContent=u.consBulle;document.querySelectorAll(".x,#pFermer").forEach(b=>b.setAttribute("aria-label",u.fermer))}
 function msg(h,qui="c"){const f=document.getElementById("filc");const d=document.createElement("div");d.className="m "+qui;d.innerHTML=h;f.appendChild(d);f.scrollTop=f.scrollHeight;return d}
@@ -1117,7 +1119,7 @@ function repond(k){const u=T().ui,r=u.r;
  if(k==="reserver"){msg(esc(r.reserver)+` <a href="${resa()}" target="_blank" rel="noopener">${esc(u.dispo)}</a>`);return}
  if(r[k]){let h=esc(r[k]);const lk={piscine:"piscine",spa:"spa",groupe:"groupes",prix:"tarifs",paiement:"tarifs",cheval:"camping",ferme:"activites",canoe:"activites",resto:"activites"}[k];if(lk)h+=` <a href="#/${lk}">${esc(u[lk])}</a>`;if(k==="inconnu")h+=` <a href="tel:${TEL}">${esc(TELV)}</a>`;msg(h);return}
  msg(esc(r.inconnu)+` <a href="tel:${TEL}">${esc(TELV)}</a>`)}
-function comprendre(t){const s=" "+t.toLowerCase().normalize("NFC")+" ";const o={k:[]};const p=s.match(/(\d+)\s*(pers|personnes|people|persons|personas|personen|persone|adultes|adults|p\b)/);if(p)o.n=+p[1];for(const k of ORDRE){if(KW[k].some(w=>s.includes(w))&&!o.k.includes(k))o.k.push(k)}return o}
+function comprendre(t){const s=" "+t.toLowerCase().normalize("NFC")+" ";const o={k:[]};const p=s.match(/(\d+)\s*(pers|personnes|people|persons|personas|personen|persone|adultes|adults|adulti|volwassenen|erwachsene|p\b)/)||s.match(/(?:sommes|on est|on sera|nous serons|we are|we're|somos|seremos|wir sind|siamo|saremo|zijn met|zijn we met|met z'n)\s*(\d+)/);if(p)o.n=+p[1];for(const k of ORDRE){if(KW[k].some(w=>s.includes(w))&&!o.k.includes(k))o.k.push(k)}return o}
 function init(){
  const sel=document.getElementById("lang");sel.innerHTML=LANGS.map(l=>`<option value="${l}" ${l===lg?"selected":""}>${L[l].nom}</option>`).join("");
  sel.onchange=()=>{lg=sel.value;try{localStorage.setItem("nauves-langue",lg)}catch(e){};document.getElementById("filc").innerHTML="";consOuvert=false;if(document.getElementById("panneau").classList.contains("on")){consOuvert=true;msg(esc(T().ui.consAccueil));chips(T().ui.chips)}render()};
