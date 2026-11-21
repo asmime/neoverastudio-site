@@ -1,0 +1,1124 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>AMF Menuiserie — Proposition Neovera Studio</title>
+<meta name="description" content="Portes et portails en bois sur mesure, dessinés, fabriqués en France et posés par AMF Menuiserie, Paris 12e.">
+<link rel="icon" href="img/logo.png">
+<style>
+@font-face{font-family:"Bricolage Grotesque";font-weight:400;font-display:swap;src:url(fonts/bricolage-grotesque-latin-400-normal.woff2) format("woff2")}
+@font-face{font-family:"Bricolage Grotesque";font-weight:500;font-display:swap;src:url(fonts/bricolage-grotesque-latin-500-normal.woff2) format("woff2")}
+@font-face{font-family:"Bricolage Grotesque";font-weight:700;font-display:swap;src:url(fonts/bricolage-grotesque-latin-700-normal.woff2) format("woff2")}
+@font-face{font-family:"Bricolage Grotesque";font-weight:800;font-display:swap;src:url(fonts/bricolage-grotesque-latin-800-normal.woff2) format("woff2")}
+@font-face{font-family:"Bricolage Grotesque";font-weight:400;font-display:swap;src:url(fonts/bricolage-grotesque-latin-ext-400-normal.woff2) format("woff2");unicode-range:U+0100-02BA,U+1E00-1EFF,U+20A0-20C0}
+@font-face{font-family:"Bricolage Grotesque";font-weight:500;font-display:swap;src:url(fonts/bricolage-grotesque-latin-ext-500-normal.woff2) format("woff2");unicode-range:U+0100-02BA,U+1E00-1EFF,U+20A0-20C0}
+@font-face{font-family:"Bricolage Grotesque";font-weight:700;font-display:swap;src:url(fonts/bricolage-grotesque-latin-ext-700-normal.woff2) format("woff2");unicode-range:U+0100-02BA,U+1E00-1EFF,U+20A0-20C0}
+@font-face{font-family:"Bricolage Grotesque";font-weight:800;font-display:swap;src:url(fonts/bricolage-grotesque-latin-ext-800-normal.woff2) format("woff2");unicode-range:U+0100-02BA,U+1E00-1EFF,U+20A0-20C0}
+@font-face{font-family:"Fragment Mono";font-weight:400;font-display:swap;src:url(fonts/fragment-mono-latin-400-normal.woff2) format("woff2")}
+@font-face{font-family:"Fragment Mono";font-weight:400;font-display:swap;src:url(fonts/fragment-mono-latin-ext-400-normal.woff2) format("woff2");unicode-range:U+0100-02BA,U+1E00-1EFF}
+:root{
+--vert:#0F4A44;--vert2:#14605A;--vert3:#0A3632;--amf:#33A08F;--platre:#EEF1EF;--platre2:#E2E8E5;--graphite:#172120;--gris:#4F5D5A;--chene:#C08B55;--chene2:#8E5D2E;--trait:rgba(238,241,239,.5);
+--t:"Bricolage Grotesque",ui-sans-serif,sans-serif;--m:"Fragment Mono",ui-monospace,monospace;
+--r:2px;--max:1240px;--g:clamp(16px,4vw,48px)}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--platre);color:var(--graphite);font:400 17px/1.6 var(--t);font-optical-sizing:auto}
+::selection{background:var(--chene);color:#fff}
+::-webkit-scrollbar{width:11px;height:8px}::-webkit-scrollbar-track{background:var(--platre2)}::-webkit-scrollbar-thumb{background:var(--vert2);border:3px solid var(--platre2);border-radius:8px}
+html{scrollbar-color:var(--vert2) var(--platre2)}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration-color:var(--chene);text-underline-offset:.2em;text-decoration-thickness:1.5px}
+:focus-visible{outline:2px solid var(--chene);outline-offset:3px}
+button,input,select,textarea{font:inherit;color:inherit}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 var(--g)}
+.mono{font-family:var(--m);font-size:.78rem;letter-spacing:.02em}
+h1,h2,h3{font-family:var(--t);font-weight:800;letter-spacing:-.025em;line-height:1.04;margin:0;text-wrap:balance}
+h2{font-size:clamp(2rem,4.6vw,3.6rem)}
+h3{font-size:1.3rem;letter-spacing:-.01em;line-height:1.2}
+p{margin:0;text-wrap:pretty}
+.lead{font-size:clamp(1.08rem,1.6vw,1.25rem);max-width:60ch}
+.btn{display:inline-flex;align-items:center;gap:.6em;min-height:48px;padding:.75em 1.3em;border-radius:var(--r);border:1.5px solid currentColor;font-weight:700;text-decoration:none;cursor:pointer;transition:background .25s,color .25s,transform .25s;background:transparent}
+.btn-chene{background:var(--chene);border-color:var(--chene);color:var(--graphite)}
+.btn-chene:hover{background:#d39d66}
+.btn-vert{background:var(--vert);border-color:var(--vert);color:var(--platre)}
+.btn-vert:hover{background:var(--vert2)}
+.btn-ligne:hover{background:var(--graphite);color:var(--platre)}
+.fleche{display:inline-block;transition:transform .3s}
+a:hover .fleche,button:hover .fleche{transform:translateX(4px)}
+/* en-tête */
+.tete{position:sticky;top:0;z-index:40;background:rgba(238,241,239,.96);backdrop-filter:saturate(1.2);border-bottom:1px solid rgba(23,33,32,.12)}
+.tete .wrap{display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:20px;min-height:72px}
+.logo img{height:44px;width:auto}
+.nav{display:flex;gap:4px;justify-content:center;flex-wrap:nowrap}
+.nav a{padding:.5em .75em;text-decoration:none;font-weight:500;font-size:.95rem;border-radius:var(--r);white-space:nowrap}
+.nav a[aria-current=page]{background:var(--vert);color:var(--platre)}
+.nav a:hover:not([aria-current=page]){background:var(--platre2)}
+.nav a.nav-devis{color:var(--chene2);font-weight:700}
+.outils{display:flex;align-items:center;gap:10px}
+.langue{display:flex;align-items:center;gap:6px;border:1.5px solid var(--graphite);border-radius:var(--r);padding:0 6px 0 10px;min-height:40px}
+.langue svg{flex:none}
+.langue select{border:0;background:transparent;font-weight:500;font-size:.92rem;padding:.4em .2em;cursor:pointer}
+.tel{display:inline-flex;align-items:center;gap:.45em;min-height:40px;padding:0 .9em;border-radius:var(--r);background:var(--vert);color:var(--platre);text-decoration:none;font-weight:700;font-size:.92rem;white-space:nowrap}
+@media (max-width:1120px){
+ .tete .wrap{grid-template-columns:auto 1fr;row-gap:0;padding-top:8px}
+ .outils{justify-self:end}
+ .nav{grid-column:1/-1;justify-content:flex-start;overflow-x:auto;scrollbar-width:none;margin:0 calc(-1*var(--g));padding:6px var(--g) 8px;-webkit-mask-image:linear-gradient(90deg,#000 85%,transparent);mask-image:linear-gradient(90deg,#000 85%,transparent)}
+ .nav::-webkit-scrollbar{display:none}
+}
+@media (max-width:620px){.logo img{height:36px}.tel .tel-num{display:none}.langue select{max-width:104px}}
+/* héros */
+.heros{background:var(--vert);color:var(--platre);overflow:hidden}
+.heros .wrap{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(24px,5vw,72px);align-items:center;padding-top:clamp(36px,6vw,80px);padding-bottom:clamp(44px,6vw,88px)}
+.heros h1{font-size:clamp(2.7rem,7.4vw,6.2rem);letter-spacing:-.04em;line-height:.95}
+.heros .lead{margin-top:22px;color:rgba(238,241,239,.86)}
+.heros .actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}
+.heros .btn-ligne{color:var(--platre)}
+.heros .btn-ligne:hover{background:var(--platre);color:var(--vert)}
+.preuves{display:flex;flex-wrap:wrap;gap:8px 22px;margin-top:30px;padding-top:18px;border-top:1px solid var(--trait);color:rgba(238,241,239,.8)}
+.preuves span::before{content:"";display:inline-block;width:7px;height:7px;background:var(--chene);margin-right:9px;transform:translateY(-2px) rotate(45deg)}
+/* la porte et ses cotes (geste signature) */
+.plan{position:relative;margin:0;padding:0 0 46px 54px;justify-self:center;width:min(100%,440px)}
+.baie{position:relative;aspect-ratio:3/4;border-radius:50% 50% 0 0/24% 24% 0 0;overflow:hidden;perspective:1300px;background:var(--vert3);box-shadow:0 0 0 1px var(--trait),0 30px 60px -30px rgba(0,0,0,.6)}
+.baie>img{width:100%;height:100%;object-fit:cover;object-position:50% 40%}
+.vantail{position:absolute;inset:0;transform-origin:0 50%;background:linear-gradient(100deg,#16645d,#11554f 60%,#0f4b45);transition:transform 1.7s cubic-bezier(.62,.04,.18,1);will-change:transform;display:grid;grid-template-rows:1.15fr 1fr;gap:9%;padding:24% 15% 11%;box-shadow:inset -1px 0 0 rgba(255,255,255,.12)}
+.vantail i{display:block;border:1.5px solid rgba(238,241,239,.38);box-shadow:inset 0 0 0 7px rgba(10,54,50,.35),inset 0 0 0 8.5px rgba(238,241,239,.22)}
+.vantail i:first-child{border-radius:50% 50% 0 0/18% 18% 0 0}
+.vantail b{position:absolute;right:11%;top:56%;width:13px;height:13px;border-radius:50%;background:var(--chene);box-shadow:0 2px 0 var(--chene2)}
+.plan.ouvert .vantail{transform:rotateY(-84deg)}
+.cote{position:absolute;color:rgba(238,241,239,.82)}
+.cote-h{left:14px;top:0;bottom:46px;width:1px;background:currentColor;transform-origin:50% 100%}
+.cote-l{left:54px;right:0;bottom:16px;height:1px;background:currentColor;transform-origin:0 50%}
+.cote::before,.cote::after{content:"";position:absolute;background:currentColor}
+.cote-h::before,.cote-h::after{left:-7px;width:15px;height:1px}.cote-h::before{top:0}.cote-h::after{bottom:0}
+.cote-l::before,.cote-l::after{top:-7px;height:15px;width:1px}.cote-l::before{left:0}.cote-l::after{right:0}
+.cote span{position:absolute;font:400 .74rem/1 var(--m);white-space:nowrap;background:var(--vert);padding:3px 6px;color:var(--platre)}
+.cote-h span{left:50%;top:50%;transform:translate(-50%,-50%) rotate(-90deg)}
+.cote-l span{left:50%;top:50%;transform:translate(-50%,-50%)}
+.plan .rappel{position:absolute;right:0;top:-6px;font:400 .72rem/1 var(--m);color:rgba(238,241,239,.6)}
+.js .plan .cote-h{transform:scaleY(0)}.js .plan .cote-l{transform:scaleX(0)}.js .plan .cote span{opacity:0}
+.plan.trace .cote-h{transform:scaleY(1);transition:transform .9s cubic-bezier(.3,.7,.2,1)}
+.plan.trace .cote-l{transform:scaleX(1);transition:transform .9s .2s cubic-bezier(.3,.7,.2,1)}
+.plan.trace .cote span{opacity:1;transition:opacity .5s .8s}
+.plan .baie{cursor:pointer}
+/* sections */
+section{position:relative}
+.bloc{padding:clamp(64px,9vw,128px) 0}
+.intro{display:grid;grid-template-columns:1fr 1.2fr;gap:clamp(28px,6vw,96px);align-items:end}
+.intro .lead{color:var(--gris)}
+.lien{display:inline-flex;align-items:center;gap:.5em;margin-top:22px;font-weight:700;text-decoration:underline}
+.index{list-style:none;margin:44px 0 0;padding:0;border-top:1px solid rgba(23,33,32,.2)}
+.index li{border-bottom:1px solid rgba(23,33,32,.2)}
+.index a{position:relative;display:grid;grid-template-columns:1fr auto auto;align-items:center;gap:20px;padding:22px 4px;text-decoration:none}
+.index h3{font-size:clamp(1.5rem,3.6vw,2.7rem);letter-spacing:-.03em;transition:transform .35s,color .35s}
+.index .mono{color:var(--gris);text-align:right}
+.index .fl{width:44px;height:44px;border:1.5px solid var(--graphite);border-radius:50%;display:grid;place-items:center;transition:background .3s,color .3s}
+.index a:hover h3{transform:translateX(10px);color:var(--vert)}
+.index a:hover .fl{background:var(--vert);color:var(--platre);border-color:var(--vert)}
+.index .apercu{position:absolute;right:120px;top:50%;width:200px;aspect-ratio:4/5;object-fit:cover;transform:translateY(-50%) rotate(-3deg) scale(.9);opacity:0;pointer-events:none;transition:opacity .3s,transform .4s;z-index:2;box-shadow:0 20px 40px -18px rgba(0,0,0,.5)}
+.index a:hover .apercu{opacity:1;transform:translateY(-50%) rotate(-3deg) scale(1)}
+.index .vign{display:none}
+@media (max-width:760px){.index a{grid-template-columns:64px 1fr auto;gap:14px;padding:14px 0}.index .vign{display:block;width:64px;height:64px;object-fit:cover}.index .mono{display:none}.index .apercu{display:none}.index .fl{width:38px;height:38px}}
+/* étapes */
+.etapes{background:var(--platre2)}
+.chaine{display:grid;grid-template-columns:repeat(3,1fr);margin-top:56px;position:relative}
+.chaine::before{content:"";position:absolute;left:0;right:0;top:0;height:1px;background:var(--graphite)}
+.chaine>div{position:relative;padding:30px 28px 0 0;border-left:1px solid var(--graphite)}
+.chaine>div:first-child{border-left:0}
+.chaine>div::before{content:"";position:absolute;left:-1px;top:-8px;height:16px;width:1px;background:var(--graphite)}
+.chaine>div:not(:first-child){padding-left:28px}
+.chaine h3{font-size:1.6rem}
+.chaine p{margin-top:10px;color:var(--gris);max-width:34ch}
+.chaine .mono{display:block;margin-top:-46px;margin-bottom:30px;color:var(--chene2);background:var(--platre2);width:max-content;padding-right:8px}
+.etapes .fin{margin-top:48px;font-size:1.15rem;max-width:56ch}
+@media (max-width:760px){.chaine{grid-template-columns:1fr;gap:34px}.chaine::before{display:none}.chaine>div,.chaine>div:not(:first-child){border-left:0;border-top:1px solid var(--graphite);padding:22px 0 0}.chaine>div::before{display:none}.chaine .mono{margin-top:0;margin-bottom:8px}}
+/* cartouche */
+.cartouche{margin-top:44px;border:1.5px solid var(--graphite);display:grid;grid-template-columns:repeat(3,1fr)}
+.cartouche .tetec{grid-column:1/-1;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;padding:12px 16px;border-bottom:1.5px solid var(--graphite);background:var(--graphite);color:var(--platre)}
+.cartouche div.c{padding:22px 18px;border-right:1px solid rgba(23,33,32,.35);border-bottom:1px solid rgba(23,33,32,.35);font-weight:700;font-size:1.12rem;line-height:1.3;min-height:104px;display:flex;flex-direction:column;justify-content:space-between;gap:12px}
+.cartouche div.c:nth-child(3n+1){border-right:0}
+.cartouche div.c .mono{font-weight:400;color:var(--chene2)}
+@media (max-width:760px){.cartouche{grid-template-columns:1fr 1fr}.cartouche div.c{border-right:1px solid rgba(23,33,32,.35)!important;min-height:92px;font-size:1rem}.cartouche div.c:nth-child(2n+1){border-right:0!important}}
+/* avis */
+.avis{background:var(--graphite);color:var(--platre)}
+.avis-grille{display:grid;grid-template-columns:1fr 1fr;gap:28px 64px;margin-top:48px}
+.avis-grille blockquote{margin:0;padding-top:20px;border-top:1px solid rgba(238,241,239,.25)}
+.avis-grille blockquote:nth-child(even){transform:translateY(48px)}
+.avis-grille p{font-size:clamp(1.15rem,2vw,1.45rem);line-height:1.4;font-weight:500}
+.avis-grille cite{display:block;margin-top:14px;font-style:normal;font-family:var(--m);font-size:.8rem;color:var(--chene)}
+.avis .lien{margin-top:88px;color:var(--platre)}
+.note-trad{margin-top:18px;color:rgba(238,241,239,.55)}
+@media (max-width:760px){.avis-grille{grid-template-columns:1fr}.avis-grille blockquote:nth-child(even){transform:none}.avis .lien{margin-top:36px}}
+/* bois */
+.bois{color:var(--platre);background:var(--vert3) url(img/planches.jpg) center/cover;isolation:isolate}
+.bois::before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(10,54,50,.96),rgba(10,54,50,.86));z-index:-1}
+.bois .lead{margin-top:18px;color:rgba(238,241,239,.85)}
+.essences{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin-top:48px;border-top:1px solid var(--trait)}
+.essences div{padding:22px 22px 0 0}
+.essences div+div{padding-left:22px;border-left:1px solid var(--trait)}
+.essences h3{font-size:1.35rem;color:var(--chene)}
+.essences p{margin-top:8px;font-size:.98rem;color:rgba(238,241,239,.85)}
+@media (max-width:900px){.essences{grid-template-columns:1fr 1fr}.essences div:nth-child(3){padding-left:0;border-left:0}.essences div{padding-bottom:22px}}
+@media (max-width:520px){.essences{grid-template-columns:1fr}.essences div,.essences div+div{padding:18px 0;border-left:0;border-bottom:1px solid var(--trait)}}
+/* galerie */
+.mosaique{display:grid;grid-template-columns:2fr 1fr 1fr;grid-template-rows:240px 240px;gap:10px;margin-top:40px}
+.mosaique img{width:100%;height:100%;object-fit:cover}
+.mosaique img:first-child{grid-row:1/3}
+.entete-sec{display:flex;justify-content:space-between;align-items:end;gap:20px;flex-wrap:wrap}
+@media (max-width:760px){.mosaique{grid-template-columns:1fr 1fr;grid-template-rows:200px 140px 140px}.mosaique img:first-child{grid-column:1/-1;grid-row:auto}.mosaique img:nth-child(n+6){display:none}}
+/* appel */
+.appel{background:var(--chene);color:var(--graphite)}
+.appel .wrap{display:grid;grid-template-columns:1.3fr 1fr;gap:32px;align-items:center}
+.appel .lead{margin-top:14px}
+.appel .actions{display:flex;flex-direction:column;gap:12px;align-items:flex-start}
+.appel .mono{display:block}
+.appel .btn-ligne:hover{background:var(--graphite);color:var(--chene)}
+@media (max-width:760px){.appel .wrap{grid-template-columns:1fr}}
+/* pied */
+.pied{background:var(--graphite);color:rgba(238,241,239,.86);padding:64px 0 28px;font-size:.95rem}
+.pied .grille{display:grid;grid-template-columns:1.2fr 1fr 1fr 1.6fr;gap:36px}
+.pied h3{font-size:.9rem;font-family:var(--m);font-weight:400;color:var(--chene);margin-bottom:14px;letter-spacing:.02em}
+.pied ul{list-style:none;margin:0;padding:0}
+.pied li{margin:.3em 0}
+.pied a{text-decoration:none}.pied a:hover{text-decoration:underline}
+.pied .reseau{columns:2;column-gap:20px;font-size:.84rem}
+.pied .bas{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;margin-top:48px;padding-top:20px;border-top:1px solid rgba(238,241,239,.18);font-size:.85rem}
+.pied .logo-b{background:var(--platre);display:inline-block;padding:8px 10px;border-radius:var(--r);margin-bottom:16px}
+.pied .logo-b img{height:34px}
+@media (max-width:900px){.pied .grille{grid-template-columns:1fr 1fr}}
+@media (max-width:520px){.pied .grille{grid-template-columns:1fr}.pied .reseau{columns:1}}
+/* pages */
+.page-tete{background:var(--vert);color:var(--platre)}
+.page-tete .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(24px,5vw,64px);align-items:center;padding-top:clamp(36px,6vw,72px);padding-bottom:clamp(36px,6vw,72px)}
+.page-tete h1{font-size:clamp(2.4rem,6vw,4.8rem);letter-spacing:-.035em}
+.page-tete .c{margin-top:14px;font-family:var(--m);font-size:.86rem;color:var(--chene)}
+.page-tete .lead{margin-top:20px;color:rgba(238,241,239,.86)}
+.page-tete .actions{margin-top:28px;display:flex;flex-wrap:wrap;gap:12px}
+.page-tete .btn-ligne{color:var(--platre)}.page-tete .btn-ligne:hover{background:var(--platre);color:var(--vert)}
+.page-tete figure{margin:0;position:relative}
+.page-tete figure img{width:100%;aspect-ratio:4/4.4;object-fit:cover;border-radius:46% 46% 0 0/22% 22% 0 0}
+.page-tete.simple .wrap{grid-template-columns:1fr}
+@media (max-width:760px){.page-tete .wrap{grid-template-columns:1fr}.page-tete figure img{aspect-ratio:4/3;border-radius:0}}
+.modeles{margin-top:40px;border-top:1px solid rgba(23,33,32,.25)}
+.modele{display:grid;grid-template-columns:120px 1fr 1.3fr;gap:28px;align-items:center;padding:26px 0;border-bottom:1px solid rgba(23,33,32,.25)}
+.modele.photo{grid-template-columns:160px 1fr 1.3fr}
+.modele img{width:160px;height:160px;object-fit:cover}
+.modele h3{font-size:1.55rem}
+.modele p{color:var(--gris)}
+@media (max-width:760px){.modele,.modele.photo{grid-template-columns:84px 1fr;gap:6px 16px}.modele img{width:84px;height:84px}.modele>p{grid-column:2}.modele>.schema,.modele>img{grid-row:span 2}}
+.schema{width:110px;height:110px;color:var(--vert)}
+@media (max-width:760px){.schema{width:84px;height:84px}}
+.schema .mur{stroke:var(--graphite);stroke-width:3}
+.schema .arc{stroke:var(--chene);stroke-width:1;stroke-dasharray:3 3;fill:none}
+.schema .vt{stroke:var(--vert);stroke-width:4;stroke-linecap:round}
+.schema .vt{transition:transform 1.1s cubic-bezier(.6,.05,.2,1)}
+.modele:hover .schema .vt,.schema.joue .vt{transform:var(--fin)}
+.specs{margin-top:36px;border:1.5px solid var(--graphite)}
+.specs div{display:grid;grid-template-columns:220px 1fr;border-bottom:1px solid rgba(23,33,32,.3)}
+.specs div:last-child{border-bottom:0}
+.specs dt{padding:16px 18px;font-weight:700;border-right:1px solid rgba(23,33,32,.3);background:var(--platre2)}
+.specs dd{margin:0;padding:16px 18px}
+@media (max-width:620px){.specs div{grid-template-columns:1fr}.specs dt{border-right:0;padding-bottom:6px}.specs dd{padding-top:6px}}
+.reno{display:grid;grid-template-columns:1fr 1fr;gap:0;background:var(--graphite);color:var(--platre);margin-top:clamp(56px,8vw,96px)}
+.reno img{width:100%;height:100%;min-height:280px;object-fit:cover}
+.reno div{padding:clamp(28px,5vw,56px);display:flex;flex-direction:column;justify-content:center;gap:16px}
+.reno h2{font-size:clamp(1.8rem,3.4vw,2.6rem)}
+@media (max-width:760px){.reno{grid-template-columns:1fr}.reno img{min-height:220px;max-height:280px}}
+.autres{display:flex;gap:10px;flex-wrap:wrap;margin-top:24px}
+.autres a{padding:.6em 1em;border:1.5px solid var(--graphite);border-radius:var(--r);text-decoration:none;font-weight:500}
+.autres a:hover{background:var(--vert);color:var(--platre);border-color:var(--vert)}
+.duo{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:40px}
+.duo img{width:100%;aspect-ratio:4/3;object-fit:cover}
+@media (max-width:520px){.duo{grid-template-columns:1fr}}
+/* galerie page */
+.filtres{display:flex;gap:8px;flex-wrap:wrap;margin-top:28px}
+.filtres button{padding:.55em 1em;border:1.5px solid var(--graphite);border-radius:var(--r);background:transparent;cursor:pointer;font-weight:500;min-height:42px}
+.filtres button[aria-pressed=true]{background:var(--graphite);color:var(--platre)}
+.galerie{columns:3 280px;column-gap:12px;margin-top:28px}
+.galerie figure{margin:0 0 12px;break-inside:avoid;position:relative;cursor:zoom-in}
+.galerie img{width:100%}
+.galerie figcaption{position:absolute;left:0;bottom:0;background:var(--platre);font:400 .74rem/1.2 var(--m);padding:6px 9px}
+.boite{position:fixed;inset:0;z-index:90;background:rgba(10,20,19,.92);display:none;place-items:center;padding:20px}
+.boite.on{display:grid}
+.boite img{max-height:86vh;max-width:min(1100px,94vw);object-fit:contain}
+.boite button{position:absolute;top:14px;right:14px;background:var(--platre);border:0;border-radius:var(--r);min-height:44px;padding:0 16px;font-weight:700;cursor:pointer}
+/* formulaires */
+.form-grille{display:grid;grid-template-columns:1.15fr .85fr;gap:clamp(28px,5vw,64px);align-items:start}
+fieldset{border:0;margin:0 0 30px;padding:0}
+legend{font-weight:800;font-size:1.25rem;letter-spacing:-.01em;margin-bottom:12px;padding:0}
+.choix{display:flex;flex-wrap:wrap;gap:8px}
+.choix label{position:relative}
+.choix input{position:absolute;opacity:0;inset:0;cursor:pointer}
+.choix span{display:inline-flex;align-items:center;min-height:44px;padding:.5em 1em;border:1.5px solid var(--graphite);border-radius:var(--r);font-weight:500;transition:background .2s}
+.choix input:checked+span{background:var(--vert);border-color:var(--vert);color:var(--platre)}
+.choix input:focus-visible+span{outline:2px solid var(--chene);outline-offset:2px}
+.champs{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.champ{display:flex;flex-direction:column;gap:6px;font-weight:500;font-size:.95rem}
+.champ.large{grid-column:1/-1}
+.champ input,.champ textarea{border:1.5px solid var(--graphite);border-radius:var(--r);background:#fff;padding:.7em .8em;min-height:48px;width:100%}
+.champ textarea{min-height:120px;resize:vertical}
+.champ input:focus,.champ textarea:focus{outline:2px solid var(--chene);outline-offset:1px}
+.coche{display:flex;gap:10px;align-items:center;margin-top:10px;font-size:.95rem}
+.coche input{width:20px;height:20px;accent-color:var(--vert)}
+.msg{margin-top:16px;padding:14px 16px;border-left:4px solid var(--vert);background:var(--platre2);display:none}
+.msg.on{display:block}
+.msg.err{border-color:#A2361F}
+@media (max-width:860px){.form-grille{grid-template-columns:1fr}.champs{grid-template-columns:1fr}}
+.plan-devis{position:sticky;top:120px;background:var(--vert);color:var(--platre);padding:28px 28px 22px}
+.plan-devis h2{font-size:1.4rem}
+.plan-devis svg{width:100%;height:auto;margin-top:16px}
+.plan-devis .resume{margin-top:12px;font:400 .8rem/1.6 var(--m);color:rgba(238,241,239,.85)}
+@media (max-width:860px){.plan-devis{position:relative;top:0;order:-1}}
+.etoiles{display:flex;gap:4px;flex-direction:row-reverse;justify-content:flex-end}
+.etoiles input{position:absolute;opacity:0}
+.etoiles label{font-size:0;width:34px;height:34px;cursor:pointer;background:currentColor;color:#c9d1ce;-webkit-mask:var(--et) center/contain no-repeat;mask:var(--et) center/contain no-repeat}
+.etoiles{--et:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 2l2.9 6.9 7.1.6-5.4 4.7 1.7 7.3L12 17.6 5.7 21.5l1.7-7.3L2 9.5l7.1-.6z'/%3E%3C/svg%3E")}
+.etoiles input:checked~label,.etoiles label:hover,.etoiles label:hover~label{color:var(--chene)}
+.etoiles input:focus-visible+label{outline:2px solid var(--vert)}
+.livre-grille{display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(28px,5vw,64px)}
+.livre-grille blockquote{margin:0 0 26px;padding-bottom:22px;border-bottom:1px solid rgba(23,33,32,.2)}
+.livre-grille blockquote p{font-size:1.2rem;font-weight:500}
+.livre-grille cite{display:block;margin-top:10px;font-style:normal;font-family:var(--m);font-size:.8rem;color:var(--chene2)}
+.livre-form{background:var(--platre2);padding:28px}
+@media (max-width:860px){.livre-grille{grid-template-columns:1fr}}
+.mentions dl{border:1.5px solid var(--graphite);margin:32px 0 0}
+.note{margin-top:20px;padding:14px 16px;background:var(--platre2);border-left:4px solid var(--chene);max-width:70ch}
+.plan-site{columns:2 260px;margin-top:28px;font-size:1.1rem}
+.plan-site a{display:block;padding:.35em 0}
+/* conseiller */
+.conseil-btn{position:fixed;right:18px;bottom:18px;z-index:60;display:flex;align-items:center;gap:12px;background:var(--graphite);color:var(--platre);border:0;border-radius:40px;padding:8px 18px 8px 8px;cursor:pointer;box-shadow:0 14px 30px -12px rgba(0,0,0,.55);text-align:left}
+.conseil-btn .ico{width:44px;height:44px;border-radius:50%;background:var(--chene);display:grid;place-items:center;flex:none}
+.conseil-btn strong{display:block;font-size:.95rem;line-height:1.1}
+.conseil-btn small{display:block;font-size:.78rem;color:rgba(238,241,239,.75)}
+.bulle{position:fixed;right:18px;bottom:86px;z-index:60;max-width:270px;background:var(--platre);border:1.5px solid var(--graphite);padding:14px 40px 14px 16px;font-size:.95rem;box-shadow:0 14px 30px -16px rgba(0,0,0,.4);display:none}
+.bulle.on{display:block;animation:monte .5s both}
+.bulle button{position:absolute;top:6px;right:6px;border:0;background:transparent;width:32px;height:32px;cursor:pointer;font-size:1.2rem}
+@keyframes monte{from{opacity:0;transform:translateY(10px)}}
+.chat{position:fixed;right:18px;bottom:18px;z-index:70;width:min(400px,calc(100vw - 24px));height:min(600px,calc(100dvh - 100px));background:var(--platre);border:1.5px solid var(--graphite);display:none;flex-direction:column;box-shadow:0 24px 60px -20px rgba(0,0,0,.5)}
+.chat.on{display:flex}
+.chat header{background:var(--vert);color:var(--platre);padding:14px 16px;display:flex;align-items:center;gap:12px}
+.chat header .ico{width:38px;height:38px;border-radius:50%;background:var(--chene);display:grid;place-items:center;flex:none}
+.chat header strong{display:block;line-height:1.1}
+.chat header small{font-family:var(--m);font-size:.72rem;color:rgba(238,241,239,.8)}
+.chat header button{margin-left:auto;background:transparent;border:1.5px solid var(--trait);color:var(--platre);border-radius:var(--r);min-height:36px;padding:0 10px;cursor:pointer}
+.fil{flex:1;overflow-y:auto;padding:16px;display:flex;flex-direction:column;gap:10px}
+.m{max-width:88%;padding:10px 13px;font-size:.95rem;line-height:1.45}
+.m.bot{background:#fff;border:1px solid rgba(23,33,32,.15);align-self:flex-start}
+.m.moi{background:var(--vert);color:var(--platre);align-self:flex-end}
+.m .liens{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px}
+.m .liens a,.m .liens button{font-size:.85rem;padding:.4em .7em;border:1.5px solid var(--vert);border-radius:var(--r);text-decoration:none;background:transparent;cursor:pointer;color:var(--vert);font-weight:500}
+.rapides{display:flex;gap:6px;flex-wrap:wrap;padding:0 16px 10px}
+.rapides button{font-size:.82rem;padding:.45em .75em;border:1.5px solid var(--graphite);background:transparent;border-radius:20px;cursor:pointer}
+.rapides button:hover{background:var(--graphite);color:var(--platre)}
+.chat form{display:flex;border-top:1.5px solid var(--graphite)}
+.chat input{flex:1;border:0;padding:14px;background:#fff;min-width:0}
+.chat input:focus{outline:2px solid var(--chene);outline-offset:-2px}
+.chat form button{border:0;background:var(--graphite);color:var(--platre);padding:0 16px;font-weight:700;cursor:pointer}
+@media (max-width:520px){.conseil-btn{right:12px;bottom:12px;padding-right:14px}.conseil-btn small{display:none}.bulle{right:12px;bottom:76px}.chat{right:12px;bottom:12px;height:calc(100dvh - 90px)}}
+/* apparitions */
+.js .apparait{opacity:0;transform:translateY(18px);transition:opacity .7s,transform .7s cubic-bezier(.2,.7,.2,1)}
+.js .apparait.vu{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{transition:none!important;animation:none!important;scroll-behavior:auto!important}.js .apparait{opacity:1;transform:none}}
+@media (max-width:860px){.heros .wrap{grid-template-columns:1fr}.heros .plan{width:min(100%,360px);margin-top:8px}.intro{grid-template-columns:1fr}}
+[hidden]{display:none!important}
+</style>
+</head>
+<body>
+<a href="#contenu" class="mono" style="position:absolute;left:-999px">Aller au contenu</a>
+<header class="tete">
+ <div class="wrap">
+  <a class="logo" href="#/" aria-label="AMF Menuiserie"><img src="img/logo.png" alt="AMF Menuiserie" width="80" height="44"></a>
+  <nav class="nav" id="nav"></nav>
+  <div class="outils">
+   <label class="langue"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="12" cy="12" r="9.5"/><path d="M2.5 12h19M12 2.5c3 3.3 3 15.7 0 19M12 2.5c-3 3.3-3 15.7 0 19"/></svg><span class="sr" style="position:absolute;left:-999px" id="lblLangue">Langue</span><select id="langue" aria-labelledby="lblLangue"></select></label>
+   <a class="tel" href="tel:+33184144517"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1z"/></svg><span class="tel-num">01 84 14 45 17</span></a>
+  </div>
+ </div>
+</header>
+<main id="contenu"></main>
+<footer class="pied" id="pied"></footer>
+<div class="bulle" id="bulle" role="status"><span id="bulleTxt"></span><button type="button" id="bulleX" aria-label="Fermer">×</button></div>
+<button class="conseil-btn" id="conseilBtn" type="button"><span class="ico"><svg width="22" height="26" viewBox="0 0 22 26" fill="none" stroke="#172120" stroke-width="1.8" aria-hidden="true"><path d="M2 25V9a9 9 0 0 1 18 0v16z"/><path d="M6 12h10v5H6zM6 20h10"/><circle cx="16.5" cy="15" r=".9" fill="#172120"/></svg></span><span><strong id="cbT">AMF Conseil</strong><small id="cbS">Je vous aide à choisir</small></span></button>
+<section class="chat" id="chat" aria-label="AMF Conseil">
+ <header><span class="ico"><svg width="18" height="22" viewBox="0 0 22 26" fill="none" stroke="#172120" stroke-width="2" aria-hidden="true"><path d="M2 25V9a9 9 0 0 1 18 0v16z"/><path d="M6 12h10v5H6z"/></svg></span><span><strong id="chT">AMF Conseil</strong><small id="chS">assistant virtuel</small></span><button type="button" id="chX">Fermer</button></header>
+ <div class="fil" id="fil" aria-live="polite"></div>
+ <div class="rapides" id="rapides"></div>
+ <form id="chatForm"><input id="chatIn" autocomplete="off" aria-label="Question"><button type="submit" id="chatEnv">Envoyer</button></form>
+</section>
+<div class="boite" id="boite" role="dialog" aria-modal="true"><img alt="" id="boiteImg"><button type="button" id="boiteX">×</button></div>
+<script>
+const L={};
+L.fr={
+nom:"Français",
+ui:{accueil:"Accueil",prestations:"Portes et portails",realisations:"Réalisations",livre:"Livre d'or",devis:"Devis gratuit",conseil:"AMF Conseil",appeler:"Appeler",langue:"Langue",menu:"Menu principal",
+heroT:"Votre porte,<br>à vos cotes.",heroP:"Portes et portails en bois sur mesure, dessinés, fabriqués en France et posés par AMF Menuiserie, à Paris 12e.",heroCta:"Dessiner mon devis gratuit",heroCote:"à vos mesures",heroH:"H",heroL:"L",
+heroPreuves:["Devis gratuit","Garantie décennale","Fabrication française"],
+introT:"Plus de 30 ans à travailler le bois",introP:"AMF Menuiserie travaille le bois sous toutes ses formes. Nous créons, rénovons et entretenons tout type de porte ou de portail, sur mesure. Chaque projet est réalisé en France par des artisans menuisiers confirmés, du premier plan à la pose.",introLien:"Voir les six portes",
+sixT:"Six portes, un seul atelier",sixP:"Choisissez l'ouvrage : nous le dessinons à vos mesures.",voir:"Découvrir",
+etapesT:"Du plan à la pose",etapes:[["Le plan","Nous dessinons les plans d'après vos idées et vos mesures. Le devis est gratuit."],["La fabrication","Votre porte est fabriquée après votre validation, en France."],["La pose","Dernières retouches, puis pose chez vous ou sur votre lieu de travail."]],etapesFin:"Un projet sur mesure s'intègre parfaitement à votre intérieur comme à votre façade.",
+cartoucheT:"Nos engagements",engagements:["Devis gratuit pour toute prestation","Fabrication sur mesure française","Études et conseils personnalisés","Tarifs compétitifs","Garantie décennale","Respect des normes en vigueur"],cartoucheRef:"AMF Menuiserie · Paris 12e",
+avisT:"Ils nous ont ouvert leur porte",avisLien:"Lire et écrire dans le livre d'or",
+boisT:"Le bon bois pour chaque porte",boisP:"Toutes nos essences sont labellisées FSC ou PEFC, issues de forêts gérées durablement.",
+bois:[["Chêne","Solide, ne se déforme pas avec le temps, demande peu d'entretien."],["Sapin, pin massif","Légers : parfaits pour les chalets et les cabanons."],["Exotiques","Ayous, sapelli, sipo, iroko, teck… denses, peu d'entretien, large choix de teintes."],["Pour l'haussmannien","Noyer, tilleul, châtaignier, chêne, merisier."]],
+galT:"Quelques réalisations",galLien:"Toute la galerie",
+appelT:"Parlons de votre porte",appelP:"Décrivez votre projet en deux minutes, ou appelez l'atelier.",telJours:"Téléphone : tous les jours, de 8 h à 23 h 30",horaires:"Toute la semaine, de 8 h à 20 h",
+coordT:"Coordonnées",horairesT:"Horaires",reseauT:"Le réseau AMF",mentions:"Mentions légales",plan:"Plan du site",
+pourquoi:"Pourquoi le sur mesure",types:"Quel modèle choisir",perso:"Votre personnalisation",reno:"Rénovation",devisPour:"Demander un devis pour cette porte",autres:"Les autres portes",
+galeriePageT:"Réalisations",galeriePageP:"Portes et portails en bois sur mesure : la galerie de l'atelier.",tout:"Tout",
+livreP:"Vos mots comptent : laissez votre avis sur notre travail.",livreForm:"Laisser un avis",note:"Votre note",email:"E-mail",nomP:"Nom ou pseudonyme",avis:"Votre avis",envoyerAvis:"Envoyer mon avis",avisMerci:"Merci ! Votre messagerie s'ouvre avec votre avis prêt à partir.",
+devisT:"Votre devis gratuit",devisP:"Quelques choix, vos mesures si vous les avez : le plan se dessine à mesure que vous remplissez.",
+dQuoi:"Quel ouvrage ?",dProjet:"Votre projet",projets:["Création","Rénovation","Entretien"],dCotes:"Vos mesures (facultatif)",hauteur:"Hauteur (cm)",largeur:"Largeur (cm)",nsp:"Je ne les connais pas encore",dOuv:"Ouverture souhaitée",ouvertures:["Battante","Coulissante","Pivotante","Pliante","À conseiller"],dBois:"Essence",essences:["Chêne","Sapin / pin","Exotique","Noyer, merisier…","À conseiller"],dMsg:"Votre projet en quelques mots",dVous:"Vos coordonnées",nom:"Nom",tel:"Téléphone",cp:"Code postal",envoyer:"Envoyer ma demande",devisMerci:"C'est noté. Votre messagerie s'ouvre avec la demande prête à partir vers l'atelier. Vous pouvez aussi appeler le 01 84 14 45 17.",requis:"Merci d'indiquer votre nom et un téléphone ou un e-mail.",planTitre:"Votre plan",planVide:"à vos mesures",
+mentionsT:"Mentions légales",mentionsTxt:[["Éditeur","AMF Menuiserie — Agencement Menuiseries Fermetures (AMF), SIREN 493 968 044."],["Adresse de l'atelier","3 bis rue Louis Braille, 75012 Paris"],["Siège (registre des entreprises)","97 boulevard Poniatowski, 75012 Paris"],["Contact","01 84 14 45 17 · artisan.amf@gmail.com"],["Hébergement","À compléter lors de la mise en ligne."]],mentionsNote:"Supplément : votre site actuel n'affiche pas de mentions légales. Cette page est préparée avec les informations publiques et sera complétée avec vous.",
+planT:"Plan du site",
+chatOuvrir:"Je vous aide à choisir",chatTitre:"AMF Conseil",chatSous:"assistant virtuel",chatPlace:"Posez votre question…",chatEnv:"Envoyer",fermer:"Fermer",bulle:"Une question sur votre porte ? Je vous aide à choisir.",
+autresSites:"Nos autres sites",
+retour:"Retour en haut"
+},
+P:{
+"porte-entree":{t:"Porte d'entrée en bois",c:"Pleine, semi-vitrée ou vitrée",why:"Le bois reste le premier choix pour une porte d'entrée : chaleureux, solide, isolant et facile à personnaliser. Nous la dessinons d'après votre maison pour qu'elle s'y intègre parfaitement. Verre, métal ou PVC peuvent s'y associer, et une structure interne en acier renforce la sécurité.",
+types:[["Pleine","Le maximum de sécurité et d'isolation, pour un aspect massif."],["Semi-vitrée","Le bon compromis : élégance, sécurité et protection contre les intempéries."],["Vitrée","Élégante et légère, elle fait entrer la lumière dans votre entrée."]],
+specs:[["Chêne","Solide et résistant, il ne se déforme pas avec le temps et demande peu d'entretien ou de traitement."],["Sapin ou pin massif","Léger : parfait pour la porte d'un chalet ou d'un cabanon."],["Bois exotiques","Ayous, sapelli, sipo, iroko… très denses, peu d'entretien, un grand choix de teintes et de textures."],["Origine","Essences labellisées FSC ou PEFC, issues de forêts gérées durablement."]],
+reno:"AMF Menuiserie rénove aussi les portes d'entrée en bois. Présentez-nous votre porte : nous la transformons comme vous le souhaitez."},
+"placard":{t:"Porte de placard en bois",c:"Battante, pliante ou coulissante",why:"Un rangement aux dimensions particulières, une idée précise de l'aspect de vos portes ? Nous fabriquons la porte de placard qui lui correspond, pour une décoration chaleureuse.",
+types:[["Battantes","Si vous avez de la place : une ouverture simple et traditionnelle, et tout l'intérieur d'un seul coup d'œil."],["Pliantes « accordéon »","Elles prennent moins de place et sont très pratiques. Vous choisissez le nombre de vantaux et le style."],["Coulissantes ou à galandage","Une ouverture originale qui n'occupe pas la pièce, avec de multiples configurations."]],
+specs:[["Ouverture","Battante, pliante ou coulissante ; nombre de portes et de vantaux au choix."],["Bois","Sapin pour sa légèreté, ou bois exotiques : cèdre rouge, teck, iroko, kosipo…"],["Poignée","Bouton, poignée verticale ou horizontale, ou intégrée à la porte."],["Finition","Brut, vernis, peint, miroir intégré, et plus encore."]],
+reno:"Une porte de placard en bois abîmée ? Nous la réparons avec soin pour qu'elle retrouve son allure du premier jour."},
+"portail":{t:"Portail en bois",c:"Battant ou coulissant, motorisable",why:"Le portail, c'est la première chose que l'on voit en arrivant chez vous. En bois et sur mesure, il donne un accueil chaleureux et traditionnel, avec des choix de personnalisation sans limite.",
+types:[["Battant","Pour une ouverture traditionnelle."],["Coulissant","Pour un aspect original et moderne."]],
+specs:[["Remplissage","Ajouré, bas plein, semi-plein ou plein."],["Forme","Droite, bombée, chapeau de gendarme, ou personnalisée."],["Motorisation","Possible, avec ou sans renfort."],["Bois","Traditionnels (chêne, hêtre, sapin, bouleau) ou exotiques et autres (teck, acajou, épicéa)."],["Finition","Brut, peinture, vernis, texture…"]],
+reno:"Nous rénovons tout type de portail en bois pour le remettre à neuf."},
+"interieure":{t:"Porte intérieure en bois",c:"Battante, coulissante, pivotante, pliante",why:"Les portes se voient chaque jour. Sur mesure, elles s'accordent à la pièce, même aux dimensions particulières, jusqu'aux portes affleurantes qui se fondent dans le mur.",
+types:[["Battante","La porte classique, qui pivote sur un axe vertical. Passage total ; prévoir au moins un mètre de dégagement. Un aspect traditionnel et familial."],["Coulissante ou à galandage","Un ou deux vantaux coulissent sur un rail, dans la cloison ou en applique. Pas de débattement : discrète, moderne, et adaptée aux personnes à mobilité réduite."],["Pivotante","Elle tourne sur des pivots, jusqu'à 360°, et peut être affleurante, presque invisible. Elle s'ouvre d'une simple pression ; panneaux lumineux, miroirs, ouverture automatisée ou anti pince-doigts possibles."],["Pliante « accordéon »","Des vantaux qui se replient sur eux-mêmes, sur un rail haut ou bas, pour moduler l'espace."]],
+specs:[["Fermeture","Battante, coulissante, pivotante ou pliante."],["Bois","Traditionnel ou exotique."],["Finitions","Rendu du bois, fermeture automatisée, pose de miroirs…"]],
+reno:"Vos portes intérieures existantes méritent une seconde vie ? Parlez-nous-en : nous étudions leur rénovation."},
+"haussmann":{t:"Porte haussmannienne en bois",c:"Moulures et tableaux, à l'ancienne",why:"Vous habitez un appartement haussmannien, ou vous rêvez d'un air parisien chez vous ? Reconnaissable à ses moulures et à ses deux ou trois tableaux, la porte haussmannienne apporte élégance et raffinement. Nous en réalisons et en rénovons de tout type.",
+types:[["Droite","La forme classique, aux dimensions de votre baie."],["Arquée ou plein cintre","Pour épouser une ouverture courbe."],["Coulissante","La porte haussmannienne existe aussi en version coulissante."]],
+specs:[["Sur mesure","Dimensions selon vos indications ; taille et nombre de tableaux au choix."],["Intégrations","Charnières invisibles, serrures, vitres."],["Style traditionnel","Patine, vernis, cire, huile naturelle, peinture ; accessoires de style ancien en fer, laiton ou porcelaine."],["Style contemporain","Céruse, wengé, naturel, blanchi, inox, chromé ou satiné."],["Bois","Noyer, tilleul, châtaignier, chêne, merisier, tous issus de forêts gérées durablement (FSC ou PEFC)."],["Moulures","Moulures de style d'époque, réalisées selon des techniques traditionnelles."]],
+reno:"Nous rénovons aussi les portes haussmanniennes d'origine, moulures comprises."},
+"porte-fenetre":{t:"Porte-fenêtre en bois",c:"À la française ou coulissante",why:"Pour vos balcons, terrasses et jardins : une grande ouverture qui laisse entrer pleinement la lumière, avec un air méditerranéen. Nos artisans confirmés la réalisent ou la rénovent avec précision.",
+types:[["Entièrement vitrée","Une baie vitrée pour laisser entrer toute la lumière."],["Avec soubassement","La beauté du bois en partie basse."],["À la française ou coulissante","Ouverture battante traditionnelle, ou coulissante et à galandage pour ne pas occuper la pièce."]],
+specs:[["Vantaux","Un ou deux, choix des portes et du type de poignée."],["Sur mesure","Chaque habitat a ses particularités : votre porte-fenêtre est adaptée à la vôtre, pour allier esthétique, solidité et isolation."],["Matériaux","Choisis selon votre demande, en tenant compte de votre budget."]],
+reno:"Nous rénovons aussi votre porte-fenêtre pour la rendre comme neuve."}
+},
+avis:[["Annie Lor","Travail rapide, propre et efficace, que dire de plus… ? Merci !"],["Jacky","Merci AMF Menuiserie pour le super travail que vous avez fait chez moi pour mes portes de placard, elles sont top !"],["Jourdan","J'ai fait appel à AMF Menuiserie pour toutes les portes de mon appartement haussmannien : travail impeccable, artisans rapides et efficaces. Je recommande fortement cette entreprise pour tous travaux de menuiserie sur mesure !"],["Sam Ogden","Je remercie la société AMF Menuiserie pour son travail remarquable dans la fabrication de mon magnifique portail en bois fait sur mesure, il est super !"]],
+chat:{
+accueil:"Bonjour, je suis AMF Conseil, l'assistant virtuel de l'atelier. Je vous aide à choisir votre porte, votre bois ou votre ouverture, et à préparer votre devis.",
+rapides:[["choisir","Quelle porte me faut-il ?"],["ouverture","Battante ou coulissante ?"],["bois","Quel bois choisir ?"],["prix","Combien ça coûte ?"],["renovation","Rénover ma porte"]],
+r:{
+choisir:"Pour quel endroit ? Choisissez, je vous montre la bonne page.",
+prix:"L'atelier ne publie pas de tarifs : tout est sur mesure, donc le prix dépend de vos dimensions, du bois et des finitions. Le devis est gratuit, et AMF s'engage sur des tarifs compétitifs.",
+delai:"Je n'ai pas d'information sur les délais : ils dépendent du projet. L'atelier vous les donnera avec le devis, ou au 01 84 14 45 17.",
+zone:"L'atelier est à Paris 12e (3 bis rue Louis Braille). Le réseau AMF présente aussi des sites pour toute l'Île-de-France (77, 78, 91, 92, 93, 94, 95) et l'Oise. Pour votre adresse précise, le plus sûr est de demander à l'atelier.",
+securite:"Pour la sécurité et l'isolation, la porte d'entrée pleine est la plus performante. Une structure interne en acier peut renforcer n'importe quel modèle, et le bois reste une matière solide et isolante.",
+bois:"Chêne : solide, il ne se déforme pas et demande peu d'entretien. Sapin ou pin : léger, idéal pour un chalet. Exotiques (iroko, sipo, sapelli, teck…) : très denses, peu d'entretien. Pour une porte haussmannienne : noyer, chêne, merisier, tilleul, châtaignier.",
+fsc:"Toutes les essences d'AMF sont labellisées FSC ou PEFC, issues de forêts gérées durablement.",
+renovation:"AMF rénove tout type de porte et de portail en bois : porte d'entrée, placards abîmés, portail, porte-fenêtre, portes haussmanniennes avec leurs moulures. Décrivez la vôtre dans le devis gratuit.",
+haussmann:"Moulures, deux ou trois tableaux, forme droite, arquée ou plein cintre, charnières invisibles, finitions à l'ancienne ou contemporaines : tout est sur la page Porte haussmannienne.",
+placard:"Battantes si vous avez de la place, pliantes pour gagner de l'espace, coulissantes ou à galandage pour ne pas empiéter sur la pièce. Finitions : brut, vernis, peint ou avec miroir.",
+portail:"Battant ou coulissant, ajouré ou plein, droit, bombé ou en chapeau de gendarme, et motorisable. En chêne, hêtre, sapin, bouleau ou bois exotique.",
+ouverture:"Battante : passage total, mais il faut environ un mètre de dégagement. Coulissante ou à galandage : aucun débattement, discrète, adaptée aux personnes à mobilité réduite. Pivotante : jusqu'à 360°, peut être affleurante. Pliante : modulable, pour les petits espaces.",
+fenetre:"La porte-fenêtre peut être entièrement vitrée ou avec soubassement en bois, à un ou deux vantaux, à la française ou coulissante.",
+entree:"Pleine pour la sécurité et l'isolation, semi-vitrée pour le compromis, vitrée pour la lumière. En chêne, sapin ou bois exotique.",
+garantie:"AMF Menuiserie travaille sous garantie décennale, dans le respect des normes en vigueur.",
+france:"Toutes les portes et tous les portails sont fabriqués sur mesure en France, par des artisans menuisiers confirmés.",
+devis:"Ça se passe en trois temps : nous dessinons les plans d'après vos idées, nous fabriquons après votre validation, puis nous posons et faisons les retouches finales. Le devis est gratuit.",
+contact:"Téléphone : 01 84 14 45 17, tous les jours de 8 h à 23 h 30. E-mail : artisan.amf@gmail.com. Atelier : 3 bis rue Louis Braille, 75012 Paris, ouvert toute la semaine de 8 h à 20 h.",
+avis:"Les clients parlent d'un travail rapide, propre et efficace, de portes haussmanniennes impeccables et d'un portail remarquable. Tous les avis sont dans le livre d'or.",
+pmr:"La porte coulissante ou à galandage est la plus adaptée aux personnes à mobilité réduite : pas de débattement, une ouverture dégagée.",
+autres:"Ce site présente les portes et les portails. Le réseau AMF a d'autres sites (escaliers, façades et devantures, volets, vérandas, meubles, fenêtres) : leurs liens sont en bas de page. Pour un projet de ce type, appelez l'atelier.",
+merci:"Avec plaisir ! Quand vous êtes prêt, le devis gratuit vous attend.",
+inconnu:"Je ne suis qu'un assistant virtuel et je n'ai pas cette information. Le plus simple : appelez l'atelier au 01 84 14 45 17 (tous les jours, 8 h–23 h 30), ou décrivez votre projet dans le devis gratuit.",
+voirPage:"Voir la page",faireDevis:"Préparer mon devis"
+}}
+};
+L.en={
+nom:"English",
+ui:{accueil:"Home",prestations:"Doors and gates",realisations:"Our work",livre:"Guestbook",devis:"Free quote",conseil:"AMF Advice",appeler:"Call",langue:"Language",menu:"Main menu",
+heroT:"Your door,<br>to your measurements.",heroP:"Made-to-measure wooden doors and gates, drawn, built in France and fitted by AMF Menuiserie, in Paris 12th.",heroCta:"Draw my free quote",heroCote:"your measurements",heroH:"H",heroL:"W",
+heroPreuves:["Free quote","10-year guarantee","Made in France"],
+introT:"Over 30 years working with wood",introP:"AMF Menuiserie works wood in all its forms. We create, restore and maintain every kind of door and gate, made to measure. Every project is carried out in France by experienced joiners, from the first drawing to fitting.",introLien:"See the six doors",
+sixT:"Six doors, one workshop",sixP:"Pick the piece: we draw it to your measurements.",voir:"Discover",
+etapesT:"From drawing to fitting",etapes:[["The drawing","We draw the plans from your ideas and measurements. The quote is free."],["The making","Your door is built in France once you approve it."],["The fitting","Final touches, then fitting at your home or workplace."]],etapesFin:"A made-to-measure piece fits your interior and your façade perfectly.",
+cartoucheT:"Our commitments",engagements:["Free quote for any job","Made-to-measure, made in France","Personal studies and advice","Competitive prices","10-year guarantee (garantie décennale)","Compliance with current standards"],cartoucheRef:"AMF Menuiserie · Paris 12th",
+avisT:"They opened their doors to us",avisLien:"Read and sign the guestbook",
+boisT:"The right wood for every door",boisP:"All our woods are FSC or PEFC certified, from sustainably managed forests.",
+bois:[["Oak","Strong, does not warp over time, needs little care."],["Fir, solid pine","Light: perfect for chalets and cabins."],["Exotic woods","Ayous, sapele, sipo, iroko, teak… dense, low-maintenance, many shades."],["For Haussmann doors","Walnut, lime, chestnut, oak, cherry."]],
+galT:"A few of our projects",galLien:"Full gallery",
+appelT:"Let's talk about your door",appelP:"Describe your project in two minutes, or call the workshop.",telJours:"Phone: every day, 8 am to 11:30 pm",horaires:"All week, 8 am to 8 pm",
+coordT:"Contact details",horairesT:"Opening hours",reseauT:"The AMF network",mentions:"Legal notice",plan:"Site map",
+pourquoi:"Why made to measure",types:"Which model",perso:"Your customisation",reno:"Restoration",devisPour:"Get a quote for this door",autres:"The other doors",
+galeriePageT:"Our work",galeriePageP:"Made-to-measure wooden doors and gates: the workshop gallery.",tout:"All",
+livreP:"Your words matter: leave a review of our work.",livreForm:"Leave a review",note:"Your rating",email:"Email",nomP:"Name or nickname",avis:"Your review",envoyerAvis:"Send my review",avisMerci:"Thank you! Your mail app opens with your review ready to send.",
+devisT:"Your free quote",devisP:"A few choices, your measurements if you have them: the drawing takes shape as you fill in.",
+dQuoi:"Which piece?",dProjet:"Your project",projets:["New","Restoration","Maintenance"],dCotes:"Your measurements (optional)",hauteur:"Height (cm)",largeur:"Width (cm)",nsp:"I don't know them yet",dOuv:"Opening",ouvertures:["Hinged","Sliding","Pivot","Folding","Advise me"],dBois:"Wood",essences:["Oak","Fir / pine","Exotic","Walnut, cherry…","Advise me"],dMsg:"Your project in a few words",dVous:"Your details",nom:"Name",tel:"Phone",cp:"Postcode",envoyer:"Send my request",devisMerci:"Done. Your mail app opens with the request ready to go to the workshop. You can also call +33 1 84 14 45 17.",requis:"Please give your name and a phone number or an email.",planTitre:"Your drawing",planVide:"your measurements",
+mentionsT:"Legal notice",mentionsTxt:[["Publisher","AMF Menuiserie — Agencement Menuiseries Fermetures (AMF), SIREN 493 968 044."],["Workshop address","3 bis rue Louis Braille, 75012 Paris"],["Registered office (company register)","97 boulevard Poniatowski, 75012 Paris"],["Contact","+33 1 84 14 45 17 · artisan.amf@gmail.com"],["Hosting","To be completed at launch."]],mentionsNote:"Extra: your current site shows no legal notice. This page is prepared from public information and will be completed with you.",
+planT:"Site map",
+chatOuvrir:"I'll help you choose",chatTitre:"AMF Advice",chatSous:"virtual assistant",chatPlace:"Ask your question…",chatEnv:"Send",fermer:"Close",bulle:"A question about your door? I'll help you choose.",
+autresSites:"Our other sites",
+retour:"Back to top"
+},
+P:{
+"porte-entree":{t:"Wooden front door",c:"Solid, half-glazed or glazed",why:"Wood is still the first choice for a front door: warm, strong, insulating and easy to personalise. We draw it to suit your home so it fits in perfectly. It can be combined with glass, metal or PVC, and an inner steel frame adds security.",
+types:[["Solid","Maximum security and insulation, with a solid look."],["Half-glazed","The right balance: elegance, security and weather protection."],["Glazed","Elegant and light, it brings daylight into your hallway."]],
+specs:[["Oak","Strong and hard-wearing, it does not warp and needs little care or treatment."],["Fir or solid pine","Light: perfect for a chalet or cabin door."],["Exotic woods","Ayous, sapele, sipo, iroko… very dense, low-maintenance, a wide choice of shades and textures."],["Origin","FSC or PEFC certified woods from sustainably managed forests."]],
+reno:"AMF Menuiserie also restores wooden front doors. Show us yours: we will transform it the way you want."},
+"placard":{t:"Wooden cupboard doors",c:"Hinged, folding or sliding",why:"Storage with unusual dimensions, a clear idea of how your doors should look? We build the cupboard doors that match, for a warm interior.",
+types:[["Hinged","If you have room: a simple, traditional opening, and everything inside at a glance."],["Folding (bi-fold)","They take less room and are very practical. You choose the number of leaves and the style."],["Sliding or pocket","An original opening that does not eat into the room, with many layouts."]],
+specs:[["Opening","Hinged, folding or sliding; number of doors and leaves to suit."],["Wood","Fir for lightness, or exotic woods: red cedar, teak, iroko, kosipo…"],["Handle","Knob, vertical or horizontal handle, or built into the door."],["Finish","Raw, varnished, painted, built-in mirror and more."]],
+reno:"A damaged wooden cupboard door? We repair it with care so it looks as good as on day one."},
+"portail":{t:"Wooden gate",c:"Swing or sliding, can be motorised",why:"Your gate is the first thing people see when they arrive. In wood and made to measure, it gives a warm, traditional welcome, with endless ways to personalise it.",
+types:[["Swing","For a traditional opening."],["Sliding","For an original, modern look."]],
+specs:[["Infill","Open-work, solid base, semi-solid or solid."],["Shape","Straight, curved, \"gendarme's hat\", or custom."],["Motorisation","Possible, with or without reinforcement."],["Wood","Traditional (oak, beech, fir, birch) or exotic and others (teak, mahogany, spruce)."],["Finish","Raw, paint, varnish, texture…"]],
+reno:"We restore every kind of wooden gate to make it like new."},
+"interieure":{t:"Wooden interior door",c:"Hinged, sliding, pivot, folding",why:"Doors are seen every day. Made to measure, they match the room, even with unusual dimensions, right down to flush doors that blend into the wall.",
+types:[["Hinged","The classic door, turning on a vertical axis. Full passage; allow at least one metre of clearance. A traditional, homely look."],["Sliding or pocket","One or two leaves slide on a rail, inside the partition or on the wall. No swing: discreet, modern and suited to people with reduced mobility."],["Pivot","It turns on pivots, up to 360°, and can be flush, almost invisible. It opens with a light push; light panels, mirrors, automatic opening or finger guards available."],["Folding (bi-fold)","Leaves that fold onto themselves, on a top or bottom rail, to adapt your space."]],
+specs:[["Closing","Hinged, sliding, pivot or folding."],["Wood","Traditional or exotic."],["Finishes","Wood finish, automatic closing, mirrors…"]],
+reno:"Do your existing interior doors deserve a second life? Tell us about them: we will look at restoring them."},
+"haussmann":{t:"Wooden Haussmann door",c:"Mouldings and panels, the traditional way",why:"Do you live in a Haussmann apartment, or dream of a Parisian feel at home? Recognisable by its mouldings and two or three panels, the Haussmann door brings elegance and refinement. We make and restore every type.",
+types:[["Straight","The classic shape, to the size of your opening."],["Arched or round-headed","To follow a curved opening."],["Sliding","The Haussmann door also comes as a sliding version."]],
+specs:[["Made to measure","Dimensions as you specify; panel size and number to suit."],["Fittings","Concealed hinges, locks, glass."],["Traditional style","Patina, varnish, wax, natural oil, paint; period-style fittings in iron, brass or porcelain."],["Contemporary style","Limed, wenge, natural, bleached, stainless, chrome or satin."],["Wood","Walnut, lime, chestnut, oak, cherry, all from sustainably managed forests (FSC or PEFC)."],["Mouldings","Period-style mouldings made with traditional techniques."]],
+reno:"We also restore original Haussmann doors, mouldings included."},
+"porte-fenetre":{t:"Wooden French window",c:"Casement or sliding",why:"For balconies, terraces and gardens: a wide opening that fills the room with light, with a Mediterranean feel. Our experienced joiners make or restore it with precision.",
+types:[["Fully glazed","A wide glazed opening to let all the light in."],["With a wooden base panel","The beauty of wood on the lower part."],["Casement or sliding","Traditional French opening, or sliding and pocket so it takes no room."]],
+specs:[["Leaves","One or two, choice of doors and handle."],["Made to measure","Every home has its own features: your French window is adapted to yours, combining looks, strength and insulation."],["Materials","Chosen for your request, with your budget in mind."]],
+reno:"We also restore your French window to make it like new."}
+},
+avis:[["Annie Lor","Quick, clean and efficient work, what more can I say…? Thank you!"],["Jacky","Thank you AMF Menuiserie for the great work on my cupboard doors at home, they are brilliant!"],["Jourdan","I hired AMF Menuiserie for all the doors in my Haussmann apartment: flawless work, fast and efficient craftsmen. I strongly recommend this company for any made-to-measure joinery!"],["Sam Ogden","Thank you to AMF Menuiserie for their remarkable work making my beautiful made-to-measure wooden gate, it's great!"]],
+avisNote:"Translated from French.",
+chat:{
+accueil:"Hello, I'm AMF Advice, the workshop's virtual assistant. I can help you choose your door, wood or opening, and prepare your quote.",
+rapides:[["choisir","Which door do I need?"],["ouverture","Hinged or sliding?"],["bois","Which wood?"],["prix","How much does it cost?"],["renovation","Restore my door"]],
+r:{
+choisir:"For which place? Pick one and I'll show you the right page.",
+prix:"The workshop doesn't publish prices: everything is made to measure, so the price depends on size, wood and finishes. The quote is free, and AMF is committed to competitive prices.",
+delai:"I have no information on lead times: they depend on the project. The workshop will give them with your quote, or on +33 1 84 14 45 17.",
+zone:"The workshop is in Paris 12th (3 bis rue Louis Braille). The AMF network also has sites for the whole Île-de-France region (77, 78, 91, 92, 93, 94, 95) and the Oise. For your exact address, best ask the workshop.",
+securite:"For security and insulation, a solid front door performs best. An inner steel frame can reinforce any model, and wood is a strong, insulating material.",
+bois:"Oak: strong, doesn't warp, little care. Fir or pine: light, ideal for a chalet. Exotic (iroko, sipo, sapele, teak…): very dense, low-maintenance. For a Haussmann door: walnut, oak, cherry, lime, chestnut.",
+fsc:"All AMF woods are FSC or PEFC certified, from sustainably managed forests.",
+renovation:"AMF restores every kind of wooden door and gate: front doors, damaged cupboards, gates, French windows, Haussmann doors with their mouldings. Describe yours in the free quote.",
+haussmann:"Mouldings, two or three panels, straight, arched or round-headed, concealed hinges, period or contemporary finishes: it's all on the Haussmann door page.",
+placard:"Hinged if you have room, folding to save space, sliding or pocket so they don't take room. Finishes: raw, varnished, painted or with a mirror.",
+portail:"Swing or sliding, open-work or solid, straight, curved or \"gendarme's hat\", and it can be motorised. In oak, beech, fir, birch or exotic wood.",
+ouverture:"Hinged: full passage, but needs about one metre of clearance. Sliding or pocket: no swing, discreet, suited to reduced mobility. Pivot: up to 360°, can be flush. Folding: flexible, for small spaces.",
+fenetre:"The French window can be fully glazed or have a wooden base panel, one or two leaves, casement or sliding.",
+entree:"Solid for security and insulation, half-glazed for balance, glazed for light. In oak, fir or exotic wood.",
+garantie:"AMF Menuiserie works under the French 10-year guarantee (garantie décennale), in line with current standards.",
+france:"All doors and gates are made to measure in France by experienced joiners.",
+devis:"Three steps: we draw the plans from your ideas, build after your approval, then fit and do the final touches. The quote is free.",
+contact:"Phone: +33 1 84 14 45 17, every day 8 am–11:30 pm. Email: artisan.amf@gmail.com. Workshop: 3 bis rue Louis Braille, 75012 Paris, open all week 8 am–8 pm.",
+avis:"Customers speak of quick, clean, efficient work, flawless Haussmann doors and a remarkable gate. All reviews are in the guestbook.",
+pmr:"A sliding or pocket door suits people with reduced mobility best: no swing and a clear opening.",
+autres:"This site covers doors and gates. The AMF network has other sites (stairs, façades and shopfronts, shutters, verandas, furniture, windows): links are at the bottom of the page. For such a project, call the workshop.",
+merci:"My pleasure! When you're ready, the free quote is waiting.",
+inconnu:"I'm only a virtual assistant and I don't have that information. Simplest: call the workshop on +33 1 84 14 45 17 (every day, 8 am–11:30 pm), or describe your project in the free quote.",
+voirPage:"See the page",faireDevis:"Prepare my quote"
+}}
+};
+L.es={
+nom:"Español",
+ui:{accueil:"Inicio",prestations:"Puertas y portones",realisations:"Trabajos",livre:"Libro de visitas",devis:"Presupuesto gratis",conseil:"AMF Consejo",appeler:"Llamar",langue:"Idioma",menu:"Menú principal",
+heroT:"Su puerta,<br>a su medida.",heroP:"Puertas y portones de madera a medida, diseñados, fabricados en Francia e instalados por AMF Menuiserie, en París 12.",heroCta:"Dibujar mi presupuesto gratis",heroCote:"a su medida",heroH:"Al",heroL:"An",
+heroPreuves:["Presupuesto gratis","Garantía decenal","Fabricación francesa"],
+introT:"Más de 30 años trabajando la madera",introP:"AMF Menuiserie trabaja la madera en todas sus formas. Creamos, renovamos y mantenemos todo tipo de puertas y portones, a medida. Cada proyecto se realiza en Francia por carpinteros con experiencia, del primer plano a la instalación.",introLien:"Ver las seis puertas",
+sixT:"Seis puertas, un solo taller",sixP:"Elija la obra: la dibujamos a su medida.",voir:"Descubrir",
+etapesT:"Del plano a la instalación",etapes:[["El plano","Dibujamos los planos según sus ideas y medidas. El presupuesto es gratis."],["La fabricación","Su puerta se fabrica en Francia tras su aprobación."],["La instalación","Últimos retoques e instalación en su casa o lugar de trabajo."]],etapesFin:"Un proyecto a medida encaja perfectamente en su interior y en su fachada.",
+cartoucheT:"Nuestros compromisos",engagements:["Presupuesto gratis para cualquier trabajo","Fabricación a medida francesa","Estudios y consejos personalizados","Precios competitivos","Garantía decenal","Cumplimiento de las normas vigentes"],cartoucheRef:"AMF Menuiserie · París 12",
+avisT:"Nos abrieron su puerta",avisLien:"Leer y escribir en el libro de visitas",
+boisT:"La madera adecuada para cada puerta",boisP:"Todas nuestras maderas tienen sello FSC o PEFC y proceden de bosques gestionados de forma sostenible.",
+bois:[["Roble","Sólido, no se deforma con el tiempo y requiere poco mantenimiento."],["Abeto, pino macizo","Ligeros: perfectos para chalés y casetas."],["Exóticas","Ayous, sapelli, sipo, iroko, teca… densas, poco mantenimiento, muchos tonos."],["Para lo haussmanniano","Nogal, tilo, castaño, roble, cerezo."]],
+galT:"Algunos trabajos",galLien:"Toda la galería",
+appelT:"Hablemos de su puerta",appelP:"Describa su proyecto en dos minutos o llame al taller.",telJours:"Teléfono: todos los días, de 8:00 a 23:30",horaires:"Toda la semana, de 8:00 a 20:00",
+coordT:"Datos de contacto",horairesT:"Horario",reseauT:"La red AMF",mentions:"Aviso legal",plan:"Mapa del sitio",
+pourquoi:"Por qué a medida",types:"Qué modelo elegir",perso:"Su personalización",reno:"Renovación",devisPour:"Pedir presupuesto para esta puerta",autres:"Las demás puertas",
+galeriePageT:"Trabajos",galeriePageP:"Puertas y portones de madera a medida: la galería del taller.",tout:"Todo",
+livreP:"Sus palabras cuentan: deje su opinión sobre nuestro trabajo.",livreForm:"Dejar una opinión",note:"Su nota",email:"Correo",nomP:"Nombre o seudónimo",avis:"Su opinión",envoyerAvis:"Enviar mi opinión",avisMerci:"¡Gracias! Su correo se abre con la opinión lista para enviar.",
+devisT:"Su presupuesto gratis",devisP:"Unas elecciones y sus medidas si las tiene: el plano se dibuja a medida que rellena.",
+dQuoi:"¿Qué obra?",dProjet:"Su proyecto",projets:["Creación","Renovación","Mantenimiento"],dCotes:"Sus medidas (opcional)",hauteur:"Alto (cm)",largeur:"Ancho (cm)",nsp:"Aún no las conozco",dOuv:"Apertura deseada",ouvertures:["Batiente","Corredera","Pivotante","Plegable","Que me aconsejen"],dBois:"Madera",essences:["Roble","Abeto / pino","Exótica","Nogal, cerezo…","Que me aconsejen"],dMsg:"Su proyecto en pocas palabras",dVous:"Sus datos",nom:"Nombre",tel:"Teléfono",cp:"Código postal",envoyer:"Enviar mi solicitud",devisMerci:"Anotado. Su correo se abre con la solicitud lista para el taller. También puede llamar al +33 1 84 14 45 17.",requis:"Indique su nombre y un teléfono o un correo.",planTitre:"Su plano",planVide:"a su medida",
+mentionsT:"Aviso legal",mentionsTxt:[["Editor","AMF Menuiserie — Agencement Menuiseries Fermetures (AMF), SIREN 493 968 044."],["Dirección del taller","3 bis rue Louis Braille, 75012 París"],["Domicilio social (registro mercantil)","97 boulevard Poniatowski, 75012 París"],["Contacto","+33 1 84 14 45 17 · artisan.amf@gmail.com"],["Alojamiento","Por completar en la puesta en línea."]],mentionsNote:"Suplemento: su sitio actual no muestra aviso legal. Esta página se ha preparado con información pública y se completará con usted.",
+planT:"Mapa del sitio",
+chatOuvrir:"Le ayudo a elegir",chatTitre:"AMF Consejo",chatSous:"asistente virtual",chatPlace:"Escriba su pregunta…",chatEnv:"Enviar",fermer:"Cerrar",bulle:"¿Una pregunta sobre su puerta? Le ayudo a elegir.",
+autresSites:"Nuestros otros sitios",
+retour:"Volver arriba"
+},
+P:{
+"porte-entree":{t:"Puerta de entrada de madera",c:"Maciza, semiacristalada o acristalada",why:"La madera sigue siendo la primera opción para una puerta de entrada: cálida, sólida, aislante y fácil de personalizar. La diseñamos según su casa para que encaje perfectamente. Puede combinarse con vidrio, metal o PVC, y una estructura interna de acero refuerza la seguridad.",
+types:[["Maciza","El máximo de seguridad y aislamiento, con aspecto robusto."],["Semiacristalada","El buen término medio: elegancia, seguridad y protección contra la intemperie."],["Acristalada","Elegante y ligera, deja entrar la luz en su entrada."]],
+specs:[["Roble","Sólido y resistente, no se deforma con el tiempo y necesita poco mantenimiento o tratamiento."],["Abeto o pino macizo","Ligero: perfecto para la puerta de un chalé o una caseta."],["Maderas exóticas","Ayous, sapelli, sipo, iroko… muy densas, poco mantenimiento, gran variedad de tonos y texturas."],["Origen","Maderas con sello FSC o PEFC, de bosques gestionados de forma sostenible."]],
+reno:"AMF Menuiserie también renueva puertas de entrada de madera. Muéstrenos la suya: la transformamos como usted desee."},
+"placard":{t:"Puerta de armario de madera",c:"Batiente, plegable o corredera",why:"¿Un armario de medidas especiales, una idea clara del aspecto de sus puertas? Fabricamos la puerta de armario que le corresponde, para una decoración cálida.",
+types:[["Batientes","Si tiene espacio: una apertura sencilla y tradicional, y todo el interior de un vistazo."],["Plegables «acordeón»","Ocupan menos espacio y son muy prácticas. Usted elige el número de hojas y el estilo."],["Correderas o empotradas","Una apertura original que no ocupa la habitación, con múltiples configuraciones."]],
+specs:[["Apertura","Batiente, plegable o corredera; número de puertas y hojas a elegir."],["Madera","Abeto por su ligereza, o maderas exóticas: cedro rojo, teca, iroko, kosipo…"],["Tirador","Pomo, tirador vertical u horizontal, o integrado en la puerta."],["Acabado","En bruto, barnizado, pintado, con espejo integrado y más."]],
+reno:"¿Una puerta de armario de madera dañada? La reparamos con cuidado para que recupere el aspecto del primer día."},
+"portail":{t:"Portón de madera",c:"Batiente o corredero, motorizable",why:"El portón es lo primero que se ve al llegar a su casa. De madera y a medida, ofrece una bienvenida cálida y tradicional, con infinitas posibilidades de personalización.",
+types:[["Batiente","Para una apertura tradicional."],["Corredero","Para un aspecto original y moderno."]],
+specs:[["Relleno","Calado, parte baja maciza, semimacizo o macizo."],["Forma","Recta, abombada, «sombrero de gendarme» o personalizada."],["Motorización","Posible, con o sin refuerzo."],["Madera","Tradicionales (roble, haya, abeto, abedul) o exóticas y otras (teca, caoba, pícea)."],["Acabado","En bruto, pintura, barniz, textura…"]],
+reno:"Renovamos todo tipo de portones de madera para dejarlos como nuevos."},
+"interieure":{t:"Puerta interior de madera",c:"Batiente, corredera, pivotante, plegable",why:"Las puertas se ven cada día. A medida, combinan con la habitación, incluso con medidas especiales, hasta las puertas enrasadas que se funden con la pared.",
+types:[["Batiente","La puerta clásica, que gira sobre un eje vertical. Paso total; prevea al menos un metro libre. Un aspecto tradicional y familiar."],["Corredera o empotrada","Una o dos hojas se deslizan por un riel, dentro del tabique o sobre la pared. Sin barrido: discreta, moderna y adaptada a personas con movilidad reducida."],["Pivotante","Gira sobre pivotes, hasta 360°, y puede quedar enrasada, casi invisible. Se abre con una simple presión; paneles luminosos, espejos, apertura automática o antiatrapamiento posibles."],["Plegable «acordeón»","Hojas que se pliegan sobre sí mismas, con riel arriba o abajo, para modular el espacio."]],
+specs:[["Cierre","Batiente, corredera, pivotante o plegable."],["Madera","Tradicional o exótica."],["Acabados","Aspecto de la madera, cierre automático, espejos…"]],
+reno:"¿Sus puertas interiores merecen una segunda vida? Cuéntenos: estudiamos su renovación."},
+"haussmann":{t:"Puerta haussmanniana de madera",c:"Molduras y cuarterones, a la antigua",why:"¿Vive en un piso haussmanniano o sueña con un aire parisino en casa? Reconocible por sus molduras y sus dos o tres cuarterones, la puerta haussmanniana aporta elegancia y refinamiento. Fabricamos y renovamos todo tipo.",
+types:[["Recta","La forma clásica, a la medida de su hueco."],["Arqueada o de medio punto","Para adaptarse a un hueco curvo."],["Corredera","La puerta haussmanniana también existe en versión corredera."]],
+specs:[["A medida","Dimensiones según sus indicaciones; tamaño y número de cuarterones a elegir."],["Integraciones","Bisagras ocultas, cerraduras, vidrios."],["Estilo tradicional","Pátina, barniz, cera, aceite natural, pintura; herrajes de estilo antiguo en hierro, latón o porcelana."],["Estilo contemporáneo","Decapado, wengué, natural, blanqueado, inox, cromado o satinado."],["Madera","Nogal, tilo, castaño, roble, cerezo, de bosques gestionados de forma sostenible (FSC o PEFC)."],["Molduras","Molduras de época, realizadas con técnicas tradicionales."]],
+reno:"También renovamos puertas haussmannianas originales, molduras incluidas."},
+"porte-fenetre":{t:"Puertaventana de madera",c:"Batiente o corredera",why:"Para balcones, terrazas y jardines: una gran abertura que deja entrar toda la luz, con aire mediterráneo. Nuestros carpinteros la fabrican o renuevan con precisión.",
+types:[["Totalmente acristalada","Un gran ventanal para dejar entrar toda la luz."],["Con zócalo","La belleza de la madera en la parte baja."],["Batiente o corredera","Apertura tradicional a la francesa, o corredera y empotrada para no ocupar la habitación."]],
+specs:[["Hojas","Una o dos; elección de puertas y tirador."],["A medida","Cada vivienda tiene sus particularidades: su puertaventana se adapta a la suya, uniendo estética, solidez y aislamiento."],["Materiales","Elegidos según su solicitud y teniendo en cuenta su presupuesto."]],
+reno:"También renovamos su puertaventana para dejarla como nueva."}
+},
+avis:[["Annie Lor","Trabajo rápido, limpio y eficaz, ¿qué más decir…? ¡Gracias!"],["Jacky","Gracias AMF Menuiserie por el gran trabajo en las puertas de mis armarios, ¡son geniales!"],["Jourdan","Encargué a AMF Menuiserie todas las puertas de mi piso haussmanniano: trabajo impecable, artesanos rápidos y eficaces. ¡Recomiendo mucho esta empresa para cualquier carpintería a medida!"],["Sam Ogden","Agradezco a AMF Menuiserie su trabajo notable en la fabricación de mi magnífico portón de madera a medida, ¡es estupendo!"]],
+avisNote:"Traducido del francés.",
+chat:{
+accueil:"Hola, soy AMF Consejo, el asistente virtual del taller. Le ayudo a elegir su puerta, su madera o su apertura, y a preparar su presupuesto.",
+rapides:[["choisir","¿Qué puerta necesito?"],["ouverture","¿Batiente o corredera?"],["bois","¿Qué madera elegir?"],["prix","¿Cuánto cuesta?"],["renovation","Renovar mi puerta"]],
+r:{
+choisir:"¿Para qué lugar? Elija y le muestro la página adecuada.",
+prix:"El taller no publica precios: todo es a medida, así que el precio depende de las medidas, la madera y los acabados. El presupuesto es gratis y AMF se compromete con precios competitivos.",
+delai:"No tengo información sobre plazos: dependen del proyecto. El taller se los dará con el presupuesto, o en el +33 1 84 14 45 17.",
+zone:"El taller está en París 12 (3 bis rue Louis Braille). La red AMF tiene también sitios para toda la región Île-de-France (77, 78, 91, 92, 93, 94, 95) y el Oise. Para su dirección exacta, lo más seguro es preguntar al taller.",
+securite:"Para seguridad y aislamiento, la puerta de entrada maciza es la más eficaz. Una estructura interna de acero puede reforzar cualquier modelo, y la madera es un material sólido y aislante.",
+bois:"Roble: sólido, no se deforma, poco mantenimiento. Abeto o pino: ligero, ideal para un chalé. Exóticas (iroko, sipo, sapelli, teca…): muy densas, poco mantenimiento. Para una puerta haussmanniana: nogal, roble, cerezo, tilo, castaño.",
+fsc:"Todas las maderas de AMF tienen sello FSC o PEFC y proceden de bosques gestionados de forma sostenible.",
+renovation:"AMF renueva todo tipo de puertas y portones de madera: entrada, armarios dañados, portones, puertaventanas, puertas haussmannianas con sus molduras. Describa la suya en el presupuesto gratis.",
+haussmann:"Molduras, dos o tres cuarterones, forma recta, arqueada o de medio punto, bisagras ocultas, acabados antiguos o contemporáneos: todo está en la página Puerta haussmanniana.",
+placard:"Batientes si tiene espacio, plegables para ganar sitio, correderas o empotradas para no invadir la habitación. Acabados: en bruto, barnizado, pintado o con espejo.",
+portail:"Batiente o corredero, calado o macizo, recto, abombado o en «sombrero de gendarme», y motorizable. En roble, haya, abeto, abedul o madera exótica.",
+ouverture:"Batiente: paso total, pero necesita un metro libre. Corredera o empotrada: sin barrido, discreta, adaptada a la movilidad reducida. Pivotante: hasta 360°, puede ser enrasada. Plegable: modulable, para espacios pequeños.",
+fenetre:"La puertaventana puede ser totalmente acristalada o con zócalo de madera, de una o dos hojas, batiente o corredera.",
+entree:"Maciza para seguridad y aislamiento, semiacristalada para el término medio, acristalada para la luz. En roble, abeto o madera exótica.",
+garantie:"AMF Menuiserie trabaja con garantía decenal y respetando las normas vigentes.",
+france:"Todas las puertas y portones se fabrican a medida en Francia por carpinteros con experiencia.",
+devis:"En tres pasos: dibujamos los planos según sus ideas, fabricamos tras su aprobación y luego instalamos y hacemos los retoques finales. El presupuesto es gratis.",
+contact:"Teléfono: +33 1 84 14 45 17, todos los días de 8:00 a 23:30. Correo: artisan.amf@gmail.com. Taller: 3 bis rue Louis Braille, 75012 París, abierto toda la semana de 8:00 a 20:00.",
+avis:"Los clientes hablan de un trabajo rápido, limpio y eficaz, de puertas haussmannianas impecables y de un portón notable. Todas las opiniones están en el libro de visitas.",
+pmr:"La puerta corredera o empotrada es la más adaptada a personas con movilidad reducida: sin barrido, apertura despejada.",
+autres:"Este sitio presenta puertas y portones. La red AMF tiene otros sitios (escaleras, fachadas y escaparates, contraventanas, galerías, muebles, ventanas): los enlaces están al pie de página. Para un proyecto así, llame al taller.",
+merci:"¡Con gusto! Cuando esté listo, el presupuesto gratis le espera.",
+inconnu:"Solo soy un asistente virtual y no tengo esa información. Lo más sencillo: llame al taller al +33 1 84 14 45 17 (todos los días, 8:00–23:30) o describa su proyecto en el presupuesto gratis.",
+voirPage:"Ver la página",faireDevis:"Preparar mi presupuesto"
+}}
+};
+L.de={
+nom:"Deutsch",
+ui:{accueil:"Start",prestations:"Türen und Tore",realisations:"Arbeiten",livre:"Gästebuch",devis:"Kostenloses Angebot",conseil:"AMF Beratung",appeler:"Anrufen",langue:"Sprache",menu:"Hauptmenü",
+heroT:"Ihre Tür,<br>nach Ihren Maßen.",heroP:"Holztüren und Holztore nach Maß – gezeichnet, in Frankreich gefertigt und montiert von AMF Menuiserie in Paris 12.",heroCta:"Mein kostenloses Angebot zeichnen",heroCote:"nach Ihren Maßen",heroH:"H",heroL:"B",
+heroPreuves:["Kostenloses Angebot","10 Jahre Gewährleistung","Gefertigt in Frankreich"],
+introT:"Über 30 Jahre Arbeit mit Holz",introP:"AMF Menuiserie bearbeitet Holz in allen Formen. Wir fertigen, renovieren und pflegen Türen und Tore jeder Art nach Maß. Jedes Projekt wird in Frankreich von erfahrenen Tischlern ausgeführt, vom ersten Plan bis zur Montage.",introLien:"Die sechs Türen ansehen",
+sixT:"Sechs Türen, eine Werkstatt",sixP:"Wählen Sie das Stück – wir zeichnen es nach Ihren Maßen.",voir:"Entdecken",
+etapesT:"Vom Plan zur Montage",etapes:[["Der Plan","Wir zeichnen die Pläne nach Ihren Ideen und Maßen. Das Angebot ist kostenlos."],["Die Fertigung","Ihre Tür wird nach Ihrer Freigabe in Frankreich gefertigt."],["Die Montage","Letzte Anpassungen, dann Montage bei Ihnen zu Hause oder am Arbeitsplatz."]],etapesFin:"Ein Maßprojekt fügt sich perfekt in Ihre Räume und Ihre Fassade ein.",
+cartoucheT:"Unsere Zusagen",engagements:["Kostenloses Angebot für jede Leistung","Maßanfertigung aus Frankreich","Persönliche Planung und Beratung","Faire Preise","10 Jahre Gewährleistung (garantie décennale)","Einhaltung der geltenden Normen"],cartoucheRef:"AMF Menuiserie · Paris 12",
+avisT:"Sie haben uns die Tür geöffnet",avisLien:"Gästebuch lesen und schreiben",
+boisT:"Das richtige Holz für jede Tür",boisP:"Alle unsere Hölzer sind FSC- oder PEFC-zertifiziert und stammen aus nachhaltig bewirtschafteten Wäldern.",
+bois:[["Eiche","Robust, verzieht sich nicht, braucht wenig Pflege."],["Tanne, Kiefer massiv","Leicht: ideal für Chalets und Gartenhäuser."],["Tropenhölzer","Ayous, Sapelli, Sipo, Iroko, Teak … dicht, pflegeleicht, viele Farbtöne."],["Für Haussmann-Türen","Nussbaum, Linde, Kastanie, Eiche, Kirsche."]],
+galT:"Einige Arbeiten",galLien:"Ganze Galerie",
+appelT:"Sprechen wir über Ihre Tür",appelP:"Beschreiben Sie Ihr Projekt in zwei Minuten oder rufen Sie die Werkstatt an.",telJours:"Telefon: täglich von 8 bis 23:30 Uhr",horaires:"Die ganze Woche, 8 bis 20 Uhr",
+coordT:"Kontakt",horairesT:"Öffnungszeiten",reseauT:"Das AMF-Netzwerk",mentions:"Impressum",plan:"Sitemap",
+pourquoi:"Warum nach Maß",types:"Welches Modell",perso:"Ihre Gestaltung",reno:"Renovierung",devisPour:"Angebot für diese Tür anfragen",autres:"Die anderen Türen",
+galeriePageT:"Arbeiten",galeriePageP:"Holztüren und Holztore nach Maß: die Galerie der Werkstatt.",tout:"Alle",
+livreP:"Ihre Worte zählen: Bewerten Sie unsere Arbeit.",livreForm:"Bewertung schreiben",note:"Ihre Note",email:"E-Mail",nomP:"Name oder Pseudonym",avis:"Ihre Bewertung",envoyerAvis:"Bewertung senden",avisMerci:"Danke! Ihr E-Mail-Programm öffnet sich mit Ihrer Bewertung.",
+devisT:"Ihr kostenloses Angebot",devisP:"Ein paar Angaben, Ihre Maße, falls vorhanden: Der Plan entsteht beim Ausfüllen.",
+dQuoi:"Welches Stück?",dProjet:"Ihr Projekt",projets:["Neuanfertigung","Renovierung","Wartung"],dCotes:"Ihre Maße (optional)",hauteur:"Höhe (cm)",largeur:"Breite (cm)",nsp:"Kenne ich noch nicht",dOuv:"Gewünschte Öffnung",ouvertures:["Drehtür","Schiebetür","Pivottür","Falttür","Beratung gewünscht"],dBois:"Holzart",essences:["Eiche","Tanne / Kiefer","Tropenholz","Nussbaum, Kirsche …","Beratung gewünscht"],dMsg:"Ihr Projekt in wenigen Worten",dVous:"Ihre Angaben",nom:"Name",tel:"Telefon",cp:"Postleitzahl",envoyer:"Anfrage senden",devisMerci:"Notiert. Ihr E-Mail-Programm öffnet sich mit der fertigen Anfrage an die Werkstatt. Sie können auch +33 1 84 14 45 17 anrufen.",requis:"Bitte geben Sie Ihren Namen und eine Telefonnummer oder E-Mail an.",planTitre:"Ihr Plan",planVide:"nach Ihren Maßen",
+mentionsT:"Impressum",mentionsTxt:[["Herausgeber","AMF Menuiserie — Agencement Menuiseries Fermetures (AMF), SIREN 493 968 044."],["Adresse der Werkstatt","3 bis rue Louis Braille, 75012 Paris"],["Sitz (Unternehmensregister)","97 boulevard Poniatowski, 75012 Paris"],["Kontakt","+33 1 84 14 45 17 · artisan.amf@gmail.com"],["Hosting","Wird bei der Veröffentlichung ergänzt."]],mentionsNote:"Zusatz: Ihre aktuelle Website zeigt kein Impressum. Diese Seite wurde mit öffentlichen Angaben vorbereitet und wird mit Ihnen vervollständigt.",
+planT:"Sitemap",
+chatOuvrir:"Ich helfe bei der Wahl",chatTitre:"AMF Beratung",chatSous:"virtueller Assistent",chatPlace:"Ihre Frage …",chatEnv:"Senden",fermer:"Schließen",bulle:"Eine Frage zu Ihrer Tür? Ich helfe Ihnen bei der Wahl.",
+autresSites:"Unsere anderen Websites",
+retour:"Nach oben"
+},
+P:{
+"porte-entree":{t:"Haustür aus Holz",c:"Voll, teilverglast oder verglast",why:"Holz ist bei Haustüren nach wie vor die erste Wahl: warm, robust, dämmend und leicht zu gestalten. Wir zeichnen sie passend zu Ihrem Haus, damit sie sich perfekt einfügt. Glas, Metall oder PVC lassen sich kombinieren, und ein innerer Stahlrahmen erhöht die Sicherheit.",
+types:[["Voll","Maximale Sicherheit und Dämmung, mit massiver Optik."],["Teilverglast","Der gute Kompromiss: Eleganz, Sicherheit und Wetterschutz."],["Verglast","Elegant und leicht, bringt Licht in Ihren Eingang."]],
+specs:[["Eiche","Robust und widerstandsfähig, verzieht sich nicht und braucht wenig Pflege oder Behandlung."],["Tanne oder Kiefer massiv","Leicht: ideal für die Tür eines Chalets oder Gartenhauses."],["Tropenhölzer","Ayous, Sapelli, Sipo, Iroko … sehr dicht, pflegeleicht, große Auswahl an Farbtönen und Strukturen."],["Herkunft","FSC- oder PEFC-zertifizierte Hölzer aus nachhaltig bewirtschafteten Wäldern."]],
+reno:"AMF Menuiserie renoviert auch Haustüren aus Holz. Zeigen Sie uns Ihre Tür – wir verwandeln sie nach Ihren Wünschen."},
+"placard":{t:"Schranktüren aus Holz",c:"Dreh-, Falt- oder Schiebetüren",why:"Ein Stauraum mit besonderen Maßen, eine klare Vorstellung vom Aussehen Ihrer Türen? Wir fertigen die passenden Schranktüren für ein warmes Wohngefühl.",
+types:[["Drehtüren","Wenn Sie Platz haben: einfache, traditionelle Öffnung, alles auf einen Blick."],["Falttüren","Sie brauchen weniger Platz und sind sehr praktisch. Anzahl der Flügel und Stil nach Wahl."],["Schiebe- oder Taschentüren","Eine originelle Öffnung, die keinen Raum beansprucht, in vielen Varianten."]],
+specs:[["Öffnung","Dreh-, Falt- oder Schiebetür; Anzahl der Türen und Flügel nach Wahl."],["Holz","Tanne wegen ihrer Leichtigkeit oder Tropenhölzer: Rotzeder, Teak, Iroko, Kosipo …"],["Griff","Knauf, senkrechter oder waagerechter Griff oder in die Tür integriert."],["Oberfläche","Roh, lackiert, gestrichen, mit Spiegel und mehr."]],
+reno:"Eine beschädigte Schranktür aus Holz? Wir reparieren sie sorgfältig, damit sie wieder wie neu aussieht."},
+"portail":{t:"Holztor",c:"Dreh- oder Schiebetor, mit Antrieb möglich",why:"Das Tor sieht man als Erstes, wenn man bei Ihnen ankommt. Aus Holz und nach Maß sorgt es für einen warmen, traditionellen Empfang, mit grenzenlosen Gestaltungsmöglichkeiten.",
+types:[["Drehtor","Für eine traditionelle Öffnung."],["Schiebetor","Für einen originellen, modernen Look."]],
+specs:[["Füllung","Offen, unten geschlossen, halb geschlossen oder geschlossen."],["Form","Gerade, gewölbt, „Gendarmenhut“ oder individuell."],["Antrieb","Möglich, mit oder ohne Verstärkung."],["Holz","Heimisch (Eiche, Buche, Tanne, Birke) oder exotisch und andere (Teak, Mahagoni, Fichte)."],["Oberfläche","Roh, Farbe, Lack, Struktur …"]],
+reno:"Wir renovieren Holztore jeder Art, damit sie wie neu werden."},
+"interieure":{t:"Innentür aus Holz",c:"Dreh-, Schiebe-, Pivot-, Falttür",why:"Türen sieht man jeden Tag. Nach Maß passen sie zum Raum, auch bei besonderen Maßen – bis hin zu flächenbündigen Türen, die mit der Wand verschmelzen.",
+types:[["Drehtür","Die klassische Tür mit senkrechter Drehachse. Voller Durchgang; mindestens einen Meter Platz einplanen. Traditionell und wohnlich."],["Schiebe- oder Taschentür","Ein oder zwei Flügel gleiten auf einer Schiene, in der Wand oder davor. Kein Schwenkbereich: dezent, modern und für Menschen mit eingeschränkter Mobilität geeignet."],["Pivottür","Sie dreht sich auf Zapfen, bis zu 360°, und kann flächenbündig, fast unsichtbar sein. Öffnet mit leichtem Druck; Leuchtpaneele, Spiegel, automatische Öffnung oder Fingerklemmschutz möglich."],["Falttür","Flügel, die sich zusammenfalten, auf einer oberen oder unteren Schiene, um den Raum flexibel zu nutzen."]],
+specs:[["Schließart","Dreh-, Schiebe-, Pivot- oder Falttür."],["Holz","Heimisch oder exotisch."],["Ausführung","Holzoptik, automatisches Schließen, Spiegel …"]],
+reno:"Ihre vorhandenen Innentüren verdienen ein zweites Leben? Sprechen Sie uns an: Wir prüfen die Renovierung."},
+"haussmann":{t:"Haussmann-Tür aus Holz",c:"Profile und Füllungen, nach alter Art",why:"Sie wohnen in einer Haussmann-Wohnung oder wünschen sich Pariser Flair? Erkennbar an ihren Zierprofilen und zwei oder drei Füllungen, bringt die Haussmann-Tür Eleganz und Raffinesse. Wir fertigen und renovieren alle Arten.",
+types:[["Gerade","Die klassische Form, passend zu Ihrer Öffnung."],["Bogen oder Rundbogen","Für eine gewölbte Öffnung."],["Schiebetür","Die Haussmann-Tür gibt es auch als Schiebetür."]],
+specs:[["Nach Maß","Maße nach Ihren Angaben; Größe und Anzahl der Füllungen nach Wahl."],["Einbauten","Verdeckte Bänder, Schlösser, Verglasung."],["Traditioneller Stil","Patina, Lack, Wachs, Naturöl, Farbe; Beschläge im alten Stil aus Eisen, Messing oder Porzellan."],["Moderner Stil","Gekalkt, Wenge, natur, gebleicht, Edelstahl, verchromt oder satiniert."],["Holz","Nussbaum, Linde, Kastanie, Eiche, Kirsche, alle aus nachhaltig bewirtschafteten Wäldern (FSC oder PEFC)."],["Profile","Zierprofile im Stil der Epoche, nach traditionellen Techniken gefertigt."]],
+reno:"Wir renovieren auch originale Haussmann-Türen, samt Zierprofilen."},
+"porte-fenetre":{t:"Fenstertür aus Holz",c:"Drehflügel oder Schiebetür",why:"Für Balkon, Terrasse und Garten: eine große Öffnung, die viel Licht hereinlässt, mit mediterranem Flair. Unsere erfahrenen Tischler fertigen oder renovieren sie präzise.",
+types:[["Voll verglast","Eine große Glasfläche für viel Licht."],["Mit Brüstungsfeld","Die Schönheit des Holzes im unteren Teil."],["Drehflügel oder Schiebetür","Klassische französische Öffnung, oder Schiebe- und Taschentür, die keinen Platz beansprucht."]],
+specs:[["Flügel","Ein oder zwei; Wahl der Türen und des Griffs."],["Nach Maß","Jedes Haus hat seine Besonderheiten: Ihre Fenstertür wird daran angepasst – schön, stabil und dämmend."],["Materialien","Passend zu Ihrem Wunsch und Ihrem Budget gewählt."]],
+reno:"Wir renovieren auch Ihre Fenstertür, damit sie wieder wie neu ist."}
+},
+avis:[["Annie Lor","Schnelle, saubere und effiziente Arbeit, was soll ich mehr sagen …? Danke!"],["Jacky","Danke, AMF Menuiserie, für die tolle Arbeit an meinen Schranktüren, sie sind super!"],["Jourdan","Ich habe AMF Menuiserie mit allen Türen meiner Haussmann-Wohnung beauftragt: einwandfreie Arbeit, schnelle und effiziente Handwerker. Ich empfehle dieses Unternehmen für jede Maßtischlerei!"],["Sam Ogden","Ich danke AMF Menuiserie für die bemerkenswerte Arbeit an meinem wunderschönen Holztor nach Maß, es ist toll!"]],
+avisNote:"Aus dem Französischen übersetzt.",
+chat:{
+accueil:"Hallo, ich bin AMF Beratung, der virtuelle Assistent der Werkstatt. Ich helfe Ihnen bei der Wahl von Tür, Holz oder Öffnung und bei der Vorbereitung Ihres Angebots.",
+rapides:[["choisir","Welche Tür brauche ich?"],["ouverture","Dreh- oder Schiebetür?"],["bois","Welches Holz?"],["prix","Was kostet das?"],["renovation","Meine Tür renovieren"]],
+r:{
+choisir:"Für welchen Ort? Wählen Sie, ich zeige Ihnen die passende Seite.",
+prix:"Die Werkstatt veröffentlicht keine Preise: Alles ist Maßarbeit, der Preis hängt von Maßen, Holz und Ausführung ab. Das Angebot ist kostenlos, und AMF sagt faire Preise zu.",
+delai:"Zu Lieferzeiten habe ich keine Angaben: Sie hängen vom Projekt ab. Die Werkstatt nennt sie mit dem Angebot oder unter +33 1 84 14 45 17.",
+zone:"Die Werkstatt liegt in Paris 12 (3 bis rue Louis Braille). Das AMF-Netzwerk hat auch Websites für die ganze Île-de-France (77, 78, 91, 92, 93, 94, 95) und das Oise. Für Ihre genaue Adresse fragen Sie am besten die Werkstatt.",
+securite:"Für Sicherheit und Dämmung ist die volle Haustür am leistungsfähigsten. Ein innerer Stahlrahmen kann jedes Modell verstärken, und Holz ist ein robustes, dämmendes Material.",
+bois:"Eiche: robust, verzieht sich nicht, wenig Pflege. Tanne oder Kiefer: leicht, ideal für ein Chalet. Tropenhölzer (Iroko, Sipo, Sapelli, Teak …): sehr dicht, pflegeleicht. Für eine Haussmann-Tür: Nussbaum, Eiche, Kirsche, Linde, Kastanie.",
+fsc:"Alle Hölzer von AMF sind FSC- oder PEFC-zertifiziert und stammen aus nachhaltig bewirtschafteten Wäldern.",
+renovation:"AMF renoviert Holztüren und -tore jeder Art: Haustüren, beschädigte Schränke, Tore, Fenstertüren, Haussmann-Türen samt Profilen. Beschreiben Sie Ihre im kostenlosen Angebot.",
+haussmann:"Profile, zwei oder drei Füllungen, gerade, Bogen oder Rundbogen, verdeckte Bänder, alte oder moderne Oberflächen: alles auf der Seite Haussmann-Tür.",
+placard:"Drehtüren, wenn Sie Platz haben, Falttüren zum Platzsparen, Schiebe- oder Taschentüren, die nicht in den Raum ragen. Oberflächen: roh, lackiert, gestrichen oder mit Spiegel.",
+portail:"Dreh- oder Schiebetor, offen oder geschlossen, gerade, gewölbt oder „Gendarmenhut“, mit Antrieb möglich. Aus Eiche, Buche, Tanne, Birke oder Tropenholz.",
+ouverture:"Drehtür: voller Durchgang, braucht aber etwa einen Meter Platz. Schiebe- oder Taschentür: kein Schwenkbereich, dezent, für eingeschränkte Mobilität geeignet. Pivottür: bis 360°, kann flächenbündig sein. Falttür: flexibel, für kleine Räume.",
+fenetre:"Die Fenstertür kann voll verglast sein oder ein Brüstungsfeld aus Holz haben, ein- oder zweiflügelig, mit Drehflügel oder als Schiebetür.",
+entree:"Voll für Sicherheit und Dämmung, teilverglast als Kompromiss, verglast für Licht. Aus Eiche, Tanne oder Tropenholz.",
+garantie:"AMF Menuiserie arbeitet mit der französischen 10-Jahres-Gewährleistung (garantie décennale) und nach geltenden Normen.",
+france:"Alle Türen und Tore werden in Frankreich von erfahrenen Tischlern nach Maß gefertigt.",
+devis:"In drei Schritten: Wir zeichnen die Pläne nach Ihren Ideen, fertigen nach Ihrer Freigabe, montieren dann und nehmen letzte Anpassungen vor. Das Angebot ist kostenlos.",
+contact:"Telefon: +33 1 84 14 45 17, täglich 8–23:30 Uhr. E-Mail: artisan.amf@gmail.com. Werkstatt: 3 bis rue Louis Braille, 75012 Paris, die ganze Woche 8–20 Uhr geöffnet.",
+avis:"Kunden loben schnelle, saubere, effiziente Arbeit, einwandfreie Haussmann-Türen und ein bemerkenswertes Tor. Alle Bewertungen stehen im Gästebuch.",
+pmr:"Die Schiebe- oder Taschentür eignet sich am besten für Menschen mit eingeschränkter Mobilität: kein Schwenkbereich, freie Öffnung.",
+autres:"Diese Website zeigt Türen und Tore. Das AMF-Netzwerk hat weitere Websites (Treppen, Fassaden und Ladenfronten, Fensterläden, Wintergärten, Möbel, Fenster): Die Links stehen unten auf der Seite. Für ein solches Projekt rufen Sie die Werkstatt an.",
+merci:"Gern geschehen! Wenn Sie bereit sind, wartet das kostenlose Angebot.",
+inconnu:"Ich bin nur ein virtueller Assistent und habe diese Information nicht. Am einfachsten: Rufen Sie die Werkstatt unter +33 1 84 14 45 17 an (täglich 8–23:30 Uhr) oder beschreiben Sie Ihr Projekt im kostenlosen Angebot.",
+voirPage:"Seite ansehen",faireDevis:"Angebot vorbereiten"
+}}
+};
+L.it={
+nom:"Italiano",
+ui:{accueil:"Home",prestations:"Porte e cancelli",realisations:"Lavori",livre:"Libro degli ospiti",devis:"Preventivo gratuito",conseil:"AMF Consiglio",appeler:"Chiama",langue:"Lingua",menu:"Menu principale",
+heroT:"La vostra porta,<br>sulle vostre misure.",heroP:"Porte e cancelli in legno su misura, disegnati, fabbricati in Francia e posati da AMF Menuiserie, a Parigi 12.",heroCta:"Disegna il mio preventivo gratuito",heroCote:"sulle vostre misure",heroH:"H",heroL:"L",
+heroPreuves:["Preventivo gratuito","Garanzia decennale","Fabbricazione francese"],
+introT:"Oltre 30 anni a lavorare il legno",introP:"AMF Menuiserie lavora il legno in tutte le sue forme. Creiamo, restauriamo e manteniamo ogni tipo di porta e cancello, su misura. Ogni progetto è realizzato in Francia da falegnami esperti, dal primo disegno alla posa.",introLien:"Vedi le sei porte",
+sixT:"Sei porte, un solo laboratorio",sixP:"Scegliete l'opera: la disegniamo sulle vostre misure.",voir:"Scopri",
+etapesT:"Dal disegno alla posa",etapes:[["Il disegno","Disegniamo i progetti secondo le vostre idee e misure. Il preventivo è gratuito."],["La fabbricazione","La vostra porta viene realizzata in Francia dopo la vostra approvazione."],["La posa","Ultimi ritocchi, poi posa a casa vostra o sul luogo di lavoro."]],etapesFin:"Un progetto su misura si integra perfettamente con i vostri interni e la vostra facciata.",
+cartoucheT:"I nostri impegni",engagements:["Preventivo gratuito per ogni lavoro","Fabbricazione su misura francese","Studi e consigli personalizzati","Prezzi competitivi","Garanzia decennale","Rispetto delle norme vigenti"],cartoucheRef:"AMF Menuiserie · Parigi 12",
+avisT:"Ci hanno aperto la loro porta",avisLien:"Leggere e scrivere nel libro degli ospiti",
+boisT:"Il legno giusto per ogni porta",boisP:"Tutti i nostri legni sono certificati FSC o PEFC, da foreste gestite in modo sostenibile.",
+bois:[["Rovere","Solido, non si deforma col tempo, richiede poca manutenzione."],["Abete, pino massello","Leggeri: perfetti per chalet e casette."],["Esotici","Ayous, sapelli, sipo, iroko, teak… densi, poca manutenzione, tante tonalità."],["Per lo stile haussmanniano","Noce, tiglio, castagno, rovere, ciliegio."]],
+galT:"Alcuni lavori",galLien:"Tutta la galleria",
+appelT:"Parliamo della vostra porta",appelP:"Descrivete il progetto in due minuti, o chiamate il laboratorio.",telJours:"Telefono: tutti i giorni, dalle 8 alle 23:30",horaires:"Tutta la settimana, dalle 8 alle 20",
+coordT:"Contatti",horairesT:"Orari",reseauT:"La rete AMF",mentions:"Note legali",plan:"Mappa del sito",
+pourquoi:"Perché su misura",types:"Quale modello",perso:"La vostra personalizzazione",reno:"Restauro",devisPour:"Chiedi un preventivo per questa porta",autres:"Le altre porte",
+galeriePageT:"Lavori",galeriePageP:"Porte e cancelli in legno su misura: la galleria del laboratorio.",tout:"Tutto",
+livreP:"Le vostre parole contano: lasciate una recensione sul nostro lavoro.",livreForm:"Lascia una recensione",note:"Il vostro voto",email:"E-mail",nomP:"Nome o pseudonimo",avis:"La vostra recensione",envoyerAvis:"Invia la recensione",avisMerci:"Grazie! La vostra posta si apre con la recensione pronta da inviare.",
+devisT:"Il vostro preventivo gratuito",devisP:"Poche scelte e le vostre misure, se le avete: il disegno prende forma mentre compilate.",
+dQuoi:"Quale opera?",dProjet:"Il vostro progetto",projets:["Nuova","Restauro","Manutenzione"],dCotes:"Le vostre misure (facoltativo)",hauteur:"Altezza (cm)",largeur:"Larghezza (cm)",nsp:"Non le conosco ancora",dOuv:"Apertura desiderata",ouvertures:["A battente","Scorrevole","Pivotante","Pieghevole","Consigliatemi"],dBois:"Essenza",essences:["Rovere","Abete / pino","Esotico","Noce, ciliegio…","Consigliatemi"],dMsg:"Il progetto in poche parole",dVous:"I vostri dati",nom:"Nome",tel:"Telefono",cp:"CAP",envoyer:"Invia la richiesta",devisMerci:"Fatto. La vostra posta si apre con la richiesta pronta per il laboratorio. Potete anche chiamare il +33 1 84 14 45 17.",requis:"Indicate il nome e un telefono o un'e-mail.",planTitre:"Il vostro disegno",planVide:"sulle vostre misure",
+mentionsT:"Note legali",mentionsTxt:[["Editore","AMF Menuiserie — Agencement Menuiseries Fermetures (AMF), SIREN 493 968 044."],["Indirizzo del laboratorio","3 bis rue Louis Braille, 75012 Parigi"],["Sede (registro delle imprese)","97 boulevard Poniatowski, 75012 Parigi"],["Contatti","+33 1 84 14 45 17 · artisan.amf@gmail.com"],["Hosting","Da completare alla pubblicazione."]],mentionsNote:"Supplemento: il vostro sito attuale non mostra note legali. Questa pagina è preparata con informazioni pubbliche e sarà completata con voi.",
+planT:"Mappa del sito",
+chatOuvrir:"Vi aiuto a scegliere",chatTitre:"AMF Consiglio",chatSous:"assistente virtuale",chatPlace:"Scrivete la domanda…",chatEnv:"Invia",fermer:"Chiudi",bulle:"Una domanda sulla vostra porta? Vi aiuto a scegliere.",
+autresSites:"I nostri altri siti",
+retour:"Torna su"
+},
+P:{
+"porte-entree":{t:"Porta d'ingresso in legno",c:"Piena, semivetrata o vetrata",why:"Il legno resta la prima scelta per una porta d'ingresso: caldo, solido, isolante e facile da personalizzare. La disegniamo secondo la vostra casa perché si integri alla perfezione. Si può abbinare a vetro, metallo o PVC, e una struttura interna in acciaio rafforza la sicurezza.",
+types:[["Piena","Il massimo di sicurezza e isolamento, con un aspetto massiccio."],["Semivetrata","Il giusto compromesso: eleganza, sicurezza e protezione dalle intemperie."],["Vetrata","Elegante e leggera, porta luce nel vostro ingresso."]],
+specs:[["Rovere","Solido e resistente, non si deforma col tempo e richiede poca manutenzione o trattamento."],["Abete o pino massello","Leggero: perfetto per la porta di uno chalet o di una casetta."],["Legni esotici","Ayous, sapelli, sipo, iroko… molto densi, poca manutenzione, ampia scelta di tonalità e venature."],["Origine","Legni certificati FSC o PEFC, da foreste gestite in modo sostenibile."]],
+reno:"AMF Menuiserie restaura anche porte d'ingresso in legno. Mostrateci la vostra: la trasformiamo come desiderate."},
+"placard":{t:"Ante per armadi in legno",c:"A battente, pieghevoli o scorrevoli",why:"Un vano dalle misure particolari, un'idea precisa dell'aspetto delle ante? Realizziamo le ante che fanno per voi, per un arredo caldo.",
+types:[["A battente","Se avete spazio: un'apertura semplice e tradizionale, e tutto l'interno con un colpo d'occhio."],["Pieghevoli «a soffietto»","Occupano meno spazio e sono pratiche. Scegliete il numero di ante e lo stile."],["Scorrevoli o a scomparsa","Un'apertura originale che non occupa la stanza, con molte configurazioni."]],
+specs:[["Apertura","A battente, pieghevole o scorrevole; numero di ante a scelta."],["Legno","Abete per la leggerezza, o legni esotici: cedro rosso, teak, iroko, kosipo…"],["Maniglia","Pomolo, maniglia verticale o orizzontale, o integrata nell'anta."],["Finitura","Grezza, verniciata, laccata, con specchio integrato e altro."]],
+reno:"Un'anta in legno rovinata? La ripariamo con cura perché torni come il primo giorno."},
+"portail":{t:"Cancello in legno",c:"A battente o scorrevole, motorizzabile",why:"Il cancello è la prima cosa che si vede arrivando da voi. In legno e su misura, offre un'accoglienza calda e tradizionale, con infinite possibilità di personalizzazione.",
+types:[["A battente","Per un'apertura tradizionale."],["Scorrevole","Per un aspetto originale e moderno."]],
+specs:[["Tamponamento","Traforato, basso pieno, semipieno o pieno."],["Forma","Dritta, bombata, «cappello da gendarme» o personalizzata."],["Motorizzazione","Possibile, con o senza rinforzo."],["Legno","Tradizionali (rovere, faggio, abete, betulla) o esotici e altri (teak, mogano, peccio)."],["Finitura","Grezza, pittura, vernice, texture…"]],
+reno:"Restauriamo ogni tipo di cancello in legno per rimetterlo a nuovo."},
+"interieure":{t:"Porta interna in legno",c:"A battente, scorrevole, pivotante, pieghevole",why:"Le porte si vedono ogni giorno. Su misura, si accordano alla stanza anche con misure particolari, fino alle porte filo muro che si confondono con la parete.",
+types:[["A battente","La porta classica, che ruota su un asse verticale. Passaggio totale; prevedere almeno un metro di spazio. Un aspetto tradizionale e familiare."],["Scorrevole o a scomparsa","Una o due ante scorrono su un binario, nella parete o esterno muro. Nessun ingombro di apertura: discreta, moderna e adatta a persone con mobilità ridotta."],["Pivotante","Ruota su perni, fino a 360°, e può essere filo muro, quasi invisibile. Si apre con una leggera pressione; pannelli luminosi, specchi, apertura automatica o salvadita possibili."],["Pieghevole «a soffietto»","Ante che si ripiegano su sé stesse, su binario alto o basso, per modulare lo spazio."]],
+specs:[["Chiusura","A battente, scorrevole, pivotante o pieghevole."],["Legno","Tradizionale o esotico."],["Finiture","Resa del legno, chiusura automatica, specchi…"]],
+reno:"Le vostre porte interne meritano una seconda vita? Parlatecene: ne studiamo il restauro."},
+"haussmann":{t:"Porta haussmanniana in legno",c:"Modanature e specchiature, all'antica",why:"Abitate in un appartamento haussmanniano o sognate un tocco parigino? Riconoscibile per le modanature e le due o tre specchiature, la porta haussmanniana porta eleganza e raffinatezza. Ne realizziamo e restauriamo di ogni tipo.",
+types:[["Dritta","La forma classica, sulle misure del vano."],["Ad arco o a tutto sesto","Per seguire un'apertura curva."],["Scorrevole","La porta haussmanniana esiste anche in versione scorrevole."]],
+specs:[["Su misura","Dimensioni secondo le vostre indicazioni; dimensioni e numero di specchiature a scelta."],["Integrazioni","Cerniere a scomparsa, serrature, vetri."],["Stile tradizionale","Patina, vernice, cera, olio naturale, pittura; accessori in stile antico in ferro, ottone o porcellana."],["Stile contemporaneo","Decapato, wengé, naturale, sbiancato, inox, cromato o satinato."],["Legno","Noce, tiglio, castagno, rovere, ciliegio, tutti da foreste gestite in modo sostenibile (FSC o PEFC)."],["Modanature","Modanature d'epoca, realizzate con tecniche tradizionali."]],
+reno:"Restauriamo anche porte haussmanniane originali, modanature comprese."},
+"porte-fenetre":{t:"Portafinestra in legno",c:"A battente o scorrevole",why:"Per balconi, terrazze e giardini: una grande apertura che lascia entrare tutta la luce, con un'aria mediterranea. I nostri falegnami esperti la realizzano o restaurano con precisione.",
+types:[["Interamente vetrata","Una grande vetrata per far entrare tutta la luce."],["Con zoccolo","La bellezza del legno nella parte bassa."],["A battente o scorrevole","Apertura tradizionale alla francese, o scorrevole e a scomparsa per non occupare la stanza."]],
+specs:[["Ante","Una o due; scelta delle ante e della maniglia."],["Su misura","Ogni casa ha le sue particolarità: la vostra portafinestra si adatta alla vostra, unendo estetica, solidità e isolamento."],["Materiali","Scelti secondo la richiesta, tenendo conto del budget."]],
+reno:"Restauriamo anche la vostra portafinestra per renderla come nuova."}
+},
+avis:[["Annie Lor","Lavoro rapido, pulito ed efficace, che dire di più…? Grazie!"],["Jacky","Grazie AMF Menuiserie per l'ottimo lavoro sulle ante dei miei armadi, sono fantastiche!"],["Jourdan","Ho affidato ad AMF Menuiserie tutte le porte del mio appartamento haussmanniano: lavoro impeccabile, artigiani rapidi ed efficienti. Consiglio vivamente questa azienda per ogni falegnameria su misura!"],["Sam Ogden","Ringrazio AMF Menuiserie per il lavoro notevole nella realizzazione del mio magnifico cancello in legno su misura, è splendido!"]],
+avisNote:"Tradotto dal francese.",
+chat:{
+accueil:"Buongiorno, sono AMF Consiglio, l'assistente virtuale del laboratorio. Vi aiuto a scegliere porta, legno o apertura, e a preparare il preventivo.",
+rapides:[["choisir","Quale porta mi serve?"],["ouverture","Battente o scorrevole?"],["bois","Quale legno?"],["prix","Quanto costa?"],["renovation","Restaurare la mia porta"]],
+r:{
+choisir:"Per quale spazio? Scegliete e vi mostro la pagina giusta.",
+prix:"Il laboratorio non pubblica prezzi: tutto è su misura, quindi il prezzo dipende da misure, legno e finiture. Il preventivo è gratuito e AMF si impegna su prezzi competitivi.",
+delai:"Non ho informazioni sui tempi: dipendono dal progetto. Il laboratorio ve li darà con il preventivo, o al +33 1 84 14 45 17.",
+zone:"Il laboratorio è a Parigi 12 (3 bis rue Louis Braille). La rete AMF ha anche siti per tutta l'Île-de-France (77, 78, 91, 92, 93, 94, 95) e l'Oise. Per il vostro indirizzo preciso, meglio chiedere al laboratorio.",
+securite:"Per sicurezza e isolamento, la porta d'ingresso piena è la più efficace. Una struttura interna in acciaio può rinforzare ogni modello, e il legno è un materiale solido e isolante.",
+bois:"Rovere: solido, non si deforma, poca manutenzione. Abete o pino: leggero, ideale per uno chalet. Esotici (iroko, sipo, sapelli, teak…): molto densi, poca manutenzione. Per una porta haussmanniana: noce, rovere, ciliegio, tiglio, castagno.",
+fsc:"Tutti i legni AMF sono certificati FSC o PEFC, da foreste gestite in modo sostenibile.",
+renovation:"AMF restaura ogni tipo di porta e cancello in legno: ingresso, armadi rovinati, cancelli, portefinestre, porte haussmanniane con le loro modanature. Descrivete la vostra nel preventivo gratuito.",
+haussmann:"Modanature, due o tre specchiature, forma dritta, ad arco o a tutto sesto, cerniere a scomparsa, finiture antiche o contemporanee: è tutto nella pagina Porta haussmanniana.",
+placard:"A battente se avete spazio, pieghevoli per guadagnarne, scorrevoli o a scomparsa per non invadere la stanza. Finiture: grezza, verniciata, laccata o con specchio.",
+portail:"A battente o scorrevole, traforato o pieno, dritto, bombato o a «cappello da gendarme», e motorizzabile. In rovere, faggio, abete, betulla o legno esotico.",
+ouverture:"A battente: passaggio totale, ma serve circa un metro di spazio. Scorrevole o a scomparsa: nessun ingombro, discreta, adatta alla mobilità ridotta. Pivotante: fino a 360°, può essere filo muro. Pieghevole: modulabile, per spazi piccoli.",
+fenetre:"La portafinestra può essere interamente vetrata o con zoccolo in legno, a una o due ante, a battente o scorrevole.",
+entree:"Piena per sicurezza e isolamento, semivetrata come compromesso, vetrata per la luce. In rovere, abete o legno esotico.",
+garantie:"AMF Menuiserie lavora con garanzia decennale e nel rispetto delle norme vigenti.",
+france:"Tutte le porte e i cancelli sono fabbricati su misura in Francia da falegnami esperti.",
+devis:"In tre tempi: disegniamo i progetti secondo le vostre idee, fabbrichiamo dopo la vostra approvazione, poi posiamo e facciamo gli ultimi ritocchi. Il preventivo è gratuito.",
+contact:"Telefono: +33 1 84 14 45 17, tutti i giorni 8–23:30. E-mail: artisan.amf@gmail.com. Laboratorio: 3 bis rue Louis Braille, 75012 Parigi, aperto tutta la settimana 8–20.",
+avis:"I clienti parlano di un lavoro rapido, pulito ed efficace, di porte haussmanniane impeccabili e di un cancello notevole. Tutte le recensioni sono nel libro degli ospiti.",
+pmr:"La porta scorrevole o a scomparsa è la più adatta a persone con mobilità ridotta: nessun ingombro, apertura libera.",
+autres:"Questo sito presenta porte e cancelli. La rete AMF ha altri siti (scale, facciate e vetrine, persiane, verande, mobili, finestre): i link sono in fondo alla pagina. Per un progetto del genere, chiamate il laboratorio.",
+merci:"Con piacere! Quando siete pronti, il preventivo gratuito vi aspetta.",
+inconnu:"Sono solo un assistente virtuale e non ho questa informazione. La cosa più semplice: chiamate il laboratorio al +33 1 84 14 45 17 (tutti i giorni, 8–23:30) o descrivete il progetto nel preventivo gratuito.",
+voirPage:"Vedi la pagina",faireDevis:"Prepara il preventivo"
+}}
+};
+L.pt={
+nom:"Português",
+ui:{accueil:"Início",prestations:"Portas e portões",realisations:"Trabalhos",livre:"Livro de visitas",devis:"Orçamento grátis",conseil:"AMF Conselho",appeler:"Ligar",langue:"Idioma",menu:"Menu principal",
+heroT:"A sua porta,<br>à sua medida.",heroP:"Portas e portões de madeira por medida, desenhados, fabricados em França e instalados pela AMF Menuiserie, em Paris 12.",heroCta:"Desenhar o meu orçamento grátis",heroCote:"à sua medida",heroH:"A",heroL:"L",
+heroPreuves:["Orçamento grátis","Garantia decenal","Fabrico francês"],
+introT:"Mais de 30 anos a trabalhar a madeira",introP:"A AMF Menuiserie trabalha a madeira em todas as suas formas. Criamos, renovamos e mantemos todo o tipo de portas e portões, por medida. Cada projeto é feito em França por carpinteiros experientes, do primeiro desenho à instalação.",introLien:"Ver as seis portas",
+sixT:"Seis portas, uma só oficina",sixP:"Escolha a obra: desenhamo-la à sua medida.",voir:"Descobrir",
+etapesT:"Do desenho à instalação",etapes:[["O desenho","Desenhamos os planos segundo as suas ideias e medidas. O orçamento é grátis."],["O fabrico","A sua porta é fabricada em França depois da sua aprovação."],["A instalação","Últimos retoques e instalação em sua casa ou no local de trabalho."]],etapesFin:"Um projeto por medida integra-se na perfeição no seu interior e na sua fachada.",
+cartoucheT:"Os nossos compromissos",engagements:["Orçamento grátis para qualquer serviço","Fabrico por medida francês","Estudos e conselhos personalizados","Preços competitivos","Garantia decenal","Respeito pelas normas em vigor"],cartoucheRef:"AMF Menuiserie · Paris 12",
+avisT:"Abriram-nos a sua porta",avisLien:"Ler e escrever no livro de visitas",
+boisT:"A madeira certa para cada porta",boisP:"Todas as nossas madeiras têm certificação FSC ou PEFC e vêm de florestas geridas de forma sustentável.",
+bois:[["Carvalho","Sólido, não deforma com o tempo e pede pouca manutenção."],["Abeto, pinho maciço","Leves: perfeitos para chalés e casotas."],["Exóticas","Ayous, sapelli, sipo, iroko, teca… densas, pouca manutenção, muitos tons."],["Para o estilo haussmanniano","Nogueira, tília, castanheiro, carvalho, cerejeira."]],
+galT:"Alguns trabalhos",galLien:"Toda a galeria",
+appelT:"Falemos da sua porta",appelP:"Descreva o seu projeto em dois minutos ou ligue para a oficina.",telJours:"Telefone: todos os dias, das 8h às 23h30",horaires:"Toda a semana, das 8h às 20h",
+coordT:"Contactos",horairesT:"Horário",reseauT:"A rede AMF",mentions:"Aviso legal",plan:"Mapa do site",
+pourquoi:"Porquê por medida",types:"Que modelo escolher",perso:"A sua personalização",reno:"Renovação",devisPour:"Pedir orçamento para esta porta",autres:"As outras portas",
+galeriePageT:"Trabalhos",galeriePageP:"Portas e portões de madeira por medida: a galeria da oficina.",tout:"Tudo",
+livreP:"As suas palavras contam: deixe a sua opinião sobre o nosso trabalho.",livreForm:"Deixar uma opinião",note:"A sua nota",email:"E-mail",nomP:"Nome ou pseudónimo",avis:"A sua opinião",envoyerAvis:"Enviar a minha opinião",avisMerci:"Obrigado! O seu e-mail abre com a opinião pronta a enviar.",
+devisT:"O seu orçamento grátis",devisP:"Algumas escolhas e as suas medidas, se as tiver: o desenho ganha forma à medida que preenche.",
+dQuoi:"Que obra?",dProjet:"O seu projeto",projets:["Criação","Renovação","Manutenção"],dCotes:"As suas medidas (opcional)",hauteur:"Altura (cm)",largeur:"Largura (cm)",nsp:"Ainda não as sei",dOuv:"Abertura desejada",ouvertures:["De batente","De correr","Pivotante","Dobrável","Aconselhem-me"],dBois:"Madeira",essences:["Carvalho","Abeto / pinho","Exótica","Nogueira, cerejeira…","Aconselhem-me"],dMsg:"O seu projeto em poucas palavras",dVous:"Os seus dados",nom:"Nome",tel:"Telefone",cp:"Código postal",envoyer:"Enviar o meu pedido",devisMerci:"Registado. O seu e-mail abre com o pedido pronto para a oficina. Também pode ligar para +33 1 84 14 45 17.",requis:"Indique o seu nome e um telefone ou e-mail.",planTitre:"O seu desenho",planVide:"à sua medida",
+mentionsT:"Aviso legal",mentionsTxt:[["Editor","AMF Menuiserie — Agencement Menuiseries Fermetures (AMF), SIREN 493 968 044."],["Morada da oficina","3 bis rue Louis Braille, 75012 Paris"],["Sede (registo comercial)","97 boulevard Poniatowski, 75012 Paris"],["Contacto","+33 1 84 14 45 17 · artisan.amf@gmail.com"],["Alojamento","A completar na publicação."]],mentionsNote:"Suplemento: o seu site atual não mostra aviso legal. Esta página foi preparada com informação pública e será completada consigo.",
+planT:"Mapa do site",
+chatOuvrir:"Ajudo-o a escolher",chatTitre:"AMF Conselho",chatSous:"assistente virtual",chatPlace:"Escreva a sua pergunta…",chatEnv:"Enviar",fermer:"Fechar",bulle:"Uma pergunta sobre a sua porta? Ajudo-o a escolher.",
+autresSites:"Os nossos outros sites",
+retour:"Voltar ao topo"
+},
+P:{
+"porte-entree":{t:"Porta de entrada em madeira",c:"Maciça, semienvidraçada ou envidraçada",why:"A madeira continua a ser a primeira escolha para uma porta de entrada: acolhedora, sólida, isolante e fácil de personalizar. Desenhamo-la de acordo com a sua casa para se integrar na perfeição. Pode combinar vidro, metal ou PVC, e uma estrutura interna em aço reforça a segurança.",
+types:[["Maciça","O máximo de segurança e isolamento, com aspeto robusto."],["Semienvidraçada","O bom compromisso: elegância, segurança e proteção contra o mau tempo."],["Envidraçada","Elegante e leve, deixa entrar a luz no seu hall."]],
+specs:[["Carvalho","Sólido e resistente, não deforma com o tempo e pede pouca manutenção ou tratamento."],["Abeto ou pinho maciço","Leve: perfeito para a porta de um chalé ou de uma casota."],["Madeiras exóticas","Ayous, sapelli, sipo, iroko… muito densas, pouca manutenção, grande escolha de tons e texturas."],["Origem","Madeiras com certificação FSC ou PEFC, de florestas geridas de forma sustentável."]],
+reno:"A AMF Menuiserie também renova portas de entrada em madeira. Mostre-nos a sua: transformamo-la como deseja."},
+"placard":{t:"Portas de roupeiro em madeira",c:"De batente, dobráveis ou de correr",why:"Um roupeiro com medidas especiais, uma ideia clara do aspeto das portas? Fabricamos a porta de roupeiro que lhe corresponde, para uma decoração acolhedora.",
+types:[["De batente","Se tem espaço: uma abertura simples e tradicional, e todo o interior num relance."],["Dobráveis «em fole»","Ocupam menos espaço e são muito práticas. Escolhe o número de folhas e o estilo."],["De correr ou embutidas","Uma abertura original que não ocupa a divisão, com várias configurações."]],
+specs:[["Abertura","De batente, dobrável ou de correr; número de portas e folhas à escolha."],["Madeira","Abeto pela leveza, ou madeiras exóticas: cedro-vermelho, teca, iroko, kosipo…"],["Puxador","Botão, puxador vertical ou horizontal, ou integrado na porta."],["Acabamento","Em bruto, envernizado, pintado, com espelho integrado e mais."]],
+reno:"Uma porta de roupeiro em madeira danificada? Reparamo-la com cuidado para recuperar o aspeto do primeiro dia."},
+"portail":{t:"Portão de madeira",c:"De batente ou de correr, motorizável",why:"O portão é a primeira coisa que se vê ao chegar a sua casa. Em madeira e por medida, dá um acolhimento caloroso e tradicional, com infinitas opções de personalização.",
+types:[["De batente","Para uma abertura tradicional."],["De correr","Para um aspeto original e moderno."]],
+specs:[["Enchimento","Vazado, base cheia, semicheio ou cheio."],["Forma","Reta, abaulada, «chapéu de gendarme» ou personalizada."],["Motorização","Possível, com ou sem reforço."],["Madeira","Tradicionais (carvalho, faia, abeto, bétula) ou exóticas e outras (teca, mogno, espruce)."],["Acabamento","Em bruto, tinta, verniz, textura…"]],
+reno:"Renovamos todo o tipo de portões de madeira para os deixar como novos."},
+"interieure":{t:"Porta interior em madeira",c:"De batente, de correr, pivotante, dobrável",why:"As portas veem-se todos os dias. Por medida, combinam com a divisão, mesmo com medidas especiais, até às portas rasantes que se fundem com a parede.",
+types:[["De batente","A porta clássica, que roda num eixo vertical. Passagem total; conte com pelo menos um metro livre. Um aspeto tradicional e familiar."],["De correr ou embutida","Uma ou duas folhas deslizam num carril, dentro da parede ou à face. Sem área de abertura: discreta, moderna e adaptada a pessoas com mobilidade reduzida."],["Pivotante","Roda sobre pivôs, até 360°, e pode ser rasante, quase invisível. Abre com uma simples pressão; painéis luminosos, espelhos, abertura automática ou anti-entalamento possíveis."],["Dobrável «em fole»","Folhas que se dobram sobre si mesmas, em carril superior ou inferior, para modular o espaço."]],
+specs:[["Fecho","De batente, de correr, pivotante ou dobrável."],["Madeira","Tradicional ou exótica."],["Acabamentos","Aspeto da madeira, fecho automático, espelhos…"]],
+reno:"As suas portas interiores merecem uma segunda vida? Fale connosco: estudamos a renovação."},
+"haussmann":{t:"Porta haussmanniana em madeira",c:"Molduras e almofadas, à antiga",why:"Vive num apartamento haussmanniano ou sonha com um ar parisiense em casa? Reconhecível pelas molduras e pelas duas ou três almofadas, a porta haussmanniana traz elegância e requinte. Fazemos e renovamos todos os tipos.",
+types:[["Reta","A forma clássica, à medida do vão."],["Em arco ou de volta perfeita","Para acompanhar um vão curvo."],["De correr","A porta haussmanniana também existe em versão de correr."]],
+specs:[["Por medida","Dimensões segundo as suas indicações; tamanho e número de almofadas à escolha."],["Integrações","Dobradiças ocultas, fechaduras, vidros."],["Estilo tradicional","Pátina, verniz, cera, óleo natural, tinta; acessórios de estilo antigo em ferro, latão ou porcelana."],["Estilo contemporâneo","Decapado, wengé, natural, branqueado, inox, cromado ou acetinado."],["Madeira","Nogueira, tília, castanheiro, carvalho, cerejeira, de florestas geridas de forma sustentável (FSC ou PEFC)."],["Molduras","Molduras de época, feitas com técnicas tradicionais."]],
+reno:"Também renovamos portas haussmannianas originais, molduras incluídas."},
+"porte-fenetre":{t:"Porta de sacada em madeira",c:"De batente ou de correr",why:"Para varandas, terraços e jardins: uma grande abertura que deixa entrar toda a luz, com um ar mediterrânico. Os nossos carpinteiros experientes fazem-na ou renovam-na com precisão.",
+types:[["Toda envidraçada","Um grande envidraçado para deixar entrar toda a luz."],["Com soco","A beleza da madeira na parte de baixo."],["De batente ou de correr","Abertura tradicional à francesa, ou de correr e embutida para não ocupar a divisão."]],
+specs:[["Folhas","Uma ou duas; escolha das portas e do puxador."],["Por medida","Cada casa tem as suas particularidades: a sua porta de sacada adapta-se à sua, aliando estética, solidez e isolamento."],["Materiais","Escolhidos segundo o seu pedido, tendo em conta o orçamento."]],
+reno:"Também renovamos a sua porta de sacada para a deixar como nova."}
+},
+avis:[["Annie Lor","Trabalho rápido, limpo e eficaz, que mais dizer…? Obrigada!"],["Jacky","Obrigado AMF Menuiserie pelo excelente trabalho nas portas dos meus roupeiros, estão ótimas!"],["Jourdan","Confiei à AMF Menuiserie todas as portas do meu apartamento haussmanniano: trabalho impecável, artesãos rápidos e eficazes. Recomendo vivamente esta empresa para qualquer carpintaria por medida!"],["Sam Ogden","Agradeço à AMF Menuiserie o trabalho notável no fabrico do meu magnífico portão de madeira por medida, é ótimo!"]],
+avisNote:"Traduzido do francês.",
+chat:{
+accueil:"Olá, sou o AMF Conselho, o assistente virtual da oficina. Ajudo-o a escolher a porta, a madeira ou a abertura, e a preparar o seu orçamento.",
+rapides:[["choisir","De que porta preciso?"],["ouverture","De batente ou de correr?"],["bois","Que madeira escolher?"],["prix","Quanto custa?"],["renovation","Renovar a minha porta"]],
+r:{
+choisir:"Para que lugar? Escolha e mostro-lhe a página certa.",
+prix:"A oficina não publica preços: tudo é por medida, por isso o preço depende das medidas, da madeira e dos acabamentos. O orçamento é grátis e a AMF compromete-se com preços competitivos.",
+delai:"Não tenho informação sobre prazos: dependem do projeto. A oficina indica-os com o orçamento, ou pelo +33 1 84 14 45 17.",
+zone:"A oficina fica em Paris 12 (3 bis rue Louis Braille). A rede AMF tem também sites para toda a Île-de-France (77, 78, 91, 92, 93, 94, 95) e o Oise. Para a sua morada exata, o mais seguro é perguntar à oficina.",
+securite:"Para segurança e isolamento, a porta de entrada maciça é a mais eficaz. Uma estrutura interna em aço pode reforçar qualquer modelo, e a madeira é um material sólido e isolante.",
+bois:"Carvalho: sólido, não deforma, pouca manutenção. Abeto ou pinho: leve, ideal para um chalé. Exóticas (iroko, sipo, sapelli, teca…): muito densas, pouca manutenção. Para uma porta haussmanniana: nogueira, carvalho, cerejeira, tília, castanheiro.",
+fsc:"Todas as madeiras da AMF têm certificação FSC ou PEFC, de florestas geridas de forma sustentável.",
+renovation:"A AMF renova todo o tipo de portas e portões de madeira: entrada, roupeiros danificados, portões, portas de sacada, portas haussmannianas com as suas molduras. Descreva a sua no orçamento grátis.",
+haussmann:"Molduras, duas ou três almofadas, forma reta, em arco ou de volta perfeita, dobradiças ocultas, acabamentos antigos ou contemporâneos: está tudo na página Porta haussmanniana.",
+placard:"De batente se tem espaço, dobráveis para ganhar espaço, de correr ou embutidas para não invadir a divisão. Acabamentos: em bruto, envernizado, pintado ou com espelho.",
+portail:"De batente ou de correr, vazado ou cheio, reto, abaulado ou em «chapéu de gendarme», e motorizável. Em carvalho, faia, abeto, bétula ou madeira exótica.",
+ouverture:"De batente: passagem total, mas precisa de cerca de um metro livre. De correr ou embutida: sem área de abertura, discreta, adaptada à mobilidade reduzida. Pivotante: até 360°, pode ser rasante. Dobrável: modulável, para espaços pequenos.",
+fenetre:"A porta de sacada pode ser toda envidraçada ou ter soco em madeira, com uma ou duas folhas, de batente ou de correr.",
+entree:"Maciça para segurança e isolamento, semienvidraçada para o compromisso, envidraçada para a luz. Em carvalho, abeto ou madeira exótica.",
+garantie:"A AMF Menuiserie trabalha com garantia decenal e no respeito das normas em vigor.",
+france:"Todas as portas e portões são fabricados por medida em França por carpinteiros experientes.",
+devis:"Em três tempos: desenhamos os planos segundo as suas ideias, fabricamos depois da sua aprovação e depois instalamos e fazemos os retoques finais. O orçamento é grátis.",
+contact:"Telefone: +33 1 84 14 45 17, todos os dias das 8h às 23h30. E-mail: artisan.amf@gmail.com. Oficina: 3 bis rue Louis Braille, 75012 Paris, aberta toda a semana das 8h às 20h.",
+avis:"Os clientes falam de um trabalho rápido, limpo e eficaz, de portas haussmannianas impecáveis e de um portão notável. Todas as opiniões estão no livro de visitas.",
+pmr:"A porta de correr ou embutida é a mais adaptada a pessoas com mobilidade reduzida: sem área de abertura, passagem desimpedida.",
+autres:"Este site apresenta portas e portões. A rede AMF tem outros sites (escadas, fachadas e montras, portadas, marquises, móveis, janelas): os links estão no fundo da página. Para um projeto assim, ligue para a oficina.",
+merci:"Com todo o gosto! Quando estiver pronto, o orçamento grátis está à sua espera.",
+inconnu:"Sou apenas um assistente virtual e não tenho essa informação. O mais simples: ligue para a oficina pelo +33 1 84 14 45 17 (todos os dias, 8h–23h30) ou descreva o seu projeto no orçamento grátis.",
+voirPage:"Ver a página",faireDevis:"Preparar o meu orçamento"
+}}
+};
+
+</script>
+<script>
+(function(){
+document.documentElement.classList.add('js');
+const $=s=>document.querySelector(s),img=n=>'img/'+n+'.jpg';
+const ORDRE=['porte-entree','placard','portail','interieure','haussmann','porte-fenetre'];
+const LANGS=['fr','en','es','de','it','pt'];
+const PIMG={'porte-entree':'porte-entree-maison',placard:'placard-dressing',portail:'portail',interieure:'interieure-coulissante',haussmann:'haussmann','porte-fenetre':'porte-fenetre'};
+const RENO={'porte-entree':'hero-porte-bleue',placard:'placard-renovation',portail:'bois-detail',interieure:'interieure-poignee',haussmann:'porte-pointes-diamant','porte-fenetre':'entree-massive'};
+const DUO={placard:['placard-bois','placard-chevrons'],interieure:['interieure-chambre','entree-massive'],'porte-fenetre':['bois-detail','planches']};
+DUO.interieure=['interieure-chambre','interieure-poignee'];RENO.interieure='planches';DUO['porte-fenetre']=null;
+const VIS={'porte-entree':[{i:'entree-pleine'},{i:'entree-semi-vitree'},{i:'entree-vitree'}],placard:[{s:'battante'},{s:'pliante'},{s:'coulissante'}],portail:[{s:'battant2'},{s:'coulissant'}],interieure:[{s:'battante'},{s:'coulissante'},{s:'pivotante'},{s:'pliante'}],haussmann:[{s:'el-droite'},{s:'el-arc'},{s:'coulissante'}],'porte-fenetre':[{s:'el-vitree'},{s:'el-soub'},{s:'battant2'}]};
+const GAL=[['hero-porte-bleue','porte-entree'],['porte-entree-maison','porte-entree'],['entree-massive','porte-entree'],['entree-pleine','porte-entree'],['entree-semi-vitree','porte-entree'],['entree-vitree','porte-entree'],['placard-dressing','placard'],['placard-bois','placard'],['placard-chevrons','placard'],['placard-renovation','placard'],['portail','portail'],['interieure-coulissante','interieure'],['interieure-chambre','interieure'],['interieure-poignee','interieure'],['haussmann','haussmann'],['porte-pointes-diamant','haussmann'],['porte-fenetre','porte-fenetre']];
+const RESEAU=[["Façade de magasin en alu à Paris","http://www.facade-magasin-aluminium.fr/"],["Menuisier 95","http://www.menuisier-95.fr/"],["Façade sur mesure en bois","http://www.facade-sur-mesure-bois.fr/"],["Façade en bois Versailles","http://www.facade-bois-versailles.fr/"],["Façade sur mesure","http://www.facade-sur-mesure.fr/"],["Meubles en bois sur mesure","http://www.meuble-bois-sur-mesure.fr/"],["Menuisier 94","http://www.menuisier-94.fr/"],["Escalier en bois sur mesure Paris","http://www.escalier-bois-sur-mesure-paris.fr/"],["Façade de magasin en bois Oise 60","http://www.facade-magasin-bois-oise-60.fr/"],["Devanture de magasin Paris","http://www.devanture-magasin-paris.fr/"],["Devanture de magasin en bois sur mesure Paris","http://www.devanture-bois-sur-mesure-paris.fr/"],["Façade de boutique en bois Paris","http://www.facade-boutique-bois-paris.fr/"],["Devanture de magasin 94","http://www.devanture-magasin-94.fr/"],["Boutique façadier en bois 92","http://www.boutique-facadier-bois-92.fr/"],["Devanture de boutique en bois 95","http://www.devanture-boutique-bois-95.fr/"],["Porte en bois sur mesure Paris","http://www.porte-bois-sur-mesure-paris.fr/"],["Menuisier 92","http://www.menuisier-92.fr/"],["Rénovation de vitrine et boutique","http://www.renovation-vitrine-boutique.fr/"],["Menuisier 93","http://www.menuisier-93.fr/"],["Menuisier 77","http://www.menuisier-77.fr/"],["Fabricant de vitrine et magasin","http://www.fabricant-vitrine-magasin.fr/"],["Menuisier 78","http://www.menuisier-78.fr/"],["Véranda en bois sur mesure","http://www.veranda-en-bois-sur-mesure.fr/"],["Rénovation escalier en bois","http://www.renovation-escalier-bois.fr/"],["Menuisier 91","http://www.menuisier-91.fr/"],["Dressing sur mesure","http://www.dressing-sur-mesure-paris.fr/"],["Porte cochère en bois","http://www.porte-cochere-bois.fr/"],["Menuiserie Paris 75","http://www.menuisier-paris-75.fr/"],["AMF Fenêtres","http://www.amf-fenetres.fr/"],["Volets en bois sur mesure","http://www.volet-bois-sur-mesure.fr/"]];
+let lg='fr';
+try{const q=new URLSearchParams(location.search).get('lang');const s=localStorage.getItem('amf-lang');lg=LANGS.includes(q)?q:(LANGS.includes(s)?s:'fr')}catch(e){}
+const T=()=>L[lg],U=k=>L[lg].ui[k];
+const esc=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const fl='<span class="fleche" aria-hidden="true">→</span>';
+
+/* schémas d'ouverture (vue en plan) */
+function schema(k){
+ const w='<line class="mur" x1="4" y1="70" x2="28" y2="70"/><line class="mur" x1="72" y1="70" x2="96" y2="70"/>';
+ const o={
+ battante:w+'<path class="arc" d="M70 70 A40 40 0 0 0 30 30"/><line class="vt" x1="30" y1="70" x2="70" y2="70" style="--fin:rotate(-82deg);transform-origin:30px 70px;transform-box:view-box"/>',
+ coulissante:'<line class="mur" x1="4" y1="70" x2="96" y2="70" style="stroke-dasharray:0"/><rect x="0" y="66" width="30" height="8" fill="var(--platre)"/><line class="mur" x1="0" y1="66" x2="28" y2="66" style="stroke-width:1.5"/><line class="mur" x1="0" y1="74" x2="28" y2="74" style="stroke-width:1.5"/><rect x="30" y="66" width="40" height="8" fill="var(--platre)"/><line class="mur" x1="72" y1="70" x2="96" y2="70"/><line class="vt" x1="30" y1="70" x2="70" y2="70" style="--fin:translateX(-38px)"/>',
+ pivotante:w+'<circle class="arc" cx="50" cy="70" r="20"/><line class="vt" x1="30" y1="70" x2="70" y2="70" style="--fin:rotate(-90deg);transform-origin:50px 70px;transform-box:view-box"/><circle cx="50" cy="70" r="2.5" fill="var(--chene)"/>',
+ pliante:w+'<polyline class="vt" points="30,70 40,66 50,70 60,66 70,70" fill="none" style="--fin:scaleX(.3);transform-origin:30px 70px;transform-box:view-box"/>',
+ battant2:'<line class="mur" x1="2" y1="70" x2="14" y2="70"/><line class="mur" x1="86" y1="70" x2="98" y2="70"/><path class="arc" d="M50 70 A34 34 0 0 0 16 36 M50 70 A34 34 0 0 1 84 36"/><line class="vt" x1="16" y1="70" x2="50" y2="70" style="--fin:rotate(-75deg);transform-origin:16px 70px;transform-box:view-box"/><line class="vt" x1="50" y1="70" x2="84" y2="70" style="--fin:rotate(75deg);transform-origin:84px 70px;transform-box:view-box"/>',
+ coulissant:'<line class="mur" x1="2" y1="70" x2="20" y2="70"/><line class="arc" x1="20" y1="76" x2="98" y2="76"/><line class="vt" x1="20" y1="70" x2="62" y2="70" style="--fin:translateX(34px)"/>',
+ 'el-droite':'<rect x="30" y="12" width="40" height="80" fill="none" stroke="var(--graphite)" stroke-width="2.5"/><rect x="36" y="20" width="28" height="32" fill="none" stroke="var(--vert)" stroke-width="2"/><rect x="36" y="58" width="28" height="26" fill="none" stroke="var(--vert)" stroke-width="2"/>',
+ 'el-arc':'<path d="M30 92V32a20 20 0 0 1 40 0v60z" fill="none" stroke="var(--graphite)" stroke-width="2.5"/><path d="M36 54V34a14 14 0 0 1 28 0v20z" fill="none" stroke="var(--vert)" stroke-width="2"/><rect x="36" y="60" width="28" height="24" fill="none" stroke="var(--vert)" stroke-width="2"/>',
+ 'el-vitree':'<rect x="30" y="12" width="40" height="80" fill="none" stroke="var(--graphite)" stroke-width="2.5"/><rect x="35" y="17" width="30" height="70" fill="rgba(51,160,143,.18)" stroke="var(--vert)" stroke-width="1.5"/><line x1="50" y1="17" x2="50" y2="87" stroke="var(--vert)" stroke-width="1.5"/><line x1="35" y1="40" x2="65" y2="40" stroke="var(--vert)" stroke-width="1"/><line x1="35" y1="63" x2="65" y2="63" stroke="var(--vert)" stroke-width="1"/>',
+ 'el-soub':'<rect x="30" y="12" width="40" height="80" fill="none" stroke="var(--graphite)" stroke-width="2.5"/><rect x="35" y="17" width="30" height="46" fill="rgba(51,160,143,.18)" stroke="var(--vert)" stroke-width="1.5"/><rect x="35" y="68" width="30" height="19" fill="var(--chene)" opacity=".55"/>'
+ };
+ return '<svg class="schema" viewBox="0 0 100 100" aria-hidden="true">'+(o[k]||'')+'</svg>';
+}
+
+/* la porte cotée */
+function porteCotee(){
+ return '<figure class="plan" id="porteH"><span class="rappel">AMF · 75012</span><div class="baie" role="img" aria-label="'+esc(T().P['porte-entree'].t)+'"><img src="'+img('hero-porte-bleue')+'" alt="" fetchpriority="high"><div class="vantail" aria-hidden="true"><i></i><i></i><b></b></div></div><span class="cote cote-h"><span>'+U('heroH')+' · '+U('heroCote')+'</span></span><span class="cote cote-l"><span>'+U('heroL')+' · '+U('heroCote')+'</span></span></figure>';
+}
+function jouerPorte(){
+ const p=$('#porteH');if(!p)return;
+ const red=matchMedia('(prefers-reduced-motion: reduce)').matches;
+ if(red){p.classList.add('trace','ouvert');return}
+ requestAnimationFrame(()=>{setTimeout(()=>p.classList.add('trace'),250);setTimeout(()=>p.classList.add('ouvert'),1500)});
+ p.querySelector('.baie').addEventListener('click',()=>p.classList.toggle('ouvert'));
+}
+
+/* gabarit de plan pour le devis */
+const DIM={'porte-entree':[215,90,1,'arc'],placard:[250,180,3,'pl'],portail:[160,350,2,'ajour'],interieure:[204,83,1,'pl'],haussmann:[250,90,1,'tab'],'porte-fenetre':[215,140,2,'vit']};
+function planDevis(type,h,w){
+ const d=DIM[type]||DIM['porte-entree'];const H=h>0?h:d[0],W=w>0?w:d[1];
+ const maxW=210,maxH=270;let s=Math.min(maxW/W,maxH/H);const pw=W*s,ph=H*s;const x0=60+(maxW-pw)/2,y0=20+(maxH-ph);
+ const st='stroke="#EEF1EF" fill="none"';let g='';
+ if(d[3]==='arc'){const r=pw/2;g+='<path d="M'+x0+' '+(y0+ph)+'V'+(y0+r*.8)+'A'+r+' '+(r*.8)+' 0 0 1 '+(x0+pw)+' '+(y0+r*.8)+'V'+(y0+ph)+'Z" '+st+' stroke-width="2"/>';g+='<rect x="'+(x0+pw*.16)+'" y="'+(y0+ph*.52)+'" width="'+(pw*.68)+'" height="'+(ph*.36)+'" '+st+' stroke-width="1" opacity=".7"/>'}
+ else{g+='<rect x="'+x0+'" y="'+y0+'" width="'+pw+'" height="'+ph+'" '+st+' stroke-width="2"/>';const n=d[2];for(let i=1;i<n;i++){const xx=x0+pw*i/n;g+='<line x1="'+xx+'" y1="'+y0+'" x2="'+xx+'" y2="'+(y0+ph)+'" stroke="#EEF1EF" stroke-width="1.5"/>'}
+  for(let i=0;i<n;i++){const lx=x0+pw*i/n,lw=pw/n;
+   if(d[3]==='tab'){g+='<rect x="'+(lx+lw*.16)+'" y="'+(y0+ph*.08)+'" width="'+(lw*.68)+'" height="'+(ph*.42)+'" '+st+' opacity=".75"/><rect x="'+(lx+lw*.16)+'" y="'+(y0+ph*.56)+'" width="'+(lw*.68)+'" height="'+(ph*.36)+'" '+st+' opacity=".75"/>'}
+   else if(d[3]==='vit'){g+='<rect x="'+(lx+lw*.12)+'" y="'+(y0+ph*.06)+'" width="'+(lw*.76)+'" height="'+(ph*.6)+'" fill="rgba(51,160,143,.35)" stroke="#EEF1EF" stroke-width="1"/>'}
+   else if(d[3]==='ajour'){for(let k=1;k<6;k++){const yy=y0+ph*k/6;g+='<line x1="'+(lx+4)+'" y1="'+yy+'" x2="'+(lx+lw-4)+'" y2="'+yy+'" stroke="#EEF1EF" stroke-width=".8" opacity=".6"/>'}}
+   else{g+='<rect x="'+(lx+lw*.18)+'" y="'+(y0+ph*.1)+'" width="'+(lw*.64)+'" height="'+(ph*.8)+'" '+st+' opacity=".45"/>'}}}
+ const lab=(v,k)=>v>0?(k+' '+v+' cm'):(k+' · '+U('planVide'));
+ const cx=36,cy=y0+ph+22,c='#C08B55';
+ g+='<g stroke="'+c+'" stroke-width="1"><line x1="'+cx+'" y1="'+y0+'" x2="'+cx+'" y2="'+(y0+ph)+'"/><line x1="'+(cx-6)+'" y1="'+y0+'" x2="'+(cx+6)+'" y2="'+y0+'"/><line x1="'+(cx-6)+'" y1="'+(y0+ph)+'" x2="'+(cx+6)+'" y2="'+(y0+ph)+'"/><line x1="'+x0+'" y1="'+cy+'" x2="'+(x0+pw)+'" y2="'+cy+'"/><line x1="'+x0+'" y1="'+(cy-6)+'" x2="'+x0+'" y2="'+(cy+6)+'"/><line x1="'+(x0+pw)+'" y1="'+(cy-6)+'" x2="'+(x0+pw)+'" y2="'+(cy+6)+'"/></g>';
+ g+='<text x="'+(cx-8)+'" y="'+(y0+ph/2)+'" transform="rotate(-90 '+(cx-8)+' '+(y0+ph/2)+')" text-anchor="middle" fill="#EEF1EF" font-family="Fragment Mono,monospace" font-size="11">'+esc(lab(h,U('heroH')))+'</text>';
+ g+='<text x="'+(x0+pw/2)+'" y="'+(cy+18)+'" text-anchor="middle" fill="#EEF1EF" font-family="Fragment Mono,monospace" font-size="11">'+esc(lab(w,U('heroL')))+'</text>';
+ return '<svg viewBox="0 0 290 340" role="img" aria-label="'+esc(U('planTitre'))+'">'+g+'</svg>';
+}
+
+/* pages */
+function accueil(){
+ const t=T(),u=t.ui;
+ return '<section class="heros"><div class="wrap"><div><h1>'+u.heroT+'</h1><p class="lead">'+u.heroP+'</p><div class="actions"><a class="btn btn-chene" href="#/devis">'+u.heroCta+' '+fl+'</a><a class="btn btn-ligne" href="tel:+33184144517">01 84 14 45 17</a></div><div class="preuves mono">'+u.heroPreuves.map(p=>'<span>'+p+'</span>').join('')+'</div></div>'+porteCotee()+'</div></section>'
+ +'<section class="bloc"><div class="wrap"><div class="intro apparait"><h2>'+u.introT+'</h2><div><p class="lead">'+u.introP+'</p></div></div>'+indexPortes()+'</div></section>'
+ +'<section class="bloc etapes"><div class="wrap"><h2 class="apparait">'+u.etapesT+'</h2><div class="chaine apparait">'+u.etapes.map((e,i)=>'<div><span class="mono">'+['1/3','2/3','3/3'][i]+'</span><h3>'+e[0]+'</h3><p>'+e[1]+'</p></div>').join('')+'</div><p class="fin apparait">'+u.etapesFin+'</p><a class="lien" href="#/devis">'+u.heroCta+' '+fl+'</a></div></section>'
+ +'<section class="bloc"><div class="wrap"><h2 class="apparait">'+u.cartoucheT+'</h2><div class="cartouche apparait"><div class="tetec mono"><span>'+u.cartoucheT+'</span><span>'+u.cartoucheRef+'</span></div>'+u.engagements.map((e,i)=>'<div class="c"><span class="mono">'+String.fromCharCode(65+i)+'</span>'+e+'</div>').join('')+'</div></div></section>'
+ +'<section class="bloc avis"><div class="wrap"><h2 class="apparait">'+u.avisT+'</h2><div class="avis-grille">'+t.avis.map(a=>'<blockquote class="apparait"><p>« '+a[1]+' »</p><cite>'+a[0]+'</cite></blockquote>').join('')+'</div>'+(t.avisNote?'<p class="note-trad mono">'+t.avisNote+'</p>':'')+'<a class="lien" href="#/livre-dor">'+u.avisLien+' '+fl+'</a></div></section>'
+ +'<section class="bloc bois"><div class="wrap"><h2 class="apparait">'+u.boisT+'</h2><p class="lead apparait">'+u.boisP+'</p><div class="essences apparait">'+u.bois.map(b=>'<div><h3>'+b[0]+'</h3><p>'+b[1]+'</p></div>').join('')+'</div></div></section>'
+ +'<section class="bloc"><div class="wrap"><div class="entete-sec apparait"><h2>'+u.galT+'</h2><a class="lien" style="margin:0" href="#/realisations">'+u.galLien+' '+fl+'</a></div><div class="mosaique apparait">'+['haussmann','portail','placard-dressing','entree-semi-vitree','interieure-chambre'].map(n=>'<img src="'+img(n)+'" alt="" loading="lazy">').join('')+'</div></div></section>'
+ +appel();
+}
+function indexPortes(){
+ return '<ul class="index apparait">'+ORDRE.map(k=>{const p=T().P[k];return '<li><a href="#/'+k+'"><img class="vign" src="'+img(PIMG[k])+'" alt="" loading="lazy"><h3>'+p.t+'</h3><span class="mono">'+p.c+'</span><span class="fl" aria-hidden="true">→</span><img class="apercu" src="'+img(PIMG[k])+'" alt="" loading="lazy"></a></li>'}).join('')+'</ul>';
+}
+function appel(){
+ const u=T().ui;
+ return '<section class="bloc appel"><div class="wrap"><div><h2>'+u.appelT+'</h2><p class="lead">'+u.appelP+'</p></div><div class="actions"><a class="btn btn-vert" href="#/devis">'+u.heroCta+' '+fl+'</a><a class="btn btn-ligne" href="tel:+33184144517">01 84 14 45 17</a><span class="mono">'+u.telJours+'</span></div></div></section>';
+}
+function portes(){
+ const u=U;
+ return '<section class="page-tete simple"><div class="wrap"><div><h1>'+u('prestations')+'</h1><p class="lead">'+u('sixP')+'</p></div></div></section><section class="bloc" style="padding-top:24px"><div class="wrap">'+indexPortes()+'</div></section>'+appel();
+}
+function prestation(k){
+ const p=T().P[k],u=T().ui,v=VIS[k];
+ let h='<section class="page-tete"><div class="wrap"><div><h1>'+p.t+'</h1><p class="c">'+p.c+'</p><p class="lead">'+p.why+'</p><div class="actions"><a class="btn btn-chene" href="#/devis?type='+k+'">'+u.devisPour+' '+fl+'</a><a class="btn btn-ligne" href="tel:+33184144517">01 84 14 45 17</a></div></div><figure><img src="'+img(PIMG[k])+'" alt="'+esc(p.t)+'"></figure></div></section>';
+ h+='<section class="bloc"><div class="wrap"><h2 class="apparait">'+u.types+'</h2><div class="modeles">'+p.types.map((t,i)=>{const x=v[i]||{};return '<div class="modele apparait'+(x.i?' photo':'')+'">'+(x.i?'<img src="'+img(x.i)+'" alt="'+esc(p.t+' — '+t[0])+'" loading="lazy">':schema(x.s))+'<h3>'+t[0]+'</h3><p>'+t[1]+'</p></div>'}).join('')+'</div>';
+ if(DUO[k])h+='<div class="duo apparait">'+DUO[k].map(n=>'<img src="'+img(n)+'" alt="'+esc(p.t)+'" loading="lazy">').join('')+'</div>';
+ h+='<h2 class="apparait" style="margin-top:clamp(56px,8vw,96px)">'+u.perso+'</h2><dl class="specs apparait">'+p.specs.map(s=>'<div><dt>'+s[0]+'</dt><dd>'+s[1]+'</dd></div>').join('')+'</dl>';
+ h+='<div class="reno apparait"><img src="'+img(RENO[k])+'" alt="" loading="lazy"><div><h2>'+u.reno+'</h2><p class="lead">'+p.reno+'</p><a class="btn btn-chene" style="align-self:flex-start" href="#/devis?type='+k+'&projet=1">'+u.devisPour+' '+fl+'</a></div></div>';
+ h+='<h2 class="apparait" style="margin-top:clamp(56px,8vw,96px);font-size:clamp(1.6rem,3vw,2.2rem)">'+u.autres+'</h2><div class="autres">'+ORDRE.filter(x=>x!==k).map(x=>'<a href="#/'+x+'">'+T().P[x].t+'</a>').join('')+'</div></div></section>';
+ return h+appel();
+}
+let filtre='tout';
+function realisations(){
+ const u=T().ui;
+ return '<section class="page-tete simple"><div class="wrap"><div><h1>'+u.galeriePageT+'</h1><p class="lead">'+u.galeriePageP+'</p></div></div></section><section class="bloc" style="padding-top:20px"><div class="wrap"><div class="filtres" id="filtres"><button type="button" data-f="tout" aria-pressed="'+(filtre==='tout')+'">'+u.tout+'</button>'+ORDRE.map(k=>'<button type="button" data-f="'+k+'" aria-pressed="'+(filtre===k)+'">'+T().P[k].t+'</button>').join('')+'</div><div class="galerie" id="galerie">'+GAL.filter(g=>filtre==='tout'||g[1]===filtre).map(g=>'<figure data-src="'+img(g[0])+'"><img src="'+img(g[0])+'" alt="'+esc(T().P[g[1]].t)+'" loading="lazy"><figcaption>'+T().P[g[1]].t+'</figcaption></figure>').join('')+'</div></div></section>'+appel();
+}
+function livre(){
+ const t=T(),u=t.ui;
+ return '<section class="page-tete simple"><div class="wrap"><div><h1>'+u.livre+'</h1><p class="lead">'+u.livreP+'</p></div></div></section><section class="bloc" style="padding-top:40px"><div class="wrap livre-grille"><div>'+t.avis.map(a=>'<blockquote><p>« '+a[1]+' »</p><cite>'+a[0]+'</cite></blockquote>').join('')+(t.avisNote?'<p class="mono" style="color:var(--gris)">'+t.avisNote+'</p>':'')+'</div><form class="livre-form" id="formAvis" novalidate><h2 style="font-size:1.6rem;margin-bottom:18px">'+u.livreForm+'</h2><fieldset><legend style="font-size:1rem">'+u.note+'</legend><div class="etoiles">'+[5,4,3,2,1].map(n=>'<input type="radio" name="note" id="n'+n+'" value="'+n+'"><label for="n'+n+'">'+n+'/5</label>').join('')+'</div></fieldset><div class="champs" style="grid-template-columns:1fr"><label class="champ">'+u.email+'<input type="email" name="email" autocomplete="email"></label><label class="champ">'+u.nomP+'<input name="nom" autocomplete="name"></label><label class="champ">'+u.avis+'<textarea name="avis"></textarea></label></div><button class="btn btn-vert" style="margin-top:16px" type="submit">'+u.envoyerAvis+' '+fl+'</button><p class="msg" id="avisMsg"></p></form></div></section>';
+}
+function devis(q){
+ const u=T().ui,type=ORDRE.includes(q.get('type'))?q.get('type'):'porte-entree',pj=+q.get('projet')||0;
+ const radios=(name,arr,sel)=>'<div class="choix">'+arr.map((v,i)=>'<label><input type="radio" name="'+name+'" value="'+i+'"'+(i===sel?' checked':'')+'><span>'+v+'</span></label>').join('')+'</div>';
+ return '<section class="page-tete simple"><div class="wrap"><div><h1>'+u.devisT+'</h1><p class="lead">'+u.devisP+'</p></div></div></section><section class="bloc" style="padding-top:40px"><div class="wrap form-grille"><form id="formDevis" novalidate>'
+ +'<fieldset><legend>'+u.dQuoi+'</legend><div class="choix">'+ORDRE.map(k=>'<label><input type="radio" name="type" value="'+k+'"'+(k===type?' checked':'')+'><span>'+T().P[k].t+'</span></label>').join('')+'</div></fieldset>'
+ +'<fieldset><legend>'+u.dProjet+'</legend>'+radios('projet',u.projets,pj)+'</fieldset>'
+ +'<fieldset><legend>'+u.dCotes+'</legend><div class="champs"><label class="champ">'+u.hauteur+'<input type="number" inputmode="numeric" min="20" max="600" name="h"></label><label class="champ">'+u.largeur+'<input type="number" inputmode="numeric" min="20" max="900" name="w"></label></div><label class="coche"><input type="checkbox" name="nsp"> '+u.nsp+'</label></fieldset>'
+ +'<fieldset><legend>'+u.dOuv+'</legend>'+radios('ouv',u.ouvertures,4)+'</fieldset>'
+ +'<fieldset><legend>'+u.dBois+'</legend>'+radios('bois',u.essences,4)+'</fieldset>'
+ +'<fieldset><legend>'+u.dMsg+'</legend><label class="champ large"><textarea name="msg" aria-label="'+esc(u.dMsg)+'"></textarea></label></fieldset>'
+ +'<fieldset><legend>'+u.dVous+'</legend><div class="champs"><label class="champ">'+u.nom+'<input name="nom" autocomplete="name"></label><label class="champ">'+u.tel+'<input type="tel" name="tel" autocomplete="tel"></label><label class="champ">'+u.email+'<input type="email" name="email" autocomplete="email"></label><label class="champ">'+u.cp+'<input name="cp" autocomplete="postal-code" inputmode="numeric"></label></div></fieldset>'
+ +'<button class="btn btn-chene" type="submit">'+u.envoyer+' '+fl+'</button><p class="msg" id="devisMsg" role="status"></p></form>'
+ +'<aside class="plan-devis"><h2>'+u.planTitre+'</h2><div id="planD">'+planDevis(type,0,0)+'</div><p class="resume" id="resume"></p></aside></div></section>';
+}
+function mentions(){
+ const u=T().ui;
+ return '<section class="page-tete simple"><div class="wrap"><div><h1>'+u.mentionsT+'</h1></div></div></section><section class="bloc mentions" style="padding-top:20px"><div class="wrap"><dl class="specs">'+u.mentionsTxt.map(m=>'<div><dt>'+m[0]+'</dt><dd>'+m[1]+'</dd></div>').join('')+'</dl><p class="note">'+u.mentionsNote+'</p></div></section>';
+}
+function planSite(){
+ const u=T().ui;
+ return '<section class="page-tete simple"><div class="wrap"><div><h1>'+u.planT+'</h1></div></div></section><section class="bloc" style="padding-top:20px"><div class="wrap"><nav class="plan-site"><a href="#/">'+u.accueil+'</a><a href="#/portes">'+u.prestations+'</a>'+ORDRE.map(k=>'<a href="#/'+k+'">— '+T().P[k].t+'</a>').join('')+'<a href="#/realisations">'+u.realisations+'</a><a href="#/livre-dor">'+u.livre+'</a><a href="#/devis">'+u.devis+'</a><a href="#/mentions">'+u.mentions+'</a></nav></div></section>';
+}
+
+/* en-tête, pied */
+function nav(route){
+ const u=T().ui;const it=[['',u.accueil],['portes',u.prestations],['realisations',u.realisations],['livre-dor',u.livre],['devis',u.devis,'nav-devis']];
+ const actif=ORDRE.includes(route)?'portes':route;
+ $('#nav').setAttribute('aria-label',u.menu);
+ $('#nav').innerHTML=it.map(i=>'<a href="#/'+i[0]+'"'+(i[2]?' class="'+i[2]+'"':'')+(actif===i[0]?' aria-current="page"':'')+'>'+i[1]+'</a>').join('')+'<a href="#conseil" data-conseil>'+u.conseil+'</a>';
+ const n=$('#nav').querySelector('[aria-current]');if(n&&n.scrollIntoView&&innerWidth<1120)$('#nav').scrollLeft=Math.max(0,n.offsetLeft-40);
+}
+function pied(){
+ const u=T().ui;
+ $('#pied').innerHTML='<div class="wrap"><div class="grille"><div><span class="logo-b"><img src="img/logo.png" alt="AMF Menuiserie" loading="lazy"></span><h3>'+u.coordT+'</h3><p>AMF - Menuiserie<br>3 bis rue Louis Braille<br>75012 Paris</p><p style="margin-top:10px"><a href="tel:+33184144517">01 84 14 45 17</a><br><a href="mailto:artisan.amf@gmail.com">artisan.amf@gmail.com</a></p></div><div><h3>'+u.horairesT+'</h3><p>'+u.horaires+'</p><p style="margin-top:8px">'+u.telJours+'</p><h3 style="margin-top:24px">'+u.devis+'</h3><p><a href="#/devis">'+u.heroCta+'</a></p></div><div><h3>'+u.prestations+'</h3><ul>'+ORDRE.map(k=>'<li><a href="#/'+k+'">'+T().P[k].t+'</a></li>').join('')+'<li><a href="#/realisations">'+u.realisations+'</a></li><li><a href="#/livre-dor">'+u.livre+'</a></li></ul></div><div><h3>'+u.reseauT+'</h3><ul class="reseau">'+RESEAU.map(r=>'<li><a href="'+r[1]+'" rel="noopener" target="_blank">'+r[0]+'</a></li>').join('')+'</ul></div></div><div class="bas"><span>© AMF Menuiserie · Paris 12e</span><span><a href="#/mentions">'+u.mentions+'</a> · <a href="#/plan">'+u.plan+'</a> · <a href="#top" id="haut">'+u.retour+'</a></span></div></div>';
+ $('#haut').onclick=e=>{e.preventDefault();scrollTo({top:0,behavior:'smooth'})};
+}
+
+/* routeur */
+function route(){
+ const h=location.hash.replace(/^#\/?/,'');if(h.startsWith('conseil'))return;
+ const [r,qs]=h.split('?');const q=new URLSearchParams(qs||'');
+ let html;
+ if(!r)html=accueil();else if(r==='portes')html=portes();else if(ORDRE.includes(r))html=prestation(r);else if(r==='realisations')html=realisations();else if(r==='livre-dor')html=livre();else if(r==='devis')html=devis(q);else if(r==='mentions')html=mentions();else if(r==='plan')html=planSite();else html=accueil();
+ $('#contenu').innerHTML=html;nav(r||'');
+ document.title=(r&&ORDRE.includes(r)?T().P[r].t+' — ':'')+'AMF Menuiserie — Proposition Neovera Studio';
+ if(!r)jouerPorte();
+ brancher(r,q);observer();
+}
+function brancher(r,q){
+ const f=$('#filtres');if(f)f.onclick=e=>{const b=e.target.closest('button');if(!b)return;filtre=b.dataset.f;const y=scrollY;$('#contenu').innerHTML=realisations();brancher('realisations');observer();scrollTo(0,y)};
+ const g=$('#galerie');if(g)g.onclick=e=>{const fi=e.target.closest('figure');if(!fi)return;$('#boiteImg').src=fi.dataset.src;$('#boiteImg').alt=fi.querySelector('img').alt;$('#boite').classList.add('on');$('#boiteX').focus()};
+ const fd=$('#formDevis');if(fd){
+  const maj=()=>{const d=new FormData(fd);const nsp=d.get('nsp');const h=nsp?0:+d.get('h')||0,w=nsp?0:+d.get('w')||0;const ty=d.get('type');$('#planD').innerHTML=planDevis(ty,h,w);const u=T().ui;$('#resume').textContent=T().P[ty].t+' · '+u.projets[+d.get('projet')]+' · '+u.ouvertures[+d.get('ouv')]+' · '+u.essences[+d.get('bois')]};
+  fd.addEventListener('input',maj);fd.addEventListener('change',maj);maj();
+  fd.onsubmit=e=>{e.preventDefault();const d=new FormData(fd),u=T().ui,m=$('#devisMsg');
+   if(!d.get('nom').trim()||!(d.get('tel').trim()||d.get('email').trim())){m.textContent=u.requis;m.className='msg on err';return}
+   const ty=T().P[d.get('type')].t;const corps=[ty,u.projets[+d.get('projet')],(d.get('nsp')?u.nsp:(u.hauteur+' : '+(d.get('h')||'—')+' / '+u.largeur+' : '+(d.get('w')||'—'))),u.dOuv+' : '+u.ouvertures[+d.get('ouv')],u.dBois+' : '+u.essences[+d.get('bois')],'',d.get('msg'),'',d.get('nom')+' · '+d.get('tel')+' · '+d.get('email')+' · '+d.get('cp')].join('\n');
+   location.href='mailto:artisan.amf@gmail.com?subject='+encodeURIComponent(u.devis+' — '+ty)+'&body='+encodeURIComponent(corps);m.textContent=u.devisMerci;m.className='msg on'};
+ }
+ const fa=$('#formAvis');if(fa)fa.onsubmit=e=>{e.preventDefault();const d=new FormData(fa),u=T().ui;location.href='mailto:artisan.amf@gmail.com?subject='+encodeURIComponent(u.livre)+'&body='+encodeURIComponent((d.get('note')||'–')+'/5\n'+d.get('avis')+'\n\n'+d.get('nom')+' · '+d.get('email'));const m=$('#avisMsg');m.textContent=u.avisMerci;m.className='msg on'};
+}
+let io;
+function observer(){
+ if(io)io.disconnect();
+ if(!('IntersectionObserver' in window)){document.querySelectorAll('.apparait').forEach(e=>e.classList.add('vu'));return}
+ io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('vu');e.target.querySelectorAll('.schema').forEach((s,i)=>setTimeout(()=>s.classList.add('joue'),500+i*120));io.unobserve(e.target)}}),{rootMargin:'0px 0px -8% 0px'});
+ document.querySelectorAll('.apparait').forEach(e=>io.observe(e));
+}
+
+/* langue */
+function langue(){
+ const s=$('#langue');s.innerHTML=LANGS.map(k=>'<option value="'+k+'"'+(k===lg?' selected':'')+'>'+L[k].nom+'</option>').join('');
+ s.onchange=()=>{lg=s.value;try{localStorage.setItem('amf-lang',lg)}catch(e){}appliquer();route()};
+}
+function appliquer(){
+ const u=T().ui;document.documentElement.lang=lg;$('#lblLangue').textContent=u.langue;
+ $('#cbT').textContent=u.conseil;$('#cbS').textContent=u.chatOuvrir;$('#chT').textContent=u.chatTitre;$('#chS').textContent=u.chatSous;$('#chX').textContent=u.fermer;
+ $('#chatIn').placeholder=u.chatPlace;$('#chatIn').setAttribute('aria-label',u.chatPlace);$('#chatEnv').textContent=u.chatEnv;$('#bulleTxt').textContent=u.bulle;$('#bulleX').setAttribute('aria-label',u.fermer);$('#boiteX').setAttribute('aria-label',u.fermer);
+ $('#chat').setAttribute('aria-label',u.chatTitre);pied();
+ if($('#chat').classList.contains('on')||$('#fil').children.length){$('#fil').innerHTML='';accueilChat()}
+}
+
+/* conseiller */
+const norm=s=>' '+s.toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g,'').replace(/[’]/g,"'")+' ';
+const K=[
+['merci',['merci','thank','gracias','danke','grazie','obrigad']],
+['prix',['prix','tarif','cout','combien','price','cost','how much','precio','cuanto','cuesta','preis','kostet','kosten','prezzo','costa','preco','custa','€','euro','budget','cher ']],
+['delai',['delai','combien de temps','how long','lead time','plazo','wie lange','lieferzeit','tempi','prazo','semaines','weeks','quand ','when ','cuando','wann','quando']],
+['pmr',['mobilite','fauteuil','handicap','wheelchair','accessib','reduced mobility','movilidad','silla de ruedas','rollstuhl','barrierefrei','disabil','mobilita','mobilidade','cadeira de rodas']],
+['securite',['securit','isola','cambriol','effraction','acier','security','insulat','burglar','steel','segurid','aislam','sicherheit','dammung','einbruch','stahl','sicurezza','acciaio','seguranca','aco ']],
+['fsc',['fsc','pefc','ecolog','foret','sustainab','forest','sostenib','bosque','nachhaltig','wald','foresta','sustentav','floresta','environnement']],
+['garantie',['garanti','decennale','assurance','warrant','guarantee','gewahr','garanzia']],
+['france',['en france','francais','fabrique','made in','origine','fabricad','hergestellt','frankreich','fatto in','prodott','franca']],
+['haussmann',['haussman','moulur','parisien','molding','moulding','moldura','zierleist','modanatur','tableaux']],
+['placard',['placard','dressing','rangement','cupboard','wardrobe','closet','armario','schrank','armadio','roupeiro']],
+['portail',['portail','gate','porton',' tor ','tores','cancell','portao','motoris','motoriz','antrieb']],
+['fenetre',['porte-fenetre','porte fenetre','balcon','terrasse','french window','patio','puertaventana','balkon','portafinestra','sacada','terraco','terrazza','terraza']],
+['ouverture',['coulissant','galandage','pivotant','pliant','battant','accordeon','ouverture','sliding','pocket','pivot','folding','hinged','opening','corredera','plegable','batiente','apertura','schiebe','falttur','drehtur','offnung','scorrevol','pieghevol','battente','correr','dobravel','batente','soffietto','abertura']],
+['entree',["porte d'entree",'porte dentree',' entree','front door','entrance','puerta de entrada','haustur','eingang','ingresso','porta de entrada']],
+['bois',['bois','essence','chene','sapin',' pin ','exotiq','iroko','teck','noyer','merisier','wood','oak','pine','teak','walnut','madera','roble','pino','holz','eiche','kiefer','legno','rovere','noce','madeira','carvalho','nogueira']],
+['renovation',['renov','repar','restaur','abime','ancien','vieille','repair','damaged','reparar','renovieren','reparieren','riparar','rovinat','vecchia','reformar','velha','danific']],
+['zone',['ou etes','zone','deplac','intervenez','banlieue','ile-de-france','ile de france','versailles','oise','where','area','do you cover','donde','zona','gebiet','dove','onde','region',' 92',' 93',' 94',' 95',' 77',' 78',' 91']],
+['contact',['horaire','ouvert','joindre','telephone','appeler','mail','adresse','contact','rendez','hours','phone','call','address','horario','telefono','llamar','direccion','offnungszeit','telefon','anrufen','orari','chiamare','indirizzo','telefone','ligar','morada','endereco']],
+['avis',['avis','temoign','client','review','testimon','opinion','opinio','bewertung','recension','avaliac']],
+['devis',['devis','etape','comment ca se passe','deroul','process','quote','estimate','steps','presupuesto','pasos','angebot','ablauf','preventivo','passaggi','orcamento','etapas']],
+['autres',['escalier','fenetre','volet','facade','devanture','veranda','meuble','vitrine','stair','window','shutter','shopfront','furniture','escalera','ventana','fachada','treppe','fenster','fassade','scala','finestra','facciata','escada','janela']],
+['choisir',['choisir','quelle porte','conseil','aide','choose','which door','help','elegir','que puerta','ayuda','welche tur','hilfe','scegliere','quale porta','aiuto','escolher','que porta','ajuda','porte','door','puerta',' tur','porta']]];
+const PAGE={haussmann:'haussmann',placard:'placard',portail:'portail',fenetre:'porte-fenetre',ouverture:'interieure',entree:'porte-entree',pmr:'interieure',securite:'porte-entree',avis:'livre-dor'};
+function intention(t){const n=norm(t);for(const [k,ws] of K)if(ws.some(w=>n.includes(w)))return k;return 'inconnu'}
+function bulleBot(txt,liens){const r=T().chat.r;const d=document.createElement('div');d.className='m bot';d.textContent=txt;if(liens&&liens.length){const l=document.createElement('div');l.className='liens';liens.forEach(x=>{const a=document.createElement('a');a.href=x[1];a.textContent=x[0];a.onclick=()=>{if(innerWidth<700)fermerChat()};l.appendChild(a)});d.appendChild(l)}$('#fil').appendChild(d);$('#fil').scrollTop=1e6}
+function moi(txt){const d=document.createElement('div');d.className='m moi';d.textContent=txt;$('#fil').appendChild(d)}
+function repondre(k){
+ const r=T().chat.r;
+ if(k==='choisir'){bulleBot(r.choisir,ORDRE.map(x=>[T().P[x].t,'#/'+x]));return}
+ const liens=[];if(PAGE[k])liens.push([PAGE[k]==='livre-dor'?T().ui.livre:r.voirPage+' : '+T().P[PAGE[k]].t,'#/'+PAGE[k]]);
+ if(!['merci','contact','avis'].includes(k))liens.push([r.faireDevis,'#/devis'+(PAGE[k]&&ORDRE.includes(PAGE[k])?'?type='+PAGE[k]:'')]);
+ if(k==='contact'||k==='inconnu'||k==='delai')liens.push(['01 84 14 45 17','tel:+33184144517']);
+ bulleBot(r[k]||r.inconnu,liens);
+}
+function accueilChat(){const c=T().chat;bulleBot(c.accueil);$('#rapides').innerHTML=c.rapides.map(q=>'<button type="button" data-k="'+q[0]+'">'+q[1]+'</button>').join('')}
+function ouvrirChat(){$('#chat').classList.add('on');$('#conseilBtn').hidden=true;$('#bulle').classList.remove('on');if(!$('#fil').children.length)accueilChat();setTimeout(()=>$('#chatIn').focus(),50)}
+function fermerChat(){$('#chat').classList.remove('on');$('#conseilBtn').hidden=false;$('#conseilBtn').focus()}
+$('#conseilBtn').onclick=ouvrirChat;$('#chX').onclick=fermerChat;
+document.addEventListener('click',e=>{if(e.target.closest('[data-conseil]')){e.preventDefault();ouvrirChat()}});
+$('#rapides').onclick=e=>{const b=e.target.closest('button');if(!b)return;moi(b.textContent);setTimeout(()=>repondre(b.dataset.k),250)};
+$('#chatForm').onsubmit=e=>{e.preventDefault();const v=$('#chatIn').value.trim();if(!v)return;moi(v);$('#chatIn').value='';setTimeout(()=>repondre(intention(v)),300)};
+$('#bulleX').onclick=()=>$('#bulle').classList.remove('on');
+$('#bulle').addEventListener('click',e=>{if(e.target.id!=='bulleX')ouvrirChat()});
+let vu=false;try{vu=sessionStorage.getItem('amf-bulle')}catch(e){}
+if(!vu)setTimeout(()=>{if(!$('#chat').classList.contains('on')){$('#bulle').classList.add('on');try{sessionStorage.setItem('amf-bulle','1')}catch(e){}}},4000);
+$('#boiteX').onclick=()=>$('#boite').classList.remove('on');$('#boite').onclick=e=>{if(e.target.id==='boite')$('#boite').classList.remove('on')};
+document.addEventListener('keydown',e=>{if(e.key==='Escape'){$('#boite').classList.remove('on');if($('#chat').classList.contains('on'))fermerChat()}});
+addEventListener('hashchange',()=>{if(location.hash.startsWith('#conseil'))return;route();scrollTo(0,0)});
+langue();appliquer();route();
+})();
+
+</script>
+<script id="nv-track">(function(){try{if(location.protocol!=='https:')return;if(/[?&]moi\b/.test(location.search)){localStorage.setItem('nv_moi','1');addEventListener('load',function(){var d=document.createElement('div');d.textContent='✓ Appareil reconnu : vos visites ne sont plus comptées';d.style.cssText='position:fixed;left:50%;bottom:24px;transform:translateX(-50%);z-index:2147483647;background:#1E3A2B;color:#fff;font:600 14px/1.3 system-ui,sans-serif;padding:12px 18px;border-radius:999px;box-shadow:0 8px 24px rgba(0,0,0,.25)';document.body.appendChild(d);setTimeout(function(){d.remove()},6000)})}if(localStorage.getItem('nv_moi')||navigator.webdriver)return;}catch(x){}
+var m=location.pathname.split('/').filter(Boolean)[0]||'';if(!m)return;var s=Math.random().toString(36).slice(2,12),t0=Date.now(),u='/_t.php',last='home',seen={};
+function send(e,p){var b=JSON.stringify({m:m,e:e,s:s,p:p||'',t:Math.round((Date.now()-t0)/1000),l:(document.documentElement.lang||'').slice(0,2)});try{if(navigator.sendBeacon)navigator.sendBeacon(u,new Blob([b],{type:'text/plain'}));else fetch(u,{method:'POST',body:b,keepalive:true})}catch(x){}}
+function once(k){k=String(k).toLowerCase().replace(/[^a-z0-9_-]/g,'').slice(0,24);if(!k||seen[k])return;seen[k]=1;send('ev',k)}
+send('open');setInterval(function(){if(document.visibilityState==='visible')send('ping')},45000);
+document.addEventListener('visibilitychange',function(){if(document.visibilityState==='hidden')send('ping')});
+window.__nvView=function(p){p=String(p||'');if(p&&p!==last){last=p;send('view',p)}};
+addEventListener('scroll',function(){var h=document.documentElement,max=h.scrollHeight-innerHeight;if(max<200)return;var r=(scrollY/max)*100;[25,50,75,100].forEach(function(q){if(r>=q-2)once('defil'+q+'-'+last)})},{passive:true});
+document.addEventListener('click',function(e){var el=e.target.closest('a,button,[data-add],[data-go],[role=button],summary');if(!el)return;var t=((el.getAttribute('aria-label')||'')+' '+(el.textContent||'')+' '+(el.className||'')+' '+(el.id||'')).toLowerCase(),h=el.getAttribute&&el.getAttribute('href')||'';
+if(el.hasAttribute('data-add')||/ajouter|add to|añadir|hinzuf|aggiungi|加入/.test(t))once('panier-'+(el.getAttribute('data-add')||'ajout')),send('ev','panier');
+else if(/conseil|advisor|assistant|chat/.test(t))once('conseiller');
+else if(/instagram|facebook|youtube|pinterest|linkedin|tiktok/.test(h))once('reseau-'+(h.match(/instagram|facebook|youtube|pinterest|linkedin|tiktok/)||[''])[0]);
+else if(/réserv|reserv|visite|book/.test(t))once('reservation');
+else if(/coffret|gift|cadeau/.test(t))once('coffret')},true);
+document.addEventListener('play',function(e){if(e.target&&e.target.tagName==='VIDEO'&&!e.target.muted)once('video-son')},true);
+try{new MutationObserver(function(){var l=(document.documentElement.lang||'').slice(0,2);if(l&&l!=='fr')once('langue-'+l)}).observe(document.documentElement,{attributes:true,attributeFilter:['lang']})}catch(x){}
+addEventListener('load',function(){try{if(typeof window.go==='function'&&!window.go.__nv){var g=window.go;window.go=function(v){try{window.__nvView(v)}catch(x){}return g.apply(this,arguments)};window.go.__nv=1}}catch(x){}});})();</script>
+</body>
+</html>
