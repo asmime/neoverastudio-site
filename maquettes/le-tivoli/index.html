@@ -89,7 +89,7 @@ main section.vue{display:none}main section.vue.on{display:block}
 .bande-l .intro{color:#CFC7C0}
 /* héros */
 .heros{display:grid;grid-template-columns:minmax(0,1.04fr) minmax(0,1fr);background:var(--lauze);color:#fff;min-height:min(74vh,660px)}
-.heros-t{padding:clamp(40px,6vw,88px) clamp(20px,5vw,72px) 40px;display:flex;flex-direction:column;justify-content:center}
+.heros-t{padding:clamp(40px,6vw,88px) clamp(20px,4vw,56px) 40px max(20px,calc((100vw - 1200px)/2));display:flex;flex-direction:column;justify-content:center}
 .heros-t h1{color:#fff;max-width:13ch}
 .heros-t h1 .ligne{display:block;overflow:hidden}
 .heros-t h1 .ligne>span{display:block;transform:translateY(105%);transition:transform 1s var(--ease)}
@@ -350,9 +350,9 @@ main{padding-bottom:0}footer.pied{padding-bottom:96px}
    </ul>
   </div>
   <figure class="heros-p">
-   <img src="img/tri18.jpg" alt="Mobil-home Trigano sous les arbres, pelouse fleurie du camping Le Tivoli" data-ia="altHero" fetchpriority="high">
+   <img src="img/lz1.jpg" alt="Canoës entre les falaises des gorges du Tarn" data-ia="altHero" fetchpriority="high">
    <div class="coord" aria-hidden="true"><b>Le Tivoli</b>44.5188° N · 3.4985° E<br><span data-i="coordAlt">700 m d'altitude</span></div>
-   <figcaption data-i="capHero">Le Trigano II 2018, dans les allées du camping</figcaption>
+   <figcaption data-i="capHero">Les gorges du Tarn, au départ du Tivoli</figcaption>
   </figure>
  </div>
  <div class="resa" id="resa-barre">
@@ -361,8 +361,8 @@ main{padding-bottom:0}footer.pied{padding-bottom:96px}
    <div class="champ"><label for="r-nuits" data-i="rNuits">Nuits</label><select id="r-nuits"><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option selected>7</option><option>10</option><option>14</option><option>21</option></select></div>
    <div class="champ"><label for="r-pers" data-i="rPers">Personnes</label><select id="r-pers"><option>1</option><option selected>2</option><option>3</option><option>4</option><option>5</option><option>6</option></select></div>
    <div class="champ"><label for="r-type" data-i="rType">Hébergement</label><select id="r-type"><option value="mh" data-i="optMh">Mobil-home</option><option value="em" data-i="optEm">Emplacement</option></select></div>
-   <button class="btn btn-p" type="submit"><span data-i="rGo">Voir les disponibilités</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
-   <p class="note" data-i="rNote">Paiement sécurisé par le module de réservation en ligne du camping. Mobil-homes : 4 personnes au maximum. Emplacements : 7 nuits minimum à la réservation.</p>
+   <button class="btn btn-p" type="submit"><span data-i="rGo">Ouvrir la réservation en ligne</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+   <p class="note" id="r-msg" role="status"></p><p class="note" data-i="rNote">Le module sécurisé du camping s'ouvre dans un nouvel onglet : vous y confirmez vos dates et réglez l'acompte. Mobil-homes : à la semaine, 4 personnes au maximum. Emplacements : 7 nuits minimum.</p>
   </form>
  </div>
 
@@ -503,7 +503,8 @@ main{padding-bottom:0}footer.pied{padding-bottom:96px}
    <div class="champ"><label for="c-p" data-i="cP">Personnes en plus (dès 7 ans)</label><input id="c-p" type="number" min="0" max="6" value="0"></div>
    <div class="champ"><label for="c-e" data-i="cE">Enfants de moins de 7 ans</label><input id="c-e" type="number" min="0" max="6" value="0"></div>
    <div class="champ"><label for="c-c" data-i="cC">Chiens</label><input id="c-c" type="number" min="0" max="3" value="0"></div>
-   <div class="total"><div><span data-i="cTot">Total estimé</span><br><b id="c-tot" class="num">—</b></div><p data-i="cNote">Taxe de séjour (0,30 € par personne et par nuit) comprise. Hors frais de réservation (10 €). Réservation de 7 nuits minimum.</p><a class="btn btn-p" href="#/reserver" data-i="cGo">Réserver cet emplacement</a></div>
+   <div class="champ"><label for="c-v" data-i="cV">Véhicules en plus</label><input id="c-v" type="number" min="0" max="3" value="0"></div>
+   <p class="sous" id="c-min" style="grid-column:1/-1;margin:0"></p><div class="total"><div><span data-i="cTot">Total estimé</span><br><b id="c-tot" class="num">—</b></div><p data-i="cNote">Taxe de séjour (0,30 € par personne et par nuit) comprise. Hors frais de réservation (10 €). Réservation de 7 nuits minimum.</p><a class="btn btn-p" href="#/reserver" data-i="cGo">Réserver cet emplacement</a></div>
   </form>
  </div></section>
  <section class="bande bande-g"><div class="wrap">
@@ -528,7 +529,7 @@ main{padding-bottom:0}footer.pied{padding-bottom:96px}
 <section class="vue" data-v="mh">
  <div class="tete"><div class="wrap"><p class="fil"><a href="#/" data-i="nHome">Accueil</a> / <a href="#/mobil-homes" data-i="nMh">Mobil-homes</a> / <span id="f-fil"></span></p><h1 id="f-nom"></h1><p id="f-acc"></p></div></div>
  <section class="bande"><div class="wrap fiche-h">
-  <div class="galerie"><div class="grand"><img id="f-grand" src="" alt=""></div><div class="vign" id="f-vign"></div></div>
+  <div class="galerie"><div class="grand"><img id="f-grand" src="img/tg0.jpg" alt=""></div><div class="vign" id="f-vign"></div></div>
   <div>
    <div class="encadre">
     <p style="margin:0" class="sous" data-i="aPartir">À partir de</p>
@@ -548,7 +549,7 @@ main{padding-bottom:0}footer.pied{padding-bottom:96px}
 
 <!-- TARIFS -->
 <section class="vue" data-v="tarifs">
- <div class="tete"><div class="wrap"><p class="fil"><a href="#/" data-i="nHome">Accueil</a> / <span data-i="nTarifs">Tarifs</span></p><h1 data-i="tarH">Tarifs 2026</h1><p data-i="tarHP">Mobil-homes à la semaine, emplacements à la nuit. Touchez une période pour la surligner.</p></div></div>
+ <div class="tete"><div class="wrap"><p class="fil"><a href="#/" data-i="nHome">Accueil</a> / <span data-i="nTarifs">Tarifs</span></p><h1 data-i="tarH">Tarifs 2026</h1><p data-i="tarHP">Mobil-homes à la semaine, emplacements à la nuit. Les tarifs 2027 arrivent bientôt : ceux de 2026 vous donnent un repère. Touchez une période pour la surligner.</p></div></div>
  <section class="bande"><div class="wrap">
   <h2 data-i="tMhT">Mobil-homes, prix TTC par semaine</h2>
   <p class="sous" data-i="tMhS">Capacité maximale : 4 personnes. Taxe de séjour incluse.</p>
@@ -597,7 +598,7 @@ main{padding-bottom:0}footer.pied{padding-bottom:96px}
  <section class="bande"><div class="wrap grille2">
   <div class="encadre">
    <h3 data-i="re1T">1. En ligne, tout de suite</h3>
-   <p data-i="re1P">Choisissez vos dates et réglez l'acompte par carte bancaire, sur le module sécurisé du camping.</p>
+   <p data-i="re1P">Choisissez vos dates et réglez l'acompte par carte bancaire, sur le module sécurisé du camping.</p><ul class="liste-net" id="etapes"></ul>
    <a class="btn btn-p" href="https://bookingpremium.secureholiday.net/fr/2548/" target="_blank" rel="noopener" data-i="re1B">Réserver en ligne</a>
   </div>
   <div class="encadre">
@@ -612,7 +613,7 @@ main{padding-bottom:0}footer.pied{padding-bottom:96px}
   </div>
  </div></section>
  <section class="bande bande-g"><div class="wrap grille2">
-  <div><h2 data-i="condT">Conditions de réservation</h2><ul class="liste-net" id="cond"></ul></div>
+  <div><h2 data-i="condT" style="font-size:1.9rem">Conditions de réservation</h2><ul class="liste-net" id="cond"></ul></div>
   <div><p class="alerte" data-i="horAl">Attention : une réservation ne permet en aucun cas d'arriver en dehors des horaires d'ouverture de l'accueil. Arrivées de 14 h à 18 h, toute la saison.</p>
   <div class="encadre" style="margin-top:18px"><h3 data-i="horT">Horaires de l'accueil hors saison</h3><p class="num" data-i="horP">10 h – 12 h et 14 h – 18 h. Fermeture du camping le 15 octobre au matin.</p></div></div>
  </div></section>
@@ -662,7 +663,7 @@ main{padding-bottom:0}footer.pied{padding-bottom:96px}
   <div class="encadre">
    <h3>Camping Le Tivoli ★★★</h3>
    <p>Impasse de Tivoli<br>F-48000 Mende</p>
-   <p><a href="tel:+33466653110">04 66 65 31 10</a> · <span class="num">+33 4 66 65 31 10</span><br><a href="mailto:camping.tivoli0601@orange.fr">camping.tivoli0601@orange.fr</a></p>
+   <p><a href="tel:+33466653110">04 66 65 31 10</a><br><a href="mailto:camping.tivoli0601@orange.fr">camping.tivoli0601@orange.fr</a></p>
    <p class="sous" data-i="horP">10 h – 12 h et 14 h – 18 h. Fermeture du camping le 15 octobre au matin.</p>
    <p><a href="https://www.facebook.com/Camping-Le-Tivoli-Mende-1151120861615264/" target="_blank" rel="noopener" data-i="fbSuivre">Suivre le camping sur Facebook</a></p>
   </div>
@@ -720,6 +721,12 @@ let L='fr';
 </script>
 <script>
 const T={
+capHero:['The Tarn gorges, setting off from Le Tivoli','Las gargantas del Tarn, saliendo del Tivoli','Die Tarnschluchten, ab Le Tivoli','Le gole del Tarn, partendo dal Tivoli','De Tarnkloven, vertrekpunt Le Tivoli'],
+altHero:['Canoes between the cliffs of the Tarn gorges','Canoas entre los acantilados de las gargantas del Tarn','Kanus zwischen den Felswänden der Tarnschluchten','Canoe tra le falesie delle gole del Tarn','Kano\'s tussen de rotswanden van de Tarnkloven'],
+rGo:['Open online booking','Abrir la reserva en línea','Online-Buchung öffnen','Apri la prenotazione online','Online reserveren openen'],
+rNote:['The campsite\'s secure module opens in a new tab: confirm your dates there and pay the deposit. Mobile homes: by the week, 4 people maximum. Pitches: 7 nights minimum.','El módulo seguro del camping se abre en otra pestaña: allí confirma sus fechas y paga el anticipo. Mobil-homes: por semana, 4 personas como máximo. Parcelas: 7 noches mínimo.','Das sichere Modul des Platzes öffnet sich in einem neuen Tab: Dort bestätigen Sie Ihre Daten und zahlen die Anzahlung. Mobilheime: wochenweise, höchstens 4 Personen. Stellplätze: mindestens 7 Nächte.','Il modulo sicuro del campeggio si apre in una nuova scheda: lì confermate le date e pagate l\'acconto. Case mobili: a settimana, massimo 4 persone. Piazzole: minimo 7 notti.','De beveiligde module van de camping opent in een nieuw tabblad: daar bevestigt u uw data en betaalt u de aanbetaling. Stacaravans: per week, maximaal 4 personen. Kampeerplaatsen: minimaal 7 nachten.'],
+tarHP:['Mobile homes by the week, pitches by the night. 2027 rates are coming soon: the 2026 ones give you a guide. Tap a period to highlight it.','Mobil-homes por semana, parcelas por noche. Las tarifas 2027 llegan pronto: las de 2026 le sirven de referencia. Toque un periodo para resaltarlo.','Mobilheime pro Woche, Stellplätze pro Nacht. Die Preise 2027 folgen bald: Die von 2026 dienen als Richtwert. Tippen Sie auf einen Zeitraum.','Case mobili a settimana, piazzole a notte. Le tariffe 2027 arrivano presto: quelle 2026 vi danno un riferimento. Toccate un periodo per evidenziarlo.','Stacaravans per week, plaatsen per nacht. De tarieven 2027 komen binnenkort: die van 2026 geven u een richtlijn. Tik op een periode om die te markeren.'],
+cV:['Extra vehicles','Vehículos adicionales','Zusätzliche Fahrzeuge','Veicoli in più','Extra voertuigen'],
 offT2:['The mobile home at €90 a night, for 4 people maximum','El mobil-home a 90 € la noche, para 4 personas como máximo','Das Mobilheim für 90 € pro Nacht, für höchstens 4 Personen','La casa mobile a 90 € a notte, per massimo 4 persone','De stacaravan voor € 90 per nacht, voor maximaal 4 personen'],
 offNuit2:['Plus a €15 booking fee.','Más 15 € de gastos de reserva.','Zuzüglich 15 € Buchungsgebühr.','Più 15 € di spese di prenotazione.','Plus € 15 reserveringskosten.'],
 altT:['At 700 m above sea level, nights stay cool','A 700 m de altitud, las noches son frescas','Auf 700 m Höhe bleiben die Nächte frisch','A 700 m di altitudine, le notti restano fresche','Op 700 m hoogte blijven de nachten fris'],
@@ -746,16 +753,16 @@ f1:['<b>Pitch</b> from €19.60 a night for 2','<b>Parcela</b> desde 19,60 € l
 f2:['<b>Mobile home</b> from €320 a week','<b>Mobil-home</b> desde 320 € la semana','<b>Mobilheim</b> ab 320 € pro Woche','<b>Casa mobile</b> da 320 € a settimana','<b>Stacaravan</b> vanaf € 320 per week'],
 f3:['<b>Heated pool</b> in July and August','<b>Piscina climatizada</b> en julio y agosto','<b>Beheizter Pool</b> im Juli und August','<b>Piscina riscaldata</b> a luglio e agosto','<b>Verwarmd zwembad</b> in juli en augustus'],
 coordAlt:['700 m above sea level','700 m de altitud','700 m über dem Meer','700 m di altitudine','700 m hoogte'],
-capHero:['The Trigano II 2018, in the campsite lanes','El Trigano II 2018, entre las calles del camping','Der Trigano II 2018 zwischen den Wegen des Platzes','Il Trigano II 2018, tra i viali del campeggio','De Trigano II 2018, tussen de laantjes van de camping'],
-altHero:['Trigano mobile home under the trees, flowery lawn at Camping Le Tivoli','Mobil-home Trigano bajo los árboles, césped florido del camping Le Tivoli','Mobilheim Trigano unter Bäumen, blühender Rasen auf dem Camping Le Tivoli','Casa mobile Trigano sotto gli alberi, prato fiorito del campeggio Le Tivoli','Stacaravan Trigano onder de bomen, bloeiend gazon op camping Le Tivoli'],
+capHero_old:['The Trigano II 2018, in the campsite lanes','El Trigano II 2018, entre las calles del camping','Der Trigano II 2018 zwischen den Wegen des Platzes','Il Trigano II 2018, tra i viali del campeggio','De Trigano II 2018, tussen de laantjes van de camping'],
+altHero_old:['Trigano mobile home under the trees, flowery lawn at Camping Le Tivoli','Mobil-home Trigano bajo los árboles, césped florido del camping Le Tivoli','Mobilheim Trigano unter Bäumen, blühender Rasen auf dem Camping Le Tivoli','Casa mobile Trigano sotto gli alberi, prato fiorito del campeggio Le Tivoli','Stacaravan Trigano onder de bomen, bloeiend gazon op camping Le Tivoli'],
 rArr:['Arrival','Llegada','Anreise','Arrivo','Aankomst'],
 rNuits:['Nights','Noches','Nächte','Notti','Nachten'],
 rPers:['Guests','Personas','Personen','Persone','Personen'],
 rType:['Accommodation','Alojamiento','Unterkunft','Alloggio','Verblijf'],
 optMh:['Mobile home','Mobil-home','Mobilheim','Casa mobile','Stacaravan'],
 optEm:['Pitch','Parcela','Stellplatz','Piazzola','Kampeerplaats'],
-rGo:['Check availability','Ver disponibilidad','Verfügbarkeit prüfen','Vedi disponibilità','Beschikbaarheid bekijken'],
-rNote:['Secure payment through the campsite\'s online booking module. Mobile homes: 4 people maximum. Pitches: 7 nights minimum when booking.','Pago seguro en el módulo de reservas en línea del camping. Mobil-homes: 4 personas como máximo. Parcelas: 7 noches mínimo al reservar.','Sichere Zahlung über das Online-Buchungsmodul des Platzes. Mobilheime: höchstens 4 Personen. Stellplätze: mindestens 7 Nächte bei Buchung.','Pagamento sicuro tramite il modulo di prenotazione online del campeggio. Case mobili: massimo 4 persone. Piazzole: minimo 7 notti in prenotazione.','Veilig betalen via de online reserveringsmodule van de camping. Stacaravans: maximaal 4 personen. Plaatsen: minimaal 7 nachten bij reservering.'],
+rGo_old:['Check availability','Ver disponibilidad','Verfügbarkeit prüfen','Vedi disponibilità','Beschikbaarheid bekijken'],
+rNote_old:['Secure payment through the campsite\'s online booking module. Mobile homes: 4 people maximum. Pitches: 7 nights minimum when booking.','Pago seguro en el módulo de reservas en línea del camping. Mobil-homes: 4 personas como máximo. Parcelas: 7 noches mínimo al reservar.','Sichere Zahlung über das Online-Buchungsmodul des Platzes. Mobilheime: höchstens 4 Personen. Stellplätze: mindestens 7 Nächte bei Buchung.','Pagamento sicuro tramite il modulo di prenotazione online del campeggio. Case mobili: massimo 4 persone. Piazzole: minimo 7 notti in prenotazione.','Veilig betalen via de online reserveringsmodule van de camping. Stacaravans: maximaal 4 personen. Plaatsen: minimaal 7 nachten bij reservering.'],
 bousT:['Five landscapes around your tent','Cinco paisajes alrededor de su tienda','Fünf Landschaften rund um Ihr Zelt','Cinque paesaggi intorno alla vostra tenda','Vijf landschappen rond uw tent'],
 bousLead:['Le Tivoli sits in the heart of Lozère, between Aubrac, Margeride, the Causses, the Tarn gorges and the Cévennes. Pick a direction: the compass shows you what awaits.','Le Tivoli está en el corazón de Lozère, entre Aubrac, Margeride, los Causses, las gargantas del Tarn y las Cevenas. Elija una dirección: la brújula le muestra lo que le espera.','Le Tivoli liegt im Herzen der Lozère, zwischen Aubrac, Margeride, den Causses, den Tarnschluchten und den Cevennen. Wählen Sie eine Richtung: Der Kompass zeigt Ihnen, was Sie erwartet.','Le Tivoli è nel cuore della Lozère, tra Aubrac, Margeride, i Causses, le gole del Tarn e le Cevenne. Scegliete una direzione: la bussola vi mostra cosa vi aspetta.','Le Tivoli ligt midden in de Lozère, tussen Aubrac, Margeride, de Causses, de Tarnkloven en de Cevennen. Kies een richting: het kompas laat zien wat u te wachten staat.'],
 roseLeg:['in the centre, Le Tivoli','en el centro, Le Tivoli','in der Mitte, Le Tivoli','al centro, Le Tivoli','in het midden, Le Tivoli'],
@@ -832,7 +839,7 @@ voirTarifs:['All rates','Todas las tarifas','Alle Preise','Tutte le tariffe','Al
 invT:['See the full inventory','Ver el inventario completo','Vollständiges Inventar ansehen','Vedere l\'inventario completo','Volledige inventaris bekijken'],
 fPrixT:['Weekly prices, 2026 season','Precios por semana, temporada 2026','Wochenpreise, Saison 2026','Prezzi settimanali, stagione 2026','Weekprijzen, seizoen 2026'],
 tarH:['2026 rates','Tarifas 2026','Preise 2026','Tariffe 2026','Tarieven 2026'],
-tarHP:['Mobile homes by the week, pitches by the night. Tap a period to highlight it.','Mobil-homes por semana, parcelas por noche. Toque un periodo para resaltarlo.','Mobilheime pro Woche, Stellplätze pro Nacht. Tippen Sie auf einen Zeitraum, um ihn hervorzuheben.','Case mobili a settimana, piazzole a notte. Toccate un periodo per evidenziarlo.','Stacaravans per week, plaatsen per nacht. Tik op een periode om die te markeren.'],
+tarHP_old:['Mobile homes by the week, pitches by the night. Tap a period to highlight it.','Mobil-homes por semana, parcelas por noche. Toque un periodo para resaltarlo.','Mobilheime pro Woche, Stellplätze pro Nacht. Tippen Sie auf einen Zeitraum, um ihn hervorzuheben.','Case mobili a settimana, piazzole a notte. Toccate un periodo per evidenziarlo.','Stacaravans per week, plaatsen per nacht. Tik op een periode om die te markeren.'],
 tMhT:['Mobile homes, price per week incl. VAT','Mobil-homes, precio por semana IVA incl.','Mobilheime, Preis pro Woche inkl. MwSt.','Case mobili, prezzo a settimana IVA incl.','Stacaravans, prijs per week incl. btw'],
 tMhS:['Maximum 4 people. Tourist tax included.','Máximo 4 personas. Tasa turística incluida.','Höchstens 4 Personen. Kurtaxe inbegriffen.','Massimo 4 persone. Tassa di soggiorno inclusa.','Maximaal 4 personen. Toeristenbelasting inbegrepen.'],
 offCta:['See our special offers','Ver nuestras ofertas especiales','Unsere Sonderangebote','Vedere le offerte speciali','Onze speciale aanbiedingen'],
@@ -1091,10 +1098,11 @@ function tableEmpl(el){
 const check='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M8 12l3 3 5-6"/></svg>';
 function liste(el,arr){el.innerHTML=arr.map(a=>`<li>${check}<span>${tr(a)}</span></li>`).join('')}
 function calc(){
- const f=EMPL[+$('#c-f').value],s=+$('#c-s').value,n=Math.max(1,Math.min(60,+$('#c-n').value||1)),p=Math.max(0,+$('#c-p').value||0),e=Math.max(0,+$('#c-e').value||0),c=Math.max(0,+$('#c-c').value||0);
+ const f=EMPL[+$('#c-f').value],s=+$('#c-s').value,n=Math.max(1,Math.min(60,+$('#c-n').value||1)),p=Math.max(0,+$('#c-p').value||0),e=Math.max(0,+$('#c-e').value||0),c=Math.max(0,+$('#c-c').value||0),v=Math.max(0,+$('#c-v').value||0);
  const adultes=(f[0][0].includes('2 pers')?2:1)+p;
- const tot=n*(f[s+1]+p*EXTRA[0][s+1]+e*EXTRA[1][s+1]+c*EXTRA[5][s+1]+adultes*.3+e*.3);
+ const tot=n*(f[s+1]+p*EXTRA[0][s+1]+e*EXTRA[1][s+1]+c*EXTRA[5][s+1]+v*EXTRA[4][s+1]+adultes*.3+e*.3);
  $('#c-tot').textContent=eur(tot);
+ $('#c-min').textContent=n<7?tr(['À la réservation, un emplacement se loue 7 nuits minimum.','When booking, a pitch is rented for 7 nights minimum.','Al reservar, la parcela se alquila 7 noches mínimo.','Bei Buchung gilt für Stellplätze ein Minimum von 7 Nächten.','In prenotazione la piazzola si affitta per minimo 7 notti.','Bij reservering huurt u een plaats minimaal 7 nachten.']):'';
 }
 function renderAll(){
  const m0=MH[0],per=tr(['sem.','week','sem.','Woche','sett.','week']),des=tr(['dès','from','desde','ab','da','vanaf']);
@@ -1103,6 +1111,7 @@ function renderAll(){
  $('#photos-camp').innerHTML=PHC.map(p=>`<figure class="ph" style="aspect-ratio:16/10"><img src="${imgS(p[0])}" alt="${tr(p.slice(1))}" loading="lazy"><figcaption>${tr(p.slice(1))}</figcaption></figure>`).join('');
  $('#loz-liste').innerHTML=LOZ.map(it=>`<li>${check}<span>${it[1]?`<a href="${it[1]}" target="_blank" rel="noopener">${tr(it[0])}</a>`:tr(it[0])}</span></li>`).join('');
  $('#loz-photos').innerHTML=LZP.map(p=>`<figure class="ph" style="aspect-ratio:16/9"><img src="${imgS(p[0])}" alt="${tr(p.slice(1))}" loading="lazy"><figcaption>${tr(p.slice(1))}</figcaption></figure>`).join('');
+ liste($('#etapes'),ETAPES);majBarre();$('#vid').setAttribute('aria-label',tr(['Vues du camping Le Tivoli','Views of Camping Le Tivoli','Vistas del camping Le Tivoli','Ansichten des Camping Le Tivoli','Viste del campeggio Le Tivoli','Beelden van camping Le Tivoli']));
  tableMh($('#t-mh'));tableEmpl($('#t-empl'));tableEmpl($('#t-empl2'));
  const sel=$('#c-f'),v=sel.value;sel.innerHTML=EMPL.map((r,i)=>`<option value="${i}">${tr(r[0])}</option>`).join('');sel.value=v||'1';calc();
  drawRose();remplirPays(paysCur,false);
@@ -1162,9 +1171,16 @@ function observer(){
 }
 
 /* ---------- barre de réservation ---------- */
+const ETAPES=[['Vous choisissez vos dates et votre hébergement.','You choose your dates and accommodation.','Elige sus fechas y su alojamiento.','Sie wählen Daten und Unterkunft.','Scegliete date e alloggio.','U kiest uw data en verblijf.'],['Vous réglez l\'acompte par carte, en ligne.','You pay the deposit by card, online.','Paga el anticipo con tarjeta, en línea.','Sie zahlen die Anzahlung online per Karte.','Pagate l\'acconto con carta, online.','U betaalt de aanbetaling online met uw kaart.'],['Vous recevez la confirmation par e-mail.','You receive confirmation by email.','Recibe la confirmación por correo.','Sie erhalten die Bestätigung per E-Mail.','Ricevete la conferma via e-mail.','U ontvangt de bevestiging per e-mail.']];
+const SEMS=['semaine','week','semana','Woche','settimana','week'],SEMP=['semaines','weeks','semanas','Wochen','settimane','weken'];
+function majBarre(){const t=$('#r-type').value,n=$('#r-nuits'),p=$('#r-pers'),nv=n.value,pv=p.value;
+ const opts=t==='mh'?[7,14,21]:[7,8,10,14,21,28];
+ n.innerHTML=opts.map(o=>`<option value="${o}">${t==='mh'?(o/7)+' '+tr(o>7?SEMP:SEMS):o}</option>`).join('');n.value=opts.includes(+nv)?nv:'7';
+ const max=t==='mh'?4:8;p.innerHTML=Array.from({length:max},(_,i)=>`<option>${i+1}</option>`).join('');p.value=Math.min(+pv||2,max);}
+$('#r-type').addEventListener('change',majBarre);
 (function(){const d=new Date();d.setDate(d.getDate()+1);const iso=d.toISOString().slice(0,10);$('#r-arr').min=iso})();
 document.querySelector('[data-resa]').addEventListener('submit',e=>{e.preventDefault();const a=$('#r-arr');if(!a.value){a.closest('.champ').classList.add('invalide');a.focus();return}
- a.closest('.champ').classList.remove('invalide');window.open(BOOK,'_blank','noopener')});
+ a.closest('.champ').classList.remove('invalide');$('#r-msg').textContent=tr(['Le module de réservation s\'ouvre dans un nouvel onglet : indiquez-y vos dates.','The booking module opens in a new tab: enter your dates there.','El módulo de reservas se abre en otra pestaña: indique allí sus fechas.','Das Buchungsmodul öffnet sich in einem neuen Tab: Geben Sie dort Ihre Daten ein.','Il modulo di prenotazione si apre in una nuova scheda: inserite lì le date.','De reserveringsmodule opent in een nieuw tabblad: vul daar uw data in.']);window.open(BOOK,'_blank','noopener')});
 
 /* ---------- contact ---------- */
 $('#form-c').addEventListener('submit',e=>{e.preventDefault();let ok=true;
@@ -1172,7 +1188,7 @@ $('#form-c').addEventListener('submit',e=>{e.preventDefault();let ok=true;
  if(ok){$('#co-ok').style.display='block';e.target.reset()}});
 
 /* ---------- calculateur ---------- */
-['#c-f','#c-s','#c-n','#c-p','#c-e','#c-c'].forEach(s=>$(s).addEventListener('input',calc));
+['#c-f','#c-s','#c-n','#c-p','#c-e','#c-c','#c-v'].forEach(s=>$(s).addEventListener('input',calc));
 
 /* ---------- conseiller ---------- */
 const fil=$('#cons-fil');
@@ -1197,24 +1213,42 @@ pmr:['Le camping est accessible aux personnes à mobilité réduite, sauf les lo
 ouv:['Les emplacements sont ouverts du 1er avril au 15 octobre (fermeture le 15 au matin), les mobil-homes du 25 avril au 12 septembre.','Pitches are open from 1 April to 15 October (closing on the morning of the 15th), mobile homes from 25 April to 12 September.','Las parcelas abren del 1 de abril al 15 de octubre (cierre el 15 por la mañana), los mobil-homes del 25 de abril al 12 de septiembre.','Stellplätze sind vom 1. April bis 15. Oktober geöffnet (Schließung am Morgen des 15.), Mobilheime vom 25. April bis 12. September.','Le piazzole sono aperte dal 1° aprile al 15 ottobre (chiusura il 15 mattina), le case mobili dal 25 aprile al 12 settembre.','Kampeerplaatsen zijn open van 1 april tot 15 oktober (sluiting op de ochtend van de 15e), stacaravans van 25 april tot 12 september.'],
 contact:['Frédéric et Nadia : 04 66 65 31 10 (depuis l\'étranger : +33 4 66 65 31 10), ou <a href="mailto:camping.tivoli0601@orange.fr">camping.tivoli0601@orange.fr</a>.','Frédéric and Nadia: +33 4 66 65 31 10, or <a href="mailto:camping.tivoli0601@orange.fr">camping.tivoli0601@orange.fr</a>.','Frédéric y Nadia: +33 4 66 65 31 10, o <a href="mailto:camping.tivoli0601@orange.fr">camping.tivoli0601@orange.fr</a>.','Frédéric und Nadia: +33 4 66 65 31 10 oder <a href="mailto:camping.tivoli0601@orange.fr">camping.tivoli0601@orange.fr</a>.','Frédéric e Nadia: +33 4 66 65 31 10, oppure <a href="mailto:camping.tivoli0601@orange.fr">camping.tivoli0601@orange.fr</a>.','Frédéric en Nadia: +33 4 66 65 31 10, of <a href="mailto:camping.tivoli0601@orange.fr">camping.tivoli0601@orange.fr</a>.'],
 offre:['Pendant les manifestations sportives (Trèfle Lozérien, rallye, vélo, pétanque), hors saison (mai, juin, septembre), le mobil-home se loue 90 € la nuit pour 4, 2 nuits minimum, + 15 € de frais. <a href="#/offres">L\'offre</a>.','During sports events (Trèfle Lozérien, rally, cycling, pétanque) off-season (May, June, September), a mobile home costs €90 a night for 4, 2 nights minimum, + €15 fee. <a href="#/offres">The offer</a>.','Durante los eventos deportivos (Trèfle Lozérien, rally, ciclismo, petanca), fuera de temporada (mayo, junio, septiembre), el mobil-home cuesta 90 € la noche para 4, 2 noches mínimo, + 15 € de gastos. <a href="#/offres">La oferta</a>.','Bei Sportveranstaltungen (Trèfle Lozérien, Rallye, Radsport, Boule) außerhalb der Saison (Mai, Juni, September) kostet das Mobilheim 90 € pro Nacht für 4, mindestens 2 Nächte, + 15 € Gebühr. <a href="#/offres">Das Angebot</a>.','Durante gli eventi sportivi (Trèfle Lozérien, rally, ciclismo, bocce), fuori stagione (maggio, giugno, settembre), la casa mobile costa 90 € a notte per 4, minimo 2 notti, + 15 € di spese. <a href="#/offres">L\'offerta</a>.','Tijdens sportevenementen (Trèfle Lozérien, rally, wielrennen, jeu de boules) buiten het seizoen (mei, juni, september) kost een stacaravan € 90 per nacht voor 4, minimaal 2 nachten, + € 15 kosten. <a href="#/offres">Het aanbod</a>.'],
+courses:['Le centre commercial est à 1 km du camping.','The shopping centre is 1 km from the campsite.','El centro comercial está a 1 km del camping.','Das Einkaufszentrum liegt 1 km vom Platz entfernt.','Il centro commerciale è a 1 km dal campeggio.','Het winkelcentrum ligt op 1 km van de camping.'],
+lave:['Oui, il y a un lave-linge au camping, ainsi qu\'une aire de service camping-car, un barbecue, une aire de jeux et un ping-pong.','Yes, there\'s a washing machine, plus a motorhome service area, a barbecue, a playground and table tennis.','Sí, hay lavadora, además de un área de servicio para autocaravanas, barbacoa, zona de juegos y ping-pong.','Ja, es gibt eine Waschmaschine, dazu eine Wohnmobil-Servicestation, einen Grillplatz, einen Spielplatz und Tischtennis.','Sì, c\'è una lavatrice, oltre a un\'area camper, un barbecue, un\'area giochi e il ping-pong.','Ja, er is een wasmachine, plus een serviceplaats voor campers, een barbecue, een speeltuin en tafeltennis.'],
+paie:['Le camping accepte les chèques bancaires, les chèques-vacances ANCV et la carte bancaire (via la réservation en ligne).','The campsite accepts bank cheques, ANCV holiday vouchers and cards (through online booking).','El camping acepta cheques bancarios, cheques vacaciones ANCV y tarjeta (en la reserva en línea).','Der Platz akzeptiert Schecks, ANCV-Chèques-Vacances und Karte (über die Online-Buchung).','Il campeggio accetta assegni, chèques-vacances ANCV e carta (con la prenotazione online).','De camping accepteert cheques, ANCV-vakantiecheques en betaalkaart (via online reserveren).'],
+taxe:['La taxe de séjour est de 0,30 € par personne et par jour. Elle est déjà incluse dans le prix des mobil-homes.','The tourist tax is €0.30 per person per day. It is already included in mobile home prices.','La tasa turística es de 0,30 € por persona y día. Ya está incluida en el precio de los mobil-homes.','Die Kurtaxe beträgt 0,30 € pro Person und Tag. Bei den Mobilheimen ist sie im Preis enthalten.','La tassa di soggiorno è di 0,30 € a persona al giorno. È già inclusa nel prezzo delle case mobili.','De toeristenbelasting is € 0,30 per persoon per dag. Bij de stacaravans zit die al in de prijs.'],
+resto:['Au camping, le food-truck Le Cabanon passe tous les mercredis, de mi-juillet à fin août. Pour les restaurants de Mende, je n\'ai pas d\'adresse à vous donner : Frédéric et Nadia vous conseilleront à l\'accueil.','At the campsite, the Le Cabanon food truck comes every Wednesday from mid-July to the end of August. For restaurants in Mende I have no addresses to give: Frédéric and Nadia will advise you at reception.','En el camping, el food truck Le Cabanon viene los miércoles, de mediados de julio a finales de agosto. Para restaurantes en Mende no tengo direcciones: Frédéric y Nadia le aconsejarán en recepción.','Auf dem Platz kommt mittwochs von Mitte Juli bis Ende August der Foodtruck Le Cabanon. Restaurants in Mende kann ich nicht nennen: Frédéric und Nadia beraten Sie an der Rezeption.','Al campeggio il food truck Le Cabanon arriva ogni mercoledì, da metà luglio a fine agosto. Per i ristoranti di Mende non ho indirizzi: Frédéric e Nadia vi consiglieranno alla reception.','Op de camping komt foodtruck Le Cabanon elke woensdag van half juli tot eind augustus. Restaurants in Mende kan ik niet noemen: Frédéric en Nadia geven u tips bij de receptie.'],
+groupe:['Les mobil-homes accueillent 4 personnes au maximum. Au-delà, il faut deux locations, ou un emplacement : contactez Frédéric et Nadia au 04 66 65 31 10 pour vous organiser.','Mobile homes sleep 4 people maximum. For more, you need two rentals or a pitch: contact Frédéric and Nadia on +33 4 66 65 31 10.','Los mobil-homes admiten 4 personas como máximo. Si son más, hacen falta dos alquileres o una parcela: contacte con Frédéric y Nadia al +33 4 66 65 31 10.','Die Mobilheime bieten Platz für höchstens 4 Personen. Für mehr braucht es zwei Mietunterkünfte oder einen Stellplatz: Frédéric und Nadia helfen unter +33 4 66 65 31 10.','Le case mobili ospitano al massimo 4 persone. Oltre, servono due alloggi o una piazzola: contattate Frédéric e Nadia al +33 4 66 65 31 10.','De stacaravans zijn voor maximaal 4 personen. Met meer heeft u twee accommodaties of een kampeerplaats nodig: bel Frédéric en Nadia via +33 4 66 65 31 10.'],
+merci:['Avec plaisir ! Bonne préparation de séjour, et à bientôt au Tivoli.','You\'re welcome! Enjoy planning your stay, see you soon at Le Tivoli.','¡Con mucho gusto! Buena preparación, y hasta pronto en el Tivoli.','Gern geschehen! Viel Spaß bei der Planung, bis bald im Tivoli.','Con piacere! Buona preparazione e a presto al Tivoli.','Graag gedaan! Veel plezier met plannen, tot snel bij Le Tivoli.'],
+trigano:['Le Trigano II 2018 : 4 personnes au maximum, terrasse avec pergola, four, frigo-congélateur, moustiquaire, stores occultants et radiateur. De 375 € la semaine (fin avril) à 695 € (du 1er au 22 août). <a href="#/mh/trigano-ii-2018">Voir sa fiche</a>.','The Trigano II 2018: 4 people maximum, terrace with pergola, oven, fridge-freezer, mosquito net, blackout blinds and heater. From €375 a week (late April) to €695 (1–22 August). <a href="#/mh/trigano-ii-2018">See it</a>.','El Trigano II 2018: 4 personas máximo, terraza con pérgola, horno, frigorífico-congelador, mosquitera, estores opacos y radiador. De 375 € la semana (finales de abril) a 695 € (1-22 de agosto). <a href="#/mh/trigano-ii-2018">Ver ficha</a>.','Der Trigano II 2018: höchstens 4 Personen, Terrasse mit Pergola, Backofen, Kühl-Gefrierschrank, Moskitonetz, Verdunkelung und Heizung. Von 375 € pro Woche (Ende April) bis 695 € (1.–22. August). <a href="#/mh/trigano-ii-2018">Ansehen</a>.','Il Trigano II 2018: massimo 4 persone, terrazza con pergola, forno, frigo-congelatore, zanzariera, tende oscuranti e termosifone. Da 375 € a settimana (fine aprile) a 695 € (1-22 agosto). <a href="#/mh/trigano-ii-2018">Vedere la scheda</a>.','De Trigano II 2018: maximaal 4 personen, terras met pergola, oven, koel-vriescombinatie, muggengaas, verduistering en verwarming. Van € 375 per week (eind april) tot € 695 (1–22 augustus). <a href="#/mh/trigano-ii-2018">Bekijken</a>.'],
 inconnu:['Je ne sais pas répondre à cette question avec certitude, et je préfère ne pas inventer. Frédéric et Nadia vous répondront : 04 66 65 31 10 ou <a href="mailto:camping.tivoli0601@orange.fr">camping.tivoli0601@orange.fr</a>.','I can\'t answer that for sure, and I\'d rather not make things up. Frédéric and Nadia will help: +33 4 66 65 31 10 or <a href="mailto:camping.tivoli0601@orange.fr">camping.tivoli0601@orange.fr</a>.','No sé responder a esto con seguridad y prefiero no inventar. Frédéric y Nadia le responderán: +33 4 66 65 31 10 o <a href="mailto:camping.tivoli0601@orange.fr">camping.tivoli0601@orange.fr</a>.','Das kann ich nicht sicher beantworten, und ich möchte nichts erfinden. Frédéric und Nadia helfen Ihnen: +33 4 66 65 31 10 oder <a href="mailto:camping.tivoli0601@orange.fr">camping.tivoli0601@orange.fr</a>.','Non so rispondere con certezza e preferisco non inventare. Frédéric e Nadia vi risponderanno: +33 4 66 65 31 10 o <a href="mailto:camping.tivoli0601@orange.fr">camping.tivoli0601@orange.fr</a>.','Dat weet ik niet zeker, en ik verzin liever niets. Frédéric en Nadia helpen u graag: +33 4 66 65 31 10 of <a href="mailto:camping.tivoli0601@orange.fr">camping.tivoli0601@orange.fr</a>.']
 };
 const RX=[
+['merci',/^(merci|thanks|thank you|gracias|danke|grazie|bedankt|dank je)\b/],
+['inconnu',/m[eé]t[eé]o|quel temps|weather|wetter|tiempo hace|che tempo|weerbericht|\bweer\b|capitale|capital|prompt|coupe du monde|world cup/],
+['resto',/restau|manger|\beat\b|dinner|comer|essen|mangiare|\beten\b|pizza/],
+['courses',/course|supermarch|supermarket|supermercado|supermarkt|\bshop|winkel|magasin|[ée]picerie|einkauf|negozi|boulang|bakery|commerce/],
+['lave',/lave-linge|machine [àa] laver|laver le linge|washing|lavadora|waschmaschine|lavatrice|wasmachine|laverie|laundry/],
+['paie',/ch[eè]que|ancv|voucher|carte bancaire|credit card|tarjeta|kreditkarte|carta di credito|betaalkaart|cash|esp[eè]ces/],
+['taxe',/taxe|\btax|tasa|kurtaxe|tassa|toeristenbelasting/],
+['groupe',/\b([5-9]|1[0-9])\s*(pers|people|adult|personas|personen|persone|adultes)|\bon est [5-9]|\bnous sommes [5-9]|\bwe are [5-9]|\bsomos [5-9]|\bwir sind [5-9]|\bsiamo [5-9]|\bwe zijn met [5-9]/],
+['trigano',/trigano/],
 ['offre',/tr[eè]fle|rallye|rally|p[eé]tanque|boule|bocce|une nuit|1 nuit|one night|una noche|eine nacht|una notte|één nacht|offre|offer|oferta|angebot|offert|aanbied|promo/],
 ['bebe',/b[eé]b[eé]|baby|culla|cuna|kinderbed|babybett|nourrisson/],
+['empl0',/emplacement|tente|pitch|\btent\b|parcela|tienda|stellplatz|zelt|piazzola|tenda|kampeerplaats|camping-car|campingcar|motorhome|wohnmobil|camper|caravan/],
 ['chien',/chien|chat|animal|animaux|\bdog|\bpet|perro|mascota|hund|haustier|tier\b|\bcane\b|cani\b|hond|huisdier/],
 ['pisc',/piscin|pool|zwembad|bain|swim|nager|nadar|schwimm|nuotare|zwemmen/],
 ['aout',/ao[uû]t|august|agosto|augustus/],
 ['choix',/choisi|conseil|lequel|laquelle|meilleur|recommand|which|best|recommend|cu[aá]l|mejor|welche|empfehl|quale|migliore|consigli|welke|beste|aanrad/],
 ['empl',/emplacement|tente|caravane|camping-car|campingcar|pitch|tent|caravan|motorhome|camper|parcela|tienda|autocaravana|stellplatz|zelt|wohnmobil|wohnwagen|piazzola|tenda|roulotte|kampeerplaats|plaats\b|élec|electric|strom|stroom/],
 ['mh',/mobil|mobile|stacaravan|chalet|location|louer|rent|alquil|miet|affitt|huur|semaine|week|woche|settimana|semana|prix|price|precio|preis|prezz|prijs|tarif|cost|combien|how much|cu[aá]nto|wie viel|quanto|hoeveel/],
-['arr',/arriv|heure|horaire|check|llegada|hora|anreise|uhr|orari|aankomst|laat|accueil|r[eé]ception|recepci|rezeption/],
+['arr',/arriv|heure|horaire|check|llegada|hora|anreise|ankomm|ankunft|uhr|orari|aankomst|laat|accueil|r[eé]ception|recepci|rezeption/],
 ['froid',/froid|fra[iî]ch|altitude|cold|chilly|sleeping bag|duvet|fr[ií]o|saco|kalt|schlafsack|freddo|sacco|koud|slaapzak|chauffage|heating|radiat/],
 ['wifi',/wi-?fi|internet|wlan|r[eé]seau/],
 ['linge',/drap|linge|serviette|couette|oreiller|sheet|towel|pillow|bedding|s[aá]bana|toalla|almohada|bettw|handt[uü]ch|kissen|lenzuol|asciugam|cuscin|laken|handdoek|kussen|beddengoed/],
 ['resa',/r[eé]serv|book|buch|prenot|acompte|arrhes|deposit|anticipo|anzahlung|acconto|aanbetal|annul|cancel|stornier|pay|paie|pago|zahl|pagam|betal/],
 ['acces',/acc[eè]s|venir|route|gps|a75|rn ?88|direction|get there|c[oó]mo llegar|anfahrt|arrivare|adres|address|o[uù] est|where is|d[oó]nde|wo liegt|dove|waar ligt|mende/],
-['anim',/animation|soir[eé]e|food|cabanon|guillaume|entertain|animaci|velada|abend|serata|avond|musique|music/],
+['anim',/animation|animazion|bambini|ni[ñn]os|kinder|enfants|kids|children|soir[eé]e|food|cabanon|guillaume|entertain|animaci|velada|abend|serata|avond|musique|music/],
 ['loz',/visit|faire|gorges|cano[eë]|kayak|rando|hik|wander|excurs|gita|uitstap|l[oò]z[eè]re|tarn|c[eé]venn|loup|wolf|bison|grotte|cave|cueva|h[oö]hle|vautour|vulture|v[eé]lo|vtt|bike/],
 ['pmr',/handicap|pmr|fauteuil|wheelchair|silla de ruedas|rollstuhl|disab|mobilit|mindervalid|rolstoel/],
 ['ouv',/ouvert|ouverture|fermeture|ferm[eé]|open|close|abiert|cierr|ge[oö]ffnet|schlie|aperto|chius|gesloten|saison|season|temporada|stagione|seizoen|avril|april|octobre|october/],
@@ -1222,6 +1256,7 @@ const RX=[
 ['salut',/^(bonjour|salut|hello|hi|hola|hallo|ciao|buongiorno|goedendag|bonsoir)\b/]];
 function repondre(q){
  const s=q.toLowerCase();let k='inconnu';for(const [n,r] of RX){if(r.test(s)){k=n;break}}
+ if(k==='empl0'){k=/chien|\bdog|hund|perro|\bcane\b|\bhond/.test(s)?'chien':'empl'}
  if(k==='mh'&&/emplacement|pitch|parcela|stellplatz|piazzola|kampeerplaats|tente|tent/.test(s))k='empl';
  return tr(A[k]);
 }
