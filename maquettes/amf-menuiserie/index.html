@@ -19,7 +19,7 @@
 @font-face{font-family:"Fragment Mono";font-weight:400;font-display:swap;src:url(fonts/fragment-mono-latin-400-normal.woff2) format("woff2")}
 @font-face{font-family:"Fragment Mono";font-weight:400;font-display:swap;src:url(fonts/fragment-mono-latin-ext-400-normal.woff2) format("woff2");unicode-range:U+0100-02BA,U+1E00-1EFF}
 :root{
---vert:#0F4A44;--vert2:#14605A;--vert3:#0A3632;--amf:#33A08F;--platre:#EEF1EF;--platre2:#E2E8E5;--graphite:#172120;--gris:#4F5D5A;--chene:#B57C4A;--chene2:#86552A;--trait:rgba(238,241,239,.5);
+--vert:#0E4A3B;--vert2:#155E4C;--vert3:#092E25;--amf:#33A08F;--platre:#EEF1EF;--platre2:#E2E8E5;--graphite:#172120;--gris:#4F5D5A;--chene:#C9A06E;--chene2:#7E5530;--trait:rgba(238,241,239,.5);
 --t:"Bricolage Grotesque",ui-sans-serif,sans-serif;--m:"Fragment Mono",ui-monospace,monospace;
 --r:2px;--max:1240px;--g:clamp(16px,4vw,48px)}
 *{box-sizing:border-box}
@@ -41,14 +41,14 @@ p{margin:0;text-wrap:pretty}
 .lead{font-size:clamp(1.08rem,1.6vw,1.25rem);max-width:60ch}
 .btn{display:inline-flex;align-items:center;gap:.6em;min-height:48px;padding:.75em 1.3em;border-radius:var(--r);border:1.5px solid currentColor;font-weight:700;text-decoration:none;cursor:pointer;transition:background .25s,color .25s,transform .25s;background:transparent}
 .btn-chene{background:var(--chene);border-color:var(--chene);color:var(--graphite)}
-.btn-chene:hover{background:#d39d66}
+.btn-chene:hover{background:#d8b384}
 .btn-vert{background:var(--vert);border-color:var(--vert);color:var(--platre)}
 .btn-vert:hover{background:var(--vert2)}
 .btn-ligne:hover{background:var(--graphite);color:var(--platre)}
 .fleche{display:inline-block;transition:transform .3s}
 a:hover .fleche,button:hover .fleche{transform:translateX(4px)}
 /* en-tête */
-.tete{position:sticky;top:0;z-index:40;background:rgba(238,241,239,.96);backdrop-filter:saturate(1.2);border-bottom:1px solid rgba(23,33,32,.12)}
+.tete{position:sticky;top:0;z-index:40;background:var(--platre);border-bottom:1px solid rgba(23,33,32,.12)}
 .tete .wrap{display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:20px;min-height:72px}
 .logo img{height:44px;width:auto}
 .nav{display:flex;gap:4px;justify-content:center;flex-wrap:nowrap}
@@ -83,7 +83,7 @@ a:hover .fleche,button:hover .fleche{transform:translateX(4px)}
 .plan{position:relative;margin:0;padding:0 0 46px 54px;justify-self:center;width:min(100%,440px)}
 .baie{position:relative;aspect-ratio:3/4;border-radius:50% 50% 0 0/24% 24% 0 0;overflow:hidden;perspective:1300px;background:var(--vert3);box-shadow:0 0 0 1px var(--trait),0 30px 60px -30px rgba(0,0,0,.6)}
 .baie>img{width:100%;height:100%;object-fit:cover;object-position:50% 40%}
-.vantail{position:absolute;inset:0;transform-origin:0 50%;background:linear-gradient(100deg,#16645d,#11554f 60%,#0f4b45);transition:transform 1.7s cubic-bezier(.62,.04,.18,1);will-change:transform;display:grid;grid-template-rows:1.15fr 1fr;gap:9%;padding:24% 15% 11%;box-shadow:inset -1px 0 0 rgba(255,255,255,.12)}
+.vantail{position:absolute;inset:0;transform-origin:0 50%;background:linear-gradient(100deg,#176350,#125443 60%,#0E4A3B);transition:transform 1.7s cubic-bezier(.62,.04,.18,1);will-change:transform;display:grid;grid-template-rows:1.15fr 1fr;gap:9%;padding:24% 15% 11%;box-shadow:inset -1px 0 0 rgba(255,255,255,.12)}
 .vantail i{display:block;border:1.5px solid rgba(238,241,239,.38);box-shadow:inset 0 0 0 7px rgba(10,54,50,.35),inset 0 0 0 8.5px rgba(238,241,239,.22)}
 .vantail i:first-child{border-radius:50% 50% 0 0/18% 18% 0 0}
 .vantail b{position:absolute;right:11%;top:56%;width:13px;height:13px;border-radius:50%;background:var(--chene);box-shadow:0 2px 0 var(--chene2)}
@@ -153,7 +153,7 @@ section{position:relative}
 @media (max-width:760px){.avis-grille{grid-template-columns:1fr}.avis-grille blockquote:nth-child(even){transform:none}.avis .lien{margin-top:36px}}
 /* bois */
 .bois{color:var(--platre);background:var(--vert3) url(img/planches.jpg) center/cover;isolation:isolate}
-.bois::before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(10,54,50,.96),rgba(10,54,50,.86));z-index:-1}
+.bois::before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(9,46,37,.96),rgba(9,46,37,.86));z-index:-1}
 .bois .lead{margin-top:18px;color:rgba(238,241,239,.85)}
 .essences{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin-top:48px;border-top:1px solid var(--trait)}
 .essences div{padding:22px 22px 0 0}
@@ -356,80 +356,80 @@ ui:{accueil:"Accueil",prestations:"Portes et portails",realisations:"Réalisatio
 heroT:"Votre porte,<br>à vos cotes.",heroP:"Portes et portails en bois sur mesure, dessinés, fabriqués en France et posés par AMF Menuiserie, à Paris 12e.",heroCta:"Dessiner mon devis gratuit",heroCote:"à vos mesures",heroH:"H",heroL:"L",
 heroPreuves:["Devis gratuit","Garantie décennale","Fabrication française"],
 introT:"Plus de 30 ans à travailler le bois",introP:"AMF Menuiserie travaille le bois sous toutes ses formes. Nous créons, rénovons et entretenons tout type de porte ou de portail, sur mesure. Chaque projet est réalisé en France par des artisans menuisiers confirmés, du premier plan à la pose.",introLien:"Voir les six portes",
-sixT:"Six portes, un seul atelier",sixP:"Choisissez l'ouvrage : nous le dessinons à vos mesures.",voir:"Découvrir",
+sixT:"Six portes, un seul atelier",sixP:"Choisissez l'ouvrage : nous le dessinons à vos mesures.",voir:"Découvrir",
 etapesT:"Du plan à la pose",etapes:[["Le plan","Nous dessinons les plans d'après vos idées et vos mesures. Le devis est gratuit."],["La fabrication","Votre porte est fabriquée après votre validation, en France."],["La pose","Dernières retouches, puis pose chez vous ou sur votre lieu de travail."]],etapesFin:"Un projet sur mesure s'intègre parfaitement à votre intérieur comme à votre façade.",
 cartoucheT:"Nos engagements",engagements:["Devis gratuit pour toute prestation","Fabrication sur mesure française","Études et conseils personnalisés","Tarifs compétitifs","Garantie décennale","Respect des normes en vigueur"],cartoucheRef:"AMF Menuiserie · Paris 12e",
 avisT:"Ils nous ont ouvert leur porte",avisLien:"Lire et écrire dans le livre d'or",
 boisT:"Le bon bois pour chaque porte",boisP:"Toutes nos essences sont labellisées FSC ou PEFC, issues de forêts gérées durablement.",
-bois:[["Chêne","Solide, ne se déforme pas avec le temps, demande peu d'entretien."],["Sapin, pin massif","Légers : parfaits pour les chalets et les cabanons."],["Exotiques","Ayous, sapelli, sipo, iroko, teck… denses, peu d'entretien, large choix de teintes."],["Pour l'haussmannien","Noyer, tilleul, châtaignier, chêne, merisier."]],
+bois:[["Chêne","Solide, ne se déforme pas avec le temps, demande peu d'entretien."],["Sapin, pin massif","Légers : parfaits pour les chalets et les cabanons."],["Exotiques","Ayous, sapelli, sipo, iroko, teck… denses, peu d'entretien, large choix de teintes."],["Pour l'haussmannien","Noyer, tilleul, châtaignier, chêne, merisier."]],
 galT:"Quelques réalisations",galLien:"Toute la galerie",
-appelT:"Parlons de votre porte",appelP:"Décrivez votre projet en deux minutes, ou appelez l'atelier.",telJours:"Téléphone : tous les jours, de 8 h à 23 h 30",horaires:"Toute la semaine, de 8 h à 20 h",
+appelT:"Parlons de votre porte",appelP:"Décrivez votre projet en deux minutes, ou appelez l'atelier.",telJours:"Téléphone : tous les jours, de 8 h à 23 h 30",horaires:"Toute la semaine, de 8 h à 20 h",
 coordT:"Coordonnées",horairesT:"Horaires",reseauT:"Le réseau AMF",mentions:"Mentions légales",plan:"Plan du site",
 pourquoi:"Pourquoi le sur mesure",types:"Quel modèle choisir",perso:"Votre personnalisation",reno:"Rénovation",devisPour:"Demander un devis pour cette porte",autres:"Les autres portes",
-galeriePageT:"Réalisations",galeriePageP:"Portes et portails en bois sur mesure : la galerie de l'atelier.",tout:"Tout",
-livreP:"Vos mots comptent : laissez votre avis sur notre travail.",livreForm:"Laisser un avis",note:"Votre note",email:"E-mail",nomP:"Nom ou pseudonyme",avis:"Votre avis",envoyerAvis:"Envoyer mon avis",avisMerci:"Merci ! Votre messagerie s'ouvre avec votre avis prêt à partir.",
-devisT:"Votre devis gratuit",devisP:"Quelques choix, vos mesures si vous les avez : le plan se dessine à mesure que vous remplissez.",
-dQuoi:"Quel ouvrage ?",dProjet:"Votre projet",projets:["Création","Rénovation","Entretien"],dCotes:"Vos mesures (facultatif)",hauteur:"Hauteur (cm)",largeur:"Largeur (cm)",nsp:"Je ne les connais pas encore",dOuv:"Ouverture souhaitée",ouvertures:["Battante","Coulissante","Pivotante","Pliante","À conseiller"],dBois:"Essence",essences:["Chêne","Sapin / pin","Exotique","Noyer, merisier…","À conseiller"],dMsg:"Votre projet en quelques mots",dVous:"Vos coordonnées",nom:"Nom",tel:"Téléphone",cp:"Code postal",envoyer:"Envoyer ma demande",devisMerci:"C'est noté. Votre messagerie s'ouvre avec la demande prête à partir vers l'atelier. Vous pouvez aussi appeler le 01 84 14 45 17.",requis:"Merci d'indiquer votre nom et un téléphone ou un e-mail.",planTitre:"Votre plan",planVide:"à vos mesures",
-mentionsT:"Mentions légales",mentionsTxt:[["Éditeur","AMF Menuiserie — Agencement Menuiseries Fermetures (AMF), SIREN 493 968 044."],["Adresse de l'atelier","3 bis rue Louis Braille, 75012 Paris"],["Siège (registre des entreprises)","97 boulevard Poniatowski, 75012 Paris"],["Contact","01 84 14 45 17 · artisan.amf@gmail.com"],["Hébergement","À compléter lors de la mise en ligne."]],mentionsNote:"Supplément : votre site actuel n'affiche pas de mentions légales. Cette page est préparée avec les informations publiques et sera complétée avec vous.",
+galeriePageT:"Réalisations",galeriePageP:"Portes et portails en bois sur mesure, en images.",tout:"Tout",
+livreP:"Vos mots comptent : laissez votre avis sur notre travail.",livreForm:"Laisser un avis",note:"Votre note",email:"E-mail",nomP:"Nom ou pseudonyme",avis:"Votre avis",envoyerAvis:"Envoyer mon avis",avisMerci:"Merci ! Votre messagerie s'ouvre avec votre avis prêt à partir.",
+devisT:"Votre devis gratuit",devisP:"Quelques choix, vos mesures si vous les avez : le plan se dessine à mesure que vous remplissez.",
+dQuoi:"Quel ouvrage ?",dProjet:"Votre projet",projets:["Création","Rénovation","Entretien"],dCotes:"Vos mesures (facultatif)",hauteur:"Hauteur (cm)",largeur:"Largeur (cm)",nsp:"Je ne les connais pas encore",dOuv:"Ouverture souhaitée",ouvertures:["Battante","Coulissante","Pivotante","Pliante","À conseiller"],dBois:"Essence",essences:["Chêne","Sapin / pin","Exotique","Noyer, merisier…","À conseiller"],dMsg:"Votre projet en quelques mots",dVous:"Vos coordonnées",nom:"Nom",tel:"Téléphone",cp:"Code postal",envoyer:"Envoyer ma demande",devisMerci:"C'est noté. Votre messagerie s'ouvre avec la demande prête à partir vers l'atelier. Vous pouvez aussi appeler le 01 84 14 45 17. Si rien ne s'ouvre, écrivez à artisan.amf@gmail.com.",format:"Merci de vérifier : e-mail valide, téléphone de 8 à 15 chiffres, code postal à 5 chiffres, mesures entre 20 et 900 cm.",requis:"Merci d'indiquer votre nom et un téléphone ou un e-mail.",planTitre:"Votre plan",planVide:"à vos mesures",
+mentionsT:"Mentions légales",mentionsTxt:[["Éditeur","AMF Menuiserie — Agencement Menuiseries Fermetures (AMF), SIREN 493 968 044."],["Adresse de l'atelier","3 bis rue Louis Braille, 75012 Paris"],["Siège (registre des entreprises)","97 boulevard Poniatowski, 75012 Paris"],["Contact","01 84 14 45 17 · artisan.amf@gmail.com"]],mentionsNote:"",
 planT:"Plan du site",
-chatOuvrir:"Je vous aide à choisir",chatTitre:"AMF Conseil",chatSous:"assistant virtuel",chatPlace:"Posez votre question…",chatEnv:"Envoyer",fermer:"Fermer",bulle:"Une question sur votre porte ? Je vous aide à choisir.",
+chatOuvrir:"Je vous aide à choisir",chatTitre:"AMF Conseil",chatSous:"assistant virtuel",chatPlace:"Posez votre question…",chatEnv:"Envoyer",fermer:"Fermer",bulle:"Une question sur votre porte ? Je vous aide à choisir.",
 autresSites:"Nos autres sites",
 retour:"Retour en haut"
 },
 P:{
-"porte-entree":{t:"Porte d'entrée en bois",c:"Pleine, semi-vitrée ou vitrée",why:"Le bois reste le premier choix pour une porte d'entrée : chaleureux, solide, isolant et facile à personnaliser. Nous la dessinons d'après votre maison pour qu'elle s'y intègre parfaitement. Verre, métal ou PVC peuvent s'y associer, et une structure interne en acier renforce la sécurité.",
-types:[["Pleine","Le maximum de sécurité et d'isolation, pour un aspect massif."],["Semi-vitrée","Le bon compromis : élégance, sécurité et protection contre les intempéries."],["Vitrée","Élégante et légère, elle fait entrer la lumière dans votre entrée."]],
-specs:[["Chêne","Solide et résistant, il ne se déforme pas avec le temps et demande peu d'entretien ou de traitement."],["Sapin ou pin massif","Léger : parfait pour la porte d'un chalet ou d'un cabanon."],["Bois exotiques","Ayous, sapelli, sipo, iroko… très denses, peu d'entretien, un grand choix de teintes et de textures."],["Origine","Essences labellisées FSC ou PEFC, issues de forêts gérées durablement."]],
-reno:"AMF Menuiserie rénove aussi les portes d'entrée en bois. Présentez-nous votre porte : nous la transformons comme vous le souhaitez."},
-"placard":{t:"Porte de placard en bois",c:"Battante, pliante ou coulissante",why:"Un rangement aux dimensions particulières, une idée précise de l'aspect de vos portes ? Nous fabriquons la porte de placard qui lui correspond, pour une décoration chaleureuse.",
-types:[["Battantes","Si vous avez de la place : une ouverture simple et traditionnelle, et tout l'intérieur d'un seul coup d'œil."],["Pliantes « accordéon »","Elles prennent moins de place et sont très pratiques. Vous choisissez le nombre de vantaux et le style."],["Coulissantes ou à galandage","Une ouverture originale qui n'occupe pas la pièce, avec de multiples configurations."]],
-specs:[["Ouverture","Battante, pliante ou coulissante ; nombre de portes et de vantaux au choix."],["Bois","Sapin pour sa légèreté, ou bois exotiques : cèdre rouge, teck, iroko, kosipo…"],["Poignée","Bouton, poignée verticale ou horizontale, ou intégrée à la porte."],["Finition","Brut, vernis, peint, miroir intégré, et plus encore."]],
-reno:"Une porte de placard en bois abîmée ? Nous la réparons avec soin pour qu'elle retrouve son allure du premier jour."},
+"porte-entree":{t:"Porte d'entrée en bois",c:"Pleine, semi-vitrée ou vitrée",why:"Le bois reste le premier choix pour une porte d'entrée : chaleureux, solide, isolant et facile à personnaliser. Nous la dessinons d'après votre maison pour qu'elle s'y intègre parfaitement. Verre, métal ou PVC peuvent s'y associer, et une structure interne en acier renforce la sécurité.",
+types:[["Pleine","Le maximum de sécurité et d'isolation, pour un aspect massif."],["Semi-vitrée","Le bon compromis : élégance, sécurité et protection contre les intempéries."],["Vitrée","Élégante et légère, elle fait entrer la lumière dans votre entrée."]],
+specs:[["Chêne","Solide et résistant, il ne se déforme pas avec le temps et demande peu d'entretien ou de traitement."],["Sapin ou pin massif","Léger : parfait pour la porte d'un chalet ou d'un cabanon."],["Bois exotiques","Ayous, sapelli, sipo, iroko… très denses, peu d'entretien, un grand choix de teintes et de textures."],["Origine","Essences labellisées FSC ou PEFC, issues de forêts gérées durablement."]],
+reno:"AMF Menuiserie rénove aussi les portes d'entrée en bois. Présentez-nous votre porte : nous la transformons comme vous le souhaitez."},
+"placard":{t:"Porte de placard en bois",c:"Battante, pliante ou coulissante",why:"Un rangement aux dimensions particulières, une idée précise de l'aspect de vos portes ? Nous fabriquons la porte de placard qui lui correspond, pour une décoration chaleureuse.",
+types:[["Battantes","Si vous avez de la place : une ouverture simple et traditionnelle, et tout l'intérieur d'un seul coup d'œil."],["Pliantes « accordéon »","Elles prennent moins de place et sont très pratiques. Vous choisissez le nombre de vantaux et le style."],["Coulissantes ou à galandage","Une ouverture originale qui n'occupe pas la pièce, avec de multiples configurations."]],
+specs:[["Ouverture","Battante, pliante ou coulissante ; nombre de portes et de vantaux au choix."],["Bois","Sapin pour sa légèreté, ou bois exotiques : cèdre rouge, teck, iroko, kosipo…"],["Poignée","Bouton, poignée verticale ou horizontale, ou intégrée à la porte."],["Finition","Brut, vernis, peint, miroir intégré, et plus encore."]],
+reno:"Une porte de placard en bois abîmée ? Nous la réparons avec soin pour qu'elle retrouve son allure du premier jour."},
 "portail":{t:"Portail en bois",c:"Battant ou coulissant, motorisable",why:"Le portail, c'est la première chose que l'on voit en arrivant chez vous. En bois et sur mesure, il donne un accueil chaleureux et traditionnel, avec des choix de personnalisation sans limite.",
 types:[["Battant","Pour une ouverture traditionnelle."],["Coulissant","Pour un aspect original et moderne."]],
 specs:[["Remplissage","Ajouré, bas plein, semi-plein ou plein."],["Forme","Droite, bombée, chapeau de gendarme, ou personnalisée."],["Motorisation","Possible, avec ou sans renfort."],["Bois","Traditionnels (chêne, hêtre, sapin, bouleau) ou exotiques et autres (teck, acajou, épicéa)."],["Finition","Brut, peinture, vernis, texture…"]],
 reno:"Nous rénovons tout type de portail en bois pour le remettre à neuf."},
 "interieure":{t:"Porte intérieure en bois",c:"Battante, coulissante, pivotante, pliante",why:"Les portes se voient chaque jour. Sur mesure, elles s'accordent à la pièce, même aux dimensions particulières, jusqu'aux portes affleurantes qui se fondent dans le mur.",
-types:[["Battante","La porte classique, qui pivote sur un axe vertical. Passage total ; prévoir au moins un mètre de dégagement. Un aspect traditionnel et familial."],["Coulissante ou à galandage","Un ou deux vantaux coulissent sur un rail, dans la cloison ou en applique. Pas de débattement : discrète, moderne, et adaptée aux personnes à mobilité réduite."],["Pivotante","Elle tourne sur des pivots, jusqu'à 360°, et peut être affleurante, presque invisible. Elle s'ouvre d'une simple pression ; panneaux lumineux, miroirs, ouverture automatisée ou anti pince-doigts possibles."],["Pliante « accordéon »","Des vantaux qui se replient sur eux-mêmes, sur un rail haut ou bas, pour moduler l'espace."]],
+types:[["Battante","La porte classique, qui pivote sur un axe vertical. Passage total ; prévoir au moins un mètre de dégagement. Un aspect traditionnel et familial."],["Coulissante ou à galandage","Un ou deux vantaux coulissent sur un rail, dans la cloison ou en applique. Pas de débattement : discrète, moderne, et adaptée aux personnes à mobilité réduite."],["Pivotante","Elle tourne sur des pivots, jusqu'à 360°, et peut être affleurante, presque invisible. Elle s'ouvre d'une simple pression ; panneaux lumineux, miroirs, ouverture automatisée ou anti pince-doigts possibles."],["Pliante « accordéon »","Des vantaux qui se replient sur eux-mêmes, sur un rail haut ou bas, pour moduler l'espace."]],
 specs:[["Fermeture","Battante, coulissante, pivotante ou pliante."],["Bois","Traditionnel ou exotique."],["Finitions","Rendu du bois, fermeture automatisée, pose de miroirs…"]],
-reno:"Vos portes intérieures existantes méritent une seconde vie ? Parlez-nous-en : nous étudions leur rénovation."},
-"haussmann":{t:"Porte haussmannienne en bois",c:"Moulures et tableaux, à l'ancienne",why:"Vous habitez un appartement haussmannien, ou vous rêvez d'un air parisien chez vous ? Reconnaissable à ses moulures et à ses deux ou trois tableaux, la porte haussmannienne apporte élégance et raffinement. Nous en réalisons et en rénovons de tout type.",
+reno:"Vos portes intérieures existantes méritent une seconde vie ? Parlez-nous-en : nous étudions leur rénovation."},
+"haussmann":{t:"Porte haussmannienne en bois",c:"Moulures et tableaux, à l'ancienne",why:"Vous habitez un appartement haussmannien, ou vous rêvez d'un air parisien chez vous ? Reconnaissable à ses moulures et à ses deux ou trois tableaux, la porte haussmannienne apporte élégance et raffinement. Nous en réalisons et en rénovons de tout type.",
 types:[["Droite","La forme classique, aux dimensions de votre baie."],["Arquée ou plein cintre","Pour épouser une ouverture courbe."],["Coulissante","La porte haussmannienne existe aussi en version coulissante."]],
-specs:[["Sur mesure","Dimensions selon vos indications ; taille et nombre de tableaux au choix."],["Intégrations","Charnières invisibles, serrures, vitres."],["Style traditionnel","Patine, vernis, cire, huile naturelle, peinture ; accessoires de style ancien en fer, laiton ou porcelaine."],["Style contemporain","Céruse, wengé, naturel, blanchi, inox, chromé ou satiné."],["Bois","Noyer, tilleul, châtaignier, chêne, merisier, tous issus de forêts gérées durablement (FSC ou PEFC)."],["Moulures","Moulures de style d'époque, réalisées selon des techniques traditionnelles."]],
+specs:[["Sur mesure","Dimensions selon vos indications ; taille et nombre de tableaux au choix."],["Intégrations","Charnières invisibles, serrures, vitres."],["Style traditionnel","Patine, vernis, cire, huile naturelle, peinture ; accessoires de style ancien en fer, laiton ou porcelaine."],["Style contemporain","Céruse, wengé, naturel, blanchi, inox, chromé ou satiné."],["Bois","Noyer, tilleul, châtaignier, chêne, merisier, tous issus de forêts gérées durablement (FSC ou PEFC)."],["Moulures","Moulures de style d'époque, réalisées selon des techniques traditionnelles."]],
 reno:"Nous rénovons aussi les portes haussmanniennes d'origine, moulures comprises."},
-"porte-fenetre":{t:"Porte-fenêtre en bois",c:"À la française ou coulissante",why:"Pour vos balcons, terrasses et jardins : une grande ouverture qui laisse entrer pleinement la lumière, avec un air méditerranéen. Nos artisans confirmés la réalisent ou la rénovent avec précision.",
+"porte-fenetre":{t:"Porte-fenêtre en bois",c:"À la française ou coulissante",why:"Pour vos balcons, terrasses et jardins : une grande ouverture qui laisse entrer pleinement la lumière, avec un air méditerranéen. Nos artisans confirmés la réalisent ou la rénovent avec précision.",
 types:[["Entièrement vitrée","Une baie vitrée pour laisser entrer toute la lumière."],["Avec soubassement","La beauté du bois en partie basse."],["À la française ou coulissante","Ouverture battante traditionnelle, ou coulissante et à galandage pour ne pas occuper la pièce."]],
-specs:[["Vantaux","Un ou deux, choix des portes et du type de poignée."],["Sur mesure","Chaque habitat a ses particularités : votre porte-fenêtre est adaptée à la vôtre, pour allier esthétique, solidité et isolation."],["Matériaux","Choisis selon votre demande, en tenant compte de votre budget."]],
+specs:[["Vantaux","Un ou deux, choix des portes et du type de poignée."],["Sur mesure","Chaque habitat a ses particularités : votre porte-fenêtre est adaptée à la vôtre, pour allier esthétique, solidité et isolation."],["Matériaux","Choisis selon votre demande, en tenant compte de votre budget."]],
 reno:"Nous rénovons aussi votre porte-fenêtre pour la rendre comme neuve."}
 },
-avis:[["Annie Lor","Travail rapide, propre et efficace, que dire de plus… ? Merci !"],["Jacky","Merci AMF Menuiserie pour le super travail que vous avez fait chez moi pour mes portes de placard, elles sont top !"],["Jourdan","J'ai fait appel à AMF Menuiserie pour toutes les portes de mon appartement haussmannien : travail impeccable, artisans rapides et efficaces. Je recommande fortement cette entreprise pour tous travaux de menuiserie sur mesure !"],["Sam Ogden","Je remercie la société AMF Menuiserie pour son travail remarquable dans la fabrication de mon magnifique portail en bois fait sur mesure, il est super !"]],
+avis:[["Annie Lor","Travail rapide, propre et efficace, que dire de plus… ? Merci !"],["Jacky","Merci AMF Menuiserie pour le super travail que vous avez fait chez moi pour mes portes de placard, elles sont top !"],["Jourdan","J'ai fait appel à AMF Menuiserie pour toutes les portes de mon appartement haussmannien : travail impeccable, artisans rapides et efficaces. Je recommande fortement cette entreprise pour tous travaux de menuiserie sur mesure !"],["Sam Ogden","Je remercie la société AMF Menuiserie pour son travail remarquable dans la fabrication de mon magnifique portail en bois fait sur mesure, il est super !"]],
 chat:{
 accueil:"Bonjour, je suis AMF Conseil, l'assistant virtuel de l'atelier. Je vous aide à choisir votre porte, votre bois ou votre ouverture, et à préparer votre devis.",
-rapides:[["choisir","Quelle porte me faut-il ?"],["ouverture","Battante ou coulissante ?"],["bois","Quel bois choisir ?"],["prix","Combien ça coûte ?"],["renovation","Rénover ma porte"]],
+rapides:[["choisir","Quelle porte me faut-il ?"],["ouverture","Battante ou coulissante ?"],["bois","Quel bois choisir ?"],["prix","Combien ça coûte ?"],["renovation","Rénover ma porte"]],
 r:{
-choisir:"Pour quel endroit ? Choisissez, je vous montre la bonne page.",
-prix:"L'atelier ne publie pas de tarifs : tout est sur mesure, donc le prix dépend de vos dimensions, du bois et des finitions. Le devis est gratuit, et AMF s'engage sur des tarifs compétitifs.",
-delai:"Je n'ai pas d'information sur les délais : ils dépendent du projet. L'atelier vous les donnera avec le devis, ou au 01 84 14 45 17.",
+choisir:"Pour quel endroit ? Choisissez, je vous montre la bonne page.",
+prix:"L'atelier ne publie pas de tarifs : tout est sur mesure, donc le prix dépend de vos dimensions, du bois et des finitions. Le devis est gratuit, et AMF s'engage sur des tarifs compétitifs.",
+delai:"Je n'ai pas d'information sur les délais : ils dépendent du projet. L'atelier vous les donnera avec le devis, ou au 01 84 14 45 17.",
 zone:"L'atelier est à Paris 12e (3 bis rue Louis Braille). Le réseau AMF présente aussi des sites pour toute l'Île-de-France (77, 78, 91, 92, 93, 94, 95) et l'Oise. Pour votre adresse précise, le plus sûr est de demander à l'atelier.",
 securite:"Pour la sécurité et l'isolation, la porte d'entrée pleine est la plus performante. Une structure interne en acier peut renforcer n'importe quel modèle, et le bois reste une matière solide et isolante.",
-bois:"Chêne : solide, il ne se déforme pas et demande peu d'entretien. Sapin ou pin : léger, idéal pour un chalet. Exotiques (iroko, sipo, sapelli, teck…) : très denses, peu d'entretien. Pour une porte haussmannienne : noyer, chêne, merisier, tilleul, châtaignier.",
+bois:"Chêne : solide, il ne se déforme pas et demande peu d'entretien. Sapin ou pin : léger, idéal pour un chalet. Exotiques (iroko, sipo, sapelli, teck…) : très denses, peu d'entretien. Pour une porte haussmannienne : noyer, chêne, merisier, tilleul, châtaignier.",
 fsc:"Toutes les essences d'AMF sont labellisées FSC ou PEFC, issues de forêts gérées durablement.",
-renovation:"AMF rénove tout type de porte et de portail en bois : porte d'entrée, placards abîmés, portail, porte-fenêtre, portes haussmanniennes avec leurs moulures. Décrivez la vôtre dans le devis gratuit.",
-haussmann:"Moulures, deux ou trois tableaux, forme droite, arquée ou plein cintre, charnières invisibles, finitions à l'ancienne ou contemporaines : tout est sur la page Porte haussmannienne.",
-placard:"Battantes si vous avez de la place, pliantes pour gagner de l'espace, coulissantes ou à galandage pour ne pas empiéter sur la pièce. Finitions : brut, vernis, peint ou avec miroir.",
+renovation:"AMF rénove tout type de porte et de portail en bois : porte d'entrée, placards abîmés, portail, porte-fenêtre, portes haussmanniennes avec leurs moulures. Décrivez la vôtre dans le devis gratuit.",
+haussmann:"Moulures, deux ou trois tableaux, forme droite, arquée ou plein cintre, charnières invisibles, finitions à l'ancienne ou contemporaines : tout est sur la page Porte haussmannienne.",
+placard:"Battantes si vous avez de la place, pliantes pour gagner de l'espace, coulissantes ou à galandage pour ne pas empiéter sur la pièce. Finitions : brut, vernis, peint ou avec miroir.",
 portail:"Battant ou coulissant, ajouré ou plein, droit, bombé ou en chapeau de gendarme, et motorisable. En chêne, hêtre, sapin, bouleau ou bois exotique.",
-ouverture:"Battante : passage total, mais il faut environ un mètre de dégagement. Coulissante ou à galandage : aucun débattement, discrète, adaptée aux personnes à mobilité réduite. Pivotante : jusqu'à 360°, peut être affleurante. Pliante : modulable, pour les petits espaces.",
+ouverture:"Battante : passage total, mais il faut environ un mètre de dégagement. Coulissante ou à galandage : aucun débattement, discrète, adaptée aux personnes à mobilité réduite. Pivotante : jusqu'à 360°, peut être affleurante. Pliante : modulable, pour les petits espaces.",
 fenetre:"La porte-fenêtre peut être entièrement vitrée ou avec soubassement en bois, à un ou deux vantaux, à la française ou coulissante.",
 entree:"Pleine pour la sécurité et l'isolation, semi-vitrée pour le compromis, vitrée pour la lumière. En chêne, sapin ou bois exotique.",
 garantie:"AMF Menuiserie travaille sous garantie décennale, dans le respect des normes en vigueur.",
 france:"Toutes les portes et tous les portails sont fabriqués sur mesure en France, par des artisans menuisiers confirmés.",
-devis:"Ça se passe en trois temps : nous dessinons les plans d'après vos idées, nous fabriquons après votre validation, puis nous posons et faisons les retouches finales. Le devis est gratuit.",
-contact:"Téléphone : 01 84 14 45 17, tous les jours de 8 h à 23 h 30. E-mail : artisan.amf@gmail.com. Atelier : 3 bis rue Louis Braille, 75012 Paris, ouvert toute la semaine de 8 h à 20 h.",
+devis:"Ça se passe en trois temps : nous dessinons les plans d'après vos idées, nous fabriquons après votre validation, puis nous posons et faisons les retouches finales. Le devis est gratuit.",
+contact:"Téléphone : 01 84 14 45 17, tous les jours de 8 h à 23 h 30. E-mail : artisan.amf@gmail.com. Atelier : 3 bis rue Louis Braille, 75012 Paris, ouvert toute la semaine de 8 h à 20 h.",
 avis:"Les clients parlent d'un travail rapide, propre et efficace, de portes haussmanniennes impeccables et d'un portail remarquable. Tous les avis sont dans le livre d'or.",
-pmr:"La porte coulissante ou à galandage est la plus adaptée aux personnes à mobilité réduite : pas de débattement, une ouverture dégagée.",
-autres:"Ce site présente les portes et les portails. Le réseau AMF a d'autres sites (escaliers, façades et devantures, volets, vérandas, meubles, fenêtres) : leurs liens sont en bas de page. Pour un projet de ce type, appelez l'atelier.",
-merci:"Avec plaisir ! Quand vous êtes prêt, le devis gratuit vous attend.",
-inconnu:"Je ne suis qu'un assistant virtuel et je n'ai pas cette information. Le plus simple : appelez l'atelier au 01 84 14 45 17 (tous les jours, 8 h–23 h 30), ou décrivez votre projet dans le devis gratuit.",
+pmr:"La porte coulissante ou à galandage est la plus adaptée aux personnes à mobilité réduite : pas de débattement, une ouverture dégagée.",
+autres:"Ce site présente les portes et les portails. Le réseau AMF a d'autres sites (escaliers, façades et devantures, volets, vérandas, meubles, fenêtres) : leurs liens sont en bas de page. Pour un projet de ce type, appelez l'atelier.",
+histoire:"AMF Menuiserie travaille le bois depuis plus de 30 ans, à Paris 12e (3 bis rue Louis Braille).",bonjour:"Bonjour ! Dites-moi quelle porte vous intéresse, ou posez votre question.",merci:"Avec plaisir ! Quand vous êtes prêt, le devis gratuit vous attend.",
+inconnu:"Je ne suis qu'un assistant virtuel et je n'ai pas cette information. Le plus simple : appelez l'atelier au 01 84 14 45 17 (tous les jours, 8 h–23 h 30), ou décrivez votre projet dans le devis gratuit.",
 voirPage:"Voir la page",faireDevis:"Préparer mon devis"
 }}
 };
@@ -449,11 +449,11 @@ galT:"A few of our projects",galLien:"Full gallery",
 appelT:"Let's talk about your door",appelP:"Describe your project in two minutes, or call the workshop.",telJours:"Phone: every day, 8 am to 11:30 pm",horaires:"All week, 8 am to 8 pm",
 coordT:"Contact details",horairesT:"Opening hours",reseauT:"The AMF network",mentions:"Legal notice",plan:"Site map",
 pourquoi:"Why made to measure",types:"Which model",perso:"Your customisation",reno:"Restoration",devisPour:"Get a quote for this door",autres:"The other doors",
-galeriePageT:"Our work",galeriePageP:"Made-to-measure wooden doors and gates: the workshop gallery.",tout:"All",
+galeriePageT:"Our work",galeriePageP:"Made-to-measure wooden doors and gates, in pictures.",tout:"All",
 livreP:"Your words matter: leave a review of our work.",livreForm:"Leave a review",note:"Your rating",email:"Email",nomP:"Name or nickname",avis:"Your review",envoyerAvis:"Send my review",avisMerci:"Thank you! Your mail app opens with your review ready to send.",
 devisT:"Your free quote",devisP:"A few choices, your measurements if you have them: the drawing takes shape as you fill in.",
-dQuoi:"Which piece?",dProjet:"Your project",projets:["New","Restoration","Maintenance"],dCotes:"Your measurements (optional)",hauteur:"Height (cm)",largeur:"Width (cm)",nsp:"I don't know them yet",dOuv:"Opening",ouvertures:["Hinged","Sliding","Pivot","Folding","Advise me"],dBois:"Wood",essences:["Oak","Fir / pine","Exotic","Walnut, cherry…","Advise me"],dMsg:"Your project in a few words",dVous:"Your details",nom:"Name",tel:"Phone",cp:"Postcode",envoyer:"Send my request",devisMerci:"Done. Your mail app opens with the request ready to go to the workshop. You can also call +33 1 84 14 45 17.",requis:"Please give your name and a phone number or an email.",planTitre:"Your drawing",planVide:"your measurements",
-mentionsT:"Legal notice",mentionsTxt:[["Publisher","AMF Menuiserie — Agencement Menuiseries Fermetures (AMF), SIREN 493 968 044."],["Workshop address","3 bis rue Louis Braille, 75012 Paris"],["Registered office (company register)","97 boulevard Poniatowski, 75012 Paris"],["Contact","+33 1 84 14 45 17 · artisan.amf@gmail.com"],["Hosting","To be completed at launch."]],mentionsNote:"Extra: your current site shows no legal notice. This page is prepared from public information and will be completed with you.",
+dQuoi:"Which piece?",dProjet:"Your project",projets:["New","Restoration","Maintenance"],dCotes:"Your measurements (optional)",hauteur:"Height (cm)",largeur:"Width (cm)",nsp:"I don't know them yet",dOuv:"Opening",ouvertures:["Hinged","Sliding","Pivot","Folding","Advise me"],dBois:"Wood",essences:["Oak","Fir / pine","Exotic","Walnut, cherry…","Advise me"],dMsg:"Your project in a few words",dVous:"Your details",nom:"Name",tel:"Phone",cp:"Postcode",envoyer:"Send my request",devisMerci:"Done. Your mail app opens with the request ready to go to the workshop. You can also call +33 1 84 14 45 17. If nothing opens, write to artisan.amf@gmail.com.",format:"Please check: valid email, phone of 8 to 15 digits, 5-digit postcode, measurements between 20 and 900 cm.",requis:"Please give your name and a phone number or an email.",planTitre:"Your drawing",planVide:"your measurements",
+mentionsT:"Legal notice",mentionsTxt:[["Publisher","AMF Menuiserie — Agencement Menuiseries Fermetures (AMF), SIREN 493 968 044."],["Workshop address","3 bis rue Louis Braille, 75012 Paris"],["Registered office (company register)","97 boulevard Poniatowski, 75012 Paris"],["Contact","+33 1 84 14 45 17 · artisan.amf@gmail.com"]],mentionsNote:"",
 planT:"Site map",
 chatOuvrir:"I'll help you choose",chatTitre:"AMF Advice",chatSous:"virtual assistant",chatPlace:"Ask your question…",chatEnv:"Send",fermer:"Close",bulle:"A question about your door? I'll help you choose.",
 autresSites:"Our other sites",
@@ -512,7 +512,7 @@ contact:"Phone: +33 1 84 14 45 17, every day 8 am–11:30 pm. Email: artisan.amf
 avis:"Customers speak of quick, clean, efficient work, flawless Haussmann doors and a remarkable gate. All reviews are in the guestbook.",
 pmr:"A sliding or pocket door suits people with reduced mobility best: no swing and a clear opening.",
 autres:"This site covers doors and gates. The AMF network has other sites (stairs, façades and shopfronts, shutters, verandas, furniture, windows): links are at the bottom of the page. For such a project, call the workshop.",
-merci:"My pleasure! When you're ready, the free quote is waiting.",
+histoire:"AMF Menuiserie has been working with wood for over 30 years, in Paris 12th (3 bis rue Louis Braille).",bonjour:"Hello! Tell me which door you have in mind, or ask your question.",merci:"My pleasure! When you're ready, the free quote is waiting.",
 inconnu:"I'm only a virtual assistant and I don't have that information. Simplest: call the workshop on +33 1 84 14 45 17 (every day, 8 am–11:30 pm), or describe your project in the free quote.",
 voirPage:"See the page",faireDevis:"Prepare my quote"
 }}
@@ -533,11 +533,11 @@ galT:"Algunos trabajos",galLien:"Toda la galería",
 appelT:"Hablemos de su puerta",appelP:"Describa su proyecto en dos minutos o llame al taller.",telJours:"Teléfono: todos los días, de 8:00 a 23:30",horaires:"Toda la semana, de 8:00 a 20:00",
 coordT:"Datos de contacto",horairesT:"Horario",reseauT:"La red AMF",mentions:"Aviso legal",plan:"Mapa del sitio",
 pourquoi:"Por qué a medida",types:"Qué modelo elegir",perso:"Su personalización",reno:"Renovación",devisPour:"Pedir presupuesto para esta puerta",autres:"Las demás puertas",
-galeriePageT:"Trabajos",galeriePageP:"Puertas y portones de madera a medida: la galería del taller.",tout:"Todo",
+galeriePageT:"Trabajos",galeriePageP:"Puertas y portones de madera a medida, en imágenes.",tout:"Todo",
 livreP:"Sus palabras cuentan: deje su opinión sobre nuestro trabajo.",livreForm:"Dejar una opinión",note:"Su nota",email:"Correo",nomP:"Nombre o seudónimo",avis:"Su opinión",envoyerAvis:"Enviar mi opinión",avisMerci:"¡Gracias! Su correo se abre con la opinión lista para enviar.",
 devisT:"Su presupuesto gratis",devisP:"Unas elecciones y sus medidas si las tiene: el plano se dibuja a medida que rellena.",
-dQuoi:"¿Qué obra?",dProjet:"Su proyecto",projets:["Creación","Renovación","Mantenimiento"],dCotes:"Sus medidas (opcional)",hauteur:"Alto (cm)",largeur:"Ancho (cm)",nsp:"Aún no las conozco",dOuv:"Apertura deseada",ouvertures:["Batiente","Corredera","Pivotante","Plegable","Que me aconsejen"],dBois:"Madera",essences:["Roble","Abeto / pino","Exótica","Nogal, cerezo…","Que me aconsejen"],dMsg:"Su proyecto en pocas palabras",dVous:"Sus datos",nom:"Nombre",tel:"Teléfono",cp:"Código postal",envoyer:"Enviar mi solicitud",devisMerci:"Anotado. Su correo se abre con la solicitud lista para el taller. También puede llamar al +33 1 84 14 45 17.",requis:"Indique su nombre y un teléfono o un correo.",planTitre:"Su plano",planVide:"a su medida",
-mentionsT:"Aviso legal",mentionsTxt:[["Editor","AMF Menuiserie — Agencement Menuiseries Fermetures (AMF), SIREN 493 968 044."],["Dirección del taller","3 bis rue Louis Braille, 75012 París"],["Domicilio social (registro mercantil)","97 boulevard Poniatowski, 75012 París"],["Contacto","+33 1 84 14 45 17 · artisan.amf@gmail.com"],["Alojamiento","Por completar en la puesta en línea."]],mentionsNote:"Suplemento: su sitio actual no muestra aviso legal. Esta página se ha preparado con información pública y se completará con usted.",
+dQuoi:"¿Qué obra?",dProjet:"Su proyecto",projets:["Creación","Renovación","Mantenimiento"],dCotes:"Sus medidas (opcional)",hauteur:"Alto (cm)",largeur:"Ancho (cm)",nsp:"Aún no las conozco",dOuv:"Apertura deseada",ouvertures:["Batiente","Corredera","Pivotante","Plegable","Que me aconsejen"],dBois:"Madera",essences:["Roble","Abeto / pino","Exótica","Nogal, cerezo…","Que me aconsejen"],dMsg:"Su proyecto en pocas palabras",dVous:"Sus datos",nom:"Nombre",tel:"Teléfono",cp:"Código postal",envoyer:"Enviar mi solicitud",devisMerci:"Anotado. Su correo se abre con la solicitud lista para el taller. También puede llamar al +33 1 84 14 45 17. Si no se abre nada, escriba a artisan.amf@gmail.com.",format:"Revise: correo válido, teléfono de 8 a 15 cifras, código postal de 5 cifras, medidas entre 20 y 900 cm.",requis:"Indique su nombre y un teléfono o un correo.",planTitre:"Su plano",planVide:"a su medida",
+mentionsT:"Aviso legal",mentionsTxt:[["Editor","AMF Menuiserie — Agencement Menuiseries Fermetures (AMF), SIREN 493 968 044."],["Dirección del taller","3 bis rue Louis Braille, 75012 París"],["Domicilio social (registro mercantil)","97 boulevard Poniatowski, 75012 París"],["Contacto","+33 1 84 14 45 17 · artisan.amf@gmail.com"]],mentionsNote:"",
 planT:"Mapa del sitio",
 chatOuvrir:"Le ayudo a elegir",chatTitre:"AMF Consejo",chatSous:"asistente virtual",chatPlace:"Escriba su pregunta…",chatEnv:"Enviar",fermer:"Cerrar",bulle:"¿Una pregunta sobre su puerta? Le ayudo a elegir.",
 autresSites:"Nuestros otros sitios",
@@ -596,7 +596,7 @@ contact:"Teléfono: +33 1 84 14 45 17, todos los días de 8:00 a 23:30. Correo: 
 avis:"Los clientes hablan de un trabajo rápido, limpio y eficaz, de puertas haussmannianas impecables y de un portón notable. Todas las opiniones están en el libro de visitas.",
 pmr:"La puerta corredera o empotrada es la más adaptada a personas con movilidad reducida: sin barrido, apertura despejada.",
 autres:"Este sitio presenta puertas y portones. La red AMF tiene otros sitios (escaleras, fachadas y escaparates, contraventanas, galerías, muebles, ventanas): los enlaces están al pie de página. Para un proyecto así, llame al taller.",
-merci:"¡Con gusto! Cuando esté listo, el presupuesto gratis le espera.",
+histoire:"AMF Menuiserie trabaja la madera desde hace más de 30 años, en París 12 (3 bis rue Louis Braille).",bonjour:"¡Hola! Dígame qué puerta le interesa o haga su pregunta.",merci:"¡Con gusto! Cuando esté listo, el presupuesto gratis le espera.",
 inconnu:"Solo soy un asistente virtual y no tengo esa información. Lo más sencillo: llame al taller al +33 1 84 14 45 17 (todos los días, 8:00–23:30) o describa su proyecto en el presupuesto gratis.",
 voirPage:"Ver la página",faireDevis:"Preparar mi presupuesto"
 }}
@@ -617,11 +617,11 @@ galT:"Einige Arbeiten",galLien:"Ganze Galerie",
 appelT:"Sprechen wir über Ihre Tür",appelP:"Beschreiben Sie Ihr Projekt in zwei Minuten oder rufen Sie die Werkstatt an.",telJours:"Telefon: täglich von 8 bis 23:30 Uhr",horaires:"Die ganze Woche, 8 bis 20 Uhr",
 coordT:"Kontakt",horairesT:"Öffnungszeiten",reseauT:"Das AMF-Netzwerk",mentions:"Impressum",plan:"Sitemap",
 pourquoi:"Warum nach Maß",types:"Welches Modell",perso:"Ihre Gestaltung",reno:"Renovierung",devisPour:"Angebot für diese Tür anfragen",autres:"Die anderen Türen",
-galeriePageT:"Arbeiten",galeriePageP:"Holztüren und Holztore nach Maß: die Galerie der Werkstatt.",tout:"Alle",
+galeriePageT:"Arbeiten",galeriePageP:"Holztüren und Holztore nach Maß, in Bildern.",tout:"Alle",
 livreP:"Ihre Worte zählen: Bewerten Sie unsere Arbeit.",livreForm:"Bewertung schreiben",note:"Ihre Note",email:"E-Mail",nomP:"Name oder Pseudonym",avis:"Ihre Bewertung",envoyerAvis:"Bewertung senden",avisMerci:"Danke! Ihr E-Mail-Programm öffnet sich mit Ihrer Bewertung.",
 devisT:"Ihr kostenloses Angebot",devisP:"Ein paar Angaben, Ihre Maße, falls vorhanden: Der Plan entsteht beim Ausfüllen.",
-dQuoi:"Welches Stück?",dProjet:"Ihr Projekt",projets:["Neuanfertigung","Renovierung","Wartung"],dCotes:"Ihre Maße (optional)",hauteur:"Höhe (cm)",largeur:"Breite (cm)",nsp:"Kenne ich noch nicht",dOuv:"Gewünschte Öffnung",ouvertures:["Drehtür","Schiebetür","Pivottür","Falttür","Beratung gewünscht"],dBois:"Holzart",essences:["Eiche","Tanne / Kiefer","Tropenholz","Nussbaum, Kirsche …","Beratung gewünscht"],dMsg:"Ihr Projekt in wenigen Worten",dVous:"Ihre Angaben",nom:"Name",tel:"Telefon",cp:"Postleitzahl",envoyer:"Anfrage senden",devisMerci:"Notiert. Ihr E-Mail-Programm öffnet sich mit der fertigen Anfrage an die Werkstatt. Sie können auch +33 1 84 14 45 17 anrufen.",requis:"Bitte geben Sie Ihren Namen und eine Telefonnummer oder E-Mail an.",planTitre:"Ihr Plan",planVide:"nach Ihren Maßen",
-mentionsT:"Impressum",mentionsTxt:[["Herausgeber","AMF Menuiserie — Agencement Menuiseries Fermetures (AMF), SIREN 493 968 044."],["Adresse der Werkstatt","3 bis rue Louis Braille, 75012 Paris"],["Sitz (Unternehmensregister)","97 boulevard Poniatowski, 75012 Paris"],["Kontakt","+33 1 84 14 45 17 · artisan.amf@gmail.com"],["Hosting","Wird bei der Veröffentlichung ergänzt."]],mentionsNote:"Zusatz: Ihre aktuelle Website zeigt kein Impressum. Diese Seite wurde mit öffentlichen Angaben vorbereitet und wird mit Ihnen vervollständigt.",
+dQuoi:"Welches Stück?",dProjet:"Ihr Projekt",projets:["Neuanfertigung","Renovierung","Wartung"],dCotes:"Ihre Maße (optional)",hauteur:"Höhe (cm)",largeur:"Breite (cm)",nsp:"Kenne ich noch nicht",dOuv:"Gewünschte Öffnung",ouvertures:["Drehtür","Schiebetür","Pivottür","Falttür","Beratung gewünscht"],dBois:"Holzart",essences:["Eiche","Tanne / Kiefer","Tropenholz","Nussbaum, Kirsche …","Beratung gewünscht"],dMsg:"Ihr Projekt in wenigen Worten",dVous:"Ihre Angaben",nom:"Name",tel:"Telefon",cp:"Postleitzahl",envoyer:"Anfrage senden",devisMerci:"Notiert. Ihr E-Mail-Programm öffnet sich mit der fertigen Anfrage an die Werkstatt. Sie können auch +33 1 84 14 45 17 anrufen. Falls sich nichts öffnet, schreiben Sie an artisan.amf@gmail.com.",format:"Bitte prüfen: gültige E-Mail, Telefon mit 8 bis 15 Ziffern, 5-stellige Postleitzahl, Maße zwischen 20 und 900 cm.",requis:"Bitte geben Sie Ihren Namen und eine Telefonnummer oder E-Mail an.",planTitre:"Ihr Plan",planVide:"nach Ihren Maßen",
+mentionsT:"Impressum",mentionsTxt:[["Herausgeber","AMF Menuiserie — Agencement Menuiseries Fermetures (AMF), SIREN 493 968 044."],["Adresse der Werkstatt","3 bis rue Louis Braille, 75012 Paris"],["Sitz (Unternehmensregister)","97 boulevard Poniatowski, 75012 Paris"],["Kontakt","+33 1 84 14 45 17 · artisan.amf@gmail.com"]],mentionsNote:"",
 planT:"Sitemap",
 chatOuvrir:"Ich helfe bei der Wahl",chatTitre:"AMF Beratung",chatSous:"virtueller Assistent",chatPlace:"Ihre Frage …",chatEnv:"Senden",fermer:"Schließen",bulle:"Eine Frage zu Ihrer Tür? Ich helfe Ihnen bei der Wahl.",
 autresSites:"Unsere anderen Websites",
@@ -680,7 +680,7 @@ contact:"Telefon: +33 1 84 14 45 17, täglich 8–23:30 Uhr. E-Mail: artisan.amf
 avis:"Kunden loben schnelle, saubere, effiziente Arbeit, einwandfreie Haussmann-Türen und ein bemerkenswertes Tor. Alle Bewertungen stehen im Gästebuch.",
 pmr:"Die Schiebe- oder Taschentür eignet sich am besten für Menschen mit eingeschränkter Mobilität: kein Schwenkbereich, freie Öffnung.",
 autres:"Diese Website zeigt Türen und Tore. Das AMF-Netzwerk hat weitere Websites (Treppen, Fassaden und Ladenfronten, Fensterläden, Wintergärten, Möbel, Fenster): Die Links stehen unten auf der Seite. Für ein solches Projekt rufen Sie die Werkstatt an.",
-merci:"Gern geschehen! Wenn Sie bereit sind, wartet das kostenlose Angebot.",
+histoire:"AMF Menuiserie arbeitet seit über 30 Jahren mit Holz, in Paris 12 (3 bis rue Louis Braille).",bonjour:"Hallo! Sagen Sie mir, welche Tür Sie interessiert, oder stellen Sie Ihre Frage.",merci:"Gern geschehen! Wenn Sie bereit sind, wartet das kostenlose Angebot.",
 inconnu:"Ich bin nur ein virtueller Assistent und habe diese Information nicht. Am einfachsten: Rufen Sie die Werkstatt unter +33 1 84 14 45 17 an (täglich 8–23:30 Uhr) oder beschreiben Sie Ihr Projekt im kostenlosen Angebot.",
 voirPage:"Seite ansehen",faireDevis:"Angebot vorbereiten"
 }}
@@ -701,11 +701,11 @@ galT:"Alcuni lavori",galLien:"Tutta la galleria",
 appelT:"Parliamo della vostra porta",appelP:"Descrivete il progetto in due minuti, o chiamate il laboratorio.",telJours:"Telefono: tutti i giorni, dalle 8 alle 23:30",horaires:"Tutta la settimana, dalle 8 alle 20",
 coordT:"Contatti",horairesT:"Orari",reseauT:"La rete AMF",mentions:"Note legali",plan:"Mappa del sito",
 pourquoi:"Perché su misura",types:"Quale modello",perso:"La vostra personalizzazione",reno:"Restauro",devisPour:"Chiedi un preventivo per questa porta",autres:"Le altre porte",
-galeriePageT:"Lavori",galeriePageP:"Porte e cancelli in legno su misura: la galleria del laboratorio.",tout:"Tutto",
+galeriePageT:"Lavori",galeriePageP:"Porte e cancelli in legno su misura, in immagini.",tout:"Tutto",
 livreP:"Le vostre parole contano: lasciate una recensione sul nostro lavoro.",livreForm:"Lascia una recensione",note:"Il vostro voto",email:"E-mail",nomP:"Nome o pseudonimo",avis:"La vostra recensione",envoyerAvis:"Invia la recensione",avisMerci:"Grazie! La vostra posta si apre con la recensione pronta da inviare.",
 devisT:"Il vostro preventivo gratuito",devisP:"Poche scelte e le vostre misure, se le avete: il disegno prende forma mentre compilate.",
-dQuoi:"Quale opera?",dProjet:"Il vostro progetto",projets:["Nuova","Restauro","Manutenzione"],dCotes:"Le vostre misure (facoltativo)",hauteur:"Altezza (cm)",largeur:"Larghezza (cm)",nsp:"Non le conosco ancora",dOuv:"Apertura desiderata",ouvertures:["A battente","Scorrevole","Pivotante","Pieghevole","Consigliatemi"],dBois:"Essenza",essences:["Rovere","Abete / pino","Esotico","Noce, ciliegio…","Consigliatemi"],dMsg:"Il progetto in poche parole",dVous:"I vostri dati",nom:"Nome",tel:"Telefono",cp:"CAP",envoyer:"Invia la richiesta",devisMerci:"Fatto. La vostra posta si apre con la richiesta pronta per il laboratorio. Potete anche chiamare il +33 1 84 14 45 17.",requis:"Indicate il nome e un telefono o un'e-mail.",planTitre:"Il vostro disegno",planVide:"sulle vostre misure",
-mentionsT:"Note legali",mentionsTxt:[["Editore","AMF Menuiserie — Agencement Menuiseries Fermetures (AMF), SIREN 493 968 044."],["Indirizzo del laboratorio","3 bis rue Louis Braille, 75012 Parigi"],["Sede (registro delle imprese)","97 boulevard Poniatowski, 75012 Parigi"],["Contatti","+33 1 84 14 45 17 · artisan.amf@gmail.com"],["Hosting","Da completare alla pubblicazione."]],mentionsNote:"Supplemento: il vostro sito attuale non mostra note legali. Questa pagina è preparata con informazioni pubbliche e sarà completata con voi.",
+dQuoi:"Quale opera?",dProjet:"Il vostro progetto",projets:["Nuova","Restauro","Manutenzione"],dCotes:"Le vostre misure (facoltativo)",hauteur:"Altezza (cm)",largeur:"Larghezza (cm)",nsp:"Non le conosco ancora",dOuv:"Apertura desiderata",ouvertures:["A battente","Scorrevole","Pivotante","Pieghevole","Consigliatemi"],dBois:"Essenza",essences:["Rovere","Abete / pino","Esotico","Noce, ciliegio…","Consigliatemi"],dMsg:"Il progetto in poche parole",dVous:"I vostri dati",nom:"Nome",tel:"Telefono",cp:"CAP",envoyer:"Invia la richiesta",devisMerci:"Fatto. La vostra posta si apre con la richiesta pronta per il laboratorio. Potete anche chiamare il +33 1 84 14 45 17. Se non si apre nulla, scrivete a artisan.amf@gmail.com.",format:"Controllate: e-mail valida, telefono da 8 a 15 cifre, CAP di 5 cifre, misure tra 20 e 900 cm.",requis:"Indicate il nome e un telefono o un'e-mail.",planTitre:"Il vostro disegno",planVide:"sulle vostre misure",
+mentionsT:"Note legali",mentionsTxt:[["Editore","AMF Menuiserie — Agencement Menuiseries Fermetures (AMF), SIREN 493 968 044."],["Indirizzo del laboratorio","3 bis rue Louis Braille, 75012 Parigi"],["Sede (registro delle imprese)","97 boulevard Poniatowski, 75012 Parigi"],["Contatti","+33 1 84 14 45 17 · artisan.amf@gmail.com"]],mentionsNote:"",
 planT:"Mappa del sito",
 chatOuvrir:"Vi aiuto a scegliere",chatTitre:"AMF Consiglio",chatSous:"assistente virtuale",chatPlace:"Scrivete la domanda…",chatEnv:"Invia",fermer:"Chiudi",bulle:"Una domanda sulla vostra porta? Vi aiuto a scegliere.",
 autresSites:"I nostri altri siti",
@@ -764,7 +764,7 @@ contact:"Telefono: +33 1 84 14 45 17, tutti i giorni 8–23:30. E-mail: artisan.
 avis:"I clienti parlano di un lavoro rapido, pulito ed efficace, di porte haussmanniane impeccabili e di un cancello notevole. Tutte le recensioni sono nel libro degli ospiti.",
 pmr:"La porta scorrevole o a scomparsa è la più adatta a persone con mobilità ridotta: nessun ingombro, apertura libera.",
 autres:"Questo sito presenta porte e cancelli. La rete AMF ha altri siti (scale, facciate e vetrine, persiane, verande, mobili, finestre): i link sono in fondo alla pagina. Per un progetto del genere, chiamate il laboratorio.",
-merci:"Con piacere! Quando siete pronti, il preventivo gratuito vi aspetta.",
+histoire:"AMF Menuiserie lavora il legno da oltre 30 anni, a Parigi 12 (3 bis rue Louis Braille).",bonjour:"Buongiorno! Ditemi quale porta vi interessa, o fate la vostra domanda.",merci:"Con piacere! Quando siete pronti, il preventivo gratuito vi aspetta.",
 inconnu:"Sono solo un assistente virtuale e non ho questa informazione. La cosa più semplice: chiamate il laboratorio al +33 1 84 14 45 17 (tutti i giorni, 8–23:30) o descrivete il progetto nel preventivo gratuito.",
 voirPage:"Vedi la pagina",faireDevis:"Prepara il preventivo"
 }}
@@ -785,11 +785,11 @@ galT:"Alguns trabalhos",galLien:"Toda a galeria",
 appelT:"Falemos da sua porta",appelP:"Descreva o seu projeto em dois minutos ou ligue para a oficina.",telJours:"Telefone: todos os dias, das 8h às 23h30",horaires:"Toda a semana, das 8h às 20h",
 coordT:"Contactos",horairesT:"Horário",reseauT:"A rede AMF",mentions:"Aviso legal",plan:"Mapa do site",
 pourquoi:"Porquê por medida",types:"Que modelo escolher",perso:"A sua personalização",reno:"Renovação",devisPour:"Pedir orçamento para esta porta",autres:"As outras portas",
-galeriePageT:"Trabalhos",galeriePageP:"Portas e portões de madeira por medida: a galeria da oficina.",tout:"Tudo",
+galeriePageT:"Trabalhos",galeriePageP:"Portas e portões de madeira por medida, em imagens.",tout:"Tudo",
 livreP:"As suas palavras contam: deixe a sua opinião sobre o nosso trabalho.",livreForm:"Deixar uma opinião",note:"A sua nota",email:"E-mail",nomP:"Nome ou pseudónimo",avis:"A sua opinião",envoyerAvis:"Enviar a minha opinião",avisMerci:"Obrigado! O seu e-mail abre com a opinião pronta a enviar.",
 devisT:"O seu orçamento grátis",devisP:"Algumas escolhas e as suas medidas, se as tiver: o desenho ganha forma à medida que preenche.",
-dQuoi:"Que obra?",dProjet:"O seu projeto",projets:["Criação","Renovação","Manutenção"],dCotes:"As suas medidas (opcional)",hauteur:"Altura (cm)",largeur:"Largura (cm)",nsp:"Ainda não as sei",dOuv:"Abertura desejada",ouvertures:["De batente","De correr","Pivotante","Dobrável","Aconselhem-me"],dBois:"Madeira",essences:["Carvalho","Abeto / pinho","Exótica","Nogueira, cerejeira…","Aconselhem-me"],dMsg:"O seu projeto em poucas palavras",dVous:"Os seus dados",nom:"Nome",tel:"Telefone",cp:"Código postal",envoyer:"Enviar o meu pedido",devisMerci:"Registado. O seu e-mail abre com o pedido pronto para a oficina. Também pode ligar para +33 1 84 14 45 17.",requis:"Indique o seu nome e um telefone ou e-mail.",planTitre:"O seu desenho",planVide:"à sua medida",
-mentionsT:"Aviso legal",mentionsTxt:[["Editor","AMF Menuiserie — Agencement Menuiseries Fermetures (AMF), SIREN 493 968 044."],["Morada da oficina","3 bis rue Louis Braille, 75012 Paris"],["Sede (registo comercial)","97 boulevard Poniatowski, 75012 Paris"],["Contacto","+33 1 84 14 45 17 · artisan.amf@gmail.com"],["Alojamento","A completar na publicação."]],mentionsNote:"Suplemento: o seu site atual não mostra aviso legal. Esta página foi preparada com informação pública e será completada consigo.",
+dQuoi:"Que obra?",dProjet:"O seu projeto",projets:["Criação","Renovação","Manutenção"],dCotes:"As suas medidas (opcional)",hauteur:"Altura (cm)",largeur:"Largura (cm)",nsp:"Ainda não as sei",dOuv:"Abertura desejada",ouvertures:["De batente","De correr","Pivotante","Dobrável","Aconselhem-me"],dBois:"Madeira",essences:["Carvalho","Abeto / pinho","Exótica","Nogueira, cerejeira…","Aconselhem-me"],dMsg:"O seu projeto em poucas palavras",dVous:"Os seus dados",nom:"Nome",tel:"Telefone",cp:"Código postal",envoyer:"Enviar o meu pedido",devisMerci:"Registado. O seu e-mail abre com o pedido pronto para a oficina. Também pode ligar para +33 1 84 14 45 17. Se nada abrir, escreva para artisan.amf@gmail.com.",format:"Verifique: e-mail válido, telefone de 8 a 15 dígitos, código postal de 5 dígitos, medidas entre 20 e 900 cm.",requis:"Indique o seu nome e um telefone ou e-mail.",planTitre:"O seu desenho",planVide:"à sua medida",
+mentionsT:"Aviso legal",mentionsTxt:[["Editor","AMF Menuiserie — Agencement Menuiseries Fermetures (AMF), SIREN 493 968 044."],["Morada da oficina","3 bis rue Louis Braille, 75012 Paris"],["Sede (registo comercial)","97 boulevard Poniatowski, 75012 Paris"],["Contacto","+33 1 84 14 45 17 · artisan.amf@gmail.com"]],mentionsNote:"",
 planT:"Mapa do site",
 chatOuvrir:"Ajudo-o a escolher",chatTitre:"AMF Conselho",chatSous:"assistente virtual",chatPlace:"Escreva a sua pergunta…",chatEnv:"Enviar",fermer:"Fechar",bulle:"Uma pergunta sobre a sua porta? Ajudo-o a escolher.",
 autresSites:"Os nossos outros sites",
@@ -848,7 +848,7 @@ contact:"Telefone: +33 1 84 14 45 17, todos os dias das 8h às 23h30. E-mail: ar
 avis:"Os clientes falam de um trabalho rápido, limpo e eficaz, de portas haussmannianas impecáveis e de um portão notável. Todas as opiniões estão no livro de visitas.",
 pmr:"A porta de correr ou embutida é a mais adaptada a pessoas com mobilidade reduzida: sem área de abertura, passagem desimpedida.",
 autres:"Este site apresenta portas e portões. A rede AMF tem outros sites (escadas, fachadas e montras, portadas, marquises, móveis, janelas): os links estão no fundo da página. Para um projeto assim, ligue para a oficina.",
-merci:"Com todo o gosto! Quando estiver pronto, o orçamento grátis está à sua espera.",
+histoire:"A AMF Menuiserie trabalha a madeira há mais de 30 anos, em Paris 12 (3 bis rue Louis Braille).",bonjour:"Olá! Diga-me que porta lhe interessa ou faça a sua pergunta.",merci:"Com todo o gosto! Quando estiver pronto, o orçamento grátis está à sua espera.",
 inconnu:"Sou apenas um assistente virtual e não tenho essa informação. O mais simples: ligue para a oficina pelo +33 1 84 14 45 17 (todos os dias, 8h–23h30) ou descreva o seu projeto no orçamento grátis.",
 voirPage:"Ver a página",faireDevis:"Preparar o meu orçamento"
 }}
@@ -918,7 +918,7 @@ function planDevis(type,h,w){
    else if(d[3]==='ajour'){for(let k=1;k<6;k++){const yy=y0+ph*k/6;g+='<line x1="'+(lx+4)+'" y1="'+yy+'" x2="'+(lx+lw-4)+'" y2="'+yy+'" stroke="#EEF1EF" stroke-width=".8" opacity=".6"/>'}}
    else{g+='<rect x="'+(lx+lw*.18)+'" y="'+(y0+ph*.1)+'" width="'+(lw*.64)+'" height="'+(ph*.8)+'" '+st+' opacity=".45"/>'}}}
  const lab=(v,k)=>v>0?(k+' '+v+' cm'):(k+' · '+U('planVide'));
- const cx=36,cy=y0+ph+22,c='#C08B55';
+ const cx=36,cy=y0+ph+22,c='#C9A06E';
  g+='<g stroke="'+c+'" stroke-width="1"><line x1="'+cx+'" y1="'+y0+'" x2="'+cx+'" y2="'+(y0+ph)+'"/><line x1="'+(cx-6)+'" y1="'+y0+'" x2="'+(cx+6)+'" y2="'+y0+'"/><line x1="'+(cx-6)+'" y1="'+(y0+ph)+'" x2="'+(cx+6)+'" y2="'+(y0+ph)+'"/><line x1="'+x0+'" y1="'+cy+'" x2="'+(x0+pw)+'" y2="'+cy+'"/><line x1="'+x0+'" y1="'+(cy-6)+'" x2="'+x0+'" y2="'+(cy+6)+'"/><line x1="'+(x0+pw)+'" y1="'+(cy-6)+'" x2="'+(x0+pw)+'" y2="'+(cy+6)+'"/></g>';
  g+='<text x="'+(cx-8)+'" y="'+(y0+ph/2)+'" transform="rotate(-90 '+(cx-8)+' '+(y0+ph/2)+')" text-anchor="middle" fill="#EEF1EF" font-family="Fragment Mono,monospace" font-size="11">'+esc(lab(h,U('heroH')))+'</text>';
  g+='<text x="'+(x0+pw/2)+'" y="'+(cy+18)+'" text-anchor="middle" fill="#EEF1EF" font-family="Fragment Mono,monospace" font-size="11">'+esc(lab(w,U('heroL')))+'</text>';
@@ -932,7 +932,7 @@ function accueil(){
  +'<section class="bloc"><div class="wrap"><div class="intro apparait"><h2>'+u.introT+'</h2><div><p class="lead">'+u.introP+'</p></div></div>'+indexPortes()+'</div></section>'
  +'<section class="bloc etapes"><div class="wrap"><h2 class="apparait">'+u.etapesT+'</h2><div class="chaine apparait">'+u.etapes.map((e,i)=>'<div><span class="mono">'+['1/3','2/3','3/3'][i]+'</span><h3>'+e[0]+'</h3><p>'+e[1]+'</p></div>').join('')+'</div><p class="fin apparait">'+u.etapesFin+'</p><a class="lien" href="#/devis">'+u.heroCta+' '+fl+'</a></div></section>'
  +'<section class="bloc"><div class="wrap"><h2 class="apparait">'+u.cartoucheT+'</h2><div class="cartouche apparait"><div class="tetec mono"><span>'+u.cartoucheRef+'</span><span>'+u.heroPreuves[1]+'</span></div>'+u.engagements.map((e,i)=>'<div class="c">'+e+'</div>').join('')+'</div></div></section>'
- +'<section class="bloc avis"><div class="wrap"><h2 class="apparait">'+u.avisT+'</h2><div class="avis-grille">'+t.avis.map(a=>'<blockquote class="apparait"><p>« '+a[1]+' »</p><cite>'+a[0]+'</cite></blockquote>').join('')+'</div>'+(t.avisNote?'<p class="note-trad mono">'+t.avisNote+'</p>':'')+'<a class="lien" href="#/livre-dor">'+u.avisLien+' '+fl+'</a></div></section>'
+ +'<section class="bloc avis"><div class="wrap"><h2 class="apparait">'+u.avisT+'</h2><div class="avis-grille">'+t.avis.map(a=>'<blockquote class="apparait"><p>« '+a[1]+' »</p><cite>'+a[0]+'</cite></blockquote>').join('')+'</div>'+(t.avisNote?'<p class="note-trad mono">'+t.avisNote+'</p>':'')+'<a class="lien" href="#/livre-dor">'+u.avisLien+' '+fl+'</a></div></section>'
  +'<section class="bloc bois"><div class="wrap"><h2 class="apparait">'+u.boisT+'</h2><p class="lead apparait">'+u.boisP+'</p><div class="essences apparait">'+u.bois.map(b=>'<div><h3>'+b[0]+'</h3><p>'+b[1]+'</p></div>').join('')+'</div></div></section>'
  +'<section class="bloc"><div class="wrap"><div class="entete-sec apparait"><h2>'+u.galT+'</h2><a class="lien" style="margin:0" href="#/realisations">'+u.galLien+' '+fl+'</a></div><div class="mosaique apparait">'+['haussmann','portail','placard-dressing','entree-semi-vitree','placard-chevrons'].map(n=>'<img src="'+img(n)+'" alt="" loading="lazy">').join('')+'</div></div></section>'
  +appel();
@@ -965,7 +965,7 @@ function realisations(){
 }
 function livre(){
  const t=T(),u=t.ui;
- return '<section class="page-tete simple"><div class="wrap"><div><h1>'+u.livre+'</h1><p class="lead">'+u.livreP+'</p></div></div></section><section class="bloc" style="padding-top:40px"><div class="wrap livre-grille"><div>'+t.avis.map(a=>'<blockquote><p>« '+a[1]+' »</p><cite>'+a[0]+'</cite></blockquote>').join('')+(t.avisNote?'<p class="mono" style="color:var(--gris)">'+t.avisNote+'</p>':'')+'</div><form class="livre-form" id="formAvis" novalidate><h2 style="font-size:1.6rem;margin-bottom:18px">'+u.livreForm+'</h2><fieldset><legend style="font-size:1rem">'+u.note+'</legend><div class="etoiles">'+[5,4,3,2,1].map(n=>'<input type="radio" name="note" id="n'+n+'" value="'+n+'"><label for="n'+n+'">'+n+'/5</label>').join('')+'</div></fieldset><div class="champs" style="grid-template-columns:1fr"><label class="champ">'+u.email+'<input type="email" name="email" autocomplete="email"></label><label class="champ">'+u.nomP+'<input name="nom" autocomplete="name"></label><label class="champ">'+u.avis+'<textarea name="avis"></textarea></label></div><button class="btn btn-vert" style="margin-top:16px" type="submit">'+u.envoyerAvis+' '+fl+'</button><p class="msg" id="avisMsg"></p></form></div></section>';
+ return '<section class="page-tete simple"><div class="wrap"><div><h1>'+u.livre+'</h1><p class="lead">'+u.livreP+'</p></div></div></section><section class="bloc" style="padding-top:40px"><div class="wrap livre-grille"><div>'+t.avis.map(a=>'<blockquote><p>« '+a[1]+' »</p><cite>'+a[0]+'</cite></blockquote>').join('')+(t.avisNote?'<p class="mono" style="color:var(--gris)">'+t.avisNote+'</p>':'')+'</div><form class="livre-form" id="formAvis" novalidate><h2 style="font-size:1.6rem;margin-bottom:18px">'+u.livreForm+'</h2><fieldset><legend style="font-size:1rem">'+u.note+'</legend><div class="etoiles">'+[5,4,3,2,1].map(n=>'<input type="radio" name="note" id="n'+n+'" value="'+n+'"><label for="n'+n+'">'+n+'/5</label>').join('')+'</div></fieldset><div class="champs" style="grid-template-columns:1fr"><label class="champ">'+u.email+'<input type="email" name="email" autocomplete="email"></label><label class="champ">'+u.nomP+'<input name="nom" autocomplete="name"></label><label class="champ">'+u.avis+'<textarea name="avis"></textarea></label></div><button class="btn btn-vert" style="margin-top:16px" type="submit">'+u.envoyerAvis+' '+fl+'</button><p class="msg" id="avisMsg"></p></form></div></section>';
 }
 function devis(q){
  const u=T().ui,type=ORDRE.includes(q.get('type'))?q.get('type'):'porte-entree',pj=+q.get('projet')||0;
@@ -983,7 +983,7 @@ function devis(q){
 }
 function mentions(){
  const u=T().ui;
- return '<section class="page-tete simple"><div class="wrap"><div><h1>'+u.mentionsT+'</h1></div></div></section><section class="bloc mentions" style="padding-top:20px"><div class="wrap"><dl class="specs">'+u.mentionsTxt.map(m=>'<div><dt>'+m[0]+'</dt><dd>'+m[1]+'</dd></div>').join('')+'</dl><p class="note">'+u.mentionsNote+'</p></div></section>';
+ return '<section class="page-tete simple"><div class="wrap"><div><h1>'+u.mentionsT+'</h1></div></div></section><section class="bloc mentions" style="padding-top:20px"><div class="wrap"><dl class="specs">'+u.mentionsTxt.map(m=>'<div><dt>'+m[0]+'</dt><dd>'+m[1]+'</dd></div>').join('')+'</dl>'+(u.mentionsNote?'<p class="note">'+u.mentionsNote+'</p>':'')+'</div></section>';
 }
 function planSite(){
  const u=T().ui;
@@ -1023,6 +1023,8 @@ function brancher(r,q){
   fd.addEventListener('input',maj);fd.addEventListener('change',maj);maj();
   fd.onsubmit=e=>{e.preventDefault();const d=new FormData(fd),u=T().ui,m=$('#devisMsg');
    if(!d.get('nom').trim()||!(d.get('tel').trim()||d.get('email').trim())){m.textContent=u.requis;m.className='msg on err';return}
+   const em=d.get('email').trim(),tl=d.get('tel').replace(/[^0-9]/g,''),cp=d.get('cp').trim(),hh=d.get('h'),ww=d.get('w');
+   if((em&&!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(em))||(d.get('tel').trim()&&(tl.length<8||tl.length>15))||(cp&&!/^\d{5}$/.test(cp))||(hh&&(+hh<20||+hh>900))||(ww&&(+ww<20||+ww>900))){m.textContent=u.format;m.className='msg on err';return}
    const ty=T().P[d.get('type')].t;const corps=[ty,u.projets[+d.get('projet')],(d.get('nsp')?u.nsp:(u.hauteur+' : '+(d.get('h')||'—')+' / '+u.largeur+' : '+(d.get('w')||'—'))),u.dOuv+' : '+(d.get('ouv')!=null?u.ouvertures[+d.get('ouv')]:'—'),u.dBois+' : '+(d.get('bois')!=null?u.essences[+d.get('bois')]:'—'),'',d.get('msg'),'',d.get('nom')+' · '+d.get('tel')+' · '+d.get('email')+' · '+d.get('cp')].join('\n');
    location.href='mailto:artisan.amf@gmail.com?subject='+encodeURIComponent(u.devis+' — '+ty)+'&body='+encodeURIComponent(corps);m.textContent=u.devisMerci;m.className='msg on'};
  }
@@ -1052,6 +1054,9 @@ function appliquer(){
 /* conseiller */
 const norm=s=>' '+s.toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g,'').replace(/[’]/g,"'")+' ';
 const K=[
+['ignore',['a2p','blinde','rge ','maprime','subvention','aide financ','credit d','grant','subsid','lyon','marseille','bordeaux','lille','toulouse','nantes','nice ','strasbourg']],
+['bonjour',[' bonjour',' hello',' hola',' hallo',' ciao',' ola ',' salut',' hi ',' buongiorno',' guten tag']],
+['histoire',['depuis quand','existez','how long have you','since when','desde cuando','seit wann','da quando','desde quando','combien d\'annees','how many years','anciennete','histoire','history']],
 ['merci',['merci','thank','gracias','danke','grazie','obrigad']],
 ['prix',['prix','tarif','cout','combien','price','cost','how much','precio','cuanto','cuesta','preis','kostet','kosten','prezzo','costa','preco','custa','€','euro','budget','cher ']],
 ['delai',['delai','combien de temps','how long','lead time','plazo','wie lange','lieferzeit','tempi','prazo','semaines','weeks','quand ','when ','cuando','wann','quando']],
@@ -1075,14 +1080,14 @@ const K=[
 ['autres',['escalier','fenetre','volet','facade','devanture','veranda','meuble','vitrine','stair','window','shutter','shopfront','furniture','escalera','ventana','fachada','treppe','fenster','fassade','scala','finestra','facciata','escada','janela']],
 ['choisir',['choisir','quelle porte','conseil','aide','choose','which door','help','elegir','que puerta','ayuda','welche tur','hilfe','scegliere','quale porta','aiuto','escolher','que porta','ajuda','porte','door','puerta',' tur','porta']]];
 const PAGE={haussmann:'haussmann',placard:'placard',portail:'portail',fenetre:'porte-fenetre',ouverture:'interieure',entree:'porte-entree',pmr:'interieure',securite:'porte-entree',avis:'livre-dor'};
-function intention(t){const n=norm(t);for(const [k,ws] of K)if(ws.some(w=>n.includes(w)))return k;return 'inconnu'}
+function intention(t){const n=norm(t);for(const [k,ws] of K)if(ws.some(w=>n.includes(w)))return k==='ignore'?'inconnu':k;return 'inconnu'}
 function bulleBot(txt,liens){const r=T().chat.r;const d=document.createElement('div');d.className='m bot';d.textContent=txt;if(liens&&liens.length){const l=document.createElement('div');l.className='liens';liens.forEach(x=>{const a=document.createElement('a');a.href=x[1];a.textContent=x[0];a.onclick=()=>{if(innerWidth<700)fermerChat()};l.appendChild(a)});d.appendChild(l)}$('#fil').appendChild(d);$('#fil').scrollTop=1e6}
 function moi(txt){const d=document.createElement('div');d.className='m moi';d.textContent=txt;$('#fil').appendChild(d)}
 function repondre(k){
  const r=T().chat.r;
  if(k==='choisir'){bulleBot(r.choisir,ORDRE.map(x=>[T().P[x].t,'#/'+x]));return}
  const liens=[];if(PAGE[k])liens.push([PAGE[k]==='livre-dor'?T().ui.livre:r.voirPage+' : '+T().P[PAGE[k]].t,'#/'+PAGE[k]]);
- if(!['merci','contact','avis'].includes(k))liens.push([r.faireDevis,'#/devis'+(PAGE[k]&&ORDRE.includes(PAGE[k])?'?type='+PAGE[k]:'')]);
+ if(!['merci','contact','avis','bonjour','histoire'].includes(k))liens.push([r.faireDevis,'#/devis'+(PAGE[k]&&ORDRE.includes(PAGE[k])?'?type='+PAGE[k]:'')]);
  if(k==='contact'||k==='inconnu'||k==='delai')liens.push(['01 84 14 45 17','tel:+33184144517']);
  bulleBot(r[k]||r.inconnu,liens);
 }
