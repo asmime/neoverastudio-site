@@ -1,0 +1,941 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Le Pardaillan — Proposition Neovera Studio</title>
+<meta name="description" content="Le Pardaillan, hôtel*** et restaurant gascon face au plan d'eau de Gondrin (Gers), depuis 1973.">
+<link rel="preload" href="fonts/bodoni-moda-latin-500-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="img/hero.jpg" as="image">
+<style>
+@font-face{font-family:"Bodoni Moda";font-weight:400;font-display:swap;src:url(fonts/bodoni-moda-latin-400-normal.woff2) format("woff2")}
+@font-face{font-family:"Bodoni Moda";font-weight:500;font-display:swap;src:url(fonts/bodoni-moda-latin-500-normal.woff2) format("woff2")}
+@font-face{font-family:"Bodoni Moda";font-weight:500;font-display:swap;src:url(fonts/bodoni-moda-latin-ext-500-normal.woff2) format("woff2");unicode-range:U+0100-02BA,U+1E00-1EFF}
+@font-face{font-family:"Bodoni Moda";font-weight:600;font-display:swap;src:url(fonts/bodoni-moda-latin-600-normal.woff2) format("woff2")}
+@font-face{font-family:"Work Sans";font-weight:400;font-display:swap;src:url(fonts/work-sans-latin-400-normal.woff2) format("woff2")}
+@font-face{font-family:"Work Sans";font-weight:400;font-display:swap;src:url(fonts/work-sans-latin-ext-400-normal.woff2) format("woff2");unicode-range:U+0100-02BA,U+1E00-1EFF}
+@font-face{font-family:"Work Sans";font-weight:500;font-display:swap;src:url(fonts/work-sans-latin-500-normal.woff2) format("woff2")}
+@font-face{font-family:"Work Sans";font-weight:600;font-display:swap;src:url(fonts/work-sans-latin-600-normal.woff2) format("woff2")}
+:root{
+ --lac:#1D4652;--lac2:#2C6271;--lac-clair:#DCE8EA;--ambre:#B9772A;--ambre-f:#8A5416;--nappe:#F1F4F3;--blanc:#fff;
+ --encre:#16191A;--gris:#4A5254;--pierre:#E4DED3;--colombage:#3A2A1F;
+ --serif:"Bodoni Moda",Georgia,serif;--sans:"Work Sans",system-ui,sans-serif;
+ --r:4px;--ease:cubic-bezier(.16,1,.3,1);--w:1240px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--nappe);color:var(--encre);font:400 1.0625rem/1.62 var(--sans);font-variant-numeric:lining-nums}
+img{max-width:100%;display:block}
+a{color:var(--lac);text-underline-offset:.22em;text-decoration-thickness:1px}
+a:hover{color:var(--ambre-f)}
+::selection{background:var(--lac);color:#fff}
+:focus-visible{outline:2px solid var(--ambre);outline-offset:3px;border-radius:2px}
+html{scrollbar-color:var(--lac2) var(--pierre)}
+::-webkit-scrollbar{width:10px;height:8px}::-webkit-scrollbar-track{background:var(--pierre)}::-webkit-scrollbar-thumb{background:var(--lac2);border-radius:6px}
+h1,h2,h3{font-family:var(--serif);font-weight:500;line-height:1.08;letter-spacing:-.01em;margin:0 0 .5em;text-wrap:balance}
+h2{font-size:clamp(2rem,4.2vw,3.4rem)}
+h3{font-size:clamp(1.35rem,2vw,1.7rem)}
+p{margin:0 0 1em;max-width:66ch;text-wrap:pretty}
+.wrap{max-width:var(--w);margin:0 auto;padding:0 24px}
+.btn{display:inline-flex;align-items:center;gap:.55em;font:600 .95rem/1 var(--sans);padding:.95em 1.35em;border-radius:var(--r);border:1px solid var(--lac);background:var(--lac);color:#fff;text-decoration:none;cursor:pointer;transition:background .25s,color .25s,border-color .25s,transform .25s var(--ease)}
+.btn:hover{background:var(--lac2);border-color:var(--lac2);color:#fff;transform:translateY(-1px)}
+.btn.ghost{background:transparent;color:var(--lac)}
+.btn.ghost:hover{background:var(--lac);color:#fff}
+.btn.ambre{background:var(--ambre-f);border-color:var(--ambre-f)}
+.btn.ambre:hover{background:var(--colombage);border-color:var(--colombage)}
+.btn[disabled]{opacity:.45;cursor:not-allowed;transform:none}
+.lien{font-weight:600;text-decoration:none;border-bottom:1px solid currentColor;padding-bottom:2px}
+.lien::after{content:" →"}
+svg.i{width:1.15em;height:1.15em;stroke:currentColor;fill:none;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round;flex:none}
+
+/* En-tête */
+header.top{position:sticky;top:0;z-index:40;background:rgba(241,244,243,.96);border-bottom:1px solid var(--pierre)}
+.bar1{display:flex;align-items:center;gap:18px;padding:12px 24px;max-width:1400px;margin:0 auto}
+.logo{text-decoration:none;color:var(--encre);display:flex;flex-direction:column;line-height:1}
+.logo b{font:500 1.6rem/1 var(--serif);letter-spacing:.01em}
+.logo small{font:500 .72rem/1.3 var(--sans);letter-spacing:.06em;text-transform:uppercase;color:var(--gris);margin-top:5px}
+.bar1 .sp{flex:1}
+.tel{font-weight:600;text-decoration:none;color:var(--encre);display:flex;gap:.4em;align-items:center;white-space:nowrap}
+.langue{display:flex;align-items:center;gap:6px;border:1px solid var(--lac);border-radius:var(--r);padding:0 4px 0 9px;background:#fff;color:var(--lac)}
+.langue select{border:0;background:transparent;font:500 .92rem var(--sans);color:var(--encre);padding:9px 4px;cursor:pointer}
+nav.menu{border-top:1px solid var(--pierre);position:relative}
+nav.menu ul{list-style:none;margin:0 auto;padding:0 24px;display:flex;gap:4px;max-width:1400px;overflow-x:auto;scrollbar-width:none}
+nav.menu ul::-webkit-scrollbar{display:none}
+nav.menu a{display:block;padding:12px 12px;white-space:nowrap;text-decoration:none;color:var(--encre);font:500 .95rem var(--sans);border-bottom:2px solid transparent}
+nav.menu a:hover{color:var(--lac)}
+nav.menu a[aria-current=page]{border-color:var(--ambre);color:var(--lac)}
+nav.menu a.conseil{color:var(--ambre-f);font-weight:600}
+nav.menu::after{content:"";position:absolute;right:0;top:0;bottom:0;width:42px;background:linear-gradient(90deg,rgba(241,244,243,0),var(--nappe));pointer-events:none}
+
+/* Héros et reflet */
+.hero{position:relative;background:var(--lac);color:#fff}
+.hero .photo{position:relative;height:min(56vh,560px);min-height:360px;overflow:hidden}
+.hero .photo img{width:100%;height:100%;object-fit:cover;object-position:50% 60%}
+.hero .photo::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(10,25,30,.05) 40%,rgba(10,25,30,.55))}
+.hero .titre{position:absolute;left:0;right:0;bottom:0;z-index:2}
+.hero h1{font-size:clamp(3rem,11vw,6rem);font-weight:500;margin:0;line-height:.86;letter-spacing:-.02em;padding-bottom:.02em}
+.eau{position:relative;overflow:hidden;height:clamp(3rem,9vw,5.6rem);margin-top:-2px}
+.reflet{font:500 clamp(3rem,11vw,6rem)/.86 var(--serif);letter-spacing:-.02em;transform:scaleY(-1);transform-origin:50% 50%;margin:0;color:#fff;opacity:.25;filter:url(#onde);white-space:nowrap;-webkit-mask-image:linear-gradient(180deg,#000 0%,transparent 75%);mask-image:linear-gradient(180deg,#000 0%,transparent 75%);user-select:none}
+.hero .bas{display:grid;grid-template-columns:1.1fr 1fr;gap:40px;align-items:start;padding:8px 0 56px}
+.hero .bas p{font-size:1.2rem;color:#E8F0F1;max-width:34ch}
+.hero .actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:22px}
+.hero .btn{background:#fff;color:var(--lac);border-color:#fff}
+.hero .btn:hover{background:var(--lac-clair);border-color:var(--lac-clair);color:var(--lac)}
+.hero .btn.ghost{background:transparent;color:#fff;border-color:rgba(255,255,255,.7)}
+.hero .btn.ghost:hover{background:#fff;color:var(--lac)}
+.resa{background:var(--nappe);color:var(--encre);border-radius:6px;padding:22px;box-shadow:0 18px 40px -18px rgba(0,0,0,.45)}
+.resa h3{font-size:1.3rem;margin-bottom:14px}
+.resa .champs{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr) 84px;gap:10px}
+label.ch{display:flex;flex-direction:column;gap:5px;font:500 .8rem var(--sans);color:var(--gris);letter-spacing:.02em}
+input,select,textarea{min-width:0;font:400 1rem var(--sans);color:var(--encre);border:1px solid #CFC7B9;background:#fff;border-radius:var(--r);padding:11px 12px;width:100%}
+input:focus,select:focus,textarea:focus{outline:2px solid var(--lac2);outline-offset:0;border-color:var(--lac2)}
+input[aria-invalid=true]{border-color:#A3321F}
+.err{color:#A3321F;font-size:.86rem;margin:.6em 0 0;min-height:1.2em}
+.resa .btn{width:100%;justify-content:center;margin-top:14px;background:var(--lac);color:#fff;border-color:var(--lac)}
+.resa .btn:hover{background:var(--lac2);color:#fff}
+.hero .resa p.note{font-size:.85rem;color:var(--gris);margin:.8em 0 0;max-width:none}.hero .resa p.err{color:#A3321F;font-size:.86rem;max-width:none}
+
+/* Sections */
+section{padding:88px 0}
+.portes{display:grid;grid-template-columns:repeat(12,1fr);gap:28px;align-items:start}
+.porte{grid-column:span 6}
+.porte:nth-child(2){grid-column:8/span 5;padding-top:120px}
+.porte figure{margin:0 0 22px;overflow:hidden;border-radius:3px}
+.porte img{width:100%;aspect-ratio:4/3;object-fit:cover;transition:transform 1.2s var(--ease)}
+.porte:nth-child(2) img{aspect-ratio:4/5}
+.porte:hover img{transform:scale(1.03)}
+.ardoise{background:var(--colombage);color:#F3EDE4}
+.ardoise .grille{display:grid;grid-template-columns:1fr 1.3fr;gap:56px;align-items:center}
+.ardoise h2{color:#fff}
+.ardoise p{color:#DDD3C6}
+.ardoise .lien{color:#F0C27F}
+.plats{list-style:none;margin:0;padding:0}
+.plats li{display:grid;grid-template-columns:1fr auto;gap:4px 16px;padding:18px 0;border-bottom:1px solid rgba(255,255,255,.16)}
+.plats b{font:500 1.35rem/1.2 var(--serif);color:#fff}
+.plats span.px{font:500 1.2rem var(--serif);color:#F0C27F;font-variant-numeric:tabular-nums}
+.plats small{grid-column:1/-1;color:#CFC4B6;font-size:.95rem}
+.ardoise .photos{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:28px}
+.ardoise .photos img{aspect-ratio:1;object-fit:cover;border-radius:3px}
+.eaux{display:grid;grid-template-columns:1.2fr 1fr;gap:56px;align-items:center}
+.eaux img{border-radius:3px;aspect-ratio:3/2;object-fit:cover;width:100%}
+.labels{border-top:1px solid var(--pierre);border-bottom:1px solid var(--pierre);padding:30px 0}
+.labels ul{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:12px 40px;justify-content:center;align-items:center}
+.labels li{font:500 1.05rem var(--serif);color:var(--colombage);display:flex;gap:.5em;align-items:center}
+.labels li svg{color:var(--ambre)}
+.labels img{height:46px;width:auto}
+.servlist{font-size:1rem;line-height:1.9;color:var(--encre)}
+.servlist span{white-space:nowrap}
+.servlist span+span::before{content:"·";color:var(--ambre);margin:0 .6em}
+.mg3{display:grid;grid-template-columns:repeat(3,1fr);gap:32px;margin-top:10px}
+.duo{display:grid;grid-template-columns:1fr 1fr;gap:0;background:var(--lac-clair)}
+.duo>div{padding:64px clamp(24px,5vw,72px)}
+.duo>div+div{background:#EFE7DA}
+.duo img{border-radius:3px;margin-bottom:22px;aspect-ratio:16/9;object-fit:cover;width:100%}
+.coord{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
+.coord div{border-top:2px solid var(--lac);padding-top:16px}
+.coord h3{font-size:1.15rem;margin-bottom:.3em}
+.coord p{margin:0}
+
+/* Pages */
+.tete{padding:64px 0 44px;background:var(--lac);color:#fff}
+.tete h1{font-size:clamp(2.6rem,6vw,4.6rem);margin:0;line-height:.86;color:#fff}
+.tete .eau{height:clamp(1.8rem,4vw,3rem);margin-bottom:14px}
+.tete .reflet{font-size:clamp(2.6rem,6vw,4.6rem)}
+.tete p{font-size:1.18rem;color:#DCE7E9}
+.tete .btn{background:#fff;color:var(--lac);border-color:#fff}.tete .btn:hover{background:var(--lac-clair);color:var(--lac)}
+.tete .btn.ghost{background:transparent;color:#fff;border-color:rgba(255,255,255,.7)}
+.hero .btn.ambre,.tete .btn.ambre{background:var(--ambre-f);border-color:var(--ambre-f);color:#fff}.hero .btn.ambre:hover,.tete .btn.ambre:hover{background:#6E420F;border-color:#6E420F;color:#fff}
+.tete .actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:18px}
+.chambres{display:grid;gap:56px}
+.chambre{display:grid;grid-template-columns:1.1fr 1fr;gap:44px;align-items:center}
+.chambre:nth-child(even) figure{order:2}
+.chambre figure{margin:0}
+.chambre h2{font-size:clamp(1.6rem,2.4vw,2.2rem)}
+.chambre img{width:100%;aspect-ratio:3/2;object-fit:cover;border-radius:3px}
+.prix{font:500 1.5rem var(--serif);color:var(--ambre-f);margin:0 0 .6em}
+.prix small{font:400 .9rem var(--sans);color:var(--gris)}
+.cap{font:600 .78rem var(--sans);letter-spacing:.08em;text-transform:uppercase;color:var(--lac);margin:0 0 .5em}
+ul.eq{list-style:none;padding:0;margin:0 0 1.2em;columns:2;column-gap:28px}
+ul.eq li{padding:5px 0 5px 22px;position:relative;font-size:.97rem;break-inside:avoid}
+ul.eq li::before{content:"";position:absolute;left:2px;top:.95em;width:10px;height:1px;background:var(--ambre)}
+table.tarifs{width:100%;border-collapse:collapse;font-variant-numeric:tabular-nums}
+table.tarifs td,table.tarifs th{padding:14px 8px;border-bottom:1px solid var(--pierre);text-align:left;vertical-align:top}
+table.tarifs td:last-child,table.tarifs th:last-child{text-align:right;white-space:nowrap;font:500 1.15rem var(--serif);color:var(--ambre-f)}
+table.tarifs th{font:600 .8rem var(--sans);letter-spacing:.06em;text-transform:uppercase;color:var(--gris)}
+.bloc2{display:grid;grid-template-columns:1.3fr 1fr;gap:56px}
+.services{display:flex;flex-wrap:wrap;gap:10px}
+.services span{border:1px solid var(--pierre);background:#fff;border-radius:999px;padding:8px 14px;font-size:.93rem;display:inline-flex;gap:.45em;align-items:center}
+.services svg{color:var(--lac)}
+.carte{display:grid;grid-template-columns:repeat(3,1fr);gap:40px}
+.carte h3{border-bottom:2px solid var(--lac);padding-bottom:10px}
+.carte ul{list-style:none;margin:0;padding:0}
+.carte li{padding:14px 0;border-bottom:1px solid var(--pierre)}
+.carte li div{display:flex;justify-content:space-between;gap:14px;align-items:baseline}
+.carte li b{font:500 1.12rem/1.25 var(--serif)}
+.carte li span{font:500 1.05rem var(--serif);color:var(--ambre-f);white-space:nowrap;font-variant-numeric:tabular-nums}
+.carte li small{display:block;color:var(--gris);font-size:.92rem;margin-top:4px;line-height:1.45}
+.horaires{background:var(--lac);color:#fff;border-radius:6px;padding:28px;align-self:start}
+.horaires h3{color:#fff}
+.horaires p{color:#E3EDEF}
+.horaires a{color:#fff}
+.menus{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border:1px solid var(--pierre);border-radius:4px;background:#fff}
+.menus div{padding:22px;border-left:1px solid var(--pierre)}
+.menus div:first-child{border-left:0}
+.menus b{font:500 1.2rem/1.2 var(--serif);display:block}
+.form{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;max-width:760px}
+.form .plein{grid-column:1/-1}
+.galerie{columns:3 300px;column-gap:14px}
+.galerie button{display:block;width:100%;padding:0;border:0;margin:0 0 14px;cursor:zoom-in;background:none;border-radius:3px;overflow:hidden}
+.galerie img{width:100%;transition:transform .8s var(--ease)}
+.galerie button:hover img{transform:scale(1.03)}
+.visio{position:fixed;inset:0;background:rgba(10,20,24,.92);z-index:80;display:none;align-items:center;justify-content:center;padding:24px}
+.visio.on{display:flex}
+.visio img{max-height:86vh;border-radius:3px}
+.visio button{position:absolute;top:16px;right:16px;background:#fff;border:0;border-radius:50%;width:44px;height:44px;cursor:pointer;display:grid;place-items:center}
+.lieux{display:grid;grid-template-columns:repeat(2,1fr);gap:48px}
+.lieux img{border-radius:3px;aspect-ratio:3/2;object-fit:cover;width:100%;margin-bottom:18px}
+ul.puces{padding-left:1.1em;margin:0 0 1em}ul.puces li{margin:.25em 0}
+.menugrp{background:#fff;border:1px solid var(--pierre);border-radius:6px;padding:32px}
+.menugrp h4{font:600 .8rem var(--sans);letter-spacing:.08em;text-transform:uppercase;color:var(--lac);margin:1.4em 0 .5em}
+.menugrp p{margin:.2em 0}
+.menugrp .ou{color:var(--gris);font-style:normal;font-size:.9rem}
+.mentions h3{margin-top:1.4em}
+
+/* Pied */
+footer{background:var(--encre);color:#C9CFD0;padding:64px 0 120px;margin-top:40px}
+footer a{color:#fff}
+footer .g{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:36px}
+footer h4{font:600 .78rem var(--sans);letter-spacing:.08em;text-transform:uppercase;color:#fff;margin:0 0 12px}
+footer ul{list-style:none;margin:0;padding:0}footer li{margin:6px 0}
+footer .logo b{color:#fff}
+.reseaux{display:flex;gap:10px;margin-top:16px}
+.reseaux a{width:42px;height:42px;border:1px solid #4D5658;border-radius:50%;display:grid;place-items:center;color:#fff}
+.reseaux a:hover{background:var(--lac);border-color:var(--lac)}
+.signature{border-top:1px solid #2E3436;margin-top:40px;padding-top:20px;font-size:.85rem;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+
+/* Barre mobile */
+.barre{position:fixed;left:0;right:0;bottom:0;z-index:45;display:none;gap:8px;padding:10px 12px calc(10px + env(safe-area-inset-bottom));background:rgba(241,244,243,.97);border-top:1px solid var(--pierre)}
+.barre .btn{flex:1;justify-content:center;padding:.85em .6em;font-size:.9rem}
+
+/* Conseiller */
+.cons-btn{position:fixed;right:20px;top:136px;z-index:50;display:flex;align-items:center;gap:12px;background:var(--lac);color:#fff;border:0;border-radius:999px;padding:10px 20px 10px 10px;cursor:pointer;box-shadow:0 12px 28px -10px rgba(10,30,36,.6);font:inherit;text-align:left}
+.cons-btn .av{width:42px;height:42px;border-radius:50%;background:var(--ambre);display:grid;place-items:center;font:600 1.15rem var(--serif);color:#fff}
+.cons-btn b{display:block;font:600 .95rem var(--sans)}
+.cons-btn small{font-size:.8rem;color:#D6E4E7}
+.cons-bulle{position:fixed;right:20px;top:204px;z-index:50;max-width:300px;background:#fff;border:1px solid var(--pierre);border-radius:8px;padding:16px 40px 16px 16px;box-shadow:0 16px 32px -14px rgba(0,0,0,.35);font-size:.93rem;display:none}
+.cons-bulle.on{display:block;animation:monte .5s var(--ease)}
+.cons-bulle button{position:absolute;top:6px;right:6px;border:0;background:none;cursor:pointer;width:32px;height:32px;display:grid;place-items:center;color:var(--gris)}
+@keyframes monte{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+.cons{position:fixed;right:20px;top:136px;z-index:60;width:min(400px,calc(100vw - 24px));height:min(600px,calc(100vh - 156px));background:var(--nappe);border:1px solid var(--pierre);border-radius:10px;box-shadow:0 24px 60px -20px rgba(0,0,0,.45);display:none;flex-direction:column;overflow:hidden}
+.cons.on{display:flex;animation:monte .45s var(--ease)}
+.cons header{background:var(--lac);color:#fff;padding:14px 16px;display:flex;align-items:center;gap:12px}
+.cons header b{display:block;font:500 1.15rem var(--serif)}
+.cons header small{color:#D6E4E7;font-size:.8rem}
+.cons header button{margin-left:auto;background:none;border:0;color:#fff;cursor:pointer;width:36px;height:36px;display:grid;place-items:center}
+.fil{flex:1;overflow-y:auto;padding:16px;display:flex;flex-direction:column;gap:10px}
+.msg{max-width:88%;padding:10px 13px;border-radius:10px;font-size:.95rem;line-height:1.5}
+.msg.b{background:#fff;border:1px solid var(--pierre);align-self:flex-start}
+.msg.u{background:var(--lac);color:#fff;align-self:flex-end}
+.msg a{font-weight:600}
+.puces-c{display:flex;flex-wrap:wrap;gap:6px;padding:0 16px 10px}
+.puces-c button{border:1px solid var(--lac);background:#fff;color:var(--lac);border-radius:999px;padding:7px 12px;font:500 .85rem var(--sans);cursor:pointer}
+.puces-c button:hover{background:var(--lac);color:#fff}
+.cons form{display:flex;gap:8px;padding:12px;border-top:1px solid var(--pierre);background:#fff}
+.cons form input{flex:1}
+.cons form button{flex:none;padding:0 14px}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+
+/* Entrées */
+.apparait{opacity:1;transform:none}
+.js .apparait{opacity:0;transform:translateY(18px);transition:opacity .9s var(--ease),transform .9s var(--ease)}
+.js .apparait.vu{opacity:1;transform:none}
+
+@media (max-width:1024px){
+ .hero .bas{grid-template-columns:minmax(0,1fr);gap:26px}
+ .ardoise .grille,.eaux,.bloc2,.chambre{grid-template-columns:1fr;gap:30px}
+ .chambre:nth-child(even) figure{order:0}
+ .carte{grid-template-columns:1fr 1fr}
+ .menus{grid-template-columns:1fr 1fr}.menus div:nth-child(3){border-left:0}.menus div:nth-child(n+3){border-top:1px solid var(--pierre)}
+ footer .g{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
+}
+@media (max-width:820px){
+ .bar1{padding:10px 16px;gap:10px;flex-wrap:wrap}
+ .bar1 .tel span{display:none}
+ .bar1>.btn{display:none}
+ .bar1{flex-wrap:nowrap}
+ .langue select{padding:8px 2px;font-size:.88rem}
+ nav.menu ul{padding:0 16px}
+ .wrap{padding:0 16px}
+ section{padding:64px 0}
+ .portes{grid-template-columns:1fr;gap:44px}
+ .porte,.porte:nth-child(2){grid-column:auto;padding-bottom:0}
+ .duo,.lieux,.coord{grid-template-columns:1fr}
+ .carte{grid-template-columns:1fr}
+ .form{grid-template-columns:1fr}
+ .barre{display:flex}
+ .cons-btn{top:auto;right:auto;bottom:78px;left:12px;padding:8px 14px 8px 8px}
+ .mg3{grid-template-columns:1fr}
+ .cons-btn .av{width:36px;height:36px}
+ .cons-bulle{top:auto;right:auto;bottom:146px;left:12px}
+ .cons{top:auto;right:auto;left:12px;bottom:12px;height:min(600px,calc(100vh - 24px))}
+ ul.eq{columns:1}
+ footer .g{grid-template-columns:minmax(0,1fr)}
+}
+@media (max-width:480px){
+ .logo b{font-size:1.3rem}.logo small{font-size:.6rem;letter-spacing:.04em}
+ .langue{padding-left:7px}
+ .resa .champs{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}.resa .champs label:last-child{grid-column:1/-1}
+ .menus{grid-template-columns:1fr}.menus div{border-left:0!important;border-top:1px solid var(--pierre)}.menus div:first-child{border-top:0}
+ .cons-btn small{display:none}
+ .hero .photo{height:52vh;min-height:320px}
+}
+@media (prefers-reduced-motion:reduce){
+ *,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+ .js .apparait{opacity:1;transform:none}
+}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+ <filter id="onde" x="-5%" y="-20%" width="110%" height="140%">
+  <feTurbulence id="ondeT" type="fractalNoise" baseFrequency="0.006 0.09" numOctaves="2" seed="7"/>
+  <feDisplacementMap in="SourceGraphic" scale="9" xChannelSelector="R" yChannelSelector="G"/>
+ </filter>
+ <symbol id="i-tel" viewBox="0 0 24 24"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></symbol>
+ <symbol id="i-globe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></symbol>
+ <symbol id="i-fb" viewBox="0 0 24 24"><path d="M14 8h3V4h-3a4 4 0 0 0-4 4v3H7v4h3v6h4v-6h3l1-4h-4V8z"/></symbol>
+ <symbol id="i-x" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18"/></symbol>
+ <symbol id="i-ext" viewBox="0 0 24 24"><path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></symbol>
+ <symbol id="i-mark" viewBox="0 0 24 24"><path d="M12 3l2.6 5.6 6 .7-4.5 4.1 1.2 6L12 16.5 6.7 19.4l1.2-6L3.4 9.3l6-.7z"/></symbol>
+ <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s-7-6.5-7-12a7 7 0 0 1 14 0c0 5.5-7 12-7 12z"/><circle cx="12" cy="9" r="2.5"/></symbol>
+ <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="1"/><path d="m3 7 9 6 9-6"/></symbol>
+ <symbol id="i-send" viewBox="0 0 24 24"><path d="M4 12 20 4l-4 16-4-7z"/><path d="m12 13 8-9"/></symbol>
+ <symbol id="i-ok" viewBox="0 0 24 24"><path d="m5 12 4 4 10-10"/></symbol>
+</svg>
+<div id="app"></div>
+<div class="visio" id="visio" role="dialog" aria-modal="true"><button type="button" id="visioX"><svg class="i"><use href="#i-x"/></svg><span class="sr">Fermer</span></button><img alt=""></div>
+<script>
+const LANGS={fr:"Français",en:"English",es:"Español",de:"Deutsch",it:"Italiano",nl:"Nederlands"};
+const RESA="https://secure.reservit.com/front254106/front.do?m=booking&custid=233&hotelid=254106&langcode=";
+const BONS="https://lepardaillan.shop.bonkdo.com/fr";
+const FB="https://www.facebook.com/lepardaillanhotelrestaurant/";
+const T={
+fr:{
+ legCap:"au capital de",pmr:"PMR",tag:"Hôtel*** · Restaurant · Gondrin, Gers",lang:"Langue",
+ nav:["Accueil","L'hôtel","Le restaurant","Groupes & séminaires","Aux alentours","Galerie","Bons cadeaux","Contact","Pardaillan Conseil"],
+ heroL:"La Gascogne à l'état pur : un hôtel et une table face au plan d'eau de Gondrin, depuis 1973.",
+ room:"Réserver une chambre",table:"Réserver une table",
+ bkT:"Vos dates",bkIn:"Arrivée",bkOut:"Départ",bkP:"Pers.",bkGo:"Voir les disponibilités",bkErr:"Le départ doit suivre l'arrivée.",bkNote:"Réservation directe sur le module sécurisé de la maison.",
+ d1T:"Dormir au calme du Gers",d1P:"12 chambres et 5 studios dans les jardins. Climatisation, douche à l'italienne, et une chambre de plain-pied pour les personnes à mobilité réduite.",d1A:"Les chambres, dès 83 €",
+ d2T:"Une table qui sent la Gascogne",d2P:"Cuisine de terroir faite maison, produits de saison, producteurs voisins. Près de la cheminée, sous la véranda ou en terrasse face à l'eau.",d2A:"Ouvrir la carte",
+ slT:"Ce soir, à la carte",slP:"Trois assiettes de la carte. Les autres attendent à table.",slA:"Toute la carte",
+ waT:"En face, l'eau",waP:"La base aqualudique de Gondrin est juste de l'autre côté de l'avenue : baignade, toboggans, vagues. Et la voie verte file sur plus de 20 km, sur l'ancienne voie ferrée.",waA:"Explorer les alentours",
+ labels:["Logis Hôtels · Hôtel Cosy","Logis · Restaurant Gourmand","Tables du Gers","Gondrin, Station verte"],
+ grT:"Groupes, familles, séminaires",grP:"Menu groupe dès 24,90 €, salle modulable jusqu'à 100 personnes, vidéoprojecteur et bar privatif.",grA:"Préparer votre venue",
+ giT:"Offrir une parenthèse gasconne",giP:"Une nuit, un dîner, un séjour : les bons cadeaux du Pardaillan se commandent en ligne.",giA:"Choisir un bon cadeau",
+ cTel:"Téléphone",cMail:"E-mail",cAdr:"Adresse",
+ hT:"L'hôtel",hL:"Une maison de caractère au cœur du village, en terre d'Armagnac : 12 chambres sobres et soignées, 5 appart-hôtels dans les jardins, vue sur le plan d'eau.",
+ from:"à partir de",night:"la nuit",pers:"pers.",
+ rates:"Demi-pension, pension, soirée étape",ratesN:"Prix par personne, base 2 personnes. 3 nuits minimum pour la demi-pension et la pension complète.",
+ rateRows:["Demi-pension, chambre double standard","Demi-pension, chambre double confort vue sur le parc","Pension complète, chambre double standard","Pension complète, chambre double confort vue sur le parc","Soirée étape, chambre standard","Soirée étape, chambre confort"],
+ extras:"Bon à savoir",extraRows:["Taxe de séjour, par personne et par nuit","Petit-déjeuner","Supplément animal, par jour"],
+ servT:"Les services",serv:["Wifi gratuit dans tout l'hôtel","Hôtel climatisé","Accès personnes à mobilité réduite","Salle de séminaire","Restaurant","Terrasse","Jardin","Animaux acceptés (service payant)","Accueil de groupes","Soirée étape"],
+ studioN:"Studios proposés à la nuitée, en prestation hôtelière (non classés Atout France).",
+ rT:"Le restaurant",rL:"Depuis 1973, la maison cultive l'art de recevoir. Labellisée Tables du Gers : circuits courts, producteurs voisins, tout est fait maison.",
+ hoursT:"Horaires",hours:["Du lundi au samedi : 12 h – 13 h 30 et 19 h – 20 h 30","Dimanche : 12 h – 14 h"],hoursR:"Réservation au",
+ menusT:"Nos menus",menus:["L'ardoise du jour","Le menu Découverte","Le menu Dégustation","Le Petit Mousquetaire"],menusN:"Composition et prix du moment : demandez-les au 05 62 28 72 59.",
+ carteT:"La carte",cats:["Entrées","Plats","Desserts"],side:"Portion de frites fraîches ou petite salade verte",
+ formT:"Demander une table",fDate:"Date",fServ:"Service",fMidi:"Midi",fSoir:"Soir",fCouv:"Couverts",fNom:"Nom",fTel:"Téléphone",fMsg:"Message (facultatif)",fSend:"Envoyer la demande",fOk:"Votre messagerie s'ouvre avec la demande prête à partir vers la maison.",fErr:"Indiquez au moins la date, le nombre de couverts et votre nom.",
+ gT:"Groupes & séminaires",gL:"De passage ou en halte touristique : menu spécial groupe, visites patrimoniales ou gourmandes, et une salle toute équipée.",
+ gP1:"Groupes de seniors, comités d'entreprise, associations : l'abbaye cistercienne de Flaran, la cité fortifiée de Larressingle, la bastide circulaire de Fourcès, la villa gallo-romaine de Séviac, Condom, Montréal du Gers sont à quelques minutes.",
+ gP2:"Selon la saison, déjeuner en terrasse face au lac, sous la véranda, devant la cheminée ou dans la nouvelle salle d'animation. Pour vos repas de famille, une étude sur mesure.",
+ mgT:"Le menu groupe",mgL:"À partir de 25 personnes, même menu pour toute la table. Apéritif, ¼ de vin par personne, café et l'armagnac du patron compris. Gratuité pour le chauffeur. Du lundi au vendredi midi.",mgF:"Menu à partir de 24,90 €",
+ mgE:"Entrée",mgPl:"Plat",mgD:"Dessert",or:"ou",
+ mgItems:{e:["Pastifret maison au poivre vert","Pâté maison à la graisse de canard","Salade gasconne : mesclun, gésiers d'oie confits, magret séché, fritons de canard, pignons de pin, pickles d'oignons rouges (+3 €)","Foie gras de canard IGP Gers au torchon, brioche toastée et chutney de fruits (+5 €)"],p:["Rôti d'échine de porc noir, sauce pruneaux d'Agen","Poulet du Gers, sauce aux cèpes et gratin de pommes de terre (+4 €)","½ magret de canard IGP Gers, sauce au vin rouge et myrtilles, légumes de saison et grenailles (+5 €)"],d:["Coupe « Agénor » : glace artisanale au pruneau, crème montée vanille, pruneau d'Agen à l'armagnac, biscuit croquant","Véritable croustade gasconne de Gondrin (+2 €)"]},
+ semT:"Les séminaires",semP:"Une salle privative et modulable jusqu'à 100 personnes, en demi-journée ou journée complète. Écran géant et vidéoprojecteur, paperboard, wifi, bar privatif, distributeur de boissons chaudes. Formules avec pause-café et déjeuner : dites-nous vos besoins.",
+ grpA:"Demander un devis",
+ aT:"Aux alentours",aL:"Gondrin, « Station verte », garde ses trésors : le sanctuaire Notre-Dame de Tonneteau, la rue des cornières et ses colombages, le circuit des vieux lavoirs.",
+ a1T:"La base aqualudique, juste en face",a1P:"15 000 m² de loisirs, où petits et grands se retrouvent tout l'été :",a1L:["4 500 m² de baignade en eau filtrée","4 toboggans : kamikaze, multipistes, à virages et à tube","Un espace vagues et des bouées flottantes","Une pataugeoire avec mini-toboggans","Terrain multisports, beach-volley, tennis, trampoline à air, aire de jeux, ping-pong"],
+ a2T:"La voie verte de l'Armagnac",a2P:"Plus de 20 km sur l'ancienne voie ferrée, à pied ou à vélo, entre forêts, landes et cultures, jalonnés d'anciennes gares et d'aires de pique-nique, avec des points de vue sur les collines gasconnes.",
+ a3T:"Le patrimoine",a3P:"À quelques encablures : l'abbaye cistercienne de Flaran, la bastide circulaire de Fourcès, le village fortifié de Larressingle, le village médiéval de Montréal, la villa gallo-romaine de Séviac.",
+ a4T:"Gastronomie, vins et armagnacs",a4P:"Le Gers, terre du bien-vivre. Par la voie verte, allez à la rencontre des producteurs : floc de Gascogne, chais d'armagnac, producteurs de gras, ateliers de croustade. Ils vous reçoivent pour une dégustation, à la propriété.",a4A:"La route des vins et armagnacs du Gers",
+ galT:"Galerie",galL:"La maison, ses chambres, sa table et son jardin.",
+ giftT:"Bons cadeaux",
+ coT:"Contact",coL:"Le Pardaillan vous accueille au 25 avenue Jean Moulin, au centre du village de Gondrin.",coForm:"Une question ?",coPre:"Prénom",coNomF:"Nom",coMailF:"E-mail",coObj:"Objet",coMsg:"Votre message",coSend:"Envoyer",coOk:"Votre messagerie s'ouvre avec le message prêt à partir.",coErr:"Indiquez votre e-mail et votre message.",coMap:"Voir sur la carte",
+ leg:"Mentions légales",legT:"Mentions légales",legPub:"Éditeur du site",legResp:"Responsable de la publication",legHost:"Hébergement",legHostV:"Précisé lors de la mise en ligne définitive.",legCred:"Crédits photographiques",
+ fNav:"La maison",fInfo:"Infos pratiques",fFollow:"Nous suivre",fPart:"Partenaires",
+ propo:"Proposition de nouveau site imaginée par Neovera Studio",
+ cName:"Pardaillan Conseil",cSub:"Je vous aide à choisir",cVirt:"assistant virtuel",cHello:"Bonjour, je suis Pardaillan Conseil, l'assistant virtuel de la maison. Une chambre, une table, un groupe ? Posez-moi votre question.",cBubble:"Bonjour ! Je suis Pardaillan Conseil, assistant virtuel. Je vous aide à choisir une chambre ou une table.",cPh:"Votre question…",cSend:"Envoyer",cClose:"Fermer",
+ chips:["Quelle chambre pour nous ?","Horaires du restaurant","Demi-pension","Venir avec mon chien","Groupe ou séminaire"]
+},
+en:{
+ legCap:"share capital",pmr:"accessible",tag:"Hotel*** · Restaurant · Gondrin, Gers",lang:"Language",
+ nav:["Home","The hotel","The restaurant","Groups & seminars","Around us","Gallery","Gift vouchers","Contact","Pardaillan Advisor"],
+ heroL:"Gascony at its purest: a hotel and a table facing the lake at Gondrin, since 1973.",
+ room:"Book a room",table:"Book a table",
+ bkT:"Your dates",bkIn:"Arrival",bkOut:"Departure",bkP:"Guests",bkGo:"Check availability",bkErr:"Departure must come after arrival.",bkNote:"Book direct on the hotel's secure booking module.",
+ d1T:"Sleep in the quiet of the Gers",d1P:"12 rooms and 5 studios in the gardens. Air conditioning, walk-in showers, and a ground-floor room for guests with reduced mobility.",d1A:"Rooms from €83",
+ d2T:"A table that tastes of Gascony",d2P:"Homemade regional cooking, seasonal produce, local growers. By the fireplace, in the veranda or on the terrace facing the water.",d2A:"Open the menu",
+ slT:"Tonight, à la carte",slP:"Three plates from the menu. The rest are waiting at the table.",slA:"The full menu",
+ waT:"Across the road, the water",waP:"Gondrin's water park is just across the avenue: swimming, slides, waves. And the greenway runs for more than 20 km along the old railway line.",waA:"Explore the area",
+ labels:["Logis Hotels · Cosy Hotel","Logis · Gourmet Restaurant","Tables du Gers","Gondrin, “Station verte”"],
+ grT:"Groups, families, seminars",grP:"Group menu from €24.90, a flexible room for up to 100 people, projector and private bar.",grA:"Plan your visit",
+ giT:"Give a taste of Gascony",giP:"A night, a dinner, a stay: Le Pardaillan gift vouchers can be ordered online.",giA:"Choose a gift voucher",
+ cTel:"Phone",cMail:"Email",cAdr:"Address",
+ hT:"The hotel",hL:"A house of character in the heart of the village, in Armagnac country: 12 simple, well-kept rooms, 5 aparthotel studios in the gardens, a view over the lake.",
+ from:"from",night:"per night",pers:"guests",
+ rates:"Half board, full board, overnight stay",ratesN:"Price per person, based on 2 people sharing. 3 nights minimum for half and full board.",
+ rateRows:["Half board, standard double room","Half board, comfort double room with park view","Full board, standard double room","Full board, comfort double room with park view","Overnight package, standard room","Overnight package, comfort room"],
+ extras:"Good to know",extraRows:["Tourist tax, per person per night","Breakfast","Pet supplement, per day"],
+ servT:"Services",serv:["Free wifi throughout","Air-conditioned hotel","Access for reduced mobility","Seminar room","Restaurant","Terrace","Garden","Pets welcome (charged)","Groups welcome","Overnight package"],
+ studioN:"Studios offered by the night as a hotel service (not rated by Atout France).",
+ rT:"The restaurant",rL:"Since 1973 the house has cultivated the art of hospitality. A member of Tables du Gers: short supply chains, neighbouring producers, everything homemade.",
+ hoursT:"Opening hours",hours:["Monday to Saturday: 12:00 – 13:30 and 19:00 – 20:30","Sunday: 12:00 – 14:00"],hoursR:"Bookings on",
+ menusT:"Our set menus",menus:["Today's slate","The Discovery menu","The Tasting menu","The Little Musketeer"],menusN:"Current dishes and prices: ask us on +33 5 62 28 72 59.",
+ carteT:"À la carte",cats:["Starters","Mains","Desserts"],side:"Portion of fresh fries or small green salad",
+ formT:"Request a table",fDate:"Date",fServ:"Service",fMidi:"Lunch",fSoir:"Dinner",fCouv:"Guests",fNom:"Name",fTel:"Phone",fMsg:"Message (optional)",fSend:"Send request",fOk:"Your email app opens with the request ready to send to the hotel.",fErr:"Please give at least the date, number of guests and your name.",
+ gT:"Groups & seminars",gL:"Passing through or on a tour: a special group menu, heritage or food visits, and a fully equipped room.",
+ gP1:"Senior groups, works councils, associations: the Cistercian abbey of Flaran, the fortified village of Larressingle, the circular bastide of Fourcès, the Gallo-Roman villa of Séviac, Condom and Montréal du Gers are all minutes away.",
+ gP2:"Depending on the season, lunch on the terrace facing the lake, in the veranda, by the fire or in the new function room. For family gatherings, a tailored proposal.",
+ mgT:"The group menu",mgL:"From 25 people, the same menu for the whole table. Aperitif, ¼ litre of wine per person, coffee and the owner's armagnac included. Driver eats free. Monday to Friday, lunchtime.",mgF:"Menu from €24.90",
+ mgE:"Starter",mgPl:"Main",mgD:"Dessert",or:"or",
+ mgItems:{e:["Homemade pastifret with green pepper","Homemade pâté with duck fat","Gascon salad: mixed leaves, confit goose gizzards, dried duck breast, duck crackling, pine nuts, pickled red onions (+€3)","IGP Gers duck foie gras au torchon, toasted brioche and fruit chutney (+€5)"],p:["Roast black pork shoulder, Agen prune sauce","Gers chicken, porcini sauce and potato gratin (+€4)","½ IGP Gers duck breast, red wine and blueberry sauce, seasonal vegetables and baby potatoes (+€5)"],d:["“Agénor” sundae: artisan prune ice cream, whipped vanilla cream, Agen prune in armagnac, crisp biscuit","Real Gascon croustade from Gondrin (+€2)"]},
+ semT:"Seminars",semP:"A private, flexible room for up to 100 people, half day or full day. Giant screen and projector, flipchart, wifi, private bar, hot drinks machine. Packages with coffee breaks and lunch: tell us what you need.",
+ grpA:"Request a quote",
+ aT:"Around us",aL:"Gondrin, a “Station verte”, keeps its treasures: the sanctuary of Notre-Dame de Tonneteau, the arcaded street and its timber frames, the trail of old wash-houses.",
+ a1T:"The water park, right opposite",a1P:"15,000 m² of leisure where young and old meet all summer:",a1L:["4,500 m² of filtered-water swimming","4 slides: kamikaze, multi-lane, curved and tube","A wave zone and floating rings","A paddling pool with mini slides","Multisport court, beach volleyball, tennis, air trampoline, playground, table tennis"],
+ a2T:"The Armagnac greenway",a2P:"More than 20 km along the old railway, on foot or by bike, through forest, heath and farmland, dotted with old stations and picnic spots, with views over the Gascon hills.",
+ a3T:"Heritage",a3P:"A stone's throw away: the Cistercian abbey of Flaran, the circular bastide of Fourcès, the fortified village of Larressingle, medieval Montréal, the Gallo-Roman villa of Séviac.",
+ a4T:"Food, wines and armagnacs",a4P:"The Gers, land of good living. Along the greenway, meet the producers: Floc de Gascogne, armagnac cellars, foie gras farms, croustade workshops. They welcome you for a tasting on the estate.",a4A:"The Gers wine and armagnac route",
+ galT:"Gallery",galL:"The house, its rooms, its table and its garden.",
+ giftT:"Gift vouchers",
+ coT:"Contact",coL:"Le Pardaillan welcomes you at 25 avenue Jean Moulin, in the centre of Gondrin.",coForm:"A question?",coPre:"First name",coNomF:"Last name",coMailF:"Email",coObj:"Subject",coMsg:"Your message",coSend:"Send",coOk:"Your email app opens with the message ready to send.",coErr:"Please give your email and your message.",coMap:"View on the map",
+ leg:"Legal notice",legT:"Legal notice",legPub:"Publisher",legResp:"Publication manager",legHost:"Hosting",legHostV:"Confirmed when the final site goes live.",legCred:"Photo credits",
+ fNav:"The house",fInfo:"Practical",fFollow:"Follow us",fPart:"Partners",
+ propo:"New website proposal designed by Neovera Studio",
+ cName:"Pardaillan Advisor",cSub:"Let me help you choose",cVirt:"virtual assistant",cHello:"Hello, I'm Pardaillan Advisor, the hotel's virtual assistant. A room, a table, a group? Ask me.",cBubble:"Hello! I'm Pardaillan Advisor, a virtual assistant. I can help you choose a room or a table.",cPh:"Your question…",cSend:"Send",cClose:"Close",
+ chips:["Which room for us?","Restaurant hours","Half board","Coming with my dog","Group or seminar"]
+},
+es:{
+ legCap:"capital social",pmr:"adaptado",tag:"Hotel*** · Restaurante · Gondrin, Gers",lang:"Idioma",
+ nav:["Inicio","El hotel","El restaurante","Grupos y seminarios","Alrededores","Galería","Bonos regalo","Contacto","Pardaillan Consejo"],
+ heroL:"Gascuña en estado puro: un hotel y una mesa frente al lago de Gondrin, desde 1973.",
+ room:"Reservar habitación",table:"Reservar mesa",
+ bkT:"Sus fechas",bkIn:"Llegada",bkOut:"Salida",bkP:"Pers.",bkGo:"Ver disponibilidad",bkErr:"La salida debe ser posterior a la llegada.",bkNote:"Reserva directa en el módulo seguro de la casa.",
+ d1T:"Dormir en la calma del Gers",d1P:"12 habitaciones y 5 estudios en los jardines. Aire acondicionado, ducha a ras de suelo y una habitación en planta baja para personas con movilidad reducida.",d1A:"Habitaciones desde 83 €",
+ d2T:"Una mesa que sabe a Gascuña",d2P:"Cocina de la tierra hecha en casa, productos de temporada, productores vecinos. Junto a la chimenea, en la veranda o en la terraza frente al agua.",d2A:"Ver la carta",
+ slT:"Esta noche, a la carta",slP:"Tres platos de la carta. Los demás le esperan en la mesa.",slA:"Toda la carta",
+ waT:"Enfrente, el agua",waP:"El parque acuático de Gondrin está justo al otro lado de la avenida: baño, toboganes, olas. Y la vía verde recorre más de 20 km por el antiguo trazado ferroviario.",waA:"Descubrir los alrededores",
+ labels:["Logis Hotels · Hotel Cosy","Logis · Restaurante Gourmand","Tables du Gers","Gondrin, «Station verte»"],
+ grT:"Grupos, familias, seminarios",grP:"Menú de grupo desde 24,90 €, sala modulable hasta 100 personas, proyector y bar privado.",grA:"Preparar su visita",
+ giT:"Regalar un respiro gascón",giP:"Una noche, una cena, una estancia: los bonos regalo del Pardaillan se piden en línea.",giA:"Elegir un bono regalo",
+ cTel:"Teléfono",cMail:"Correo",cAdr:"Dirección",
+ hT:"El hotel",hL:"Una casa con carácter en el corazón del pueblo, tierra de Armañac: 12 habitaciones sobrias y cuidadas, 5 aparthoteles en los jardines, vistas al lago.",
+ from:"desde",night:"la noche",pers:"pers.",
+ rates:"Media pensión, pensión completa, noche de etapa",ratesN:"Precio por persona, base 2 personas. Mínimo 3 noches para media pensión y pensión completa.",
+ rateRows:["Media pensión, habitación doble estándar","Media pensión, habitación doble confort con vistas al parque","Pensión completa, habitación doble estándar","Pensión completa, habitación doble confort con vistas al parque","Noche de etapa, habitación estándar","Noche de etapa, habitación confort"],
+ extras:"Información útil",extraRows:["Tasa turística, por persona y noche","Desayuno","Suplemento mascota, por día"],
+ servT:"Servicios",serv:["Wifi gratis en todo el hotel","Hotel climatizado","Acceso para movilidad reducida","Sala de seminarios","Restaurante","Terraza","Jardín","Se admiten mascotas (de pago)","Acogida de grupos","Noche de etapa"],
+ studioN:"Estudios disponibles por noche como servicio hotelero (sin clasificación Atout France).",
+ rT:"El restaurante",rL:"Desde 1973, la casa cultiva el arte de recibir. Con el sello Tables du Gers: circuito corto, productores vecinos, todo casero.",
+ hoursT:"Horario",hours:["De lunes a sábado: 12:00 – 13:30 y 19:00 – 20:30","Domingo: 12:00 – 14:00"],hoursR:"Reservas en el",
+ menusT:"Nuestros menús",menus:["La pizarra del día","El menú Descubrimiento","El menú Degustación","El Pequeño Mosquetero"],menusN:"Platos y precios del momento: pregúntenos al +33 5 62 28 72 59.",
+ carteT:"La carta",cats:["Entrantes","Platos","Postres"],side:"Ración de patatas fritas caseras o ensalada verde",
+ formT:"Solicitar mesa",fDate:"Fecha",fServ:"Servicio",fMidi:"Mediodía",fSoir:"Noche",fCouv:"Comensales",fNom:"Nombre",fTel:"Teléfono",fMsg:"Mensaje (opcional)",fSend:"Enviar solicitud",fOk:"Se abre su correo con la solicitud lista para enviar a la casa.",fErr:"Indique al menos la fecha, los comensales y su nombre.",
+ gT:"Grupos y seminarios",gL:"De paso o en ruta turística: menú especial de grupo, visitas patrimoniales o gastronómicas y una sala equipada.",
+ gP1:"Grupos de mayores, comités de empresa, asociaciones: la abadía cisterciense de Flaran, la ciudadela de Larressingle, la bastida circular de Fourcès, la villa galorromana de Séviac, Condom y Montréal du Gers están a pocos minutos.",
+ gP2:"Según la estación, almuerzo en la terraza frente al lago, en la veranda, junto a la chimenea o en la nueva sala de eventos. Para comidas familiares, una propuesta a medida.",
+ mgT:"El menú de grupo",mgL:"Desde 25 personas, el mismo menú para toda la mesa. Incluye aperitivo, ¼ de vino por persona, café y el armañac de la casa. Chófer gratis. De lunes a viernes, a mediodía.",mgF:"Menú desde 24,90 €",
+ mgE:"Entrante",mgPl:"Plato",mgD:"Postre",or:"o",
+ mgItems:{e:["Pastifret casero a la pimienta verde","Paté casero con grasa de pato","Ensalada gascona: brotes, mollejas de oca confitadas, magret curado, chicharrones de pato, piñones, encurtido de cebolla roja (+3 €)","Foie gras de pato IGP Gers al paño, brioche tostado y chutney de frutas (+5 €)"],p:["Asado de cerdo negro, salsa de ciruelas de Agen","Pollo del Gers, salsa de boletus y gratén de patatas (+4 €)","½ magret de pato IGP Gers, salsa de vino tinto y arándanos, verduras de temporada y patatas (+5 €)"],d:["Copa «Agénor»: helado artesano de ciruela, nata montada a la vainilla, ciruela de Agen al armañac, galleta crujiente","Auténtica croustade gascona de Gondrin (+2 €)"]},
+ semT:"Seminarios",semP:"Una sala privada y modulable hasta 100 personas, media jornada o jornada completa. Pantalla gigante y proyector, rotafolio, wifi, bar privado, máquina de bebidas calientes. Fórmulas con pausa café y almuerzo: cuéntenos qué necesita.",
+ grpA:"Pedir presupuesto",
+ aT:"Alrededores",aL:"Gondrin, «Station verte», guarda sus tesoros: el santuario de Notre-Dame de Tonneteau, la calle porticada con entramados, el circuito de los viejos lavaderos.",
+ a1T:"El parque acuático, justo enfrente",a1P:"15 000 m² de ocio donde pequeños y mayores se reúnen todo el verano:",a1L:["4 500 m² de baño en agua filtrada","4 toboganes: kamikaze, multipista, con curvas y de tubo","Zona de olas y flotadores","Piscina infantil con minitoboganes","Pista multideporte, vóley playa, tenis, trampolín hinchable, parque infantil, ping-pong"],
+ a2T:"La vía verde del Armañac",a2P:"Más de 20 km por el antiguo ferrocarril, a pie o en bici, entre bosques, landas y cultivos, con antiguas estaciones, áreas de pícnic y vistas a las colinas gasconas.",
+ a3T:"Patrimonio",a3P:"Muy cerca: la abadía cisterciense de Flaran, la bastida circular de Fourcès, el pueblo fortificado de Larressingle, el pueblo medieval de Montréal, la villa galorromana de Séviac.",
+ a4T:"Gastronomía, vinos y armañacs",a4P:"El Gers, tierra del buen vivir. Por la vía verde, conozca a los productores: floc de Gascuña, bodegas de armañac, productores de foie gras, talleres de croustade. Le reciben para una degustación en la finca.",a4A:"La ruta de vinos y armañacs del Gers",
+ galT:"Galería",galL:"La casa, sus habitaciones, su mesa y su jardín.",
+ giftT:"Bonos regalo",
+ coT:"Contacto",coL:"Le Pardaillan le recibe en el 25 avenue Jean Moulin, en el centro de Gondrin.",coForm:"¿Una pregunta?",coPre:"Nombre",coNomF:"Apellido",coMailF:"Correo",coObj:"Asunto",coMsg:"Su mensaje",coSend:"Enviar",coOk:"Se abre su correo con el mensaje listo para enviar.",coErr:"Indique su correo y su mensaje.",coMap:"Ver en el mapa",
+ leg:"Aviso legal",legT:"Aviso legal",legPub:"Editor del sitio",legResp:"Responsable de la publicación",legHost:"Alojamiento",legHostV:"Se precisará en la puesta en línea definitiva.",legCred:"Créditos fotográficos",
+ fNav:"La casa",fInfo:"Información práctica",fFollow:"Síganos",fPart:"Socios",
+ propo:"Propuesta de nuevo sitio imaginada por Neovera Studio",
+ cName:"Pardaillan Consejo",cSub:"Le ayudo a elegir",cVirt:"asistente virtual",cHello:"Hola, soy Pardaillan Consejo, el asistente virtual de la casa. ¿Una habitación, una mesa, un grupo? Pregúnteme.",cBubble:"¡Hola! Soy Pardaillan Consejo, asistente virtual. Le ayudo a elegir habitación o mesa.",cPh:"Su pregunta…",cSend:"Enviar",cClose:"Cerrar",
+ chips:["¿Qué habitación para nosotros?","Horario del restaurante","Media pensión","Venir con mi perro","Grupo o seminario"]
+},
+de:{
+ legCap:"Stammkapital",pmr:"barrierefrei",tag:"Hotel*** · Restaurant · Gondrin, Gers",lang:"Sprache",
+ nav:["Start","Das Hotel","Das Restaurant","Gruppen & Seminare","Umgebung","Galerie","Gutscheine","Kontakt","Pardaillan Beratung"],
+ heroL:"Die Gascogne pur: Hotel und Küche gegenüber dem See von Gondrin, seit 1973.",
+ room:"Zimmer buchen",table:"Tisch reservieren",
+ bkT:"Ihre Daten",bkIn:"Anreise",bkOut:"Abreise",bkP:"Pers.",bkGo:"Verfügbarkeit prüfen",bkErr:"Die Abreise muss nach der Anreise liegen.",bkNote:"Direkt buchen über das sichere Buchungsmodul des Hauses.",
+ d1T:"Schlafen in der Ruhe des Gers",d1P:"12 Zimmer und 5 Studios im Garten. Klimaanlage, ebenerdige Dusche und ein Zimmer im Erdgeschoss für Gäste mit eingeschränkter Mobilität.",d1A:"Zimmer ab 83 €",
+ d2T:"Ein Tisch, der nach Gascogne schmeckt",d2P:"Hausgemachte Landküche, Produkte der Saison, Erzeuger aus der Nachbarschaft. Am Kamin, in der Veranda oder auf der Terrasse mit Blick aufs Wasser.",d2A:"Zur Speisekarte",
+ slT:"Heute Abend à la carte",slP:"Drei Teller aus der Karte. Der Rest wartet am Tisch.",slA:"Die ganze Karte",
+ waT:"Gegenüber: das Wasser",waP:"Der Wasserpark von Gondrin liegt direkt auf der anderen Seite der Allee: Baden, Rutschen, Wellen. Und der Grüne Weg führt über 20 km auf der alten Bahntrasse.",waA:"Die Umgebung entdecken",
+ labels:["Logis Hotels · Cosy Hotel","Logis · Restaurant Gourmand","Tables du Gers","Gondrin, „Station verte“"],
+ grT:"Gruppen, Familien, Seminare",grP:"Gruppenmenü ab 24,90 €, flexibler Saal für bis zu 100 Personen, Beamer und eigene Bar.",grA:"Ihren Besuch planen",
+ giT:"Eine Auszeit in der Gascogne verschenken",giP:"Eine Nacht, ein Abendessen, ein Aufenthalt: Die Gutscheine des Pardaillan bestellen Sie online.",giA:"Gutschein wählen",
+ cTel:"Telefon",cMail:"E-Mail",cAdr:"Adresse",
+ hT:"Das Hotel",hL:"Ein Haus mit Charakter mitten im Dorf, im Land des Armagnac: 12 schlichte, gepflegte Zimmer, 5 Apartment-Studios im Garten, Blick auf den See.",
+ from:"ab",night:"pro Nacht",pers:"Pers.",
+ rates:"Halbpension, Vollpension, Etappenabend",ratesN:"Preis pro Person bei Belegung mit 2 Personen. Mindestens 3 Nächte bei Halb- und Vollpension.",
+ rateRows:["Halbpension, Standard-Doppelzimmer","Halbpension, Komfort-Doppelzimmer mit Parkblick","Vollpension, Standard-Doppelzimmer","Vollpension, Komfort-Doppelzimmer mit Parkblick","Etappenabend, Standardzimmer","Etappenabend, Komfortzimmer"],
+ extras:"Gut zu wissen",extraRows:["Kurtaxe pro Person und Nacht","Frühstück","Haustierzuschlag pro Tag"],
+ servT:"Leistungen",serv:["Kostenloses WLAN im ganzen Hotel","Klimatisiertes Hotel","Barrierefreier Zugang","Seminarraum","Restaurant","Terrasse","Garten","Haustiere willkommen (gegen Gebühr)","Gruppen willkommen","Etappenabend"],
+ studioN:"Studios pro Nacht als Hotelleistung buchbar (ohne Atout-France-Klassifizierung).",
+ rT:"Das Restaurant",rL:"Seit 1973 pflegt das Haus die Kunst der Gastfreundschaft. Mitglied der Tables du Gers: kurze Wege, Erzeuger aus der Nachbarschaft, alles hausgemacht.",
+ hoursT:"Öffnungszeiten",hours:["Montag bis Samstag: 12:00 – 13:30 und 19:00 – 20:30 Uhr","Sonntag: 12:00 – 14:00 Uhr"],hoursR:"Reservierung unter",
+ menusT:"Unsere Menüs",menus:["Die Tagestafel","Das Entdeckungsmenü","Das Degustationsmenü","Der Kleine Musketier"],menusN:"Aktuelle Gerichte und Preise: fragen Sie uns unter +33 5 62 28 72 59.",
+ carteT:"Die Karte",cats:["Vorspeisen","Hauptgerichte","Desserts"],side:"Portion frische Pommes frites oder kleiner grüner Salat",
+ formT:"Tisch anfragen",fDate:"Datum",fServ:"Service",fMidi:"Mittag",fSoir:"Abend",fCouv:"Personen",fNom:"Name",fTel:"Telefon",fMsg:"Nachricht (optional)",fSend:"Anfrage senden",fOk:"Ihr E-Mail-Programm öffnet sich mit der fertigen Anfrage an das Haus.",fErr:"Bitte mindestens Datum, Personenzahl und Namen angeben.",
+ gT:"Gruppen & Seminare",gL:"Auf der Durchreise oder auf Tour: ein Gruppenmenü, Besichtigungen und Genusstouren und ein voll ausgestatteter Saal.",
+ gP1:"Seniorengruppen, Betriebsräte, Vereine: die Zisterzienserabtei Flaran, das befestigte Dorf Larressingle, die runde Bastide Fourcès, die gallorömische Villa Séviac, Condom und Montréal du Gers liegen nur Minuten entfernt.",
+ gP2:"Je nach Saison Mittagessen auf der Terrasse am See, in der Veranda, am Kamin oder im neuen Veranstaltungsraum. Für Familienfeiern ein individuelles Angebot.",
+ mgT:"Das Gruppenmenü",mgL:"Ab 25 Personen, ein Menü für alle. Aperitif, ¼ Liter Wein pro Person, Kaffee und der Armagnac des Chefs inklusive. Busfahrer frei. Montag bis Freitag mittags.",mgF:"Menü ab 24,90 €",
+ mgE:"Vorspeise",mgPl:"Hauptgang",mgD:"Dessert",or:"oder",
+ mgItems:{e:["Hausgemachter Pastifret mit grünem Pfeffer","Hausgemachte Pastete mit Entenschmalz","Gascognischer Salat: Blattsalat, confierte Gänsemägen, getrocknete Entenbrust, Entengrieben, Pinienkerne, eingelegte rote Zwiebeln (+3 €)","Entenstopfleber IGP Gers im Tuch gegart, geröstete Brioche, Fruchtchutney (+5 €)"],p:["Braten vom schwarzen Schwein, Sauce aus Agen-Pflaumen","Huhn aus dem Gers, Steinpilzsauce und Kartoffelgratin (+4 €)","½ Entenbrust IGP Gers, Rotwein-Heidelbeer-Sauce, Saisongemüse und Drillinge (+5 €)"],d:["Becher „Agénor“: handwerkliches Pflaumeneis, geschlagene Vanillesahne, Agen-Pflaume in Armagnac, knuspriger Keks","Echte gascognische Croustade aus Gondrin (+2 €)"]},
+ semT:"Seminare",semP:"Ein privater, flexibler Saal für bis zu 100 Personen, halbtags oder ganztags. Großleinwand und Beamer, Flipchart, WLAN, eigene Bar, Heißgetränkeautomat. Pakete mit Kaffeepause und Mittagessen: sagen Sie uns, was Sie brauchen.",
+ grpA:"Angebot anfragen",
+ aT:"Umgebung",aL:"Gondrin, „Station verte“, hütet seine Schätze: das Heiligtum Notre-Dame de Tonneteau, die Laubengasse mit Fachwerk, den Rundweg der alten Waschhäuser.",
+ a1T:"Der Wasserpark, direkt gegenüber",a1P:"15.000 m² Freizeit, wo sich Groß und Klein den ganzen Sommer treffen:",a1L:["4.500 m² Badebereich mit gefiltertem Wasser","4 Rutschen: Kamikaze, Mehrbahn, Kurven- und Röhrenrutsche","Wellenbereich und Schwimmringe","Planschbecken mit Minirutschen","Multisportplatz, Beachvolleyball, Tennis, Lufttrampolin, Spielplatz, Tischtennis"],
+ a2T:"Der Grüne Weg des Armagnac",a2P:"Über 20 km auf der alten Bahntrasse, zu Fuß oder mit dem Rad, durch Wälder, Heide und Felder, mit alten Bahnhöfen, Picknickplätzen und Ausblicken auf die Hügel der Gascogne.",
+ a3T:"Kulturerbe",a3P:"Ganz in der Nähe: die Zisterzienserabtei Flaran, die runde Bastide Fourcès, das befestigte Dorf Larressingle, das mittelalterliche Montréal, die gallorömische Villa Séviac.",
+ a4T:"Gastronomie, Weine und Armagnacs",a4P:"Der Gers, Land der Lebensfreude. Entlang des Grünen Wegs treffen Sie die Erzeuger: Floc de Gascogne, Armagnac-Keller, Foie-gras-Höfe, Croustade-Werkstätten. Sie empfangen Sie zur Verkostung auf dem Hof.",a4A:"Die Wein- und Armagnac-Route des Gers",
+ galT:"Galerie",galL:"Das Haus, seine Zimmer, seine Küche und sein Garten.",
+ giftT:"Gutscheine",
+ coT:"Kontakt",coL:"Le Pardaillan empfängt Sie in der 25 avenue Jean Moulin, im Zentrum von Gondrin.",coForm:"Eine Frage?",coPre:"Vorname",coNomF:"Nachname",coMailF:"E-Mail",coObj:"Betreff",coMsg:"Ihre Nachricht",coSend:"Senden",coOk:"Ihr E-Mail-Programm öffnet sich mit der fertigen Nachricht.",coErr:"Bitte E-Mail und Nachricht angeben.",coMap:"Auf der Karte ansehen",
+ leg:"Impressum",legT:"Impressum",legPub:"Herausgeber",legResp:"Verantwortlich für den Inhalt",legHost:"Hosting",legHostV:"Wird bei der endgültigen Veröffentlichung angegeben.",legCred:"Bildnachweis",
+ fNav:"Das Haus",fInfo:"Praktisches",fFollow:"Folgen Sie uns",fPart:"Partner",
+ propo:"Vorschlag für eine neue Website, entworfen von Neovera Studio",
+ cName:"Pardaillan Beratung",cSub:"Ich helfe bei der Wahl",cVirt:"virtueller Assistent",cHello:"Guten Tag, ich bin Pardaillan Beratung, der virtuelle Assistent des Hauses. Ein Zimmer, ein Tisch, eine Gruppe? Fragen Sie mich.",cBubble:"Guten Tag! Ich bin Pardaillan Beratung, ein virtueller Assistent. Ich helfe Ihnen bei der Wahl von Zimmer oder Tisch.",cPh:"Ihre Frage…",cSend:"Senden",cClose:"Schließen",
+ chips:["Welches Zimmer für uns?","Öffnungszeiten Restaurant","Halbpension","Mit meinem Hund","Gruppe oder Seminar"]
+},
+it:{
+ legCap:"capitale sociale",pmr:"accessibile",tag:"Hotel*** · Ristorante · Gondrin, Gers",lang:"Lingua",
+ nav:["Home","L'hotel","Il ristorante","Gruppi e seminari","Dintorni","Galleria","Buoni regalo","Contatti","Pardaillan Consiglio"],
+ heroL:"La Guascogna allo stato puro: un hotel e una tavola di fronte al lago di Gondrin, dal 1973.",
+ room:"Prenota una camera",table:"Prenota un tavolo",
+ bkT:"Le vostre date",bkIn:"Arrivo",bkOut:"Partenza",bkP:"Pers.",bkGo:"Verifica disponibilità",bkErr:"La partenza deve seguire l'arrivo.",bkNote:"Prenotazione diretta sul modulo sicuro della casa.",
+ d1T:"Dormire nella quiete del Gers",d1P:"12 camere e 5 studio nei giardini. Aria condizionata, doccia a filo pavimento e una camera al piano terra per persone a mobilità ridotta.",d1A:"Camere da 83 €",
+ d2T:"Una tavola che sa di Guascogna",d2P:"Cucina del territorio fatta in casa, prodotti di stagione, produttori vicini. Accanto al camino, nella veranda o in terrazza davanti all'acqua.",d2A:"Apri il menù",
+ slT:"Stasera, alla carta",slP:"Tre piatti dalla carta. Gli altri vi aspettano a tavola.",slA:"Tutta la carta",
+ waT:"Di fronte, l'acqua",waP:"Il parco acquatico di Gondrin è proprio dall'altra parte del viale: bagni, scivoli, onde. E la via verde corre per oltre 20 km sull'antica ferrovia.",waA:"Scopri i dintorni",
+ labels:["Logis Hotels · Hotel Cosy","Logis · Ristorante Gourmand","Tables du Gers","Gondrin, «Station verte»"],
+ grT:"Gruppi, famiglie, seminari",grP:"Menù di gruppo da 24,90 €, sala modulabile fino a 100 persone, proiettore e bar privato.",grA:"Organizza la visita",
+ giT:"Regalare una pausa guascona",giP:"Una notte, una cena, un soggiorno: i buoni regalo del Pardaillan si ordinano online.",giA:"Scegli un buono regalo",
+ cTel:"Telefono",cMail:"E-mail",cAdr:"Indirizzo",
+ hT:"L'hotel",hL:"Una casa di carattere nel cuore del paese, terra d'Armagnac: 12 camere sobrie e curate, 5 aparthotel nei giardini, vista sul lago.",
+ from:"da",night:"a notte",pers:"pers.",
+ rates:"Mezza pensione, pensione completa, serata tappa",ratesN:"Prezzo a persona, base 2 persone. Minimo 3 notti per mezza pensione e pensione completa.",
+ rateRows:["Mezza pensione, camera doppia standard","Mezza pensione, camera doppia comfort vista parco","Pensione completa, camera doppia standard","Pensione completa, camera doppia comfort vista parco","Serata tappa, camera standard","Serata tappa, camera comfort"],
+ extras:"Da sapere",extraRows:["Tassa di soggiorno, a persona a notte","Colazione","Supplemento animale, al giorno"],
+ servT:"Servizi",serv:["Wifi gratuito in tutto l'hotel","Hotel climatizzato","Accesso per mobilità ridotta","Sala seminari","Ristorante","Terrazza","Giardino","Animali ammessi (a pagamento)","Accoglienza gruppi","Serata tappa"],
+ studioN:"Studio disponibili a notte come servizio alberghiero (non classificati Atout France).",
+ rT:"Il ristorante",rL:"Dal 1973 la casa coltiva l'arte dell'accoglienza. Marchio Tables du Gers: filiera corta, produttori vicini, tutto fatto in casa.",
+ hoursT:"Orari",hours:["Da lunedì a sabato: 12:00 – 13:30 e 19:00 – 20:30","Domenica: 12:00 – 14:00"],hoursR:"Prenotazioni al",
+ menusT:"I nostri menù",menus:["La lavagna del giorno","Il menù Scoperta","Il menù Degustazione","Il Piccolo Moschettiere"],menusN:"Piatti e prezzi del momento: chiedeteli al +33 5 62 28 72 59.",
+ carteT:"La carta",cats:["Antipasti","Piatti","Dessert"],side:"Porzione di patatine fresche o insalata verde",
+ formT:"Richiedi un tavolo",fDate:"Data",fServ:"Servizio",fMidi:"Pranzo",fSoir:"Cena",fCouv:"Coperti",fNom:"Nome",fTel:"Telefono",fMsg:"Messaggio (facoltativo)",fSend:"Invia la richiesta",fOk:"Si apre la vostra posta con la richiesta pronta da inviare alla casa.",fErr:"Indicate almeno data, coperti e nome.",
+ gT:"Gruppi e seminari",gL:"Di passaggio o in tour: un menù speciale per gruppi, visite storiche o golose e una sala attrezzata.",
+ gP1:"Gruppi di senior, comitati aziendali, associazioni: l'abbazia cistercense di Flaran, il borgo fortificato di Larressingle, la bastide circolare di Fourcès, la villa gallo-romana di Séviac, Condom e Montréal du Gers sono a pochi minuti.",
+ gP2:"A seconda della stagione, pranzo in terrazza davanti al lago, in veranda, accanto al camino o nella nuova sala eventi. Per i pranzi di famiglia, una proposta su misura.",
+ mgT:"Il menù di gruppo",mgL:"Da 25 persone, stesso menù per tutta la tavola. Aperitivo, ¼ di vino a persona, caffè e l'armagnac del padrone inclusi. Autista gratis. Dal lunedì al venerdì a pranzo.",mgF:"Menù da 24,90 €",
+ mgE:"Antipasto",mgPl:"Piatto",mgD:"Dessert",or:"oppure",
+ mgItems:{e:["Pastifret della casa al pepe verde","Paté della casa al grasso d'anatra","Insalata guascona: misticanza, ventrigli d'oca confit, magret essiccato, ciccioli d'anatra, pinoli, cipolle rosse in agrodolce (+3 €)","Foie gras d'anatra IGP Gers al torchon, brioche tostata e chutney di frutta (+5 €)"],p:["Arrosto di coppa di maiale nero, salsa di prugne d'Agen","Pollo del Gers, salsa ai porcini e gratin di patate (+4 €)","½ magret d'anatra IGP Gers, salsa al vino rosso e mirtilli, verdure di stagione e patate novelle (+5 €)"],d:["Coppa «Agénor»: gelato artigianale alla prugna, panna montata alla vaniglia, prugna d'Agen all'armagnac, biscotto croccante","Vera croustade guascona di Gondrin (+2 €)"]},
+ semT:"Seminari",semP:"Una sala privata e modulabile fino a 100 persone, mezza giornata o giornata intera. Maxischermo e proiettore, lavagna a fogli, wifi, bar privato, distributore di bevande calde. Formule con pausa caffè e pranzo: diteci di cosa avete bisogno.",
+ grpA:"Chiedi un preventivo",
+ aT:"Dintorni",aL:"Gondrin, «Station verte», custodisce i suoi tesori: il santuario di Notre-Dame de Tonneteau, la via porticata a graticcio, il percorso dei vecchi lavatoi.",
+ a1T:"Il parco acquatico, proprio di fronte",a1P:"15.000 m² di svago dove grandi e piccoli si ritrovano tutta l'estate:",a1L:["4.500 m² di balneazione in acqua filtrata","4 scivoli: kamikaze, multipista, a curve e a tubo","Area onde e ciambelle galleggianti","Piscina per bambini con mini scivoli","Campo polivalente, beach volley, tennis, trampolino gonfiabile, area giochi, ping-pong"],
+ a2T:"La via verde dell'Armagnac",a2P:"Oltre 20 km sull'antica ferrovia, a piedi o in bici, tra boschi, lande e campi, con vecchie stazioni, aree picnic e scorci sulle colline guascone.",
+ a3T:"Il patrimonio",a3P:"A due passi: l'abbazia cistercense di Flaran, la bastide circolare di Fourcès, il borgo fortificato di Larressingle, il borgo medievale di Montréal, la villa gallo-romana di Séviac.",
+ a4T:"Gastronomia, vini e armagnac",a4P:"Il Gers, terra del buon vivere. Lungo la via verde incontrate i produttori: floc de Gascogne, cantine d'armagnac, produttori di foie gras, laboratori di croustade. Vi accolgono per una degustazione in azienda.",a4A:"La strada dei vini e degli armagnac del Gers",
+ galT:"Galleria",galL:"La casa, le camere, la tavola e il giardino.",
+ giftT:"Buoni regalo",
+ coT:"Contatti",coL:"Le Pardaillan vi accoglie al 25 avenue Jean Moulin, nel centro di Gondrin.",coForm:"Una domanda?",coPre:"Nome",coNomF:"Cognome",coMailF:"E-mail",coObj:"Oggetto",coMsg:"Il vostro messaggio",coSend:"Invia",coOk:"Si apre la vostra posta con il messaggio pronto.",coErr:"Indicate e-mail e messaggio.",coMap:"Vedi sulla mappa",
+ leg:"Note legali",legT:"Note legali",legPub:"Editore del sito",legResp:"Responsabile della pubblicazione",legHost:"Hosting",legHostV:"Indicato alla messa online definitiva.",legCred:"Crediti fotografici",
+ fNav:"La casa",fInfo:"Info pratiche",fFollow:"Seguiteci",fPart:"Partner",
+ propo:"Proposta di nuovo sito ideata da Neovera Studio",
+ cName:"Pardaillan Consiglio",cSub:"Vi aiuto a scegliere",cVirt:"assistente virtuale",cHello:"Buongiorno, sono Pardaillan Consiglio, l'assistente virtuale della casa. Una camera, un tavolo, un gruppo? Chiedete pure.",cBubble:"Buongiorno! Sono Pardaillan Consiglio, assistente virtuale. Vi aiuto a scegliere camera o tavolo.",cPh:"La vostra domanda…",cSend:"Invia",cClose:"Chiudi",
+ chips:["Quale camera per noi?","Orari del ristorante","Mezza pensione","Venire con il cane","Gruppo o seminario"]
+},
+nl:{
+ legCap:"maatschappelijk kapitaal",pmr:"toegankelijk",tag:"Hotel*** · Restaurant · Gondrin, Gers",lang:"Taal",
+ nav:["Home","Het hotel","Het restaurant","Groepen & seminars","Omgeving","Galerij","Cadeaubonnen","Contact","Pardaillan Advies"],
+ heroL:"Gascogne op z'n puurst: een hotel en een tafel tegenover het meer van Gondrin, sinds 1973.",
+ room:"Kamer boeken",table:"Tafel reserveren",
+ bkT:"Uw data",bkIn:"Aankomst",bkOut:"Vertrek",bkP:"Pers.",bkGo:"Beschikbaarheid bekijken",bkErr:"Vertrek moet na aankomst liggen.",bkNote:"Direct boeken via de beveiligde boekingsmodule van het hotel.",
+ d1T:"Slapen in de rust van de Gers",d1P:"12 kamers en 5 studio's in de tuin. Airco, inloopdouche en een kamer op de begane grond voor gasten met beperkte mobiliteit.",d1A:"Kamers vanaf € 83",
+ d2T:"Een tafel die naar Gascogne smaakt",d2P:"Huisgemaakte streekkeuken, seizoensproducten, boeren uit de buurt. Bij de open haard, in de serre of op het terras aan het water.",d2A:"Bekijk de kaart",
+ slT:"Vanavond à la carte",slP:"Drie gerechten van de kaart. De rest wacht aan tafel.",slA:"De hele kaart",
+ waT:"Aan de overkant: het water",waP:"Het waterpark van Gondrin ligt net aan de overkant van de laan: zwemmen, glijbanen, golven. En de groene route loopt ruim 20 km over de oude spoorlijn.",waA:"Ontdek de omgeving",
+ labels:["Logis Hotels · Cosy Hotel","Logis · Restaurant Gourmand","Tables du Gers","Gondrin, ‘Station verte’"],
+ grT:"Groepen, families, seminars",grP:"Groepsmenu vanaf € 24,90, flexibele zaal tot 100 personen, beamer en eigen bar.",grA:"Uw bezoek voorbereiden",
+ giT:"Een Gasconse adempauze cadeau doen",giP:"Een nacht, een diner, een verblijf: de cadeaubonnen van Le Pardaillan bestelt u online.",giA:"Kies een cadeaubon",
+ cTel:"Telefoon",cMail:"E-mail",cAdr:"Adres",
+ hT:"Het hotel",hL:"Een karaktervol huis midden in het dorp, in het land van de armagnac: 12 sobere, verzorgde kamers, 5 appartementstudio's in de tuin, uitzicht op het meer.",
+ from:"vanaf",night:"per nacht",pers:"pers.",
+ rates:"Halfpension, volpension, etappeavond",ratesN:"Prijs per persoon, op basis van 2 personen. Minimaal 3 nachten voor halfpension en volpension.",
+ rateRows:["Halfpension, standaard tweepersoonskamer","Halfpension, comfort tweepersoonskamer met zicht op het park","Volpension, standaard tweepersoonskamer","Volpension, comfort tweepersoonskamer met zicht op het park","Etappeavond, standaardkamer","Etappeavond, comfortkamer"],
+ extras:"Goed om te weten",extraRows:["Toeristenbelasting, per persoon per nacht","Ontbijt","Toeslag huisdier, per dag"],
+ servT:"Diensten",serv:["Gratis wifi in het hele hotel","Hotel met airco","Toegankelijk voor beperkte mobiliteit","Seminarzaal","Restaurant","Terras","Tuin","Huisdieren welkom (betalend)","Groepen welkom","Etappeavond"],
+ studioN:"Studio's per nacht te boeken als hotelservice (niet geklasseerd door Atout France).",
+ rT:"Het restaurant",rL:"Sinds 1973 koestert het huis de kunst van het ontvangen. Lid van Tables du Gers: korte keten, boeren uit de buurt, alles huisgemaakt.",
+ hoursT:"Openingstijden",hours:["Maandag tot zaterdag: 12.00 – 13.30 en 19.00 – 20.30 uur","Zondag: 12.00 – 14.00 uur"],hoursR:"Reserveren via",
+ menusT:"Onze menu's",menus:["Het dagbord","Het Ontdekkingsmenu","Het Proeverijmenu","De Kleine Musketier"],menusN:"Actuele gerechten en prijzen: vraag ze via +33 5 62 28 72 59.",
+ carteT:"De kaart",cats:["Voorgerechten","Hoofdgerechten","Desserts"],side:"Portie verse friet of kleine groene salade",
+ formT:"Tafel aanvragen",fDate:"Datum",fServ:"Service",fMidi:"Lunch",fSoir:"Diner",fCouv:"Personen",fNom:"Naam",fTel:"Telefoon",fMsg:"Bericht (optioneel)",fSend:"Aanvraag versturen",fOk:"Uw mailprogramma opent met de aanvraag klaar om naar het hotel te sturen.",fErr:"Vul minstens datum, aantal personen en uw naam in.",
+ gT:"Groepen & seminars",gL:"Op doorreis of op rondreis: een speciaal groepsmenu, erfgoed- of culinaire bezoeken en een volledig uitgeruste zaal.",
+ gP1:"Seniorengroepen, ondernemingsraden, verenigingen: de cisterciënzerabdij van Flaran, het vestingdorp Larressingle, de ronde bastide van Fourcès, de Gallo-Romeinse villa van Séviac, Condom en Montréal du Gers liggen op een paar minuten.",
+ gP2:"Afhankelijk van het seizoen lunch op het terras aan het meer, in de serre, bij de haard of in de nieuwe feestzaal. Voor familiemaaltijden een voorstel op maat.",
+ mgT:"Het groepsmenu",mgL:"Vanaf 25 personen, hetzelfde menu voor de hele tafel. Aperitief, ¼ wijn per persoon, koffie en de armagnac van de baas inbegrepen. Chauffeur gratis. Maandag tot vrijdag, 's middags.",mgF:"Menu vanaf € 24,90",
+ mgE:"Voorgerecht",mgPl:"Hoofdgerecht",mgD:"Dessert",or:"of",
+ mgItems:{e:["Huisgemaakte pastifret met groene peper","Huisgemaakte paté met eendenvet","Gasconse salade: slamix, gekonfijte ganzenmaagjes, gedroogde eendenborst, eendenkaantjes, pijnboompitten, ingelegde rode ui (+€ 3)","Eendenlever IGP Gers au torchon, getoaste brioche en vruchtenchutney (+€ 5)"],p:["Gebraden nek van zwart varken, saus van Agen-pruimen","Kip uit de Gers, eekhoorntjesbroodsaus en aardappelgratin (+€ 4)","½ eendenborst IGP Gers, rodewijn-bosbessensaus, seizoensgroenten en krieltjes (+€ 5)"],d:["Coupe ‘Agénor’: ambachtelijk pruimenijs, vanilleroom, Agen-pruim in armagnac, knapperig koekje","Echte Gasconse croustade uit Gondrin (+€ 2)"]},
+ semT:"Seminars",semP:"Een eigen, flexibele zaal tot 100 personen, halve of hele dag. Groot scherm en beamer, flipover, wifi, eigen bar, automaat voor warme dranken. Formules met koffiepauze en lunch: vertel ons wat u nodig hebt.",
+ grpA:"Offerte aanvragen",
+ aT:"Omgeving",aL:"Gondrin, ‘Station verte’, bewaart zijn schatten: het heiligdom Notre-Dame de Tonneteau, de straat met arcaden en vakwerk, de route langs de oude wasplaatsen.",
+ a1T:"Het waterpark, recht tegenover",a1P:"15.000 m² vrije tijd waar jong en oud elkaar de hele zomer treffen:",a1L:["4.500 m² zwemwater, gefilterd","4 glijbanen: kamikaze, meerbaans, met bochten en buis","Golfzone en drijvende banden","Peuterbad met mini-glijbanen","Multisportveld, beachvolley, tennis, luchtkussen, speeltuin, tafeltennis"],
+ a2T:"De groene route van de Armagnac",a2P:"Ruim 20 km over de oude spoorlijn, te voet of per fiets, door bos, heide en akkers, langs oude stations en picknickplekken, met uitzicht op de Gasconse heuvels.",
+ a3T:"Erfgoed",a3P:"Op een steenworp: de cisterciënzerabdij van Flaran, de ronde bastide van Fourcès, het vestingdorp Larressingle, middeleeuws Montréal, de Gallo-Romeinse villa van Séviac.",
+ a4T:"Gastronomie, wijnen en armagnacs",a4P:"De Gers, land van het goede leven. Via de groene route ontmoet u de makers: floc de Gascogne, armagnackelders, foie-grasboerderijen, croustade-ateliers. Zij ontvangen u voor een proeverij op het domein.",a4A:"De wijn- en armagnacroute van de Gers",
+ galT:"Galerij",galL:"Het huis, de kamers, de tafel en de tuin.",
+ giftT:"Cadeaubonnen",
+ coT:"Contact",coL:"Le Pardaillan ontvangt u op 25 avenue Jean Moulin, in het centrum van Gondrin.",coForm:"Een vraag?",coPre:"Voornaam",coNomF:"Achternaam",coMailF:"E-mail",coObj:"Onderwerp",coMsg:"Uw bericht",coSend:"Versturen",coOk:"Uw mailprogramma opent met het bericht klaar om te versturen.",coErr:"Vul uw e-mail en bericht in.",coMap:"Bekijk op de kaart",
+ leg:"Juridische vermeldingen",legT:"Juridische vermeldingen",legPub:"Uitgever",legResp:"Verantwoordelijke uitgever",legHost:"Hosting",legHostV:"Wordt vermeld bij de definitieve publicatie.",legCred:"Fotocredits",
+ fNav:"Het huis",fInfo:"Praktisch",fFollow:"Volg ons",fPart:"Partners",
+ propo:"Voorstel voor een nieuwe website, ontworpen door Neovera Studio",
+ cName:"Pardaillan Advies",cSub:"Ik help u kiezen",cVirt:"virtuele assistent",cHello:"Hallo, ik ben Pardaillan Advies, de virtuele assistent van het huis. Een kamer, een tafel, een groep? Vraag het maar.",cBubble:"Hallo! Ik ben Pardaillan Advies, een virtuele assistent. Ik help u een kamer of tafel kiezen.",cPh:"Uw vraag…",cSend:"Versturen",cClose:"Sluiten",
+ chips:["Welke kamer voor ons?","Openingstijden restaurant","Halfpension","Met mijn hond komen","Groep of seminar"]
+}};
+
+/* Chambres : nom, capacité, description, équipements (par langue) */
+const ROOMS=[
+ {img:"ch-double",px:83,cap:{fr:"1 à 2",en:"1–2",es:"1 a 2",de:"1–2",it:"1–2",nl:"1–2"},
+  n:{fr:"Chambre Standard",en:"Standard Room",es:"Habitación Estándar",de:"Standardzimmer",it:"Camera Standard",nl:"Standaardkamer"},
+  d:{fr:"Chambre double confortable, grand lit 140 cm ou deux lits 90 cm.",en:"Comfortable double room, 140 cm double bed or two 90 cm singles.",es:"Habitación doble confortable, cama de 140 cm o dos camas de 90 cm.",de:"Komfortables Doppelzimmer, Doppelbett 140 cm oder zwei Einzelbetten 90 cm.",it:"Camera doppia confortevole, letto 140 cm o due letti 90 cm.",nl:"Comfortabele tweepersoonskamer, bed van 140 cm of twee bedden van 90 cm."},nes:false},
+ {img:"ch-deco",px:96,cap:{fr:"1 à 2",en:"1–2",es:"1 a 2",de:"1–2",it:"1–2",nl:"1–2"},
+  n:{fr:"Chambre Confort",en:"Comfort Room",es:"Habitación Confort",de:"Komfortzimmer",it:"Camera Comfort",nl:"Comfortkamer"},
+  d:{fr:"Chambre double supérieure, grand lit 160 cm.",en:"Superior double room, 160 cm king-size bed.",es:"Habitación doble superior, cama de 160 cm.",de:"Gehobenes Doppelzimmer, Doppelbett 160 cm.",it:"Camera doppia superiore, letto 160 cm.",nl:"Superieure tweepersoonskamer, bed van 160 cm."},nes:true},
+ {img:"ch-twin",px:115,cap:{fr:"1 à 3",en:"1–3",es:"1 a 3",de:"1–3",it:"1–3",nl:"1–3"},
+  n:{fr:"Chambre Confort triple",en:"Comfort Triple Room",es:"Habitación Confort triple",de:"Komfort-Dreibettzimmer",it:"Camera Comfort tripla",nl:"Comfort driepersoonskamer"},
+  d:{fr:"Chambre triple, grand lit 160 cm et un lit 90 cm.",en:"Triple room, 160 cm bed plus a 90 cm single.",es:"Habitación triple, cama de 160 cm y una cama de 90 cm.",de:"Dreibettzimmer, Doppelbett 160 cm und ein Einzelbett 90 cm.",it:"Camera tripla, letto 160 cm e un letto 90 cm.",nl:"Driepersoonskamer, bed van 160 cm en een bed van 90 cm."},nes:true}
+];
+const EQ={
+ fr:["Bureau et écran plat TNT","Climatisation réversible","Douche à l'italienne, toilettes, sèche-cheveux","Plateau de courtoisie avec bouilloire","Wifi gratuit, chambre non fumeur","Machine à café Nespresso"],
+ en:["Desk and flat-screen TV","Reversible air conditioning","Walk-in shower, toilet, hairdryer","Tea and coffee tray with kettle","Free wifi, non-smoking room","Nespresso coffee machine"],
+ es:["Escritorio y televisor de pantalla plana","Climatización reversible","Ducha a ras de suelo, aseo, secador","Bandeja de cortesía con hervidor","Wifi gratis, habitación para no fumadores","Cafetera Nespresso"],
+ de:["Schreibtisch und Flachbild-TV","Klimaanlage mit Heizfunktion","Ebenerdige Dusche, WC, Föhn","Teeservice mit Wasserkocher","Kostenloses WLAN, Nichtraucherzimmer","Nespresso-Kaffeemaschine"],
+ it:["Scrivania e TV a schermo piatto","Climatizzazione reversibile","Doccia a filo pavimento, WC, asciugacapelli","Set di cortesia con bollitore","Wifi gratuito, camera non fumatori","Macchina da caffè Nespresso"],
+ nl:["Bureau en flatscreen-tv","Airco met verwarming","Inloopdouche, toilet, föhn","Theeset met waterkoker","Gratis wifi, rookvrije kamer","Nespresso-koffiemachine"]};
+const STUDIO={
+ n:{fr:"Studio PMR avec véranda privative, 40 m²",en:"Accessible studio with private veranda, 40 m²",es:"Estudio adaptado con veranda privada, 40 m²",de:"Barrierefreies Studio mit eigener Veranda, 40 m²",it:"Studio accessibile con veranda privata, 40 m²",nl:"Toegankelijke studio met eigen serre, 40 m²"},
+ d:{fr:"De plain-pied, dans les jardins au bord de la base aquatique : une chambre avec lit 140 cm, une seconde avec lit 90 cm pour un enfant ou un accompagnant, et une véranda à vous pour le petit-déjeuner ou la lecture.",
+    en:"On one level, in the gardens by the water park: one bedroom with a 140 cm bed, a second with a 90 cm bed for a child or companion, and your own veranda for breakfast or reading.",
+    es:"En planta baja, en los jardines junto al parque acuático: un dormitorio con cama de 140 cm, otro con cama de 90 cm para un niño o acompañante, y una veranda propia para desayunar o leer.",
+    de:"Ebenerdig, im Garten am Wasserpark: ein Schlafzimmer mit 140-cm-Bett, ein zweites mit 90-cm-Bett für ein Kind oder eine Begleitperson und eine eigene Veranda fürs Frühstück oder zum Lesen.",
+    it:"Al piano terra, nei giardini accanto al parco acquatico: una camera con letto 140 cm, una seconda con letto 90 cm per un bambino o un accompagnatore, e una veranda tutta vostra per la colazione o la lettura.",
+    nl:"Gelijkvloers, in de tuin bij het waterpark: een slaapkamer met bed van 140 cm, een tweede met bed van 90 cm voor een kind of begeleider, en een eigen serre voor ontbijt of om te lezen."},
+ eq:{fr:["TV connectée 43 pouces","Réfrigérateur, Nespresso, cafés, thés et infusions","Salle de bain PMR, douche de plain-pied","Sèche-cheveux, porte-bagages, chaussons d'accueil","Climatisation, wifi haut débit gratuit","Bouteille d'eau offerte à l'arrivée"],
+     en:["43-inch smart TV","Fridge, Nespresso, coffees, teas and herbal teas","Accessible bathroom, step-free shower","Hairdryer, luggage rack, slippers","Air conditioning, free high-speed wifi","Bottle of water on arrival"],
+     es:["TV conectada de 43 pulgadas","Nevera, Nespresso, cafés, tés e infusiones","Baño adaptado, ducha a ras de suelo","Secador, portamaletas, zapatillas","Aire acondicionado, wifi de alta velocidad gratis","Botella de agua de bienvenida"],
+     de:["43-Zoll-Smart-TV","Kühlschrank, Nespresso, Kaffee, Tee und Kräutertee","Barrierefreies Bad, ebenerdige Dusche","Föhn, Kofferablage, Hausschuhe","Klimaanlage, kostenloses schnelles WLAN","Flasche Wasser zur Ankunft"],
+     it:["Smart TV 43 pollici","Frigorifero, Nespresso, caffè, tè e tisane","Bagno accessibile, doccia a filo pavimento","Asciugacapelli, portabagagli, ciabattine","Aria condizionata, wifi veloce gratuito","Bottiglia d'acqua all'arrivo"],
+     nl:["Smart-tv van 43 inch","Koelkast, Nespresso, koffie, thee en kruidenthee","Toegankelijke badkamer, drempelloze douche","Föhn, bagagerek, slippers","Airco, gratis snelle wifi","Fles water bij aankomst"]}
+};
+/* La carte : [prix, {lang:[nom, description]}] */
+const CARTE={
+ e:[[20,{fr:["Foie gras frais de canard cuit au torchon","Foie gras de canard IGP Gers, pain de campagne et chutney de figues"],en:["Fresh duck foie gras au torchon","IGP Gers duck foie gras, country bread and fig chutney"],es:["Foie gras fresco de pato al paño","Foie gras de pato IGP Gers, pan de payés y chutney de higos"],de:["Frische Entenstopfleber im Tuch gegart","Entenstopfleber IGP Gers, Landbrot und Feigenchutney"],it:["Foie gras fresco d'anatra al torchon","Foie gras d'anatra IGP Gers, pane casereccio e chutney di fichi"],nl:["Verse eendenlever au torchon","Eendenlever IGP Gers, boerenbrood en vijgenchutney"]}],
+    [27,{fr:["Foie gras de canard poêlé","Escalopes poêlées, sauce au floc de Gascogne rouge, raisins confits"],en:["Pan-fried duck foie gras","Pan-seared slices, red Floc de Gascogne sauce, candied grapes"],es:["Foie gras de pato a la sartén","Escalopas a la plancha, salsa de floc de Gascuña tinto, uvas confitadas"],de:["Gebratene Entenstopfleber","Gebratene Scheiben, Sauce aus rotem Floc de Gascogne, kandierte Trauben"],it:["Foie gras d'anatra in padella","Scaloppe in padella, salsa al floc de Gascogne rosso, uva candita"],nl:["Gebakken eendenlever","Gebakken plakken, saus van rode floc de Gascogne, gekonfijte druiven"]}],
+    [18,{fr:["Burrata crémeuse","Tartare de tomate, huile à la truffe, jambon cru et pignons de pin"],en:["Creamy burrata","Tomato tartare, truffle oil, cured ham and pine nuts"],es:["Burrata cremosa","Tartar de tomate, aceite de trufa, jamón curado y piñones"],de:["Cremige Burrata","Tomatentatar, Trüffelöl, roher Schinken und Pinienkerne"],it:["Burrata cremosa","Tartare di pomodoro, olio al tartufo, prosciutto crudo e pinoli"],nl:["Romige burrata","Tomatentartaar, truffelolie, rauwe ham en pijnboompitten"]}],
+    [18,{fr:["Salade de chèvre chaud","Mesclun, tomates, noix, chèvre chaud en feuille de brick, jambon cru"],en:["Warm goat's cheese salad","Mixed leaves, tomatoes, walnuts, goat's cheese in brick pastry, cured ham"],es:["Ensalada de queso de cabra caliente","Brotes, tomate, nueces, queso de cabra en pasta brick, jamón curado"],de:["Salat mit warmem Ziegenkäse","Blattsalat, Tomaten, Nüsse, Ziegenkäse im Brickteig, roher Schinken"],it:["Insalata di caprino caldo","Misticanza, pomodori, noci, caprino caldo in pasta brick, prosciutto crudo"],nl:["Salade met warme geitenkaas","Slamix, tomaat, walnoten, geitenkaas in brickdeeg, rauwe ham"]}],
+    [19,{fr:["Carpaccio de roast-beef","Finement tranché, copeaux de parmesan, glace moutarde à l'ancienne"],en:["Roast beef carpaccio","Thinly sliced, parmesan shavings, wholegrain mustard ice cream"],es:["Carpaccio de rosbif","En láminas finas, virutas de parmesano, helado de mostaza antigua"],de:["Roastbeef-Carpaccio","Hauchdünn, Parmesanspäne, Eis von grobkörnigem Senf"],it:["Carpaccio di roast-beef","Affettato sottile, scaglie di parmigiano, gelato alla senape in grani"],nl:["Carpaccio van rosbief","Flinterdun, Parmezaanschilfers, ijs van grove mosterd"]}],
+    [18,{fr:["Salade gasconne","Mesclun, gésiers de canard confits, magret séché, pignons de pin, tomates"],en:["Gascon salad","Mixed leaves, confit duck gizzards, dried duck breast, pine nuts, tomatoes"],es:["Ensalada gascona","Brotes, mollejas de pato confitadas, magret curado, piñones, tomate"],de:["Gascognischer Salat","Blattsalat, confierte Entenmägen, getrocknete Entenbrust, Pinienkerne, Tomaten"],it:["Insalata guascona","Misticanza, ventrigli d'anatra confit, magret essiccato, pinoli, pomodori"],nl:["Gasconse salade","Slamix, gekonfijte eendenmaagjes, gedroogde eendenborst, pijnboompitten, tomaat"]}]],
+ p:[[26,{fr:["Magret de canard","Magret du Gers, poêlée de champignons des bois, pommes de terre grenailles"],en:["Duck breast","Gers duck breast, sautéed wild mushrooms, baby potatoes"],es:["Magret de pato","Magret del Gers, setas salteadas, patatas pequeñas"],de:["Entenbrust","Entenbrust aus dem Gers, Waldpilze, Drillinge"],it:["Magret d'anatra","Magret del Gers, funghi di bosco in padella, patate novelle"],nl:["Eendenborst","Eendenborst uit de Gers, gebakken bospaddenstoelen, krieltjes"]}],
+    [29,{fr:["Tartare de thon ruby ikejime","Pêché à la ligne, préparé selon la technique japonaise ikejime : concombre, citron vert, sésame torréfié, gingembre, menthe, mayonnaise au wasabi, salade verte"],en:["Ikejime ruby tuna tartare","Line-caught, prepared with the Japanese ikejime method: cucumber, lime, toasted sesame, ginger, mint, wasabi mayonnaise, green salad"],es:["Tartar de atún rubí ikejime","Pescado con caña y preparado con la técnica japonesa ikejime: pepino, lima, sésamo tostado, jengibre, menta, mayonesa de wasabi, ensalada verde"],de:["Tatar vom Ruby-Thunfisch, Ikejime","Mit der Angel gefangen, nach japanischer Ikejime-Methode: Gurke, Limette, gerösteter Sesam, Ingwer, Minze, Wasabi-Mayonnaise, grüner Salat"],it:["Tartare di tonno ruby ikejime","Pescato all'amo e preparato con la tecnica giapponese ikejime: cetriolo, lime, sesamo tostato, zenzero, menta, maionese al wasabi, insalata verde"],nl:["Tartaar van ruby-tonijn ikejime","Met de lijn gevangen, bereid volgens de Japanse ikejime-methode: komkommer, limoen, geroosterd sesam, gember, munt, wasabimayonaise, groene salade"]}],
+    [19,{fr:["Confit de canard","Cuisse de canard du Gers, grenailles à la graisse de canard"],en:["Duck confit","Gers duck leg, baby potatoes cooked in duck fat"],es:["Confit de pato","Muslo de pato del Gers, patatas en grasa de pato"],de:["Entenconfit","Entenkeule aus dem Gers, Drillinge in Entenschmalz"],it:["Confit d'anatra","Coscia d'anatra del Gers, patate novelle al grasso d'anatra"],nl:["Eendenconfit","Eendenbout uit de Gers, krieltjes in eendenvet"]}],
+    [27,{fr:["Entrecôte de bœuf","Bœuf origine France, sauce béarnaise, frites fraîches maison"],en:["Beef rib-eye","French beef, béarnaise sauce, homemade fresh fries"],es:["Entrecot de ternera","Carne de origen francés, salsa bearnesa, patatas fritas caseras"],de:["Rinder-Entrecôte","Rind aus Frankreich, Sauce béarnaise, hausgemachte Pommes frites"],it:["Entrecôte di manzo","Manzo di origine francese, salsa bernese, patatine fresche fatte in casa"],nl:["Entrecote van rund","Rundvlees uit Frankrijk, bearnaisesaus, huisgemaakte verse friet"]}],
+    [22,{fr:["Pavé de saumon","Légumes de saison et tomates cerises rôties"],en:["Salmon fillet","Seasonal vegetables and roasted cherry tomatoes"],es:["Lomo de salmón","Verduras de temporada y tomates cherry asados"],de:["Lachsfilet","Saisongemüse und geröstete Kirschtomaten"],it:["Trancio di salmone","Verdure di stagione e pomodorini arrosto"],nl:["Zalmfilet","Seizoensgroenten en geroosterde kerstomaatjes"]}],
+    [29,{fr:["Pluma de porc ibérique Bellota","Pièce noble de porcs élevés en liberté et nourris aux glands, persillée et tendre ; écrasé de pommes de terre et légumes sautés"],en:["Iberian Bellota pork pluma","A prized cut from free-range, acorn-fed pigs, marbled and tender; crushed potatoes and sautéed vegetables"],es:["Pluma ibérica de bellota","Pieza noble de cerdos criados en libertad y alimentados con bellota, veteada y tierna; puré rústico y verduras salteadas"],de:["Pluma vom iberischen Bellota-Schwein","Edles Stück von freilaufenden, mit Eicheln gefütterten Schweinen, marmoriert und zart; Kartoffelstampf und Gemüse"],it:["Pluma di maiale iberico Bellota","Taglio nobile di maiali allevati allo stato brado e nutriti a ghiande, marezzato e tenero; patate schiacciate e verdure saltate"],nl:["Pluma van Iberisch Bellota-varken","Edel stuk van scharrelvarkens gevoed met eikels, gemarmerd en mals; aardappelstoemp en gebakken groenten"]}]],
+ d:[[10,{fr:["La croustade","Véritable croustade gasconne aux pommes et à l'armagnac"],en:["Croustade","Real Gascon apple and armagnac pastry"],es:["La croustade","Auténtica croustade gascona de manzana y armañac"],de:["Die Croustade","Echte gascognische Croustade mit Äpfeln und Armagnac"],it:["La croustade","Vera croustade guascona con mele e armagnac"],nl:["De croustade","Echte Gasconse croustade met appel en armagnac"]}],
+    [10,{fr:["La mousse au chocolat","Chocolat Extra-Bitter Guayaquil 64 %, cacao de sources durables (Équateur, Ghana, Côte d'Ivoire)"],en:["Chocolate mousse","Extra-Bitter Guayaquil 64% chocolate, sustainably sourced cocoa (Ecuador, Ghana, Ivory Coast)"],es:["Mousse de chocolate","Chocolate Extra-Bitter Guayaquil 64 %, cacao de origen sostenible (Ecuador, Ghana, Costa de Marfil)"],de:["Mousse au Chocolat","Schokolade Extra-Bitter Guayaquil 64 %, Kakao aus nachhaltigen Quellen (Ecuador, Ghana, Elfenbeinküste)"],it:["Mousse al cioccolato","Cioccolato Extra-Bitter Guayaquil 64%, cacao da fonti sostenibili (Ecuador, Ghana, Costa d'Avorio)"],nl:["Chocolademousse","Chocolade Extra-Bitter Guayaquil 64%, cacao uit duurzame bron (Ecuador, Ghana, Ivoorkust)"]}],
+    [11,{fr:["Le crumble","Pommes et armagnac, raisins secs, noix, glace vanille artisanale et chantilly"],en:["Crumble","Apples and armagnac, raisins, walnuts, artisan vanilla ice cream and whipped cream"],es:["El crumble","Manzana y armañac, pasas, nueces, helado artesano de vainilla y nata"],de:["Das Crumble","Äpfel und Armagnac, Rosinen, Nüsse, handwerkliches Vanilleeis und Sahne"],it:["Il crumble","Mele e armagnac, uvetta, noci, gelato artigianale alla vaniglia e panna"],nl:["De crumble","Appel en armagnac, rozijnen, walnoten, ambachtelijk vanille-ijs en slagroom"]}],
+    [9,{fr:["La crème brûlée","Infusée à la vanille Bourbon"],en:["Crème brûlée","Infused with Bourbon vanilla"],es:["Crema quemada","Infusionada con vainilla Bourbon"],de:["Crème brûlée","Mit Bourbon-Vanille"],it:["Crème brûlée","Infusa alla vaniglia Bourbon"],nl:["Crème brûlée","Met bourbonvanille"]}],
+    [11,{fr:["Le nougat glacé","Miel, amandes et pistaches torréfiées, coulis de fruits rouges"],en:["Iced nougat","Honey, toasted almonds and pistachios, red berry coulis"],es:["Turrón helado","Miel, almendras y pistachos tostados, coulis de frutos rojos"],de:["Eisnougat","Honig, geröstete Mandeln und Pistazien, Beerencoulis"],it:["Semifreddo al torrone","Miele, mandorle e pistacchi tostati, coulis di frutti rossi"],nl:["IJsnougat","Honing, geroosterde amandelen en pistache, rodevruchtencoulis"]}],
+    ["5,50 / 7,50",{fr:["Coupe de glace","2 boules ou 3 boules"],en:["Ice cream","2 or 3 scoops"],es:["Copa de helado","2 o 3 bolas"],de:["Eisbecher","2 oder 3 Kugeln"],it:["Coppa di gelato","2 o 3 palline"],nl:["IJscoupe","2 of 3 bolletjes"]}],
+    [22,{fr:["La planche de fromages","Assortiment de 5 fromages, à partager"],en:["Cheese board","Selection of 5 cheeses, to share"],es:["Tabla de quesos","Surtido de 5 quesos, para compartir"],de:["Käsebrett","Auswahl von 5 Käsesorten, zum Teilen"],it:["Tagliere di formaggi","Selezione di 5 formaggi, da condividere"],nl:["Kaasplank","Selectie van 5 kazen, om te delen"]}]]
+};
+
+/* Pardaillan Conseil : intentions et réponses */
+const TEL='<a href="tel:+33562287259">05 62 28 72 59</a>';
+const MAIL='<a href="mailto:restaurantlepardaillan@orange.fr">restaurantlepardaillan@orange.fr</a>';
+const L=(r,t)=>`<a href="#/${r}" data-go>${t}</a>`;
+const INTENTS=[
+ ["inconnu",/parking|garer|stationn|parkplatz|aparca|parcheggi|parkeer|check.?in|check.?out|heure d.arriv|arrival time|hora de llegada|anreisezeit|orario di arrivo|aankomsttijd|ascenseur|lift|elevator|ascensor|aufzug|ascensore|\bspa\b|sauna|hammam|borne|recharge|charging|ladestation|ricarica|laadpaal|navette|shuttle/i],
+ ["pmr",/pmr|handicap|fauteuil|wheelchair|mobilit|silla de ruedas|rollstuhl|barrierefrei|carrozzina|rolstoel|accessib|toegankelijk/i],
+ ["animal",/chien|chat|animal|animaux|dog|cat\b|\bpets?\b|perro|gato|mascota|hund|katze|haustier|cane|gatto|hond|kat\b|huisdier/i],
+ ["demi",/demi|pension|half|full board|media pensi|completa|halbpension|vollpension|mezza|halfpension|volpension|soir[ée]e [ée]tape|overnight|etapp|tappa|etappe/i],
+ ["petitdej",/petit.?d[ée]j|breakfast|desayuno|fr[üu]hst[üu]ck|colazione|ontbijt/i],
+ ["enfant",/enfant|kid|child|ni[ñn]o|kind|bambin|mousquetaire|musket|mosquet|moschett/i],
+ ["vege",/v[ée]g[ée]|vegan|v[ée]gan|vegetar|allerg|gluten|lactose|sans viande|meat.?free|sin carne|ohne fleisch|senza carne|zonder vlees/i],
+ ["groupe",/groupe|group|grupo|gruppe|gruppo|groep|s[ée]minaire|seminar|semin|r[ée]union|meeting|mariage|wedding|boda|hochzeit|matrimonio|bruiloft|famille|family|familia|famili/i],
+ ["cadeau",/cadeau|gift|regalo|gutschein|geschenk|cadeaubon|\bbon\b/i],
+ ["base",/base|baignade|lac\b|plan d.eau|lake|swim|pool|toboggan|slide|piscina|lago|baden|rutsche|meer|zwem|glijbaan|aqua/i],
+ ["velo",/v[ée]lo|voie verte|bike|cycl|bici|fahrrad|\brad\b|fiets|randonn|walk|hike|wander|passegg|wandel|camin/i],
+ ["armagnac",/armagnac|arma[ñn]ac|\bvin\b|vins|wine|vino|wein|wijn|floc|d[ée]gust|tasting|cata|verkost|proeverij/i],
+ ["patrimoine",/visite|visit|flaran|larressingle|fourc[èe]s|montr[ée]al|s[ée]viac|condom|patrimoine|heritage|patrimonio|erfgoed|kultur|abbaye|abbey/i],
+ ["horaires",/horaire|heure|ouvert|ferm|hour|open|horario|abierto|[öo]ffnung|uhr|orari|aperto|openingstijd|wanneer|quand|when|cu[áa]ndo|wann|quando/i],
+ ["table",/table|tisch|mesa|tavolo|tafel|d[îi]ner|d[ée]jeuner|dinner|lunch|cena|pranzo|abendessen|mittag/i],
+ ["carte",/carte|menu|men[úu]|plat|dish|gericht|piatt|gerecht|manger|eat|comer|essen|mangiare|eten|foie|magret|canard|duck|dessert|croustade|cuisine|food|comida|k[üu]che|cucina|keuken/i],
+ ["wifi",/wifi|wi-fi|internet|clim|air cond|aire acond|klima|aria cond|airco|t[ée]l[ée]|tv/i],
+ ["contact",/adresse|address|(^|\s)où(\s|$)|where|venir|direcci|indirizzo|adres|t[ée]l[ée]phone|phone|appeler|call|llamar|anrufen|chiamare|bellen|contact|kontakt|contatt|mail/i],
+ ["prix",/prix|tarif|price|cost|combien|how much|precio|cu[áa]nto|preis|kost|prezzo|quanto|prijs|hoeveel/i],
+ ["chambre",/chambre|room|habitaci|zimmer|camera|kamer|dormir|nuit|night|noche|nacht|notte|sleep|slapen|schlafen|r[ée]serv|book|buchen|prenot|boeken|\d+\s*(pers|people|personas|personen|persone|adult|gast|guest)|couple|pareja|paar|coppia|stel|studio|appart/i]
+];
+const A={
+ inconnu:{fr:`Je n'ai pas cette information, et je préfère ne pas vous répondre au hasard. La maison vous renseignera au ${TEL} ou par e-mail : ${MAIL}.`,en:`I don't have that information and would rather not guess. The hotel will help you on ${TEL} or by email: ${MAIL}.`,es:`No tengo esa información y prefiero no responder al azar. La casa le informará en el ${TEL} o por correo: ${MAIL}.`,de:`Diese Information habe ich nicht, und raten möchte ich nicht. Das Haus hilft Ihnen gern unter ${TEL} oder per E-Mail: ${MAIL}.`,it:`Non ho questa informazione e preferisco non rispondere a caso. La casa vi risponderà al ${TEL} o via e-mail: ${MAIL}.`,nl:`Die informatie heb ik niet, en ik gok liever niet. Het hotel helpt u via ${TEL} of per e-mail: ${MAIL}.`},
+ pmr:{fr:`Bonne nouvelle : une chambre en rez-de-chaussée est accessible aux personnes à mobilité réduite, et le ${L('hotel','studio PMR de 40 m²')} est de plain-pied, avec douche sans marche et véranda privative (dès 109 € la nuit).`,en:`Good news: a ground-floor room is accessible to guests with reduced mobility, and the ${L('hotel','40 m² accessible studio')} is on one level, with a step-free shower and private veranda (from €109 a night).`,es:`Buena noticia: una habitación en planta baja es accesible para personas con movilidad reducida, y el ${L('hotel','estudio adaptado de 40 m²')} está a ras de suelo, con ducha sin escalón y veranda privada (desde 109 € la noche).`,de:`Gute Nachricht: Ein Zimmer im Erdgeschoss ist barrierefrei, und das ${L('hotel','barrierefreie Studio mit 40 m²')} ist ebenerdig, mit stufenloser Dusche und eigener Veranda (ab 109 € pro Nacht).`,it:`Buona notizia: una camera al piano terra è accessibile alle persone a mobilità ridotta, e lo ${L('hotel','studio accessibile di 40 m²')} è tutto su un livello, con doccia senza gradino e veranda privata (da 109 € a notte).`,nl:`Goed nieuws: een kamer op de begane grond is toegankelijk voor gasten met beperkte mobiliteit, en de ${L('hotel','toegankelijke studio van 40 m²')} is gelijkvloers, met drempelloze douche en eigen serre (vanaf € 109 per nacht).`},
+ animal:{fr:`Vos animaux sont les bienvenus, avec un supplément de 9 € par jour. Et la voie verte, juste à côté, fait de belles promenades.`,en:`Your pets are welcome, with a supplement of €9 per day. And the greenway right nearby makes for lovely walks.`,es:`Sus mascotas son bienvenidas, con un suplemento de 9 € por día. Y la vía verde, muy cerca, es ideal para pasear.`,de:`Ihre Tiere sind willkommen, gegen einen Aufpreis von 9 € pro Tag. Und der Grüne Weg gleich nebenan lädt zu schönen Spaziergängen ein.`,it:`I vostri animali sono i benvenuti, con un supplemento di 9 € al giorno. E la via verde, lì accanto, è perfetta per le passeggiate.`,nl:`Uw huisdieren zijn welkom, met een toeslag van € 9 per dag. En de groene route vlakbij is ideaal om te wandelen.`},
+ demi:{fr:`Par personne (base 2 personnes), 3 nuits minimum : demi-pension dès 67 € en chambre standard, 75 € en confort vue sur le parc ; pension complète dès 88 € et 95 €. Soirée étape : dès 95 € (standard) ou 105 € (confort). ${L('hotel','Voir tous les tarifs')}`,en:`Per person (2 sharing), 3 nights minimum: half board from €67 in a standard room, €75 in a comfort room with park view; full board from €88 and €95. Overnight package: from €95 (standard) or €105 (comfort). ${L('hotel','See all rates')}`,es:`Por persona (base 2), mínimo 3 noches: media pensión desde 67 € en estándar, 75 € en confort con vistas al parque; pensión completa desde 88 € y 95 €. Noche de etapa: desde 95 € (estándar) o 105 € (confort). ${L('hotel','Ver todas las tarifas')}`,de:`Pro Person (bei 2 Personen), mindestens 3 Nächte: Halbpension ab 67 € im Standardzimmer, 75 € im Komfortzimmer mit Parkblick; Vollpension ab 88 € bzw. 95 €. Etappenabend: ab 95 € (Standard) oder 105 € (Komfort). ${L('hotel','Alle Preise')}`,it:`A persona (base 2), minimo 3 notti: mezza pensione da 67 € in standard, 75 € in comfort vista parco; pensione completa da 88 € e 95 €. Serata tappa: da 95 € (standard) o 105 € (comfort). ${L('hotel','Tutte le tariffe')}`,nl:`Per persoon (op basis van 2), minimaal 3 nachten: halfpension vanaf € 67 in een standaardkamer, € 75 in comfort met parkzicht; volpension vanaf € 88 en € 95. Etappeavond: vanaf € 95 (standaard) of € 105 (comfort). ${L('hotel','Alle tarieven')}`},
+ petitdej:{fr:`Le petit-déjeuner est à 13 € par personne. Pour l'heure de service, la maison vous répond au ${TEL}.`,en:`Breakfast is €13 per person. For serving times, the hotel will tell you on ${TEL}.`,es:`El desayuno cuesta 13 € por persona. Para el horario, la casa le informa en el ${TEL}.`,de:`Das Frühstück kostet 13 € pro Person. Die Frühstückszeiten erfahren Sie unter ${TEL}.`,it:`La colazione costa 13 € a persona. Per l'orario, la casa vi risponde al ${TEL}.`,nl:`Het ontbijt kost € 13 per persoon. Voor de tijden kunt u het hotel bellen: ${TEL}.`},
+ enfant:{fr:`Pour les plus jeunes, la maison propose « Le Petit Mousquetaire » parmi ses menus ; sa composition du moment se demande au ${TEL}. Juste en face, la base aqualudique a une pataugeoire avec mini-toboggans.`,en:`For younger guests, the restaurant offers “The Little Musketeer” among its menus; ask for today's version on ${TEL}. Right opposite, the water park has a paddling pool with mini slides.`,es:`Para los más pequeños, la casa propone «El Pequeño Mosquetero» entre sus menús; pregunte su composición en el ${TEL}. Justo enfrente, el parque acuático tiene piscina infantil con minitoboganes.`,de:`Für die Kleinen gibt es unter den Menüs „Der Kleine Musketier“; die aktuelle Zusammenstellung erfahren Sie unter ${TEL}. Direkt gegenüber hat der Wasserpark ein Planschbecken mit Minirutschen.`,it:`Per i più piccoli, la casa propone «Il Piccolo Moschettiere» tra i suoi menù; chiedetene la composizione al ${TEL}. Proprio di fronte, il parco acquatico ha una piscina per bambini con mini scivoli.`,nl:`Voor de jongsten staat ‘De Kleine Musketier’ tussen de menu's; vraag de samenstelling via ${TEL}. Recht tegenover heeft het waterpark een peuterbad met mini-glijbanen.`},
+ vege:{fr:`Je ne peux pas vous garantir un plat adapté sans en parler en cuisine. À la carte, il y a par exemple la burrata ou le pavé de saumon. Le plus sûr : prévenir la maison en réservant, au ${TEL}.`,en:`I can't promise a suitable dish without checking with the kitchen. On the menu there's the burrata or the salmon, for example. Safest: let the hotel know when booking, on ${TEL}.`,es:`No puedo garantizarle un plato adaptado sin consultar a la cocina. En la carta hay, por ejemplo, burrata o salmón. Lo más seguro: avisar al reservar, en el ${TEL}.`,de:`Ein passendes Gericht kann ich ohne Rücksprache mit der Küche nicht zusagen. Auf der Karte gibt es etwa die Burrata oder den Lachs. Am sichersten: bei der Reservierung Bescheid geben, unter ${TEL}.`,it:`Non posso garantirvi un piatto adatto senza parlarne con la cucina. In carta c'è, per esempio, la burrata o il salmone. La cosa più sicura: avvisare la casa quando prenotate, al ${TEL}.`,nl:`Ik kan geen passend gerecht beloven zonder het aan de keuken te vragen. Op de kaart staan bijvoorbeeld de burrata of de zalm. Het zekerst: meld het bij het reserveren via ${TEL}.`},
+ groupe:{fr:`Pour les groupes : menu dès 24,90 € à partir de 25 personnes (apéritif, vin, café et armagnac compris, en semaine le midi). Pour un séminaire : salle modulable jusqu'à 100 personnes. ${L('groupes','Tout voir et demander un devis')}`,en:`For groups: menu from €24.90 for 25 people or more (aperitif, wine, coffee and armagnac included, weekday lunchtimes). For seminars: a flexible room for up to 100. ${L('groupes','See everything and request a quote')}`,es:`Para grupos: menú desde 24,90 € a partir de 25 personas (aperitivo, vino, café y armañac incluidos, a mediodía entre semana). Para seminarios: sala modulable hasta 100 personas. ${L('groupes','Ver todo y pedir presupuesto')}`,de:`Für Gruppen: Menü ab 24,90 € ab 25 Personen (Aperitif, Wein, Kaffee und Armagnac inklusive, werktags mittags). Für Seminare: ein flexibler Saal für bis zu 100 Personen. ${L('groupes','Alles ansehen und Angebot anfragen')}`,it:`Per i gruppi: menù da 24,90 € da 25 persone (aperitivo, vino, caffè e armagnac inclusi, a pranzo nei giorni feriali). Per i seminari: sala modulabile fino a 100 persone. ${L('groupes','Vedi tutto e chiedi un preventivo')}`,nl:`Voor groepen: menu vanaf € 24,90 vanaf 25 personen (aperitief, wijn, koffie en armagnac inbegrepen, doordeweeks 's middags). Voor seminars: een flexibele zaal tot 100 personen. ${L('groupes','Alles bekijken en offerte aanvragen')}`},
+ cadeau:{fr:`Les bons cadeaux du Pardaillan se commandent en ligne : <a href="${BONS}" target="_blank" rel="noopener">choisir un bon cadeau</a>.`,en:`Le Pardaillan gift vouchers can be ordered online: <a href="${BONS}" target="_blank" rel="noopener">choose a voucher</a>.`,es:`Los bonos regalo del Pardaillan se piden en línea: <a href="${BONS}" target="_blank" rel="noopener">elegir un bono</a>.`,de:`Gutscheine des Pardaillan bestellen Sie online: <a href="${BONS}" target="_blank" rel="noopener">Gutschein wählen</a>.`,it:`I buoni regalo del Pardaillan si ordinano online: <a href="${BONS}" target="_blank" rel="noopener">scegli un buono</a>.`,nl:`Cadeaubonnen van Le Pardaillan bestelt u online: <a href="${BONS}" target="_blank" rel="noopener">kies een bon</a>.`},
+ base:{fr:`La base aqualudique de Gondrin est juste en face : 4 500 m² de baignade en eau filtrée, 4 toboggans, un espace vagues et une pataugeoire. Elle vit surtout l'été. ${L('alentours','Les alentours')}`,en:`Gondrin's water park is right opposite: 4,500 m² of filtered-water swimming, 4 slides, a wave zone and a paddling pool. It comes alive mainly in summer. ${L('alentours','Around us')}`,es:`El parque acuático de Gondrin está justo enfrente: 4 500 m² de baño en agua filtrada, 4 toboganes, zona de olas y piscina infantil. Vive sobre todo en verano. ${L('alentours','Alrededores')}`,de:`Der Wasserpark von Gondrin liegt direkt gegenüber: 4.500 m² Badebereich mit gefiltertem Wasser, 4 Rutschen, Wellenbereich und Planschbecken. Vor allem im Sommer belebt. ${L('alentours','Umgebung')}`,it:`Il parco acquatico di Gondrin è proprio di fronte: 4.500 m² di balneazione in acqua filtrata, 4 scivoli, area onde e piscina per bambini. Vive soprattutto d'estate. ${L('alentours','Dintorni')}`,nl:`Het waterpark van Gondrin ligt recht tegenover: 4.500 m² gefilterd zwemwater, 4 glijbanen, een golfzone en een peuterbad. Vooral 's zomers bruisend. ${L('alentours','Omgeving')}`},
+ velo:{fr:`La voie verte de l'Armagnac passe à Gondrin : plus de 20 km sur l'ancienne voie ferrée, réservés aux piétons et aux vélos, avec d'anciennes gares et des aires de pique-nique. ${L('alentours','En savoir plus')}`,en:`The Armagnac greenway passes through Gondrin: over 20 km of old railway for walkers and cyclists only, with old stations and picnic spots. ${L('alentours','Find out more')}`,es:`La vía verde del Armañac pasa por Gondrin: más de 20 km del antiguo ferrocarril, solo para peatones y bicis, con viejas estaciones y áreas de pícnic. ${L('alentours','Saber más')}`,de:`Der Grüne Weg des Armagnac führt durch Gondrin: über 20 km alte Bahntrasse, nur für Fußgänger und Radfahrer, mit alten Bahnhöfen und Picknickplätzen. ${L('alentours','Mehr erfahren')}`,it:`La via verde dell'Armagnac passa da Gondrin: oltre 20 km sull'antica ferrovia, riservati a pedoni e bici, con vecchie stazioni e aree picnic. ${L('alentours','Scopri di più')}`,nl:`De groene route van de Armagnac loopt door Gondrin: ruim 20 km oude spoorlijn, alleen voor wandelaars en fietsers, met oude stations en picknickplekken. ${L('alentours','Meer weten')}`},
+ armagnac:{fr:`Vous êtes en terre d'Armagnac : par la voie verte, floc de Gascogne, chais d'armagnac et producteurs vous reçoivent pour une dégustation. À table, la croustade et le crumble sont à l'armagnac, et le menu groupe se termine par l'armagnac du patron.`,en:`You're in Armagnac country: along the greenway, Floc de Gascogne makers, armagnac cellars and producers welcome you for tastings. At table, the croustade and the crumble are made with armagnac, and the group menu ends with the owner's armagnac.`,es:`Está en tierra de Armañac: por la vía verde, productores de floc, bodegas de armañac y artesanos le reciben para una cata. En la mesa, la croustade y el crumble llevan armañac, y el menú de grupo termina con el armañac de la casa.`,de:`Sie sind im Land des Armagnac: Entlang des Grünen Wegs empfangen Sie Floc-Erzeuger, Armagnac-Keller und Produzenten zur Verkostung. Bei Tisch sind Croustade und Crumble mit Armagnac, und das Gruppenmenü endet mit dem Armagnac des Chefs.`,it:`Siete in terra d'Armagnac: lungo la via verde, produttori di floc, cantine d'armagnac e artigiani vi accolgono per una degustazione. A tavola, croustade e crumble sono all'armagnac, e il menù di gruppo si chiude con l'armagnac del padrone.`,nl:`U bent in armagnacland: langs de groene route ontvangen floc-makers, armagnackelders en producenten u voor een proeverij. Aan tafel zitten croustade en crumble vol armagnac, en het groepsmenu eindigt met de armagnac van de baas.`},
+ patrimoine:{fr:`À quelques minutes : l'abbaye de Flaran, Larressingle, Fourcès, Montréal et la villa de Séviac. ${L('alentours','Les alentours')}`,en:`A few minutes away: Flaran abbey, Larressingle, Fourcès, Montréal and the Séviac villa. ${L('alentours','Around us')}`,es:`A pocos minutos: la abadía de Flaran, Larressingle, Fourcès, Montréal y la villa de Séviac. ${L('alentours','Alrededores')}`,de:`Nur Minuten entfernt: die Abtei Flaran, Larressingle, Fourcès, Montréal und die Villa Séviac. ${L('alentours','Umgebung')}`,it:`A pochi minuti: l'abbazia di Flaran, Larressingle, Fourcès, Montréal e la villa di Séviac. ${L('alentours','Dintorni')}`,nl:`Op een paar minuten: de abdij van Flaran, Larressingle, Fourcès, Montréal en de villa van Séviac. ${L('alentours','Omgeving')}`},
+ horaires:{fr:`Le restaurant est ouvert du lundi au samedi de 12 h à 13 h 30 et de 19 h à 20 h 30, le dimanche de 12 h à 14 h. Réservation au ${TEL}.`,en:`The restaurant is open Monday to Saturday 12:00–13:30 and 19:00–20:30, Sunday 12:00–14:00. Bookings on ${TEL}.`,es:`El restaurante abre de lunes a sábado de 12:00 a 13:30 y de 19:00 a 20:30, el domingo de 12:00 a 14:00. Reservas en el ${TEL}.`,de:`Das Restaurant ist Montag bis Samstag von 12:00–13:30 und 19:00–20:30 Uhr geöffnet, sonntags von 12:00–14:00 Uhr. Reservierung unter ${TEL}.`,it:`Il ristorante è aperto dal lunedì al sabato 12:00–13:30 e 19:00–20:30, la domenica 12:00–14:00. Prenotazioni al ${TEL}.`,nl:`Het restaurant is open van maandag tot zaterdag 12.00–13.30 en 19.00–20.30 uur, op zondag 12.00–14.00 uur. Reserveren via ${TEL}.`},
+ table:{fr:`Pour réserver une table : appelez le ${TEL}, ou remplissez la ${L('restaurant','demande de table')} en bas de la page du restaurant.`,en:`To book a table: call ${TEL}, or fill in the ${L('restaurant','table request')} at the bottom of the restaurant page.`,es:`Para reservar mesa: llame al ${TEL} o rellene la ${L('restaurant','solicitud de mesa')} al final de la página del restaurante.`,de:`Tisch reservieren: rufen Sie ${TEL} an oder nutzen Sie die ${L('restaurant','Tischanfrage')} unten auf der Restaurantseite.`,it:`Per prenotare un tavolo: chiamate il ${TEL} o compilate la ${L('restaurant','richiesta di tavolo')} in fondo alla pagina del ristorante.`,nl:`Een tafel reserveren: bel ${TEL} of vul de ${L('restaurant','tafelaanvraag')} onderaan de restaurantpagina in.`},
+ carte:{fr:`La carte joue la Gascogne : foie gras au torchon (20 €), magret du Gers (26 €), confit de canard (19 €), et la croustade aux pommes et à l'armagnac (10 €). ${L('restaurant','Voir toute la carte')}`,en:`The menu is pure Gascony: foie gras au torchon (€20), Gers duck breast (€26), duck confit (€19), and apple and armagnac croustade (€10). ${L('restaurant','See the full menu')}`,es:`La carta es pura Gascuña: foie gras al paño (20 €), magret del Gers (26 €), confit de pato (19 €) y croustade de manzana y armañac (10 €). ${L('restaurant','Ver toda la carta')}`,de:`Die Karte ist reine Gascogne: Stopfleber im Tuch (20 €), Entenbrust aus dem Gers (26 €), Entenconfit (19 €) und Croustade mit Apfel und Armagnac (10 €). ${L('restaurant','Ganze Karte ansehen')}`,it:`La carta è pura Guascogna: foie gras al torchon (20 €), magret del Gers (26 €), confit d'anatra (19 €) e croustade di mele e armagnac (10 €). ${L('restaurant','Vedi tutta la carta')}`,nl:`De kaart is puur Gascogne: eendenlever au torchon (€ 20), eendenborst uit de Gers (€ 26), eendenconfit (€ 19) en croustade met appel en armagnac (€ 10). ${L('restaurant','Bekijk de hele kaart')}`},
+ wifi:{fr:`Toutes les chambres sont climatisées, avec écran plat et wifi gratuit (le wifi couvre tout l'hôtel).`,en:`Every room is air-conditioned, with a flat-screen TV and free wifi (wifi covers the whole hotel).`,es:`Todas las habitaciones tienen aire acondicionado, televisor plano y wifi gratis (el wifi cubre todo el hotel).`,de:`Alle Zimmer sind klimatisiert, mit Flachbild-TV und kostenlosem WLAN (im ganzen Hotel).`,it:`Tutte le camere sono climatizzate, con TV a schermo piatto e wifi gratuito (il wifi copre tutto l'hotel).`,nl:`Alle kamers hebben airco, een flatscreen en gratis wifi (wifi in het hele hotel).`},
+ contact:{fr:`Le Pardaillan, 25 avenue Jean Moulin, 32330 Gondrin. Téléphone ${TEL}, e-mail ${MAIL}.`,en:`Le Pardaillan, 25 avenue Jean Moulin, 32330 Gondrin, France. Phone ${TEL}, email ${MAIL}.`,es:`Le Pardaillan, 25 avenue Jean Moulin, 32330 Gondrin (Francia). Teléfono ${TEL}, correo ${MAIL}.`,de:`Le Pardaillan, 25 avenue Jean Moulin, 32330 Gondrin, Frankreich. Telefon ${TEL}, E-Mail ${MAIL}.`,it:`Le Pardaillan, 25 avenue Jean Moulin, 32330 Gondrin (Francia). Telefono ${TEL}, e-mail ${MAIL}.`,nl:`Le Pardaillan, 25 avenue Jean Moulin, 32330 Gondrin, Frankrijk. Telefoon ${TEL}, e-mail ${MAIL}.`},
+ prix:{fr:`Les chambres : Standard dès 83 €, Confort dès 96 €, Confort triple dès 115 €, studio avec véranda dès 109 € la nuit. Petit-déjeuner 13 €, taxe de séjour 1,44 € par personne et par nuit. ${L('hotel','Voir les chambres')}`,en:`Rooms: Standard from €83, Comfort from €96, Comfort triple from €115, studio with veranda from €109 a night. Breakfast €13, tourist tax €1.44 per person per night. ${L('hotel','See the rooms')}`,es:`Habitaciones: Estándar desde 83 €, Confort desde 96 €, Confort triple desde 115 €, estudio con veranda desde 109 € la noche. Desayuno 13 €, tasa turística 1,44 € por persona y noche. ${L('hotel','Ver las habitaciones')}`,de:`Zimmer: Standard ab 83 €, Komfort ab 96 €, Komfort-Dreibett ab 115 €, Studio mit Veranda ab 109 € pro Nacht. Frühstück 13 €, Kurtaxe 1,44 € pro Person und Nacht. ${L('hotel','Zimmer ansehen')}`,it:`Camere: Standard da 83 €, Comfort da 96 €, Comfort tripla da 115 €, studio con veranda da 109 € a notte. Colazione 13 €, tassa di soggiorno 1,44 € a persona a notte. ${L('hotel','Vedi le camere')}`,nl:`Kamers: Standaard vanaf € 83, Comfort vanaf € 96, Comfort driepersoons vanaf € 115, studio met serre vanaf € 109 per nacht. Ontbijt € 13, toeristenbelasting € 1,44 per persoon per nacht. ${L('hotel','Bekijk de kamers')}`},
+ chambre3:{fr:`À trois, la Chambre Confort triple (grand lit 160 cm + un lit 90 cm) est faite pour vous, dès 115 €. Autre idée : le studio avec véranda et deux chambres, dès 109 €. <a href="#" data-resa>Voir les disponibilités</a>`,en:`For three, the Comfort Triple Room (160 cm bed + a 90 cm single) is ideal, from €115. Another idea: the studio with veranda and two bedrooms, from €109. <a href="#" data-resa>Check availability</a>`,es:`Para tres, la Habitación Confort triple (cama de 160 cm + una de 90 cm) es ideal, desde 115 €. Otra idea: el estudio con veranda y dos dormitorios, desde 109 €. <a href="#" data-resa>Ver disponibilidad</a>`,de:`Zu dritt passt das Komfort-Dreibettzimmer (160-cm-Bett + 90-cm-Bett), ab 115 €. Oder das Studio mit Veranda und zwei Schlafzimmern, ab 109 €. <a href="#" data-resa>Verfügbarkeit prüfen</a>`,it:`In tre, la Camera Comfort tripla (letto 160 cm + un letto 90 cm) è perfetta, da 115 €. Altra idea: lo studio con veranda e due camere, da 109 €. <a href="#" data-resa>Verifica disponibilità</a>`,nl:`Met z'n drieën is de Comfort driepersoonskamer (bed 160 cm + bed 90 cm) ideaal, vanaf € 115. Andere optie: de studio met serre en twee slaapkamers, vanaf € 109. <a href="#" data-resa>Beschikbaarheid bekijken</a>`},
+ chambre4:{fr:`Pour quatre personnes ou plus, je ne veux pas vous promettre une combinaison sans vérifier : le plus simple est d'appeler la maison au ${TEL}, qui vous proposera plusieurs chambres ou un studio.`,en:`For four or more, I'd rather not promise a combination without checking: simplest is to call the hotel on ${TEL}, who can suggest several rooms or a studio.`,es:`Para cuatro o más, prefiero no prometer una combinación sin comprobarlo: lo más sencillo es llamar al ${TEL}, le propondrán varias habitaciones o un estudio.`,de:`Für vier oder mehr Personen möchte ich ohne Prüfung nichts zusagen: Am einfachsten rufen Sie das Haus unter ${TEL} an, das Ihnen mehrere Zimmer oder ein Studio vorschlägt.`,it:`Per quattro o più persone preferisco non promettere una combinazione senza verificare: la cosa più semplice è chiamare la casa al ${TEL}, che vi proporrà più camere o uno studio.`,nl:`Voor vier personen of meer beloof ik liever niets zonder te controleren: bel het hotel via ${TEL}, dan krijgt u een voorstel met meerdere kamers of een studio.`},
+ chambre:{fr:`À deux, deux choix : la Chambre Standard (lit 140 cm ou deux lits 90 cm) dès 83 €, ou la Chambre Confort (lit 160 cm, machine Nespresso) dès 96 €. Toutes sont climatisées, avec douche à l'italienne. <a href="#" data-resa>Voir les disponibilités</a>`,en:`For two, two options: the Standard Room (140 cm bed or two singles) from €83, or the Comfort Room (160 cm bed, Nespresso machine) from €96. All are air-conditioned with walk-in showers. <a href="#" data-resa>Check availability</a>`,es:`Para dos, dos opciones: la Habitación Estándar (cama de 140 cm o dos de 90 cm) desde 83 €, o la Habitación Confort (cama de 160 cm, cafetera Nespresso) desde 96 €. Todas climatizadas y con ducha a ras de suelo. <a href="#" data-resa>Ver disponibilidad</a>`,de:`Zu zweit gibt es zwei Möglichkeiten: das Standardzimmer (140-cm-Bett oder zwei Einzelbetten) ab 83 € oder das Komfortzimmer (160-cm-Bett, Nespresso) ab 96 €. Alle klimatisiert, mit ebenerdiger Dusche. <a href="#" data-resa>Verfügbarkeit prüfen</a>`,it:`In due, due scelte: la Camera Standard (letto 140 cm o due letti 90 cm) da 83 €, o la Camera Comfort (letto 160 cm, macchina Nespresso) da 96 €. Tutte climatizzate, con doccia a filo pavimento. <a href="#" data-resa>Verifica disponibilità</a>`,nl:`Met z'n tweeën twee keuzes: de Standaardkamer (bed 140 cm of twee bedden 90 cm) vanaf € 83, of de Comfortkamer (bed 160 cm, Nespresso) vanaf € 96. Allemaal met airco en inloopdouche. <a href="#" data-resa>Beschikbaarheid bekijken</a>`},
+ defaut:{fr:`Je ne sais pas répondre précisément à cela. Je peux vous parler des chambres, des tarifs, du restaurant, des groupes ou des alentours. Sinon, la maison vous répond au ${TEL}.`,en:`I can't answer that precisely. I can tell you about rooms, rates, the restaurant, groups or the area. Otherwise, the hotel will answer on ${TEL}.`,es:`No sé responder con precisión a eso. Puedo hablarle de habitaciones, tarifas, restaurante, grupos o alrededores. Si no, la casa le responde en el ${TEL}.`,de:`Darauf kann ich nicht genau antworten. Ich kann Ihnen etwas zu Zimmern, Preisen, Restaurant, Gruppen oder Umgebung sagen. Sonst hilft das Haus unter ${TEL}.`,it:`Non so rispondere con precisione. Posso parlarvi di camere, tariffe, ristorante, gruppi o dintorni. Altrimenti la casa vi risponde al ${TEL}.`,nl:`Daar kan ik geen precies antwoord op geven. Ik vertel u graag over kamers, tarieven, het restaurant, groepen of de omgeving. Anders helpt het hotel via ${TEL}.`}
+};
+function repondre(q,lang){
+ const s=q.toLowerCase();
+ const ordre=(/chambre|room|habitaci|zimmer|\bcamera|kamer|dormir|schlafen|slapen|sleep/.test(s)&&/\d|trois|three|tres|drei|\btre\b|drie|quatre|four|cuatro|vier|quattro|famil|enfant|kid|child|ni[ñn]o|kind|bambin|couple|deux|two|dos|zwei|due|twee/.test(s))?[INTENTS.find(x=>x[0]==='chambre')]:[];
+ for(const [k,re] of ordre.concat(INTENTS)){ if(re.test(s)){
+   if(k==="chambre"){const m=s.match(/(\d+)|\b(trois|three|tres|drei|tre|drie)\b|\b(quatre|four|cuatro|vier|quattro|cinq|five|six)\b/); if(m){const n=m[1]?+m[1]:(m[2]?3:4); if(n>=4)return A.chambre4[lang]; if(n===3)return A.chambre3[lang];} if(/famil|enfant|kid|child|ni[ñn]o|kind|bambin/.test(s))return A.chambre3[lang]; return A.chambre[lang];}
+   return A[k][lang];}}
+ return A.defaut[lang];
+}
+
+document.documentElement.classList.add('js');
+const img=id=>'img/'+id+'.jpg';
+const store={get(k){try{return localStorage.getItem(k)}catch(e){return null}},set(k,v){try{localStorage.setItem(k,v)}catch(e){}}};
+let lang=(store.get('pdl-lang')||'fr'); if(!T[lang])lang='fr';
+const t=k=>T[lang][k];
+const ico=(n,c='i')=>`<svg class="${c}" aria-hidden="true"><use href="#i-${n}"/></svg>`;
+const eur=v=>typeof v==='number'?(lang==='en'?'€'+v:(lang==='nl'?'€ '+v:v+' €')):(lang==='en'?'€'+v.replace(/,/g,'.'):(lang==='nl'?'€ '+v:v+' €'));
+const ROUTES=['','hotel','restaurant','groupes','alentours','galerie','cadeaux','contact','conseil'];
+const resaURL=()=>RESA+lang.toUpperCase();
+const GAL=['hero','terrasse','veranda','palmiers','salle','salle2','restaurant','restaurant2','salon','reception','couloir','ch-deco','ch-std','ch-double','ch-twin','studio','studio-int','foiegras','risdeveau','escargots','coqauvin','magret','agneau','dressage','chef','cuisine','armagnac','accordeon','seminaire','base','flaran'];
+const ALT={hero:"La terrasse du Pardaillan, sous les palmiers",terrasse:"Tables en terrasse au jardin",veranda:"La véranda du restaurant",palmiers:"Table dressée parmi les palmiers",salle:"La salle du restaurant et le bar",salle2:"Salle du restaurant",restaurant:"Salle à manger lumineuse",restaurant2:"Salle à manger et ses rideaux",salon:"Le salon d'accueil",reception:"La réception",couloir:"Couloir des chambres",'ch-deco':"Chambre Confort",'ch-std':"Chambre à deux lits",'ch-double':"Chambre double",'ch-twin':"Chambre à deux lits",studio:"Les studios dans les jardins",'studio-int':"Intérieur d'un studio",foiegras:"Foie gras de canard",risdeveau:"Assiette du restaurant",escargots:"Escargots",coqauvin:"Volaille façon coq au vin",magret:"Magret de canard",agneau:"Côtes d'agneau",dressage:"Dressage en cuisine",chef:"Dressage d'une assiette",cuisine:"Les cercles de la cuisine",armagnac:"Verres d'armagnac au bar",accordeon:"Soirée accordéon",seminaire:"La salle de séminaire",base:"La base aqualudique de Gondrin",flaran:"L'abbaye de Flaran"};
+const ALTX={en:{hero:"Le Pardaillan's terrace under the palms",terrasse:"Terrace tables in the garden",veranda:"The restaurant veranda",palmiers:"Table set among the palms",salle:"Restaurant dining room and bar",salle2:"Restaurant dining room",restaurant:"Bright dining room",restaurant2:"Dining room and curtains",salon:"Reception lounge",reception:"Reception desk",couloir:"Bedroom corridor",'ch-deco':"Comfort room",'ch-std':"Twin room",'ch-double':"Double room",'ch-twin':"Twin room",studio:"The studios in the gardens",'studio-int':"Inside a studio",foiegras:"Duck foie gras",risdeveau:"A plate from the restaurant",escargots:"Snails",coqauvin:"Poultry coq au vin style",magret:"Duck breast",agneau:"Lamb chops",dressage:"Plating in the kitchen",chef:"Plating a dish",cuisine:"Kitchen rings",armagnac:"Glasses of armagnac at the bar",accordeon:"Accordion evening",seminaire:"The seminar room",base:"Gondrin water park",flaran:"Flaran abbey"},
+es:{hero:"La terraza del Pardaillan bajo las palmeras",terrasse:"Mesas en la terraza del jardín",veranda:"La veranda del restaurante",palmiers:"Mesa puesta entre palmeras",salle:"Comedor y bar",salle2:"Comedor del restaurante",restaurant:"Comedor luminoso",restaurant2:"Comedor y cortinas",salon:"Salón de recepción",reception:"La recepción",couloir:"Pasillo de las habitaciones",'ch-deco':"Habitación Confort",'ch-std':"Habitación con dos camas",'ch-double':"Habitación doble",'ch-twin':"Habitación con dos camas",studio:"Los estudios en los jardines",'studio-int':"Interior de un estudio",foiegras:"Foie gras de pato",risdeveau:"Plato del restaurante",escargots:"Caracoles",coqauvin:"Ave al estilo coq au vin",magret:"Magret de pato",agneau:"Chuletas de cordero",dressage:"Emplatado en cocina",chef:"Emplatando",cuisine:"Aros de cocina",armagnac:"Copas de armañac en el bar",accordeon:"Velada de acordeón",seminaire:"Sala de seminarios",base:"Parque acuático de Gondrin",flaran:"Abadía de Flaran"},
+de:{hero:"Die Terrasse des Pardaillan unter Palmen",terrasse:"Tische auf der Gartenterrasse",veranda:"Die Veranda des Restaurants",palmiers:"Gedeckter Tisch zwischen Palmen",salle:"Speisesaal und Bar",salle2:"Speisesaal",restaurant:"Heller Speisesaal",restaurant2:"Speisesaal mit Vorhängen",salon:"Empfangssalon",reception:"Die Rezeption",couloir:"Zimmerflur",'ch-deco':"Komfortzimmer",'ch-std':"Zweibettzimmer",'ch-double':"Doppelzimmer",'ch-twin':"Zweibettzimmer",studio:"Die Studios im Garten",'studio-int':"Blick in ein Studio",foiegras:"Entenstopfleber",risdeveau:"Ein Teller des Restaurants",escargots:"Schnecken",coqauvin:"Geflügel nach Coq-au-vin-Art",magret:"Entenbrust",agneau:"Lammkoteletts",dressage:"Anrichten in der Küche",chef:"Ein Teller wird angerichtet",cuisine:"Küchenringe",armagnac:"Armagnac-Gläser an der Bar",accordeon:"Akkordeonabend",seminaire:"Der Seminarraum",base:"Wasserpark von Gondrin",flaran:"Abtei Flaran"},
+it:{hero:"La terrazza del Pardaillan sotto le palme",terrasse:"Tavoli in terrazza nel giardino",veranda:"La veranda del ristorante",palmiers:"Tavola apparecchiata tra le palme",salle:"Sala e bar del ristorante",salle2:"Sala del ristorante",restaurant:"Sala luminosa",restaurant2:"Sala con tende",salon:"Salotto d'accoglienza",reception:"La reception",couloir:"Corridoio delle camere",'ch-deco':"Camera Comfort",'ch-std':"Camera a due letti",'ch-double':"Camera doppia",'ch-twin':"Camera a due letti",studio:"Gli studio nei giardini",'studio-int':"Interno di uno studio",foiegras:"Foie gras d'anatra",risdeveau:"Un piatto del ristorante",escargots:"Lumache",coqauvin:"Pollame alla coq au vin",magret:"Magret d'anatra",agneau:"Costolette d'agnello",dressage:"Impiattamento in cucina",chef:"Impiattamento",cuisine:"Coppapasta in cucina",armagnac:"Bicchieri d'armagnac al bar",accordeon:"Serata con fisarmonica",seminaire:"La sala seminari",base:"Parco acquatico di Gondrin",flaran:"Abbazia di Flaran"},
+nl:{hero:"Het terras van Le Pardaillan onder de palmen",terrasse:"Tafels op het tuinterras",veranda:"De serre van het restaurant",palmiers:"Gedekte tafel tussen de palmen",salle:"Eetzaal en bar",salle2:"Eetzaal van het restaurant",restaurant:"Lichte eetzaal",restaurant2:"Eetzaal met gordijnen",salon:"Ontvangstsalon",reception:"De receptie",couloir:"Gang naar de kamers",'ch-deco':"Comfortkamer",'ch-std':"Kamer met twee bedden",'ch-double':"Tweepersoonskamer",'ch-twin':"Kamer met twee bedden",studio:"De studio's in de tuin",'studio-int':"Interieur van een studio",foiegras:"Eendenlever",risdeveau:"Een bord uit het restaurant",escargots:"Slakken",coqauvin:"Gevogelte op coq-au-vin-wijze",magret:"Eendenborst",agneau:"Lamskoteletjes",dressage:"Opmaken in de keuken",chef:"Een bord wordt opgemaakt",cuisine:"Keukenringen",armagnac:"Armagnacglazen aan de bar",accordeon:"Accordeonavond",seminaire:"De seminarzaal",base:"Waterpark van Gondrin",flaran:"Abdij van Flaran"}};
+const alt=k=>(ALTX[lang]&&ALTX[lang][k])||ALT[k];
+
+function header(r){
+ const links=['','hotel','restaurant','groupes','alentours','galerie'];
+ const n=t('nav');
+ return `<header class="top"><div class="bar1">
+ <a class="logo" href="#/"><b>Le Pardaillan</b><small>${t('tag')}</small></a><span class="sp"></span>
+ <a class="tel" href="tel:+33562287259">${ico('tel')}<span>05 62 28 72 59</span></a>
+ <label class="langue">${ico('globe')}<span class="sr">${t('lang')}</span><select id="lg" aria-label="${t('lang')}">${Object.entries(LANGS).map(([k,v])=>`<option value="${k}"${k===lang?' selected':''}>${v}</option>`).join('')}</select></label>
+ <a class="btn" href="${resaURL()}" target="_blank" rel="noopener">${t('room')}</a>
+ </div><nav class="menu" aria-label="Menu"><ul>
+ ${links.map((l,i)=>`<li><a href="#/${l}"${r===l?' aria-current="page"':''}>${n[i]}</a></li>`).join('')}
+ <li><a href="${BONS}" target="_blank" rel="noopener">${n[6]} ${ico('ext')}</a></li>
+ <li><a href="#/contact"${r==='contact'?' aria-current="page"':''}>${n[7]}</a></li>
+ <li><a href="#" class="conseil" data-cons>${n[8]}</a></li>
+ </ul></nav></header>`;
+}
+function resaBox(){
+ const d=new Date(),f=x=>x.toISOString().slice(0,10),a=new Date(d.getTime()+864e5),b=new Date(d.getTime()+2*864e5);
+ return `<form class="resa" id="resa" novalidate><h3>${t('bkT')}</h3><div class="champs">
+ <label class="ch">${t('bkIn')}<input type="date" name="in" value="${f(a)}" min="${f(d)}"></label>
+ <label class="ch">${t('bkOut')}<input type="date" name="out" value="${f(b)}" min="${f(a)}"></label>
+ <label class="ch">${t('bkP')}<select name="p">${[1,2,3].map(x=>`<option${x===2?' selected':''}>${x}</option>`).join('')}</select></label></div>
+ <p class="err" id="resaErr" aria-live="polite"></p>
+ <button class="btn" type="submit">${t('bkGo')}</button><p class="note">${t('bkNote')}</p></form>`;
+}
+function accueil(){
+ const c=CARTE;
+ const sel=[c.e[0],c.p[0],c.d[0]];
+ return `<section class="hero" style="padding:0"><div class="photo"><img src="${img('hero')}" alt="${alt('hero')}" fetchpriority="high"></div>
+ <div class="wrap" style="position:relative"><div class="titre" style="position:absolute;bottom:0;left:24px;right:24px"><h1 id="nom">Le Pardaillan</h1></div></div>
+ <div class="wrap"><div class="eau" aria-hidden="true"><p class="reflet">Le Pardaillan</p></div>
+ <div class="bas"><div><p>${t('heroL')}</p><div class="actions"><a class="btn" href="${resaURL()}" target="_blank" rel="noopener">${t('room')}</a><a class="btn ambre" href="#/restaurant" data-anchor="table">${t('table')}</a></div></div>${resaBox()}</div></div></section>
+ <section><div class="wrap portes">
+  <article class="porte apparait"><figure><img src="${img('ch-deco')}" alt="${alt('ch-deco')}" loading="lazy"></figure><h2>${t('d1T')}</h2><p>${t('d1P')}</p><a class="lien" href="#/hotel">${t('d1A')}</a></article>
+  <article class="porte apparait"><figure><img src="${img('veranda')}" alt="${alt('veranda')}" loading="lazy"></figure><h2>${t('d2T')}</h2><p>${t('d2P')}</p><a class="lien" href="#/restaurant">${t('d2A')}</a></article>
+ </div></section>
+ <section class="ardoise"><div class="wrap grille"><div class="apparait"><h2>${t('slT')}</h2><p>${t('slP')}</p><a class="lien" href="#/restaurant">${t('slA')}</a>
+ <div class="photos"><img src="${img('foiegras')}" alt="${alt('foiegras')}" loading="lazy"><img src="${img('magret')}" alt="${alt('magret')}" loading="lazy"></div></div>
+ <ul class="plats apparait">${sel.map(([p,x])=>`<li><b>${x[lang][0]}</b><span class="px">${eur(p)}</span><small>${x[lang][1]}</small></li>`).join('')}</ul></div></section>
+ <section><div class="wrap eaux"><div class="apparait"><h2>${t('waT')}</h2><p>${t('waP')}</p><a class="lien" href="#/alentours">${t('waA')}</a><p style="margin-top:26px"><a class="btn" href="${resaURL()}" target="_blank" rel="noopener">${t('room')}</a></p></div><img class="apparait" src="${img('base')}" alt="${alt('base')}" loading="lazy"></div></section>
+ <div class="labels"><div class="wrap"><ul><li><img src="img/label-logis.png" alt="Logis Hôtels" loading="lazy"></li><li><img src="img/label-cosy.png" alt="${t('labels')[0]}" loading="lazy"></li><li><img src="img/label-gourmand.png" alt="${t('labels')[1]}" loading="lazy"></li><li><img src="img/label-tdg.png" alt="Tables du Gers" loading="lazy"></li><li>Hôtel***</li><li>${t('labels')[3]}</li></ul></div></div>
+ <div class="duo"><div class="apparait"><img src="${img('seminaire')}" alt="${alt('seminaire')}" loading="lazy"><h2>${t('grT')}</h2><p>${t('grP')}</p><a class="lien" href="#/groupes">${t('grA')}</a></div>
+ <div class="apparait"><img src="${img('armagnac')}" alt="${alt('armagnac')}" loading="lazy"><h2>${t('giT')}</h2><p>${t('giP')}</p><a class="lien" href="${BONS}" target="_blank" rel="noopener">${t('giA')}</a></div></div>
+`;
+}
+function coord(){return `<div class="coord"><div><h3>${t('cTel')}</h3><p><a href="tel:+33562287259">05 62 28 72 59</a></p></div><div><h3>${t('cMail')}</h3><p><a href="mailto:restaurantlepardaillan@orange.fr">restaurantlepardaillan@orange.fr</a></p></div><div><h3>${t('cAdr')}</h3><p>25 avenue Jean Moulin<br>32330 Gondrin, Gers</p></div></div>`}
+function tete(h,p,act=''){return `<div class="tete"><div class="wrap"><h1>${h}</h1><div class="eau" aria-hidden="true"><p class="reflet">${h}</p></div>${p?`<p>${p}</p>`:''}${act}</div></div>`}
+function hotel(){
+ const eq=EQ[lang];
+ const rooms=ROOMS.map(r=>{const list=eq.slice(0,5).concat(r.nes?[eq[5]]:[]);return `<article class="chambre apparait"><figure><img src="${img(r.img)}" alt="${r.n[lang]}" loading="lazy"></figure><div><p class="cap">${r.cap[lang]} ${t('pers')}</p><h2>${r.n[lang]}</h2><p class="prix">${t('from')} ${eur(r.px)} <small>${t('night')}</small></p><p>${r.d[lang]}</p><ul class="eq">${list.map(x=>`<li>${x}</li>`).join('')}</ul><a class="btn" href="${resaURL()}" target="_blank" rel="noopener">${t('room')}</a></div></article>`}).join('');
+ const studio=`<article class="chambre apparait"><figure><img src="${img('studio')}" alt="${STUDIO.n[lang]}" loading="lazy"></figure><div><p class="cap">1 – 3 ${t('pers')} · ${t('pmr')}</p><h2>${STUDIO.n[lang]}</h2><p class="prix">${t('from')} ${eur(109)} <small>${t('night')}</small></p><p>${STUDIO.d[lang]}</p><ul class="eq">${STUDIO.eq[lang].map(x=>`<li>${x}</li>`).join('')}</ul><p style="font-size:.9rem;color:var(--gris)">${t('studioN')}</p><a class="btn" href="${resaURL()}" target="_blank" rel="noopener">${t('room')}</a></div></article>`;
+ const pr=[67,75,88,95,95,105], ex=['1,44',13,9];
+ return tete(t('hT'),t('hL'),`<div class="actions"><a class="btn" href="${resaURL()}" target="_blank" rel="noopener">${t('bkGo')}</a></div>`)+
+ `<section><div class="wrap chambres">${rooms}${studio}</div></section>
+ <section style="background:#fff;border-top:1px solid var(--pierre);border-bottom:1px solid var(--pierre)"><div class="wrap bloc2"><div><h2>${t('rates')}</h2><p style="color:var(--gris)">${t('ratesN')}</p><table class="tarifs"><tbody>${t('rateRows').map((r,i)=>`<tr><td>${r}</td><td>${t('from')} ${eur(pr[i])}</td></tr>`).join('')}</tbody></table></div>
+ <div><h2>${t('extras')}</h2><table class="tarifs"><tbody>${t('extraRows').map((r,i)=>`<tr><td>${r}</td><td>${eur(ex[i])}</td></tr>`).join('')}</tbody></table>
+ <h3 style="margin-top:40px">${t('servT')}</h3><p class="servlist">${t('serv').map(s=>`<span>${s}</span>`).join(' ')}</p></div></div></section>`;
+}
+function restaurant(){
+ const cat=(k,i)=>`<div><h3>${t('cats')[i]}</h3><ul>${CARTE[k].map(([p,x])=>`<li><div><b>${x[lang][0]}</b><span>${eur(p)}</span></div><small>${x[lang][1]}</small></li>`).join('')}${k==='p'?`<li><div><b>${t('side')}</b><span>${eur('4,50')}</span></div></li>`:''}</ul></div>`;
+ return tete(t('rT'),t('rL'),`<div class="actions"><a class="btn" href="#table" data-scroll="table">${t('table')}</a><a class="btn ghost" href="tel:+33562287259">${ico('tel')}05 62 28 72 59</a></div>`)+
+ `<section><div class="wrap bloc2"><div class="apparait"><img src="${img('salle')}" alt="${alt('salle')}" loading="lazy" style="border-radius:3px"></div><div class="horaires apparait"><h3>${t('hoursT')}</h3>${t('hours').map(h=>`<p>${h}</p>`).join('')}<p>${t('hoursR')} <a href="tel:+33562287259">05 62 28 72 59</a></p></div></div></section>
+ <section style="padding-top:0"><div class="wrap"><h2>${t('menusT')}</h2><div class="menus">${t('menus').map(m=>`<div><b>${m}</b></div>`).join('')}</div><p style="margin-top:14px;color:var(--gris)">${t('menusN')}</p></div></section>
+ <section style="padding-top:0"><div class="wrap"><h2>${t('carteT')}</h2><div class="carte">${cat('e',0)}${cat('p',1)}${cat('d',2)}</div></div></section>
+ <section class="ardoise" id="table"><div class="wrap grille"><div><h2>${t('formT')}</h2><p>${t('hours').join('<br>')}</p><div class="photos"><img src="${img('palmiers')}" alt="${alt('palmiers')}" loading="lazy"><img src="${img('coqauvin')}" alt="${alt('coqauvin')}" loading="lazy" style="object-position:50% 40%"></div></div>
+ <form class="form resa" id="ftable" novalidate style="max-width:none">
+ <label class="ch">${t('fDate')}<input type="date" name="d" required></label>
+ <label class="ch">${t('fServ')}<select name="s"><option>${t('fMidi')}</option><option>${t('fSoir')}</option></select></label>
+ <label class="ch">${t('fCouv')}<input type="number" name="c" min="1" max="100" value="2" required></label>
+ <label class="ch">${t('fNom')}<input type="text" name="n" autocomplete="name" required></label>
+ <label class="ch plein">${t('fTel')}<input type="tel" name="t" autocomplete="tel"></label>
+ <label class="ch plein">${t('fMsg')}<textarea name="m" rows="3"></textarea></label>
+ <div class="plein"><button class="btn" type="submit">${ico('send')}${t('fSend')}</button><p class="err" aria-live="polite"></p></div></form></div></section>`;
+}
+function groupes(){
+ const m=t('mgItems'),bl=(h,arr)=>`<h4>${h}</h4>${arr.map((x,i)=>`${i?`<p class="ou">${t('or')}</p>`:''}<p>${x}</p>`).join('')}`;
+ return tete(t('gT'),t('gL'),`<div class="actions"><a class="btn" href="mailto:restaurantlepardaillan@orange.fr?subject=${encodeURIComponent(t('gT'))}">${ico('mail')}${t('grpA')}</a></div>`)+
+ `<section><div class="wrap bloc2"><div class="apparait"><p>${t('gP1')}</p><p>${t('gP2')}</p><img src="${img('terrasse')}" alt="${alt('terrasse')}" loading="lazy" style="border-radius:3px;margin-top:24px"></div>
+ <div class="apparait"><img src="${img('flaran')}" alt="${alt('flaran')}" loading="lazy" style="border-radius:3px"></div></div></section>
+ <section style="padding-top:0"><div class="wrap"><div class="menugrp apparait"><h2 style="font-size:2.2rem">${t('mgT')}</h2><p style="color:var(--gris)">${t('mgL')}</p><p class="prix" style="margin-top:14px">${t('mgF')}</p><div class="mg3"><div>${bl(t('mgE'),m.e)}</div><div>${bl(t('mgPl'),m.p)}</div><div>${bl(t('mgD'),m.d)}</div></div></div></div></section>
+ <section style="background:var(--lac-clair)"><div class="wrap eaux"><img src="${img('seminaire')}" alt="${alt('seminaire')}" loading="lazy"><div><h2>${t('semT')}</h2><p>${t('semP')}</p><a class="btn" href="mailto:restaurantlepardaillan@orange.fr?subject=${encodeURIComponent(t('semT'))}">${ico('mail')}${t('grpA')}</a></div></div></section>`;
+}
+function alentours(){
+ return tete(t('aT'),t('aL'))+`<section><div class="wrap lieux">
+ <div class="apparait"><img src="${img('base')}" alt="${alt('base')}" loading="lazy"><h2>${t('a1T')}</h2><p>${t('a1P')}</p><ul class="puces">${t('a1L').map(x=>`<li>${x}</li>`).join('')}</ul></div>
+ <div class="apparait"><img src="${img('flaran')}" alt="${alt('flaran')}" loading="lazy"><h2>${t('a3T')}</h2><p>${t('a3P')}</p><h2 style="margin-top:36px">${t('a2T')}</h2><p>${t('a2P')}</p></div>
+ </div></section><section class="ardoise"><div class="wrap grille"><img src="${img('armagnac')}" alt="${alt('armagnac')}" loading="lazy" style="border-radius:3px"><div><h2>${t('a4T')}</h2><p>${t('a4P')}</p><a class="lien" href="https://www.vins.tourisme-gers.com/" target="_blank" rel="noopener">${t('a4A')}</a></div></div></section>`;
+}
+function galerie(){return tete(t('galT'),t('galL'))+`<section><div class="wrap"><div class="galerie">${GAL.map(g=>`<button type="button" data-zoom="${g}"><img src="${img(g)}" alt="${alt(g)}" loading="lazy"></button>`).join('')}</div></div></section>`}
+function contact(){
+ return tete(t('coT'),t('coL'))+`<section><div class="wrap">${coord()}<p style="margin-top:22px"><a class="lien" href="https://www.google.com/maps/search/?api=1&query=Le+Pardaillan+25+avenue+Jean+Moulin+32330+Gondrin" target="_blank" rel="noopener">${t('coMap')}</a></p></div></section>
+ <section style="padding-top:0"><div class="wrap"><h2>${t('coForm')}</h2><form class="form" id="fcontact" novalidate>
+ <label class="ch">${t('coPre')}<input name="p" autocomplete="given-name"></label><label class="ch">${t('coNomF')}<input name="n" autocomplete="family-name"></label>
+ <label class="ch">${t('coMailF')}<input type="email" name="e" autocomplete="email" required></label><label class="ch">${t('coObj')}<input name="o"></label>
+ <label class="ch plein">${t('coMsg')}<textarea name="m" rows="5" required></textarea></label>
+ <div class="plein"><button class="btn" type="submit">${ico('send')}${t('coSend')}</button><p class="err" aria-live="polite"></p></div></form></div></section>`;
+}
+function mentions(){
+ return tete(t('legT'),'')+`<section class="mentions"><div class="wrap"><h3>${t('legPub')}</h3><p>SARL L2J HOTELLERIE, ${t('legCap')} 3 000 €<br>25 avenue Jean Moulin, 32330 Gondrin, France<br>RCS Auch 995 026 127 · SIRET 995 026 127 00010 · APE 7010Z · TVA FR05 995026127<br>+33 (0)5 62 28 72 59 · restaurantlepardaillan@orange.fr</p>
+ <h3>${t('legResp')}</h3><p>M. Jérémy Détrez</p><h3>${t('legHost')}</h3><p>${t('legHostV')}</p><h3>${t('legCred')}</h3><p>Michel Carossio · Catherine Coudroy – Come and Click</p></div></section>`;
+}
+function footer(){
+ const n=t('nav');
+ return `<footer><div class="wrap"><div class="g"><div><a class="logo" href="#/"><b>Le Pardaillan</b><small style="color:#9AA3A5">${t('tag')}</small></a><p style="margin-top:16px">25 avenue Jean Moulin<br>32330 Gondrin, Occitanie<br><a href="tel:+33562287259">05 62 28 72 59</a><br><a href="mailto:restaurantlepardaillan@orange.fr">restaurantlepardaillan@orange.fr</a></p></div>
+ <div><h4>${t('fNav')}</h4><ul>${['hotel','restaurant','groupes','alentours','galerie','contact'].map((r,i)=>`<li><a href="#/${r}">${n[[1,2,3,4,5,7][i]]}</a></li>`).join('')}</ul></div>
+ <div><h4>${t('fInfo')}</h4><ul><li>${t('hours')[0]}</li><li>${t('hours')[1]}</li><li><a href="${BONS}" target="_blank" rel="noopener">${n[6]}</a></li><li><a href="#/mentions">${t('leg')}</a></li></ul></div>
+ <div><h4>${t('fFollow')}</h4><div class="reseaux"><a href="${FB}" target="_blank" rel="noopener" aria-label="Facebook">${ico('fb')}</a></div>
+ <h4 style="margin-top:24px">${t('fPart')}</h4><ul><li><a href="https://www.logishotels.com/fr/hotel/logis-hotel-le-pardaillan-254106" target="_blank" rel="noopener">Logis Hôtels</a></li><li><a href="https://www.lestablesdugers.fr/le-pardaillan" target="_blank" rel="noopener">Tables du Gers</a></li><li><a href="https://www.vins.tourisme-gers.com/" target="_blank" rel="noopener">Vins & Armagnacs du Gers</a></li></ul></div></div>
+ <div class="signature"><span>© Le Pardaillan · SARL L2J Hôtellerie · ${t('legCred')} : Michel Carossio, Come and Click</span><span>${t('propo')}</span></div></div></footer>
+ <div class="barre"><a class="btn" href="${resaURL()}" target="_blank" rel="noopener">${t('room')}</a><a class="btn ghost" href="#/restaurant" data-anchor="table">${t('table')}</a></div>`;
+}
+function conseiller(){
+ return `<button class="cons-btn" type="button" data-cons aria-haspopup="dialog"><span class="av">P</span><span><b>${t('cName')}</b><small>${t('cSub')}</small></span></button>
+ <div class="cons-bulle" id="bulle" role="status"><button type="button" id="bulleX" aria-label="${t('cClose')}">${ico('x')}</button>${t('cBubble')}</div>
+ <div class="cons" id="cons" role="dialog" aria-label="${t('cName')}"><header><span class="av" style="width:40px;height:40px;border-radius:50%;background:var(--ambre);display:grid;place-items:center;font:600 1.1rem var(--serif)">P</span><div><b>${t('cName')}</b><small>${t('cVirt')}</small></div><button type="button" id="consX" aria-label="${t('cClose')}">${ico('x')}</button></header>
+ <div class="fil" id="fil" aria-live="polite"></div><div class="puces-c" id="chips">${t('chips').map(c=>`<button type="button">${c}</button>`).join('')}</div>
+ <form id="consF"><label class="sr" for="consQ">${t('cPh')}</label><input id="consQ" placeholder="${t('cPh')}" autocomplete="off"><button class="btn" type="submit" aria-label="${t('cSend')}">${ico('send')}</button></form></div>`;
+}
+const PAGES={'':accueil,hotel,restaurant,groupes,alentours,galerie,contact,mentions};
+let raf=0;
+function render(){
+ let r=(location.hash.replace(/^#\/?/,'').split(/[?#]/)[0])||'';
+ if(r==='conseil'){r='';setTimeout(ouvrir,50)}
+ if(r==='cadeaux'){window.open(BONS,'_blank','noopener');r=''}
+ if(!PAGES[r])r='';
+ const consOn=document.getElementById('cons')?.classList.contains('on'), fil=document.getElementById('fil')?.innerHTML;
+ document.documentElement.lang=lang;
+ document.getElementById('app').innerHTML=header(r)+`<main id="main">${PAGES[r]()}</main>`+footer()+conseiller();
+ if(fil)document.getElementById('fil').innerHTML=fil;
+ if(consOn)document.getElementById('cons').classList.add('on');
+ brancher(); onde();
+}
+function brancher(){
+ document.getElementById('lg').onchange=e=>{lang=e.target.value;store.set('pdl-lang',lang);const f=document.getElementById('fil');if(f)f.innerHTML='';render()};
+ const rz=document.getElementById('resa');
+ if(rz)rz.onsubmit=e=>{e.preventDefault();const i=rz.in.value,o=rz.out.value,er=document.getElementById('resaErr');if(!i||!o||o<=i){er.textContent=t('bkErr');rz.out.setAttribute('aria-invalid','true');return}er.textContent='';rz.out.removeAttribute('aria-invalid');window.open(resaURL()+'&fromdate='+i.split('-').reverse().join('/')+'&nbnights='+Math.round((new Date(o)-new Date(i))/864e5)+'&nbadt='+rz.p.value,'_blank','noopener')};
+ const ft=document.getElementById('ftable');
+ if(ft)ft.onsubmit=e=>{e.preventDefault();const er=ft.querySelector('.err');if(!ft.d.value||!ft.c.value||!ft.n.value.trim()){er.textContent=t('fErr');return}er.textContent=t('fOk');location.href='mailto:restaurantlepardaillan@orange.fr?subject='+encodeURIComponent(t('formT')+' — '+ft.d.value)+'&body='+encodeURIComponent(`${t('fDate')} : ${ft.d.value}\n${t('fServ')} : ${ft.s.value}\n${t('fCouv')} : ${ft.c.value}\n${t('fNom')} : ${ft.n.value}\n${t('fTel')} : ${ft.t.value}\n\n${ft.m.value}`)};
+ const fc=document.getElementById('fcontact');
+ if(fc)fc.onsubmit=e=>{e.preventDefault();const er=fc.querySelector('.err');if(!/.+@.+\..+/.test(fc.e.value)||!fc.m.value.trim()){er.textContent=t('coErr');return}er.textContent=t('coOk');location.href='mailto:restaurantlepardaillan@orange.fr?subject='+encodeURIComponent(fc.o.value||t('coForm'))+'&body='+encodeURIComponent(`${fc.m.value}\n\n${fc.p.value} ${fc.n.value}\n${fc.e.value}`)};
+ document.querySelectorAll('[data-zoom]').forEach(b=>b.onclick=()=>{const v=document.getElementById('visio');v.querySelector('img').src=img(b.dataset.zoom);v.querySelector('img').alt=alt(b.dataset.zoom);v.classList.add('on');document.getElementById('visioX').focus()});
+ document.querySelectorAll('[data-scroll]').forEach(a=>a.onclick=e=>{e.preventDefault();document.getElementById(a.dataset.scroll).scrollIntoView({behavior:'smooth'})});
+ document.querySelectorAll('[data-anchor]').forEach(a=>a.onclick=e=>{e.preventDefault();const id=a.dataset.anchor;if(location.hash!=='#/restaurant'){sessionAnchor=id;location.hash='#/restaurant'}else document.getElementById(id).scrollIntoView({behavior:'smooth'})});
+ document.querySelectorAll('[data-cons]').forEach(b=>b.onclick=e=>{e.preventDefault();ouvrir()});
+ document.getElementById('consX').onclick=()=>document.getElementById('cons').classList.remove('on');
+ document.getElementById('bulleX').onclick=()=>{document.getElementById('bulle').classList.remove('on');bulleVue=true};
+ document.getElementById('chips').onclick=e=>{if(e.target.tagName==='BUTTON')poser(e.target.textContent)};
+ document.getElementById('consF').onsubmit=e=>{e.preventDefault();const q=document.getElementById('consQ');if(q.value.trim()){poser(q.value.trim());q.value=''}};
+ document.getElementById('fil').onclick=e=>{const a=e.target.closest('a');if(!a)return;if(a.hasAttribute('data-resa')){e.preventDefault();window.open(resaURL(),'_blank','noopener')}else if(a.hasAttribute('data-go')&&innerWidth<820)document.getElementById('cons').classList.remove('on')};
+ const io=new IntersectionObserver(es=>es.forEach(x=>{if(x.isIntersecting){x.target.classList.add('vu');io.unobserve(x.target)}}),{rootMargin:'0px 0px -8% 0px'});
+ document.querySelectorAll('.apparait').forEach(el=>io.observe(el));
+ if(sessionAnchor){const el=document.getElementById(sessionAnchor);sessionAnchor=null;if(el)setTimeout(()=>el.scrollIntoView({behavior:'smooth'}),60)}
+}
+let sessionAnchor=null,bulleVue=false;
+function ouvrir(){const c=document.getElementById('cons');c.classList.add('on');document.getElementById('bulle').classList.remove('on');bulleVue=true;const f=document.getElementById('fil');if(!f.children.length)dire(t('cHello'),'b');setTimeout(()=>document.getElementById('consQ').focus(),50)}
+function dire(h,w){const f=document.getElementById('fil'),d=document.createElement('div');d.className='msg '+w;if(w==='u')d.textContent=h;else d.innerHTML=h;f.appendChild(d);f.scrollTop=f.scrollHeight}
+function poser(q){dire(q,'u');setTimeout(()=>dire(repondre(q,lang),'b'),350)}
+/* Geste signature : le nom de la maison se reflète dans le plan d'eau et ondule */
+function onde(){
+ cancelAnimationFrame(raf);
+ const tb=document.getElementById('ondeT'), re=document.querySelector('.reflet');
+ if(!tb||!re)return;
+ if(matchMedia('(prefers-reduced-motion: reduce)').matches){tb.setAttribute('baseFrequency','0.006 0.06');return}
+ let vis=true; new IntersectionObserver(e=>{vis=e[0].isIntersecting}).observe(re);
+ const t0=performance.now();
+ const pas=n=>{raf=requestAnimationFrame(pas);if(!vis||document.hidden)return;const s=(n-t0)/1600;tb.setAttribute('baseFrequency',(0.006+0.002*Math.sin(s*.5)).toFixed(4)+' '+(0.08+0.025*Math.sin(s*.9)).toFixed(4))};
+ raf=requestAnimationFrame(pas);
+}
+document.getElementById('visioX').onclick=()=>document.getElementById('visio').classList.remove('on');
+document.getElementById('visio').onclick=e=>{if(e.target.id==='visio')e.currentTarget.classList.remove('on')};
+addEventListener('keydown',e=>{if(e.key==='Escape'){document.getElementById('visio').classList.remove('on');document.getElementById('cons')?.classList.remove('on')}});
+addEventListener('hashchange',()=>{if(location.hash==='#table')return;render();if(!sessionAnchor)scrollTo(0,0)});
+render();
+setTimeout(()=>{if(!bulleVue&&!document.getElementById('cons').classList.contains('on')){document.getElementById('bulle').classList.add('on');bulleVue=true}},4000);
+
+</script>
+<script id="nv-track">(function(){try{if(location.protocol!=='https:')return;if(/[?&]moi\b/.test(location.search)){localStorage.setItem('nv_moi','1');addEventListener('load',function(){var d=document.createElement('div');d.textContent='✓ Appareil reconnu : vos visites ne sont plus comptées';d.style.cssText='position:fixed;left:50%;bottom:24px;transform:translateX(-50%);z-index:2147483647;background:#1E3A2B;color:#fff;font:600 14px/1.3 system-ui,sans-serif;padding:12px 18px;border-radius:999px;box-shadow:0 8px 24px rgba(0,0,0,.25)';document.body.appendChild(d);setTimeout(function(){d.remove()},6000)})}if(localStorage.getItem('nv_moi')||navigator.webdriver)return;}catch(x){}
+var m=location.pathname.split('/').filter(Boolean)[0]||'';if(!m)return;var s=Math.random().toString(36).slice(2,12),t0=Date.now(),u='/_t.php',last='home',seen={};
+function send(e,p){var b=JSON.stringify({m:m,e:e,s:s,p:p||'',t:Math.round((Date.now()-t0)/1000),l:(document.documentElement.lang||'').slice(0,2)});try{if(navigator.sendBeacon)navigator.sendBeacon(u,new Blob([b],{type:'text/plain'}));else fetch(u,{method:'POST',body:b,keepalive:true})}catch(x){}}
+function once(k){k=String(k).toLowerCase().replace(/[^a-z0-9_-]/g,'').slice(0,24);if(!k||seen[k])return;seen[k]=1;send('ev',k)}
+send('open');setInterval(function(){if(document.visibilityState==='visible')send('ping')},45000);
+document.addEventListener('visibilitychange',function(){if(document.visibilityState==='hidden')send('ping')});
+window.__nvView=function(p){p=String(p||'');if(p&&p!==last){last=p;send('view',p)}};
+addEventListener('scroll',function(){var h=document.documentElement,max=h.scrollHeight-innerHeight;if(max<200)return;var r=(scrollY/max)*100;[25,50,75,100].forEach(function(q){if(r>=q-2)once('defil'+q+'-'+last)})},{passive:true});
+document.addEventListener('click',function(e){var el=e.target.closest('a,button,[data-add],[data-go],[role=button],summary');if(!el)return;var t=((el.getAttribute('aria-label')||'')+' '+(el.textContent||'')+' '+(el.className||'')+' '+(el.id||'')).toLowerCase(),h=el.getAttribute&&el.getAttribute('href')||'';
+if(el.hasAttribute('data-add')||/ajouter|add to|añadir|hinzuf|aggiungi|加入/.test(t))once('panier-'+(el.getAttribute('data-add')||'ajout')),send('ev','panier');
+else if(/conseil|advisor|assistant|chat/.test(t))once('conseiller');
+else if(/instagram|facebook|youtube|pinterest|linkedin|tiktok/.test(h))once('reseau-'+(h.match(/instagram|facebook|youtube|pinterest|linkedin|tiktok/)||[''])[0]);
+else if(/réserv|reserv|visite|book/.test(t))once('reservation');
+else if(/coffret|gift|cadeau/.test(t))once('coffret')},true);
+document.addEventListener('play',function(e){if(e.target&&e.target.tagName==='VIDEO'&&!e.target.muted)once('video-son')},true);
+try{new MutationObserver(function(){var l=(document.documentElement.lang||'').slice(0,2);if(l&&l!=='fr')once('langue-'+l)}).observe(document.documentElement,{attributes:true,attributeFilter:['lang']})}catch(x){}
+addEventListener('load',function(){try{if(typeof window.go==='function'&&!window.go.__nv){var g=window.go;window.go=function(v){try{window.__nvView(v)}catch(x){}return g.apply(this,arguments)};window.go.__nv=1}}catch(x){}});})();</script>
+</body>
+</html>
