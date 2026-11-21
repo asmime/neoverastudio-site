@@ -1,0 +1,1360 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Atelier Céramique Régnier — Proposition Neovera Studio</title>
+<meta name="description" content="Poêles à bois et à granulés en faïence, façonnés et peints à la main à Desvres depuis 1989.">
+<link rel="preload" href="fonts/gloock-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<style>
+@font-face{font-family:"Gloock";src:url(fonts/gloock-latin-400-normal.woff2) format("woff2");font-weight:400;font-display:swap;unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:"Gloock";src:url(fonts/gloock-latin-ext-400-normal.woff2) format("woff2");font-weight:400;font-display:swap;unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
+@font-face{font-family:"Hanken Grotesk";src:url(fonts/hanken-grotesk-latin-wght-normal.woff2) format("woff2");font-weight:100 900;font-display:swap;unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:"Hanken Grotesk";src:url(fonts/hanken-grotesk-latin-ext-wght-normal.woff2) format("woff2");font-weight:100 900;font-display:swap;unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
+:root{
+--vert:#163A2E;--vert-2:#1E4B3B;--vert-3:#2B6150;--vert-p:#DCE8E1;
+--engobe:#F3F3EE;--engobe-2:#E7E7DF;--blanc:#FBFBF8;
+--manganese:#5B3347;--manganese-f:#47263A;--manganese-p:#EFE2E8;
+--laiton:#B48C3C;--laiton-c:#D9BC72;
+--charbon:#1B1B1D;--encre:#1C2521;--gris:#55605A;--trait:#CFD3CB;
+--r:4px;--ombre:0 14px 34px -18px rgba(22,58,46,.45);--ease:cubic-bezier(.16,1,.3,1);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;scrollbar-color:var(--vert-3) var(--engobe-2)}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{animation-duration:.001s!important;transition-duration:.001s!important}}
+body{margin:0;background:var(--engobe);color:var(--encre);font:400 17px/1.62 "Hanken Grotesk",system-ui,sans-serif}
+::selection{background:var(--manganese);color:#fff}
+::-webkit-scrollbar{width:11px;height:8px}::-webkit-scrollbar-track{background:var(--engobe-2)}::-webkit-scrollbar-thumb{background:var(--vert-3);border-radius:8px;border:2px solid var(--engobe-2)}
+:focus-visible{outline:3px solid var(--laiton);outline-offset:3px;border-radius:2px}
+a{color:var(--manganese);text-decoration-thickness:1px;text-underline-offset:3px}
+a:hover{color:var(--manganese-f)}
+img{max-width:100%;display:block}
+figure{margin:0}
+h1,h2,h3,h4{font-family:"Gloock",Georgia,serif;font-weight:400;line-height:1.08;letter-spacing:-.01em;margin:0 0 .5em;text-wrap:balance}
+h1{font-size:clamp(2.3rem,5.4vw,4.6rem)}
+h2{font-size:clamp(1.8rem,3.6vw,3rem);margin-top:0}
+h3{font-size:clamp(1.25rem,2vw,1.6rem)}
+p{margin:0 0 1em;max-width:68ch;text-wrap:pretty}
+.wrap{width:min(1240px,100% - 40px);margin-inline:auto}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.55em;min-height:48px;padding:.75em 1.35em;border-radius:var(--r);border:1.5px solid transparent;font:600 .98rem/1.1 "Hanken Grotesk",sans-serif;cursor:pointer;text-decoration:none;transition:background .25s,color .25s,border-color .25s,transform .25s var(--ease)}
+.btn:active{transform:translateY(1px)}
+.btn-or{background:var(--laiton-c);color:var(--charbon)}
+.btn-or:hover{background:#E6CC86;color:var(--charbon)}
+.btn-vert{background:var(--vert);color:#fff}
+.btn-vert:hover{background:var(--vert-2);color:#fff}
+.btn-ligne{border-color:currentColor;color:inherit;background:transparent}
+.btn-ligne:hover{background:rgba(255,255,255,.08)}
+.btn[disabled]{opacity:.45;cursor:not-allowed}
+.lien{font-weight:600;color:var(--manganese);text-decoration:none;border-bottom:1.5px solid var(--laiton);padding-bottom:2px}
+.lien:hover{color:var(--manganese-f);border-color:var(--manganese)}
+.lien:after{content:" →"}
+
+/* EN-TÊTE */
+.entete{position:sticky;top:0;z-index:50;background:rgba(243,243,238,.96);backdrop-filter:saturate(1.2) blur(6px);border-bottom:1px solid var(--trait)}
+.entete .l1{display:flex;align-items:center;gap:18px;padding:10px 0}
+.marque{display:flex;flex-direction:column;text-decoration:none;color:var(--vert);line-height:1;margin-right:auto}
+.marque b{font:400 1.75rem/1 "Gloock",serif;letter-spacing:.005em}
+.marque small{font:600 .68rem/1.2 "Hanken Grotesk",sans-serif;letter-spacing:.16em;text-transform:uppercase;color:var(--gris);margin-top:5px}
+.nav{display:flex;gap:2px;align-items:center}
+.nav a{padding:.55em .7em;font-weight:560;font-size:.95rem;color:var(--encre);text-decoration:none;border-radius:var(--r);white-space:nowrap}
+.nav a:hover{background:var(--engobe-2)}
+.nav a[aria-current=page]{color:var(--manganese);box-shadow:inset 0 -2px 0 var(--laiton)}
+.outils{display:flex;align-items:center;gap:10px}
+.langue{position:relative}
+.langue select{appearance:none;font:600 .9rem "Hanken Grotesk",sans-serif;color:var(--vert);background:var(--blanc);border:1.5px solid var(--vert);border-radius:var(--r);padding:.55em 2em .55em .75em;min-height:42px;cursor:pointer}
+.langue:after{content:"";position:absolute;right:.8em;top:50%;width:7px;height:7px;border-right:2px solid var(--vert);border-bottom:2px solid var(--vert);transform:translateY(-70%) rotate(45deg);pointer-events:none}
+.sel-btn{position:relative;min-height:42px;padding:.5em .85em;border:1.5px solid var(--trait);background:var(--blanc);border-radius:var(--r);font:600 .9rem "Hanken Grotesk",sans-serif;color:var(--encre);cursor:pointer;display:flex;gap:.45em;align-items:center}
+.sel-btn .n{background:var(--manganese);color:#fff;border-radius:99px;min-width:1.5em;height:1.5em;display:inline-grid;place-items:center;font-size:.78rem}
+.entete .l1 .nav{display:none}
+.l2{display:block;position:relative;border-top:1px solid var(--trait)}
+.l2 .nav{overflow-x:auto;scrollbar-width:none;padding:4px 0;-webkit-overflow-scrolling:touch;justify-content:center}
+.l2 .nav::-webkit-scrollbar{display:none}
+@media (max-width:1180px){
+ .l2 .nav{justify-content:flex-start;padding-right:30px}
+ .l2:after{content:"";position:absolute;right:0;top:0;bottom:0;width:38px;background:linear-gradient(90deg,rgba(243,243,238,0),var(--engobe));pointer-events:none}
+}
+@media (max-width:620px){.marque b{font-size:1.45rem}.marque small{letter-spacing:.1em}.sel-btn .t,.cta-cat{display:none}.langue select{padding-right:1.8em}}
+
+/* VUES */
+.vue{display:none}.vue.on{display:block;animation:entree .5s var(--ease)}
+@keyframes entree{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+section{padding:clamp(56px,8vw,110px) 0}
+.sombre{background:var(--vert);color:#EEF1EC}
+.sombre h2,.sombre h3{color:#fff}
+.sombre a{color:var(--laiton-c)}
+.sombre .lien{color:#fff;border-color:var(--laiton-c)}
+.manga{background:var(--manganese);color:#F4ECF0}
+.manga h2{color:#fff}
+.intro{font-size:clamp(1.08rem,1.5vw,1.25rem);color:var(--gris)}
+.sombre .intro{color:#C9D6CE}
+
+/* HÉROS */
+.heros{position:relative;min-height:min(92vh,880px);display:grid;align-items:end;color:#fff;overflow:hidden;padding:0}
+.heros img.fond{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:55% 40%;transform:scale(1.04);animation:respire 18s ease-in-out infinite alternate}
+@keyframes respire{to{transform:scale(1.1) translateX(-1%)}}
+.heros:before{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(90deg,rgba(14,36,28,.88) 0%,rgba(14,36,28,.6) 42%,rgba(14,36,28,0) 70%),linear-gradient(0deg,rgba(14,36,28,.75),rgba(14,36,28,0) 45%)}
+.heros .wrap{position:relative;z-index:2;padding:120px 0 64px}
+.heros h1{max-width:13ch;color:#fff}
+.heros p{font-size:clamp(1.05rem,1.5vw,1.25rem);max-width:44ch;color:#E3ECE6}
+.heros .actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px}
+.heros .preuve{display:flex;flex-wrap:wrap;gap:8px 22px;margin-top:34px;font-size:.92rem;color:#CFDDD4}
+.heros .preuve span{display:flex;align-items:center;gap:8px}
+.heros .preuve span:before{content:"";width:6px;height:6px;background:var(--laiton-c);transform:rotate(45deg)}
+@media (max-width:700px){.heros{min-height:88vh}.heros:before{background:linear-gradient(0deg,rgba(14,36,28,.92) 0%,rgba(14,36,28,.7) 55%,rgba(14,36,28,.15) 100%)}.heros img.fond{object-position:62% 30%}}
+
+/* PONCIF — geste signature */
+.poncif{background:var(--engobe);position:relative}
+.poncif .grille{display:grid;grid-template-columns:1fr 1fr;gap:clamp(30px,6vw,90px);align-items:start}
+.poncif .scene{position:sticky;top:150px}
+.carreau{width:min(100%,470px);aspect-ratio:1;margin-inline:auto;filter:drop-shadow(0 22px 30px rgba(22,58,46,.22))}
+.carreau svg{width:100%;height:100%;display:block}
+.carreau .contour-pts{fill:none;stroke:var(--charbon);stroke-width:2.6;stroke-linecap:round;stroke-dasharray:0 7}
+.carreau .trait{fill:none;stroke:var(--manganese-f);stroke-width:2.4;stroke-linecap:round;stroke-linejoin:round}
+.carreau .couleur{transition:opacity .9s var(--ease)}
+.carreau .eclat{opacity:0}
+.etapes-p{list-style:none;margin:0;padding:0}
+.etapes-p li{min-height:46vh;display:flex;flex-direction:column;justify-content:center;opacity:.32;transition:opacity .5s}
+.etapes-p li.on{opacity:1}
+.etapes-p .no{font:400 1rem "Gloock",serif;color:var(--laiton);display:block;margin-bottom:6px}
+.etapes-p h3{font-size:clamp(1.5rem,2.6vw,2.1rem)}
+.legende{font-size:.82rem;color:var(--gris);text-align:center;margin-top:14px}
+@media (max-width:860px){.poncif .grille{grid-template-columns:1fr}.poncif .scene{top:118px;z-index:2;background:var(--engobe);padding-bottom:8px}.carreau{width:min(62vw,300px)}.etapes-p li{min-height:38vh}}
+
+/* MODÈLES */
+.filtres{display:flex;flex-wrap:wrap;gap:8px;margin:18px 0 26px}
+.filtres button{font:600 .92rem "Hanken Grotesk",sans-serif;padding:.6em 1em;min-height:44px;border-radius:99px;border:1.5px solid var(--trait);background:var(--blanc);color:var(--encre);cursor:pointer}
+.filtres button[aria-pressed=true]{background:var(--vert);border-color:var(--vert);color:#fff}
+.grille-m{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:22px}
+.modele{background:var(--blanc);border:1px solid var(--trait);border-radius:var(--r);overflow:hidden;display:flex;flex-direction:column;transition:transform .35s var(--ease),box-shadow .35s}
+.modele:hover{transform:translateY(-3px);box-shadow:var(--ombre)}
+.modele .ph{aspect-ratio:4/5;background:#fff;overflow:hidden}
+.modele .ph img{width:100%;height:100%;object-fit:contain;padding:14px;transition:transform .6s var(--ease)}
+.modele:hover .ph img{transform:scale(1.04)}
+.modele .c{padding:14px 16px 16px;display:flex;flex-direction:column;gap:6px;flex:1}
+.modele h3{margin:0;font-size:1.45rem}
+.modele .type{font-size:.78rem;font-weight:650;letter-spacing:.08em;text-transform:uppercase;color:var(--vert-3)}
+.modele .acc{font-size:.93rem;color:var(--gris);margin:0}
+.modele .spec{font-size:.85rem;color:var(--encre);margin-top:auto;padding-top:8px;border-top:1px dashed var(--trait)}
+.modele .act{display:flex;gap:8px;margin-top:10px}
+.modele .act .btn{min-height:42px;padding:.55em .8em;font-size:.88rem;flex:1}
+.modele a.ouvrir{color:inherit;text-decoration:none}
+
+/* FICHE */
+.fiche{display:grid;grid-template-columns:1.05fr 1fr;gap:clamp(26px,5vw,70px);align-items:start}
+.fiche .galerie{display:grid;gap:10px}
+.fiche .galerie .grand{aspect-ratio:4/5;background:#fff;border:1px solid var(--trait);border-radius:var(--r);overflow:hidden}
+.fiche .galerie .grand img{width:100%;height:100%;object-fit:contain;padding:24px}
+.tab-spec{width:100%;border-collapse:collapse;margin:18px 0;font-size:.95rem}
+.tab-spec th,.tab-spec td{padding:10px 0;border-bottom:1px solid var(--trait);text-align:left;vertical-align:top}
+.tab-spec th{width:42%;font-weight:600;color:var(--gris)}
+.reassure{list-style:none;padding:0;margin:20px 0;display:grid;gap:8px}
+.reassure li{display:flex;gap:10px;align-items:flex-start;font-size:.95rem}
+.reassure li:before{content:"";flex:none;width:8px;height:8px;margin-top:.55em;background:var(--laiton);transform:rotate(45deg)}
+@media (max-width:860px){.fiche{grid-template-columns:1fr}}
+.fil{font-size:.88rem;color:var(--gris);margin-bottom:18px}
+.fil a{color:var(--gris)}
+
+/* BANDEAUX ÉDITORIAUX */
+.duo{display:grid;grid-template-columns:1fr 1fr;gap:clamp(26px,5vw,80px);align-items:center}
+.duo.inv>:first-child{order:2}
+.duo figure img{width:100%;border-radius:var(--r);aspect-ratio:4/5;object-fit:cover}
+.duo figure.paysage img{aspect-ratio:4/3}
+@media (max-width:860px){.duo{grid-template-columns:1fr}.duo.inv>:first-child{order:0}}
+.familles{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:34px}
+.famille{position:relative;display:block;aspect-ratio:3/4;border-radius:var(--r);overflow:hidden;color:#fff;text-decoration:none}
+.famille img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .7s var(--ease)}
+.famille:hover img{transform:scale(1.05)}
+.famille:after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(14,36,28,.85),rgba(14,36,28,0) 60%)}
+.famille span{position:absolute;left:16px;right:16px;bottom:14px;z-index:2;font:400 1.4rem/1.1 "Gloock",serif}
+.famille small{display:block;font:500 .85rem/1.3 "Hanken Grotesk",sans-serif;color:#D6E2DA;margin-top:4px}
+@media (max-width:900px){.familles{grid-template-columns:1fr 1fr}}
+
+/* FABRICATION */
+.dix{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:26px 22px;counter-reset:e}
+.dix article{display:flex;flex-direction:column;gap:8px}
+.dix img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:var(--r)}
+.dix h3{margin:6px 0 0;font-size:1.3rem}
+.dix h3 em{font-style:normal;color:var(--laiton)}
+.dix p{font-size:.95rem;color:var(--gris);margin:0}
+.sombre .dix p{color:#C3D1C8}
+.qui{font-size:.82rem;font-weight:650;letter-spacing:.06em;text-transform:uppercase;color:var(--vert-3)}
+.sombre .qui{color:var(--laiton-c)}
+
+/* FRISE HISTOIRE */
+.frise{list-style:none;padding:0;margin:30px 0 0;display:grid;gap:0}
+.frise li{display:grid;grid-template-columns:110px 1fr;gap:20px;padding:18px 0;border-top:1px solid rgba(255,255,255,.15)}
+.frise b{font:400 1.6rem/1 "Gloock",serif;color:var(--laiton-c)}
+.frise p{margin:0}
+
+/* GALERIE */
+.mosaique{columns:4 240px;column-gap:14px}
+.mosaique figure{break-inside:avoid;margin:0 0 14px;cursor:zoom-in}
+.mosaique img{width:100%;border-radius:var(--r)}
+.mosaique figcaption{font-size:.84rem;color:var(--gris);padding:6px 2px 0}
+.visio{position:fixed;inset:0;z-index:90;background:rgba(12,22,18,.92);display:none;place-items:center;padding:20px}
+.visio.on{display:grid}
+.visio img{max-height:82vh;max-width:min(92vw,900px);border-radius:var(--r)}
+.visio p{color:#fff;text-align:center;margin:12px auto 0}
+.visio button{position:absolute;top:16px;right:16px}
+
+/* COMPOSER */
+.composer{display:grid;grid-template-columns:.9fr 1.1fr;gap:clamp(24px,5vw,70px);align-items:center}
+.choix{display:grid;gap:18px}
+.choix fieldset{border:0;padding:0;margin:0}
+.choix legend{font-weight:650;margin-bottom:8px}
+.pastilles{display:flex;flex-wrap:wrap;gap:8px}
+.pastilles button{min-height:44px;padding:.5em .9em;border-radius:99px;border:1.5px solid rgba(255,255,255,.35);background:transparent;color:#fff;font:600 .88rem "Hanken Grotesk",sans-serif;cursor:pointer;display:flex;align-items:center;gap:.5em}
+.pastilles button i{width:14px;height:14px;border-radius:50%;border:1px solid rgba(255,255,255,.5)}
+.pastilles button[aria-pressed=true]{background:#fff;color:var(--vert);border-color:#fff}
+.composer .carreau{width:min(100%,400px)}
+@media (max-width:860px){.composer{grid-template-columns:1fr}}
+
+/* FORMULAIRES */
+form.f{display:grid;grid-template-columns:1fr 1fr;gap:14px 16px;max-width:760px}
+form.f .plein{grid-column:1/-1}
+form.f label{display:flex;flex-direction:column;gap:6px;font-weight:600;font-size:.92rem}
+form.f input,form.f select,form.f textarea{font:400 1rem "Hanken Grotesk",sans-serif;padding:.75em .85em;border:1.5px solid var(--trait);border-radius:var(--r);background:var(--blanc);color:var(--encre);min-height:48px}
+form.f input:focus,form.f select:focus,form.f textarea:focus{border-color:var(--vert);outline:none;box-shadow:0 0 0 3px var(--vert-p)}
+form.f input:user-invalid{border-color:#A23B3B}
+form.f .cases{display:flex;flex-wrap:wrap;gap:14px;font-weight:500}
+form.f .cases label,form.f .rgpd{flex-direction:row;align-items:flex-start;gap:10px;font-weight:500}
+form.f input[type=checkbox],form.f input[type=radio]{min-height:auto;width:20px;height:20px;accent-color:var(--vert);margin-top:2px}
+.ok{background:var(--vert-p);border-left:3px solid var(--vert);padding:14px 16px;border-radius:var(--r);margin-top:14px}
+@media (max-width:620px){form.f{grid-template-columns:1fr}}
+
+/* INFOS / FAQ */
+.infos{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
+@media (max-width:860px){.infos{grid-template-columns:1fr}}
+details{border-top:1px solid var(--trait);padding:14px 0}
+details summary{cursor:pointer;font-weight:650;list-style:none;display:flex;justify-content:space-between;gap:20px}
+details summary:after{content:"+";font:400 1.4rem/1 "Gloock",serif;color:var(--laiton)}
+details[open] summary:after{content:"–"}
+details p{margin:10px 0 0;color:var(--gris)}
+.sombre details{border-color:rgba(255,255,255,.18)}.sombre details p{color:#C3D1C8}
+.trois{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.trois article{border-top:2px solid var(--laiton);padding-top:16px}
+@media (max-width:860px){.trois{grid-template-columns:1fr}}
+.carte-360{aspect-ratio:16/9;width:100%;border:0;border-radius:var(--r);background:#0f241c}
+
+/* SÉLECTION */
+.ligne-sel{display:grid;grid-template-columns:80px 1fr auto;gap:14px;align-items:center;padding:12px 0;border-bottom:1px solid var(--trait)}
+.ligne-sel img{width:80px;height:96px;object-fit:contain;background:#fff;border-radius:var(--r)}
+.vide{padding:30px;border:1.5px dashed var(--trait);border-radius:var(--r);color:var(--gris)}
+.retirer{background:none;border:0;color:var(--manganese);font:600 .9rem "Hanken Grotesk",sans-serif;cursor:pointer;text-decoration:underline;min-height:44px}
+
+/* PIED */
+footer{background:var(--charbon);color:#C7CCC8;padding:60px 0 30px;font-size:.94rem}
+footer .cols{display:grid;grid-template-columns:1.3fr 1fr 1fr 1fr;gap:30px}
+footer h4{font:400 1.2rem "Gloock",serif;color:#fff;margin-bottom:.6em}
+footer a{color:#E3E6E2;text-decoration:none}
+footer a:hover{color:var(--laiton-c);text-decoration:underline}
+footer ul{list-style:none;padding:0;margin:0;display:grid;gap:6px}
+.reseaux{display:flex;gap:10px;margin-top:14px}
+.reseaux a{width:44px;height:44px;display:grid;place-items:center;border:1px solid #3a3d3b;border-radius:50%}
+.reseaux svg{width:20px;height:20px;fill:currentColor}
+.mentions-b{border-top:1px solid #333;margin-top:40px;padding-top:18px;font-size:.84rem;color:#9AA19C;display:flex;flex-wrap:wrap;gap:10px 24px;justify-content:space-between}
+@media (max-width:900px){footer .cols{grid-template-columns:1fr 1fr}}
+@media (max-width:560px){footer .cols{grid-template-columns:1fr}}
+
+/* CONSEILLER */
+.cons-btn{position:fixed;right:18px;bottom:18px;z-index:70;display:flex;align-items:center;gap:10px;background:var(--vert);color:#fff;border:0;border-radius:99px;padding:8px 18px 8px 8px;box-shadow:0 12px 30px -10px rgba(0,0,0,.5);cursor:pointer;text-align:left;font-family:"Hanken Grotesk",sans-serif}
+.cons-btn .av{width:42px;height:42px;border-radius:50%;background:var(--laiton-c);color:var(--vert);display:grid;place-items:center;font:400 1.3rem "Gloock",serif}
+.cons-btn b{display:block;font-size:.95rem}.cons-btn small{display:block;font-size:.8rem;color:#CFDDD4}
+.cons-invite{position:fixed;right:18px;bottom:88px;z-index:70;max-width:300px;background:var(--blanc);border:1px solid var(--trait);border-radius:10px;padding:14px 38px 14px 16px;box-shadow:var(--ombre);font-size:.93rem;display:none}
+.cons-invite.on{display:block;animation:entree .4s var(--ease)}
+.cons-invite button{position:absolute;top:6px;right:6px;background:none;border:0;font-size:1.3rem;cursor:pointer;color:var(--gris);width:32px;height:32px}
+.cons{position:fixed;right:18px;bottom:18px;z-index:80;width:min(400px,calc(100vw - 24px));height:min(600px,calc(100vh - 110px));background:var(--blanc);border-radius:12px;box-shadow:0 24px 60px -20px rgba(0,0,0,.5);display:none;flex-direction:column;overflow:hidden;border:1px solid var(--trait)}
+.cons.on{display:flex}
+.cons header{background:var(--vert);color:#fff;padding:14px 16px;display:flex;align-items:center;gap:12px}
+.cons header .av{width:38px;height:38px;border-radius:50%;background:var(--laiton-c);color:var(--vert);display:grid;place-items:center;font:400 1.15rem "Gloock",serif}
+.cons header b{display:block}.cons header small{color:#CFDDD4;font-size:.8rem}
+.cons header button{margin-left:auto;background:none;border:0;color:#fff;font-size:1.5rem;cursor:pointer;width:40px;height:40px}
+.cons .fil-msg{flex:1;overflow:auto;padding:14px;display:flex;flex-direction:column;gap:10px;background:var(--engobe)}
+.msg{max-width:88%;padding:10px 13px;border-radius:12px;font-size:.94rem;line-height:1.5}
+.msg.ia{background:var(--blanc);border:1px solid var(--trait);align-self:flex-start;border-bottom-left-radius:3px}
+.msg.moi{background:var(--vert);color:#fff;align-self:flex-end;border-bottom-right-radius:3px}
+.msg .mini{display:flex;gap:8px;align-items:center;margin-top:8px;padding:6px;border:1px solid var(--trait);border-radius:8px;background:var(--engobe)}
+.msg .mini img{width:44px;height:54px;object-fit:contain;background:#fff;border-radius:3px}
+.msg .mini button{margin-left:auto;font:600 .8rem "Hanken Grotesk";border:0;background:var(--vert);color:#fff;border-radius:4px;padding:.5em .7em;cursor:pointer;min-height:36px}
+.puces{display:flex;flex-wrap:wrap;gap:6px;padding:10px 14px;border-top:1px solid var(--trait);background:var(--blanc)}
+.puces button{font:600 .82rem "Hanken Grotesk",sans-serif;border:1.5px solid var(--vert);color:var(--vert);background:var(--blanc);border-radius:99px;padding:.4em .8em;cursor:pointer;min-height:36px}
+.cons form{display:flex;gap:8px;padding:10px 14px 14px;background:var(--blanc)}
+.cons form input{flex:1;font:400 .95rem "Hanken Grotesk";padding:.6em .8em;border:1.5px solid var(--trait);border-radius:var(--r);min-height:44px}
+.cons form button{min-height:44px}
+.av-mention{font-size:.78rem;color:var(--gris)}
+.toast{position:fixed;left:50%;bottom:90px;transform:translateX(-50%);background:var(--charbon);color:#fff;padding:12px 18px;border-radius:8px;z-index:95;font-size:.92rem;display:none}
+.toast.on{display:block;animation:entree .3s}
+.apparait{opacity:0;transform:translateY(18px);transition:opacity .8s var(--ease),transform .8s var(--ease)}
+.apparait.vu{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.apparait{opacity:1;transform:none}.heros img.fond{animation:none}}
+.visuel-ill{font-size:.75rem;color:var(--gris)}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+.marque small{white-space:nowrap}
+@media (max-width:620px){
+ .marque small{font-size:.58rem;letter-spacing:.08em}
+ .grille-m{grid-template-columns:1fr 1fr;gap:12px}
+ .modele .c{padding:10px 10px 12px}.modele h3{font-size:1.2rem}.modele .acc{font-size:.85rem}
+ .modele .act{flex-direction:column}.modele .ph img{padding:8px}
+ .cons-btn{padding:5px 12px 5px 5px;right:10px;bottom:10px;gap:8px}.cons-btn .av{width:34px;height:34px;font-size:1.05rem}.cons-btn b{font-size:.85rem}.cons-btn small{font-size:.72rem}
+ .cons-invite{right:10px;bottom:70px}
+ .poncif .carreau{width:min(52vw,210px)}
+ .poncif .legende{font-size:.72rem;margin-top:6px}
+}
+.co-sel{font:600 1rem "Hanken Grotesk",sans-serif;min-height:48px;padding:.6em .9em;border-radius:var(--r);border:1.5px solid rgba(255,255,255,.4);background:var(--vert-2);color:#fff;width:min(100%,360px)}
+.co-sel option{color:var(--encre);background:#fff}
+</style>
+</head>
+<body>
+<a class="sr" href="#contenu">Aller au contenu</a>
+<header class="entete">
+ <div class="wrap l1">
+  <a class="marque" href="#accueil" aria-label="Atelier Céramique Régnier"><b>Régnier</b><small data-t="sous_marque"></small></a>
+  <nav class="nav" aria-label="Menu principal" data-menu></nav>
+  <div class="outils">
+   <span class="langue"><label class="sr" for="langue">Langue</label><select id="langue">
+    <option value="fr">Français</option><option value="en">English</option><option value="es">Español</option><option value="de">Deutsch</option><option value="it">Italiano</option><option value="nl">Nederlands</option></select></span>
+   <button class="sel-btn" type="button" data-go="selection" aria-label="Ma sélection"><span class="t" data-t="n_sel"></span><span class="n" data-nsel>0</span></button>
+   <a class="btn btn-vert cta-cat" href="#catalogue" data-t="n_cat"></a>
+  </div>
+ </div>
+ <div class="l2"><div class="wrap"><nav class="nav" aria-label="Menu principal (mobile)" data-menu></nav></div></div>
+</header>
+<main id="contenu">
+
+<!-- ACCUEIL -->
+<div class="vue" data-vue="accueil">
+ <section class="heros">
+  <img class="fond" src="img/hero.jpg" alt="" fetchpriority="high" data-alt="h_t">
+  <div class="wrap">
+   <h1 data-t="h_t"></h1>
+   <p data-t="h_p"></p>
+   <div class="actions"><a class="btn btn-or" href="#modeles" data-t="h_b1"></a><a class="btn btn-ligne" href="#catalogue" data-t="h_b2"></a></div>
+   <div class="preuve"><span data-t="h_pr1"></span><span data-t="h_pr2"></span><span data-t="h_pr3"></span></div>
+  </div>
+ </section>
+
+ <section class="poncif" id="poncif">
+  <div class="wrap grille">
+   <div class="scene"><div class="carreau" data-carreau="accueil"></div><p class="legende" data-t="p_cap"></p></div>
+   <div>
+    <h2 data-t="p_t"></h2><p class="intro" data-t="p_i"></p>
+    <ol class="etapes-p">
+     <li data-ph="0"><span class="no">I</span><h3 data-t="p1t"></h3><p data-t="p1"></p></li>
+     <li data-ph="1"><span class="no">II</span><h3 data-t="p2t"></h3><p data-t="p2"></p></li>
+     <li data-ph="2"><span class="no">III</span><h3 data-t="p3t"></h3><p data-t="p3"></p></li>
+     <li data-ph="3"><span class="no">IV</span><h3 data-t="p4t"></h3><p data-t="p4"></p><p><a class="lien" href="#atelier" data-t="p_cta"></a></p></li>
+    </ol>
+   </div>
+  </div>
+ </section>
+
+ <section class="sombre">
+  <div class="wrap">
+   <h2 data-t="fa_t"></h2><p class="intro" data-t="fa_i"></p>
+   <div class="familles">
+    <a class="famille" href="#modeles/bois"><img loading="lazy" src="img/g11.jpg" alt=""><span><b data-t="fam1"></b><small data-t="fam1s"></small></span></a>
+    <a class="famille" href="#modeles/granules"><img loading="lazy" src="img/g5.jpg" alt=""><span><b data-t="fam2"></b><small data-t="fam2s"></small></span></a>
+    <a class="famille" href="#cuisine"><img loading="lazy" src="img/cu4.jpg" alt=""><span><b data-t="fam3"></b><small data-t="fam3s"></small></span></a>
+    <a class="famille" href="#sur-mesure"><img loading="lazy" src="img/hb1.jpg" alt=""><span><b data-t="fam4"></b><small data-t="fam4s"></small></span></a>
+   </div>
+  </div>
+ </section>
+
+ <section>
+  <div class="wrap duo">
+   <figure class="apparait"><img loading="lazy" src="img/amb1.jpg" alt="" data-alt="ch_t"></figure>
+   <div class="apparait"><h2 data-t="ch_t"></h2><p data-t="ch_p"></p><p data-t="ch_p2"></p><p><a class="lien" href="#atelier" data-t="ch_b"></a></p></div>
+  </div>
+ </section>
+
+ <section class="sombre" id="composer">
+  <div class="wrap composer">
+   <div><div class="carreau" data-carreau="composer"></div><p class="legende" style="color:#C3D1C8" data-t="co_cap"></p></div>
+   <div>
+    <h2 data-t="co_t"></h2><p class="intro" data-t="co_i"></p>
+    <div class="choix">
+     <fieldset><legend data-t="co_m"></legend><label class="sr" for="co-modele" data-t="co_m"></label><select id="co-modele" class="co-sel"></select></fieldset>
+     <fieldset><legend data-t="co_e"></legend><div class="pastilles" data-groupe="email"></div></fieldset>
+     <fieldset><legend data-t="co_d"></legend><div class="pastilles" data-groupe="decor"></div></fieldset>
+     <fieldset><legend data-t="co_o"></legend><div class="pastilles" data-groupe="option"></div></fieldset>
+     <div><button class="btn btn-or" type="button" id="co-ajout" data-t="co_btn"></button></div>
+    </div>
+   </div>
+  </div>
+ </section>
+
+ <section>
+  <div class="wrap duo inv">
+   <figure class="apparait"><img loading="lazy" src="img/at3.jpg" alt="" data-alt="at_t"></figure>
+   <div class="apparait"><h2 data-t="at_t"></h2><p data-t="at_p"></p><p class="actions" style="display:flex;gap:12px;flex-wrap:wrap"><a class="btn btn-vert" href="#atelier" data-t="at_b"></a><a class="btn btn-ligne" href="#atelier/virtuelle" data-t="at_b2"></a></p></div>
+  </div>
+ </section>
+
+ <section class="manga">
+  <div class="wrap duo">
+   <figure class="apparait"><img loading="lazy" src="img/at7.jpg" alt="" data-alt="hi_t"></figure>
+   <div class="apparait"><h2 data-t="hi_t"></h2><p data-t="hi_p"></p><p><a class="lien" style="color:#fff" href="#histoire" data-t="hi_b"></a></p></div>
+  </div>
+ </section>
+
+ <section>
+  <div class="wrap">
+   <h2 data-t="re_t"></h2>
+   <div class="mosaique" data-galerie="6"></div>
+   <p><a class="lien" href="#realisations" data-t="re_b"></a></p>
+  </div>
+ </section>
+
+ <section class="sombre">
+  <div class="wrap duo">
+   <div class="apparait"><h2 data-t="in_t"></h2><p data-t="in_p"></p><p><a class="lien" href="#installation" data-t="in_b"></a></p></div>
+   <figure class="apparait paysage"><img loading="lazy" src="img/in2.jpg" alt="" data-alt="in_t"></figure>
+  </div>
+ </section>
+
+ <section>
+  <div class="wrap duo">
+   <figure class="apparait paysage"><img loading="lazy" src="img/magasin.jpg" alt="" data-alt="cta_t"></figure>
+   <div class="apparait"><h2 data-t="cta_t"></h2><p data-t="cta_p"></p><p style="display:flex;gap:12px;flex-wrap:wrap"><a class="btn btn-vert" href="#contact" data-t="cta_b1"></a><a class="btn btn-ligne" href="tel:+33321303090" data-t="cta_b2"></a></p></div>
+  </div>
+ </section>
+</div>
+
+<!-- MODÈLES -->
+<div class="vue" data-vue="modeles">
+ <section>
+  <div class="wrap">
+   <h1 data-t="mo_t"></h1><p class="intro" data-t="mo_i"></p>
+   <div class="filtres" role="group">
+    <button type="button" data-f="tous" data-t="f_tous"></button><button type="button" data-f="bois" data-t="f_bois"></button><button type="button" data-f="granules" data-t="f_gra"></button><button type="button" data-f="four" data-t="f_four"></button>
+   </div>
+   <div class="grille-m" data-grille></div>
+  </div>
+ </section>
+ <section class="sombre">
+  <div class="wrap trois">
+   <article><h3 data-t="mo_opt_t"></h3><p data-t="mo_opt"></p></article>
+   <article><h3 data-t="gr_t"></h3><p data-t="gr_p"></p></article>
+   <article><h3 data-t="ch_t"></h3><p data-t="ch_p"></p></article>
+  </div>
+ </section>
+</div>
+
+<!-- FICHE -->
+<div class="vue" data-vue="modele"><section><div class="wrap" data-fiche></div></section></div>
+
+<!-- CUISINE -->
+<div class="vue" data-vue="cuisine">
+ <section>
+  <div class="wrap duo">
+   <div><h1 data-t="cu_t"></h1><p class="intro" data-t="cu_p1"></p><p data-t="cu_p2"></p><p data-t="cu_p3"></p><p><a class="btn btn-vert" href="#catalogue" data-t="h_b2"></a></p></div>
+   <figure><img src="img/cu5.jpg" alt="" data-alt="cu_c5"></figure>
+  </div>
+ </section>
+ <section class="sombre"><div class="wrap"><div class="mosaique" data-photos="cu1:cu_c1,cu2:cu_c2,cu3:cu_c3,cu4:cu_c4"></div></div></section>
+ <section><div class="wrap"><h2 data-t="cu_fours"></h2><div class="grille-m" data-grille-four></div></div></section>
+</div>
+
+<!-- SUR MESURE -->
+<div class="vue" data-vue="sur-mesure">
+ <section>
+  <div class="wrap duo">
+   <div><h1 data-t="sm_t"></h1><p class="intro" data-t="sm_p"></p><p><a class="btn btn-vert" href="#contact" data-t="fi_b2"></a></p></div>
+   <figure><img src="img/sm1.jpg" alt="" data-alt="sm_c1"></figure>
+  </div>
+  <div class="wrap" style="margin-top:40px"><div class="mosaique" data-photos="sm2:sm_c2,sm3:sm_c3,sm4:sm_c4"></div></div>
+ </section>
+ <section class="sombre" id="habillage">
+  <div class="wrap duo inv">
+   <div><h2 data-t="hb_t"></h2><p class="intro" data-t="hb_p"></p><p data-t="hb_p2"></p></div>
+   <figure><img loading="lazy" src="img/hb1.jpg" alt="" data-alt="hb_c1"></figure>
+  </div>
+  <div class="wrap" style="margin-top:40px"><div class="mosaique" data-photos="hb2:hb_c2,hb3:hb_c3"></div></div>
+ </section>
+</div>
+
+<!-- CARRELAGE -->
+<div class="vue" data-vue="carrelage">
+ <section>
+  <div class="wrap duo">
+   <div><h1 data-t="ca_t"></h1><p class="intro" data-t="ca_p1"></p><p data-t="ca_p2"></p><p><a class="btn btn-vert" href="#contact" data-t="ca_b"></a></p></div>
+   <figure><img src="img/amb2.jpg" alt="" data-alt="ca_t"></figure>
+  </div>
+  <div class="wrap" style="margin-top:40px"><div class="mosaique" data-photos="ca1:ca_t,ca2:ca_t,ca3:ca_t,ca4:ca_t"></div></div>
+ </section>
+</div>
+
+<!-- ATELIER -->
+<div class="vue" data-vue="atelier">
+ <section>
+  <div class="wrap duo">
+   <div><h1 data-t="vi_t"></h1><p class="intro" data-t="vi_p"></p><p data-t="vi_perso"></p><p class="qui" data-t="epv"></p></div>
+   <figure><img src="img/at1.jpg" alt="" data-alt="vi_t"></figure>
+  </div>
+ </section>
+ <section class="sombre">
+  <div class="wrap"><h2 data-t="fb_t"></h2><p class="intro" data-t="fb_i"></p><div class="dix" data-dix></div><p style="margin-top:34px;color:#C3D1C8" data-t="fb_chif"></p></div>
+ </section>
+ <section id="virtuelle">
+  <div class="wrap"><h2 data-t="vv_t"></h2><p data-t="vv_p"></p>
+   <div data-vv><button class="btn btn-vert" type="button" data-t="vv_b"></button></div>
+  </div>
+ </section>
+ <section style="padding-top:0">
+  <div class="wrap"><div class="mosaique" data-photos="at2:vi_t,at4:vi_t,at5:vi_t,at6:vi_t,amb2:vi_t,four:s8t"></div></div>
+ </section>
+ <section class="sombre"><div class="wrap" style="max-width:880px"><h2 data-t="faq_t"></h2><div data-faq="1,2,3,4,5,6"></div></div></section>
+</div>
+
+<!-- HISTOIRE -->
+<div class="vue" data-vue="histoire">
+ <section class="sombre">
+  <div class="wrap"><h1 data-t="hs_t"></h1><p class="intro" data-t="hs_i"></p><ol class="frise" data-frise></ol></div>
+ </section>
+ <section>
+  <div class="wrap duo">
+   <figure><img loading="lazy" src="img/florian.jpg" alt="Florian Grare"></figure>
+   <div><blockquote style="margin:0"><p style="font:400 clamp(1.3rem,2.2vw,1.8rem)/1.35 Gloock,serif;color:var(--vert)" data-t="fl_q"></p><footer style="background:none;padding:0;color:var(--gris)" data-t="fl_s"></footer></blockquote></div>
+  </div>
+ </section>
+</div>
+
+<!-- INSTALLATION -->
+<div class="vue" data-vue="installation">
+ <section>
+  <div class="wrap"><h1 data-t="is_t"></h1><p class="intro" data-t="is_i"></p>
+   <div class="trois" style="margin-top:30px">
+    <article><img loading="lazy" src="img/in1.jpg" alt="" style="aspect-ratio:4/3;object-fit:cover;width:100%;border-radius:4px;margin-bottom:14px"><h3>1 · <span data-t="e1t"></span></h3><p data-t="e1"></p></article>
+    <article><img loading="lazy" src="img/in2.jpg" alt="" style="aspect-ratio:4/3;object-fit:cover;width:100%;border-radius:4px;margin-bottom:14px"><h3>2 · <span data-t="e2t"></span></h3><p data-t="e2"></p></article>
+    <article><img loading="lazy" src="img/in3.jpg" alt="" style="aspect-ratio:4/3;object-fit:cover;width:100%;border-radius:4px;margin-bottom:14px"><h3>3 · <span data-t="e3t"></span></h3><p data-t="e3"></p></article>
+   </div>
+   <p class="qui" style="margin-top:26px" data-t="is_zone"></p>
+  </div>
+ </section>
+ <section class="sombre"><div class="wrap" style="max-width:880px"><h2 data-t="faq_t"></h2><details><summary data-t="qi1"></summary><p data-t="ai1"></p></details><div data-faq="5"></div><p style="margin-top:24px"><a class="btn btn-or" href="#contact" data-t="cta_b1"></a></p></div></section>
+</div>
+
+<!-- RÉALISATIONS -->
+<div class="vue" data-vue="realisations"><section><div class="wrap"><h1 data-t="rl_t"></h1><p class="intro" data-t="rl_i"></p><div class="mosaique" data-galerie="18"></div></div></section></div>
+
+<!-- ACTUALITÉS -->
+<div class="vue" data-vue="actualites"><section><div class="wrap duo"><div><h1 data-t="ac_t"></h1><h2 data-t="ac1"></h2><p data-t="ac1p"></p></div><figure><img loading="lazy" src="img/foire.jpg" alt="" data-alt="foire_alt" style="aspect-ratio:auto;object-fit:contain"></figure></div></section></div>
+
+<!-- CATALOGUE -->
+<div class="vue" data-vue="catalogue">
+ <section>
+  <div class="wrap duo">
+   <div>
+    <h1 data-t="ct_t"></h1><p class="intro" data-t="ct_p"></p>
+    <form class="f" data-form="catalogue">
+     <label><span><span data-t="fm_civ"></span> *</span><select required><option data-t="fm_m"></option><option data-t="fm_mme"></option><option data-t="fm_mlle"></option></select></label><span></span>
+     <label><span><span data-t="fm_nom"></span> *</span><input required autocomplete="family-name"></label>
+     <label><span><span data-t="fm_pre"></span> *</span><input required autocomplete="given-name"></label>
+     <label class="plein"><span data-t="fm_adr"></span><input autocomplete="street-address"></label>
+     <label><span><span data-t="fm_cp"></span> *</span><input required autocomplete="postal-code" inputmode="numeric"></label>
+     <label><span><span data-t="fm_ville"></span> *</span><input required autocomplete="address-level2"></label>
+     <label><span data-t="fm_mail"></span><input type="email" autocomplete="email"></label>
+     <label><span><span data-t="fm_tel"></span> *</span><input required type="tel" autocomplete="tel"></label>
+     <div class="plein cases"><label><input type="checkbox" checked> <span data-t="fm_courrier"></span></label><label><input type="checkbox"> <span data-t="fm_email"></span></label></div>
+     <label class="plein rgpd"><input type="checkbox" required> <span data-t="fm_rgpd"></span></label>
+     <div class="plein"><button class="btn btn-vert" data-t="fm_env"></button> <small style="color:var(--gris);margin-left:10px" data-t="fm_oblig"></small></div>
+    </form>
+   </div>
+   <figure><img loading="lazy" src="img/g12.jpg" alt="" data-alt="ct_t"></figure>
+  </div>
+ </section>
+</div>
+
+<!-- CONTACT -->
+<div class="vue" data-vue="contact">
+ <section>
+  <div class="wrap"><h1 data-t="cn_t"></h1><p class="intro" data-t="cn_i"></p>
+   <div class="infos" style="margin:30px 0 40px">
+    <div><h3 data-t="cn_adr"></h3><p>Atelier Céramique Régnier<br>20 rue de l’Épinoy<br>62240 Menneville-Desvres</p><p><a class="lien" href="https://www.google.com/maps/search/?api=1&amp;query=50.66940476742089,1.8503666196438961" target="_blank" rel="noopener" data-t="cn_gps"></a></p></div>
+    <div><h3 data-t="cn_tel"></h3><p><a href="tel:+33321303090">03 21 30 30 90</a></p><h3 data-t="cn_mail"></h3><p><a href="mailto:magasin@ceramique-regnier.fr">magasin@ceramique-regnier.fr</a></p></div>
+    <div><h3 data-t="cn_h"></h3><p data-t="cn_h1"></p><p data-t="cn_h2"></p></div>
+   </div>
+   <form class="f" data-form="contact">
+    <label class="plein"><span><span data-t="fm_np"></span> *</span><input required autocomplete="name"></label>
+    <label><span data-t="fm_mail"></span><input type="email" autocomplete="email"></label>
+    <label><span><span data-t="fm_tel"></span> *</span><input required type="tel" autocomplete="tel"></label>
+    <label class="plein"><span><span data-t="fm_suj"></span> *</span><input required></label>
+    <label class="plein"><span><span data-t="fm_msg"></span> *</span><textarea required rows="5"></textarea></label>
+    <label class="plein rgpd"><input type="checkbox" required> <span data-t="fm_rgpd"></span></label>
+    <div class="plein"><button class="btn btn-vert" data-t="fm_send"></button> <small style="color:var(--gris);margin-left:10px" data-t="fm_oblig"></small></div>
+   </form>
+  </div>
+ </section>
+</div>
+
+<!-- SÉLECTION -->
+<div class="vue" data-vue="selection">
+ <section><div class="wrap" style="max-width:900px"><h1 data-t="se_t"></h1><div data-liste-sel></div>
+  <form class="f" data-form="selection" style="margin-top:30px">
+   <label class="plein"><span><span data-t="fm_np"></span> *</span><input required autocomplete="name"></label>
+   <label><span><span data-t="fm_tel"></span> *</span><input required type="tel" autocomplete="tel"></label>
+   <label><span data-t="fm_mail"></span><input type="email" autocomplete="email"></label>
+   <label class="plein"><span data-t="fm_ville"></span><input autocomplete="address-level2"></label>
+   <label class="plein rgpd"><input type="checkbox" required> <span data-t="fm_rgpd"></span></label>
+   <div class="plein"><button class="btn btn-vert" data-t="se_form"></button></div>
+  </form></div></section>
+</div>
+
+<!-- MENTIONS -->
+<div class="vue" data-vue="mentions"><section><div class="wrap" style="max-width:820px"><h1 data-t="ml_t"></h1><p data-t="ml_1"></p><p data-t="ml_2"></p><p data-t="ml_3"></p></div></section></div>
+</main>
+
+<footer>
+ <div class="wrap cols">
+  <div><h4>Régnier</h4><p data-t="sous_marque"></p><p class="qui" style="color:var(--laiton-c)" data-t="h_pr1"></p>
+   <div class="reseaux">
+    <a href="https://www.facebook.com/atelierceramiqueregnier" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M13.5 21v-7.5H16l.4-3h-2.9V8.6c0-.9.3-1.5 1.5-1.5h1.6V4.4c-.3 0-1.2-.1-2.3-.1-2.3 0-3.9 1.4-3.9 4v2.2H7.8v3h2.6V21h3.1z"/></svg></a>
+    <a href="https://www.instagram.com/atelierceramiqueregnier/" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24"><path d="M12 7.3A4.7 4.7 0 1 0 12 16.7 4.7 4.7 0 0 0 12 7.3zm0 7.7a3 3 0 1 1 0-6 3 3 0 0 1 0 6zm6-7.9a1.1 1.1 0 1 1-2.2 0 1.1 1.1 0 0 1 2.2 0zM21 8c-.1-1.5-.4-2.8-1.5-3.9S17.1 2.7 15.6 2.6C14 2.5 10 2.5 8.4 2.6 6.9 2.7 5.6 3 4.5 4.1S3 6.5 2.9 8c-.1 1.6-.1 6.4 0 8 .1 1.5.4 2.8 1.6 3.9 1.1 1.1 2.4 1.4 3.9 1.5 1.6.1 5.6.1 7.2 0 1.5-.1 2.8-.4 3.9-1.5s1.4-2.4 1.5-3.9c.1-1.6.1-6.4 0-8zm-2.1 9.7c-.3.8-1 1.5-1.8 1.8-1.2.5-4.2.4-5.6.4s-4.4.1-5.6-.4c-.8-.3-1.5-1-1.8-1.8-.5-1.2-.4-4.2-.4-5.6s-.1-4.4.4-5.6c.3-.8 1-1.5 1.8-1.8C7.1 4.2 10.1 4.3 11.5 4.3s4.4-.1 5.6.4c.8.3 1.5 1 1.8 1.8.5 1.2.4 4.2.4 5.6s.1 4.4-.4 5.6z"/></svg></a>
+   </div></div>
+  <div><h4 data-t="ft_dec"></h4><ul><li><a href="#modeles" data-t="n_mod"></a></li><li><a href="#cuisine" data-t="n_cui"></a></li><li><a href="#sur-mesure" data-t="n_sm"></a></li><li><a href="#carrelage" data-t="n_car"></a></li><li><a href="#realisations" data-t="n_real"></a></li><li><a href="#actualites" data-t="n_act"></a></li></ul></div>
+  <div><h4 data-t="ft_ser"></h4><ul><li><a href="#atelier" data-t="n_at"></a></li><li><a href="#histoire" data-t="n_hist"></a></li><li><a href="#installation" data-t="n_ins"></a></li><li><a href="#catalogue" data-t="n_cat"></a></li><li><a href="#mentions" data-t="ml_t"></a></li></ul></div>
+  <div><h4 data-t="ft_vis"></h4><p>20 rue de l’Épinoy<br>62240 Menneville-Desvres</p><p><a href="tel:+33321303090">03 21 30 30 90</a><br><a href="mailto:magasin@ceramique-regnier.fr">magasin@ceramique-regnier.fr</a></p><p data-t="cn_h1"></p><p data-t="cn_h2"></p></div>
+ </div>
+ <div class="wrap mentions-b"><span data-t="ft_droits"></span><span data-t="ft_neo"></span></div>
+</footer>
+
+<div class="visio" role="dialog" aria-modal="true" aria-label="Photo"><button class="btn btn-or" type="button" data-fermer-visio>×</button><div><img alt=""><p></p></div></div>
+<div class="toast" role="status" aria-live="polite"></div>
+
+<button class="cons-btn" type="button" aria-haspopup="dialog"><span class="av">R</span><span><b data-t="n_cons"></b><small data-t="cs_sub"></small></span></button>
+<div class="cons-invite" role="note"><button type="button" aria-label="Fermer">×</button><b data-t="n_cons"></b> · <span class="av-mention" data-t="cs_av"></span><br><span data-t="cs_inv"></span></div>
+<div class="cons" role="dialog" aria-modal="false" aria-labelledby="cons-titre">
+ <header><span class="av">R</span><div><b id="cons-titre" data-t="n_cons"></b><small data-t="cs_av"></small></div><button type="button" aria-label="Fermer" data-fermer-cons>×</button></header>
+ <div class="fil-msg" aria-live="polite"></div>
+ <div class="puces"></div>
+ <form><label class="sr" for="cons-q" data-t="cs_ph"></label><input id="cons-q" autocomplete="off"><button class="btn btn-vert" data-t="cs_go"></button></form>
+</div>
+
+<script>
+const PRODUITS=[
+// id, nom, type (b bois / g granulés), four, dimensions H×L×P, kW, kg, rendement, accroche [fr,en,es,de,it,nl]
+[1181,"Alexandra","b",0,"145 × 102 × 53 cm","10 kW","500 kg","78 %",["Avec rehausse, pour les décors de Rouen, Delft ou Strasbourg.","With a top extension, made for Rouen, Delft or Strasbourg patterns.","Con realce, ideal para los decorados de Rouen, Delft o Estrasburgo.","Mit Aufsatz – für Dekore aus Rouen, Delft oder Straßburg.","Con alzata, per i decori di Rouen, Delft o Strasburgo.","Met opzetstuk, voor decors uit Rouen, Delft of Straatsburg."]],
+[1121,"Angélina","b",0,"","","","",["La faïence d’art, version poêle à bois.","Art faience, in wood stove form.","La loza artística, en forma de estufa de leña.","Kunstfayence als Holzofen.","La maiolica d’arte, in forma di stufa a legna.","Kunstfaience, als houtkachel."]],
+[3596,"Anna","b",0,"115 × 94 × 47 cm","10 kW","500 kg","78 %",["Sobre, élégant, en faïence de Desvres.","Understated and elegant, in Desvres faience.","Sobria y elegante, en loza de Desvres.","Schlicht und elegant, aus Desvres-Fayence.","Sobria ed elegante, in maiolica di Desvres.","Sober en elegant, in faience uit Desvres."]],
+[1182,"Annabelle","b",0,"128 × 102 × 53 cm","10 kW","","78 %",["Décorée au pinceau, à main levée.","Painted freehand, brush by brush.","Decorada a pincel, a mano alzada.","Freihändig mit dem Pinsel bemalt.","Decorata a pennello, a mano libera.","Met de hand beschilderd, penseel voor penseel."]],
+[1212,"Cèdre","g",0,"127 × 75 × 52 cm","6 kW","310 kg","92 %",["Une ligne généreuse, aux granulés.","A generous outline, running on pellets.","Una silueta generosa, de pellets.","Eine großzügige Linie, mit Pellets.","Una linea generosa, a pellet.","Een royale lijn, op pellets."]],
+[1184,"Charline","b",0,"110 × 102 × 53 cm","10 kW","430 kg","78 %",["Pour adoucir l’hiver, les flammes en vue.","To soften winter, with the flames in view.","Para suavizar el invierno, con las llamas a la vista.","Macht den Winter milder – mit Blick aufs Feuer.","Per addolcire l’inverno, con le fiamme in vista.","Verzacht de winter, met zicht op de vlammen."]],
+[1186,"Clémence","b",0,"127 × 102 × 53 cm","10 kW","460 kg","78 %",["Une chaleur douce qui dure des heures.","Gentle warmth that lasts for hours.","Un calor suave que dura horas.","Sanfte Wärme, die stundenlang anhält.","Un calore dolce che dura per ore.","Zachte warmte die urenlang blijft."]],
+[1214,"Douglas","g",0,"","","","",["Moderne, économe, fait en France.","Modern, thrifty, made in France.","Moderna, económica, hecha en Francia.","Modern, sparsam, in Frankreich gefertigt.","Moderna, economica, fatta in Francia.","Modern, zuinig, gemaakt in Frankrijk."]],
+[2177,"Émile","b",0,"93 × 75 × 53 cm","5 kW","290 kg","84 %",["Le plus compact : pour les petits espaces.","The most compact: for small spaces.","La más compacta: para espacios pequeños.","Der kompakteste – für kleine Räume.","La più compatta: per gli spazi piccoli.","De meest compacte: voor kleine ruimtes."]],
+[1188,"Geneviève","b",0,"135 × 102 × 53 cm","10 kW","480 kg","78 %",["Des décors peints à l’infini.","Endless hand-painted patterns.","Decorados pintados hasta el infinito.","Unendlich viele handgemalte Dekore.","Decori dipinti all’infinito.","Eindeloos veel handgeschilderde decors."]],
+[2269,"Gustave","b",1,"","10 kW","600 kg","78 %",["Un four pour le poulet rôti et les madeleines.","An oven for roast chicken and madeleines.","Un horno para el pollo asado y las magdalenas.","Ein Ofen für Brathähnchen und Madeleines.","Un forno per il pollo arrosto e le madeleine.","Een oven voor braadkip en madeleines."]],
+[3552,"Hyppolite","b",1,"","10 kW","","78 %",["Silhouette élancée, four généreux.","A slender silhouette, a generous oven.","Silueta esbelta, horno generoso.","Schlanke Silhouette, großzügiger Backofen.","Silhouette slanciata, forno generoso.","Slank silhouet, royale oven."]],
+[2722,"If","g",0,"","6 kW","","92 %",["Les granulés, sous un décor peint main.","Pellet heating beneath a hand-painted pattern.","Pellets bajo un decorado pintado a mano.","Pellets unter einem handgemalten Dekor.","Pellet sotto un decoro dipinto a mano.","Pellets onder een handgeschilderd decor."]],
+[3600,"Julia","b",0,"128 × 85 × 62 cm","11 kW","","84 %",["Façonné à la main, pensé pour durer.","Shaped by hand, built to last.","Modelada a mano, pensada para durar.","Von Hand geformt, für die Ewigkeit gedacht.","Modellata a mano, pensata per durare.","Met de hand gevormd, gemaakt om lang mee te gaan."]],
+[1192,"Laëtitia","b",0,"","","","",["Noir, façade droite chromée : contemporain.","Black, with a straight chrome front: contemporary.","Negra, frontal recto cromado: contemporánea.","Schwarz, gerade verchromte Front – zeitgemäß.","Nera, frontale dritto cromato: contemporanea.","Zwart, rechte verchroomde voorkant: eigentijds."]],
+[3559,"Léa","b",0,"132 × 93 × 44 cm","10 kW","","78 %",["Graphique : un damier noir et blanc.","Graphic: a black-and-white checkerboard.","Gráfica: un damero blanco y negro.","Grafisch: ein schwarz-weißes Schachbrett.","Grafica: una scacchiera bianca e nera.","Grafisch: een zwart-wit dambord."]],
+[1196,"Léandre","b",1,"","","","",["Gratins et plats mijotés, au four.","Gratins and slow-cooked dishes, in the oven.","Gratinados y guisos, al horno.","Gratins und Schmorgerichte aus dem Ofen.","Gratin e piatti in umido, al forno.","Gratins en stoofschotels, uit de oven."]],
+[2714,"Lucien","b",1,"","","","",["Pour les gourmands : quiche, rôti, crumble.","For food lovers: quiche, roasts, crumble.","Para golosos: quiche, asado, crumble.","Für Genießer: Quiche, Braten, Crumble.","Per i golosi: quiche, arrosto, crumble.","Voor lekkerbekken: quiche, gebraad, crumble."]],
+[2265,"Marceau","b",0,"","","","",["Foyer triple combustion, très peu de cendres.","Triple-combustion firebox, very little ash.","Hogar de triple combustión, muy poca ceniza.","Dreifach-Verbrennung, kaum Asche.","Focolare a tripla combustione, pochissima cenere.","Haard met drievoudige verbranding, weinig as."]],
+[2173,"Marie","b",0,"","","","",["Le charme d’autrefois, la chaleur par accumulation.","Old-world charm, storage-heat warmth.","El encanto de antaño, calor por acumulación.","Charme von früher, Speicherwärme.","Il fascino di un tempo, calore ad accumulo.","Charme van vroeger, warmte door accumulatie."]],
+[1200,"Martine","b",0,"","","","",["Formes arrondies, grandes flammes.","Rounded lines, big flames.","Formas redondeadas, grandes llamas.","Runde Formen, große Flammen.","Forme arrotondate, grandi fiamme.","Ronde vormen, grote vlammen."]],
+[1216,"Mélèze","g",0,"127 × 75 × 52 cm","6 kW","","92 %",["Un vrai objet de décor, aux granulés.","A true decorative piece, running on pellets.","Un verdadero objeto decorativo, de pellets.","Ein echtes Schmuckstück, mit Pellets.","Un vero oggetto d’arredo, a pellet.","Een echt sierstuk, op pellets."]],
+[1202,"Monique","b",0,"","","","",["La tradition, avec une touche moderne.","Tradition, with a modern touch.","La tradición, con un toque moderno.","Tradition mit modernem Akzent.","La tradizione, con un tocco moderno.","Traditie, met een moderne toets."]],
+[1204,"Muriel","b",0,"","","","",["Avec sa rehausse : un cocon de chaleur.","With its top extension: a cocoon of warmth.","Con su realce: un capullo de calor.","Mit Aufsatz – ein Kokon aus Wärme.","Con la sua alzata: un bozzolo di calore.","Met opzetstuk: een cocon van warmte."]],
+[1206,"Octave","b",0,"","","","",["Lignes épurées, feu qui crépite.","Clean lines, a crackling fire.","Líneas depuradas, fuego que crepita.","Klare Linien, knisterndes Feuer.","Linee essenziali, fuoco che crepita.","Strakke lijnen, knisperend vuur."]],
+[2272,"Oscar","b",0,"","","","",["Ligne sobre, grande vision du feu.","A sober line, a wide view of the fire.","Línea sobria, gran visión del fuego.","Schlichte Linie, großer Blick aufs Feuer.","Linea sobria, ampia visione del fuoco.","Sobere lijn, groot zicht op het vuur."]],
+[2179,"Paul","b",0,"","","","",["Une chaleur qui ne dessèche pas l’air.","Warmth that doesn’t dry the air.","Un calor que no reseca el aire.","Wärme, die die Luft nicht austrocknet.","Un calore che non secca l’aria.","Warmte die de lucht niet uitdroogt."]],
+[1208,"Perrine","b",0,"","","","",["Sur banquette, portes en étain ou laiton.","On a bench, with pewter or brass doors.","Sobre banco, puertas de estaño o latón.","Auf einer Ofenbank, Türen aus Zinn oder Messing.","Su panca, ante in peltro o ottone.","Op een bank, deuren in tin of messing."]],
+[3589,"PIN","g",0,"82 × 94 × 59 cm","7 kW","","",["Compact et discret, remarquable d’élégance.","Compact and discreet, remarkably elegant.","Compacta y discreta, de notable elegancia.","Kompakt und diskret, bemerkenswert elegant.","Compatta e discreta, di grande eleganza.","Compact en discreet, opvallend elegant."]],
+[1217,"Séquoia","g",0,"","10,2 kW","","88,1 %",["Une pièce de caractère pour le salon.","A piece with character for the living room.","Una pieza con carácter para el salón.","Ein Stück mit Charakter fürs Wohnzimmer.","Un pezzo di carattere per il salotto.","Een stuk met karakter voor de woonkamer."]],
+[2728,"Sylvestre","g",0,"123 × 66 × 50 cm","6 kW","","92 %",["Silencieux et économe.","Quiet and economical.","Silenciosa y económica.","Leise und sparsam.","Silenziosa ed economica.","Stil en zuinig."]],
+[1210,"Yveline","b",0,"","","","",["Fine et élégante, une chaleur constante.","Slim and elegant, steady warmth.","Fina y elegante, un calor constante.","Schlank und elegant, gleichmäßige Wärme.","Sottile ed elegante, un calore costante.","Slank en elegant, constante warmte."]]
+];
+
+const T={};
+T.fr={
+n_mod:"Modèles",n_cui:"Espace cuisine",n_sm:"Sur mesure",n_car:"Carrelage",n_at:"L’atelier",n_hist:"Histoire",n_ins:"Installation",n_real:"Réalisations",n_act:"Actualités",n_con:"Contact",n_cons:"Régnier Conseil",n_sel:"Ma sélection",n_cat:"Catalogue",sous_marque:"Atelier Céramique · Desvres",
+h_t:"Le feu, habillé de faïence peinte à la main.",h_p:"Poêles à bois et à granulés façonnés, peints et cuits dans notre atelier de Desvres depuis 1989. Chaque pièce est numérotée et signée par son décorateur.",h_b1:"Voir les 32 modèles",h_b2:"Recevoir le catalogue",h_pr1:"Entreprise du Patrimoine Vivant",h_pr2:"Fabriqué à Desvres (62)",h_pr3:"Posé par nos équipes, en France et en Belgique",
+p_t:"Du poncif au pinceau",p_i:"Le décor d’un carreau se transmet comme autrefois. Faites défiler : il naît sous vos yeux.",p1t:"Le poncif",p1:"Une feuille de calque percée de petits trous suit le contour du décor.",p2t:"Le charbon",p2:"On tamponne une bourse de charbon de bois : le dessin passe en pointillés sur la pièce.",p3t:"Le pinceau",p3:"Le décorateur trace les contours, puis pose les couleurs, à main levée.",p4t:"Le feu",p4:"Une nuit au four, jusqu’à 1 200 °C. L’émail se vitrifie, les couleurs s’éveillent.",p_cap:"Esquisse d’illustration. Les vrais décors se choisissent sur échantillons, au showroom.",p_cta:"Les 10 étapes de fabrication",
+fa_t:"Choisissez votre feu",fa_i:"Bois, granulés, cuisine ou cheminée existante : tout est fabriqué ici, à la commande.",fam1:"Poêles à bois",fam1s:"25 modèles",fam2:"Poêles à granulés",fam2s:"7 modèles",fam3:"Espace cuisine",fam3s:"Cuisinières et fours",fam4:"Sur mesure",fam4s:"Poêles et habillages de cheminée",
+ch_t:"Une chaleur qui reste, longtemps après le feu",ch_p:"La céramique emmagasine la chaleur du foyer, puis la rend doucement pendant de longues heures. Le métal chauffe vite et refroidit aussi vite ; la faïence, elle, diffuse une chaleur douce et homogène, même feu éteint.",ch_p2:"L’air n’est ni desséché ni surchauffé, la poussière n’est pas brassée. Et la faïence ne se déforme pas : elle garde son éclat des décennies.",ch_b:"Comment naît un poêle",
+co_t:"Composez votre poêle",co_i:"Un modèle, un émail, un décor : esquissez votre idée, l’atelier la rendra réelle.",co_m:"Modèle",co_e:"Émail",co_d:"Décor",co_o:"Options",co_btn:"Ajouter cette idée à ma sélection",co_cap:"Esquisse indicative : teintes et décors réels sur échantillons, au showroom.",
+e_vert:"Vert anglais",e_noir:"Satin noir",e_ivoire:"Ivoire satin",e_rouge:"Rouge opale",e_agave:"Vert agave",e_gris:"Gris satin",e_taupe:"Taupe",e_ambre:"Ambre satin",
+d_oeillet:"Œillets",d_rouen:"Rouen",d_delft:"Delft",d_damier:"Damier",d_uni:"Uni",o_four:"Four",o_cp:"Chauffe-plat",o_reh:"Rehausse",o_lai:"Porte laiton",
+at_t:"Derrière la porte de l’atelier",at_p:"1 800 m² d’atelier, 600 m² de showroom, plus de 35 modèles exposés, dont plusieurs allumés. Ceux qui l’ont visité en ressortent subjugués.",at_b:"Visiter l’atelier",at_b2:"Visite virtuelle à 360°",
+hi_t:"Depuis 1989, à Desvres",hi_p:"Jean-Michel Régnier a ouvert l’atelier dans 40 m². Florian Grare, enfant du pays, le dirige depuis 2016. Entre les deux : plus de 35 ans de faïence desvroise, et 22 salariés.",hi_b:"Lire l’histoire",
+re_t:"Ils l’ont fait chez eux",re_b:"Toutes les réalisations",
+in_t:"De la visite technique au premier feu",in_p:"Nos propres équipes posent votre poêle partout en France et en Belgique : un seul interlocuteur, du conduit jusqu’aux derniers réglages.",in_b:"Comment ça se passe",
+cta_t:"Venez voir le feu en vrai",cta_p:"600 m² de showroom à Menneville-Desvres. Du lundi au vendredi, 9 h-12 h et 14 h-18 h ; le samedi, 10 h-12 h et 14 h-18 h.",cta_b1:"Préparer ma visite",cta_b2:"Appeler l’atelier",
+mo_t:"Nos poêles en faïence",mo_i:"Chaque modèle se fabrique à la commande : dimensions, émail, décor et finitions à votre goût. La puissance, nous la calculons avec vous selon la surface de votre pièce.",f_tous:"Tous",f_bois:"Bois",f_gra:"Granulés",f_four:"Avec four",mo_opt_t:"À ajouter à votre poêle",mo_opt:"Un four pour cuire ou réchauffer vos plats, un chauffe-plat pour garder au chaud, une rehausse pour plus de présence.",
+gr_t:"Le granulé, simple et économe",gr_p:"De petits bâtonnets de résidus de scierie compactés, vendus en sacs de 15 kg, en palette de 66 sacs ou en vrac. Faciles à stocker : 1 kg de granulés donne environ 5 kWh de chauffage.",
+b_voir:"Voir le modèle",b_aj:"Ajouter",b_ret:"Retirer",lbl_b:"Poêle à bois",lbl_g:"Poêle à granulés",lbl_four:"avec four",aj_ok:"ajouté à votre sélection",
+fi_dim:"Dimensions (H × L × P)",fi_kw:"Puissance",fi_kg:"Poids",fi_rdt:"Rendement",fi_four:"Four intégré",fi_oui:"Oui",fi_nc:"Précisé avec l’atelier",fi_r1:"Fabriqué à la commande dans notre atelier de Desvres",fi_r2:"Pièces numérotées et signées par le décorateur",fi_r3:"Visite technique et pose par nos équipes, en France et en Belgique",fi_r4:"Toutes teintes et tous décors, sur échantillons",fi_b1:"Ajouter à ma sélection",fi_b2:"Demander une étude",fi_prix:"Prix sur étude personnalisée, après la visite technique.",fi_ret:"Tous les modèles",fi_aussi:"Dans le même esprit",fi_txt_b:"Une flambée, puis des heures de chaleur douce : la faïence stocke et rend la chaleur du bois.",fi_txt_g:"Le confort des granulés, sous un habillage de faïence entièrement personnalisable.",
+cu_t:"Espace cuisine",cu_p1:"Une cuisinière, un poêle à bois avec four, un chauffe-plat, une plaque en fonte pour mijoter : à vous de choisir.",cu_p2:"En partenariat avec Wekos, Régnier habille de faïence les plus belles cuisinières à bois : fonte massive, céramique, émail, inox, laiton, et la technologie d’aujourd’hui.",cu_p3:"Un seul fourneau pour trois fonctions, et le spectacle du feu derrière la porte vitrée.",cu_fours:"Nos poêles avec four",cu_c1:"Cuisinière à bois Classic 90, finition laiton",cu_c2:"Cuisinière à bois Classic 106",cu_c3:"Cuisinière à bois 165 LGE, inox brillant",cu_c4:"Cuisinière à bois Classic 100, décor personnalisé",cu_c5:"Cuisinière habillée de faïence",
+sm_t:"Poêles sur mesure",sm_p:"Une banquette, un demi-poêle, une pièce qui monte jusqu’au plafond : l’atelier fabrique le poêle qui n’existe pas encore. Vous choisissez la forme, la couleur, le dessin ; les techniciens Régnier vous aident à créer.",sm_c1:"Poêle sur mesure au Barn Hôtel",sm_c2:"Poêle sur mesure multicolore",sm_c3:"Demi-poêle sur mesure",sm_c4:"Poêle sur mesure italien",sm_c5:"Ivoire satin, décor Desvres gris",
+hb_t:"Habillage de cheminée",hb_p:"Manteau en marbre, en briques, cheminée en pierre blanche… L’atelier transforme votre cheminée en œuvre d’art, moderne ou classique, entièrement sur mesure.",hb_p2:"Foyer droit ou cintré, porte en fonte, laiton, étain ou chromée : votre imagination fixe la seule limite.",hb_c1:"Habillage œillet manganèse",hb_c2:"Habillage pommier du Japon sur satin noir",hb_c3:"Charline dans une cheminée, porte laiton",
+ca_t:"Carrelage mural, fait main",ca_p1:"De la cuisine à la salle de bains, du hall d’entrée aux sanitaires : des carreaux muraux authentiques, héritiers de plus de deux siècles de faïence desvroise.",ca_p2:"Décors anciens, fresques, compositions florales, décorés à la main sur émail cru, comme les faïences d’art d’autrefois. On y sent la main de l’artisan, du tracé des contours à la pose des couleurs.",ca_b:"Voir les carreaux au showroom",
+fb_t:"La fabrication, en dix gestes",fb_i:"Chaque poêle compte une soixantaine de pièces. Toutes passent par les mêmes mains, ici, à Desvres.",
+s1t:"Le modelage",s1q:"Philippe",s1:"Philippe dessine et façonne à la main les moules en plâtre de chaque pièce. Un moule sert une cinquantaine de fois, pas plus, pour garder des formes parfaites.",
+s2t:"La barbotine",s2q:"",s2:"Terre, eau et chamotte, dosées au malaxeur : la pâte liquide dont naîtront toutes les pièces.",
+s3t:"Le coulage",s3q:"Philippe et Joël",s3:"Le plâtre boit l’eau, la céramique se forme contre la paroi. Après 24 heures, on démoule chaque pièce avec précaution.",
+s4t:"L’ébardage",s4q:"",s4:"Au couteau et au pinceau, chaque pièce est lissée, sans bavure, pour des assemblages précis.",
+s5t:"L’engobage",s5q:"Vincent",s5:"Vincent pulvérise l’engobe, un mélange d’eau, d’argile et d’émail : une base bien blanche pour le décor.",
+s6t:"La décoration",s6q:"Les décorateurs",s6:"Poncif, charbon de bois, pinceau : chaque pièce est décorée une à une, à main levée.",
+s7t:"L’émaillage",s7q:"Rémy",s7:"Rémy pulvérise en plusieurs couches un émail d’oxydes métalliques : il protège la pièce et révèle les couleurs.",
+s8t:"L’enfournement",s8q:"",s8:"Une nuit au four électrique, par paliers, jusqu’à environ 1 200 °C. Chaque four accueille jusqu’à deux poêles.",
+s9t:"Le pré-montage",s9q:"David et Mickaël",s9:"Assemblage au béton réfractaire, joints de silicone, puis une journée de séchage.",
+s10t:"L’assemblage",s10q:"Guillaume et Lucas",s10:"Montage final et contrôle par le chef d’atelier, avant la mise en caisse et la pose chez vous.",
+fb_chif:"Plus de 35 ans d’expérience · 1 800 m² d’atelier · 600 m² de showroom · plus de 35 modèles exposés · fabrication 100 % française",
+vi_t:"Visiter l’atelier",vi_p:"Du modelage à l’émaillage, des décors aux cuissons : tous les métiers de la céramique sous un même toit. Puis le showroom : poêles allumés, faïences d’art, carrelages muraux, émaux et décors à comparer.",vi_perso:"À personnaliser : forme et dimensions, couleur des émaux, décors peints à la main, relief des carreaux, finitions et accessoires.",
+vv_t:"Visite virtuelle",vv_p:"Parcourez l’atelier et le showroom à 360°, depuis votre canapé.",vv_b:"Lancer la visite à 360°",
+epv:"Entreprise du Patrimoine Vivant depuis 2018 : un label de l’État pour les savoir-faire d’excellence.",
+faq_t:"Questions fréquentes",
+q1:"Combien de temps faut-il pour fabriquer un poêle ?",a1:"Plusieurs semaines : modelage, séchage, cuissons, émaillage, décoration, assemblage et contrôles. Ce temps garantit la qualité de la céramique et ses performances.",
+q2:"Les poêles sont-ils vraiment fabriqués en France ?",a2:"Oui. Toutes les étapes sont réalisées dans notre atelier de Desvres, dans le Pas-de-Calais, depuis 1989.",
+q3:"Peut-on personnaliser son poêle ?",a3:"Oui : couleur de la céramique, décors peints, finitions et habillages selon le modèle. Chaque poêle est fabriqué à la commande.",
+q4:"Pourquoi la faïence plutôt que l’acier ?",a4:"La céramique accumule la chaleur puis la restitue pendant des heures : une chaleur plus douce et plus homogène, même feu éteint.",
+q5:"Combien de temps dure un poêle en céramique ?",a5:"Plusieurs décennies, s’il est bien installé et entretenu. Nous fabriquons et posons nos propres poêles, et en assurons le suivi.",
+q6:"Pourquoi visiter l’atelier ?",a6:"Pour voir chaque étape, du façonnage des carreaux au décor à la main, et découvrir toutes les possibilités de personnalisation.",
+hs_t:"L’histoire",hs_i:"À Desvres, 5 000 habitants près de Boulogne-sur-Mer, la faïence est sacrée depuis le XVIIIe siècle. L’atelier, c’est l’histoire d’une équipe, et de deux hommes.",
+y1989:"Jean-Michel Régnier, l’un des derniers céramistes d’art de Desvres, crée l’atelier dans 40 m². Il y travaille seul près de huit ans.",y1997:"Premier salarié.",y1998:"Moules, biscuits et modèles rejoignent l’atelier à la fermeture de la fabrique de faïence Delarue.",y1999:"Des locaux plus spacieux. Les poêles font 90 % de la production, à côté de vases, fontaines et pompes à bière en faïence.",ypuis:"Un atelier de 2 000 m² et un magasin d’usine de 600 m² à l’entrée de Desvres.",y2015:"Rencontre avec Florian Grare.",y2016:"Florian prend les commandes, épaulé par Jean-Michel à la production. Poêles à granulés et cuisinières rejoignent la gamme.",y2018:"Label Entreprise du Patrimoine Vivant.",y2019:"Trente ans après la création, nouveaux locaux près des anciens ateliers, pour les 22 salariés.",yp:"Puis",
+fl_q:"« Ma famille vient de Desvres, et c’est naturellement que j’ai choisi d’y construire la mienne. Je suis fier de perpétuer la tradition du poêle en faïence. La chaleur du bois crée une atmosphère où le temps semble suspendu. »",fl_s:"Florian Grare, dirigeant depuis 2016",
+is_t:"Installation",is_i:"Fabriquer sur mesure, c’est aussi poser sur mesure. Nos équipes connaissent chaque poêle sorti de l’atelier.",
+e1t:"La visite technique",e1:"Chez vous, notre technicien étudie la maison et le conduit, détermine la puissance et l’emplacement idéal, et répond à toutes vos questions.",
+e2t:"Les travaux",e2:"Démolition de l’ancien foyer, tubage, maçonnerie, mise aux normes, création du support : votre intérieur est protégé tout au long du chantier.",
+e3t:"La pose et le premier feu",e3:"Raccordements, contrôles, mise en service. Puis on vous explique l’usage et l’entretien.",
+is_zone:"Livraison et pose partout en France et en Belgique.",qi1:"Comment se déroule l’installation d’un poêle à bois ?",ai1:"Visite technique, travaux préparatoires si besoin, pose, raccordements, réglages et mise en service, puis explications d’usage et d’entretien avant notre départ.",
+rl_t:"Réalisations",rl_i:"Quelques-uns de nos poêles, chez ceux qui les ont imaginés avec nous.",
+ac_t:"Actualités",ac1:"Foire de Paris 2026",ac1p:"L’atelier exposait à la Foire de Paris 2026, du 30 avril au 11 mai, à Paris Expo Porte de Versailles. Pour la prochaine date, l’atelier vous renseigne au 03 21 30 30 90.",
+ct_t:"Recevoir le catalogue",ct_p:"Tous les modèles, tous les coloris, tous les décors et les options. Par courrier ou par e-mail.",
+fm_civ:"Civilité",fm_m:"Monsieur",fm_mme:"Madame",fm_mlle:"Mademoiselle",fm_nom:"Nom",fm_pre:"Prénom",fm_adr:"Adresse",fm_cp:"Code postal",fm_ville:"Ville",fm_mail:"E-mail",fm_tel:"Téléphone",fm_courrier:"Par courrier",fm_email:"Par e-mail",fm_rgpd:"J’accepte que ces informations soient utilisées pour traiter ma demande.",fm_env:"Recevoir le catalogue",fm_ok:"Merci, votre demande est notée. (Maquette : aucun envoi réel.)",fm_oblig:"* champs obligatoires",fm_np:"Nom et prénom",fm_suj:"Sujet",fm_msg:"Message",fm_send:"Envoyer",
+cn_t:"Contact",cn_i:"Une question, un projet, une visite ? L’atelier vous répond.",cn_adr:"Adresse",cn_tel:"Téléphone",cn_mail:"E-mail",cn_h:"Horaires",cn_h1:"Lundi au vendredi : 9 h-12 h, 14 h-18 h",cn_h2:"Samedi : 10 h-12 h, 14 h-18 h",cn_gps:"Itinéraire (GPS 50.6694, 1.8504)",
+se_t:"Ma sélection",se_vide:"Votre sélection est vide. Ajoutez les modèles qui vous plaisent : l’atelier vous rappelle pour une étude personnalisée.",se_form:"Demander mon étude personnalisée",se_ok:"Merci ! L’atelier vous rappelle pour fixer la visite technique. (Maquette : aucun envoi réel.)",se_idee:"Idée composée",
+ml_t:"Mentions légales",
+ft_vis:"Venir à l’atelier",ft_dec:"Découvrir",ft_ser:"Services",ft_suiv:"Nous suivre",ft_droits:"© Atelier Céramique Régnier · SAS au capital de 5 000 € · RCS Boulogne-sur-Mer 821 545 720",ft_neo:"Proposition de refonte Neovera Studio",
+cs_sub:"Je vous aide à choisir",cs_inv:"Bois ou granulés ? Quelle puissance ? Je vous aide à choisir votre poêle.",cs_av:"Assistant virtuel",cs_ph:"Posez votre question…",cs_go:"Envoyer",
+cs_w:"Bonjour, je suis Régnier Conseil, l’assistant virtuel de l’atelier. Je vous aide à choisir un modèle, préparer votre visite ou comprendre la pose.",
+c1:"Bois ou granulés ?",c2:"Un poêle avec four",c3:"Petit espace",c4:"Prix et délais",c5:"Visiter le showroom",c6:"La pose",
+r_gra:"Les granulés se chargent facilement et sont économes : 1 kg donne environ 5 kWh. Voici trois poêles à granulés :",
+r_bois:"Le bois, c’est le spectacle des flammes et une chaleur que la faïence garde des heures. Trois modèles appréciés :",
+r_four:"Avec four, vous cuisinez au feu de bois : rôtis, gratins, madeleines. Nos poêles avec four :",
+r_petit:"Pour un petit espace, deux modèles compacts : Émile (93 cm de haut, 5 kW) et le poêle à granulés PIN (82 cm, 7 kW).",
+r_kw:"La bonne puissance dépend de la pièce, de l’isolation et du conduit : l’atelier la calcule avec vous à la visite technique. Nos modèles vont de 5 kW (Émile) à 11 kW (Julia).",
+r_prix:"Les prix ne sont pas affichés : chaque poêle est fabriqué sur mesure, et le chiffrage se fait après la visite technique. La fabrication demande plusieurs semaines. Pour une date précise : 03 21 30 30 90.",
+r_vis:"Le showroom (600 m², plus de 35 modèles dont plusieurs allumés) est au 20 rue de l’Épinoy, 62240 Menneville-Desvres. Lundi au vendredi 9 h-12 h, 14 h-18 h ; samedi 10 h-12 h, 14 h-18 h.",
+r_pose:"Nos propres équipes posent partout en France et en Belgique : visite technique, travaux (tubage, maçonnerie, mise aux normes), pose et mise en service.",
+r_deco:"Tout se personnalise : émaux (vert anglais, satin noir, ivoire, rouge opale…), décors peints à main levée dans la tradition de Rouen, Delft, Strasbourg, Moustiers ou Bérain, rehausse, four, portes laiton ou étain.",
+r_cat:"Le catalogue présente tous les modèles, coloris et options. Je vous ouvre le formulaire.",
+r_fr:"Tout est fabriqué dans l’atelier de Desvres depuis 1989, et l’atelier est labellisé Entreprise du Patrimoine Vivant depuis 2018.",
+r_sais:"Je ne sais pas répondre à cela avec certitude, et je préfère ne pas inventer. L’équipe de l’atelier vous répond au 03 21 30 30 90 ou à magasin@ceramique-regnier.fr.",
+r_aj:"Ajouter",r_ouvrir:"Ouvrir le catalogue"
+};
+T.en={
+n_mod:"Stoves",n_cui:"Kitchen",n_sm:"Made to measure",n_car:"Wall tiles",n_at:"The workshop",n_hist:"Our story",n_ins:"Installation",n_real:"Our work",n_act:"News",n_con:"Contact",n_cons:"Régnier Advisor",n_sel:"My selection",n_cat:"Brochure",sous_marque:"Ceramic workshop · Desvres",
+h_t:"Fire, dressed in hand-painted faience.",h_p:"Wood and pellet stoves shaped, painted and fired in our Desvres workshop since 1989. Every piece is numbered and signed by its decorator.",h_b1:"See the 32 stoves",h_b2:"Get the brochure",h_pr1:"Living Heritage Company",h_pr2:"Made in Desvres, France",h_pr3:"Installed by our own teams in France and Belgium",
+p_t:"From pounce to brush",p_i:"A tile’s pattern is passed on the old way. Scroll down and watch it come to life.",p1t:"The pounce",p1:"A tracing sheet pricked with tiny holes follows the outline of the pattern.",p2t:"The charcoal",p2:"A pouch of charcoal is dabbed over it: the drawing appears on the piece as dots.",p3t:"The brush",p3:"The decorator traces the outlines, then lays the colours, freehand.",p4t:"The fire",p4:"One night in the kiln, up to 1,200 °C. The glaze vitrifies, the colours wake up.",p_cap:"Illustrative sketch. Real patterns are chosen from samples in the showroom.",p_cta:"The 10 making steps",
+fa_t:"Choose your fire",fa_i:"Wood, pellets, cooking or an existing fireplace: everything is made here, to order.",fam1:"Wood stoves",fam1s:"25 models",fam2:"Pellet stoves",fam2s:"7 models",fam3:"Kitchen",fam3s:"Cookers and ovens",fam4:"Made to measure",fam4s:"Stoves and fireplace cladding",
+ch_t:"Warmth that stays, long after the fire",ch_p:"Ceramic stores the heat of the fire and gives it back slowly for hours. Metal heats up fast and cools just as fast; faience spreads a gentle, even warmth, even once the fire is out.",ch_p2:"The air is neither dried out nor overheated, and dust isn’t stirred up. And faience never warps: it keeps its sheen for decades.",ch_b:"How a stove is born",
+co_t:"Design your stove",co_i:"A model, a glaze, a pattern: sketch your idea, and the workshop will make it real.",co_m:"Model",co_e:"Glaze",co_d:"Pattern",co_o:"Options",co_btn:"Add this idea to my selection",co_cap:"Indicative sketch: real colours and patterns on samples in the showroom.",
+e_vert:"English green",e_noir:"Satin black",e_ivoire:"Satin ivory",e_rouge:"Opal red",e_agave:"Agave green",e_gris:"Satin grey",e_taupe:"Taupe",e_ambre:"Satin amber",
+d_oeillet:"Carnations",d_rouen:"Rouen",d_delft:"Delft",d_damier:"Checkerboard",d_uni:"Plain",o_four:"Oven",o_cp:"Plate warmer",o_reh:"Top extension",o_lai:"Brass door",
+at_t:"Behind the workshop door",at_p:"1,800 m² of workshop, a 600 m² showroom, over 35 stoves on display, several of them lit. Visitors leave spellbound.",at_b:"Visit the workshop",at_b2:"360° virtual tour",
+hi_t:"In Desvres since 1989",hi_p:"Jean-Michel Régnier opened the workshop in 40 m². Florian Grare, a local, has run it since 2016. In between: over 35 years of Desvres faience, and 22 employees.",hi_b:"Read our story",
+re_t:"They did it at home",re_b:"See all our work",
+in_t:"From the survey visit to the first fire",in_p:"Our own teams install your stove anywhere in France and Belgium: one contact, from the flue to the final adjustments.",in_b:"How it works",
+cta_t:"Come and see the fire for real",cta_p:"600 m² showroom in Menneville-Desvres. Monday to Friday, 9am-12pm and 2pm-6pm; Saturday, 10am-12pm and 2pm-6pm.",cta_b1:"Plan my visit",cta_b2:"Call the workshop",
+mo_t:"Our faience stoves",mo_i:"Every model is made to order: size, glaze, pattern and finishes to your taste. We work out the right output with you, based on your room size.",f_tous:"All",f_bois:"Wood",f_gra:"Pellets",f_four:"With oven",mo_opt_t:"Add to your stove",mo_opt:"An oven to cook or reheat, a plate warmer to keep food warm, a top extension for more presence.",
+gr_t:"Pellets: simple and thrifty",gr_p:"Small sticks of compacted sawmill residue, sold in 15 kg bags, on pallets of 66 bags or loose. Easy to store: 1 kg of pellets gives about 5 kWh of heat.",
+b_voir:"See the stove",b_aj:"Add",b_ret:"Remove",lbl_b:"Wood stove",lbl_g:"Pellet stove",lbl_four:"with oven",aj_ok:"added to your selection",
+fi_dim:"Size (H × W × D)",fi_kw:"Output",fi_kg:"Weight",fi_rdt:"Efficiency",fi_four:"Built-in oven",fi_oui:"Yes",fi_nc:"Confirmed with the workshop",fi_r1:"Made to order in our Desvres workshop",fi_r2:"Pieces numbered and signed by the decorator",fi_r3:"Survey visit and installation by our teams, in France and Belgium",fi_r4:"Any colour, any pattern, chosen from samples",fi_b1:"Add to my selection",fi_b2:"Request a study",fi_prix:"Price on a personal study, after the survey visit.",fi_ret:"All stoves",fi_aussi:"In the same spirit",fi_txt_b:"One fire, then hours of gentle warmth: faience stores and releases the heat of the wood.",fi_txt_g:"The comfort of pellets, under a fully customisable faience cladding.",
+cu_t:"Kitchen",cu_p1:"A cooker, a wood stove with oven, a plate warmer, a cast-iron hob for slow cooking: the choice is yours.",cu_p2:"In partnership with Wekos, Régnier dresses the finest wood cookers in faience: solid cast iron, ceramic, enamel, stainless steel, brass, and today’s technology.",cu_p3:"One range, three uses, and the show of the fire behind the glass door.",cu_fours:"Our stoves with oven",cu_c1:"Classic 90 wood cooker, brass finish",cu_c2:"Classic 106 wood cooker",cu_c3:"165 LGE wood cooker, polished stainless steel",cu_c4:"Classic 100 wood cooker, custom pattern",cu_c5:"Cooker clad in faience",
+sm_t:"Made-to-measure stoves",sm_p:"A bench, a half-stove, a piece that rises to the ceiling: the workshop makes the stove that doesn’t exist yet. You choose the shape, colour and design; Régnier’s technicians help you create it.",sm_c1:"Made-to-measure stove at the Barn Hôtel",sm_c2:"Multicolour made-to-measure stove",sm_c3:"Made-to-measure half-stove",sm_c4:"Italian-style made-to-measure stove",sm_c5:"Satin ivory, grey Desvres pattern",
+hb_t:"Fireplace cladding",hb_p:"A marble or brick mantel, a white-stone fireplace… The workshop turns your fireplace into a work of art, modern or classic, fully made to measure.",hb_p2:"Straight or arched hearth, door in cast iron, brass, pewter or chrome: your imagination sets the only limit.",hb_c1:"Manganese carnation cladding",hb_c2:"Japanese apple-blossom cladding on satin black",hb_c3:"Charline in a fireplace, brass door",
+ca_t:"Handmade wall tiles",ca_p1:"From kitchen to bathroom, from hallway to cloakroom: authentic wall tiles, heirs to over two centuries of Desvres faience.",ca_p2:"Old patterns, frescoes, floral compositions, hand-painted on raw glaze like the art faience of the past. You can feel the craftsman’s hand, from outline to colour.",ca_b:"See the tiles in the showroom",
+fb_t:"Making a stove, in ten gestures",fb_i:"Each stove has around sixty pieces. All pass through the same hands, here in Desvres.",
+s1t:"Modelling",s1q:"Philippe",s1:"Philippe designs and shapes by hand the plaster moulds for every piece. A mould is used about fifty times, no more, to keep shapes perfect.",
+s2t:"The slip",s2q:"",s2:"Clay, water and grog, measured in the mixer: the liquid paste every piece is born from.",
+s3t:"Casting",s3q:"Philippe and Joël",s3:"The plaster drinks the water and the ceramic forms against the wall. After 24 hours, each piece is carefully removed.",
+s4t:"Fettling",s4q:"",s4:"With knife and brush, every piece is smoothed, burr-free, for precise assembly.",
+s5t:"Engobing",s5q:"Vincent",s5:"Vincent sprays the engobe, a mix of water, clay and glaze: a clean white base for the pattern.",
+s6t:"Decoration",s6q:"The decorators",s6:"Pounce, charcoal, brush: each piece is decorated one by one, freehand.",
+s7t:"Glazing",s7q:"Rémy",s7:"Rémy sprays several coats of metal-oxide glaze: it protects the piece and reveals the colours.",
+s8t:"Firing",s8q:"",s8:"One night in the electric kiln, in stages, up to about 1,200 °C. Each kiln holds up to two stoves.",
+s9t:"Pre-assembly",s9q:"David and Mickaël",s9:"Assembly with refractory concrete, silicone joints, then a day of drying.",
+s10t:"Final assembly",s10q:"Guillaume and Lucas",s10:"Final build and inspection by the workshop manager, before crating and installation at your home.",
+fb_chif:"Over 35 years of experience · 1,800 m² workshop · 600 m² showroom · over 35 stoves on display · 100% made in France",
+vi_t:"Visit the workshop",vi_p:"From modelling to glazing, from painting to firing: every ceramic trade under one roof. Then the showroom: lit stoves, art faience, wall tiles, glazes and patterns to compare.",vi_perso:"You can customise: shape and size, glaze colour, hand-painted patterns, tile relief, finishes and accessories.",
+vv_t:"Virtual tour",vv_p:"Explore the workshop and showroom in 360°, from your sofa.",vv_b:"Start the 360° tour",
+epv:"Living Heritage Company since 2018: a French state label for outstanding craftsmanship.",
+faq_t:"Frequently asked questions",
+q1:"How long does it take to make a stove?",a1:"Several weeks: modelling, drying, firings, glazing, decoration, assembly and checks. That time guarantees the quality and performance of the ceramic.",
+q2:"Are the stoves really made in France?",a2:"Yes. Every step is carried out in our Desvres workshop, in the Pas-de-Calais, since 1989.",
+q3:"Can I customise my stove?",a3:"Yes: ceramic colour, painted patterns, finishes and cladding depending on the model. Every stove is made to order.",
+q4:"Why faience rather than steel?",a4:"Ceramic stores heat and releases it for hours: a gentler, more even warmth, even once the fire is out.",
+q5:"How long does a ceramic stove last?",a5:"Several decades, if properly installed and maintained. We make and install our own stoves, and provide follow-up.",
+q6:"Why visit the workshop?",a6:"To see every step, from shaping the tiles to hand painting, and discover every customisation option.",
+hs_t:"Our story",hs_i:"In Desvres, a town of 5,000 near Boulogne-sur-Mer, faience has been sacred since the 18th century. The workshop is the story of a team, and of two men.",
+y1989:"Jean-Michel Régnier, one of the last art ceramists in Desvres, opens the workshop in 40 m². He works there alone for nearly eight years.",y1997:"First employee.",y1998:"Moulds, biscuits and models join the workshop when the Delarue faience factory closes.",y1999:"Larger premises. Stoves make up 90% of production, alongside faience vases, fountains and beer pumps.",ypuis:"A 2,000 m² workshop and a 600 m² factory shop at the entrance to Desvres.",y2015:"Meeting with Florian Grare.",y2016:"Florian takes the helm, backed by Jean-Michel in production. Pellet stoves and cookers join the range.",y2018:"Living Heritage Company label.",y2019:"Thirty years on, new premises near the old workshops, for the 22 employees.",yp:"Then",
+fl_q:"“My family comes from Desvres, and it felt natural to build my own here. I’m proud to carry on the tradition of the faience stove. The warmth of wood creates an atmosphere where time seems to stand still.”",fl_s:"Florian Grare, managing director since 2016",
+is_t:"Installation",is_i:"Making to measure means installing to measure too. Our teams know every stove that leaves the workshop.",
+e1t:"The survey visit",e1:"At your home, our technician studies the house and the flue, works out the output and the ideal spot, and answers all your questions.",
+e2t:"The works",e2:"Removing the old hearth, flue lining, masonry, bringing up to standard, building the base: your home is protected throughout.",
+e3t:"Installation and first fire",e3:"Connections, checks, commissioning. Then we explain how to use and maintain your stove.",
+is_zone:"Delivery and installation anywhere in France and Belgium.",qi1:"How is a wood stove installed?",ai1:"Survey visit, preparatory works if needed, installation, connections, adjustments and commissioning, then advice on use and care before we leave.",
+rl_t:"Our work",rl_i:"A few of our stoves, in the homes of those who imagined them with us.",
+ac_t:"News",ac1:"Foire de Paris 2026",ac1p:"The workshop exhibited at the Foire de Paris 2026, from 30 April to 11 May, at Paris Expo Porte de Versailles. For the next date, call the workshop on +33 3 21 30 30 90.",
+ct_t:"Get the brochure",ct_p:"Every model, every colour, every pattern and option. By post or by email.",
+fm_civ:"Title",fm_m:"Mr",fm_mme:"Mrs",fm_mlle:"Miss",fm_nom:"Last name",fm_pre:"First name",fm_adr:"Address",fm_cp:"Postcode",fm_ville:"Town",fm_mail:"Email",fm_tel:"Phone",fm_courrier:"By post",fm_email:"By email",fm_rgpd:"I agree that this information may be used to process my request.",fm_env:"Get the brochure",fm_ok:"Thank you, your request has been noted. (Mock-up: nothing is actually sent.)",fm_oblig:"* required fields",fm_np:"Full name",fm_suj:"Subject",fm_msg:"Message",fm_send:"Send",
+cn_t:"Contact",cn_i:"A question, a project, a visit? The workshop will answer.",cn_adr:"Address",cn_tel:"Phone",cn_mail:"Email",cn_h:"Opening hours",cn_h1:"Monday to Friday: 9am-12pm, 2pm-6pm",cn_h2:"Saturday: 10am-12pm, 2pm-6pm",cn_gps:"Directions (GPS 50.6694, 1.8504)",
+se_t:"My selection",se_vide:"Your selection is empty. Add the stoves you like: the workshop will call you back for a personal study.",se_form:"Request my personal study",se_ok:"Thank you! The workshop will call you to arrange the survey visit. (Mock-up: nothing is actually sent.)",se_idee:"Composed idea",
+ml_t:"Legal notice",
+ft_vis:"Visit the workshop",ft_dec:"Discover",ft_ser:"Services",ft_suiv:"Follow us",ft_droits:"© Atelier Céramique Régnier · SAS with share capital of €5,000 · RCS Boulogne-sur-Mer 821 545 720",ft_neo:"Redesign proposal by Neovera Studio",
+cs_sub:"I’ll help you choose",cs_inv:"Wood or pellets? What output? I’ll help you choose your stove.",cs_av:"Virtual assistant",cs_ph:"Ask your question…",cs_go:"Send",
+cs_w:"Hello, I’m Régnier Advisor, the workshop’s virtual assistant. I can help you choose a model, plan your visit or understand installation.",
+c1:"Wood or pellets?",c2:"A stove with oven",c3:"Small space",c4:"Prices and lead times",c5:"Visit the showroom",c6:"Installation",
+r_gra:"Pellets are easy to load and economical: 1 kg gives about 5 kWh. Here are three pellet stoves:",
+r_bois:"Wood means the show of the flames, and warmth the faience holds for hours. Three popular models:",
+r_four:"With an oven, you cook over wood: roasts, gratins, madeleines. Our stoves with oven:",
+r_petit:"For a small space, two compact models: Émile (93 cm high, 5 kW) and the PIN pellet stove (82 cm, 7 kW).",
+r_kw:"The right output depends on the room, the insulation and the flue: the workshop calculates it with you during the survey visit. Our models range from 5 kW (Émile) to 11 kW (Julia).",
+r_prix:"Prices aren’t published: each stove is made to measure, and the quote comes after the survey visit. Making takes several weeks. For a precise date: +33 3 21 30 30 90.",
+r_vis:"The showroom (600 m², over 35 stoves, several lit) is at 20 rue de l’Épinoy, 62240 Menneville-Desvres. Monday to Friday 9am-12pm, 2pm-6pm; Saturday 10am-12pm, 2pm-6pm.",
+r_pose:"Our own teams install anywhere in France and Belgium: survey visit, works (flue lining, masonry, compliance), installation and commissioning.",
+r_deco:"Everything can be customised: glazes (English green, satin black, ivory, opal red…), freehand patterns in the tradition of Rouen, Delft, Strasbourg, Moustiers or Bérain, top extension, oven, brass or pewter doors.",
+r_cat:"The brochure shows every model, colour and option. I’ll open the form for you.",
+r_fr:"Everything is made in the Desvres workshop since 1989, and the workshop has held the Living Heritage Company label since 2018.",
+r_sais:"I can’t answer that with certainty, and I’d rather not make things up. The workshop team will answer on +33 3 21 30 30 90 or at magasin@ceramique-regnier.fr.",
+r_aj:"Add",r_ouvrir:"Open the brochure form"
+};
+
+T.es={
+n_mod:"Modelos",n_cui:"Cocina",n_sm:"A medida",n_car:"Azulejos",n_at:"El taller",n_hist:"Historia",n_ins:"Instalación",n_real:"Realizaciones",n_act:"Noticias",n_con:"Contacto",n_cons:"Régnier Consejo",n_sel:"Mi selección",n_cat:"Catálogo",sous_marque:"Taller de cerámica · Desvres",
+h_t:"El fuego, vestido de loza pintada a mano.",h_p:"Estufas de leña y de pellets modeladas, pintadas y cocidas en nuestro taller de Desvres desde 1989. Cada pieza va numerada y firmada por su decorador.",h_b1:"Ver los 32 modelos",h_b2:"Recibir el catálogo",h_pr1:"Empresa del Patrimonio Vivo",h_pr2:"Fabricado en Desvres (Francia)",h_pr3:"Instalado por nuestros equipos en Francia y Bélgica",
+p_t:"Del estarcido al pincel",p_i:"El decorado de un azulejo se transmite como antaño. Desplácese: nace ante sus ojos.",p1t:"El estarcido",p1:"Una hoja de papel calco perforada sigue el contorno del decorado.",p2t:"El carbón",p2:"Se golpea con una bolsita de carbón vegetal: el dibujo pasa a la pieza en puntitos.",p3t:"El pincel",p3:"El decorador traza los contornos y luego aplica los colores, a mano alzada.",p4t:"El fuego",p4:"Una noche en el horno, hasta 1.200 °C. El esmalte se vitrifica, los colores despiertan.",p_cap:"Boceto ilustrativo. Los decorados reales se eligen con muestras en la sala de exposición.",p_cta:"Las 10 etapas de fabricación",
+fa_t:"Elija su fuego",fa_i:"Leña, pellets, cocina o chimenea existente: todo se fabrica aquí, por encargo.",fam1:"Estufas de leña",fam1s:"25 modelos",fam2:"Estufas de pellets",fam2s:"7 modelos",fam3:"Cocina",fam3s:"Cocinas y hornos",fam4:"A medida",fam4s:"Estufas y revestimiento de chimeneas",
+ch_t:"Un calor que se queda, mucho después del fuego",ch_p:"La cerámica almacena el calor del hogar y lo devuelve poco a poco durante horas. El metal calienta rápido y se enfría igual de rápido; la loza difunde un calor suave y homogéneo, incluso con el fuego apagado.",ch_p2:"El aire no se reseca ni se sobrecalienta, el polvo no se remueve. Y la loza no se deforma: conserva su brillo durante décadas.",ch_b:"Cómo nace una estufa",
+co_t:"Componga su estufa",co_i:"Un modelo, un esmalte, un decorado: esboce su idea, el taller la hará realidad.",co_m:"Modelo",co_e:"Esmalte",co_d:"Decorado",co_o:"Opciones",co_btn:"Añadir esta idea a mi selección",co_cap:"Boceto orientativo: colores y decorados reales con muestras en la sala.",
+e_vert:"Verde inglés",e_noir:"Negro satinado",e_ivoire:"Marfil satinado",e_rouge:"Rojo ópalo",e_agave:"Verde agave",e_gris:"Gris satinado",e_taupe:"Topo",e_ambre:"Ámbar satinado",
+d_oeillet:"Claveles",d_rouen:"Rouen",d_delft:"Delft",d_damier:"Damero",d_uni:"Liso",o_four:"Horno",o_cp:"Calientaplatos",o_reh:"Realce",o_lai:"Puerta de latón",
+at_t:"Tras la puerta del taller",at_p:"1.800 m² de taller, 600 m² de exposición, más de 35 modelos expuestos, varios encendidos. Quien lo visita sale fascinado.",at_b:"Visitar el taller",at_b2:"Visita virtual en 360°",
+hi_t:"En Desvres desde 1989",hi_p:"Jean-Michel Régnier abrió el taller en 40 m². Florian Grare, hijo de la tierra, lo dirige desde 2016. Entre ambos: más de 35 años de loza de Desvres y 22 empleados.",hi_b:"Leer la historia",
+re_t:"Lo hicieron en casa",re_b:"Todas las realizaciones",
+in_t:"De la visita técnica al primer fuego",in_p:"Nuestros propios equipos instalan su estufa en toda Francia y Bélgica: un solo interlocutor, del conducto a los últimos ajustes.",in_b:"Cómo funciona",
+cta_t:"Venga a ver el fuego de verdad",cta_p:"600 m² de exposición en Menneville-Desvres. De lunes a viernes, 9-12 h y 14-18 h; sábado, 10-12 h y 14-18 h.",cta_b1:"Preparar mi visita",cta_b2:"Llamar al taller",
+mo_t:"Nuestras estufas de loza",mo_i:"Cada modelo se fabrica por encargo: medidas, esmalte, decorado y acabados a su gusto. La potencia la calculamos con usted según la superficie de la estancia.",f_tous:"Todos",f_bois:"Leña",f_gra:"Pellets",f_four:"Con horno",mo_opt_t:"Para añadir a su estufa",mo_opt:"Un horno para cocinar o recalentar, un calientaplatos para mantener caliente, un realce para más presencia.",
+gr_t:"El pellet, sencillo y económico",gr_p:"Pequeños cilindros de residuos de aserradero compactados, en sacos de 15 kg, palés de 66 sacos o a granel. Fáciles de almacenar: 1 kg de pellets da unos 5 kWh de calefacción.",
+b_voir:"Ver el modelo",b_aj:"Añadir",b_ret:"Quitar",lbl_b:"Estufa de leña",lbl_g:"Estufa de pellets",lbl_four:"con horno",aj_ok:"añadido a su selección",
+fi_dim:"Medidas (Al × An × Pr)",fi_kw:"Potencia",fi_kg:"Peso",fi_rdt:"Rendimiento",fi_four:"Horno integrado",fi_oui:"Sí",fi_nc:"A precisar con el taller",fi_r1:"Fabricada por encargo en nuestro taller de Desvres",fi_r2:"Piezas numeradas y firmadas por el decorador",fi_r3:"Visita técnica e instalación por nuestros equipos, en Francia y Bélgica",fi_r4:"Todos los colores y decorados, con muestras",fi_b1:"Añadir a mi selección",fi_b2:"Solicitar un estudio",fi_prix:"Precio según estudio personalizado, tras la visita técnica.",fi_ret:"Todos los modelos",fi_aussi:"Con el mismo espíritu",fi_txt_b:"Un fuego y luego horas de calor suave: la loza almacena y devuelve el calor de la leña.",fi_txt_g:"La comodidad de los pellets, bajo un revestimiento de loza totalmente personalizable.",
+cu_t:"Cocina",cu_p1:"Una cocina de leña, una estufa con horno, un calientaplatos, una placa de fundición para guisar: usted elige.",cu_p2:"En colaboración con Wekos, Régnier viste de loza las cocinas de leña más bellas: fundición maciza, cerámica, esmalte, acero inoxidable, latón y la tecnología de hoy.",cu_p3:"Un solo fogón para tres funciones, y el espectáculo del fuego tras la puerta acristalada.",cu_fours:"Nuestras estufas con horno",cu_c1:"Cocina de leña Classic 90, acabado latón",cu_c2:"Cocina de leña Classic 106",cu_c3:"Cocina de leña 165 LGE, inox brillante",cu_c4:"Cocina de leña Classic 100, decorado personalizado",cu_c5:"Cocina revestida de loza",
+sm_t:"Estufas a medida",sm_p:"Un banco, media estufa, una pieza que sube hasta el techo: el taller fabrica la estufa que aún no existe. Usted elige la forma, el color y el dibujo; los técnicos de Régnier le ayudan a crearla.",sm_c1:"Estufa a medida en el Barn Hôtel",sm_c2:"Estufa a medida multicolor",sm_c3:"Media estufa a medida",sm_c4:"Estufa a medida de estilo italiano",sm_c5:"Marfil satinado, decorado Desvres gris",
+hb_t:"Revestimiento de chimenea",hb_p:"Repisa de mármol o de ladrillo, chimenea de piedra blanca… El taller convierte su chimenea en una obra de arte, moderna o clásica, totalmente a medida.",hb_p2:"Hogar recto o curvo, puerta de fundición, latón, estaño o cromada: su imaginación pone el único límite.",hb_c1:"Revestimiento claveles manganeso",hb_c2:"Revestimiento manzano del Japón sobre negro satinado",hb_c3:"Charline en una chimenea, puerta de latón",
+ca_t:"Azulejos murales hechos a mano",ca_p1:"De la cocina al baño, del recibidor al aseo: azulejos murales auténticos, herederos de más de dos siglos de loza de Desvres.",ca_p2:"Decorados antiguos, frescos, composiciones florales, pintados a mano sobre esmalte crudo como la loza artística de antaño. Se nota la mano del artesano.",ca_b:"Ver los azulejos en la sala",
+fb_t:"La fabricación, en diez gestos",fb_i:"Cada estufa tiene unas sesenta piezas. Todas pasan por las mismas manos, aquí en Desvres.",
+s1t:"El modelado",s1q:"Philippe",s1:"Philippe diseña y hace a mano los moldes de yeso de cada pieza. Un molde se usa unas cincuenta veces, no más, para mantener formas perfectas.",
+s2t:"La barbotina",s2q:"",s2:"Tierra, agua y chamota dosificadas en la mezcladora: la pasta líquida de la que nacen todas las piezas.",
+s3t:"El colado",s3q:"Philippe y Joël",s3:"El yeso absorbe el agua y la cerámica se forma contra la pared. A las 24 horas, cada pieza se desmolda con cuidado.",
+s4t:"El rebabado",s4q:"",s4:"Con cuchillo y pincel, cada pieza se alisa, sin rebabas, para un montaje preciso.",
+s5t:"El engobado",s5q:"Vincent",s5:"Vincent pulveriza el engobe, mezcla de agua, arcilla y esmalte: una base bien blanca para el decorado.",
+s6t:"La decoración",s6q:"Los decoradores",s6:"Estarcido, carbón, pincel: cada pieza se decora una a una, a mano alzada.",
+s7t:"El esmaltado",s7q:"Rémy",s7:"Rémy pulveriza en varias capas un esmalte de óxidos metálicos: protege la pieza y revela los colores.",
+s8t:"La cocción",s8q:"",s8:"Una noche en el horno eléctrico, por etapas, hasta unos 1.200 °C. Cada horno admite hasta dos estufas.",
+s9t:"El premontaje",s9q:"David y Mickaël",s9:"Montaje con hormigón refractario, juntas de silicona y un día de secado.",
+s10t:"El ensamblaje",s10q:"Guillaume y Lucas",s10:"Montaje final y control del jefe de taller, antes del embalaje y la instalación en su casa.",
+fb_chif:"Más de 35 años de experiencia · 1.800 m² de taller · 600 m² de exposición · más de 35 modelos expuestos · fabricación 100 % francesa",
+vi_t:"Visitar el taller",vi_p:"Del modelado al esmaltado, de la decoración a las cocciones: todos los oficios de la cerámica bajo un mismo techo. Y luego la sala: estufas encendidas, loza artística, azulejos, esmaltes y decorados para comparar.",vi_perso:"Para personalizar: forma y medidas, color de los esmaltes, decorados pintados a mano, relieve de los azulejos, acabados y accesorios.",
+vv_t:"Visita virtual",vv_p:"Recorra el taller y la sala de exposición en 360°, desde su sofá.",vv_b:"Iniciar la visita en 360°",
+epv:"Empresa del Patrimonio Vivo desde 2018: un sello del Estado francés para los oficios de excelencia.",
+faq_t:"Preguntas frecuentes",
+q1:"¿Cuánto se tarda en fabricar una estufa?",a1:"Varias semanas: modelado, secado, cocciones, esmaltado, decoración, montaje y controles. Ese tiempo garantiza la calidad de la cerámica y su rendimiento.",
+q2:"¿Las estufas se fabrican realmente en Francia?",a2:"Sí. Todas las etapas se realizan en nuestro taller de Desvres, en el Paso de Calais, desde 1989.",
+q3:"¿Se puede personalizar la estufa?",a3:"Sí: color de la cerámica, decorados pintados, acabados y revestimientos según el modelo. Cada estufa se fabrica por encargo.",
+q4:"¿Por qué loza y no acero?",a4:"La cerámica acumula el calor y lo devuelve durante horas: un calor más suave y homogéneo, incluso con el fuego apagado.",
+q5:"¿Cuánto dura una estufa de cerámica?",a5:"Varias décadas, si está bien instalada y mantenida. Fabricamos e instalamos nuestras estufas y hacemos su seguimiento.",
+q6:"¿Por qué visitar el taller?",a6:"Para ver cada etapa, del modelado de los azulejos al decorado a mano, y descubrir todas las opciones de personalización.",
+hs_t:"Historia",hs_i:"En Desvres, 5.000 habitantes cerca de Boulogne-sur-Mer, la loza es sagrada desde el siglo XVIII. El taller es la historia de un equipo y de dos hombres.",
+y1989:"Jean-Michel Régnier, uno de los últimos ceramistas de arte de Desvres, crea el taller en 40 m². Trabaja solo casi ocho años.",y1997:"Primer empleado.",y1998:"Moldes, bizcochos y modelos llegan al taller al cerrar la fábrica de loza Delarue.",y1999:"Locales más amplios. Las estufas son el 90 % de la producción, junto a jarrones, fuentes y grifos de cerveza de loza.",ypuis:"Un taller de 2.000 m² y una tienda de fábrica de 600 m² a la entrada de Desvres.",y2015:"Encuentro con Florian Grare.",y2016:"Florian toma el mando, con Jean-Michel en la producción. Llegan las estufas de pellets y las cocinas.",y2018:"Sello Empresa del Patrimonio Vivo.",y2019:"Treinta años después, nuevos locales junto a los antiguos talleres para los 22 empleados.",yp:"Después",
+fl_q:"«Mi familia es de Desvres, y fue natural construir aquí la mía. Estoy orgulloso de perpetuar la tradición de la estufa de loza. El calor de la leña crea un ambiente en el que el tiempo parece detenerse.»",fl_s:"Florian Grare, director desde 2016",
+is_t:"Instalación",is_i:"Fabricar a medida es también instalar a medida. Nuestros equipos conocen cada estufa que sale del taller.",
+e1t:"La visita técnica",e1:"En su casa, nuestro técnico estudia la vivienda y el conducto, determina la potencia y la ubicación ideal y responde a todas sus preguntas.",
+e2t:"Las obras",e2:"Retirada del hogar antiguo, entubado, albañilería, adecuación a la normativa, creación del soporte: su casa queda protegida durante toda la obra.",
+e3t:"La instalación y el primer fuego",e3:"Conexiones, controles, puesta en marcha. Después le explicamos el uso y el mantenimiento.",
+is_zone:"Entrega e instalación en toda Francia y Bélgica.",qi1:"¿Cómo se instala una estufa de leña?",ai1:"Visita técnica, obras previas si hace falta, instalación, conexiones, ajustes y puesta en marcha, y explicaciones de uso y mantenimiento antes de irnos.",
+rl_t:"Realizaciones",rl_i:"Algunas de nuestras estufas, en casa de quienes las imaginaron con nosotros.",
+ac_t:"Noticias",ac1:"Foire de Paris 2026",ac1p:"El taller expuso en la Foire de Paris 2026, del 30 de abril al 11 de mayo, en Paris Expo Porte de Versailles. Para la próxima cita, llame al taller: +33 3 21 30 30 90.",
+ct_t:"Recibir el catálogo",ct_p:"Todos los modelos, colores, decorados y opciones. Por correo postal o por e-mail.",
+fm_civ:"Tratamiento",fm_m:"Señor",fm_mme:"Señora",fm_mlle:"Señorita",fm_nom:"Apellido",fm_pre:"Nombre",fm_adr:"Dirección",fm_cp:"Código postal",fm_ville:"Ciudad",fm_mail:"E-mail",fm_tel:"Teléfono",fm_courrier:"Por correo",fm_email:"Por e-mail",fm_rgpd:"Acepto que estos datos se usen para tramitar mi solicitud.",fm_env:"Recibir el catálogo",fm_ok:"Gracias, hemos anotado su solicitud. (Maqueta: no se envía nada.)",fm_oblig:"* campos obligatorios",fm_np:"Nombre y apellido",fm_suj:"Asunto",fm_msg:"Mensaje",fm_send:"Enviar",
+cn_t:"Contacto",cn_i:"¿Una pregunta, un proyecto, una visita? El taller le responde.",cn_adr:"Dirección",cn_tel:"Teléfono",cn_mail:"E-mail",cn_h:"Horario",cn_h1:"Lunes a viernes: 9-12 h, 14-18 h",cn_h2:"Sábado: 10-12 h, 14-18 h",cn_gps:"Cómo llegar (GPS 50.6694, 1.8504)",
+se_t:"Mi selección",se_vide:"Su selección está vacía. Añada los modelos que le gusten: el taller le llamará para un estudio personalizado.",se_form:"Solicitar mi estudio personalizado",se_ok:"¡Gracias! El taller le llamará para fijar la visita técnica. (Maqueta: no se envía nada.)",se_idee:"Idea compuesta",
+ml_t:"Aviso legal",
+ft_vis:"Visitar el taller",ft_dec:"Descubrir",ft_ser:"Servicios",ft_suiv:"Síganos",ft_droits:"© Atelier Céramique Régnier · SAS con capital de 5.000 € · RCS Boulogne-sur-Mer 821 545 720",ft_neo:"Propuesta de rediseño de Neovera Studio",
+cs_sub:"Le ayudo a elegir",cs_inv:"¿Leña o pellets? ¿Qué potencia? Le ayudo a elegir su estufa.",cs_av:"Asistente virtual",cs_ph:"Escriba su pregunta…",cs_go:"Enviar",
+cs_w:"Hola, soy Régnier Consejo, el asistente virtual del taller. Le ayudo a elegir un modelo, preparar su visita o entender la instalación.",
+c1:"¿Leña o pellets?",c2:"Una estufa con horno",c3:"Espacio pequeño",c4:"Precios y plazos",c5:"Visitar la sala",c6:"La instalación",
+r_gra:"Los pellets se cargan fácilmente y son económicos: 1 kg da unos 5 kWh. Tres estufas de pellets:",
+r_bois:"La leña es el espectáculo de las llamas y un calor que la loza guarda durante horas. Tres modelos muy apreciados:",
+r_four:"Con horno, cocina al fuego de leña: asados, gratinados, magdalenas. Nuestras estufas con horno:",
+r_petit:"Para un espacio pequeño, dos modelos compactos: Émile (93 cm de alto, 5 kW) y la estufa de pellets PIN (82 cm, 7 kW).",
+r_kw:"La potencia adecuada depende de la estancia, el aislamiento y el conducto: el taller la calcula con usted en la visita técnica. Nuestros modelos van de 5 kW (Émile) a 11 kW (Julia).",
+r_prix:"Los precios no se publican: cada estufa se fabrica a medida y el presupuesto se hace tras la visita técnica. La fabricación lleva varias semanas. Para una fecha precisa: +33 3 21 30 30 90.",
+r_vis:"La sala (600 m², más de 35 modelos, varios encendidos) está en 20 rue de l’Épinoy, 62240 Menneville-Desvres. Lunes a viernes 9-12 h, 14-18 h; sábado 10-12 h, 14-18 h.",
+r_pose:"Nuestros propios equipos instalan en toda Francia y Bélgica: visita técnica, obras (entubado, albañilería, normativa), instalación y puesta en marcha.",
+r_deco:"Todo se personaliza: esmaltes (verde inglés, negro satinado, marfil, rojo ópalo…), decorados a mano alzada en la tradición de Rouen, Delft, Estrasburgo, Moustiers o Bérain, realce, horno, puertas de latón o estaño.",
+r_cat:"El catálogo presenta todos los modelos, colores y opciones. Le abro el formulario.",
+r_fr:"Todo se fabrica en el taller de Desvres desde 1989, y el taller tiene el sello Empresa del Patrimonio Vivo desde 2018.",
+r_sais:"No puedo responder a eso con certeza y prefiero no inventar. El equipo del taller le atiende en el +33 3 21 30 30 90 o en magasin@ceramique-regnier.fr.",
+r_aj:"Añadir",r_ouvrir:"Abrir el formulario del catálogo"
+};
+T.de={
+n_mod:"Modelle",n_cui:"Küche",n_sm:"Maßanfertigung",n_car:"Wandfliesen",n_at:"Die Werkstatt",n_hist:"Geschichte",n_ins:"Montage",n_real:"Referenzen",n_act:"Aktuelles",n_con:"Kontakt",n_cons:"Régnier Beratung",n_sel:"Meine Auswahl",n_cat:"Katalog",sous_marque:"Keramikwerkstatt · Desvres",
+h_t:"Feuer im Kleid aus handbemalter Fayence.",h_p:"Holz- und Pelletöfen, seit 1989 in unserer Werkstatt in Desvres geformt, bemalt und gebrannt. Jedes Stück ist nummeriert und vom Dekormaler signiert.",h_b1:"Alle 32 Modelle",h_b2:"Katalog anfordern",h_pr1:"Unternehmen des lebendigen Erbes",h_pr2:"Hergestellt in Desvres (Frankreich)",h_pr3:"Montage durch unsere Teams in Frankreich und Belgien",
+p_t:"Von der Pause zum Pinsel",p_i:"Das Dekor einer Kachel wird wie früher übertragen. Scrollen Sie: Es entsteht vor Ihren Augen.",p1t:"Die Pause",p1:"Ein mit feinen Löchern durchstochenes Pauspapier folgt der Kontur des Dekors.",p2t:"Die Kohle",p2:"Ein Beutel Holzkohle wird aufgetupft: Die Zeichnung erscheint gepunktet auf dem Stück.",p3t:"Der Pinsel",p3:"Der Dekormaler zieht die Konturen nach und setzt dann freihändig die Farben.",p4t:"Das Feuer",p4:"Eine Nacht im Ofen, bis 1.200 °C. Die Glasur verglast, die Farben erwachen.",p_cap:"Illustrative Skizze. Die echten Dekore wählen Sie anhand von Mustern im Showroom.",p_cta:"Die 10 Fertigungsschritte",
+fa_t:"Wählen Sie Ihr Feuer",fa_i:"Holz, Pellets, Kochen oder ein vorhandener Kamin: Alles wird hier auf Bestellung gefertigt.",fam1:"Holzöfen",fam1s:"25 Modelle",fam2:"Pelletöfen",fam2s:"7 Modelle",fam3:"Küche",fam3s:"Herde und Backöfen",fam4:"Maßanfertigung",fam4s:"Öfen und Kaminverkleidungen",
+ch_t:"Wärme, die bleibt – lange nach dem Feuer",ch_p:"Keramik speichert die Wärme des Feuers und gibt sie stundenlang sanft ab. Metall wird schnell heiß und ebenso schnell kalt; Fayence verbreitet eine sanfte, gleichmäßige Wärme, auch wenn das Feuer aus ist.",ch_p2:"Die Luft wird weder ausgetrocknet noch überhitzt, Staub wird nicht aufgewirbelt. Und Fayence verzieht sich nicht: Sie behält jahrzehntelang ihren Glanz.",ch_b:"Wie ein Ofen entsteht",
+co_t:"Gestalten Sie Ihren Ofen",co_i:"Ein Modell, eine Glasur, ein Dekor: Skizzieren Sie Ihre Idee, die Werkstatt macht sie wahr.",co_m:"Modell",co_e:"Glasur",co_d:"Dekor",co_o:"Optionen",co_btn:"Diese Idee zur Auswahl hinzufügen",co_cap:"Unverbindliche Skizze: echte Farben und Dekore als Muster im Showroom.",
+e_vert:"Englischgrün",e_noir:"Satinschwarz",e_ivoire:"Satin-Elfenbein",e_rouge:"Opalrot",e_agave:"Agavengrün",e_gris:"Satingrau",e_taupe:"Taupe",e_ambre:"Satin-Bernstein",
+d_oeillet:"Nelken",d_rouen:"Rouen",d_delft:"Delft",d_damier:"Schachbrett",d_uni:"Uni",o_four:"Backofen",o_cp:"Warmhaltefach",o_reh:"Aufsatz",o_lai:"Messingtür",
+at_t:"Hinter der Werkstatttür",at_p:"1.800 m² Werkstatt, 600 m² Showroom, über 35 ausgestellte Modelle, mehrere davon in Betrieb. Wer sie besucht, ist verzaubert.",at_b:"Die Werkstatt besuchen",at_b2:"360°-Rundgang",
+hi_t:"Seit 1989 in Desvres",hi_p:"Jean-Michel Régnier eröffnete die Werkstatt auf 40 m². Florian Grare, ein Kind der Region, leitet sie seit 2016. Dazwischen: über 35 Jahre Fayence aus Desvres und 22 Mitarbeitende.",hi_b:"Zur Geschichte",
+re_t:"Bei unseren Kunden zu Hause",re_b:"Alle Referenzen",
+in_t:"Vom Vor-Ort-Termin bis zum ersten Feuer",in_p:"Unsere eigenen Teams montieren Ihren Ofen in ganz Frankreich und Belgien: ein Ansprechpartner, vom Schornstein bis zur letzten Einstellung.",in_b:"So läuft es ab",
+cta_t:"Erleben Sie das Feuer live",cta_p:"600 m² Showroom in Menneville-Desvres. Montag bis Freitag 9-12 und 14-18 Uhr; Samstag 10-12 und 14-18 Uhr.",cta_b1:"Besuch planen",cta_b2:"Werkstatt anrufen",
+mo_t:"Unsere Fayenceöfen",mo_i:"Jedes Modell wird auf Bestellung gefertigt: Maße, Glasur, Dekor und Ausführung nach Ihrem Geschmack. Die passende Leistung berechnen wir mit Ihnen nach der Raumgröße.",f_tous:"Alle",f_bois:"Holz",f_gra:"Pellets",f_four:"Mit Backofen",mo_opt_t:"Als Ergänzung",mo_opt:"Ein Backofen zum Garen oder Aufwärmen, ein Warmhaltefach, ein Aufsatz für mehr Präsenz.",
+gr_t:"Pellets – einfach und sparsam",gr_p:"Kleine Presslinge aus Sägewerksresten, in 15-kg-Säcken, auf Paletten zu 66 Säcken oder lose. Leicht zu lagern: 1 kg Pellets liefert etwa 5 kWh Wärme.",
+b_voir:"Modell ansehen",b_aj:"Hinzufügen",b_ret:"Entfernen",lbl_b:"Holzofen",lbl_g:"Pelletofen",lbl_four:"mit Backofen",aj_ok:"zur Auswahl hinzugefügt",
+fi_dim:"Maße (H × B × T)",fi_kw:"Leistung",fi_kg:"Gewicht",fi_rdt:"Wirkungsgrad",fi_four:"Integrierter Backofen",fi_oui:"Ja",fi_nc:"Wird mit der Werkstatt geklärt",fi_r1:"Auf Bestellung in unserer Werkstatt in Desvres gefertigt",fi_r2:"Stücke nummeriert und vom Dekormaler signiert",fi_r3:"Vor-Ort-Termin und Montage durch unsere Teams in Frankreich und Belgien",fi_r4:"Alle Farben und Dekore, nach Mustern",fi_b1:"Zur Auswahl hinzufügen",fi_b2:"Beratung anfragen",fi_prix:"Preis nach persönlicher Planung, nach dem Vor-Ort-Termin.",fi_ret:"Alle Modelle",fi_aussi:"Im selben Geist",fi_txt_b:"Einmal anfeuern, dann stundenlang sanfte Wärme: Die Fayence speichert die Wärme des Holzes und gibt sie ab.",fi_txt_g:"Der Komfort von Pellets unter einer frei gestaltbaren Fayenceverkleidung.",
+cu_t:"Küche",cu_p1:"Ein Herd, ein Holzofen mit Backofen, ein Warmhaltefach, eine Gussplatte zum Schmoren: Sie haben die Wahl.",cu_p2:"In Partnerschaft mit Wekos kleidet Régnier die schönsten Holzherde in Fayence: massives Gusseisen, Keramik, Emaille, Edelstahl, Messing und die Technik von heute.",cu_p3:"Ein Herd, drei Funktionen – und das Feuer hinter der Glastür.",cu_fours:"Unsere Öfen mit Backofen",cu_c1:"Holzherd Classic 90, Messing-Finish",cu_c2:"Holzherd Classic 106",cu_c3:"Holzherd 165 LGE, Edelstahl glänzend",cu_c4:"Holzherd Classic 100, individuelles Dekor",cu_c5:"Mit Fayence verkleideter Herd",
+sm_t:"Öfen nach Maß",sm_p:"Eine Ofenbank, ein halber Ofen, ein Stück bis unter die Decke: Die Werkstatt fertigt den Ofen, den es noch nicht gibt. Sie wählen Form, Farbe und Zeichnung; die Techniker von Régnier helfen Ihnen dabei.",sm_c1:"Ofen nach Maß im Barn Hôtel",sm_c2:"Mehrfarbiger Ofen nach Maß",sm_c3:"Halber Ofen nach Maß",sm_c4:"Ofen nach Maß im italienischen Stil",sm_c5:"Satin-Elfenbein, Dekor Desvres grau",
+hb_t:"Kaminverkleidung",hb_p:"Kaminsims aus Marmor oder Ziegel, Kamin aus weißem Stein… Die Werkstatt macht Ihren Kamin zum Kunstwerk, modern oder klassisch, ganz nach Maß.",hb_p2:"Gerader oder gewölbter Feuerraum, Tür aus Guss, Messing, Zinn oder verchromt: Nur Ihre Fantasie setzt die Grenze.",hb_c1:"Verkleidung Nelken in Mangan",hb_c2:"Verkleidung Japanischer Apfelbaum auf Satinschwarz",hb_c3:"Charline in einem Kamin, Messingtür",
+ca_t:"Handgemachte Wandfliesen",ca_p1:"Von der Küche bis zum Bad, vom Flur bis zum Gäste-WC: authentische Wandfliesen, Erben von über zwei Jahrhunderten Fayence aus Desvres.",ca_p2:"Alte Dekore, Fresken, Blumenmotive, von Hand auf rohe Glasur gemalt wie die Kunstfayencen von einst. Man spürt die Hand des Handwerkers.",ca_b:"Fliesen im Showroom ansehen",
+fb_t:"Die Fertigung in zehn Handgriffen",fb_i:"Jeder Ofen besteht aus rund sechzig Teilen. Alle gehen durch dieselben Hände, hier in Desvres.",
+s1t:"Das Modellieren",s1q:"Philippe",s1:"Philippe entwirft und formt von Hand die Gipsformen jedes Teils. Eine Form wird nur etwa fünfzigmal benutzt, damit die Formen perfekt bleiben.",
+s2t:"Der Schlicker",s2q:"",s2:"Ton, Wasser und Schamotte, im Mischer dosiert: die flüssige Masse, aus der alle Teile entstehen.",
+s3t:"Das Gießen",s3q:"Philippe und Joël",s3:"Der Gips saugt das Wasser auf, die Keramik bildet sich an der Wand. Nach 24 Stunden wird jedes Teil vorsichtig entformt.",
+s4t:"Das Entgraten",s4q:"",s4:"Mit Messer und Pinsel wird jedes Teil geglättet, gratfrei, für eine präzise Montage.",
+s5t:"Das Engobieren",s5q:"Vincent",s5:"Vincent sprüht die Engobe auf, eine Mischung aus Wasser, Ton und Glasur: ein reinweißer Grund für das Dekor.",
+s6t:"Das Bemalen",s6q:"Die Dekormaler",s6:"Pause, Holzkohle, Pinsel: Jedes Teil wird einzeln und freihändig bemalt.",
+s7t:"Das Glasieren",s7q:"Rémy",s7:"Rémy sprüht in mehreren Schichten eine Glasur aus Metalloxiden auf: Sie schützt das Teil und bringt die Farben zur Geltung.",
+s8t:"Das Brennen",s8q:"",s8:"Eine Nacht im Elektroofen, stufenweise bis etwa 1.200 °C. Jeder Brennofen fasst bis zu zwei Öfen.",
+s9t:"Die Vormontage",s9q:"David und Mickaël",s9:"Montage mit Feuerbeton, Silikonfugen, dann ein Tag Trocknung.",
+s10t:"Der Zusammenbau",s10q:"Guillaume und Lucas",s10:"Endmontage und Kontrolle durch den Werkstattleiter, dann Verpackung und Montage bei Ihnen.",
+fb_chif:"Über 35 Jahre Erfahrung · 1.800 m² Werkstatt · 600 m² Showroom · über 35 ausgestellte Modelle · 100 % in Frankreich gefertigt",
+vi_t:"Die Werkstatt besuchen",vi_p:"Vom Modellieren bis zum Glasieren, vom Bemalen bis zum Brennen: alle Keramikberufe unter einem Dach. Danach der Showroom: brennende Öfen, Kunstfayencen, Wandfliesen, Glasuren und Dekore zum Vergleichen.",vi_perso:"Gestaltbar: Form und Maße, Glasurfarbe, handgemalte Dekore, Kachelrelief, Ausführung und Zubehör.",
+vv_t:"Virtueller Rundgang",vv_p:"Entdecken Sie Werkstatt und Showroom in 360°, bequem vom Sofa aus.",vv_b:"360°-Rundgang starten",
+epv:"Seit 2018 „Unternehmen des lebendigen Erbes“: ein staatliches Siegel für herausragendes Handwerk.",
+faq_t:"Häufige Fragen",
+q1:"Wie lange dauert die Fertigung eines Ofens?",a1:"Mehrere Wochen: Modellieren, Trocknen, Brände, Glasieren, Bemalen, Montage und Kontrollen. Diese Zeit sichert die Qualität und Leistung der Keramik.",
+q2:"Werden die Öfen wirklich in Frankreich gefertigt?",a2:"Ja. Alle Schritte erfolgen seit 1989 in unserer Werkstatt in Desvres im Pas-de-Calais.",
+q3:"Kann man seinen Ofen individuell gestalten?",a3:"Ja: Farbe der Keramik, gemalte Dekore, Ausführung und Verkleidung je nach Modell. Jeder Ofen wird auf Bestellung gefertigt.",
+q4:"Warum Fayence statt Stahl?",a4:"Keramik speichert Wärme und gibt sie stundenlang ab: eine sanftere, gleichmäßigere Wärme, auch wenn das Feuer aus ist.",
+q5:"Wie lange hält ein Keramikofen?",a5:"Jahrzehnte, wenn er richtig montiert und gepflegt wird. Wir fertigen und montieren unsere Öfen selbst und betreuen sie weiter.",
+q6:"Warum die Werkstatt besuchen?",a6:"Um jeden Schritt zu sehen, vom Formen der Kacheln bis zur Handbemalung, und alle Gestaltungsmöglichkeiten zu entdecken.",
+hs_t:"Geschichte",hs_i:"In Desvres, 5.000 Einwohner bei Boulogne-sur-Mer, ist Fayence seit dem 18. Jahrhundert heilig. Die Werkstatt ist die Geschichte eines Teams und zweier Männer.",
+y1989:"Jean-Michel Régnier, einer der letzten Kunstkeramiker von Desvres, gründet die Werkstatt auf 40 m². Fast acht Jahre arbeitet er allein.",y1997:"Erster Mitarbeiter.",y1998:"Formen, Rohlinge und Modelle kommen bei der Schließung der Fayencefabrik Delarue in die Werkstatt.",y1999:"Größere Räume. Öfen machen 90 % der Produktion aus, neben Vasen, Brunnen und Zapfsäulen aus Fayence.",ypuis:"Eine Werkstatt von 2.000 m² und ein Fabrikladen von 600 m² am Ortseingang von Desvres.",y2015:"Begegnung mit Florian Grare.",y2016:"Florian übernimmt die Leitung, Jean-Michel unterstützt die Produktion. Pelletöfen und Herde kommen ins Sortiment.",y2018:"Siegel „Unternehmen des lebendigen Erbes“.",y2019:"Dreißig Jahre nach der Gründung neue Räume nahe den alten Werkstätten, für 22 Mitarbeitende.",yp:"Danach",
+fl_q:"„Meine Familie stammt aus Desvres, und es war selbstverständlich, hier meine eigene zu gründen. Ich bin stolz, die Tradition des Fayenceofens fortzuführen. Die Wärme des Holzes schafft eine Stimmung, in der die Zeit stillzustehen scheint.“",fl_s:"Florian Grare, Geschäftsführer seit 2016",
+is_t:"Montage",is_i:"Wer nach Maß fertigt, montiert auch nach Maß. Unsere Teams kennen jeden Ofen, der die Werkstatt verlässt.",
+e1t:"Der Vor-Ort-Termin",e1:"Bei Ihnen prüft unser Techniker Haus und Schornstein, bestimmt Leistung und idealen Standort und beantwortet alle Fragen.",
+e2t:"Die Arbeiten",e2:"Rückbau der alten Feuerstelle, Schornsteinsanierung, Maurerarbeiten, Normanpassung, Unterbau: Ihr Zuhause bleibt während der Arbeiten geschützt.",
+e3t:"Montage und erstes Feuer",e3:"Anschlüsse, Kontrollen, Inbetriebnahme. Danach erklären wir Bedienung und Pflege.",
+is_zone:"Lieferung und Montage in ganz Frankreich und Belgien.",qi1:"Wie läuft die Montage eines Holzofens ab?",ai1:"Vor-Ort-Termin, bei Bedarf Vorarbeiten, Montage, Anschlüsse, Einstellungen und Inbetriebnahme, dann Erklärungen zu Bedienung und Pflege.",
+rl_t:"Referenzen",rl_i:"Einige unserer Öfen, bei den Menschen, die sie mit uns erdacht haben.",
+ac_t:"Aktuelles",ac1:"Foire de Paris 2026",ac1p:"Die Werkstatt stellte vom 30. April bis 11. Mai auf der Foire de Paris 2026 aus, Paris Expo Porte de Versailles. Den nächsten Termin erfahren Sie unter +33 3 21 30 30 90.",
+ct_t:"Katalog anfordern",ct_p:"Alle Modelle, Farben, Dekore und Optionen. Per Post oder per E-Mail.",
+fm_civ:"Anrede",fm_m:"Herr",fm_mme:"Frau",fm_mlle:"Fräulein",fm_nom:"Nachname",fm_pre:"Vorname",fm_adr:"Adresse",fm_cp:"Postleitzahl",fm_ville:"Ort",fm_mail:"E-Mail",fm_tel:"Telefon",fm_courrier:"Per Post",fm_email:"Per E-Mail",fm_rgpd:"Ich bin einverstanden, dass diese Angaben zur Bearbeitung meiner Anfrage genutzt werden.",fm_env:"Katalog anfordern",fm_ok:"Danke, Ihre Anfrage ist notiert. (Entwurf: Es wird nichts versendet.)",fm_oblig:"* Pflichtfelder",fm_np:"Vor- und Nachname",fm_suj:"Betreff",fm_msg:"Nachricht",fm_send:"Senden",
+cn_t:"Kontakt",cn_i:"Eine Frage, ein Projekt, ein Besuch? Die Werkstatt antwortet Ihnen.",cn_adr:"Adresse",cn_tel:"Telefon",cn_mail:"E-Mail",cn_h:"Öffnungszeiten",cn_h1:"Montag bis Freitag: 9-12, 14-18 Uhr",cn_h2:"Samstag: 10-12, 14-18 Uhr",cn_gps:"Anfahrt (GPS 50.6694, 1.8504)",
+se_t:"Meine Auswahl",se_vide:"Ihre Auswahl ist leer. Fügen Sie Ihre Lieblingsmodelle hinzu: Die Werkstatt ruft Sie für eine persönliche Planung zurück.",se_form:"Persönliche Planung anfragen",se_ok:"Danke! Die Werkstatt ruft Sie an, um den Vor-Ort-Termin zu vereinbaren. (Entwurf: Es wird nichts versendet.)",se_idee:"Eigene Idee",
+ml_t:"Impressum",
+ft_vis:"Werkstatt besuchen",ft_dec:"Entdecken",ft_ser:"Leistungen",ft_suiv:"Folgen Sie uns",ft_droits:"© Atelier Céramique Régnier · SAS mit 5.000 € Stammkapital · RCS Boulogne-sur-Mer 821 545 720",ft_neo:"Redesign-Vorschlag von Neovera Studio",
+cs_sub:"Ich helfe bei der Wahl",cs_inv:"Holz oder Pellets? Welche Leistung? Ich helfe Ihnen bei der Wahl Ihres Ofens.",cs_av:"Virtueller Assistent",cs_ph:"Ihre Frage…",cs_go:"Senden",
+cs_w:"Hallo, ich bin Régnier Beratung, der virtuelle Assistent der Werkstatt. Ich helfe bei der Modellwahl, der Besuchsplanung oder bei Fragen zur Montage.",
+c1:"Holz oder Pellets?",c2:"Ofen mit Backofen",c3:"Kleiner Raum",c4:"Preise und Lieferzeit",c5:"Showroom besuchen",c6:"Montage",
+r_gra:"Pellets lassen sich leicht nachfüllen und sind sparsam: 1 kg liefert etwa 5 kWh. Drei Pelletöfen:",
+r_bois:"Holz bedeutet Flammenspiel und eine Wärme, die die Fayence stundenlang hält. Drei beliebte Modelle:",
+r_four:"Mit Backofen kochen Sie über Holzfeuer: Braten, Gratins, Madeleines. Unsere Öfen mit Backofen:",
+r_petit:"Für kleine Räume zwei kompakte Modelle: Émile (93 cm hoch, 5 kW) und der Pelletofen PIN (82 cm, 7 kW).",
+r_kw:"Die richtige Leistung hängt von Raum, Dämmung und Schornstein ab: Die Werkstatt berechnet sie mit Ihnen beim Vor-Ort-Termin. Unsere Modelle reichen von 5 kW (Émile) bis 11 kW (Julia).",
+r_prix:"Preise werden nicht veröffentlicht: Jeder Ofen ist eine Maßanfertigung, das Angebot folgt nach dem Vor-Ort-Termin. Die Fertigung dauert mehrere Wochen. Für ein genaues Datum: +33 3 21 30 30 90.",
+r_vis:"Der Showroom (600 m², über 35 Modelle, mehrere in Betrieb) liegt in der 20 rue de l’Épinoy, 62240 Menneville-Desvres. Montag bis Freitag 9-12, 14-18 Uhr; Samstag 10-12, 14-18 Uhr.",
+r_pose:"Unsere eigenen Teams montieren in ganz Frankreich und Belgien: Vor-Ort-Termin, Arbeiten (Schornsteinsanierung, Maurerarbeiten, Normen), Montage und Inbetriebnahme.",
+r_deco:"Alles ist gestaltbar: Glasuren (Englischgrün, Satinschwarz, Elfenbein, Opalrot…), freihändige Dekore in der Tradition von Rouen, Delft, Straßburg, Moustiers oder Bérain, Aufsatz, Backofen, Türen aus Messing oder Zinn.",
+r_cat:"Der Katalog zeigt alle Modelle, Farben und Optionen. Ich öffne Ihnen das Formular.",
+r_fr:"Alles wird seit 1989 in der Werkstatt in Desvres gefertigt; seit 2018 trägt sie das Siegel „Unternehmen des lebendigen Erbes“.",
+r_sais:"Das kann ich nicht sicher beantworten, und ich möchte nichts erfinden. Das Werkstattteam hilft Ihnen unter +33 3 21 30 30 90 oder magasin@ceramique-regnier.fr.",
+r_aj:"Hinzufügen",r_ouvrir:"Katalogformular öffnen"
+};
+
+T.it={
+n_mod:"Modelli",n_cui:"Cucina",n_sm:"Su misura",n_car:"Piastrelle",n_at:"Il laboratorio",n_hist:"Storia",n_ins:"Installazione",n_real:"Realizzazioni",n_act:"Notizie",n_con:"Contatti",n_cons:"Régnier Consiglio",n_sel:"La mia selezione",n_cat:"Catalogo",sous_marque:"Laboratorio di ceramica · Desvres",
+h_t:"Il fuoco, vestito di maiolica dipinta a mano.",h_p:"Stufe a legna e a pellet modellate, dipinte e cotte nel nostro laboratorio di Desvres dal 1989. Ogni pezzo è numerato e firmato dal suo decoratore.",h_b1:"Vedi i 32 modelli",h_b2:"Ricevi il catalogo",h_pr1:"Impresa del Patrimonio Vivente",h_pr2:"Fatto a Desvres (Francia)",h_pr3:"Installato dalle nostre squadre in Francia e in Belgio",
+p_t:"Dallo spolvero al pennello",p_i:"Il decoro di una piastrella si tramanda come un tempo. Scorrete: nasce sotto i vostri occhi.",p1t:"Lo spolvero",p1:"Un foglio di carta da lucido forato segue il contorno del decoro.",p2t:"Il carbone",p2:"Si tampona un sacchetto di carbone di legna: il disegno passa sul pezzo a puntini.",p3t:"Il pennello",p3:"Il decoratore traccia i contorni, poi stende i colori, a mano libera.",p4t:"Il fuoco",p4:"Una notte in forno, fino a 1.200 °C. Lo smalto vetrifica, i colori si risvegliano.",p_cap:"Schizzo illustrativo. I veri decori si scelgono sui campioni, in showroom.",p_cta:"Le 10 fasi di lavorazione",
+fa_t:"Scegliete il vostro fuoco",fa_i:"Legna, pellet, cucina o camino esistente: tutto è fatto qui, su ordinazione.",fam1:"Stufe a legna",fam1s:"25 modelli",fam2:"Stufe a pellet",fam2s:"7 modelli",fam3:"Cucina",fam3s:"Cucine e forni",fam4:"Su misura",fam4s:"Stufe e rivestimenti di camini",
+ch_t:"Un calore che resta, molto dopo il fuoco",ch_p:"La ceramica accumula il calore del focolare e lo restituisce piano per lunghe ore. Il metallo si scalda in fretta e si raffredda altrettanto; la maiolica diffonde un calore dolce e uniforme, anche a fuoco spento.",ch_p2:"L’aria non si secca né si surriscalda, la polvere non si solleva. E la maiolica non si deforma: conserva la sua lucentezza per decenni.",ch_b:"Come nasce una stufa",
+co_t:"Componete la vostra stufa",co_i:"Un modello, uno smalto, un decoro: abbozzate la vostra idea, il laboratorio la renderà reale.",co_m:"Modello",co_e:"Smalto",co_d:"Decoro",co_o:"Opzioni",co_btn:"Aggiungi questa idea alla selezione",co_cap:"Schizzo indicativo: colori e decori reali sui campioni in showroom.",
+e_vert:"Verde inglese",e_noir:"Nero satinato",e_ivoire:"Avorio satinato",e_rouge:"Rosso opale",e_agave:"Verde agave",e_gris:"Grigio satinato",e_taupe:"Tortora",e_ambre:"Ambra satinata",
+d_oeillet:"Garofani",d_rouen:"Rouen",d_delft:"Delft",d_damier:"Scacchiera",d_uni:"Tinta unita",o_four:"Forno",o_cp:"Scaldavivande",o_reh:"Alzata",o_lai:"Anta in ottone",
+at_t:"Dietro la porta del laboratorio",at_p:"1.800 m² di laboratorio, 600 m² di showroom, oltre 35 modelli esposti, molti accesi. Chi lo visita ne esce incantato.",at_b:"Visitare il laboratorio",at_b2:"Visita virtuale a 360°",
+hi_t:"A Desvres dal 1989",hi_p:"Jean-Michel Régnier ha aperto il laboratorio in 40 m². Florian Grare, figlio del posto, lo dirige dal 2016. In mezzo: oltre 35 anni di maiolica di Desvres e 22 dipendenti.",hi_b:"Leggi la storia",
+re_t:"L’hanno fatto a casa loro",re_b:"Tutte le realizzazioni",
+in_t:"Dal sopralluogo al primo fuoco",in_p:"Le nostre squadre installano la vostra stufa in tutta la Francia e il Belgio: un solo referente, dalla canna fumaria alle ultime regolazioni.",in_b:"Come funziona",
+cta_t:"Venite a vedere il fuoco dal vivo",cta_p:"600 m² di showroom a Menneville-Desvres. Dal lunedì al venerdì 9-12 e 14-18; sabato 10-12 e 14-18.",cta_b1:"Preparare la visita",cta_b2:"Chiamare il laboratorio",
+mo_t:"Le nostre stufe in maiolica",mo_i:"Ogni modello è fatto su ordinazione: dimensioni, smalto, decoro e finiture a vostro gusto. La potenza la calcoliamo con voi in base alla superficie della stanza.",f_tous:"Tutti",f_bois:"Legna",f_gra:"Pellet",f_four:"Con forno",mo_opt_t:"Da aggiungere alla stufa",mo_opt:"Un forno per cuocere o riscaldare, uno scaldavivande per tenere in caldo, un’alzata per più presenza.",
+gr_t:"Il pellet, semplice ed economico",gr_p:"Piccoli cilindri di scarti di segheria compattati, in sacchi da 15 kg, bancali da 66 sacchi o sfusi. Facili da stoccare: 1 kg di pellet dà circa 5 kWh di calore.",
+b_voir:"Vedi il modello",b_aj:"Aggiungi",b_ret:"Togli",lbl_b:"Stufa a legna",lbl_g:"Stufa a pellet",lbl_four:"con forno",aj_ok:"aggiunto alla selezione",
+fi_dim:"Dimensioni (A × L × P)",fi_kw:"Potenza",fi_kg:"Peso",fi_rdt:"Rendimento",fi_four:"Forno integrato",fi_oui:"Sì",fi_nc:"Da definire con il laboratorio",fi_r1:"Fatta su ordinazione nel nostro laboratorio di Desvres",fi_r2:"Pezzi numerati e firmati dal decoratore",fi_r3:"Sopralluogo e installazione delle nostre squadre, in Francia e Belgio",fi_r4:"Tutti i colori e i decori, su campioni",fi_b1:"Aggiungi alla selezione",fi_b2:"Richiedi uno studio",fi_prix:"Prezzo su studio personalizzato, dopo il sopralluogo.",fi_ret:"Tutti i modelli",fi_aussi:"Nello stesso spirito",fi_txt_b:"Una fiammata, poi ore di calore dolce: la maiolica accumula e restituisce il calore della legna.",fi_txt_g:"La comodità del pellet, sotto un rivestimento in maiolica interamente personalizzabile.",
+cu_t:"Cucina",cu_p1:"Una cucina, una stufa a legna con forno, uno scaldavivande, una piastra in ghisa per cuocere lentamente: a voi la scelta.",cu_p2:"In collaborazione con Wekos, Régnier riveste di maiolica le più belle cucine a legna: ghisa massiccia, ceramica, smalto, acciaio inox, ottone e la tecnologia di oggi.",cu_p3:"Un solo fornello per tre funzioni, e lo spettacolo del fuoco dietro l’anta in vetro.",cu_fours:"Le nostre stufe con forno",cu_c1:"Cucina a legna Classic 90, finitura ottone",cu_c2:"Cucina a legna Classic 106",cu_c3:"Cucina a legna 165 LGE, inox lucido",cu_c4:"Cucina a legna Classic 100, decoro personalizzato",cu_c5:"Cucina rivestita in maiolica",
+sm_t:"Stufe su misura",sm_p:"Una panca, una mezza stufa, un pezzo che sale fino al soffitto: il laboratorio realizza la stufa che non esiste ancora. Voi scegliete forma, colore e disegno; i tecnici Régnier vi aiutano a crearla.",sm_c1:"Stufa su misura al Barn Hôtel",sm_c2:"Stufa su misura multicolore",sm_c3:"Mezza stufa su misura",sm_c4:"Stufa su misura in stile italiano",sm_c5:"Avorio satinato, decoro Desvres grigio",
+hb_t:"Rivestimento del camino",hb_p:"Cappa in marmo o in mattoni, camino in pietra bianca… Il laboratorio trasforma il vostro camino in un’opera d’arte, moderna o classica, interamente su misura.",hb_p2:"Focolare dritto o centinato, anta in ghisa, ottone, peltro o cromata: l’unico limite è la vostra fantasia.",hb_c1:"Rivestimento garofani manganese",hb_c2:"Rivestimento melo del Giappone su nero satinato",hb_c3:"Charline in un camino, anta in ottone",
+ca_t:"Piastrelle murali fatte a mano",ca_p1:"Dalla cucina al bagno, dall’ingresso ai servizi: piastrelle murali autentiche, eredi di oltre due secoli di maiolica di Desvres.",ca_p2:"Decori antichi, affreschi, composizioni floreali, dipinti a mano su smalto crudo come le maioliche d’arte di un tempo. Si sente la mano dell’artigiano.",ca_b:"Vedere le piastrelle in showroom",
+fb_t:"La lavorazione, in dieci gesti",fb_i:"Ogni stufa conta una sessantina di pezzi. Tutti passano per le stesse mani, qui a Desvres.",
+s1t:"La modellazione",s1q:"Philippe",s1:"Philippe disegna e realizza a mano gli stampi in gesso di ogni pezzo. Uno stampo si usa una cinquantina di volte, non di più, per forme perfette.",
+s2t:"La barbottina",s2q:"",s2:"Terra, acqua e chamotte dosate nell’impastatrice: la pasta liquida da cui nascono tutti i pezzi.",
+s3t:"La colatura",s3q:"Philippe e Joël",s3:"Il gesso assorbe l’acqua, la ceramica si forma contro la parete. Dopo 24 ore, ogni pezzo viene sformato con cura.",
+s4t:"La sbavatura",s4q:"",s4:"Con coltello e pennello, ogni pezzo viene lisciato, senza sbavature, per un montaggio preciso.",
+s5t:"L’ingobbiatura",s5q:"Vincent",s5:"Vincent spruzza l’ingobbio, miscela di acqua, argilla e smalto: una base bianchissima per il decoro.",
+s6t:"La decorazione",s6q:"I decoratori",s6:"Spolvero, carbone, pennello: ogni pezzo è decorato uno per uno, a mano libera.",
+s7t:"La smaltatura",s7q:"Rémy",s7:"Rémy spruzza in più strati uno smalto di ossidi metallici: protegge il pezzo e rivela i colori.",
+s8t:"L’infornata",s8q:"",s8:"Una notte nel forno elettrico, a gradini, fino a circa 1.200 °C. Ogni forno accoglie fino a due stufe.",
+s9t:"Il premontaggio",s9q:"David e Mickaël",s9:"Assemblaggio con calcestruzzo refrattario, giunti in silicone, poi un giorno di asciugatura.",
+s10t:"L’assemblaggio",s10q:"Guillaume e Lucas",s10:"Montaggio finale e controllo del capo laboratorio, prima dell’imballaggio e dell’installazione da voi.",
+fb_chif:"Oltre 35 anni di esperienza · 1.800 m² di laboratorio · 600 m² di showroom · oltre 35 modelli esposti · produzione 100 % francese",
+vi_t:"Visitare il laboratorio",vi_p:"Dalla modellazione alla smaltatura, dai decori alle cotture: tutti i mestieri della ceramica sotto lo stesso tetto. Poi lo showroom: stufe accese, maioliche d’arte, piastrelle, smalti e decori da confrontare.",vi_perso:"Da personalizzare: forma e dimensioni, colore degli smalti, decori dipinti a mano, rilievo delle piastrelle, finiture e accessori.",
+vv_t:"Visita virtuale",vv_p:"Esplorate laboratorio e showroom a 360°, dal vostro divano.",vv_b:"Avvia la visita a 360°",
+epv:"Impresa del Patrimonio Vivente dal 2018: un marchio dello Stato francese per i saper fare d’eccellenza.",
+faq_t:"Domande frequenti",
+q1:"Quanto tempo serve per fabbricare una stufa?",a1:"Diverse settimane: modellazione, essiccazione, cotture, smaltatura, decorazione, montaggio e controlli. Questo tempo garantisce la qualità della ceramica e le sue prestazioni.",
+q2:"Le stufe sono davvero fatte in Francia?",a2:"Sì. Tutte le fasi si svolgono nel nostro laboratorio di Desvres, nel Pas-de-Calais, dal 1989.",
+q3:"Si può personalizzare la stufa?",a3:"Sì: colore della ceramica, decori dipinti, finiture e rivestimenti secondo il modello. Ogni stufa è fatta su ordinazione.",
+q4:"Perché la maiolica e non l’acciaio?",a4:"La ceramica accumula il calore e lo restituisce per ore: un calore più dolce e uniforme, anche a fuoco spento.",
+q5:"Quanto dura una stufa in ceramica?",a5:"Decenni, se ben installata e mantenuta. Fabbrichiamo e installiamo le nostre stufe e ne seguiamo la manutenzione.",
+q6:"Perché visitare il laboratorio?",a6:"Per vedere ogni fase, dalla formatura delle piastrelle al decoro a mano, e scoprire tutte le possibilità di personalizzazione.",
+hs_t:"Storia",hs_i:"A Desvres, 5.000 abitanti vicino a Boulogne-sur-Mer, la maiolica è sacra dal XVIII secolo. Il laboratorio è la storia di una squadra e di due uomini.",
+y1989:"Jean-Michel Régnier, uno degli ultimi ceramisti d’arte di Desvres, fonda il laboratorio in 40 m². Vi lavora da solo per quasi otto anni.",y1997:"Primo dipendente.",y1998:"Stampi, biscotti e modelli arrivano in laboratorio alla chiusura della fabbrica di maioliche Delarue.",y1999:"Locali più ampi. Le stufe sono il 90 % della produzione, accanto a vasi, fontane e spillatori di birra in maiolica.",ypuis:"Un laboratorio di 2.000 m² e uno spaccio di 600 m² all’ingresso di Desvres.",y2015:"Incontro con Florian Grare.",y2016:"Florian prende il timone, affiancato da Jean-Michel in produzione. Arrivano stufe a pellet e cucine.",y2018:"Marchio Impresa del Patrimonio Vivente.",y2019:"Trent’anni dopo, nuovi locali vicino ai vecchi laboratori per i 22 dipendenti.",yp:"Poi",
+fl_q:"«La mia famiglia viene da Desvres, ed è stato naturale costruire qui la mia. Sono fiero di portare avanti la tradizione della stufa in maiolica. Il calore della legna crea un’atmosfera in cui il tempo sembra sospeso.»",fl_s:"Florian Grare, alla guida dal 2016",
+is_t:"Installazione",is_i:"Fabbricare su misura significa anche installare su misura. Le nostre squadre conoscono ogni stufa che esce dal laboratorio.",
+e1t:"Il sopralluogo",e1:"A casa vostra, il nostro tecnico studia l’abitazione e la canna fumaria, stabilisce potenza e posizione ideale e risponde a tutte le domande.",
+e2t:"I lavori",e2:"Rimozione del vecchio focolare, intubamento, opere murarie, messa a norma, base: la vostra casa resta protetta per tutto il cantiere.",
+e3t:"La posa e il primo fuoco",e3:"Collegamenti, controlli, messa in servizio. Poi vi spieghiamo uso e manutenzione.",
+is_zone:"Consegna e installazione in tutta la Francia e il Belgio.",qi1:"Come si installa una stufa a legna?",ai1:"Sopralluogo, eventuali lavori preparatori, posa, collegamenti, regolazioni e messa in servizio, poi spiegazioni su uso e manutenzione.",
+rl_t:"Realizzazioni",rl_i:"Alcune delle nostre stufe, a casa di chi le ha immaginate con noi.",
+ac_t:"Notizie",ac1:"Foire de Paris 2026",ac1p:"Il laboratorio ha esposto alla Foire de Paris 2026, dal 30 aprile all’11 maggio, a Paris Expo Porte de Versailles. Per il prossimo appuntamento: +33 3 21 30 30 90.",
+ct_t:"Ricevere il catalogo",ct_p:"Tutti i modelli, colori, decori e opzioni. Per posta o per e-mail.",
+fm_civ:"Titolo",fm_m:"Signor",fm_mme:"Signora",fm_mlle:"Signorina",fm_nom:"Cognome",fm_pre:"Nome",fm_adr:"Indirizzo",fm_cp:"CAP",fm_ville:"Città",fm_mail:"E-mail",fm_tel:"Telefono",fm_courrier:"Per posta",fm_email:"Per e-mail",fm_rgpd:"Accetto che questi dati siano usati per gestire la mia richiesta.",fm_env:"Ricevi il catalogo",fm_ok:"Grazie, la richiesta è registrata. (Prototipo: nessun invio reale.)",fm_oblig:"* campi obbligatori",fm_np:"Nome e cognome",fm_suj:"Oggetto",fm_msg:"Messaggio",fm_send:"Invia",
+cn_t:"Contatti",cn_i:"Una domanda, un progetto, una visita? Il laboratorio vi risponde.",cn_adr:"Indirizzo",cn_tel:"Telefono",cn_mail:"E-mail",cn_h:"Orari",cn_h1:"Dal lunedì al venerdì: 9-12, 14-18",cn_h2:"Sabato: 10-12, 14-18",cn_gps:"Indicazioni (GPS 50.6694, 1.8504)",
+se_t:"La mia selezione",se_vide:"La selezione è vuota. Aggiungete i modelli che vi piacciono: il laboratorio vi richiamerà per uno studio personalizzato.",se_form:"Richiedi il mio studio personalizzato",se_ok:"Grazie! Il laboratorio vi chiamerà per fissare il sopralluogo. (Prototipo: nessun invio reale.)",se_idee:"Idea composta",
+ml_t:"Note legali",
+ft_vis:"Visitare il laboratorio",ft_dec:"Scoprire",ft_ser:"Servizi",ft_suiv:"Seguiteci",ft_droits:"© Atelier Céramique Régnier · SAS con capitale di 5.000 € · RCS Boulogne-sur-Mer 821 545 720",ft_neo:"Proposta di restyling di Neovera Studio",
+cs_sub:"Vi aiuto a scegliere",cs_inv:"Legna o pellet? Quale potenza? Vi aiuto a scegliere la stufa.",cs_av:"Assistente virtuale",cs_ph:"Scrivete la domanda…",cs_go:"Invia",
+cs_w:"Buongiorno, sono Régnier Consiglio, l’assistente virtuale del laboratorio. Vi aiuto a scegliere un modello, preparare la visita o capire l’installazione.",
+c1:"Legna o pellet?",c2:"Una stufa con forno",c3:"Spazio piccolo",c4:"Prezzi e tempi",c5:"Visitare lo showroom",c6:"L’installazione",
+r_gra:"Il pellet si carica facilmente ed è economico: 1 kg dà circa 5 kWh. Tre stufe a pellet:",
+r_bois:"La legna è lo spettacolo delle fiamme e un calore che la maiolica conserva per ore. Tre modelli molto apprezzati:",
+r_four:"Con il forno cucinate sul fuoco di legna: arrosti, gratin, madeleine. Le nostre stufe con forno:",
+r_petit:"Per uno spazio piccolo, due modelli compatti: Émile (93 cm di altezza, 5 kW) e la stufa a pellet PIN (82 cm, 7 kW).",
+r_kw:"La potenza giusta dipende da stanza, isolamento e canna fumaria: il laboratorio la calcola con voi al sopralluogo. I nostri modelli vanno da 5 kW (Émile) a 11 kW (Julia).",
+r_prix:"I prezzi non sono pubblicati: ogni stufa è fatta su misura e il preventivo arriva dopo il sopralluogo. La lavorazione richiede diverse settimane. Per una data precisa: +33 3 21 30 30 90.",
+r_vis:"Lo showroom (600 m², oltre 35 modelli, molti accesi) è al 20 rue de l’Épinoy, 62240 Menneville-Desvres. Lunedì-venerdì 9-12, 14-18; sabato 10-12, 14-18.",
+r_pose:"Le nostre squadre installano in tutta la Francia e il Belgio: sopralluogo, lavori (intubamento, opere murarie, norme), posa e messa in servizio.",
+r_deco:"Tutto si personalizza: smalti (verde inglese, nero satinato, avorio, rosso opale…), decori a mano libera nella tradizione di Rouen, Delft, Strasburgo, Moustiers o Bérain, alzata, forno, ante in ottone o peltro.",
+r_cat:"Il catalogo presenta tutti i modelli, colori e opzioni. Vi apro il modulo.",
+r_fr:"Tutto è fatto nel laboratorio di Desvres dal 1989, che dal 2018 ha il marchio Impresa del Patrimonio Vivente.",
+r_sais:"Non so rispondere con certezza e preferisco non inventare. La squadra del laboratorio vi risponde al +33 3 21 30 30 90 o a magasin@ceramique-regnier.fr.",
+r_aj:"Aggiungi",r_ouvrir:"Apri il modulo del catalogo"
+};
+T.nl={
+n_mod:"Modellen",n_cui:"Keuken",n_sm:"Op maat",n_car:"Wandtegels",n_at:"Het atelier",n_hist:"Geschiedenis",n_ins:"Plaatsing",n_real:"Realisaties",n_act:"Nieuws",n_con:"Contact",n_cons:"Régnier Advies",n_sel:"Mijn selectie",n_cat:"Catalogus",sous_marque:"Keramiekatelier · Desvres",
+h_t:"Vuur, gekleed in handbeschilderde faience.",h_p:"Hout- en pelletkachels, sinds 1989 gevormd, beschilderd en gebakken in ons atelier in Desvres. Elk stuk is genummerd en gesigneerd door de decorateur.",h_b1:"Bekijk de 32 modellen",h_b2:"Catalogus ontvangen",h_pr1:"Bedrijf van Levend Erfgoed",h_pr2:"Gemaakt in Desvres (Frankrijk)",h_pr3:"Geplaatst door onze eigen ploegen in Frankrijk en België",
+p_t:"Van sponsel tot penseel",p_i:"Het decor van een tegel wordt doorgegeven zoals vroeger. Scroll: het ontstaat voor uw ogen.",p1t:"De sponsel",p1:"Een geprikt calqueervel volgt de contour van het decor.",p2t:"De houtskool",p2:"Er wordt met een zakje houtskool getamponneerd: de tekening verschijnt in stippellijn op het stuk.",p3t:"Het penseel",p3:"De decorateur trekt de contouren en legt dan de kleuren, uit de vrije hand.",p4t:"Het vuur",p4:"Een nacht in de oven, tot 1.200 °C. Het glazuur verglaast, de kleuren ontwaken.",p_cap:"Illustratieve schets. De echte decors kiest u op stalen in de showroom.",p_cta:"De 10 productiestappen",
+fa_t:"Kies uw vuur",fa_i:"Hout, pellets, koken of een bestaande schouw: alles wordt hier op bestelling gemaakt.",fam1:"Houtkachels",fam1s:"25 modellen",fam2:"Pelletkachels",fam2s:"7 modellen",fam3:"Keuken",fam3s:"Fornuizen en ovens",fam4:"Op maat",fam4s:"Kachels en schouwbekleding",
+ch_t:"Warmte die blijft, lang na het vuur",ch_p:"Keramiek slaat de warmte van het vuur op en geeft ze urenlang zachtjes af. Metaal warmt snel op en koelt even snel af; faience verspreidt een zachte, gelijkmatige warmte, ook als het vuur uit is.",ch_p2:"De lucht droogt niet uit en wordt niet oververhit, stof wordt niet opgejaagd. En faience vervormt niet: ze behoudt haar glans tientallen jaren.",ch_b:"Hoe een kachel ontstaat",
+co_t:"Stel uw kachel samen",co_i:"Een model, een glazuur, een decor: schets uw idee, het atelier maakt het echt.",co_m:"Model",co_e:"Glazuur",co_d:"Decor",co_o:"Opties",co_btn:"Dit idee aan mijn selectie toevoegen",co_cap:"Indicatieve schets: echte kleuren en decors op stalen in de showroom.",
+e_vert:"Engels groen",e_noir:"Satijnzwart",e_ivoire:"Satijnivoor",e_rouge:"Opaalrood",e_agave:"Agavegroen",e_gris:"Satijngrijs",e_taupe:"Taupe",e_ambre:"Satijnamber",
+d_oeillet:"Anjers",d_rouen:"Rouen",d_delft:"Delfts",d_damier:"Dambord",d_uni:"Effen",o_four:"Oven",o_cp:"Bordenwarmer",o_reh:"Opzetstuk",o_lai:"Messing deur",
+at_t:"Achter de deur van het atelier",at_p:"1.800 m² atelier, 600 m² showroom, meer dan 35 modellen te zien, waarvan verschillende branden. Wie het bezoekt, gaat betoverd naar huis.",at_b:"Het atelier bezoeken",at_b2:"360°-rondleiding",
+hi_t:"In Desvres sinds 1989",hi_p:"Jean-Michel Régnier opende het atelier op 40 m². Florian Grare, een kind van de streek, leidt het sinds 2016. Daartussen: meer dan 35 jaar faience uit Desvres en 22 medewerkers.",hi_b:"Lees de geschiedenis",
+re_t:"Zij deden het thuis",re_b:"Alle realisaties",
+in_t:"Van technisch bezoek tot eerste vuur",in_p:"Onze eigen ploegen plaatsen uw kachel overal in Frankrijk en België: één aanspreekpunt, van rookkanaal tot laatste afstelling.",in_b:"Zo gaat het",
+cta_t:"Kom het vuur echt zien",cta_p:"600 m² showroom in Menneville-Desvres. Maandag tot vrijdag 9-12 u en 14-18 u; zaterdag 10-12 u en 14-18 u.",cta_b1:"Mijn bezoek plannen",cta_b2:"Het atelier bellen",
+mo_t:"Onze faiencekachels",mo_i:"Elk model wordt op bestelling gemaakt: afmetingen, glazuur, decor en afwerking naar uw smaak. Het juiste vermogen berekenen we samen, volgens de oppervlakte van uw ruimte.",f_tous:"Alle",f_bois:"Hout",f_gra:"Pellets",f_four:"Met oven",mo_opt_t:"Toe te voegen aan uw kachel",mo_opt:"Een oven om te koken of op te warmen, een bordenwarmer om warm te houden, een opzetstuk voor meer allure.",
+gr_t:"Pellets: eenvoudig en zuinig",gr_p:"Kleine staafjes van geperste zaagresten, in zakken van 15 kg, op pallets van 66 zakken of in bulk. Makkelijk op te slaan: 1 kg pellets levert ongeveer 5 kWh warmte.",
+b_voir:"Model bekijken",b_aj:"Toevoegen",b_ret:"Verwijderen",lbl_b:"Houtkachel",lbl_g:"Pelletkachel",lbl_four:"met oven",aj_ok:"toegevoegd aan uw selectie",
+fi_dim:"Afmetingen (H × B × D)",fi_kw:"Vermogen",fi_kg:"Gewicht",fi_rdt:"Rendement",fi_four:"Ingebouwde oven",fi_oui:"Ja",fi_nc:"Te bepalen met het atelier",fi_r1:"Op bestelling gemaakt in ons atelier in Desvres",fi_r2:"Stukken genummerd en gesigneerd door de decorateur",fi_r3:"Technisch bezoek en plaatsing door onze ploegen, in Frankrijk en België",fi_r4:"Alle kleuren en decors, op stalen",fi_b1:"Aan mijn selectie toevoegen",fi_b2:"Studie aanvragen",fi_prix:"Prijs op persoonlijke studie, na het technisch bezoek.",fi_ret:"Alle modellen",fi_aussi:"In dezelfde geest",fi_txt_b:"Eén keer stoken, dan urenlang zachte warmte: de faience slaat de warmte van het hout op en geeft ze af.",fi_txt_g:"Het comfort van pellets, onder een volledig te personaliseren faiencebekleding.",
+cu_t:"Keuken",cu_p1:"Een fornuis, een houtkachel met oven, een bordenwarmer, een gietijzeren plaat om te sudderen: u kiest.",cu_p2:"In samenwerking met Wekos kleedt Régnier de mooiste houtfornuizen in faience: massief gietijzer, keramiek, email, inox, messing en de techniek van vandaag.",cu_p3:"Eén fornuis voor drie functies, en het schouwspel van het vuur achter de glazen deur.",cu_fours:"Onze kachels met oven",cu_c1:"Houtfornuis Classic 90, messing afwerking",cu_c2:"Houtfornuis Classic 106",cu_c3:"Houtfornuis 165 LGE, glanzend inox",cu_c4:"Houtfornuis Classic 100, eigen decor",cu_c5:"Fornuis bekleed met faience",
+sm_t:"Kachels op maat",sm_p:"Een bank, een halve kachel, een stuk tot aan het plafond: het atelier maakt de kachel die nog niet bestaat. U kiest vorm, kleur en tekening; de technici van Régnier helpen u ontwerpen.",sm_c1:"Kachel op maat in het Barn Hôtel",sm_c2:"Veelkleurige kachel op maat",sm_c3:"Halve kachel op maat",sm_c4:"Kachel op maat in Italiaanse stijl",sm_c5:"Satijnivoor, decor Desvres grijs",
+hb_t:"Schouwbekleding",hb_p:"Een schouwmantel in marmer of baksteen, een schouw in witte steen… Het atelier maakt van uw schouw een kunstwerk, modern of klassiek, volledig op maat.",hb_p2:"Rechte of gebogen haard, deur in gietijzer, messing, tin of verchroomd: alleen uw verbeelding bepaalt de grens.",hb_c1:"Bekleding anjers in mangaan",hb_c2:"Bekleding Japanse appelbloesem op satijnzwart",hb_c3:"Charline in een schouw, messing deur",
+ca_t:"Handgemaakte wandtegels",ca_p1:"Van keuken tot badkamer, van inkomhal tot toilet: authentieke wandtegels, erfgenamen van meer dan twee eeuwen faience uit Desvres.",ca_p2:"Oude decors, fresco’s, bloemencomposities, met de hand beschilderd op rauw glazuur zoals de kunstfaience van vroeger. U voelt de hand van de ambachtsman.",ca_b:"De tegels in de showroom zien",
+fb_t:"Het maken, in tien handelingen",fb_i:"Elke kachel telt een zestigtal stukken. Ze gaan allemaal door dezelfde handen, hier in Desvres.",
+s1t:"Het modelleren",s1q:"Philippe",s1:"Philippe ontwerpt en maakt met de hand de gipsmallen van elk stuk. Een mal dient een vijftigtal keer, niet meer, voor perfecte vormen.",
+s2t:"De slib",s2q:"",s2:"Klei, water en chamotte, gedoseerd in de menger: de vloeibare massa waaruit alle stukken ontstaan.",
+s3t:"Het gieten",s3q:"Philippe en Joël",s3:"Het gips zuigt het water op, de keramiek vormt zich tegen de wand. Na 24 uur wordt elk stuk voorzichtig ontvormd.",
+s4t:"Het afbramen",s4q:"",s4:"Met mes en penseel wordt elk stuk gladgemaakt, zonder bramen, voor een nauwkeurige montage.",
+s5t:"Het engoberen",s5q:"Vincent",s5:"Vincent spuit de engobe, een mengsel van water, klei en glazuur: een helderwitte basis voor het decor.",
+s6t:"Het decoreren",s6q:"De decorateurs",s6:"Sponsel, houtskool, penseel: elk stuk wordt één voor één uit de vrije hand gedecoreerd.",
+s7t:"Het glazuren",s7q:"Rémy",s7:"Rémy spuit in meerdere lagen een glazuur van metaaloxiden: het beschermt het stuk en onthult de kleuren.",
+s8t:"Het bakken",s8q:"",s8:"Een nacht in de elektrische oven, in fasen, tot ongeveer 1.200 °C. Elke oven biedt plaats aan twee kachels.",
+s9t:"De voormontage",s9q:"David en Mickaël",s9:"Montage met vuurvast beton, siliconenvoegen, daarna een dag drogen.",
+s10t:"De assemblage",s10q:"Guillaume en Lucas",s10:"Eindmontage en controle door de atelierchef, vóór het inpakken en de plaatsing bij u thuis.",
+fb_chif:"Meer dan 35 jaar ervaring · 1.800 m² atelier · 600 m² showroom · meer dan 35 modellen te zien · 100 % Frans gemaakt",
+vi_t:"Het atelier bezoeken",vi_p:"Van modelleren tot glazuren, van decor tot bakken: alle keramiekberoepen onder één dak. Daarna de showroom: brandende kachels, kunstfaience, wandtegels, glazuren en decors om te vergelijken.",vi_perso:"Te personaliseren: vorm en afmetingen, glazuurkleur, handgeschilderde decors, reliëf van de tegels, afwerking en accessoires.",
+vv_t:"Virtuele rondleiding",vv_p:"Verken het atelier en de showroom in 360°, vanuit uw zetel.",vv_b:"Start de 360°-rondleiding",
+epv:"Bedrijf van Levend Erfgoed sinds 2018: een Frans staatslabel voor uitzonderlijk vakmanschap.",
+faq_t:"Veelgestelde vragen",
+q1:"Hoe lang duurt het om een kachel te maken?",a1:"Enkele weken: modelleren, drogen, bakken, glazuren, decoreren, monteren en controleren. Die tijd garandeert de kwaliteit en prestaties van de keramiek.",
+q2:"Worden de kachels echt in Frankrijk gemaakt?",a2:"Ja. Alle stappen gebeuren sinds 1989 in ons atelier in Desvres, in de Pas-de-Calais.",
+q3:"Kan ik mijn kachel personaliseren?",a3:"Ja: kleur van de keramiek, geschilderde decors, afwerking en bekleding volgens het model. Elke kachel wordt op bestelling gemaakt.",
+q4:"Waarom faience en geen staal?",a4:"Keramiek slaat warmte op en geeft ze urenlang af: een zachtere, gelijkmatigere warmte, ook als het vuur uit is.",
+q5:"Hoe lang gaat een keramische kachel mee?",a5:"Tientallen jaren, als ze goed geplaatst en onderhouden wordt. We maken en plaatsen onze eigen kachels en volgen ze op.",
+q6:"Waarom het atelier bezoeken?",a6:"Om elke stap te zien, van het vormen van de tegels tot het handdecor, en alle personalisatiemogelijkheden te ontdekken.",
+hs_t:"Geschiedenis",hs_i:"In Desvres, 5.000 inwoners bij Boulogne-sur-Mer, is faience heilig sinds de 18e eeuw. Het atelier is het verhaal van een ploeg, en van twee mannen.",
+y1989:"Jean-Michel Régnier, een van de laatste kunstkeramisten van Desvres, start het atelier op 40 m². Bijna acht jaar werkt hij er alleen.",y1997:"Eerste medewerker.",y1998:"Mallen, biscuits en modellen komen naar het atelier bij de sluiting van faiencefabriek Delarue.",y1999:"Ruimere lokalen. Kachels zijn 90 % van de productie, naast vazen, fonteinen en biertaps in faience.",ypuis:"Een atelier van 2.000 m² en een fabriekswinkel van 600 m² aan de rand van Desvres.",y2015:"Ontmoeting met Florian Grare.",y2016:"Florian neemt het roer over, met Jean-Michel aan de productie. Pelletkachels en fornuizen komen erbij.",y2018:"Label Bedrijf van Levend Erfgoed.",y2019:"Dertig jaar na de start: nieuwe lokalen vlak bij de oude ateliers, voor de 22 medewerkers.",yp:"Daarna",
+fl_q:"“Mijn familie komt uit Desvres, en het was vanzelfsprekend om hier de mijne op te bouwen. Ik ben trots dat ik de traditie van de faiencekachel voortzet. De warmte van hout schept een sfeer waarin de tijd lijkt stil te staan.”",fl_s:"Florian Grare, zaakvoerder sinds 2016",
+is_t:"Plaatsing",is_i:"Op maat maken betekent ook op maat plaatsen. Onze ploegen kennen elke kachel die het atelier verlaat.",
+e1t:"Het technisch bezoek",e1:"Bij u thuis bekijkt onze technicus de woning en het rookkanaal, bepaalt het vermogen en de ideale plek, en beantwoordt al uw vragen.",
+e2t:"De werken",e2:"Afbraak van de oude haard, buisvoering, metselwerk, normering, sokkel: uw interieur blijft de hele tijd beschermd.",
+e3t:"Plaatsing en eerste vuur",e3:"Aansluitingen, controles, ingebruikname. Daarna leggen we gebruik en onderhoud uit.",
+is_zone:"Levering en plaatsing overal in Frankrijk en België.",qi1:"Hoe verloopt de plaatsing van een houtkachel?",ai1:"Technisch bezoek, voorbereidende werken indien nodig, plaatsing, aansluitingen, afstelling en ingebruikname, daarna uitleg over gebruik en onderhoud.",
+rl_t:"Realisaties",rl_i:"Enkele van onze kachels, bij wie ze samen met ons bedacht.",
+ac_t:"Nieuws",ac1:"Foire de Paris 2026",ac1p:"Het atelier stond op de Foire de Paris 2026, van 30 april tot 11 mei, in Paris Expo Porte de Versailles. Voor de volgende afspraak: +33 3 21 30 30 90.",
+ct_t:"Catalogus ontvangen",ct_p:"Alle modellen, kleuren, decors en opties. Per post of per e-mail.",
+fm_civ:"Aanspreking",fm_m:"Meneer",fm_mme:"Mevrouw",fm_mlle:"Juffrouw",fm_nom:"Achternaam",fm_pre:"Voornaam",fm_adr:"Adres",fm_cp:"Postcode",fm_ville:"Gemeente",fm_mail:"E-mail",fm_tel:"Telefoon",fm_courrier:"Per post",fm_email:"Per e-mail",fm_rgpd:"Ik ga akkoord dat deze gegevens gebruikt worden om mijn aanvraag te behandelen.",fm_env:"Catalogus ontvangen",fm_ok:"Dank u, uw aanvraag is genoteerd. (Ontwerp: er wordt niets verstuurd.)",fm_oblig:"* verplichte velden",fm_np:"Naam en voornaam",fm_suj:"Onderwerp",fm_msg:"Bericht",fm_send:"Versturen",
+cn_t:"Contact",cn_i:"Een vraag, een project, een bezoek? Het atelier antwoordt u.",cn_adr:"Adres",cn_tel:"Telefoon",cn_mail:"E-mail",cn_h:"Openingsuren",cn_h1:"Maandag tot vrijdag: 9-12 u, 14-18 u",cn_h2:"Zaterdag: 10-12 u, 14-18 u",cn_gps:"Route (gps 50.6694, 1.8504)",
+se_t:"Mijn selectie",se_vide:"Uw selectie is leeg. Voeg de modellen toe die u bevallen: het atelier belt u terug voor een persoonlijke studie.",se_form:"Mijn persoonlijke studie aanvragen",se_ok:"Dank u! Het atelier belt u om het technisch bezoek af te spreken. (Ontwerp: er wordt niets verstuurd.)",se_idee:"Samengesteld idee",
+ml_t:"Juridische vermeldingen",
+ft_vis:"Het atelier bezoeken",ft_dec:"Ontdekken",ft_ser:"Diensten",ft_suiv:"Volg ons",ft_droits:"© Atelier Céramique Régnier · SAS met een kapitaal van € 5.000 · RCS Boulogne-sur-Mer 821 545 720",ft_neo:"Voorstel voor een nieuwe website door Neovera Studio",
+cs_sub:"Ik help u kiezen",cs_inv:"Hout of pellets? Welk vermogen? Ik help u uw kachel kiezen.",cs_av:"Virtuele assistent",cs_ph:"Stel uw vraag…",cs_go:"Versturen",
+cs_w:"Hallo, ik ben Régnier Advies, de virtuele assistent van het atelier. Ik help u een model kiezen, uw bezoek plannen of de plaatsing begrijpen.",
+c1:"Hout of pellets?",c2:"Een kachel met oven",c3:"Kleine ruimte",c4:"Prijzen en termijnen",c5:"De showroom bezoeken",c6:"De plaatsing",
+r_gra:"Pellets laden makkelijk en zijn zuinig: 1 kg levert ongeveer 5 kWh. Drie pelletkachels:",
+r_bois:"Hout is het schouwspel van de vlammen en een warmte die de faience urenlang vasthoudt. Drie geliefde modellen:",
+r_four:"Met een oven kookt u op houtvuur: gebraad, gratins, madeleines. Onze kachels met oven:",
+r_petit:"Voor een kleine ruimte, twee compacte modellen: Émile (93 cm hoog, 5 kW) en de pelletkachel PIN (82 cm, 7 kW).",
+r_kw:"Het juiste vermogen hangt af van de ruimte, de isolatie en het rookkanaal: het atelier berekent het samen met u bij het technisch bezoek. Onze modellen gaan van 5 kW (Émile) tot 11 kW (Julia).",
+r_prix:"Prijzen worden niet vermeld: elke kachel is maatwerk, de offerte volgt na het technisch bezoek. Het maken duurt enkele weken. Voor een precieze datum: +33 3 21 30 30 90.",
+r_vis:"De showroom (600 m², meer dan 35 modellen, verschillende branden) ligt in de 20 rue de l’Épinoy, 62240 Menneville-Desvres. Maandag tot vrijdag 9-12 u, 14-18 u; zaterdag 10-12 u, 14-18 u.",
+r_pose:"Onze eigen ploegen plaatsen overal in Frankrijk en België: technisch bezoek, werken (buisvoering, metselwerk, normen), plaatsing en ingebruikname.",
+r_deco:"Alles is te personaliseren: glazuren (Engels groen, satijnzwart, ivoor, opaalrood…), decors uit de vrije hand in de traditie van Rouen, Delft, Straatsburg, Moustiers of Bérain, opzetstuk, oven, deuren in messing of tin.",
+r_cat:"De catalogus toont alle modellen, kleuren en opties. Ik open het formulier voor u.",
+r_fr:"Alles wordt sinds 1989 gemaakt in het atelier in Desvres, dat sinds 2018 het label Bedrijf van Levend Erfgoed draagt.",
+r_sais:"Daar kan ik niet met zekerheid op antwoorden, en ik verzin liever niets. De ploeg van het atelier helpt u op +33 3 21 30 30 90 of via magasin@ceramique-regnier.fr.",
+r_aj:"Toevoegen",r_ouvrir:"Catalogusformulier openen"
+};
+
+(function(){const G={
+g_rose:["rose","pink","rosa","Rosé","rosa","roze"],
+g_voliere:["décor volière bleue","blue aviary pattern","decorado pajarera azul","Dekor blaue Voliere","decoro voliera blu","decor blauwe volière"],
+g_gs:["décor Grand Siècle","Grand Siècle pattern","decorado Grand Siècle","Dekor Grand Siècle","decoro Grand Siècle","decor Grand Siècle"],
+g_mont:["décor montgolfières","hot-air balloon pattern","decorado globos aerostáticos","Dekor Heißluftballons","decoro mongolfiere","decor luchtballonnen"],
+g_banq:["sur banquette, vert anglais","on a bench, English green","sobre banco, verde inglés","auf Ofenbank, Englischgrün","su panca, verde inglese","op een bank, Engels groen"],
+g_delftm:["Delft manganèse","manganese Delft","Delft manganeso","Delft in Mangan","Delft manganese","Delfts mangaan"],
+g_moust:["Moustiers, oiseaux","Moustiers, birds","Moustiers, pájaros","Moustiers, Vögel","Moustiers, uccelli","Moustiers, vogels"],
+g_vafo:["vert anglais, filet or","English green, gold line","verde inglés, filete dorado","Englischgrün, Goldlinie","verde inglese, filetto oro","Engels groen, gouden bies"],
+g_rouenp:["Rouen polychrome","polychrome Rouen","Rouen policromo","Rouen polychrom","Rouen policromo","Rouen polychroom"],
+g_pommier:["pommier du Japon","Japanese apple blossom","manzano del Japón","Japanischer Apfelbaum","melo del Giappone","Japanse appelbloesem"],
+g_ro:["rouge opale, décor personnalisé","opal red, custom pattern","rojo ópalo, decorado personalizado","Opalrot, individuelles Dekor","rosso opale, decoro personalizzato","opaalrood, eigen decor"],
+g_nbfo:["noir brillant, filet or","gloss black, gold line","negro brillante, filete dorado","Glanzschwarz, Goldlinie","nero lucido, filetto oro","glanzend zwart, gouden bies"],
+g_jo:["jaune orangé au pinceau","orange-yellow, brush-painted","amarillo anaranjado a pincel","Gelborange, mit dem Pinsel","giallo arancio a pennello","oranjegeel, met het penseel"],
+g_hong:["décor hongrois","Hungarian pattern","decorado húngaro","ungarisches Dekor","decoro ungherese","Hongaars decor"],
+g_ill:["Visuel d’illustration","Illustration","Imagen ilustrativa","Illustration","Immagine illustrativa","Illustratie"],
+foire_alt:["Affiche de l’atelier pour la Foire de Paris 2026","Workshop poster for the Foire de Paris 2026","Cartel del taller para la Foire de Paris 2026","Plakat der Werkstatt zur Foire de Paris 2026","Locandina del laboratorio per la Foire de Paris 2026","Affiche van het atelier voor de Foire de Paris 2026"],
+pas_t:["Page introuvable","Page not found","Página no encontrada","Seite nicht gefunden","Pagina non trovata","Pagina niet gevonden"],
+ml_1:["Le site est édité par la SAS Atelier Céramique Régnier, au capital de 5 000 €, 20 rue de l’Épinoy « Les Pierrettes », 62240 Menneville-Desvres. RCS Boulogne-sur-Mer 821 545 720, SIRET 821 545 720 00020.","The site is published by SAS Atelier Céramique Régnier, share capital €5,000, 20 rue de l’Épinoy “Les Pierrettes”, 62240 Menneville-Desvres, France. RCS Boulogne-sur-Mer 821 545 720, SIRET 821 545 720 00020.","El sitio lo edita la SAS Atelier Céramique Régnier, capital de 5.000 €, 20 rue de l’Épinoy «Les Pierrettes», 62240 Menneville-Desvres (Francia). RCS Boulogne-sur-Mer 821 545 720, SIRET 821 545 720 00020.","Herausgeber: SAS Atelier Céramique Régnier, Stammkapital 5.000 €, 20 rue de l’Épinoy „Les Pierrettes“, 62240 Menneville-Desvres (Frankreich). RCS Boulogne-sur-Mer 821 545 720, SIRET 821 545 720 00020.","Il sito è edito dalla SAS Atelier Céramique Régnier, capitale 5.000 €, 20 rue de l’Épinoy «Les Pierrettes», 62240 Menneville-Desvres (Francia). RCS Boulogne-sur-Mer 821 545 720, SIRET 821 545 720 00020.","De site wordt uitgegeven door SAS Atelier Céramique Régnier, kapitaal € 5.000, 20 rue de l’Épinoy “Les Pierrettes”, 62240 Menneville-Desvres (Frankrijk). RCS Boulogne-sur-Mer 821 545 720, SIRET 821 545 720 00020."],
+ml_2:["Directeur de la publication : M. Florian Grare. Hébergeur : OVH. Les informations des formulaires servent uniquement à traiter votre demande ; vous pouvez demander leur rectification ou leur suppression par courrier ou par e-mail.","Publication director: Mr Florian Grare. Host: OVH. Form data is used only to process your request; you may ask for it to be corrected or deleted by post or email.","Director de la publicación: Sr. Florian Grare. Alojamiento: OVH. Los datos de los formularios solo sirven para tramitar su solicitud; puede pedir su rectificación o supresión por correo o e-mail.","Verantwortlich: Herr Florian Grare. Hosting: OVH. Formulardaten dienen nur der Bearbeitung Ihrer Anfrage; Berichtigung oder Löschung können Sie per Post oder E-Mail verlangen.","Direttore della pubblicazione: Florian Grare. Hosting: OVH. I dati dei moduli servono solo a gestire la richiesta; potete chiederne rettifica o cancellazione per posta o e-mail.","Verantwoordelijke uitgever: dhr. Florian Grare. Hosting: OVH. Formuliergegevens dienen alleen om uw aanvraag te behandelen; u kunt verbetering of verwijdering vragen per post of e-mail."],
+ml_3:["L’ensemble du site relève de la législation sur le droit d’auteur ; toute reproduction est interdite sans autorisation du directeur de la publication.","The whole site is protected by copyright law; any reproduction requires the publication director’s permission.","Todo el sitio está protegido por los derechos de autor; toda reproducción requiere autorización del director de la publicación.","Die gesamte Website ist urheberrechtlich geschützt; jede Vervielfältigung bedarf der Genehmigung des Verantwortlichen.","L’intero sito è tutelato dal diritto d’autore; ogni riproduzione richiede l’autorizzazione del direttore della pubblicazione.","De hele site valt onder het auteursrecht; elke reproductie vereist toestemming van de verantwoordelijke uitgever."]
+};const L=["fr","en","es","de","it","nl"];for(const k in G)L.forEach((l,i)=>T[l][k]=G[k][i]);})();
+
+(function(){
+const $=(s,r=document)=>r.querySelector(s),$$=(s,r=document)=>[...r.querySelectorAll(s)];
+const LANGS=["fr","en","es","de","it","nl"];
+let lang="fr";try{const s=localStorage.getItem("rg-lang");if(LANGS.includes(s))lang=s}catch(e){}
+const t=k=>(T[lang]&&T[lang][k]!=null?T[lang][k]:T.fr[k]!=null?T.fr[k]:k);
+const li=()=>LANGS.indexOf(lang);
+const slug=s=>s.normalize("NFD").replace(/[̀-ͯ]/g,"").toLowerCase();
+const P=PRODUITS.map(p=>({id:p[0],nom:p[1],type:p[2],four:!!p[3],dim:p[4],kw:p[5],kg:p[6],rdt:p[7],acc:p[8],s:slug(p[1])}));
+const parSlug=s=>P.find(p=>p.s===s);
+const img=id=>"img/p"+id+".jpg";
+
+/* ---------- Sélection ---------- */
+let sel=[];try{sel=JSON.parse(localStorage.getItem("rg-sel")||"[]")}catch(e){}
+const saveSel=()=>{try{localStorage.setItem("rg-sel",JSON.stringify(sel))}catch(e){};$$("[data-nsel]").forEach(n=>n.textContent=sel.length)};
+const inSel=id=>sel.some(x=>x.id===id);
+function toggleSel(id,idee){
+ if(idee){sel.push({id:"idee-"+Date.now(),idee});toast(t("se_idee")+" — "+t("aj_ok"))}
+ else if(inSel(id)){sel=sel.filter(x=>x.id!==id)}
+ else{sel.push({id});const p=P.find(p=>p.id===id);toast(p.nom+" — "+t("aj_ok"))}
+ saveSel();renderSel();$$("[data-btnsel='"+id+"']").forEach(b=>b.textContent=inSel(id)?t("b_ret"):t("b_aj"));
+}
+function toast(m){const e=$(".toast");e.textContent=m;e.classList.add("on");clearTimeout(e._t);e._t=setTimeout(()=>e.classList.remove("on"),2600)}
+
+/* ---------- Menu ---------- */
+const MENU=[["modeles","n_mod"],["cuisine","n_cui"],["sur-mesure","n_sm"],["carrelage","n_car"],["atelier","n_at"],["histoire","n_hist"],["installation","n_ins"],["realisations","n_real"],["actualites","n_act"],["contact","n_con"],["conseil","n_cons"]];
+function renderMenu(){$$("[data-menu]").forEach(n=>{n.innerHTML=MENU.map(([h,k])=>h==="conseil"?`<a href="#" data-ouvrir-cons>${t(k)}</a>`:`<a href="#${h}">${t(k)}</a>`).join("")})}
+
+/* ---------- Cartes modèle ---------- */
+function carte(p){const ty=p.type==="g"?t("lbl_g"):t("lbl_b")+(p.four?" · "+t("lbl_four"):"");const sp=[p.kw,p.dim].filter(Boolean).join(" · ");
+ return `<article class="modele"><a class="ouvrir" href="#modele/${p.s}"><div class="ph"><img loading="lazy" src="${img(p.id)}" alt="${p.nom} — ${ty}"></div></a><div class="c"><span class="type">${ty}</span><h3><a class="ouvrir" href="#modele/${p.s}">${p.nom}</a></h3><p class="acc">${p.acc[li()]}</p>${sp?`<div class="spec">${sp}</div>`:`<div class="spec">${t("fi_nc")}</div>`}<div class="act"><a class="btn btn-vert" href="#modele/${p.s}">${t("b_voir")}</a><button class="btn btn-ligne" type="button" data-btnsel="${p.id}">${inSel(p.id)?t("b_ret"):t("b_aj")}</button></div></div></article>`}
+let filtre="tous";
+function renderGrille(){const g=$("[data-grille]");const l=P.filter(p=>filtre==="tous"||(filtre==="bois"&&p.type==="b")||(filtre==="granules"&&p.type==="g")||(filtre==="four"&&p.four));g.innerHTML=l.map(carte).join("");$$(".filtres button").forEach(b=>b.setAttribute("aria-pressed",b.dataset.f===filtre));
+ $("[data-grille-four]").innerHTML=P.filter(p=>p.four).map(carte).join("")}
+function renderFiche(p){
+ const ty=p.type==="g"?t("lbl_g"):t("lbl_b");const v=x=>x||`<span style="color:var(--gris)">${t("fi_nc")}</span>`;
+ const aussi=P.filter(x=>x.type===p.type&&x.id!==p.id).slice(0,40).sort((a,b)=>((a.id*7+p.id)%13)-((b.id*7+p.id)%13)).slice(0,4);
+ $("[data-fiche]").innerHTML=`<p class="fil"><a href="#modeles">${t("fi_ret")}</a> / ${ty}</p><div class="fiche"><div class="galerie"><div class="grand"><img src="${img(p.id)}" alt="${p.nom} — ${ty}"></div></div><div><span class="qui">${ty}${p.four?" · "+t("lbl_four"):""}</span><h1>${p.nom}</h1><p class="intro">${p.acc[li()]}</p><p>${p.type==="g"?t("fi_txt_g"):t("fi_txt_b")}</p>
+ <table class="tab-spec"><tr><th>${t("fi_dim")}</th><td>${v(p.dim)}</td></tr><tr><th>${t("fi_kw")}</th><td>${v(p.kw)}</td></tr><tr><th>${t("fi_kg")}</th><td>${v(p.kg)}</td></tr><tr><th>${t("fi_rdt")}</th><td>${v(p.rdt)}</td></tr>${p.four?`<tr><th>${t("fi_four")}</th><td>${t("fi_oui")}</td></tr>`:""}</table>
+ <p style="display:flex;gap:10px;flex-wrap:wrap"><button class="btn btn-vert" type="button" data-btnsel="${p.id}">${inSel(p.id)?t("b_ret"):t("fi_b1")}</button><a class="btn btn-ligne" href="#selection" data-demande="${p.id}">${t("fi_b2")}</a></p><p style="font-size:.9rem;color:var(--gris)">${t("fi_prix")}</p>
+ <ul class="reassure"><li>${t("fi_r1")}</li><li>${t("fi_r2")}</li><li>${t("fi_r3")}</li><li>${t("fi_r4")}</li></ul></div></div>
+ <h2 style="margin-top:70px">${t("fi_aussi")}</h2><div class="grille-m">${aussi.map(carte).join("")}</div>`;
+ document.title=p.nom+" — Atelier Céramique Régnier"}
+
+/* ---------- Galerie ---------- */
+const GAL=[["g1","Gustave","e_gris"],["g2","Charline","g_rose"],["g3","Geneviève","g_voliere"],["g4","Clémence","e_noir"],["g5","Mélèze","g_gs"],["g6","Monique","e_agave"],["g7","Gustave","g_mont"],["g8","Muriel","g_banq"],["g9","Angélina","g_delftm"],["g10","Émile","g_moust"],["g11","Clémence","g_vafo"],["g12","Alexandra","g_rouenp"],["g13","Yveline","g_pommier"],["g14","Séquoia","g_pommier"],["g15","Sylvestre","g_ro"],["g16","Martine","g_nbfo"],["g17","Laëtitia","g_jo"],["g18","Yveline","g_hong"]];
+const fig=(src,cap)=>`<figure data-visio><img loading="lazy" src="img/${src}.jpg" alt="${cap}"><figcaption>${cap}</figcaption></figure>`;
+function renderGaleries(){
+ $$("[data-galerie]").forEach(g=>{const n=+g.dataset.galerie;const l=n===6?[GAL[10],GAL[2],GAL[8],GAL[4],GAL[15],GAL[9]]:GAL;g.innerHTML=l.map(([s,m,k])=>fig(s,m+", "+t(k))).join("")});
+ $$("[data-photos]").forEach(g=>{g.innerHTML=g.dataset.photos.split(",").map(x=>{const[s,k]=x.split(":");return fig(s,t(k))}).join("")});
+}
+/* ---------- Atelier, histoire, FAQ ---------- */
+function renderAtelier(){
+ $("[data-dix]").innerHTML=Array.from({length:10},(_,i)=>{const n=i+1;const q=t("s"+n+"q");return `<article class="apparait vu"><img loading="lazy" src="img/f${n}.jpg" alt="${t("s"+n+"t")}"><h3><em>${n}.</em> ${t("s"+n+"t")}</h3>${q?`<span class="qui">${q}</span>`:""}<p>${t("s"+n)}</p></article>`}).join("");
+ $("[data-frise]").innerHTML=[["1989","y1989"],["1997","y1997"],["1998","y1998"],["1999","y1999"],[t("yp"),"ypuis"],["2015","y2015"],["2016","y2016"],["2018","y2018"],["2019","y2019"]].map(([a,k])=>`<li><b>${a}</b><p>${t(k)}</p></li>`).join("");
+ $$("[data-faq]").forEach(f=>{f.innerHTML=f.dataset.faq.split(",").map(n=>`<details><summary>${t("q"+n)}</summary><p>${t("a"+n)}</p></details>`).join("")});
+}
+function renderSel(){
+ const b=$("[data-liste-sel]");if(!b)return;
+ if(!sel.length){b.innerHTML=`<p class="vide">${t("se_vide")}</p><p><a class="lien" href="#modeles">${t("h_b1")}</a></p>`;return}
+ b.innerHTML=sel.map(x=>{if(x.idee){const p=P.find(p=>p.id===x.idee.m)||P[0];return `<div class="ligne-sel"><img src="${img(p.id)}" alt=""><div><b>${t("se_idee")} — ${p.nom}</b><br><small>${t("e_"+x.idee.e)} · ${t("d_"+x.idee.d)}${x.idee.o.length?" · "+x.idee.o.map(o=>t("o_"+o)).join(", "):""}</small></div><button class="retirer" data-retirer="${x.id}">${t("b_ret")}</button></div>`}
+  const p=P.find(p=>p.id===x.id);if(!p)return"";return `<div class="ligne-sel"><img src="${img(p.id)}" alt=""><div><b>${p.nom}</b><br><small>${p.type==="g"?t("lbl_g"):t("lbl_b")}${p.kw?" · "+p.kw:""}</small></div><button class="retirer" data-retirer="${p.id}">${t("b_ret")}</button></div>`}).join("")}
+
+/* ---------- Le poncif : carreau SVG ---------- */
+const MOTIFS={
+ oeillet:{trait:["M200 336 C197 290 205 246 200 196","M200 286 C170 276 150 252 140 226 C168 233 188 254 200 286 Z","M200 258 C230 248 252 226 262 200 C232 208 212 230 200 258 Z","M200 196 C168 186 148 154 160 120 C172 136 184 140 192 130 C191 114 195 102 200 92 C205 102 209 114 208 130 C216 140 228 136 240 120 C252 154 232 186 200 196 Z","M186 198 L200 214 L214 198"],
+  remp:[["M200 286 C170 276 150 252 140 226 C168 233 188 254 200 286 Z","v"],["M200 258 C230 248 252 226 262 200 C232 208 212 230 200 258 Z","v"],["M200 196 C168 186 148 154 160 120 C172 136 184 140 192 130 C191 114 195 102 200 92 C205 102 209 114 208 130 C216 140 228 136 240 120 C252 154 232 186 200 196 Z","m"],["M186 198 L200 214 L214 198 Z","o"]]},
+ rouen:{trait:["M200 140 A60 60 0 1 0 200.1 140","M200 170 A30 30 0 1 0 200.1 170","M140 200 Q120 170 92 178 Q100 200 92 222 Q120 230 140 200","M260 200 Q280 170 308 178 Q300 200 308 222 Q280 230 260 200","M200 140 Q170 120 178 92 Q200 100 222 92 Q230 120 200 140","M200 260 Q170 280 178 308 Q200 300 222 308 Q230 280 200 260"],
+  remp:[["M200 140 A60 60 0 1 0 200.1 140 Z","b"],["M200 170 A30 30 0 1 0 200.1 170 Z","o"],["M140 200 Q120 170 92 178 Q100 200 92 222 Q120 230 140 200 Z","m"],["M260 200 Q280 170 308 178 Q300 200 308 222 Q280 230 260 200 Z","m"],["M200 140 Q170 120 178 92 Q200 100 222 92 Q230 120 200 140 Z","m"],["M200 260 Q170 280 178 308 Q200 300 222 308 Q230 280 200 260 Z","m"]]},
+ delft:{trait:["M200 150 C220 175 225 200 200 250 C175 200 180 175 200 150 Z","M150 200 C175 180 200 175 250 200 C200 225 175 220 150 200 Z","M200 200 m-14 0 a14 14 0 1 0 28 0 a14 14 0 1 0 -28 0","M52 52 L92 92 M52 72 L72 52 M348 52 L308 92 M348 72 L328 52 M52 348 L92 308 M52 328 L72 348 M348 348 L308 308 M348 328 L328 348"],
+  remp:[["M200 150 C220 175 225 200 200 250 C175 200 180 175 200 150 Z","b"],["M150 200 C175 180 200 175 250 200 C200 225 175 220 150 200 Z","b"],["M186 200 a14 14 0 1 0 28 0 a14 14 0 1 0 -28 0 Z","o"]]},
+ damier:{trait:["M80 80 H320 V320 H80 Z","M140 80 V320 M200 80 V320 M260 80 V320 M80 140 H320 M80 200 H320 M80 260 H320"],
+  remp:[["M80 80h60v60h-60z M200 80h60v60h-60z M140 140h60v60h-60z M260 140h60v60h-60z M80 200h60v60h-60z M200 200h60v60h-60z M140 260h60v60h-60z M260 260h60v60h-60z","n"]]},
+ uni:{trait:["M90 90 H310 V310 H90 Z"],remp:[]}
+};
+const EMAUX={vert:["#1F4D3D","#F1EFE6"],noir:["#1E1D1F","#E9E4D8"],ivoire:["#EEE8DA","#1E2420"],rouge:["#8E2C2E","#F4EDE4"],agave:["#5F7D6A","#F3EFE6"],gris:["#9A9C98","#1E2420"],taupe:["#8B7D70","#F3EFE6"],ambre:["#B7822F","#1E2420"]};
+function carreauSVG(motif,fond,enc){
+ const M=MOTIFS[motif]||MOTIFS.oeillet;const col={v:"#2B6150",m:"#5B3347",o:"#B48C3C",b:"#2B4F86",n:enc};
+ const id="g"+Math.random().toString(36).slice(2,7);
+ return `<svg viewBox="0 0 400 400" role="img" aria-hidden="true"><defs><linearGradient id="${id}" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fff" stop-opacity="0"/><stop offset=".48" stop-color="#fff" stop-opacity="0"/><stop offset=".5" stop-color="#fff" stop-opacity=".55"/><stop offset=".56" stop-color="#fff" stop-opacity="0"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient><clipPath id="${id}c"><circle cx="200" cy="200" r="0"/></clipPath></defs>
+ <rect x="6" y="6" width="388" height="388" rx="10" fill="${fond}"/><rect x="22" y="22" width="356" height="356" rx="6" fill="none" stroke="${enc}" stroke-opacity=".35" stroke-width="1.5"/><rect x="34" y="34" width="332" height="332" rx="4" fill="none" stroke="${enc}" stroke-opacity=".2" stroke-width="1"/>
+ <g class="remp">${M.remp.map(([d,c])=>`<path class="couleur" d="${d}" fill="${col[c]}" fill-rule="evenodd" opacity="0"/>`).join("")}</g>
+ <g class="pts" clip-path="url(#${id}c)">${M.trait.map(d=>`<path class="contour-pts" d="${d}" style="stroke:${enc}"/>`).join("")}</g>
+ <g class="tr">${M.trait.map(d=>`<path class="trait" d="${d}" pathLength="1" stroke-dasharray="1" stroke-dashoffset="1" style="stroke:${enc}"/>`).join("")}</g>
+ <rect class="eclat" x="-400" y="0" width="1200" height="400" fill="url(#${id})"/></svg>`}
+function poser(el,p){// p : 0 → 1
+ const s=el.querySelector("svg");if(!s)return;const c=s.querySelector("clipPath circle");
+ const p1=Math.min(1,p/.3),p2=Math.max(0,Math.min(1,(p-.28)/.3)),p3=Math.max(0,Math.min(1,(p-.55)/.28)),p4=Math.max(0,Math.min(1,(p-.84)/.16));
+ c.setAttribute("r",(p1*300).toFixed(1));
+ s.querySelector(".pts").style.opacity=(1-p3*.85).toFixed(2);
+ s.querySelectorAll(".trait").forEach((t,i,a)=>{const q=Math.max(0,Math.min(1,p2*1.25-i/a.length*.25));t.setAttribute("stroke-dashoffset",(1-q).toFixed(3))});
+ s.querySelectorAll(".couleur").forEach((t,i,a)=>{t.setAttribute("opacity",Math.max(0,Math.min(.92,p3*1.4-i/a.length*.4)).toFixed(2))});
+ const e=s.querySelector(".eclat");e.style.opacity=p4>0&&p4<1?1:0;e.setAttribute("x",(-600+p4*900).toFixed(0));
+}
+const reduit=matchMedia("(prefers-reduced-motion: reduce)").matches;
+function initPoncif(){
+ const el=$("[data-carreau=accueil]");el.innerHTML=carreauSVG("oeillet","#F1F0E9","#2A2627");
+ const sec=$("#poncif"),items=$$(".etapes-p li",sec);
+ const maj=()=>{if(!$("[data-vue=accueil]").classList.contains("on"))return;const r=sec.getBoundingClientRect();const h=innerHeight;let p=(h*.55-r.top)/(r.height-h*.6);p=Math.max(0,Math.min(1,p));if(reduit)p=1;poser(el,p);const ph=p<.15?0:p<.3?1:p<.83?2:3;items.forEach((li,i)=>li.classList.toggle("on",i<=ph))};
+ addEventListener("scroll",()=>requestAnimationFrame(maj),{passive:true});addEventListener("resize",maj);maj();
+}
+/* ---------- Composer ---------- */
+const co={m:1184,e:"vert",d:"oeillet",o:[]};
+function animer(el){if(reduit){poser(el,1);return}const t0=performance.now();const f=n=>{const p=Math.min(1,(n-t0)/2600);poser(el,p);if(p<1)requestAnimationFrame(f)};requestAnimationFrame(f)}
+function renderComposer(anim){
+ $("#co-modele").innerHTML=P.map(p=>`<option value="${p.id}"${p.id===co.m?" selected":""}>${p.nom} — ${p.type==="g"?t("lbl_g"):t("lbl_b")}</option>`).join("");
+ const grp=(g,l,k,multi)=>{$(`[data-groupe=${g}]`).innerHTML=l.map(v=>`<button type="button" data-v="${v}" aria-pressed="${multi?co.o.includes(v):co[k]===v}">${g==="email"?`<i style="background:${EMAUX[v][0]}"></i>`:""}${t((g==="email"?"e_":g==="decor"?"d_":"o_")+v)}</button>`).join("")};
+ grp("email",Object.keys(EMAUX),"e");grp("decor",["oeillet","rouen","delft","damier","uni"],"d");grp("option",["four","cp","reh","lai"],"o",1);
+ const el=$("[data-carreau=composer]");el.innerHTML=carreauSVG(co.d,EMAUX[co.e][0],EMAUX[co.e][1]);if(anim)animer(el);else poser(el,1);
+}
+/* ---------- Conseiller ---------- */
+const INT=[
+ ["gra",/granul|pellet|gr[aä]nul|pelle|pellet/],["four",/four|oven|horno|backofen|forno|oven|cuisin|cook|cocin|koch|cucin|koken|rot/],["petit",/petit|small|pequen|klein|piccol|klein|compact|studio|appart/],
+ ["kw",/puissan|kw|surface|m2|m²|output|potenc|leistung|vermogen|chauff|heat|calef|heiz|riscald|verwarm/],["prix",/prix|tarif|cout|combien|price|cost|how much|precio|cuanto|preis|kost|prezz|quanto|prijs|kost|delai|lead time|plazo|liefer|tempi|termijn|semaine|weeks|cuando|wann|quando|wanneer/],
+ ["vis",/visit|showroom|horaire|ouvert|adresse|hours|open|address|horario|direcc|offnung|adresse|orari|indirizz|openingsu|adres|ou etes|where|donde|wo |dove|waar/],["pose",/pose|install|monta|plaats|tubage|conduit|flue|belgi|livr|deliver|entreg|liefer|consegn|lever/],
+ ["deco",/decor|couleur|email|colou|color|glaze|esmalt|farbe|glasur|smalt|kleur|glazuur|motif|pattern|perso|rouen|delft|moustiers/],["cat",/catalog|brochure|katalog|catalogus/],["fr",/france|fabriqu|made|epv|patrimoine|heritage|frankreich|francia|frankrijk/],
+ ["bois",/bois|wood|lena|holz|legna|hout|buche|log|flamme|flame/]];
+const RECO={gra:[1212,1216,1217],bois:[1184,1186,1188],four:[2269,3552,2714,1196],petit:[2177,3589]};
+function repondre(q){
+ const s=slug(q);let k=null;for(const [n,re] of INT){if(re.test(s)){k=n;break}}
+ if(/bois ou|wood or|lena o|holz oder|legna o|hout of/.test(s))k="gra";
+ const r={gra:"r_gra",bois:"r_bois",four:"r_four",petit:"r_petit",kw:"r_kw",prix:"r_prix",vis:"r_vis",pose:"r_pose",deco:"r_deco",cat:"r_cat",fr:"r_fr"}[k]||"r_sais";
+ let h=`<p style="margin:0">${t(r)}</p>`;
+ if(RECO[k])h+=RECO[k].map(id=>{const p=P.find(p=>p.id===id);return `<div class="mini"><img src="${img(id)}" alt=""><span><b>${p.nom}</b><br><small>${p.kw||(p.type==="g"?t("lbl_g"):t("lbl_b"))}</small></span><button type="button" data-btnsel="${id}">${inSel(id)?t("b_ret"):t("r_aj")}</button></div>`}).join("");
+ if(k==="cat")setTimeout(()=>{location.hash="catalogue"},900);
+ return h}
+function msg(h,qui){const f=$(".fil-msg");const d=document.createElement("div");d.className="msg "+qui;d.innerHTML=h;f.appendChild(d);f.scrollTop=f.scrollHeight}
+function initCons(){
+ const ouvrir=()=>{$(".cons").classList.add("on");$(".cons-invite").classList.remove("on");if(!$(".fil-msg").children.length){msg(`<span class="av-mention">${t("cs_av")}</span><br>${t("cs_w")}`,"ia")}puces();setTimeout(()=>$("#cons-q").focus(),50)};
+ const puces=()=>{$(".puces").innerHTML=["c1","c2","c3","c4","c5","c6"].map(c=>`<button type="button" data-q="${c}">${t(c)}</button>`).join("")};
+ $(".cons-btn").addEventListener("click",ouvrir);document.addEventListener("click",e=>{if(e.target.closest("[data-ouvrir-cons]")){e.preventDefault();ouvrir()}});
+ $("[data-fermer-cons]").addEventListener("click",()=>$(".cons").classList.remove("on"));
+ $(".puces").addEventListener("click",e=>{const b=e.target.closest("[data-q]");if(!b)return;const q=t(b.dataset.q);msg(q,"moi");const map={c1:"bois ou granulés",c2:"four",c3:"petit",c4:"prix",c5:"showroom",c6:"pose"};setTimeout(()=>msg(repondre(map[b.dataset.q]),"ia"),350)});
+ $(".cons form").addEventListener("submit",e=>{e.preventDefault();const i=$("#cons-q");const q=i.value.trim();if(!q)return;msg(q.replace(/</g,"&lt;"),"moi");i.value="";setTimeout(()=>msg(repondre(q),"ia"),400)});
+ let vu=false;try{vu=sessionStorage.getItem("rg-inv")}catch(e){}
+ if(!vu)setTimeout(()=>{if(!$(".cons").classList.contains("on"))$(".cons-invite").classList.add("on");try{sessionStorage.setItem("rg-inv",1)}catch(e){}},4000);
+ $(".cons-invite button").addEventListener("click",()=>$(".cons-invite").classList.remove("on"));
+}
+/* ---------- Traduction ---------- */
+function traduire(){
+ document.documentElement.lang=lang;$("#langue").value=lang;
+ $$("[data-t]").forEach(e=>{e.textContent=t(e.dataset.t)});
+ $$("[data-alt]").forEach(e=>e.alt=t(e.dataset.alt));
+ $("#cons-q").placeholder=t("cs_ph");$(".sel-btn").setAttribute("aria-label",t("n_sel"));
+ renderMenu();renderGrille();renderGaleries();renderAtelier();renderSel();renderComposer(false);route(true);
+}
+/* ---------- Routage ---------- */
+function route(garder){
+ const h=decodeURIComponent(location.hash.slice(1))||"accueil";const [v,a]=h.split("/");
+ let vue=v;if(v==="modele"&&!parSlug(a||""))vue="modeles";
+ if(!$(`[data-vue="${vue}"]`))vue="accueil";
+ $$(".vue").forEach(x=>x.classList.toggle("on",x.dataset.vue===vue));
+ $$(".nav a").forEach(x=>x.setAttribute("aria-current",x.getAttribute("href")==="#"+vue||(vue==="modele"&&x.getAttribute("href")==="#modeles")?"page":"false"));
+ if(vue==="modeles"){const f={bois:"bois",granules:"granules",four:"four"}[a];if(f){filtre=f;renderGrille()}}
+ if(vue==="modele")renderFiche(parSlug(a));else document.title=vue==="accueil"?"Atelier Céramique Régnier — Poêles en faïence peints à la main, Desvres":t({modeles:"mo_t",cuisine:"cu_t","sur-mesure":"sm_t",carrelage:"ca_t",atelier:"vi_t",histoire:"hs_t",installation:"is_t",realisations:"rl_t",actualites:"ac_t",catalogue:"ct_t",contact:"cn_t",selection:"se_t",mentions:"ml_t"}[vue]||"mo_t")+" — Atelier Céramique Régnier";
+ const ancre=a&&document.getElementById(a);
+ if(ancre)setTimeout(()=>ancre.scrollIntoView({behavior:reduit?"auto":"smooth"}),60);else if(garder!==true)scrollTo(0,0);
+ observer();
+}
+let io;function observer(){if(!("IntersectionObserver" in window)){$$(".apparait").forEach(e=>e.classList.add("vu"));return}io=io||new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add("vu");io.unobserve(e.target)}}),{threshold:.15});$$(".vue.on .apparait:not(.vu)").forEach(e=>io.observe(e))}
+
+/* ---------- Événements ---------- */
+document.addEventListener("click",e=>{
+ const b=e.target.closest("[data-btnsel]");if(b){e.preventDefault();toggleSel(+b.dataset.btnsel);return}
+ const d=e.target.closest("[data-demande]");if(d&&!inSel(+d.dataset.demande)){toggleSel(+d.dataset.demande)}
+ const r=e.target.closest("[data-retirer]");if(r){const id=r.dataset.retirer;sel=sel.filter(x=>String(x.id)!==id);saveSel();renderSel();return}
+ const go=e.target.closest("[data-go]");if(go){location.hash=go.dataset.go;return}
+ const f=e.target.closest(".filtres button");if(f){filtre=f.dataset.f;renderGrille();return}
+ const fv=e.target.closest("[data-visio]");if(fv){const v=$(".visio");$("img",v).src=$("img",fv).src;$("img",v).alt=$("img",fv).alt;$("p",v).textContent=$("figcaption",fv).textContent;v.classList.add("on");$("[data-fermer-visio]").focus();return}
+ if(e.target.closest("[data-fermer-visio]")||e.target.classList.contains("visio")){$(".visio").classList.remove("on");return}
+ const vv=e.target.closest("[data-vv] button");if(vv){vv.parentNode.innerHTML=`<iframe class="carte-360" src="https://www.hdmedia.fr/visite-virtuelle/hd/cbpKgpz58-poeles-et-cheminees-en-ceramique-et-faience-atelier-ceramique-regnier-desvres-62.html" title="${t("vv_t")}" allowfullscreen loading="lazy"></iframe>`;return}
+ const pb=e.target.closest(".pastilles button");if(pb){const g=pb.parentNode.dataset.groupe,v=pb.dataset.v;if(g==="email")co.e=v;else if(g==="decor")co.d=v;else co.o=co.o.includes(v)?co.o.filter(x=>x!==v):[...co.o,v];renderComposer(g!=="option");return}
+});
+document.addEventListener("keydown",e=>{if(e.key==="Escape"){$(".visio").classList.remove("on");$(".cons").classList.remove("on")}});
+$("#co-modele").addEventListener("change",e=>{co.m=+e.target.value});
+$("#co-ajout").addEventListener("click",()=>toggleSel(null,{m:co.m,e:co.e,d:co.d,o:[...co.o]}));
+$$("form.f").forEach(f=>f.addEventListener("submit",e=>{e.preventDefault();const k=f.dataset.form==="selection"?"se_ok":"fm_ok";let o=f.querySelector(".ok");if(!o){o=document.createElement("p");o.className="ok plein";f.appendChild(o)}o.textContent=t(k);o.setAttribute("role","status")}));
+$("#langue").addEventListener("change",e=>{lang=e.target.value;try{localStorage.setItem("rg-lang",lang)}catch(x){}traduire()});
+addEventListener("hashchange",()=>route());
+saveSel();initPoncif();initCons();traduire();
+})();
+
+</script>
+<script id="nv-track">(function(){try{if(location.protocol!=='https:')return;if(/[?&]moi\b/.test(location.search)){localStorage.setItem('nv_moi','1');addEventListener('load',function(){var d=document.createElement('div');d.textContent='✓ Appareil reconnu : vos visites ne sont plus comptées';d.style.cssText='position:fixed;left:50%;bottom:24px;transform:translateX(-50%);z-index:2147483647;background:#1E3A2B;color:#fff;font:600 14px/1.3 system-ui,sans-serif;padding:12px 18px;border-radius:999px;box-shadow:0 8px 24px rgba(0,0,0,.25)';document.body.appendChild(d);setTimeout(function(){d.remove()},6000)})}if(localStorage.getItem('nv_moi')||navigator.webdriver)return;}catch(x){}
+var m=location.pathname.split('/').filter(Boolean)[0]||'';if(!m)return;var s=Math.random().toString(36).slice(2,12),t0=Date.now(),u='/_t.php',last='home',seen={};
+function send(e,p){var b=JSON.stringify({m:m,e:e,s:s,p:p||'',t:Math.round((Date.now()-t0)/1000),l:(document.documentElement.lang||'').slice(0,2)});try{if(navigator.sendBeacon)navigator.sendBeacon(u,new Blob([b],{type:'text/plain'}));else fetch(u,{method:'POST',body:b,keepalive:true})}catch(x){}}
+function once(k){k=String(k).toLowerCase().replace(/[^a-z0-9_-]/g,'').slice(0,24);if(!k||seen[k])return;seen[k]=1;send('ev',k)}
+send('open');setInterval(function(){if(document.visibilityState==='visible')send('ping')},45000);
+document.addEventListener('visibilitychange',function(){if(document.visibilityState==='hidden')send('ping')});
+window.__nvView=function(p){p=String(p||'');if(p&&p!==last){last=p;send('view',p)}};
+addEventListener('scroll',function(){var h=document.documentElement,max=h.scrollHeight-innerHeight;if(max<200)return;var r=(scrollY/max)*100;[25,50,75,100].forEach(function(q){if(r>=q-2)once('defil'+q+'-'+last)})},{passive:true});
+document.addEventListener('click',function(e){var el=e.target.closest('a,button,[data-add],[data-go],[role=button],summary');if(!el)return;var t=((el.getAttribute('aria-label')||'')+' '+(el.textContent||'')+' '+(el.className||'')+' '+(el.id||'')).toLowerCase(),h=el.getAttribute&&el.getAttribute('href')||'';
+if(el.hasAttribute('data-add')||/ajouter|add to|añadir|hinzuf|aggiungi|加入/.test(t))once('panier-'+(el.getAttribute('data-add')||'ajout')),send('ev','panier');
+else if(/conseil|advisor|assistant|chat/.test(t))once('conseiller');
+else if(/instagram|facebook|youtube|pinterest|linkedin|tiktok/.test(h))once('reseau-'+(h.match(/instagram|facebook|youtube|pinterest|linkedin|tiktok/)||[''])[0]);
+else if(/réserv|reserv|visite|book/.test(t))once('reservation');
+else if(/coffret|gift|cadeau/.test(t))once('coffret')},true);
+document.addEventListener('play',function(e){if(e.target&&e.target.tagName==='VIDEO'&&!e.target.muted)once('video-son')},true);
+try{new MutationObserver(function(){var l=(document.documentElement.lang||'').slice(0,2);if(l&&l!=='fr')once('langue-'+l)}).observe(document.documentElement,{attributes:true,attributeFilter:['lang']})}catch(x){}
+addEventListener('load',function(){try{if(typeof window.go==='function'&&!window.go.__nv){var g=window.go;window.go=function(v){try{window.__nvView(v)}catch(x){}return g.apply(this,arguments)};window.go.__nv=1}}catch(x){}});})();</script>
+</body>
+</html>
