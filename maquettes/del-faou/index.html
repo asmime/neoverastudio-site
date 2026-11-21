@@ -11,15 +11,14 @@
 <style>
 @font-face{font-family:"Young Serif";font-weight:400;font-display:swap;src:url(fonts/young-serif-latin-400-normal.woff2) format("woff2")}
 @font-face{font-family:"Young Serif";font-weight:400;font-display:swap;src:url(fonts/young-serif-latin-ext-400-normal.woff2) format("woff2");unicode-range:U+0100-02BA,U+1E00-1EFF}
-@font-face{font-family:"Figtree";font-weight:400;font-display:swap;src:url(fonts/figtree-latin-400-normal.woff2) format("woff2")}
-@font-face{font-family:"Figtree";font-weight:400;font-display:swap;src:url(fonts/figtree-latin-ext-400-normal.woff2) format("woff2");unicode-range:U+0100-02BA,U+1E00-1EFF}
-@font-face{font-family:"Figtree";font-weight:500;font-display:swap;src:url(fonts/figtree-latin-500-normal.woff2) format("woff2")}
-@font-face{font-family:"Figtree";font-weight:600;font-display:swap;src:url(fonts/figtree-latin-600-normal.woff2) format("woff2")}
-@font-face{font-family:"Figtree";font-weight:700;font-display:swap;src:url(fonts/figtree-latin-700-normal.woff2) format("woff2")}
+@font-face{font-family:"Public Sans";font-weight:400;font-display:swap;src:url(fonts/public-sans-latin-400-normal.woff2) format("woff2")}
+@font-face{font-family:"Public Sans";font-weight:400;font-display:swap;src:url(fonts/public-sans-latin-ext-400-normal.woff2) format("woff2");unicode-range:U+0100-02BA,U+1E00-1EFF}
+@font-face{font-family:"Public Sans";font-weight:600;font-display:swap;src:url(fonts/public-sans-latin-600-normal.woff2) format("woff2")}
+@font-face{font-family:"Public Sans";font-weight:700;font-display:swap;src:url(fonts/public-sans-latin-700-normal.woff2) format("woff2")}
 :root{
  --granit:#ECEBE6;--granit2:#DAD8D0;--pierre:#C9C6BB;--encre:#1D211F;--gris:#4C524E;
- --genet:#E8B12C;--genet-f:#9A6B00;--paturage:#34402A;--paturage2:#4A5A3B;--aligot:#F5ECD4;--blanc:#fff;
- --titre:"Young Serif",Georgia,serif;--texte:"Figtree",system-ui,sans-serif;--ease:cubic-bezier(.16,1,.3,1);
+ --genet:#EDC31F;--genet-f:#9A6B00;--paturage:#34402A;--paturage2:#4A5A3B;--aligot:#F5ECD4;--blanc:#fff;
+ --titre:"Young Serif",Georgia,serif;--texte:"Public Sans",system-ui,sans-serif;--ease:cubic-bezier(.16,1,.3,1);
 }
 *{box-sizing:border-box}
 html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;scrollbar-color:var(--paturage2) var(--granit2)}
@@ -89,11 +88,19 @@ section{padding:88px 0}
 .deux.inv>:first-child{order:2}
 .photo{border-radius:14px;overflow:hidden}
 .photo img{width:100%;aspect-ratio:4/3;object-fit:cover}
+.photo figcaption{font-size:.88rem;color:var(--gris);padding:8px 2px 0;background:var(--granit)}
+figure.photo{margin:0;overflow:visible}figure.photo img{border-radius:14px}
+.tete .fil{top:auto;height:70px}
+.gros{font:400 clamp(1.8rem,3.4vw,2.6rem)/1 var(--titre);text-decoration:none;color:var(--encre);display:inline-flex;gap:.4em;align-items:center}
+.rgpd{display:flex;gap:10px;align-items:flex-start;font-size:.9rem;color:var(--gris)}
+.rgpd input{width:auto;margin-top:3px}
 .bande{background:var(--genet);color:var(--encre)}
 .bande .suite{background-image:linear-gradient(var(--encre),var(--encre))}
 .bande .suite:hover{color:var(--genet)}
 .specs{list-style:none;padding:0;margin:20px 0 26px;display:flex;flex-wrap:wrap;gap:10px}
-.specs li{font:400 1.25rem/1 var(--titre);background:rgba(255,255,255,.55);border:2px solid var(--encre);border-radius:999px;padding:.55em .95em}
+.specs li{font:400 1.45rem/1.2 var(--titre)}
+.specs li+li::before{content:"·";margin:0 .45em 0 -.1em;color:var(--encre)}
+.specs{gap:4px 6px!important}
 .ardoise{background:var(--paturage);color:#EEF0E6}
 .ardoise h2,.ardoise h3{color:#fff}
 .ardoise .suite{color:#fff}
@@ -106,13 +113,13 @@ section{padding:88px 0}
 .cartes3{display:grid;grid-template-columns:repeat(3,1fr);gap:40px}
 .paysage{position:relative}
 .paysage img{width:100%;height:min(62vh,560px);object-fit:cover}
-.paysage .leg{position:absolute;left:24px;bottom:24px;background:rgba(29,33,31,.78);color:#fff;padding:14px 18px;border-radius:10px;max-width:420px}
+.paysage .leg{padding:14px 24px;color:var(--gris);font-size:.95rem;max-width:1240px;margin:0 auto}
 .paysage .leg p{margin:0}
 .presse{border-top:1px solid var(--pierre);border-bottom:1px solid var(--pierre);padding:28px 0;text-align:center}
 .presse p{margin:0 auto;font:400 1.3rem/1.4 var(--titre);max-width:none}
-.coord{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
-.coord div{background:#fff;border-radius:12px;padding:20px}
-.coord h3{font:700 .8rem var(--texte);letter-spacing:.08em;text-transform:uppercase;color:var(--gris);margin-bottom:.5em}
+.coord{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;border-top:3px solid var(--encre);padding-top:22px}
+.coord div{padding:0}
+.coord h3{font:400 1.05rem var(--titre);color:var(--gris);margin-bottom:.3em}
 .coord p{margin:0;font-weight:600;overflow-wrap:anywhere}
 
 .tete{padding:72px 0 40px;background:var(--paturage);color:#fff;position:relative;overflow:hidden}
@@ -124,7 +131,7 @@ section{padding:88px 0}
 .tete .fil{opacity:.9}
 .tarifs{width:100%;border-collapse:collapse;font-variant-numeric:tabular-nums;background:#fff;border-radius:12px;overflow:hidden}
 .tarifs th,.tarifs td{padding:14px 16px;text-align:left;border-bottom:1px solid var(--granit2)}
-.tarifs th{font:700 .78rem var(--texte);letter-spacing:.07em;text-transform:uppercase;color:var(--gris);background:var(--granit2)}
+.tarifs th{font:600 .9rem var(--texte);color:var(--gris);background:var(--granit2)}
 .tarifs td:last-child,.tarifs th:last-child{text-align:right;white-space:nowrap}
 .tarifs td:last-child{font:400 1.2rem var(--titre);color:var(--paturage)}
 .equip{columns:2;column-gap:28px;padding:0;list-style:none;margin:0}
@@ -150,10 +157,10 @@ input:focus,select:focus,textarea:focus{outline:none;border-color:var(--paturage
 .ok{color:var(--paturage);font-weight:600}
 .carte-lieu{display:flex;gap:10px;flex-wrap:wrap}
 
-footer{background:var(--encre);color:#C7CBC4;padding:64px 0 120px}
+footer{background:#222B1A;color:#C7CBC4;padding:64px 0 120px}
 footer a{color:#fff}
 footer .g{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:36px}
-footer h4{font:700 .78rem var(--texte);letter-spacing:.08em;text-transform:uppercase;color:#fff;margin:0 0 12px}
+footer h4{font:400 1.1rem var(--titre);color:#fff;margin:0 0 12px}
 footer ul{list-style:none;padding:0;margin:0}footer li{margin:6px 0}
 footer .logo b{color:#fff}
 .signature{border-top:1px solid #353a37;margin-top:40px;padding-top:20px;font-size:.85rem;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
@@ -208,7 +215,7 @@ footer .logo b{color:#fff}
  .cons{top:auto;right:auto;left:12px;bottom:12px;height:min(600px,calc(100vh - 24px))}
  footer .g,.form{grid-template-columns:minmax(0,1fr)}
  .equip{columns:1}
- .paysage .leg{position:static;border-radius:0;max-width:none}
+ .paysage .leg{padding:12px 16px}
 }
 @media (max-width:480px){
  .logo b{font-size:1.3rem}.logo small{font-size:.62rem}
@@ -241,7 +248,7 @@ const T={
 fr:{lang:"Langue",tag:"Hôtel ** · Restaurant · Fau-de-Peyre, Lozère",open:"Ouvert de 7 h à 21 h",
  nav:["Accueil","Les chambres","Le restaurant","Groupes","Venir & contact","Del Faou Conseil"],
  book:"Réserver une chambre",table:"Réserver une table",
- lead:"Au cœur de l'Aubrac, une maison de famille depuis 1979 : 18 chambres au calme et la cuisine lozérienne, faite maison.",
+ lead:"Hôtel 2 étoiles et restaurant au cœur de l'Aubrac, maison de famille depuis 1979 : 18 chambres au calme et la cuisine lozérienne, faite maison.",
  rep:["À 8 km de l'A75","Ouvert de 7 h à 21 h","18 chambres, dont une PMR","Aligot, manouls, charcuterie maison"],
  aT:"Une halte qui sent l'Aubrac",aP:"Fau-de-Peyre, une trentaine d'habitants, près d'Aumont-Aubrac. Madame Tichit vous accueille dans le calme du village, un pied sur le plateau.",aA:"Voir les chambres",
  bT:"À table, la Lozère",bP:"Tout est fait maison, à la mode du pays. L'aligot file, la charcuterie vient de la maison, et le menu du jour suit l'humeur de la cuisinière.",bA:"Ouvrir la carte",
@@ -256,16 +263,16 @@ fr:{lang:"Langue",tag:"Hôtel ** · Restaurant · Fau-de-Peyre, Lozère",open:"O
  prN:"Chambre de 5 personnes : prix sur demande.",
  eqT:"Dans chaque chambre",eq:["Douche ou baignoire, toilettes séparées","Télévision","Téléphone","Wifi","Rampe d'accès pour les personnes à mobilité réduite"],
  persH:"Personnes",prixH:"Prix",
- rT:"Le restaurant",rL:"La cuisine lozérienne, toute la semaine, 100 % faite maison. Une salle simple et chaleureuse, une terrasse au soleil du village.",
+ rT:"Le restaurant",rL:"La cuisine lozérienne, toute la semaine, 100 % faite maison. Une salle simple et chaleureuse, une terrasse sur la rue du village.",
  spT:"Nos spécialités",sp:["Charcuterie maison","Grenouilles persillées","Tripes d'agneau","Tripes au lard","Côte de bœuf"],
  hT:"Les horaires",h:[["Petit-déjeuner","7 h 00 – 9 h 30"],["Déjeuner","12 h 00 – 13 h 15"],["Dîner","19 h 30 – 20 h 15"]],
  mjT:"Menu du jour",mj:"à partir de 16 €, selon les humeurs de la cuisinière. Menu enfant pour les plus petits.",
  menusT:"Les menus",carteT:"La carte",salT:"Les salades",
  menuE:"Entrée du jour",charc:"Charcuterie",pj:"Plat du jour",from:"Fromage",des:"Dessert",or:"ou",supA:"Supplément aligot : 2 €",
  servT:"Sur place",serv:["TV","Wifi","Terrasse","Parking","Équipement pour bébé","Animaux acceptés"],
- gT:"Groupes",gL:"En famille, entre collègues ou en tournée : le Del Faou sait recevoir.",g:[["Séminaire","Une salle au calme et la table de la maison pour vos journées de travail."],["Banquet","Jusqu'à 20 personnes, autour des plats du pays."],["Étape VRP","Le dîner, la chambre et le petit-déjeuner, sur votre route."]],gA:"Demander une formule",
+ gT:"Groupes",gL:"En famille, entre collègues ou en tournée : le Del Faou sait recevoir.",g:[["Séminaire","Vos journées de travail, avec la table de la maison."],["Banquet","Jusqu'à 20 personnes, autour des plats du pays."],["Étape VRP","Le dîner, la chambre et le petit-déjeuner, sur votre route."]],gA:"Demander une formule",
  vT:"Venir & contact",vL:"Village, 48130 Fau-de-Peyre, près d'Aumont-Aubrac. À 8 km de la sortie de l'A75.",vMap:"Ouvrir l'itinéraire",
- fT:"Demande de réservation",fIn:"Date d'arrivée",fOut:"Date de départ",fP:"Personnes",fR:"Restauration",fR0:"Chambre seule",fR1:"Demi-pension",fR2:"Pension complète",fR3:"Table au restaurant",fNom:"Nom",fTel:"Téléphone",fMail:"E-mail",fMsg:"Votre message",fSend:"Envoyer la demande",fErr:"Indiquez au moins votre nom, votre téléphone et votre e-mail.",fErrD:"La date de départ doit suivre l'arrivée.",fOk:"Votre messagerie s'ouvre avec la demande prête à partir vers l'hôtel.",fRgpd:"Vos informations servent seulement à répondre à votre demande.",
+ fT:"Demande de réservation",fIn:"Date d'arrivée",fOut:"Date de départ",fP:"Personnes",fR:"Restauration",fR0:"Chambre seule",fR1:"Demi-pension",fR2:"Pension complète",fR3:"Table au restaurant",fNom:"Nom",fTel:"Téléphone",fMail:"E-mail",fMsg:"Votre message",fSend:"Envoyer la demande",fErr:"Indiquez au moins votre nom, votre téléphone et votre e-mail.",fErrD:"La date de départ doit suivre l'arrivée.",fOk:"Votre messagerie s'ouvre avec la demande prête à partir vers l'hôtel.",fRgpd:"J'accepte que ces informations servent uniquement à répondre à ma demande.",fErrG:"Cochez la case d'accord pour envoyer la demande.",
  legT:"Mentions légales",legPub:"Éditeur du site",legTva:"TVA intracommunautaire",
  fNav:"La maison",fInfo:"Infos pratiques",propo:"Proposition de nouveau site imaginée par Neovera Studio",
  cName:"Del Faou Conseil",cSub:"Je vous aide à choisir",cVirt:"assistant virtuel",cHello:"Bonjour, je suis Del Faou Conseil, l'assistant virtuel de l'hôtel. Une chambre, un repas, un groupe ? Posez-moi votre question.",cBubble:"Bonjour ! Je suis Del Faou Conseil, assistant virtuel. Je vous aide à choisir une chambre ou un menu.",cPh:"Votre question…",cClose:"Fermer",
@@ -273,7 +280,7 @@ fr:{lang:"Langue",tag:"Hôtel ** · Restaurant · Fau-de-Peyre, Lozère",open:"O
 en:{lang:"Language",tag:"Hotel ** · Restaurant · Fau-de-Peyre, Lozère",open:"Open 7 am to 9 pm",
  nav:["Home","Rooms","Restaurant","Groups","Getting here & contact","Del Faou Advisor"],
  book:"Book a room",table:"Book a table",
- lead:"In the heart of the Aubrac, a family house since 1979: 18 quiet rooms and homemade Lozère cooking.",
+ lead:"A 2-star hotel and restaurant in the heart of the Aubrac, a family house since 1979: 18 quiet rooms and homemade Lozère cooking.",
  rep:["8 km from the A75","Open 7 am to 9 pm","18 rooms, one accessible","Aligot, manouls, homemade charcuterie"],
  aT:"A stopover with the taste of Aubrac",aP:"Fau-de-Peyre, around thirty inhabitants, near Aumont-Aubrac. Madame Tichit welcomes you in the quiet of the village, on the edge of the plateau.",aA:"See the rooms",
  bT:"At the table, Lozère",bP:"Everything is homemade, the local way. The aligot stretches, the charcuterie is made in-house, and the dish of the day follows the cook's mood.",bA:"Open the menu",
@@ -288,16 +295,16 @@ en:{lang:"Language",tag:"Hotel ** · Restaurant · Fau-de-Peyre, Lozère",open:"
  prN:"Room for 5: price on request.",
  eqT:"In every room",eq:["Shower or bath, separate toilet","Television","Telephone","Wifi","Access ramp for reduced mobility"],
  persH:"Guests",prixH:"Price",
- rT:"The restaurant",rL:"Lozère cooking, all week, 100% homemade. A simple, warm dining room and a terrace in the village sunshine.",
+ rT:"The restaurant",rL:"Lozère cooking, all week, 100% homemade. A simple, warm dining room and a terrace on the village street.",
  spT:"Our specialities",sp:["Homemade charcuterie","Frogs' legs with parsley","Lamb tripe","Tripe with bacon","Rib of beef"],
  hT:"Hours",h:[["Breakfast","7:00 – 9:30"],["Lunch","12:00 – 13:15"],["Dinner","19:30 – 20:15"]],
  mjT:"Menu of the day",mj:"from €16, depending on the cook's mood. Children's menu for the little ones.",
  menusT:"Set menus",carteT:"À la carte",salT:"Salads",
  menuE:"Starter of the day",charc:"Charcuterie",pj:"Dish of the day",from:"Cheese",des:"Dessert",or:"or",supA:"Aligot supplement: €2",
  servT:"On site",serv:["TV","Wifi","Terrace","Parking","Baby equipment","Pets welcome"],
- gT:"Groups",gL:"Family, colleagues or on the road: Del Faou knows how to host.",g:[["Seminar","A quiet room and the house table for your working days."],["Banquet","Up to 20 people, around local dishes."],["Sales rep stopover","Dinner, room and breakfast, on your route."]],gA:"Ask for a package",
+ gT:"Groups",gL:"Family, colleagues or on the road: Del Faou knows how to host.",g:[["Seminar","Your working days, with the house cooking."],["Banquet","Up to 20 people, around local dishes."],["Sales rep stopover","Dinner, room and breakfast, on your route."]],gA:"Ask for a package",
  vT:"Getting here & contact",vL:"Village, 48130 Fau-de-Peyre, near Aumont-Aubrac. 8 km from the A75 exit.",vMap:"Open directions",
- fT:"Booking request",fIn:"Arrival date",fOut:"Departure date",fP:"Guests",fR:"Meals",fR0:"Room only",fR1:"Half board",fR2:"Full board",fR3:"Table at the restaurant",fNom:"Name",fTel:"Phone",fMail:"Email",fMsg:"Your message",fSend:"Send request",fErr:"Please give at least your name, phone and email.",fErrD:"Departure must come after arrival.",fOk:"Your email app opens with the request ready to send to the hotel.",fRgpd:"Your details are only used to answer your request.",
+ fT:"Booking request",fIn:"Arrival date",fOut:"Departure date",fP:"Guests",fR:"Meals",fR0:"Room only",fR1:"Half board",fR2:"Full board",fR3:"Table at the restaurant",fNom:"Name",fTel:"Phone",fMail:"Email",fMsg:"Your message",fSend:"Send request",fErr:"Please give at least your name, phone and email.",fErrD:"Departure must come after arrival.",fOk:"Your email app opens with the request ready to send to the hotel.",fRgpd:"I agree that these details are used only to answer my request.",fErrG:"Please tick the consent box to send the request.",
  legT:"Legal notice",legPub:"Publisher",legTva:"EU VAT number",
  fNav:"The house",fInfo:"Practical",propo:"New website proposal designed by Neovera Studio",
  cName:"Del Faou Advisor",cSub:"Let me help you choose",cVirt:"virtual assistant",cHello:"Hello, I'm Del Faou Advisor, the hotel's virtual assistant. A room, a meal, a group? Ask me.",cBubble:"Hello! I'm Del Faou Advisor, a virtual assistant. I can help you choose a room or a menu.",cPh:"Your question…",cClose:"Close",
@@ -305,7 +312,7 @@ en:{lang:"Language",tag:"Hotel ** · Restaurant · Fau-de-Peyre, Lozère",open:"
 es:{lang:"Idioma",tag:"Hotel ** · Restaurante · Fau-de-Peyre, Lozère",open:"Abierto de 7:00 a 21:00",
  nav:["Inicio","Habitaciones","Restaurante","Grupos","Cómo llegar y contacto","Del Faou Consejo"],
  book:"Reservar habitación",table:"Reservar mesa",
- lead:"En el corazón del Aubrac, una casa familiar desde 1979: 18 habitaciones tranquilas y cocina de Lozère hecha en casa.",
+ lead:"Hotel de 2 estrellas y restaurante en el corazón del Aubrac, casa familiar desde 1979: 18 habitaciones tranquilas y cocina de Lozère hecha en casa.",
  rep:["A 8 km de la A75","Abierto de 7:00 a 21:00","18 habitaciones, una adaptada","Aligot, manouls, embutido casero"],
  aT:"Una parada con sabor a Aubrac",aP:"Fau-de-Peyre, una treintena de habitantes, cerca de Aumont-Aubrac. La señora Tichit le recibe en la calma del pueblo, al pie de la meseta.",aA:"Ver las habitaciones",
  bT:"En la mesa, Lozère",bP:"Todo es casero, al estilo de la tierra. El aligot hace hilo, el embutido es de la casa y el menú del día sigue el humor de la cocinera.",bA:"Ver la carta",
@@ -320,16 +327,16 @@ es:{lang:"Idioma",tag:"Hotel ** · Restaurante · Fau-de-Peyre, Lozère",open:"A
  prN:"Habitación para 5: precio a consultar.",
  eqT:"En cada habitación",eq:["Ducha o bañera, aseo separado","Televisión","Teléfono","Wifi","Rampa de acceso para movilidad reducida"],
  persH:"Personas",prixH:"Precio",
- rT:"El restaurante",rL:"Cocina de Lozère, toda la semana, 100 % casera. Un comedor sencillo y cálido, y una terraza al sol del pueblo.",
+ rT:"El restaurante",rL:"Cocina de Lozère, toda la semana, 100 % casera. Un comedor sencillo y cálido, y una terraza en la calle del pueblo.",
  spT:"Nuestras especialidades",sp:["Embutido casero","Ancas de rana al perejil","Callos de cordero","Callos con tocino","Chuletón de ternera"],
  hT:"Horario",h:[["Desayuno","7:00 – 9:30"],["Comida","12:00 – 13:15"],["Cena","19:30 – 20:15"]],
  mjT:"Menú del día",mj:"desde 16 €, según el humor de la cocinera. Menú infantil para los pequeños.",
  menusT:"Los menús",carteT:"La carta",salT:"Ensaladas",
  menuE:"Entrante del día",charc:"Embutidos",pj:"Plato del día",from:"Queso",des:"Postre",or:"o",supA:"Suplemento de aligot: 2 €",
  servT:"En el lugar",serv:["TV","Wifi","Terraza","Aparcamiento","Equipo para bebé","Se admiten mascotas"],
- gT:"Grupos",gL:"En familia, entre colegas o de ruta: Del Faou sabe recibir.",g:[["Seminario","Una sala tranquila y la mesa de la casa para sus jornadas de trabajo."],["Banquete","Hasta 20 personas, alrededor de platos de la tierra."],["Etapa de comercial","Cena, habitación y desayuno, en su ruta."]],gA:"Pedir una fórmula",
+ gT:"Grupos",gL:"En familia, entre colegas o de ruta: Del Faou sabe recibir.",g:[["Seminario","Sus jornadas de trabajo, con la cocina de la casa."],["Banquete","Hasta 20 personas, alrededor de platos de la tierra."],["Etapa de comercial","Cena, habitación y desayuno, en su ruta."]],gA:"Pedir una fórmula",
  vT:"Cómo llegar y contacto",vL:"Village, 48130 Fau-de-Peyre, cerca de Aumont-Aubrac. A 8 km de la salida de la A75.",vMap:"Abrir el itinerario",
- fT:"Solicitud de reserva",fIn:"Fecha de llegada",fOut:"Fecha de salida",fP:"Personas",fR:"Comidas",fR0:"Solo habitación",fR1:"Media pensión",fR2:"Pensión completa",fR3:"Mesa en el restaurante",fNom:"Nombre",fTel:"Teléfono",fMail:"Correo",fMsg:"Su mensaje",fSend:"Enviar solicitud",fErr:"Indique al menos su nombre, teléfono y correo.",fErrD:"La salida debe ser posterior a la llegada.",fOk:"Se abre su correo con la solicitud lista para enviar al hotel.",fRgpd:"Sus datos solo se usan para responder a su solicitud.",
+ fT:"Solicitud de reserva",fIn:"Fecha de llegada",fOut:"Fecha de salida",fP:"Personas",fR:"Comidas",fR0:"Solo habitación",fR1:"Media pensión",fR2:"Pensión completa",fR3:"Mesa en el restaurante",fNom:"Nombre",fTel:"Teléfono",fMail:"Correo",fMsg:"Su mensaje",fSend:"Enviar solicitud",fErr:"Indique al menos su nombre, teléfono y correo.",fErrD:"La salida debe ser posterior a la llegada.",fOk:"Se abre su correo con la solicitud lista para enviar al hotel.",fRgpd:"Acepto que estos datos se usen solo para responder a mi solicitud.",fErrG:"Marque la casilla de consentimiento para enviar la solicitud.",
  legT:"Aviso legal",legPub:"Editor del sitio",legTva:"IVA intracomunitario",
  fNav:"La casa",fInfo:"Información práctica",propo:"Propuesta de nuevo sitio imaginada por Neovera Studio",
  cName:"Del Faou Consejo",cSub:"Le ayudo a elegir",cVirt:"asistente virtual",cHello:"Hola, soy Del Faou Consejo, el asistente virtual del hotel. ¿Una habitación, una comida, un grupo? Pregúnteme.",cBubble:"¡Hola! Soy Del Faou Consejo, asistente virtual. Le ayudo a elegir habitación o menú.",cPh:"Su pregunta…",cClose:"Cerrar",
@@ -337,7 +344,7 @@ es:{lang:"Idioma",tag:"Hotel ** · Restaurante · Fau-de-Peyre, Lozère",open:"A
 de:{lang:"Sprache",tag:"Hotel ** · Restaurant · Fau-de-Peyre, Lozère",open:"Geöffnet 7 bis 21 Uhr",
  nav:["Start","Zimmer","Restaurant","Gruppen","Anfahrt & Kontakt","Del Faou Beratung"],
  book:"Zimmer buchen",table:"Tisch reservieren",
- lead:"Im Herzen des Aubrac, ein Familienhaus seit 1979: 18 ruhige Zimmer und hausgemachte Küche der Lozère.",
+ lead:"2-Sterne-Hotel und Restaurant im Herzen des Aubrac, ein Familienhaus seit 1979: 18 ruhige Zimmer und hausgemachte Küche der Lozère.",
  rep:["8 km von der A75","Geöffnet 7 bis 21 Uhr","18 Zimmer, eines barrierefrei","Aligot, Manouls, hausgemachte Wurstwaren"],
  aT:"Ein Halt mit dem Geschmack des Aubrac",aP:"Fau-de-Peyre, rund dreißig Einwohner, nahe Aumont-Aubrac. Madame Tichit empfängt Sie in der Ruhe des Dorfes, am Rand der Hochebene.",aA:"Die Zimmer ansehen",
  bT:"Bei Tisch: die Lozère",bP:"Alles ist hausgemacht, nach Art des Landes. Das Aligot zieht Fäden, die Wurstwaren kommen aus dem Haus, und das Tagesmenü folgt der Laune der Köchin.",bA:"Zur Speisekarte",
@@ -352,16 +359,16 @@ de:{lang:"Sprache",tag:"Hotel ** · Restaurant · Fau-de-Peyre, Lozère",open:"G
  prN:"Zimmer für 5 Personen: Preis auf Anfrage.",
  eqT:"In jedem Zimmer",eq:["Dusche oder Badewanne, separates WC","Fernseher","Telefon","WLAN","Rampe für Gäste mit eingeschränkter Mobilität"],
  persH:"Personen",prixH:"Preis",
- rT:"Das Restaurant",rL:"Küche der Lozère, die ganze Woche, zu 100 % hausgemacht. Ein schlichter, warmer Speisesaal und eine Terrasse in der Dorfsonne.",
+ rT:"Das Restaurant",rL:"Küche der Lozère, die ganze Woche, zu 100 % hausgemacht. Ein schlichter, warmer Speisesaal und eine Terrasse an der Dorfstraße.",
  spT:"Unsere Spezialitäten",sp:["Hausgemachte Wurstwaren","Froschschenkel mit Petersilie","Lammkutteln","Kutteln mit Speck","Rinderkotelett"],
  hT:"Öffnungszeiten",h:[["Frühstück","7:00 – 9:30 Uhr"],["Mittagessen","12:00 – 13:15 Uhr"],["Abendessen","19:30 – 20:15 Uhr"]],
  mjT:"Tagesmenü",mj:"ab 16 €, je nach Laune der Köchin. Kindermenü für die Kleinen.",
  menusT:"Die Menüs",carteT:"Die Karte",salT:"Salate",
  menuE:"Vorspeise des Tages",charc:"Wurstwaren",pj:"Tagesgericht",from:"Käse",des:"Dessert",or:"oder",supA:"Aufpreis Aligot: 2 €",
  servT:"Vor Ort",serv:["TV","WLAN","Terrasse","Parkplatz","Babyausstattung","Haustiere willkommen"],
- gT:"Gruppen",gL:"Mit der Familie, mit Kollegen oder auf Tour: Del Faou weiß zu empfangen.",g:[["Seminar","Ein ruhiger Raum und die Küche des Hauses für Ihre Arbeitstage."],["Bankett","Bis zu 20 Personen, rund um Gerichte der Region."],["Vertreter-Etappe","Abendessen, Zimmer und Frühstück, auf Ihrer Route."]],gA:"Angebot anfragen",
+ gT:"Gruppen",gL:"Mit der Familie, mit Kollegen oder auf Tour: Del Faou weiß zu empfangen.",g:[["Seminar","Ihre Arbeitstage, mit der Küche des Hauses."],["Bankett","Bis zu 20 Personen, rund um Gerichte der Region."],["Vertreter-Etappe","Abendessen, Zimmer und Frühstück, auf Ihrer Route."]],gA:"Angebot anfragen",
  vT:"Anfahrt & Kontakt",vL:"Village, 48130 Fau-de-Peyre, nahe Aumont-Aubrac. 8 km von der Ausfahrt der A75.",vMap:"Route öffnen",
- fT:"Buchungsanfrage",fIn:"Anreise",fOut:"Abreise",fP:"Personen",fR:"Verpflegung",fR0:"Nur Zimmer",fR1:"Halbpension",fR2:"Vollpension",fR3:"Tisch im Restaurant",fNom:"Name",fTel:"Telefon",fMail:"E-Mail",fMsg:"Ihre Nachricht",fSend:"Anfrage senden",fErr:"Bitte mindestens Name, Telefon und E-Mail angeben.",fErrD:"Die Abreise muss nach der Anreise liegen.",fOk:"Ihr E-Mail-Programm öffnet sich mit der fertigen Anfrage an das Hotel.",fRgpd:"Ihre Angaben dienen nur der Beantwortung Ihrer Anfrage.",
+ fT:"Buchungsanfrage",fIn:"Anreise",fOut:"Abreise",fP:"Personen",fR:"Verpflegung",fR0:"Nur Zimmer",fR1:"Halbpension",fR2:"Vollpension",fR3:"Tisch im Restaurant",fNom:"Name",fTel:"Telefon",fMail:"E-Mail",fMsg:"Ihre Nachricht",fSend:"Anfrage senden",fErr:"Bitte mindestens Name, Telefon und E-Mail angeben.",fErrD:"Die Abreise muss nach der Anreise liegen.",fOk:"Ihr E-Mail-Programm öffnet sich mit der fertigen Anfrage an das Hotel.",fRgpd:"Ich bin einverstanden, dass diese Angaben nur zur Beantwortung meiner Anfrage dienen.",fErrG:"Bitte setzen Sie das Häkchen zur Einwilligung.",
  legT:"Impressum",legPub:"Herausgeber",legTva:"USt-IdNr.",
  fNav:"Das Haus",fInfo:"Praktisches",propo:"Vorschlag für eine neue Website, entworfen von Neovera Studio",
  cName:"Del Faou Beratung",cSub:"Ich helfe bei der Wahl",cVirt:"virtueller Assistent",cHello:"Guten Tag, ich bin Del Faou Beratung, der virtuelle Assistent des Hotels. Ein Zimmer, ein Essen, eine Gruppe? Fragen Sie mich.",cBubble:"Guten Tag! Ich bin Del Faou Beratung, ein virtueller Assistent. Ich helfe bei der Wahl von Zimmer oder Menü.",cPh:"Ihre Frage…",cClose:"Schließen",
@@ -369,7 +376,7 @@ de:{lang:"Sprache",tag:"Hotel ** · Restaurant · Fau-de-Peyre, Lozère",open:"G
 it:{lang:"Lingua",tag:"Hotel ** · Ristorante · Fau-de-Peyre, Lozère",open:"Aperto dalle 7 alle 21",
  nav:["Home","Camere","Ristorante","Gruppi","Come arrivare e contatti","Del Faou Consiglio"],
  book:"Prenota una camera",table:"Prenota un tavolo",
- lead:"Nel cuore dell'Aubrac, una casa di famiglia dal 1979: 18 camere tranquille e la cucina della Lozère fatta in casa.",
+ lead:"Hotel 2 stelle e ristorante nel cuore dell'Aubrac, casa di famiglia dal 1979: 18 camere tranquille e la cucina della Lozère fatta in casa.",
  rep:["A 8 km dalla A75","Aperto dalle 7 alle 21","18 camere, una accessibile","Aligot, manouls, salumi della casa"],
  aT:"Una sosta che sa di Aubrac",aP:"Fau-de-Peyre, una trentina di abitanti, vicino ad Aumont-Aubrac. La signora Tichit vi accoglie nella quiete del paese, ai piedi dell'altopiano.",aA:"Vedi le camere",
  bT:"A tavola, la Lozère",bP:"Tutto è fatto in casa, alla maniera del posto. L'aligot fila, i salumi sono della casa e il menù del giorno segue l'umore della cuoca.",bA:"Apri la carta",
@@ -384,16 +391,16 @@ it:{lang:"Lingua",tag:"Hotel ** · Ristorante · Fau-de-Peyre, Lozère",open:"Ap
  prN:"Camera per 5: prezzo su richiesta.",
  eqT:"In ogni camera",eq:["Doccia o vasca, WC separato","Televisione","Telefono","Wifi","Rampa d'accesso per mobilità ridotta"],
  persH:"Persone",prixH:"Prezzo",
- rT:"Il ristorante",rL:"Cucina della Lozère, tutta la settimana, 100% fatta in casa. Una sala semplice e calda, e una terrazza al sole del paese.",
+ rT:"Il ristorante",rL:"Cucina della Lozère, tutta la settimana, 100% fatta in casa. Una sala semplice e calda, e una terrazza sulla via del paese.",
  spT:"Le nostre specialità",sp:["Salumi della casa","Rane al prezzemolo","Trippa d'agnello","Trippa al lardo","Costata di manzo"],
  hT:"Orari",h:[["Colazione","7:00 – 9:30"],["Pranzo","12:00 – 13:15"],["Cena","19:30 – 20:15"]],
  mjT:"Menù del giorno",mj:"da 16 €, secondo l'umore della cuoca. Menù bambini per i più piccoli.",
  menusT:"I menù",carteT:"La carta",salT:"Le insalate",
  menuE:"Antipasto del giorno",charc:"Salumi",pj:"Piatto del giorno",from:"Formaggio",des:"Dessert",or:"oppure",supA:"Supplemento aligot: 2 €",
  servT:"In loco",serv:["TV","Wifi","Terrazza","Parcheggio","Attrezzatura per neonati","Animali ammessi"],
- gT:"Gruppi",gL:"In famiglia, tra colleghi o in viaggio: il Del Faou sa accogliere.",g:[["Seminario","Una sala tranquilla e la tavola della casa per le vostre giornate di lavoro."],["Banchetto","Fino a 20 persone, attorno ai piatti del territorio."],["Tappa per rappresentanti","Cena, camera e colazione, lungo il vostro percorso."]],gA:"Chiedi una formula",
+ gT:"Gruppi",gL:"In famiglia, tra colleghi o in viaggio: il Del Faou sa accogliere.",g:[["Seminario","Le vostre giornate di lavoro, con la cucina della casa."],["Banchetto","Fino a 20 persone, attorno ai piatti del territorio."],["Tappa per rappresentanti","Cena, camera e colazione, lungo il vostro percorso."]],gA:"Chiedi una formula",
  vT:"Come arrivare e contatti",vL:"Village, 48130 Fau-de-Peyre, vicino ad Aumont-Aubrac. A 8 km dall'uscita della A75.",vMap:"Apri il percorso",
- fT:"Richiesta di prenotazione",fIn:"Data di arrivo",fOut:"Data di partenza",fP:"Persone",fR:"Pasti",fR0:"Solo camera",fR1:"Mezza pensione",fR2:"Pensione completa",fR3:"Tavolo al ristorante",fNom:"Nome",fTel:"Telefono",fMail:"E-mail",fMsg:"Il vostro messaggio",fSend:"Invia la richiesta",fErr:"Indicate almeno nome, telefono ed e-mail.",fErrD:"La partenza deve seguire l'arrivo.",fOk:"Si apre la vostra posta con la richiesta pronta da inviare all'hotel.",fRgpd:"I vostri dati servono solo a rispondere alla richiesta.",
+ fT:"Richiesta di prenotazione",fIn:"Data di arrivo",fOut:"Data di partenza",fP:"Persone",fR:"Pasti",fR0:"Solo camera",fR1:"Mezza pensione",fR2:"Pensione completa",fR3:"Tavolo al ristorante",fNom:"Nome",fTel:"Telefono",fMail:"E-mail",fMsg:"Il vostro messaggio",fSend:"Invia la richiesta",fErr:"Indicate almeno nome, telefono ed e-mail.",fErrD:"La partenza deve seguire l'arrivo.",fOk:"Si apre la vostra posta con la richiesta pronta da inviare all'hotel.",fRgpd:"Accetto che questi dati servano solo a rispondere alla mia richiesta.",fErrG:"Spuntate la casella del consenso per inviare la richiesta.",
  legT:"Note legali",legPub:"Editore del sito",legTva:"Partita IVA intracomunitaria",
  fNav:"La casa",fInfo:"Info pratiche",propo:"Proposta di nuovo sito ideata da Neovera Studio",
  cName:"Del Faou Consiglio",cSub:"Vi aiuto a scegliere",cVirt:"assistente virtuale",cHello:"Buongiorno, sono Del Faou Consiglio, l'assistente virtuale dell'hotel. Una camera, un pasto, un gruppo? Chiedete pure.",cBubble:"Buongiorno! Sono Del Faou Consiglio, assistente virtuale. Vi aiuto a scegliere camera o menù.",cPh:"La vostra domanda…",cClose:"Chiudi",
@@ -401,7 +408,7 @@ it:{lang:"Lingua",tag:"Hotel ** · Ristorante · Fau-de-Peyre, Lozère",open:"Ap
 nl:{lang:"Taal",tag:"Hotel ** · Restaurant · Fau-de-Peyre, Lozère",open:"Open van 7 tot 21 uur",
  nav:["Home","Kamers","Restaurant","Groepen","Route & contact","Del Faou Advies"],
  book:"Kamer boeken",table:"Tafel reserveren",
- lead:"In het hart van de Aubrac, een familiehuis sinds 1979: 18 rustige kamers en huisgemaakte keuken uit de Lozère.",
+ lead:"Tweesterrenhotel en restaurant in het hart van de Aubrac, een familiehuis sinds 1979: 18 rustige kamers en huisgemaakte keuken uit de Lozère.",
  rep:["Op 8 km van de A75","Open van 7 tot 21 uur","18 kamers, één toegankelijk","Aligot, manouls, huisgemaakte charcuterie"],
  aT:"Een tussenstop die naar Aubrac smaakt",aP:"Fau-de-Peyre, een dertigtal inwoners, bij Aumont-Aubrac. Madame Tichit ontvangt u in de rust van het dorp, aan de rand van het plateau.",aA:"Bekijk de kamers",
  bT:"Aan tafel: de Lozère",bP:"Alles is huisgemaakt, op de manier van de streek. De aligot trekt draden, de charcuterie komt van het huis en het dagmenu volgt de stemming van de kokkin.",bA:"Bekijk de kaart",
@@ -416,16 +423,16 @@ nl:{lang:"Taal",tag:"Hotel ** · Restaurant · Fau-de-Peyre, Lozère",open:"Open
  prN:"Kamer voor 5: prijs op aanvraag.",
  eqT:"In elke kamer",eq:["Douche of bad, apart toilet","Televisie","Telefoon","Wifi","Oprit voor beperkte mobiliteit"],
  persH:"Personen",prixH:"Prijs",
- rT:"Het restaurant",rL:"Keuken uit de Lozère, de hele week, 100% huisgemaakt. Een eenvoudige, warme eetzaal en een terras in de dorpszon.",
+ rT:"Het restaurant",rL:"Keuken uit de Lozère, de hele week, 100% huisgemaakt. Een eenvoudige, warme eetzaal en een terras aan de dorpsstraat.",
  spT:"Onze specialiteiten",sp:["Huisgemaakte charcuterie","Kikkerbilletjes met peterselie","Lamspens","Pens met spek","Côte de bœuf"],
  hT:"Openingstijden",h:[["Ontbijt","7.00 – 9.30 uur"],["Lunch","12.00 – 13.15 uur"],["Diner","19.30 – 20.15 uur"]],
  mjT:"Dagmenu",mj:"vanaf € 16, naar de stemming van de kokkin. Kindermenu voor de kleintjes.",
  menusT:"De menu's",carteT:"De kaart",salT:"Salades",
  menuE:"Voorgerecht van de dag",charc:"Charcuterie",pj:"Dagschotel",from:"Kaas",des:"Dessert",or:"of",supA:"Toeslag aligot: € 2",
  servT:"Ter plaatse",serv:["Tv","Wifi","Terras","Parkeerplaats","Babyuitrusting","Huisdieren welkom"],
- gT:"Groepen",gL:"Met familie, collega's of onderweg: Del Faou weet hoe je gasten ontvangt.",g:[["Seminar","Een rustige zaal en de keuken van het huis voor uw werkdagen."],["Banket","Tot 20 personen, rond streekgerechten."],["Etappe voor vertegenwoordigers","Diner, kamer en ontbijt, op uw route."]],gA:"Formule aanvragen",
+ gT:"Groepen",gL:"Met familie, collega's of onderweg: Del Faou weet hoe je gasten ontvangt.",g:[["Seminar","Uw werkdagen, met de keuken van het huis."],["Banket","Tot 20 personen, rond streekgerechten."],["Etappe voor vertegenwoordigers","Diner, kamer en ontbijt, op uw route."]],gA:"Formule aanvragen",
  vT:"Route & contact",vL:"Village, 48130 Fau-de-Peyre, bij Aumont-Aubrac. Op 8 km van de afrit van de A75.",vMap:"Route openen",
- fT:"Reserveringsaanvraag",fIn:"Aankomstdatum",fOut:"Vertrekdatum",fP:"Personen",fR:"Maaltijden",fR0:"Alleen kamer",fR1:"Halfpension",fR2:"Volpension",fR3:"Tafel in het restaurant",fNom:"Naam",fTel:"Telefoon",fMail:"E-mail",fMsg:"Uw bericht",fSend:"Aanvraag versturen",fErr:"Vul minstens uw naam, telefoon en e-mail in.",fErrD:"Vertrek moet na aankomst liggen.",fOk:"Uw mailprogramma opent met de aanvraag klaar voor het hotel.",fRgpd:"Uw gegevens dienen alleen om uw aanvraag te beantwoorden.",
+ fT:"Reserveringsaanvraag",fIn:"Aankomstdatum",fOut:"Vertrekdatum",fP:"Personen",fR:"Maaltijden",fR0:"Alleen kamer",fR1:"Halfpension",fR2:"Volpension",fR3:"Tafel in het restaurant",fNom:"Naam",fTel:"Telefoon",fMail:"E-mail",fMsg:"Uw bericht",fSend:"Aanvraag versturen",fErr:"Vul minstens uw naam, telefoon en e-mail in.",fErrD:"Vertrek moet na aankomst liggen.",fOk:"Uw mailprogramma opent met de aanvraag klaar voor het hotel.",fRgpd:"Ik ga ermee akkoord dat deze gegevens alleen dienen om mijn aanvraag te beantwoorden.",fErrG:"Vink het toestemmingsvakje aan om de aanvraag te versturen.",
  legT:"Juridische vermeldingen",legPub:"Uitgever",legTva:"Btw-nummer",
  fNav:"Het huis",fInfo:"Praktisch",propo:"Voorstel voor een nieuwe website, ontworpen door Neovera Studio",
  cName:"Del Faou Advies",cSub:"Ik help u kiezen",cVirt:"virtuele assistent",cHello:"Hallo, ik ben Del Faou Advies, de virtuele assistent van het hotel. Een kamer, een maaltijd, een groep? Vraag het maar.",cBubble:"Hallo! Ik ben Del Faou Advies, een virtuele assistent. Ik help u een kamer of menu kiezen.",cPh:"Uw vraag…",cClose:"Sluiten",
@@ -551,7 +558,7 @@ const ALT={draille:{fr:"Muret de pierre sèche sur le plateau de l'Aubrac",en:"D
 const alt=k=>(ALT[k]&&ALT[k][lang])||'';
 const MN5=D("Escargots","Snails","Caracoles","Schnecken","Lumache","Slakken");
 
-function filSVG(id){return `<svg class="fil" id="${id}" viewBox="0 0 1000 400" preserveAspectRatio="none" aria-hidden="true"><path class="f0" vector-effect="non-scaling-stroke" d="M-20 250 C 150 240 260 170 380 150 S 640 60 780 90 S 940 60 1030 20"/><path class="f1" vector-effect="non-scaling-stroke" d="M-20 250 C 150 240 260 170 380 150 S 640 60 780 90 S 940 60 1030 20"/></svg>`}
+function filSVG(id){if(id==='filT')return `<svg class="fil" id="filT" viewBox="0 0 1000 70" preserveAspectRatio="none" aria-hidden="true"><path class="f1" vector-effect="non-scaling-stroke" style="stroke-width:5" d="M-10 60 C 300 60 520 20 700 34 S 900 58 1010 24"/></svg>`;return `<svg class="fil" id="${id}" viewBox="0 0 1000 400" preserveAspectRatio="none" aria-hidden="true"><path class="f0" vector-effect="non-scaling-stroke" d="M-20 250 C 150 240 260 170 380 150 S 640 60 780 90 S 940 60 1030 20"/><path class="f1" vector-effect="non-scaling-stroke" d="M-20 250 C 150 240 260 170 380 150 S 640 60 780 90 S 940 60 1030 20"/></svg>`}
 function header(r){const n=t('nav');const L=['','chambres','restaurant','groupes','contact'];
  return `<header class="top"><div class="bar1"><a class="logo" href="#/"><b>Del Faou</b><small>${t('tag')}</small></a><span class="sp"></span><span class="ouvert">${ico('clock')} ${t('open')}</span>
  <a class="tel" href="tel:+33466311100">${ico('tel')}<span>04 66 31 11 00</span></a>
@@ -566,7 +573,7 @@ function accueil(){
  <div class="repere"><div class="wrap"><ul>${t('rep').map((x,i)=>`<li>${ico(['route','clock','bed','pot'][i])}${x}</li>`).join('')}</ul></div></div>
  <section><div class="wrap deux"><div class="photo apparait"><img src="${img('rue')}" alt="${alt('rue')}" loading="lazy"></div><div class="apparait"><h2>${t('aT')}</h2><p>${t('aP')}</p><p>${t('cap').join(' · ')}</p><a class="suite" href="#/chambres">${t('aA')}</a></div></div></section>
  <section class="bande"><div class="wrap deux inv"><div class="photo apparait"><img src="${img('salle')}" alt="${alt('salle')}" loading="lazy"></div><div class="apparait"><h2>${t('bT')}</h2><p>${t('bP')}</p><ul class="specs">${t('specs').map(s=>`<li>${s}</li>`).join('')}</ul><a class="suite" href="#/restaurant">${t('bA')}</a></div></div></section>
- <div class="paysage"><img src="${img('lac')}" alt="${alt('lac')}" loading="lazy"><div class="leg"><p>${t('lacLeg')}</p></div></div>
+ <div class="paysage"><img src="${img('lac')}" alt="${alt('lac')}" loading="lazy"><p class="leg">${t('lacLeg')}</p></div>
  <div class="presse"><div class="wrap"><p>${t('presse')}</p></div></div>
  <section><div class="wrap">${coord()}</div></section>`}
 function coord(){return `<div class="coord"><div><h3>${t('cTel')}</h3><p><a href="tel:+33466311100">04 66 31 11 00</a></p></div><div><h3>${t('cMail')}</h3><p><a href="mailto:hotel.delfaou@wanadoo.fr">hotel.delfaou@wanadoo.fr</a></p></div><div><h3>${t('cAdr')}</h3><p>${t('adr')}</p></div><div><h3>${t('cOpen')}</h3><p>${t('open')}</p></div></div>`}
@@ -575,9 +582,9 @@ function chambres(){
  const pr=t('prRows');
  return tete(t('chT'),t('chL'),`<div class="act"><a class="btn jaune" href="#/contact">${t('book')}</a><a class="btn ligne" href="tel:+33466311100">${ico('tel')}04 66 31 11 00</a></div>`)+
  `<section><div class="wrap"><h2>${t('capT')}</h2><ul class="equip apparait" style="font-size:1.15rem">${t('cap').map(x=>`<li>${x}</li>`).join('')}</ul></div></section>
- <section style="padding-top:0"><div class="wrap deux"><div class="apparait"><h2>${t('prT')}</h2><table class="tarifs"><thead><tr><th></th><th>${t('prixH')}</th></tr></thead><tbody>${pr.map(([a,b])=>`<tr><td>${a}</td><td>${b}</td></tr>`).join('')}</tbody></table><p style="margin-top:12px;color:var(--gris)">${t('prN')}</p></div>
- <div class="apparait"><div class="photo" style="margin-bottom:28px"><img src="${img('hall')}" alt="${alt('hall')}" loading="lazy"></div><h3>${t('eqT')}</h3><ul class="equip">${t('eq').map(x=>`<li>${x}</li>`).join('')}</ul></div></div></section>
- <section class="bande"><div class="wrap deux inv"><div class="photo"><img src="${img('salon')}" alt="${alt('salon')}" loading="lazy"></div><div><h2>${t('aT')}</h2><p>${t('aP')}</p><a class="suite" href="#/contact">${t('book')}</a></div></div></section>`}
+ <section style="padding-top:0"><div class="wrap deux"><div class="apparait"><h2>${t('prT')}</h2><table class="tarifs"><thead><tr><th></th><th>${t('prixH')}</th></tr></thead><tbody>${pr.map(([a,b])=>`<tr><td>${a}</td><td>${b}</td></tr>`).join('')}</tbody></table><p style="margin-top:12px;color:var(--gris)">${t('prN')}</p><p style="margin-top:20px"><a class="btn jaune" href="#/contact">${t('book')}</a></p></div>
+ <div class="apparait"><figure class="photo" style="margin-bottom:28px"><img src="${img('hall')}" alt="${alt('hall')}" loading="lazy"><figcaption>${alt('hall')}</figcaption></figure><h3>${t('eqT')}</h3><ul class="equip">${t('eq').map(x=>`<li>${x}</li>`).join('')}</ul></div></div></section>
+ <section class="bande"><div class="wrap deux inv"><figure class="photo"><img src="${img('genets')}" alt="${alt('genets')}" loading="lazy"></figure><div><h2>${t('lacLeg')}</h2><p>${t('rep')[0]} · ${t('open')}</p><a class="btn" href="#/contact">${t('book')}</a></div></div></section>`}
 function restaurant(){
  const menu=m=>`<div class="formule apparait"><h3>${eur(m.px+',00')}</h3><ol>${m.l.map(c=>`<li>${c.map(x=>typeof x==='number'?(x===5?MN5[lang]:CARTE[x][1][lang]):t(x)).join(` <em>${t('or')}</em> `)}</li>`).join('')}</ol><p class="sup">${t('supA')}</p></div>`;
  const half=Math.ceil(CARTE.length/2);
@@ -586,9 +593,9 @@ function restaurant(){
  <div class="apparait"><h3>${t('hT')}</h3><table class="tarifs"><tbody>${t('h').map(([a,b])=>`<tr><td>${a}</td><td style="font-family:var(--texte);font-size:1rem;font-weight:600">${b}</td></tr>`).join('')}</tbody></table><h3 style="margin-top:28px">${t('servT')}</h3><p>${t('serv').join(' · ')}</p></div></div></section>
  <section style="padding-top:0"><div class="wrap"><h2>${t('menusT')}</h2><div class="menus">${MENUS.map(menu).join('')}</div></div></section>
  <section class="ardoise"><div class="wrap"><h2>${t('carteT')}</h2><div class="cartes3"><div>${CARTE.slice(0,half).map(([p,n])=>lp(n[lang],p)).join('')}</div><div>${CARTE.slice(half).map(([p,n])=>lp(n[lang],p)).join('')}</div><div><h3>${t('salT')}</h3>${SALADES.map(([p,n,d])=>lp(n[lang],p,d[lang])).join('')}</div></div></div></section>
- <section><div class="wrap deux"><div class="photo"><img src="${img('bar')}" alt="${alt('bar')}" loading="lazy" style="aspect-ratio:5/2"></div><div><h2>${t('table')}</h2><p>${TELH} · <a href="#/contact">${t('fT')}</a></p></div></div></section>`}
+ <section><div class="wrap deux"><div class="photo"><img src="${img('bar')}" alt="${alt('bar')}" loading="lazy" style="aspect-ratio:5/2"></div><div><h2>${t('table')}</h2><p><a class="gros" href="tel:+33466311100">${ico('tel')}04 66 31 11 00</a></p><p><a class="btn jaune" href="#/contact">${t('fT')}</a></p></div></div></section>`}
 function groupes(){
- return tete(t('gT'),t('gL'))+`<section><div class="wrap deux"><div class="apparait">${t('g').map(([a,b])=>`<h3>${a}</h3><p>${b}</p>`).join('')}<a class="btn" href="mailto:hotel.delfaou@wanadoo.fr?subject=${encodeURIComponent(t('gT')+' — Del Faou')}">${ico('mail')}${t('gA')}</a></div><div class="photo apparait"><img src="${img('terrasse')}" alt="${alt('terrasse')}" loading="lazy"></div></div></section>`}
+ return tete(t('gT'),t('gL'))+`<section><div class="wrap deux"><div class="apparait">${t('g').map(([a,b])=>`<h3>${a}</h3><p>${b}</p>`).join('')}<a class="btn" href="mailto:hotel.delfaou@wanadoo.fr?subject=${encodeURIComponent(t('gT')+' — Del Faou')}">${ico('mail')}${t('gA')}</a></div><div class="apparait"><figure class="photo"><img src="${img('plateau')}" alt="${alt('plateau')}" loading="lazy"></figure><p style="margin-top:22px"><a class="gros" href="tel:+33466311100">${ico('tel')}04 66 31 11 00</a></p></div></div></section>`}
 function contact(){
  const d=new Date(),f=x=>x.toISOString().slice(0,10),a=new Date(d.getTime()+864e5),b=new Date(d.getTime()+2*864e5);
  return tete(t('vT'),t('vL'),`<div class="act"><a class="btn jaune" href="${MAPS}" target="_blank" rel="noopener">${ico('pin')}${t('vMap')}</a><a class="btn ligne" href="tel:+33466311100">${ico('tel')}04 66 31 11 00</a></div>`)+
@@ -598,8 +605,8 @@ function contact(){
  <label class="ch">${t('fR')}<select name="r"><option>${t('fR0')}</option><option>${t('fR1')}</option><option>${t('fR2')}</option><option>${t('fR3')}</option></select></label>
  <label class="ch">${t('fNom')} *<input name="n" autocomplete="name"></label><label class="ch">${t('fTel')} *<input name="t" type="tel" autocomplete="tel"></label>
  <label class="ch plein">${t('fMail')} *<input name="e" type="email" autocomplete="email"></label><label class="ch plein">${t('fMsg')}<textarea name="m" rows="4"></textarea></label>
- <div class="plein"><p style="font-size:.88rem;color:var(--gris)">${t('fRgpd')}</p><button class="btn jaune" type="submit">${ico('send')}${t('fSend')}</button><p class="err" aria-live="polite"></p></div></form>
- <div><div class="photo" style="margin-bottom:24px"><img src="${img('village')}" alt="${alt('village')}" loading="lazy"></div>${coord().replace('class="coord"','class="coord" style="grid-template-columns:repeat(2,minmax(0,1fr))"')}</div></div></section>`}
+ <div class="plein"><label class="rgpd"><input type="checkbox" name="g"> <span>${t('fRgpd')}</span></label><p></p><button class="btn jaune" type="submit">${ico('send')}${t('fSend')}</button><p class="err" aria-live="polite"></p></div></form>
+ <div><figure class="photo" style="margin-bottom:24px"><img src="${img('maison')}" alt="${alt('maison')}" loading="lazy"></figure>${coord().replace('class="coord"','class="coord" style="grid-template-columns:repeat(2,minmax(0,1fr))"')}</div></div></section>`}
 function mentions(){return tete(t('legT'),'')+`<section><div class="wrap"><h3>${t('legPub')}</h3><p>HÔTEL RESTAURANT DEL FAOU — Andrée Tichit<br>Village, 48130 Fau-de-Peyre<br>04 66 31 11 00 · hotel.delfaou@wanadoo.fr<br>SIREN 317 251 064 (SIRET 317 251 064 00018)<br>${t('legTva')} : FR 68 317251064</p></div></section>`}
 function footer(){const n=t('nav');
  return `<footer><div class="wrap"><div class="g"><div><a class="logo" href="#/"><b>Del Faou</b><small style="color:#9EA49F">${t('tag')}</small></a><p style="margin-top:14px">${t('adr')}<br><a href="tel:+33466311100">04 66 31 11 00</a><br><a href="mailto:hotel.delfaou@wanadoo.fr">hotel.delfaou@wanadoo.fr</a></p></div>
@@ -628,6 +635,7 @@ function brancher(){
  if(fr)fr.onsubmit=e=>{e.preventDefault();const er=fr.querySelector('.err');er.className='err';
   if(!fr.n.value.trim()||!fr.t.value.trim()||!/.+@.+\..+/.test(fr.e.value)){er.textContent=t('fErr');return}
   if(fr.i.value&&fr.o.value&&fr.o.value<=fr.i.value){er.textContent=t('fErrD');return}
+  if(!fr.g.checked){er.textContent=t('fErrG');return}
   er.className='err ok';er.textContent=t('fOk');
   location.href='mailto:hotel.delfaou@wanadoo.fr?subject='+encodeURIComponent(t('fT')+' — '+fr.n.value)+'&body='+encodeURIComponent(`${t('fIn')} : ${fr.i.value}\n${t('fOut')} : ${fr.o.value}\n${t('fP')} : ${fr.p.value}\n${t('fR')} : ${fr.r.value}\n${t('fNom')} : ${fr.n.value}\n${t('fTel')} : ${fr.t.value}\n${t('fMail')} : ${fr.e.value}\n\n${fr.m.value}`)};
  document.querySelectorAll('[data-cons]').forEach(b=>b.onclick=e=>{e.preventDefault();ouvrir()});
@@ -645,7 +653,7 @@ function poser(q){dire(q,'u');setTimeout(()=>dire(repondre(q,lang),'b'),350)}
 /* Geste signature : le fil d'aligot s'étire à travers l'ouverture, puis ondule doucement */
 function aligot(){
  cancelAnimationFrame(raf);
- const svg=document.querySelector('.fil'); if(!svg)return;
+ const svg=document.querySelector('#filA'); if(!svg)return;
  const ps=[...svg.querySelectorAll('path')], base=ps[0].getAttribute('d');
  const calme=matchMedia('(prefers-reduced-motion: reduce)').matches;
  if(calme)return;
