@@ -100,8 +100,10 @@ section{position:relative}
 .graphite{background:var(--graphite);color:#E9ECEA}.graphite .lead,.graphite p{color:#B9C1C4}
 /* hero d'accueil */
 .hero{padding:clamp(28px,4vw,56px) 0 0}
-.hero-g{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:clamp(24px,4vw,56px);align-items:center}
-.hero h1{font-size:clamp(2.2rem,4.3vw,4.1rem);font-stretch:112%}
+.hero-g{display:grid;grid-template-columns:minmax(0,5.4fr) minmax(0,6.6fr);gap:clamp(24px,4vw,56px);align-items:center}
+.hero h1{font-size:clamp(2.1rem,3.7vw,3.55rem);font-stretch:110%}
+.hero .plan{aspect-ratio:5/4}
+@media (max-width:999px){.hero .plan{aspect-ratio:4/3}}
 @media (min-width:1000px){.hero .plan{margin-right:calc(var(--g) * -1);border-radius:4px 0 0 4px}}
 @media (max-width:999px){.hero-g{grid-template-columns:1fr}}
 .hero h1{margin-bottom:22px}
@@ -113,26 +115,28 @@ section{position:relative}
 .trace .tl{fill:none;stroke:var(--cobalt);stroke-width:.32;vector-effect:non-scaling-stroke}
 .trace .tl{stroke-width:1.5}
 .trace .tc{stroke:var(--cobalt);stroke-width:1;vector-effect:non-scaling-stroke}
-.plan .note{position:absolute;font:500 .72rem/1.2 var(--mono);color:var(--cobalt3);background:var(--blanc);padding:5px 8px;border-radius:2px;white-space:nowrap;opacity:0;transform:translateY(4px)}
+.plan .note{position:absolute;font:500 .78rem/1.2 var(--mono);color:var(--cobalt3);background:var(--blanc);padding:5px 8px;border-radius:2px;white-space:nowrap;opacity:0;transform:translateY(4px)}
 .plan .n1{left:4%;top:5%}.plan .n2{right:4%;top:5%}.plan .n3{left:4%;bottom:5%}
-.plan .legende{position:absolute;right:4%;bottom:5%;font:400 .68rem var(--mono);color:#fff;text-shadow:0 1px 8px rgba(0,0,0,.6);opacity:0}
+.plan .legende{position:absolute;right:4%;bottom:5%;font:400 .75rem var(--mono);color:#fff;background:rgba(15,20,24,.62);padding:4px 8px;border-radius:2px;opacity:0}
 /* état initial du geste (JS) */
 .js .plan.arm img{clip-path:inset(31% 19% 33% 19% round 6px)}
 .js .plan.arm .tl{stroke-dasharray:var(--len);stroke-dashoffset:var(--len)}
 .js .plan.arm .tc{opacity:0}
-.plan.go .tl{transition:stroke-dashoffset 1.3s var(--ease),opacity .8s .2s;stroke-dashoffset:0}
-.plan.go .tc{transition:opacity .5s .9s;opacity:1}
-.plan.go img{transition:clip-path 1.25s 1.15s cubic-bezier(.7,0,.2,1);clip-path:inset(0 round 4px)}
-.plan.go .note{transition:opacity .5s var(--ease),transform .5s var(--ease);opacity:1;transform:none}
-.plan.go .n1{transition-delay:2.25s}.plan.go .n2{transition-delay:2.4s}.plan.go .n3{transition-delay:2.55s}
-.plan.go .legende{transition:opacity .6s 2.7s;opacity:.9}
-.plan.done .tl,.plan.done .tc{opacity:0;transition:opacity .8s}
-@media (prefers-reduced-motion:reduce){.js .plan.arm img{clip-path:inset(0)}.js .plan.arm .tl,.js .plan.arm .tc{opacity:0}.plan .note,.plan .legende{opacity:1;transform:none}.page.on{animation:none}html{scroll-behavior:auto}}
+.js .plan.arm .note,.js .plan.arm .legende{opacity:0}
+.js .plan.arm.go .tl{transition:stroke-dashoffset 1.3s var(--ease),opacity .8s .2s;stroke-dashoffset:0}
+.js .plan.arm.go .tc{transition:opacity .5s .9s;opacity:1}
+.js .plan.arm.go img{transition:clip-path 1.25s 1.15s cubic-bezier(.7,0,.2,1);clip-path:inset(0 round 4px)}
+.js .plan.arm.go .note{transition:opacity .5s var(--ease),transform .5s var(--ease);opacity:1;transform:none}
+.js .plan.arm.go .n1{transition-delay:2.25s}.js .plan.arm.go .n2{transition-delay:2.4s}.js .plan.arm.go .n3{transition-delay:2.55s}
+.js .plan.arm.go .legende{transition:opacity .6s 2.7s;opacity:.9}
+.js .plan.arm.go.done .tl,.js .plan.arm.go.done .tc{opacity:0;transition:opacity .8s}
+@media (prefers-reduced-motion:reduce){.js .plan.arm img{clip-path:inset(0)}.js .plan.arm .tl,.js .plan.arm .tc{opacity:0}
+.js .plan.arm .note,.js .plan.arm .legende{opacity:0}.plan .note,.plan .legende{opacity:1;transform:none}.page.on{animation:none}html{scroll-behavior:auto}}
 /* cartouche */
 .cartouche{margin-top:clamp(28px,4vw,48px);display:grid;grid-template-columns:repeat(5,minmax(0,1fr));border:1px solid var(--graphite);background:var(--blanc)}
 .cartouche div{padding:14px 16px;border-left:1px solid var(--graphite)}
 .cartouche div:first-child{border-left:0}
-.cartouche dt{font:400 .68rem var(--mono);color:var(--graphite2);text-transform:uppercase;letter-spacing:.06em;margin-bottom:4px}
+.cartouche dt{font:400 .75rem var(--mono);color:var(--graphite2);text-transform:uppercase;letter-spacing:.06em;margin-bottom:4px}
 .cartouche dd{margin:0;font-weight:620;font-stretch:106%;font-size:.98rem;line-height:1.3}
 @media (max-width:900px){.cartouche{grid-template-columns:1fr 1fr}.cartouche div{border-left:0;border-top:1px solid var(--graphite)}.cartouche div:nth-child(-n+2){border-top:0}.cartouche div:nth-child(even){border-left:1px solid var(--graphite)}.cartouche div:last-child{grid-column:1/-1;border-left:0}}
 /* palmarès */
@@ -170,13 +174,13 @@ section{position:relative}
 .mos figure{margin:0;position:relative;overflow:hidden;border-radius:var(--r);background:var(--calque2)}
 .mos img{width:100%;height:100%;object-fit:cover;transition:transform 1.2s var(--ease)}
 .mos figure:hover img{transform:scale(1.03)}
-.mos figcaption{position:absolute;left:0;right:0;bottom:0;padding:28px 14px 12px;font:500 .74rem/1.35 var(--mono);color:#fff;background:linear-gradient(transparent,rgba(10,16,20,.72))}
+.mos figcaption{position:absolute;left:0;right:0;bottom:0;padding:28px 14px 12px;font:500 .78rem/1.35 var(--mono);color:#fff;background:linear-gradient(transparent,rgba(10,16,20,.78))}
 .mos .a{grid-column:span 7;aspect-ratio:7/5}.mos .b{grid-column:span 5;aspect-ratio:5/5}.mos .c{grid-column:span 4;aspect-ratio:4/5}.mos .d{grid-column:span 4;aspect-ratio:4/5}.mos .e{grid-column:span 4;aspect-ratio:4/5}.mos .f{grid-column:span 6;aspect-ratio:3/2}
 @media (max-width:760px){.mos .a,.mos .b,.mos .f{grid-column:span 12;aspect-ratio:3/2}.mos .c,.mos .d,.mos .e{grid-column:span 6;aspect-ratio:4/5}.mos .e{grid-column:span 12;aspect-ratio:3/2}}
 .real-g{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:14px;margin-top:32px}
 .real-g figure{margin:0;position:relative;border-radius:var(--r);overflow:hidden;aspect-ratio:4/3;background:var(--calque2)}
 .real-g img{width:100%;height:100%;object-fit:cover}
-.real-g figcaption{position:absolute;left:0;right:0;bottom:0;padding:26px 12px 10px;font:500 .72rem/1.35 var(--mono);color:#fff;background:linear-gradient(transparent,rgba(10,16,20,.72))}
+.real-g figcaption{position:absolute;left:0;right:0;bottom:0;padding:26px 12px 10px;font:500 .78rem/1.35 var(--mono);color:#fff;background:linear-gradient(transparent,rgba(10,16,20,.78))}
 .real-g figure[hidden]{display:none}
 .filt{display:flex;flex-wrap:wrap;gap:8px;margin-top:28px}
 .filt button{min-height:44px;padding:0 16px;border:1px solid var(--graphite);background:transparent;border-radius:22px;font:500 .9rem var(--titre);cursor:pointer;color:var(--graphite)}
@@ -247,7 +251,7 @@ input[aria-invalid=true]{border-color:var(--err);box-shadow:0 0 0 1px var(--err)
 .ph .acts{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px}
 .ph figure{margin:0;border-radius:var(--r);overflow:hidden;aspect-ratio:4/3;background:var(--calque2);position:relative}
 .ph figure img{width:100%;height:100%;object-fit:cover}
-.ph figcaption{position:absolute;left:10px;bottom:10px;font:400 .66rem var(--mono);color:#fff;background:rgba(15,20,24,.55);padding:4px 7px;border-radius:2px}
+.ph figcaption{position:absolute;left:10px;bottom:10px;font:400 .76rem var(--mono);color:#fff;background:rgba(15,20,24,.55);padding:4px 7px;border-radius:2px}
 @media (max-width:860px){.ph-g{grid-template-columns:1fr}}
 .spec{list-style:none;margin:32px 0 0;padding:0;border-top:1px solid var(--graphite)}
 .spec li{display:grid;grid-template-columns:minmax(0,4fr) minmax(0,7fr);gap:6px 32px;padding:20px 0;border-bottom:1px solid var(--trait-g)}
@@ -255,7 +259,7 @@ input[aria-invalid=true]{border-color:var(--err);box-shadow:0 0 0 1px var(--err)
 .cobalt .spec{border-top-color:var(--sur-cobalt)}.cobalt .spec li{border-bottom-color:rgba(238,243,252,.2)}.cobalt .spec p{color:var(--sur-cobalt2)}
 @media (max-width:700px){.spec li{grid-template-columns:1fr}}
 .facts{display:flex;flex-wrap:wrap;gap:8px 10px;margin-top:22px;padding:0;list-style:none}
-.facts li{font:500 .76rem/1.3 var(--mono);border:1px solid var(--graphite2);padding:8px 10px;border-radius:2px;color:var(--graphite)}
+.facts li{font:500 .78rem/1.3 var(--mono);border:1px solid var(--graphite2);padding:8px 10px;border-radius:2px;color:var(--graphite)}
 .gam{display:grid;gap:clamp(28px,4vw,56px);margin-top:40px}
 .gam article{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:clamp(20px,4vw,56px);align-items:center}
 .gam article:nth-child(even) figure{order:2}
@@ -270,10 +274,10 @@ input[aria-invalid=true]{border-color:var(--err);box-shadow:0 0 0 1px var(--err)
 .check{list-style:none;margin:28px 0 0;padding:0;columns:3 240px;column-gap:32px}
 .check li{break-inside:avoid;display:flex;gap:12px;align-items:flex-start;padding:10px 0;border-bottom:1px solid var(--trait-g)}
 .check svg{flex:none;width:20px;height:20px;color:var(--cobalt);margin-top:2px}
-.gal{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:12px;margin-top:28px}
+.gal{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin-top:28px}
 .gal figure{margin:0;border-radius:var(--r);overflow:hidden;aspect-ratio:4/3;position:relative;background:var(--calque2)}
 .gal img{width:100%;height:100%;object-fit:cover}
-.gal figcaption{position:absolute;left:8px;bottom:8px;font:500 .68rem var(--mono);color:#fff;background:rgba(15,20,24,.6);padding:3px 7px;border-radius:2px}
+.gal figcaption{position:absolute;left:8px;bottom:8px;font:500 .76rem var(--mono);color:#fff;background:rgba(15,20,24,.6);padding:3px 7px;border-radius:2px}
 .partner{display:grid;grid-template-columns:minmax(0,3fr) minmax(0,8fr);gap:24px;align-items:center;border:1px solid var(--graphite);padding:22px 24px;border-radius:var(--r);margin-top:36px;background:var(--blanc)}
 .partner img{max-height:70px;width:auto;mix-blend-mode:multiply}
 .partner p{margin:0;color:var(--graphite2)}
@@ -339,6 +343,11 @@ footer .logo-f{background:#F3F4F1;display:inline-block;padding:10px 12px;border-
 @media (max-width:520px){.mk{display:none}}
 
 @media (max-width:600px){.plan .n2{top:auto;bottom:calc(5% + 34px);left:4%;right:auto}.plan .legende{display:none}.plan .note{font-size:.66rem}}
+
+@media (max-width:900px){.gal{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.top .btn-c .court{display:none}
+@media (max-width:640px){.top .btn-c .court{display:inline}.cs-btn{padding:6px}.cs-btn>span:last-child{display:none}.cs-btn .av{width:46px;height:46px}}
+@media (max-width:999px){.hero .plan{order:-1}}
 </style>
 </head>
 <body>
@@ -374,7 +383,7 @@ footer .logo-f{background:#F3F4F1;display:inline-block;padding:10px 12px;border-
   <div class="top-act">
    <label class="langsel"><svg aria-hidden="true"><use href="#i-glob"/></svg><span class="sr" data-t="lang">Langue</span>
     <select id="lang"><option value="fr">Français</option><option value="en">English</option><option value="es">Español</option><option value="de">Deutsch</option><option value="it">Italiano</option><option value="zh">中文（简体）</option></select></label>
-   <a class="btn btn-c" href="#devis"><svg aria-hidden="true"><use href="#i-plan"/></svg><span class="lbl" data-t="nav_devis">Demander un devis</span><span class="nb" id="nb"></span></a>
+   <a class="btn btn-c" href="#devis"><svg aria-hidden="true"><use href="#i-plan"/></svg><span class="lbl" data-t="nav_devis">Demander un devis</span><span class="court" data-t="devis_court">Devis</span><span class="nb" id="nb"></span></a>
   </div>
  </div>
  <nav class="subnav" id="sub-pisc" hidden aria-label="Piscines"><ul>
@@ -409,7 +418,7 @@ footer .logo-f{background:#F3F4F1;display:inline-block;padding:10px 12px;border-
    </div>
   </div>
   <dl class="cartouche">
-   <div><dt data-t="c_maison">Maison</dt><dd>Piscines ES &amp; Spas</dd></div>
+   <div><dt data-t="c_palm">Palmarès</dt><dd data-t="c_palm_v"></dd></div>
    <div><dt data-t="c_depuis">Depuis</dt><dd>1976</dd></div>
    <div><dt data-t="c_gerants">Gérants</dt><dd>Jeannine &amp; Thierry Winé</dd></div>
    <div><dt data-t="c_show">Showrooms</dt><dd>Geispolsheim (67) · Houssen (68)</dd></div>
@@ -507,12 +516,12 @@ footer .logo-f{background:#F3F4F1;display:inline-block;padding:10px 12px;border-
   <ul class="spec"><li><h3 data-t="pp_beton"></h3><p data-t="pp_beton_d"></p></li><li><h3 data-t="pp_int"></h3><p data-t="pp_int_d"></p></li><li><h3 data-t="pp_cou"></h3><p data-t="pp_cou_d"></p></li></ul>
  </div></section>
  <section class="blk-s"><div class="wrap"><h2 data-t="r_title"></h2>
-  <div class="gal" data-gal="p-r1:cap_real,p-r2:cap_real,p-r3:cap_real,p-r4:cap_real,p-r5:cap_real,p-r6:cap_real,p-labaroche:cap_labaroche,home-interieure:cap_int"></div>
+  <div class="gal" data-gal="p-r1:,p-r2:,p-r3:,p-r4:,p-r5:,p-r6:,p-labaroche:cap_labaroche,home-interieure:cap_int"></div>
   <p style="margin-top:22px;font:400 .74rem var(--mono);color:var(--graphite2)">« <span data-t="tm_text"></span> » G. Mayer</p>
  </div></section>
  <section class="blk-s blanc"><div class="wrap"><h2 data-t="me_title"></h2>
   <ul class="spec"><li><h3 data-t="me1"></h3><p data-t="me1_d"></p></li><li><h3 data-t="me2"></h3><p data-t="me2_d"></p></li><li><h3 data-t="me3"></h3><p data-t="me3_d"></p></li><li><h3 data-t="me4"></h3><p data-t="me4_d"></p></li></ul>
-  <ul class="spec" style="margin-top:44px"><li><h3 data-t="pp_l1"></h3><p data-t="pp_l1_d"></p></li><li><h3 data-t="pp_l2"></h3><p data-t="pp_l2_d"></p></li><li><h3 data-t="pp_l3"></h3><p data-t="pp_l3_d"></p></li></ul>
+  <h2 style="margin-top:56px;font-size:1.6rem" data-t="pp_gar"></h2><ul class="spec"><li><h3 data-t="pp_l1"></h3><p data-t="pp_l1_d"></p></li><li><h3 data-t="pp_l2"></h3><p data-t="pp_l2_d"></p></li><li><h3 data-t="pp_l3"></h3><p data-t="pp_l3_d"></p></li></ul>
  </div></section>
  <section class="blk cobalt" data-devis-slot></section>
 </div>
@@ -950,7 +959,7 @@ a_delay:"Je ne connais pas les délais exacts : ils dépendent du projet et de l
 a_none:"Je ne sais pas répondre précisément à cela, et je préfère ne pas inventer. Le plus sûr : appelez Geispolsheim au 03 90 40 31 31 ou Houssen au 03 89 41 14 35, ou laissez votre demande de devis.",
 go_devis:"Demander un devis",go_page:"Voir la page",go_call:"Appeler",
 legende:"Légende",mk_proto:"Maquette",
-cookie_note:"",
+cookie_note:"",devis_court:"Devis",c_palm:"Palmarès",c_palm_v:"11 trophées, dont 1 européen",pp_gar:"Nos garanties",
 };
 T.en={
 nav_pisc:"Pools",nav_bien:"Wellness",nav_ent:"Care & service",nav_real:"Our work",nav_entr:"The company",nav_show:"Showrooms",nav_conseil:"ES Advisor",nav_devis:"Request a quote",lang:"Language",skip:"Skip to content",
@@ -1124,7 +1133,7 @@ a_delay:"I don't know the exact lead times: they depend on the project and the s
 a_none:"I can't answer that precisely, and I'd rather not make things up. The safest option: call Geispolsheim on +33 3 90 40 31 31 or Houssen on +33 3 89 41 14 35, or leave a quote request.",
 go_devis:"Request a quote",go_page:"See the page",go_call:"Call",
 legende:"Caption",mk_proto:"Mock-up",
-cookie_note:"",
+cookie_note:"",devis_court:"Quote",c_palm:"Awards",c_palm_v:"11 trophies, 1 of them European",pp_gar:"Our guarantees",
 };
 T.es={
 nav_pisc:"Piscinas",nav_bien:"Bienestar",nav_ent:"Mantenimiento y SAT",nav_real:"Proyectos",nav_entr:"La empresa",nav_show:"Showrooms",nav_conseil:"ES Asesor",nav_devis:"Pedir presupuesto",lang:"Idioma",skip:"Ir al contenido",
@@ -1298,7 +1307,7 @@ a_delay:"No conozco los plazos exactos: dependen del proyecto y de la temporada.
 a_none:"No sé responder con precisión a eso y prefiero no inventar. Lo más seguro: llame a Geispolsheim al +33 3 90 40 31 31 o a Houssen al +33 3 89 41 14 35, o deje su solicitud de presupuesto.",
 go_devis:"Pedir presupuesto",go_page:"Ver la página",go_call:"Llamar",
 legende:"Leyenda",mk_proto:"Maqueta",
-cookie_note:"",
+cookie_note:"",devis_court:"Presupuesto",c_palm:"Palmarés",c_palm_v:"11 trofeos, 1 de ellos europeo",pp_gar:"Nuestras garantías",
 };
 T.de={
 nav_pisc:"Pools",nav_bien:"Wellness",nav_ent:"Pflege & Service",nav_real:"Referenzen",nav_entr:"Das Unternehmen",nav_show:"Ausstellungen",nav_conseil:"ES Berater",nav_devis:"Angebot anfordern",lang:"Sprache",skip:"Zum Inhalt",
@@ -1472,7 +1481,7 @@ a_delay:"Die genauen Fristen kenne ich nicht: Sie hängen vom Projekt und von de
 a_none:"Darauf kann ich nicht genau antworten, und ich möchte nichts erfinden. Am sichersten: Rufen Sie Geispolsheim unter +33 3 90 40 31 31 oder Houssen unter +33 3 89 41 14 35 an, oder senden Sie eine Angebotsanfrage.",
 go_devis:"Angebot anfordern",go_page:"Zur Seite",go_call:"Anrufen",
 legende:"Bildunterschrift",mk_proto:"Entwurf",
-cookie_note:"",
+cookie_note:"",devis_court:"Angebot",c_palm:"Auszeichnungen",c_palm_v:"11 Trophäen, davon 1 europäische",pp_gar:"Unsere Garantien",
 };
 T.it={
 nav_pisc:"Piscine",nav_bien:"Benessere",nav_ent:"Manutenzione e assistenza",nav_real:"Realizzazioni",nav_entr:"L'azienda",nav_show:"Showroom",nav_conseil:"ES Consulente",nav_devis:"Richiedi un preventivo",lang:"Lingua",skip:"Vai al contenuto",
@@ -1646,7 +1655,7 @@ a_delay:"Non conosco i tempi esatti: dipendono dal progetto e dalla stagione. Un
 a_none:"Non so rispondere con precisione e preferisco non inventare. La cosa più sicura: chiamate Geispolsheim al +33 3 90 40 31 31 o Houssen al +33 3 89 41 14 35, oppure lasciate una richiesta di preventivo.",
 go_devis:"Richiedi un preventivo",go_page:"Vedi la pagina",go_call:"Chiama",
 legende:"Didascalia",mk_proto:"Bozza",
-cookie_note:"",
+cookie_note:"",devis_court:"Preventivo",c_palm:"Palmarès",c_palm_v:"11 trofei, di cui 1 europeo",pp_gar:"Le nostre garanzie",
 };
 T.zh={
 nav_pisc:"泳池",nav_bien:"康体",nav_ent:"保养与售后",nav_real:"工程案例",nav_entr:"公司介绍",nav_show:"展厅",nav_conseil:"ES 顾问",nav_devis:"申请报价",lang:"语言",skip:"跳到正文",
@@ -1820,7 +1829,7 @@ a_delay:"我不清楚确切工期：这取决于项目和季节。项目顾问�
 a_none:"这个问题我无法准确回答，也不想随意编造。最稳妥的方式：致电盖斯波尔塞姆 +33 3 90 40 31 31 或乌桑 +33 3 89 41 14 35，或提交报价申请。",
 go_devis:"申请报价",go_page:"查看页面",go_call:"致电",
 legende:"图注",mk_proto:"样稿",
-cookie_note:"",
+cookie_note:"",devis_court:"报价",c_palm:"荣誉",c_palm_v:"11 项奖项，其中 1 项欧洲奖",pp_gar:"我们的保障",
 };
 
 (function(){
@@ -1841,7 +1850,7 @@ const GAM={spa:[
  {id:'swimcross',nm:'SwimCross',img:'nage-swimcross',t:'g_swim_t',d:'g_swim_d'},
  {id:'endless',nm:'Endless Pools',img:'nage-endless',t:'g_end_t',d:'g_end_d'}]};
 const HOT=[['La Perle des Vosges','Muhlbach-sur-Munster (68)','ho_perle'],['De La Tour','Ribeauvillé (68)','ho_tour'],['voco Strasbourg','Strasbourg (67)','ho_voco'],['James Vignoble Hôtel (Saint James)','Eguisheim (68)','ho_james'],['Le Chambard','Kaysersberg (68)','ho_chambard'],['Best Western Les Humanistes','Sélestat (67)','ho_hum']];
-const REAL=[['home-hauteur','cap_obernai','p'],['hero-debord','cap_debord','p'],['home-interieure','cap_int','p'],['home-couloir','cap_couloir','p'],['home-terrasse-mobile','cap_terr','p'],['p-labaroche','cap_labaroche','p'],['p-r1','cap_real','p'],['p-r2','cap_real','p'],['p-r3','cap_real','p'],['p-r4','cap_real','p'],['p-r5','cap_real','p'],['p-r6','cap_real','p'],['real-1','cap_real','p'],['real-2','cap_real','p'],['real-3','cap_real','p'],['real-4','cap_real','p'],['mini-hero','cap_mini','p'],['mini-terrasse','cap_mini2','p'],['home-perle-vosges','cap_perle','h'],['hotel-munster','ho_perle','h','La Perle des Vosges'],['hotel-kaysersberg','ho_chambard','h','Le Chambard'],['hotel-chambard-spa','ho_chambard','h','Le Chambard'],['hotel-strasbourg','ho_voco','h','voco Strasbourg'],['hotel-eguisheim','ho_james','h','James Vignoble Hôtel'],['hotel-ext','ho_hum','h','Les Humanistes'],['real-5','cap_spa','b'],['spa-grandee','cap_spa','b'],['ham-hero','sub_ham','b'],['sauna-2','sub_sauna','b'],['abri-hero','sub_abris','a'],['abri-2','sub_abris','a'],['abri-3','sub_abris','a'],['abri-4','sub_abris','a'],['abri-5','sub_abris','a']];
+const REAL=[['home-hauteur','cap_obernai','p'],['hero-debord','cap_debord','p'],['home-interieure','cap_int','p'],['home-couloir','cap_couloir','p'],['home-terrasse-mobile','cap_terr','p'],['p-labaroche','cap_labaroche','p'],['p-r1','','p'],['p-r2','','p'],['p-r3','','p'],['p-r4','','p'],['p-r5','','p'],['p-r6','','p'],['real-1','','p'],['real-2','','p'],['real-3','','p'],['real-4','','p'],['mini-hero','cap_mini','p'],['mini-terrasse','cap_mini2','p'],['home-perle-vosges','cap_perle','h'],['hotel-munster','ho_perle','h','La Perle des Vosges'],['hotel-kaysersberg','ho_chambard','h','Le Chambard'],['hotel-chambard-spa','ho_chambard','h','Le Chambard'],['hotel-strasbourg','ho_voco','h','voco Strasbourg'],['hotel-eguisheim','ho_james','h','James Vignoble Hôtel'],['hotel-ext','ho_hum','h','Les Humanistes'],['real-5','cap_spa','b'],['spa-grandee','cap_spa','b'],['ham-hero','sub_ham','b'],['sauna-2','sub_sauna','b'],['abri-hero','sub_abris','a'],['abri-2','sub_abris','a'],['abri-3','sub_abris','a'],['abri-4','sub_abris','a'],['abri-5','sub_abris','a']];
 const TYPES=['o_pisc','o_mini','o_reno','o_abri','o_spa','o_nage','o_hs','o_ent','o_pro'],LIEU=['o_ext','o_int','o_nsp'],SECT=['o_67','o_68','o_autre'];
 let PROJ=[];try{PROJ=JSON.parse(localStorage.getItem('es-proj')||'[]')}catch(e){}
 let PRESET=null;
@@ -1858,7 +1867,7 @@ function buildStatic(){
  $$('[data-gal]').forEach(g=>{g.innerHTML=g.dataset.gal.split(',').map(p=>{const [i,c]=p.split(':');return `<figure><img src="img/${i}.jpg" alt="" ${c?`data-alt="${c}"`:''} loading="lazy" width="720" height="540">${c?`<figcaption data-t="${c}"></figcaption>`:''}</figure>`}).join('');});
  const hotHTML=HOT.map(h=>`<li><strong>${h[0]}</strong><span class="mono">${h[1]}</span><em data-t="${h[2]}"></em></li>`).join('');
  $('#hot-home').innerHTML=hotHTML;$('#hot-pro').innerHTML=hotHTML;
- $('#realg').innerHTML=REAL.map(r=>`<figure data-c="${r[2]}"><img src="img/${r[0]}.jpg" alt="" data-alt="${r[1]}" loading="lazy" width="720" height="540"><figcaption>${r[3]?r[3]+' · ':''}<span data-t="${r[1]}"></span></figcaption></figure>`).join('');
+ $('#realg').innerHTML=REAL.map(r=>`<figure data-c="${r[2]}"><img src="img/${r[0]}.jpg" alt="" ${r[1]?`data-alt="${r[1]}"`:''} loading="lazy" width="720" height="540">${r[1]||r[3]?`<figcaption>${r[3]?r[3]+(r[1]?' · ':''):''}${r[1]?`<span data-t="${r[1]}"></span>`:''}</figcaption>`:''}</figure>`).join('');
  const SH=[['mag-geispo','s_geis','s_geis_d','s_geis_h','7 route de Lyon, 67118 Geispolsheim','03 90 40 31 31',tel1,'7+route+de+Lyon+67118+Geispolsheim'],['mag-houssen','s_hous','s_hous_d','s_hous_h','9 rue de la Gare, 68125 Houssen','03 89 41 14 35',tel2,'9+rue+de+la+Gare+68125+Houssen']];
  $$('[data-showrooms]').forEach(s=>{s.innerHTML=SH.map(x=>`<article class="show"><img src="img/${x[0]}.jpg" alt="" data-alt="${x[1]}" loading="lazy" width="720" height="540"><div class="in"><h3 data-t="${x[1]}"></h3><p style="margin:0;color:var(--graphite2)" data-t="${x[2]}"></p><address>${x[4]}</address><span class="h" data-t="${x[3]}"></span><div class="acts"><a class="btn btn-c" href="tel:${x[6]}"><svg aria-hidden="true"><use href="#i-tel"/></svg>${x[5]}</a><a class="btn btn-l" href="https://www.google.com/maps/search/?api=1&query=${x[7]}" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-pin"/></svg><span data-t="s_route"></span></a><a class="btn btn-l" href="mailto:es@piscines-es.fr"><svg aria-hidden="true"><use href="#i-mail"/></svg><span data-t="s_mail"></span></a></div></div></article>`).join('');});
  $$('[data-acts]').forEach(a=>{const add=a.dataset.add;a.innerHTML=`<a class="btn btn-c" href="#devis" ${add?`data-preset="${add}"`:''}><svg aria-hidden="true"><use href="#i-plan"/></svg><span data-t="go_devis"></span></a><a class="btn btn-l" href="tel:${tel1}"><svg aria-hidden="true"><use href="#i-tel"/></svg>03 90 40 31 31</a>`;});
@@ -1967,7 +1976,7 @@ $('#csx').onclick=closeChat;D.addEventListener('keydown',e=>{if(e.key==='Escape'
 $('#csf').addEventListener('submit',e=>{e.preventDefault();const v=$('#csi').value.trim();if(!v)return;$('#csi').value='';ask(v);});
 $('#csinvx').onclick=()=>{$('#csinv').classList.remove('on');try{sessionStorage.setItem('es-inv','1')}catch(e){}};
 $('#csinv').addEventListener('click',e=>{if(!e.target.closest('button'))openChat();});
-setTimeout(()=>{let seen=false;try{seen=sessionStorage.getItem('es-inv')}catch(e){}if(!seen&&!cs.classList.contains('on'))$('#csinv').classList.add('on');},4000);
+setTimeout(()=>{let seen=false;try{seen=sessionStorage.getItem('es-inv')}catch(e){}if(!seen&&!cs.classList.contains('on'))$('#csinv').classList.add('on');},12000);
 
 buildStatic();apply();route();
 })();
