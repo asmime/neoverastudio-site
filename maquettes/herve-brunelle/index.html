@@ -1,0 +1,1403 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Hervé Brunelle — Proposition Neovera Studio</title>
+<meta name="description" content="Hervé Brunelle, formier-embauchoiriste à Troësnes (Aisne) : formes de montage et embauchoirs sur mesure en hêtre. Entreprise du Patrimoine Vivant.">
+<meta name="theme-color" content="#251912">
+<link rel="preload" href="fonts/petrona.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/spline.woff2" as="font" type="font/woff2" crossorigin>
+<style>@font-face{font-family:"Petrona";src:url(fonts/petrona.woff2) format("woff2");font-weight:100 900;font-display:swap}
+@font-face{font-family:"Petrona";src:url(fonts/petrona-i.woff2) format("woff2");font-weight:100 900;font-style:italic;font-display:swap}
+@font-face{font-family:"Spline Sans";src:url(fonts/spline.woff2) format("woff2");font-weight:300 700;font-display:swap}
+@font-face{font-family:"Spline Sans Mono";src:url(fonts/spline-mono.woff2) format("woff2");font-weight:300 700;font-display:swap}
+:root{
+--atelier:#ECEAE6;--atelier-2:#E2DFD9;--atelier-3:#D3CFC7;--copeau:#D9C4A2;
+--noyer:#251912;--noyer-2:#33241B;--noyer-3:#4A372A;--encre:#1F1611;--encre-2:#4E4036;
+--laiton:#B48C3E;--laiton-clair:#D8BB78;--acajou:#7C3A22;--sur-noyer:#E9DCC6;--sur-noyer-2:#BFAE95;
+--titre:"Petrona",Georgia,"Hiragino Mincho ProN","Yu Mincho","Noto Serif JP",serif;
+--corps:"Spline Sans","Hiragino Sans","Yu Gothic","Noto Sans JP",system-ui,sans-serif;
+--cote:"Spline Sans Mono","Hiragino Sans",ui-monospace,monospace;
+--r:2px;--max:1320px;--g:clamp(16px,4vw,48px);
+--ease:cubic-bezier(.16,1,.3,1)
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;scrollbar-color:var(--noyer-3) var(--atelier-2)}
+body{margin:0;background:var(--atelier);color:var(--encre);font:400 17px/1.6 var(--corps);font-feature-settings:"ss01"}
+::selection{background:var(--laiton);color:var(--noyer)}
+::-webkit-scrollbar{width:11px;height:8px}::-webkit-scrollbar-track{background:var(--atelier-2)}::-webkit-scrollbar-thumb{background:var(--noyer-3);border-radius:6px;border:2px solid var(--atelier-2)}
+:focus-visible{outline:2px solid var(--laiton);outline-offset:3px;border-radius:2px}
+img{max-width:100%;height:auto;display:block}
+a{color:inherit;text-decoration-color:var(--laiton);text-underline-offset:.22em;text-decoration-thickness:1px}
+a:hover{text-decoration-thickness:2px}
+h1,h2,h3{font-family:var(--titre);font-weight:560;line-height:1.08;letter-spacing:-.018em;margin:0;text-wrap:balance}
+h1{font-size:clamp(2.35rem,5.6vw,4.9rem)}h2{font-size:clamp(1.9rem,3.6vw,3.1rem)}h3{font-size:clamp(1.25rem,1.9vw,1.55rem);letter-spacing:-.01em}
+p{margin:0 0 1em;max-width:62ch;text-wrap:pretty}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 var(--g)}
+.skip{position:absolute;left:-999px;top:8px;background:var(--noyer);color:#fff;padding:8px 12px;z-index:99}.skip:focus{left:8px}
+/* en-tête */
+header.top{position:sticky;top:0;z-index:40;background:rgba(236,234,230,.94);backdrop-filter:saturate(1.2) blur(8px);border-bottom:1px solid var(--atelier-3)}
+.top .row{display:flex;align-items:center;gap:20px;min-height:68px}
+.brand{display:flex;flex-direction:column;text-decoration:none;line-height:1.05;flex-shrink:0}
+.brand b{font:600 1.34rem/1 var(--titre);letter-spacing:-.01em}
+.brand small{font:500 .68rem/1.2 var(--cote);letter-spacing:.06em;text-transform:uppercase;color:var(--encre-2);margin-top:4px}
+nav.menu{flex:1;min-width:0;position:relative}
+nav.menu ul{list-style:none;margin:0;padding:0;display:flex;gap:2px;overflow-x:auto;scrollbar-width:none}
+nav.menu ul::-webkit-scrollbar{display:none}
+nav.menu a{display:block;white-space:nowrap;text-decoration:none;padding:9px 9px;font-size:.92rem;border-radius:var(--r);color:var(--encre-2)}
+nav.menu a:hover{color:var(--encre);background:var(--atelier-2)}
+nav.menu a[aria-current=page]{color:var(--encre);box-shadow:inset 0 -2px 0 var(--laiton)}
+nav.menu a.ai-link{color:var(--acajou);font-weight:600}
+.tools{display:flex;align-items:center;gap:10px;flex-shrink:0}
+.lang{display:flex;align-items:center;gap:6px;border:1px solid var(--encre-2);border-radius:var(--r);padding:0 4px 0 9px;background:#F5F3EF}
+.lang svg{width:15px;height:15px;flex-shrink:0}
+.lang select{appearance:none;border:0;background:transparent;font:500 .9rem var(--corps);color:var(--encre);padding:8px 20px 8px 2px;cursor:pointer;background-image:linear-gradient(45deg,transparent 50%,var(--encre) 50%),linear-gradient(135deg,var(--encre) 50%,transparent 50%);background-position:calc(100% - 9px) 52%,calc(100% - 4px) 52%;background-size:5px 5px;background-repeat:no-repeat}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;min-height:46px;padding:0 20px;border-radius:var(--r);font:600 .95rem/1.1 var(--corps);text-decoration:none;cursor:pointer;border:1px solid transparent;transition:background .25s var(--ease),color .25s,border-color .25s,transform .25s var(--ease)}
+.btn:active{transform:translateY(1px)}
+.btn.plein{background:var(--noyer);color:var(--sur-noyer)}.btn.plein:hover{background:var(--acajou);color:#fff}
+.btn.laiton{background:var(--laiton);color:var(--noyer)}.btn.laiton:hover{background:var(--laiton-clair)}
+.btn.trait{border-color:currentColor;color:inherit;background:transparent}.btn.trait:hover{background:rgba(180,140,62,.14)}
+.btn svg{width:18px;height:18px}
+.tel-top{display:none}
+@media(min-width:1241px){#top-cta{display:none}}
+@media(max-width:1240px){.top .row{flex-wrap:wrap;gap:0 14px;padding-top:8px}.brand{order:1;flex:1}.tools{order:2}nav.menu{order:3;flex-basis:100%;margin:4px 0 2px}nav.menu::after{content:"";position:absolute;right:0;top:0;bottom:0;width:40px;background:linear-gradient(90deg,rgba(236,234,230,0),var(--atelier));pointer-events:none}}
+@media(max-width:620px){.brand small{display:none}.tools .btn{display:none}.tel-top{display:inline-flex;width:42px;min-height:42px;padding:0}.lang select{font-size:.85rem;padding:7px 18px 7px 0}}
+/* pages */
+main>section.page{display:none}main>section.page.on{display:block;animation:entree .5s var(--ease)}
+@keyframes entree{from{opacity:.001}to{opacity:1}}
+.band{padding:clamp(56px,9vw,120px) 0}
+.band.noyer{background:var(--noyer);color:var(--sur-noyer)}
+.band.noyer a{color:var(--sur-noyer)}
+.band.copeau{background:var(--copeau)}
+.band.gris{background:var(--atelier-2)}
+.cote{font-family:var(--cote);font-size:.78rem;letter-spacing:.05em;text-transform:uppercase}
+.muted{color:var(--encre-2)}.noyer .muted{color:var(--sur-noyer-2)}
+.lead{font:400 clamp(1.1rem,1.6vw,1.3rem)/1.5 var(--titre);max-width:46ch}
+/* héros */
+.hero{padding:clamp(28px,5vw,64px) 0 clamp(40px,6vw,80px)}
+.hero .grid{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,6fr);gap:clamp(20px,4vw,60px);align-items:center}
+.hero h1{margin:0 0 .45em;font-size:clamp(2.2rem,4.4vw,4.1rem);hyphens:manual}
+.hero .lead{margin-bottom:1.5em}
+.hero .acts{display:flex;flex-wrap:wrap;gap:12px;margin-bottom:26px}
+.hero .tag{display:flex;gap:12px;align-items:center;color:var(--encre-2)}
+.hero .tag img{height:34px;width:auto;mix-blend-mode:multiply}
+.hero figure{margin:0;position:relative}
+.hero figure img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:var(--r);box-shadow:0 30px 60px -30px rgba(37,25,18,.45)}
+.hero figcaption{margin-top:12px;color:var(--encre-2);font-size:.9rem}
+.marque{position:absolute;right:clamp(10px,3vw,28px);top:clamp(10px,3vw,28px);width:clamp(84px,11vw,124px);height:auto;color:var(--acajou);opacity:.88}
+@media(max-width:820px){.hero .grid{grid-template-columns:1fr}.hero figure{order:-1}}
+/* cernes */
+.cernes .grid{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,5fr);gap:clamp(24px,5vw,72px);align-items:center}
+.disque{position:relative;aspect-ratio:1;max-width:620px;width:100%;margin:0 auto}
+.disque svg{width:100%;height:100%;overflow:visible}
+.disque .cerne{fill:none;stroke:#8C6A4A;stroke-width:1.15;opacity:.95;transition:stroke .3s,stroke-width .3s}
+.disque .cerne.fort{stroke:var(--laiton-clair);stroke-width:2.6}
+.disque .rayon{stroke:#C9A57A;stroke-width:.6;opacity:.35}
+.annees{list-style:none;margin:22px 0 26px;padding:0;border-top:1px solid var(--noyer-3)}
+.annees li{border-bottom:1px solid var(--noyer-3)}
+.annees button{all:unset;box-sizing:border-box;display:grid;grid-template-columns:7.2em 1fr;gap:14px;width:100%;padding:14px 4px;cursor:pointer;color:var(--sur-noyer-2);transition:color .25s}
+.annees button:hover,.annees button[aria-pressed=true]{color:var(--sur-noyer)}
+.annees button[aria-pressed=true] .an{color:var(--laiton-clair)}
+.annees .an{font-family:var(--cote);font-size:.95rem;padding-top:2px}
+.annees button:focus-visible{outline:2px solid var(--laiton)}
+@media(max-width:860px){.cernes .grid{grid-template-columns:1fr}.disque{max-width:420px}}
+/* deux métiers */
+.duo{display:grid;grid-template-columns:7fr 5fr;gap:clamp(20px,3vw,40px);margin-top:clamp(28px,4vw,48px)}
+.duo article{position:relative}
+.duo article:nth-child(2){margin-top:clamp(40px,8vw,120px)}
+.duo img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:var(--r);margin-bottom:18px}
+.duo h3{margin-bottom:.4em}
+@media(max-width:760px){.duo{grid-template-columns:1fr}.duo article:nth-child(2){margin-top:0}}
+/* forêts */
+.forets{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:2px;margin-top:36px;background:var(--atelier-3);border:1px solid var(--atelier-3)}
+.foret{all:unset;box-sizing:border-box;cursor:pointer;background:var(--atelier);padding:14px 14px 18px;display:flex;flex-direction:column;gap:8px;transition:background .3s}
+.foret:hover{background:#F4F2EE}.foret:focus-visible{outline:2px solid var(--laiton);outline-offset:-2px}
+.foret img{width:100%;aspect-ratio:4/3;object-fit:cover;transition:transform .6s var(--ease)}
+.foret:hover img{transform:scale(1.04)}
+.foret b{font:560 1.35rem/1.1 var(--titre)}
+.foret span{color:var(--encre-2);font-size:.88rem}
+@media(max-width:860px){.forets{grid-template-columns:repeat(2,minmax(0,1fr))}}
+/* cires */
+.cires{display:grid;grid-template-columns:repeat(auto-fill,minmax(78px,1fr));gap:10px;margin:30px 0}
+.cire{all:unset;cursor:pointer;display:flex;flex-direction:column;gap:6px;font-size:.82rem;color:var(--encre-2)}
+.cire img{width:100%;aspect-ratio:1;object-fit:cover;border-radius:50% 50% 6px 6px;transition:transform .4s var(--ease),box-shadow .3s}
+.cire:hover img,.cire[aria-pressed=true] img{transform:translateY(-4px);box-shadow:0 14px 22px -14px rgba(37,25,18,.6)}
+.cire[aria-pressed=true]{color:var(--encre);font-weight:600}
+.cire .vide{width:100%;aspect-ratio:1;border-radius:50% 50% 6px 6px;background:repeating-linear-gradient(115deg,#E6D4B4 0 7px,#DCC7A4 7px 9px)}
+.cire:focus-visible img{outline:2px solid var(--laiton);outline-offset:2px}
+.filtres{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}
+.filtres button{font:500 .88rem var(--corps);border:1px solid var(--atelier-3);background:transparent;padding:8px 13px;border-radius:30px;cursor:pointer;color:var(--encre-2)}
+.filtres button[aria-pressed=true]{background:var(--noyer);color:var(--sur-noyer);border-color:var(--noyer)}
+/* vidéo */
+.video{position:relative;aspect-ratio:16/9;background:#000;border-radius:var(--r);overflow:hidden;margin-top:28px}
+.video img{width:100%;height:100%;object-fit:cover;opacity:.78}
+.video button{position:absolute;inset:0;margin:auto;width:max-content;height:max-content;display:inline-flex;gap:12px;align-items:center}
+.video iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+/* presse */
+.presse{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 40px;margin-top:26px}
+.presse a{display:flex;gap:16px;align-items:center;padding:16px 0;border-top:1px solid var(--atelier-3);text-decoration:none}
+.presse a:hover span{text-decoration:underline;text-decoration-color:var(--laiton)}
+.presse img{width:72px;height:auto;mix-blend-mode:multiply;flex-shrink:0}
+@media(max-width:700px){.presse{grid-template-columns:1fr}}
+/* bandeau contact */
+.strip{display:flex;flex-wrap:wrap;justify-content:space-between;gap:24px;align-items:end}
+.coord{display:flex;flex-wrap:wrap;gap:12px}
+/* en-tête de page */
+.phead{padding:clamp(40px,6vw,84px) 0 clamp(20px,3vw,36px)}
+.phead h1{margin-bottom:.4em}
+.sousnav{display:flex;gap:8px;flex-wrap:wrap;margin-top:18px}
+.sousnav a{font-size:.9rem;padding:8px 14px;border:1px solid var(--atelier-3);border-radius:30px;text-decoration:none}
+.sousnav a:hover{border-color:var(--encre-2)}
+/* modèles */
+.modeles{display:grid;gap:clamp(40px,6vw,80px);margin-top:36px}
+.modele{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:clamp(20px,4vw,56px);align-items:center;scroll-margin-top:140px}
+.modele:nth-child(even){grid-template-columns:minmax(0,5fr) minmax(0,7fr)}
+.modele:nth-child(even) .vues{order:2}
+.vues{display:grid;grid-template-columns:repeat(4,1fr);gap:6px}
+.vues .principale{grid-column:1/-1;aspect-ratio:4/3;object-fit:cover;width:100%;cursor:zoom-in;border-radius:var(--r)}
+.vues button{all:unset;cursor:zoom-in}
+.vues button img{aspect-ratio:3/2;object-fit:cover;width:100%;opacity:.88;transition:opacity .25s}
+.vues button:hover img{opacity:1}.vues button:focus-visible{outline:2px solid var(--laiton)}
+.modele h3{font-size:clamp(1.8rem,3vw,2.6rem);margin-bottom:.3em}
+.modele .cote{color:var(--acajou);margin-bottom:14px;display:block}
+@media(max-width:820px){.modele,.modele:nth-child(even){grid-template-columns:1fr}.modele:nth-child(even) .vues{order:0}}
+.galerie{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:8px;margin-top:26px}
+.galerie button{all:unset;cursor:zoom-in;background:#F2F1EE}
+.galerie img{width:100%;aspect-ratio:3/4;object-fit:cover}
+.galerie button:focus-visible{outline:2px solid var(--laiton)}
+.trio{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(18px,3vw,40px);margin-top:30px}
+.trio h3{font-size:1.2rem;margin-bottom:.4em;color:var(--acajou)}
+@media(max-width:760px){.trio{grid-template-columns:1fr}}
+.deux{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(20px,4vw,56px);align-items:start}
+@media(max-width:760px){.deux{grid-template-columns:1fr}}
+/* formes */
+.travaux{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(30px,4vw,60px) clamp(20px,3vw,40px);margin-top:36px}
+.travaux img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:var(--r);margin-bottom:16px}
+.travaux h3{margin-bottom:.4em}
+@media(max-width:700px){.travaux{grid-template-columns:1fr}}
+.note{border:1px solid var(--acajou);color:var(--acajou);padding:14px 18px;border-radius:var(--r);max-width:62ch;font-size:.95rem}
+.points{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:28px;margin-top:28px}
+.points h3{font-size:1.2rem;margin-bottom:.4em}
+@media(max-width:760px){.points{grid-template-columns:1fr}}
+/* registre */
+.registre{width:100%;border-collapse:collapse;margin-top:22px;font-variant-numeric:tabular-nums}
+.registre td{padding:16px 6px;border-bottom:1px solid var(--noyer-3);vertical-align:baseline}
+.registre td:first-child{font:500 1.5rem/1 var(--cote);color:var(--laiton-clair);width:7.5em;white-space:nowrap}
+.portrait img{width:100%;border-radius:var(--r);filter:grayscale(.15)}
+blockquote{margin:0;font:italic 500 clamp(1.4rem,2.6vw,2.1rem)/1.3 var(--titre);max-width:30ch;text-wrap:balance}
+/* configurateur */
+.cf{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:clamp(20px,4vw,56px);align-items:start;margin-top:20px}
+.cf fieldset{border:0;padding:0;margin:0 0 30px}
+.cf legend{font:560 1.3rem var(--titre);margin-bottom:12px;padding:0}
+.choix{display:flex;flex-wrap:wrap;gap:8px}
+.choix label{position:relative;cursor:pointer}
+.choix input{position:absolute;opacity:0;inset:0;margin:0;cursor:pointer}
+.choix span{display:block;padding:10px 15px;border:1px solid var(--atelier-3);border-radius:var(--r);font-size:.93rem;background:#F4F2EE;transition:all .2s}
+.choix input:checked+span{background:var(--noyer);color:var(--sur-noyer);border-color:var(--noyer)}
+.choix input:focus-visible+span{outline:2px solid var(--laiton);outline-offset:2px}
+.choix label:hover span{border-color:var(--encre-2)}
+.cf .cires{grid-template-columns:repeat(auto-fill,minmax(70px,1fr));margin:0}
+.apercu{position:sticky;top:140px;background:#F4F2EE;border:1px solid var(--atelier-3);border-radius:var(--r);padding:18px}
+.apercu .img{position:relative;aspect-ratio:4/3;overflow:hidden;background:#EDEDEB;margin-bottom:14px}
+.apercu .img img{width:100%;height:100%;object-fit:cover}
+.apercu .img img.pastille{position:absolute;right:10px;bottom:10px;width:64px;height:64px;border-radius:50%;border:3px solid #F4F2EE;object-fit:cover;box-shadow:0 8px 16px -8px rgba(0,0,0,.5)}
+.apercu dl{display:grid;grid-template-columns:auto 1fr;gap:6px 14px;margin:0 0 16px;font-size:.92rem}
+.apercu dt{color:var(--encre-2)}.apercu dd{margin:0;font-weight:600}
+@media(max-width:860px){.cf{grid-template-columns:1fr}.apercu{position:static}}
+/* contact */
+.ct{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:clamp(24px,5vw,72px);align-items:start}
+.ct dl{margin:0}.ct dt{margin-top:18px}.ct dd{margin:4px 0 0;font:500 1.2rem var(--titre)}
+form.f{display:grid;gap:16px}
+.f label{display:grid;gap:6px;font-size:.9rem;font-weight:600}
+.f input,.f select,.f textarea{font:400 1rem var(--corps);padding:12px 13px;border:1px solid #A89C8E;border-radius:var(--r);background:#FAF9F7;color:var(--encre);width:100%;caret-color:var(--acajou)}
+.f input:focus,.f select:focus,.f textarea:focus{outline:2px solid var(--laiton);outline-offset:1px;border-color:var(--noyer)}
+.f textarea{min-height:140px;resize:vertical}
+.f .err{color:#9A2E1E;font-weight:600}.f .ok{color:#2F5A35;font-weight:600}
+.f .sel{background:var(--copeau);padding:12px 14px;border-radius:var(--r);font-size:.92rem;display:flex;justify-content:space-between;gap:12px;align-items:start}
+.f .sel button{all:unset;cursor:pointer;text-decoration:underline;font-size:.85rem}
+.duo2{display:grid;grid-template-columns:1fr 1fr;gap:16px}@media(max-width:560px){.duo2{grid-template-columns:1fr}}
+.mentions h2{font-size:1.3rem;margin:34px 0 10px}
+/* pied */
+footer{background:var(--noyer);color:var(--sur-noyer-2);padding:56px 0 110px;font-size:.92rem}
+footer a{color:var(--sur-noyer)}
+footer .cols{display:grid;grid-template-columns:2fr 1fr 1fr 1.3fr;gap:30px}
+footer h4{font:600 .78rem var(--cote);letter-spacing:.06em;text-transform:uppercase;color:var(--laiton-clair);margin:0 0 12px}
+footer ul{list-style:none;margin:0;padding:0;display:grid;gap:7px}
+footer .bas{margin-top:40px;padding-top:18px;border-top:1px solid var(--noyer-3);display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px}
+@media(max-width:820px){footer .cols{grid-template-columns:1fr 1fr}}
+/* visionneuse */
+.lb{position:fixed;inset:0;background:rgba(20,13,9,.94);z-index:80;display:none;align-items:center;justify-content:center;padding:60px 16px}
+.lb.on{display:flex}
+.lb img{max-height:82vh;max-width:min(1100px,92vw);object-fit:contain;background:#eee}
+.lb button{position:absolute;background:rgba(236,234,230,.12);color:#fff;border:0;width:48px;height:48px;border-radius:50%;cursor:pointer;display:grid;place-items:center}
+.lb button:hover{background:rgba(236,234,230,.25)}
+.lb .x{top:14px;right:14px}.lb .p{left:12px;top:50%}.lb .n{right:12px;top:50%}
+.lb .c{position:absolute;bottom:18px;left:0;right:0;text-align:center;color:#D9CDBB;font:500 .85rem var(--cote)}
+.lb svg{width:22px;height:22px}
+/* conseiller */
+.ai-fab{position:fixed;right:16px;bottom:16px;z-index:60;display:flex;align-items:center;gap:11px;background:var(--noyer);color:var(--sur-noyer);border:0;border-radius:40px;padding:9px 18px 9px 9px;cursor:pointer;box-shadow:0 14px 30px -12px rgba(37,25,18,.65);text-align:left}
+.ai-fab .pic{width:42px;height:42px;border-radius:50%;background:var(--laiton);display:grid;place-items:center;color:var(--noyer);flex-shrink:0}
+.ai-fab .pic svg{width:24px;height:24px}
+.ai-fab b{display:block;font:600 .98rem/1.1 var(--corps)}.ai-fab small{display:block;font-size:.8rem;color:var(--sur-noyer-2)}
+.ai-bulle{position:fixed;right:16px;bottom:84px;z-index:59;max-width:300px;background:#FBFAF8;border:1px solid var(--atelier-3);border-radius:10px;padding:14px 38px 14px 16px;box-shadow:0 16px 34px -16px rgba(37,25,18,.5);font-size:.93rem;display:none}
+.ai-bulle.on{display:block;animation:entree .4s var(--ease)}
+.ai-bulle button{position:absolute;top:6px;right:6px;background:none;border:0;cursor:pointer;width:28px;height:28px;color:var(--encre-2)}
+.ai{position:fixed;right:16px;bottom:16px;z-index:70;width:min(400px,calc(100vw - 32px));height:min(600px,calc(100vh - 32px));background:#FBFAF8;border:1px solid var(--atelier-3);border-radius:12px;box-shadow:0 30px 60px -20px rgba(37,25,18,.55);display:none;flex-direction:column;overflow:hidden}
+.ai.on{display:flex}
+.ai header{background:var(--noyer);color:var(--sur-noyer);padding:12px 14px;display:flex;align-items:center;gap:10px}
+.ai header b{font:600 1rem var(--corps);display:block}.ai header small{color:var(--laiton-clair);font:500 .74rem var(--cote);letter-spacing:.05em;text-transform:uppercase}
+.ai header button{margin-left:auto;background:none;border:0;color:var(--sur-noyer);cursor:pointer;width:36px;height:36px}
+.ai .fil{flex:1;overflow-y:auto;padding:14px;display:flex;flex-direction:column;gap:10px}
+.msg{max-width:88%;padding:10px 13px;border-radius:10px;font-size:.93rem;line-height:1.45}
+.msg.ia{background:var(--atelier-2);align-self:flex-start;border-bottom-left-radius:2px}
+.msg.moi{background:var(--noyer);color:var(--sur-noyer);align-self:flex-end;border-bottom-right-radius:2px}
+.msg .go{display:inline-block;margin-top:8px;font-weight:600;color:var(--acajou);cursor:pointer;text-decoration:underline;background:none;border:0;padding:0;font-size:.9rem}
+.puces{display:flex;flex-wrap:wrap;gap:6px;padding:0 14px 10px}
+.puces button{font:500 .82rem var(--corps);border:1px solid var(--atelier-3);background:#fff;padding:7px 10px;border-radius:20px;cursor:pointer;color:var(--encre)}
+.puces button:hover{border-color:var(--acajou);color:var(--acajou)}
+.ai form{display:flex;border-top:1px solid var(--atelier-3)}
+.ai input{flex:1;border:0;padding:14px;font:400 .95rem var(--corps);background:transparent;min-width:0}
+.ai input:focus{outline:none}.ai form:focus-within{box-shadow:inset 0 2px 0 var(--laiton)}
+.ai form button{border:0;background:var(--laiton);color:var(--noyer);padding:0 16px;cursor:pointer;font-weight:600}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+html[lang=ja] body{line-height:1.75}html[lang=ja] h1,html[lang=ja] h2,html[lang=ja] h3{letter-spacing:0;line-height:1.3;word-break:keep-all;line-break:strict}
+html[lang=ja] h1{font-size:clamp(1.9rem,4.2vw,3.6rem)}
+html[lang=de] h1{hyphens:auto}
+</style>
+</head>
+<body>
+<a class="skip" id="skip" href="#main">Aller au contenu</a>
+<header class="top"><div class="wrap row">
+<a class="brand" href="#accueil" data-go="accueil"><b>Hervé Brunelle</b><small id="brand-sub"></small></a>
+<nav class="menu" aria-label="Menu"><ul id="nav"></ul></nav>
+<div class="tools"><label class="lang"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.6 2.8 3.8 5.8 3.8 9s-1.2 6.2-3.8 9c-2.6-2.8-3.8-5.8-3.8-9S9.4 5.8 12 3z"/></svg><select id="lang"></select></label>
+<a class="btn plein" href="#contact" data-go="contact" id="top-cta"></a>
+<a class="btn plein tel-top" href="tel:+33323969704" id="top-tel"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M5 3.5h3.2l1.6 4.2-2.1 1.3a11.5 11.5 0 0 0 7.3 7.3l1.3-2.1 4.2 1.6V19a1.6 1.6 0 0 1-1.7 1.6A16.6 16.6 0 0 1 3.4 5.2 1.6 1.6 0 0 1 5 3.5z"/></svg></a></div>
+</div></header>
+<main id="main" tabindex="-1"></main>
+<footer id="pied"></footer>
+<div class="lb" id="lb" role="dialog" aria-modal="true"><img alt=""><button class="x" type="button" aria-label="Fermer"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="m6 6 12 12M18 6 6 18"/></svg></button><button class="p" type="button" aria-label="Précédent"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="m15 5-7 7 7 7"/></svg></button><button class="n" type="button" aria-label="Suivant"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="m9 5 7 7-7 7"/></svg></button><div class="c"></div></div>
+<button class="ai-fab" id="ai-fab" type="button"></button>
+<div class="ai-bulle" id="ai-bulle" role="status"></div>
+<section class="ai" id="ai" role="dialog"></section>
+<script>const T={};
+T.fr={
+lang_name:"Français",lang_label:"Langue",skip:"Aller au contenu",
+nav_home:"Accueil",nav_trees:"Embauchoirs",nav_lasts:"Formes de montage",nav_atelier:"L’atelier",nav_bespoke:"Sur mesure",nav_contact:"Contact",
+brand_sub:"Formes & embauchoirs · Troësnes",
+cta_study:"Demander une étude",cta_compose:"Composer mon embauchoir",cta_call:"Appeler",
+hero_h:"Le dernier formier-embauchoiriste de France.",
+hero_p:"Formes de montage et embauchoirs sur mesure, tournés dans le hêtre à Troësnes, dans l’Aisne, depuis 2005.",
+hero_tag:"Entreprise du Patrimoine Vivant · Maître artisan en métier d’art",
+hero_cap:"Le Retz : trois pièces, clef savonnette, teinte acajou.",
+rings_h:"Au gré des saisons",
+rings_p:"Le hêtre garde la trace de chaque saison, cerne après cerne. Celui-ci compte les années de l’atelier.",
+rings_hint:"Touchez une année pour la lire dans le bois.",
+y_before:"22 ans de chaussure : cordonnerie, podo-orthèse, botterie d’équitation et botterie de luxe.",
+y2005:"Hervé Brunelle ouvre son atelier à Troësnes, près de Villers-Cotterêts. Prix départemental de la Société d’Encouragement aux Métiers d’Art.",
+y2007:"Label Entreprise du Patrimoine Vivant, au titre de dernier formier-embauchoiriste de France.",
+y2011:"Début du travail en duo avec le formier Christophe Varraud.",
+ynow:"30 à 35 pièces par mois, envoyées dans le monde entier.",
+yr_before:"Avant 2005",yr_now:"Aujourd’hui",
+rings_cta:"Entrer dans l’atelier",
+two_h:"Deux métiers, un seul bois",
+lasts_h:"Formes de montage",
+lasts_p:"Pour les bottiers, podo-orthésistes, stylistes et prototypistes : la forme sur laquelle naît le soulier, tournée dans le hêtre ou le charme.",
+lasts_cta:"Voir les formes",
+trees_h:"Embauchoirs de voyage",
+trees_p:"Pour souliers, bottines, brodequins et bottes : l’embauchoir garde le volume du soulier, sa ligne et sa longévité.",
+trees_cta:"Voir les embauchoirs",
+forests_h:"Huit embauchoirs, huit forêts",
+forests_p:"Chaque modèle porte le nom d’une forêt. Du plus simple, le Boscodon, au plus beau, le Retz.",
+forests_cta:"Comparer les huit modèles",
+wax_h:"Vingt-trois cires",
+wax_p:"De l’incolore au violet, chaque teinte est une cire soluble à l’eau, jamais un vernis : le bois continue de boire l’humidité du soulier.",
+wax_cta:"Essayer une teinte",
+video_h:"Le métier, en vidéo",
+video_p:"Quelques minutes à l’atelier, devant le tour.",
+video_play:"Lancer la vidéo",video_note:"La vidéo se lit depuis YouTube.",
+press_h:"Labels et presse",
+press_epv:"Entreprise du Patrimoine Vivant",
+press_cma:"Maître artisan en métier d’art · CMA Hauts-de-France",
+press_region:"Région Hauts-de-France : « le dernier des formiers-embauchoiristes »",
+press_f3:"France 3 Hauts-de-France : deux artisans de l’Aisne sur la route de l’artisanat",
+strip_h:"Parlons de vos souliers",
+strip_p:"Chaque projet commence par une étude, avant toute acceptation.",
+tr_h:"Les embauchoirs",
+tr_intro:"Tournés dans le hêtre, parfois dans l’aulne ou l’érable, jamais dans un résineux. Un embauchoir sur mesure est toujours fait à partir de la forme de montage qui a servi à vos souliers : il les remplit exactement.",
+sub_shoes:"Souliers",sub_low:"Bottines et brodequins",sub_boots:"Bottes",sub_wax:"Teintes",
+shoes_h:"Embauchoirs de souliers",
+shoes_p:"On l’appelle aussi embauchoir de voyage. Sciage et creusage se choisissent à la demande.",
+m_aigoual:"L’avant-pied est creusé après la découpe du pavé de première, puis remis en place et percé pour aérer le bois.",
+m_ardennes:"Sa découpe inclut une poignée courbée, à l’arrière. Déconseillé pour les bottines.",
+m_boscodon:"Le plus simple. Non creusé, donc plus lourd : il reste plutôt à la maison qu’en voyage, et garde le même volume que les autres.",
+m_broceliande:"L’embauchoir à charnière à la découpe la plus classique, affiné par le creusage du cou-de-pied.",
+m_loudeac:"À charnière, aux quartiers équilibrés. Le creusage, non teinté, file jusqu’au milieu de la cambrure. Anneau en laiton.",
+m_retz:"Trois pièces, clef savonnette : notre plus beau modèle, pour les amateurs de beaux objets.",
+m_sherwood:"Une version de l’Ardennes, au talon percé.",
+m_troncais:"À charnière, au talon arrondi : une ligne tout en douceur.",
+m_shown:"Présenté : {c}",m_photos:"{n} photos",m_choose:"Choisir ce modèle",m_open:"Voir les photos",
+low_h:"Embauchoirs de bottines",
+low_p:"Entièrement faits main dans le hêtre, avec un galbe propre au modèle de la bottine. Quatre parties : l’arrière, la clef, l’avant et le pied articulé à tenon et mortaise.",
+low_p2:"Balmoral, Derby, Grand Cambré ou Jodhpur : une ligne classique, teintée avec les mêmes cires, à clef savonnette ou à anneaux.",
+boots_h:"Embauchoirs de bottes",boots_sub:"Polo, équitation, chasse et vénerie",
+boots_p:"Ils sont le plus souvent tournés avant les bottes, d’après les mesures du bottier, et servent au galbage de la tige. On peut aussi en faire pour des bottes finies, même déjà portées.",
+b_func_h:"Fonction",b_func:"Tenir la botte en forme en gardant ses mesures d’origine : sa longévité et son esthétique en dépendent.",
+b_trans_h:"Transport",b_trans:"La poignée, creusée dans le prolongement de la clef centrale, porte bottes et embauchoirs. Elle peut être remplacée par un anneau en laiton poli ou chromé.",
+b_fab_h:"Fabrication",b_fab:"Selon la botte : à lacets, à fermeture à glissière, polo, équitation, chasse ou vénerie. Pour l’équitation, la chasse et la vénerie, ils donnent aussi le galbe : Saumur, Chantilly, anglais ou demi-anglais.",
+wax_page_h:"Personnalisation des teintes",
+wax_page_p:"De l’incolore aux bois traditionnels et aux couleurs vives. Des cires solubles à l’eau et non des vernis : l’embauchoir garde sa fonction première, absorber l’humidité.",
+f_all:"Toutes",f_noyer:"Noyer, acajou",f_merisier:"Merisier, chêne",f_sienne:"Sienne, ocre",f_jaune:"Jaune, rouge",f_bleu:"Violet, bleu, vert",f_noir:"Noir, gris",
+c_incolore:"Incolore",c_blanc:"Blanc",c_noyer_fonce:"Noyer foncé",c_noyer:"Noyer",c_acajou:"Acajou",c_merisier:"Merisier",c_chene_fonce:"Chêne foncé",c_chene_moyen:"Chêne moyen",c_chene_clair:"Chêne clair",c_sienne_calcinee:"Sienne calcinée",c_sienne_naturelle:"Sienne naturelle",c_ocre:"Ocre",c_jaune:"Jaune",c_orange:"Orange",c_rouge:"Rouge",c_rouge_oxyde:"Rouge oxyde",c_bordeau:"Bordeaux",c_violet:"Violet",c_bleu:"Bleu",c_vert:"Vert",c_vert_olive:"Vert olive",c_vert_tilleul:"Vert tilleul",c_vert_moutarde:"Vert moutarde",c_noir:"Noir",c_gris:"Gris",
+fo_h:"Les formes de montage",
+fo_intro:"Je tourne le bois plutôt que le plastique, pour des raisons techniques et par choix. Le hêtre et le charme répondent mieux aux exigences des artisans et se travaillent mieux à la main. Chaque forme est copiée sur un tour à pantographe, puis déclinée en largeurs et en pointures.",
+fo_what_h:"La forme de montage",fo_what:"C’est sur elle que le cordonnier-bottier ou le podo-orthésiste monte le soulier définitif.",
+fo_no:"Pour des raisons techniques, je ne fabrique pas de formes ferrées pour le montage à la semence.",
+fo_create_h:"La création",fo_create:"Elle ne se limite pas à l’esthétique ou au chaussant : la forme doit avoir des aplombs proportionnés et des volumes qui répondent au besoin.",
+fo_fit_h:"La mise au point du chaussant",fo_fit:"Le point délicat du sur-mesure. On peut garder le chaussant d’une forme et en changer l’esthétique, de concert avec le bottier.",
+fo_sty_h:"Avec les stylistes et prototypistes",fo_sty:"J’écoute leurs demandes ; ma palette de réalisations oriente la forme vers la solution la plus juste pour le produit final.",
+fo_types_h:"Quatre travaux de forme",
+t_cambrure_h:"Le changement de cambrure",t_cambrure:"Pour la forme femme, à partir du talon fourni avec la forme modèle. Passer de 3 à 9 ou 10 cm de cambrure peut demander plusieurs tournages ; le bottier refait ensuite une maquette d’essayage.",
+t_sciage_h:"Le sciage",t_sciage:"Deux sciages au choix : le coin traditionnel, qui libère la mesure par le cou-de-pied, ou le sciage « système », oblique, de la base de la cambrure au milieu du cou-de-pied, qui libère l’emboîtage puis l’avant-pied.",
+t_bout_h:"Le bout non tourné",t_bout:"Une forme existante est tournée aux mesures du client, sans finir le bout. Le bottier y façonne une autre esthétique en gardant le chaussant : plusieurs bouts, la même aisance.",
+t_proto_h:"Le prototypage",t_proto:"Mené avec le styliste, il demande beaucoup d’heures de travail et d’essayages.",
+fo_cta_h:"Un projet de forme ?",fo_cta_p:"Nous répondons par une étude avant toute acceptation de projet.",
+at_h:"L’atelier de Troësnes",at_lead:"Un artisan au service des artisans.",
+at_p1:"C’est dans le sud de l’Aisne, près de Villers-Cotterêts, qu’Hervé Brunelle a créé son atelier en 2005, pour perpétuer ce savoir-faire.",
+at_p2:"Fabriquer les formes était un vrai souci pour les ateliers artisanaux. Il a adopté une autre méthode de travail que celle des ateliers d’alors, pour répondre aux exigences du bottier.",
+at_exp_h:"Expérience",at_exp:"22 ans de cordonnerie-réparation, de podo-orthèse, de botterie d’équitation et de botterie de luxe, avant de se consacrer à la forme de montage et à l’embauchoir.",
+at_prize_h:"Prix et label",at_prize:"Prix départemental de la Société d’Encouragement aux Métiers d’Art en 2005. Label Entreprise du Patrimoine Vivant depuis 2007, comme dernier formier-embauchoiriste de France.",
+at_sup_h:"Transmission",at_sup:"Depuis 2011, il accompagne l’installation du formier Christophe Varraud. Ils travaillent en étroite collaboration et se complètent.",
+at_sup_link:"Le site de Christophe Varraud",
+ledger_h:"Le registre de l’atelier",
+l1:"années dans la chaussure avant d’ouvrir l’atelier",l2:"pièces vendues chaque mois, dans le monde entier",l3:"prix et label reçus",l4:"heures de travail par semaine, en moyenne",v2:"30 à 35",
+at_quote:"Perpétuer un savoir-faire traditionnel, sublimer la chaussure par le travail du bois.",
+cf_h:"Mon embauchoir sur mesure",
+cf_p:"Vous choisissez, Hervé étudie. Votre sélection est jointe à la demande d’étude ; rien n’est engagé.",
+cf_s1:"Pour quelles chaussures ?",o_shoes:"Souliers",o_low:"Bottines, brodequins",o_boots:"Bottes",
+cf_s2:"Le modèle",cf_key:"La clef",o_key_soap:"Clef savonnette",o_key_rings:"Anneaux",
+cf_boot_type:"Les bottes",o_polo:"Polo",o_ride:"Équitation",o_hunt:"Chasse",o_venery:"Vénerie",o_zip:"À fermeture à glissière",o_lace:"À lacets",
+cf_galbe:"Le galbe",o_saumur:"Saumur",o_chantilly:"Chantilly",o_anglais:"Anglais",o_demi:"Demi-anglais",o_galbe_na:"Selon le bottier",
+cf_s3:"La teinte",cf_s4:"La prise",o_handle:"Poignée creusée",o_brass:"Anneau en laiton poli",o_chrome:"Anneau chromé",
+cf_s5:"L’essence",o_hetre:"Hêtre",o_aulne:"Aulne",o_erable:"Érable",
+cf_base:"Vos chaussures",o_base_last:"Faites sur mesure : le bottier a la forme de montage",o_base_finished:"Bottes finies, même déjà portées",o_base_unknown:"Je ne sais pas",
+cf_sum:"Votre sélection",cf_send:"Joindre à ma demande d’étude",cf_reset:"Recommencer",
+cf_note:"Un embauchoir de souliers sur mesure est fait à partir de la forme de montage de vos souliers. Pour des bottes finies, même portées, c’est possible aussi.",
+cf_price:"Prix et délai : donnés après l’étude.",cf_na:"Selon le modèle de bottine",
+ct_h:"Contact",ct_p:"Nous répondons à vos attentes par une étude avant toute acceptation de projet.",
+ct_phone:"Téléphone",ct_mail:"E-mail",ct_addr:"Atelier",ct_map:"Voir sur la carte",
+fm_name:"Nom, prénom",fm_email:"E-mail",fm_who:"Vous êtes",o_pro:"Bottier, cordonnier ou podo-orthésiste",o_style:"Styliste ou prototypiste",o_private:"Particulier",
+fm_subject:"Votre demande",o_s_tree:"Embauchoirs",o_s_last:"Formes de montage",o_s_other:"Autre",
+fm_msg:"Message",fm_sel:"Sélection jointe",fm_remove:"Retirer",fm_send:"Envoyer votre message",
+fm_ok:"Merci, votre demande est prête à partir. Sur cette maquette, l’envoi n’est pas encore branché sur la messagerie de l’atelier.",
+fm_err:"Indiquez votre nom, un e-mail valide et votre message.",
+fm_rgpd:"Vos données servent uniquement à vous répondre. Elles ne sont jamais transmises à des tiers.",
+me_h:"Mentions légales",me_owner_h:"Éditeur",me_capital:"SAS au capital de 1 500 €",me_webmaster:"Mise à jour du site : Hervé Brunelle.",
+me_creator_h:"Création du site actuel",me_host_h:"Hébergement",
+me_service_h:"Services",me_service:"Ce site présente les prestations d’Hervé Brunelle, maître artisan formier-embauchoiriste depuis 2005. Les informations sont données au plus juste ; elles peuvent évoluer et ne sont pas exhaustives.",
+me_ip_h:"Propriété intellectuelle",me_ip:"Textes, images et vidéos appartiennent à Hervé Brunelle. Toute reproduction, modification ou adaptation sans autorisation est interdite et constitue une contrefaçon (articles L.335-2 et suivants du Code de la propriété intellectuelle).",
+me_links_h:"Liens et cookies",me_links:"Le site renvoie vers des sites partenaires ou d’information dont il ne contrôle pas le contenu. Des cookies peuvent être déposés pour faciliter la navigation et mesurer la fréquentation ; vous pouvez les désactiver dans votre navigateur.",
+me_rgpd_h:"Données personnelles",me_rgpd:"Les informations saisies dans les formulaires servent uniquement à vous répondre et ne sont jamais communiquées à des tiers. Vous disposez d’un droit d’accès, de rectification, de suppression et d’opposition (loi du 6 janvier 1978) : écrivez à brunelle.herve@wanadoo.fr.",
+ft_line:"Formes de montage traditionnelles et embauchoirs sur mesure pour souliers, bottines et bottes, à Troësnes (Aisne).",
+ft_pages:"Plan du site",ft_legal:"Mentions légales",ft_labels:"Labels et presse",ft_demo:"Maquette de nouveau site proposée par Neovera Studio",
+ai_name:"Brunelle Conseil",ai_tag:"Je vous aide à choisir",ai_virtual:"Assistant virtuel",
+ai_hello:"Bonjour, je suis Brunelle Conseil, l’assistant virtuel de l’atelier. Je vous aide à choisir un embauchoir, une teinte, ou à préparer une demande de forme.",
+ai_invite:"Un embauchoir, pour quels souliers ? Je peux vous orienter.",ai_close:"Fermer",ai_ph:"Votre question…",ai_send:"Envoyer",
+q_travel:"Un embauchoir pour voyager",q_luxe:"Le plus beau modèle",q_boots:"Pour des bottes d’équitation",q_wax:"Quelle teinte choisir ?",q_last:"Je suis bottier : une forme",q_price:"Prix et délai",
+a_travel:"Pour voyager, choisissez un modèle creusé, donc léger : l’Aigoual (avant-pied creusé et aéré), le Brocéliande, le Loudéac ou le Tronçais, à charnière. Le Boscodon, non creusé, reste plutôt à la maison.",
+a_luxe:"Le Retz : trois pièces, clef savonnette, notre plus beau modèle. Il est présenté en acajou.",
+a_boots:"Pour l’équitation, la chasse ou la vénerie, l’embauchoir donne aussi le galbe : Saumur, Chantilly, anglais ou demi-anglais. Il se tourne d’après les mesures du bottier, ou pour des bottes finies, même portées.",
+a_wax:"Vingt-trois cires, de l’incolore au violet. Pour un soulier classique : noyer, acajou, merisier ou chêne. Ce sont des cires solubles à l’eau, jamais du vernis, pour que le bois absorbe l’humidité.",
+a_last:"Hervé tourne des formes en hêtre ou en charme : création, mise au point du chaussant, changement de cambrure, bout non tourné, sciage coin ou « système », prototypage. Pas de forme ferrée pour le montage à la semence.",
+a_price:"Les prix et les délais ne sont pas publiés : chaque projet commence par une étude. Le plus simple : appeler le 03 23 96 97 04 ou écrire à brunelle.herve@wanadoo.fr.",
+a_custom:"Un embauchoir de souliers sur mesure se fait à partir de la forme de montage de vos souliers, que détient votre bottier. Pour des bottes finies, même portées, c’est possible aussi.",
+a_bottines:"Pour les bottines (Balmoral, Derby, Grand Cambré, Jodhpur) : un embauchoir en quatre parties, à clef savonnette ou à anneaux. L’Ardennes n’est pas recommandé pour les bottines.",
+a_wood:"Le hêtre le plus souvent, aussi l’aulne ou l’érable ; jamais de résineux. Les formes de montage sont en hêtre ou en charme.",
+a_contact:"Atelier : 5 place de la Mairie, 02460 Troësnes. Téléphone : 03 23 96 97 04. E-mail : brunelle.herve@wanadoo.fr.",
+a_hours:"Les horaires d’ouverture ne sont pas indiqués sur le site : je ne veux pas vous donner une heure fausse. Appelez avant de passer : 03 23 96 97 04.",
+a_ship:"L’atelier vend 30 à 35 pièces par mois dans le monde entier. Les conditions d’envoi ne sont pas publiées : demandez-les lors de l’étude.",
+a_epv:"Hervé Brunelle a reçu le Prix départemental de la Société d’Encouragement aux Métiers d’Art en 2005, puis le label Entreprise du Patrimoine Vivant en 2007, comme dernier formier-embauchoiriste de France.",
+a_varraud:"Depuis 2011, Hervé accompagne le formier Christophe Varraud : ils travaillent ensemble et se complètent.",
+a_unknown:"Je ne sais pas répondre à cela avec certitude. Hervé vous répondra directement : 03 23 96 97 04 ou brunelle.herve@wanadoo.fr.",
+go_cf:"Composer mon embauchoir",go_contact:"Demander une étude",go_trees:"Voir les modèles",go_lasts:"Voir les formes",
+close:"Fermer",prev:"Photo précédente",next:"Photo suivante",
+kw:{travel:["voyag","léger","leger","valise"],luxe:["beau","luxe","retz","cadeau","prestige"],boots:["botte","équitation","equitation","cheval","chasse","vénerie","venerie","polo","galbe"],wax:["teinte","couleur","cire","vernis","noyer","acajou"],last:["forme","bottier","cambrure","sciage","prototyp","pantograph","podo"],price:["prix","tarif","coût","cout","combien","délai","delai","€"],custom:["sur mesure","mesure","pointure","taille"],bottines:["bottine","brodequin","jodhpur","derby","balmoral"],wood:["bois","essence","hêtre","hetre","charme","aulne","érable"],contact:["adresse","téléphone","telephone","mail","contacter","joindre","où","venir"],hours:["horaire","heure","ouvert","fermé","visite"],ship:["livr","envoi","expédi","étranger","international","japon"],epv:["epv","label","patrimoine","prix","récompense"],varraud:["varraud","christophe","apprenti","transmission"]}
+};
+T.en={
+lang_name:"English",lang_label:"Language",skip:"Skip to content",
+nav_home:"Home",nav_trees:"Shoe trees",nav_lasts:"Shoe lasts",nav_atelier:"The workshop",nav_bespoke:"Made to measure",nav_contact:"Contact",
+brand_sub:"Lasts & shoe trees · Troësnes",
+cta_study:"Request a study",cta_compose:"Design my shoe tree",cta_call:"Call",
+hero_h:"The last lastmaker and shoe-tree maker in France.",
+hero_p:"Shoe lasts and made-to-measure shoe trees, turned in beech in Troësnes, Aisne, since 2005.",
+hero_tag:"Living Heritage Company · Master craftsman",
+hero_cap:"The Retz: three pieces, soap-bar key, mahogany finish.",
+rings_h:"Season after season",
+rings_p:"Beech keeps a trace of every season, ring after ring. This one counts the years of the workshop.",
+rings_hint:"Tap a year to read it in the wood.",
+y_before:"22 years in footwear: shoe repair, orthopaedic shoemaking, riding boots and luxury boots.",
+y2005:"Hervé Brunelle opens his workshop in Troësnes, near Villers-Cotterêts. Departmental prize of the Société d’Encouragement aux Métiers d’Art.",
+y2007:"Living Heritage Company label (EPV), as the last lastmaker and shoe-tree maker in France.",
+y2011:"Starts working side by side with lastmaker Christophe Varraud.",
+ynow:"30 to 35 pieces a month, shipped all over the world.",
+yr_before:"Before 2005",yr_now:"Today",
+rings_cta:"Step into the workshop",
+two_h:"Two crafts, one wood",
+lasts_h:"Shoe lasts",
+lasts_p:"For bootmakers, orthopaedic shoemakers, designers and prototype makers: the form a shoe is born on, turned in beech or hornbeam.",
+lasts_cta:"See the lasts",
+trees_h:"Travel shoe trees",
+trees_p:"For shoes, ankle boots, work boots and tall boots: a shoe tree keeps the shoe’s volume, its line and its life.",
+trees_cta:"See the shoe trees",
+forests_h:"Eight shoe trees, eight forests",
+forests_p:"Each model is named after a forest. From the simplest, the Boscodon, to the finest, the Retz.",
+forests_cta:"Compare the eight models",
+wax_h:"Twenty-three waxes",
+wax_p:"From colourless to violet, every shade is a water-soluble wax, never a varnish: the wood keeps drinking the moisture of the shoe.",
+wax_cta:"Try a shade",
+video_h:"The craft, on video",
+video_p:"A few minutes in the workshop, at the lathe.",
+video_play:"Play the video",video_note:"The video plays from YouTube.",
+press_h:"Labels and press",
+press_epv:"Living Heritage Company (EPV)",
+press_cma:"Master craftsman in fine crafts · CMA Hauts-de-France",
+press_region:"Hauts-de-France Region: “the last of the lastmakers and shoe-tree makers”",
+press_f3:"France 3 Hauts-de-France: two Aisne craftsmen on the crafts trail",
+strip_h:"Let’s talk about your shoes",
+strip_p:"Every project starts with a study, before anything is agreed.",
+tr_h:"Shoe trees",
+tr_intro:"Turned in beech, sometimes in alder or maple, never in softwood. A made-to-measure shoe tree is always made from the last your shoes were built on: it fills them exactly.",
+sub_shoes:"Shoes",sub_low:"Ankle and work boots",sub_boots:"Tall boots",sub_wax:"Finishes",
+shoes_h:"Shoe trees for shoes",
+shoes_p:"Also called travel shoe trees. Sawing and hollowing are chosen on request.",
+m_aigoual:"The forefoot is hollowed after the insole block is cut, then put back and perforated to let the wood breathe.",
+m_ardennes:"Its cut includes a curved handle at the back. Not recommended for ankle boots.",
+m_boscodon:"The simplest. Not hollowed, so heavier: it stays at home rather than travels, and keeps the same volume as the others.",
+m_broceliande:"The hinged shoe tree with the most classic cut, refined by hollowing at the instep.",
+m_loudeac:"Hinged, with balanced quarters. The unstained hollowing runs to mid-waist. Brass ring.",
+m_retz:"Three pieces, soap-bar key: our finest model, for lovers of beautiful objects.",
+m_sherwood:"A version of the Ardennes with a drilled heel.",
+m_troncais:"Hinged, with a rounded heel: a soft, flowing line.",
+m_shown:"Shown in: {c}",m_photos:"{n} photos",m_choose:"Choose this model",m_open:"See the photos",
+low_h:"Ankle-boot trees",
+low_p:"Entirely handmade in beech, shaped to the model of the boot. Four parts: the back, the key, the front and the foot, jointed with mortise and tenon.",
+low_p2:"Balmoral, Derby, Grand Cambré or Jodhpur: a classic line, finished with the same waxes, with a soap-bar key or rings.",
+boots_h:"Boot trees",boots_sub:"Polo, riding, hunting and venery",
+boots_p:"They are usually turned before the boots, from the bootmaker’s measurements, and used to shape the leg. They can also be made for finished boots, even worn ones.",
+b_func_h:"Purpose",b_func:"Keep the boot in shape while preserving its original measurements: its life and its looks depend on it.",
+b_trans_h:"Carrying",b_trans:"The handle, hollowed in line with the central key, carries boots and trees together. It can be replaced by a polished or chrome-plated brass ring.",
+b_fab_h:"Making",b_fab:"According to the boot: laced, zipped, polo, riding, hunting or venery. For riding, hunting and venery they also give the leg its shape: Saumur, Chantilly, English or half-English.",
+wax_page_h:"Choice of finish",
+wax_page_p:"From colourless to traditional wood tones and bright colours. Water-soluble waxes, not varnish: the shoe tree keeps its first purpose, absorbing moisture.",
+f_all:"All",f_noyer:"Walnut, mahogany",f_merisier:"Cherry, oak",f_sienne:"Sienna, ochre",f_jaune:"Yellow, red",f_bleu:"Violet, blue, green",f_noir:"Black, grey",
+c_incolore:"Colourless",c_blanc:"White",c_noyer_fonce:"Dark walnut",c_noyer:"Walnut",c_acajou:"Mahogany",c_merisier:"Cherry",c_chene_fonce:"Dark oak",c_chene_moyen:"Medium oak",c_chene_clair:"Light oak",c_sienne_calcinee:"Burnt sienna",c_sienne_naturelle:"Raw sienna",c_ocre:"Ochre",c_jaune:"Yellow",c_orange:"Orange",c_rouge:"Red",c_rouge_oxyde:"Oxide red",c_bordeau:"Burgundy",c_violet:"Violet",c_bleu:"Blue",c_vert:"Green",c_vert_olive:"Olive green",c_vert_tilleul:"Lime green",c_vert_moutarde:"Mustard green",c_noir:"Black",c_gris:"Grey",
+fo_h:"Shoe lasts",
+fo_intro:"I turn wood rather than plastic, for technical reasons and by choice. Beech and hornbeam meet craftsmen’s demands better and are easier to work by hand. Each last is copied on a pantograph lathe, then made in several widths and sizes.",
+fo_what_h:"The shoe last",fo_what:"The form on which the bootmaker or orthopaedic shoemaker builds the finished shoe.",
+fo_no:"For technical reasons, I do not make iron-plated lasts for tack lasting.",
+fo_create_h:"Creating a last",fo_create:"It is not only about looks or fit: a last needs balanced stance and volumes that answer a real need.",
+fo_fit_h:"Fine-tuning the fit",fo_fit:"The delicate point of bespoke. A last’s fit can be kept while its look is changed, working hand in hand with the bootmaker.",
+fo_sty_h:"With designers and prototype makers",fo_sty:"I listen to their requests; my range of work steers the last towards the right solution for the final product.",
+fo_types_h:"Four kinds of last work",
+t_cambrure_h:"Changing the heel height",t_cambrure:"For women’s lasts, from the heel supplied with the model last. Going from 3 to 9 or 10 cm can take several turnings; the bootmaker then makes a new fitting shoe.",
+t_sciage_h:"Sawing",t_sciage:"Two cuts to choose from: the traditional wedge, which releases the measurement at the instep, or the “system” cut, an oblique line from the base of the waist to mid-instep, which frees the back and then the forefoot.",
+t_bout_h:"The unturned toe",t_bout:"An existing last is turned to the client’s measurements without finishing the toe. The bootmaker shapes a different style on it while keeping the fit: several toes, the same comfort.",
+t_proto_h:"Prototyping",t_proto:"Done together with the designer, it takes many hours of work and fittings.",
+fo_cta_h:"A last project?",fo_cta_p:"We answer with a study before accepting any project.",
+at_h:"The Troësnes workshop",at_lead:"A craftsman working for craftsmen.",
+at_p1:"Hervé Brunelle set up his workshop in 2005 in the south of the Aisne, near Villers-Cotterêts, to keep this craft alive.",
+at_p2:"Making lasts was a real headache for small workshops. He chose a different way of working from the workshops of the time, to meet the bootmaker’s demands.",
+at_exp_h:"Experience",at_exp:"22 years of shoe repair, orthopaedic shoemaking, riding boots and luxury boots, before focusing on lasts and shoe trees.",
+at_prize_h:"Prize and label",at_prize:"Departmental prize of the Société d’Encouragement aux Métiers d’Art in 2005. Living Heritage Company label since 2007, as the last lastmaker and shoe-tree maker in France.",
+at_sup_h:"Passing it on",at_sup:"Since 2011 he has supported lastmaker Christophe Varraud in setting up. They work closely together and complement each other.",
+at_sup_link:"Christophe Varraud’s website",
+ledger_h:"The workshop ledger",
+l1:"years in footwear before opening the workshop",l2:"pieces sold each month, worldwide",l3:"prize and label received",l4:"working hours a week, on average",v2:"30 to 35",
+at_quote:"Keep a traditional craft alive, and lift the shoe through the work of wood.",
+cf_h:"My made-to-measure shoe tree",
+cf_p:"You choose, Hervé studies it. Your selection is attached to the study request; nothing is committed.",
+cf_s1:"For which footwear?",o_shoes:"Shoes",o_low:"Ankle or work boots",o_boots:"Tall boots",
+cf_s2:"The model",cf_key:"The key",o_key_soap:"Soap-bar key",o_key_rings:"Rings",
+cf_boot_type:"The boots",o_polo:"Polo",o_ride:"Riding",o_hunt:"Hunting",o_venery:"Venery",o_zip:"Zipped",o_lace:"Laced",
+cf_galbe:"The leg shape",o_saumur:"Saumur",o_chantilly:"Chantilly",o_anglais:"English",o_demi:"Half-English",o_galbe_na:"As the bootmaker advises",
+cf_s3:"The finish",cf_s4:"The grip",o_handle:"Hollowed handle",o_brass:"Polished brass ring",o_chrome:"Chrome-plated ring",
+cf_s5:"The wood",o_hetre:"Beech",o_aulne:"Alder",o_erable:"Maple",
+cf_base:"Your footwear",o_base_last:"Made to measure: the bootmaker has the last",o_base_finished:"Finished boots, even worn",o_base_unknown:"I don’t know",
+cf_sum:"Your selection",cf_send:"Attach to my study request",cf_reset:"Start again",
+cf_note:"A made-to-measure shoe tree for shoes is made from the last of your shoes. For finished boots, even worn ones, it is possible too.",
+cf_price:"Price and lead time: given after the study.",cf_na:"Depending on the boot model",
+ct_h:"Contact",ct_p:"We answer your needs with a study before accepting any project.",
+ct_phone:"Phone",ct_mail:"Email",ct_addr:"Workshop",ct_map:"See on the map",
+fm_name:"Full name",fm_email:"Email",fm_who:"You are",o_pro:"Bootmaker, cobbler or orthopaedic shoemaker",o_style:"Designer or prototype maker",o_private:"Private customer",
+fm_subject:"Your request",o_s_tree:"Shoe trees",o_s_last:"Shoe lasts",o_s_other:"Other",
+fm_msg:"Message",fm_sel:"Attached selection",fm_remove:"Remove",fm_send:"Send your message",
+fm_ok:"Thank you, your request is ready to go. On this mock-up, sending is not yet connected to the workshop’s mailbox.",
+fm_err:"Please enter your name, a valid email and your message.",
+fm_rgpd:"Your data is only used to reply to you and is never passed on to third parties.",
+me_h:"Legal notice",me_owner_h:"Publisher",me_capital:"SAS with a share capital of €1,500",me_webmaster:"Site updated by Hervé Brunelle.",
+me_creator_h:"Current website created by",me_host_h:"Hosting",
+me_service_h:"Services",me_service:"This website presents the work of Hervé Brunelle, master lastmaker and shoe-tree maker since 2005. Information is given as accurately as possible; it may change and is not exhaustive.",
+me_ip_h:"Intellectual property",me_ip:"Texts, images and videos belong to Hervé Brunelle. Any reproduction, modification or adaptation without permission is forbidden and constitutes infringement (articles L.335-2 and following of the French Intellectual Property Code).",
+me_links_h:"Links and cookies",me_links:"The site links to partner and information sites whose content it does not control. Cookies may be set to ease browsing and measure traffic; you can disable them in your browser.",
+me_rgpd_h:"Personal data",me_rgpd:"Information entered in forms is only used to reply to you and is never shared with third parties. You have the right to access, correct, delete and object (French law of 6 January 1978): write to brunelle.herve@wanadoo.fr.",
+ft_line:"Traditional shoe lasts and made-to-measure shoe trees for shoes, ankle boots and boots, in Troësnes (Aisne, France).",
+ft_pages:"Site map",ft_legal:"Legal notice",ft_labels:"Labels and press",ft_demo:"New website mock-up proposed by Neovera Studio",
+ai_name:"Brunelle Conseil",ai_tag:"I’ll help you choose",ai_virtual:"Virtual assistant",
+ai_hello:"Hello, I’m Brunelle Conseil, the workshop’s virtual assistant. I can help you choose a shoe tree or a finish, or prepare a request for a last.",
+ai_invite:"A shoe tree for which shoes? I can point you the right way.",ai_close:"Close",ai_ph:"Your question…",ai_send:"Send",
+q_travel:"A shoe tree for travelling",q_luxe:"The finest model",q_boots:"For riding boots",q_wax:"Which finish?",q_last:"I’m a bootmaker: a last",q_price:"Price and lead time",
+a_travel:"For travelling, choose a hollowed, lighter model: the Aigoual (hollowed, ventilated forefoot), or the hinged Brocéliande, Loudéac or Tronçais. The Boscodon, not hollowed, is better kept at home.",
+a_luxe:"The Retz: three pieces, soap-bar key, our finest model. It is shown in mahogany.",
+a_boots:"For riding, hunting or venery, the boot tree also shapes the leg: Saumur, Chantilly, English or half-English. It is turned from the bootmaker’s measurements, or for finished boots, even worn ones.",
+a_wax:"Twenty-three waxes, from colourless to violet. For a classic shoe: walnut, mahogany, cherry or oak. They are water-soluble waxes, never varnish, so the wood absorbs moisture.",
+a_last:"Hervé turns lasts in beech or hornbeam: creation, fit adjustment, heel-height change, unturned toe, wedge or “system” sawing, prototyping. No iron-plated lasts for tack lasting.",
+a_price:"Prices and lead times are not published: every project starts with a study. The simplest way: call +33 3 23 96 97 04 or write to brunelle.herve@wanadoo.fr.",
+a_custom:"A made-to-measure shoe tree is made from the last of your shoes, which your bootmaker holds. For finished boots, even worn ones, it is possible too.",
+a_bottines:"For ankle boots (Balmoral, Derby, Grand Cambré, Jodhpur): a four-part tree, with a soap-bar key or rings. The Ardennes is not recommended for ankle boots.",
+a_wood:"Mostly beech, also alder or maple; never softwood. Shoe lasts are made in beech or hornbeam.",
+a_contact:"Workshop: 5 place de la Mairie, 02460 Troësnes, France. Phone: +33 3 23 96 97 04. Email: brunelle.herve@wanadoo.fr.",
+a_hours:"Opening hours are not given on the site, and I don’t want to give you a wrong time. Please call before coming: +33 3 23 96 97 04.",
+a_ship:"The workshop sells 30 to 35 pieces a month worldwide. Shipping terms are not published: ask for them during the study.",
+a_epv:"Hervé Brunelle received the departmental prize of the Société d’Encouragement aux Métiers d’Art in 2005, then the Living Heritage Company label in 2007, as the last lastmaker and shoe-tree maker in France.",
+a_varraud:"Since 2011, Hervé has supported lastmaker Christophe Varraud: they work together and complement each other.",
+a_unknown:"I can’t answer that with certainty. Hervé will answer you directly: +33 3 23 96 97 04 or brunelle.herve@wanadoo.fr.",
+go_cf:"Design my shoe tree",go_contact:"Request a study",go_trees:"See the models",go_lasts:"See the lasts",
+close:"Close",prev:"Previous photo",next:"Next photo",
+kw:{travel:["travel","light","trip","suitcase"],luxe:["finest","best","luxury","beautiful","gift"],boots:["boot","riding","horse","hunting","polo","venery"],wax:["colour","color","finish","wax","varnish","stain"],last:["last","bootmaker","cobbler","prototype","heel height"],price:["price","cost","how much","lead time","delivery time"],custom:["measure","size","bespoke","custom"],bottines:["ankle","jodhpur","derby","balmoral","work boot"],wood:["wood","beech","alder","maple","hornbeam"],contact:["address","phone","email","contact","where"],hours:["hours","open","closed","visit"],ship:["ship","abroad","international","post","japan","usa"],epv:["label","heritage","award","prize"],varraud:["varraud","christophe","apprentice"]}
+};
+T.es={
+lang_name:"Español",lang_label:"Idioma",skip:"Ir al contenido",
+nav_home:"Inicio",nav_trees:"Hormas de conservación",nav_lasts:"Hormas de montado",nav_atelier:"El taller",nav_bespoke:"A medida",nav_contact:"Contacto",
+brand_sub:"Hormas · Troësnes",
+cta_study:"Solicitar un estudio",cta_compose:"Diseñar mi horma",cta_call:"Llamar",
+hero_h:"El último hormero de Francia.",
+hero_p:"Hormas de montado y hormas de conservación a medida, torneadas en haya en Troësnes (Aisne) desde 2005.",
+hero_tag:"Empresa del Patrimonio Vivo · Maestro artesano",
+hero_cap:"El Retz: tres piezas, llave de jabón, tinte caoba.",
+rings_h:"Al compás de las estaciones",
+rings_p:"La haya guarda la huella de cada estación, anillo tras anillo. Este cuenta los años del taller.",
+rings_hint:"Toque un año para leerlo en la madera.",
+y_before:"22 años en el calzado: reparación, ortopedia, botas de equitación y botería de lujo.",
+y2005:"Hervé Brunelle abre su taller en Troësnes, cerca de Villers-Cotterêts. Premio departamental de la Société d’Encouragement aux Métiers d’Art.",
+y2007:"Sello Empresa del Patrimonio Vivo (EPV), como último hormero de Francia.",
+y2011:"Empieza a trabajar en dúo con el hormero Christophe Varraud.",
+ynow:"De 30 a 35 piezas al mes, enviadas a todo el mundo.",
+yr_before:"Antes de 2005",yr_now:"Hoy",
+rings_cta:"Entrar en el taller",
+two_h:"Dos oficios, una sola madera",
+lasts_h:"Hormas de montado",
+lasts_p:"Para zapateros a medida, podólogos ortopédicos, diseñadores y prototipistas: la horma sobre la que nace el zapato, torneada en haya o carpe.",
+lasts_cta:"Ver las hormas",
+trees_h:"Hormas de viaje",
+trees_p:"Para zapatos, botines, borceguíes y botas: la horma mantiene el volumen del zapato, su línea y su vida.",
+trees_cta:"Ver las hormas de conservación",
+forests_h:"Ocho hormas, ocho bosques",
+forests_p:"Cada modelo lleva el nombre de un bosque. Del más sencillo, el Boscodon, al más bello, el Retz.",
+forests_cta:"Comparar los ocho modelos",
+wax_h:"Veintitrés ceras",
+wax_p:"Del incoloro al violeta, cada tono es una cera soluble en agua, nunca un barniz: la madera sigue absorbiendo la humedad del zapato.",
+wax_cta:"Probar un tono",
+video_h:"El oficio, en vídeo",
+video_p:"Unos minutos en el taller, frente al torno.",
+video_play:"Ver el vídeo",video_note:"El vídeo se reproduce desde YouTube.",
+press_h:"Sellos y prensa",
+press_epv:"Empresa del Patrimonio Vivo (EPV)",
+press_cma:"Maestro artesano en oficio artístico · CMA Hauts-de-France",
+press_region:"Región Hauts-de-France: «el último de los hormeros»",
+press_f3:"France 3 Hauts-de-France: dos artesanos del Aisne en la ruta de la artesanía",
+strip_h:"Hablemos de sus zapatos",
+strip_p:"Cada proyecto empieza con un estudio, antes de cualquier aceptación.",
+tr_h:"Hormas de conservación",
+tr_intro:"Torneadas en haya, a veces en aliso o arce, nunca en conífera. Una horma a medida se hace siempre a partir de la horma de montado de sus zapatos: los llena con exactitud.",
+sub_shoes:"Zapatos",sub_low:"Botines y borceguíes",sub_boots:"Botas",sub_wax:"Tonos",
+shoes_h:"Hormas para zapatos",
+shoes_p:"También llamadas hormas de viaje. El corte y el vaciado se eligen a petición.",
+m_aigoual:"El antepié se vacía tras cortar el bloque de plantilla, que luego se vuelve a colocar y se perfora para airear la madera.",
+m_ardennes:"Su corte incluye un asa curva en la parte trasera. No recomendado para botines.",
+m_boscodon:"El más sencillo. Sin vaciar, por eso más pesado: se queda en casa más que viajar, y conserva el mismo volumen que los demás.",
+m_broceliande:"La horma con bisagra de corte más clásico, afinada por el vaciado del empeine.",
+m_loudeac:"Con bisagra y cuartos equilibrados. El vaciado, sin teñir, llega hasta la mitad del enfranque. Anilla de latón.",
+m_retz:"Tres piezas, llave de jabón: nuestro modelo más bello, para los amantes de los objetos hermosos.",
+m_sherwood:"Una versión del Ardennes con el talón perforado.",
+m_troncais:"Con bisagra y talón redondeado: una línea muy suave.",
+m_shown:"Presentado en: {c}",m_photos:"{n} fotos",m_choose:"Elegir este modelo",m_open:"Ver las fotos",
+low_h:"Hormas para botines",
+low_p:"Hechas a mano en haya, con una curva propia del modelo de botín. Cuatro piezas: la trasera, la llave, la delantera y el pie articulado con caja y espiga.",
+low_p2:"Balmoral, Derby, Grand Cambré o Jodhpur: una línea clásica, teñida con las mismas ceras, con llave de jabón o anillas.",
+boots_h:"Hormas para botas",boots_sub:"Polo, equitación, caza y montería",
+boots_p:"Suelen tornearse antes que las botas, con las medidas del botero, y sirven para dar forma a la caña. También se hacen para botas terminadas, incluso ya usadas.",
+b_func_h:"Función",b_func:"Mantener la bota en forma conservando sus medidas originales: de ello dependen su duración y su estética.",
+b_trans_h:"Transporte",b_trans:"El asa, vaciada en la prolongación de la llave central, lleva botas y hormas. Puede sustituirse por una anilla de latón pulido o cromado.",
+b_fab_h:"Fabricación",b_fab:"Según la bota: de cordones, con cremallera, de polo, equitación, caza o montería. Para equitación, caza y montería también dan la forma: Saumur, Chantilly, inglesa o media inglesa.",
+wax_page_h:"Personalización del tono",
+wax_page_p:"Del incoloro a las maderas tradicionales y los colores vivos. Ceras solubles en agua, no barnices: la horma conserva su función, absorber la humedad.",
+f_all:"Todos",f_noyer:"Nogal, caoba",f_merisier:"Cerezo, roble",f_sienne:"Siena, ocre",f_jaune:"Amarillo, rojo",f_bleu:"Violeta, azul, verde",f_noir:"Negro, gris",
+c_incolore:"Incoloro",c_blanc:"Blanco",c_noyer_fonce:"Nogal oscuro",c_noyer:"Nogal",c_acajou:"Caoba",c_merisier:"Cerezo",c_chene_fonce:"Roble oscuro",c_chene_moyen:"Roble medio",c_chene_clair:"Roble claro",c_sienne_calcinee:"Siena tostada",c_sienne_naturelle:"Siena natural",c_ocre:"Ocre",c_jaune:"Amarillo",c_orange:"Naranja",c_rouge:"Rojo",c_rouge_oxyde:"Rojo óxido",c_bordeau:"Burdeos",c_violet:"Violeta",c_bleu:"Azul",c_vert:"Verde",c_vert_olive:"Verde oliva",c_vert_tilleul:"Verde tilo",c_vert_moutarde:"Verde mostaza",c_noir:"Negro",c_gris:"Gris",
+fo_h:"Hormas de montado",
+fo_intro:"Torneo madera y no plástico, por razones técnicas y por elección. La haya y el carpe responden mejor a las exigencias de los artesanos y se trabajan mejor a mano. Cada horma se copia en un torno pantógrafo y luego se declina en anchos y tallas.",
+fo_what_h:"La horma de montado",fo_what:"Sobre ella el zapatero a medida o el podólogo ortopédico monta el zapato definitivo.",
+fo_no:"Por razones técnicas, no fabrico hormas herradas para el montado con tachuelas.",
+fo_create_h:"La creación",fo_create:"No se limita a la estética o al calce: la horma debe tener aplomos proporcionados y volúmenes que respondan a la necesidad.",
+fo_fit_h:"El ajuste del calce",fo_fit:"El punto delicado de la medida. Se puede conservar el calce de una horma y cambiar su estética, junto con el zapatero.",
+fo_sty_h:"Con diseñadores y prototipistas",fo_sty:"Escucho sus peticiones; mi gama de trabajos orienta la horma hacia la solución más justa para el producto final.",
+fo_types_h:"Cuatro trabajos de horma",
+t_cambrure_h:"El cambio de tacón",t_cambrure:"Para la horma de mujer, a partir del tacón entregado con la horma modelo. Pasar de 3 a 9 o 10 cm puede exigir varios torneados; luego el zapatero hace una nueva prueba.",
+t_sciage_h:"El corte",t_sciage:"Dos cortes a elegir: la cuña tradicional, que libera la medida por el empeine, o el corte «sistema», oblicuo, de la base del enfranque a la mitad del empeine, que libera el talón y luego el antepié.",
+t_bout_h:"La puntera sin tornear",t_bout:"Una horma existente se tornea a las medidas del cliente sin terminar la puntera. El zapatero le da otra estética conservando el calce: varias punteras, la misma comodidad.",
+t_proto_h:"El prototipado",t_proto:"Hecho con el diseñador, exige muchas horas de trabajo y de pruebas.",
+fo_cta_h:"¿Un proyecto de horma?",fo_cta_p:"Respondemos con un estudio antes de aceptar cualquier proyecto.",
+at_h:"El taller de Troësnes",at_lead:"Un artesano al servicio de los artesanos.",
+at_p1:"Hervé Brunelle creó su taller en 2005 en el sur del Aisne, cerca de Villers-Cotterêts, para mantener vivo este oficio.",
+at_p2:"Fabricar hormas era un verdadero problema para los talleres artesanos. Adoptó un método de trabajo distinto al de los talleres de entonces, para responder a las exigencias del zapatero.",
+at_exp_h:"Experiencia",at_exp:"22 años de reparación de calzado, ortopedia, botas de equitación y botería de lujo, antes de dedicarse a la horma de montado y a la horma de conservación.",
+at_prize_h:"Premio y sello",at_prize:"Premio departamental de la Société d’Encouragement aux Métiers d’Art en 2005. Sello Empresa del Patrimonio Vivo desde 2007, como último hormero de Francia.",
+at_sup_h:"Transmisión",at_sup:"Desde 2011 acompaña la instalación del hormero Christophe Varraud. Trabajan en estrecha colaboración y se complementan.",
+at_sup_link:"La web de Christophe Varraud",
+ledger_h:"El registro del taller",
+l1:"años en el calzado antes de abrir el taller",l2:"piezas vendidas cada mes, en todo el mundo",l3:"premio y sello recibidos",l4:"horas de trabajo por semana, de media",v2:"30 a 35",
+at_quote:"Mantener vivo un oficio tradicional y realzar el calzado con el trabajo de la madera.",
+cf_h:"Mi horma a medida",
+cf_p:"Usted elige, Hervé lo estudia. Su selección se adjunta a la solicitud de estudio; sin compromiso.",
+cf_s1:"¿Para qué calzado?",o_shoes:"Zapatos",o_low:"Botines, borceguíes",o_boots:"Botas",
+cf_s2:"El modelo",cf_key:"La llave",o_key_soap:"Llave de jabón",o_key_rings:"Anillas",
+cf_boot_type:"Las botas",o_polo:"Polo",o_ride:"Equitación",o_hunt:"Caza",o_venery:"Montería",o_zip:"Con cremallera",o_lace:"De cordones",
+cf_galbe:"La forma de la caña",o_saumur:"Saumur",o_chantilly:"Chantilly",o_anglais:"Inglesa",o_demi:"Media inglesa",o_galbe_na:"Según el botero",
+cf_s3:"El tono",cf_s4:"El agarre",o_handle:"Asa vaciada",o_brass:"Anilla de latón pulido",o_chrome:"Anilla cromada",
+cf_s5:"La madera",o_hetre:"Haya",o_aulne:"Aliso",o_erable:"Arce",
+cf_base:"Su calzado",o_base_last:"Hecho a medida: el zapatero tiene la horma",o_base_finished:"Botas terminadas, incluso usadas",o_base_unknown:"No lo sé",
+cf_sum:"Su selección",cf_send:"Adjuntar a mi solicitud",cf_reset:"Empezar de nuevo",
+cf_note:"Una horma a medida para zapatos se hace a partir de la horma de montado de sus zapatos. Para botas terminadas, incluso usadas, también es posible.",
+cf_price:"Precio y plazo: tras el estudio.",cf_na:"Según el modelo de botín",
+ct_h:"Contacto",ct_p:"Respondemos a sus expectativas con un estudio antes de aceptar cualquier proyecto.",
+ct_phone:"Teléfono",ct_mail:"Correo",ct_addr:"Taller",ct_map:"Ver en el mapa",
+fm_name:"Nombre y apellidos",fm_email:"Correo electrónico",fm_who:"Usted es",o_pro:"Zapatero, botero o podólogo ortopédico",o_style:"Diseñador o prototipista",o_private:"Particular",
+fm_subject:"Su solicitud",o_s_tree:"Hormas de conservación",o_s_last:"Hormas de montado",o_s_other:"Otro",
+fm_msg:"Mensaje",fm_sel:"Selección adjunta",fm_remove:"Quitar",fm_send:"Enviar su mensaje",
+fm_ok:"Gracias, su solicitud está lista. En esta maqueta, el envío aún no está conectado al correo del taller.",
+fm_err:"Indique su nombre, un correo válido y su mensaje.",
+fm_rgpd:"Sus datos solo sirven para responderle. Nunca se ceden a terceros.",
+me_h:"Aviso legal",me_owner_h:"Editor",me_capital:"SAS con capital de 1500 €",me_webmaster:"Actualización del sitio: Hervé Brunelle.",
+me_creator_h:"Creación del sitio actual",me_host_h:"Alojamiento",
+me_service_h:"Servicios",me_service:"Este sitio presenta el trabajo de Hervé Brunelle, maestro hormero desde 2005. La información se da con la mayor exactitud posible; puede cambiar y no es exhaustiva.",
+me_ip_h:"Propiedad intelectual",me_ip:"Textos, imágenes y vídeos pertenecen a Hervé Brunelle. Toda reproducción, modificación o adaptación sin autorización está prohibida y constituye una falsificación (artículos L.335-2 y siguientes del Código de la Propiedad Intelectual francés).",
+me_links_h:"Enlaces y cookies",me_links:"El sitio enlaza con sitios asociados o informativos cuyo contenido no controla. Pueden instalarse cookies para facilitar la navegación y medir la audiencia; puede desactivarlas en su navegador.",
+me_rgpd_h:"Datos personales",me_rgpd:"La información de los formularios solo sirve para responderle y nunca se comunica a terceros. Tiene derecho de acceso, rectificación, supresión y oposición (ley francesa del 6 de enero de 1978): escriba a brunelle.herve@wanadoo.fr.",
+ft_line:"Hormas de montado tradicionales y hormas de conservación a medida para zapatos, botines y botas, en Troësnes (Aisne, Francia).",
+ft_pages:"Mapa del sitio",ft_legal:"Aviso legal",ft_labels:"Sellos y prensa",ft_demo:"Maqueta de nuevo sitio propuesta por Neovera Studio",
+ai_name:"Brunelle Conseil",ai_tag:"Le ayudo a elegir",ai_virtual:"Asistente virtual",
+ai_hello:"Hola, soy Brunelle Conseil, el asistente virtual del taller. Le ayudo a elegir una horma o un tono, o a preparar una solicitud de horma de montado.",
+ai_invite:"¿Una horma para qué zapatos? Puedo orientarle.",ai_close:"Cerrar",ai_ph:"Su pregunta…",ai_send:"Enviar",
+q_travel:"Una horma para viajar",q_luxe:"El modelo más bello",q_boots:"Para botas de montar",q_wax:"¿Qué tono elegir?",q_last:"Soy zapatero: una horma",q_price:"Precio y plazo",
+a_travel:"Para viajar, elija un modelo vaciado, más ligero: el Aigoual (antepié vaciado y aireado), o el Brocéliande, el Loudéac o el Tronçais, con bisagra. El Boscodon, sin vaciar, es mejor para casa.",
+a_luxe:"El Retz: tres piezas, llave de jabón, nuestro modelo más bello. Se presenta en caoba.",
+a_boots:"Para equitación, caza o montería, la horma también da la forma de la caña: Saumur, Chantilly, inglesa o media inglesa. Se tornea con las medidas del botero, o para botas terminadas, incluso usadas.",
+a_wax:"Veintitrés ceras, del incoloro al violeta. Para un zapato clásico: nogal, caoba, cerezo o roble. Son ceras solubles en agua, nunca barniz, para que la madera absorba la humedad.",
+a_last:"Hervé tornea hormas en haya o carpe: creación, ajuste del calce, cambio de tacón, puntera sin tornear, corte en cuña o «sistema», prototipado. Sin hormas herradas para el montado con tachuelas.",
+a_price:"Los precios y plazos no se publican: cada proyecto empieza con un estudio. Lo más sencillo: llamar al +33 3 23 96 97 04 o escribir a brunelle.herve@wanadoo.fr.",
+a_custom:"Una horma a medida para zapatos se hace a partir de la horma de montado, que guarda su zapatero. Para botas terminadas, incluso usadas, también es posible.",
+a_bottines:"Para botines (Balmoral, Derby, Grand Cambré, Jodhpur): una horma de cuatro piezas, con llave de jabón o anillas. El Ardennes no se recomienda para botines.",
+a_wood:"Sobre todo haya, también aliso o arce; nunca conífera. Las hormas de montado son de haya o carpe.",
+a_contact:"Taller: 5 place de la Mairie, 02460 Troësnes, Francia. Teléfono: +33 3 23 96 97 04. Correo: brunelle.herve@wanadoo.fr.",
+a_hours:"El horario no figura en el sitio y no quiero darle una hora equivocada. Llame antes de venir: +33 3 23 96 97 04.",
+a_ship:"El taller vende de 30 a 35 piezas al mes en todo el mundo. Las condiciones de envío no se publican: pídalas durante el estudio.",
+a_epv:"Hervé Brunelle recibió el premio departamental de la Société d’Encouragement aux Métiers d’Art en 2005 y el sello Empresa del Patrimonio Vivo en 2007, como último hormero de Francia.",
+a_varraud:"Desde 2011, Hervé acompaña al hormero Christophe Varraud: trabajan juntos y se complementan.",
+a_unknown:"No puedo responder a eso con certeza. Hervé le responderá directamente: +33 3 23 96 97 04 o brunelle.herve@wanadoo.fr.",
+go_cf:"Diseñar mi horma",go_contact:"Solicitar un estudio",go_trees:"Ver los modelos",go_lasts:"Ver las hormas de montado",
+close:"Cerrar",prev:"Foto anterior",next:"Foto siguiente",
+kw:{travel:["viaj","ligera","maleta"],luxe:["bello","bonito","lujo","regalo","mejor"],boots:["bota ","botas","equitación","caballo","caza","montería","polo"],wax:["tono","color","cera","barniz","tinte"],last:["horma de montado","zapatero","tacón","prototip","pantógrafo"],price:["precio","cuánto","cuesta","plazo","tarifa"],custom:["a medida","talla","medida"],bottines:["botín","botines","borceguí","jodhpur","derby"],wood:["madera","haya","aliso","arce","carpe"],contact:["dirección","teléfono","correo","contacto","dónde"],hours:["horario","abierto","cerrado","visita"],ship:["envío","enviar","extranjero","internacional"],epv:["sello","patrimonio","premio"],varraud:["varraud","christophe"]}
+};
+T.de={
+lang_name:"Deutsch",lang_label:"Sprache",skip:"Zum Inhalt",
+nav_home:"Start",nav_trees:"Schuhspanner",nav_lasts:"Schuhleisten",nav_atelier:"Die Werkstatt",nav_bespoke:"Nach Maß",nav_contact:"Kontakt",
+brand_sub:"Leisten & Schuhspanner · Troësnes",
+cta_study:"Prüfung anfragen",cta_compose:"Meinen Spanner gestalten",cta_call:"Anrufen",
+hero_h:"Der letzte Leisten- und Spannermacher Frankreichs.",
+hero_p:"Schuhleisten und maßgefertigte Schuhspanner, seit 2005 in Troësnes (Aisne) aus Buche gedrechselt.",
+hero_tag:"Entreprise du Patrimoine Vivant · Handwerksmeister",
+hero_cap:"Der Retz: dreiteilig, Seifenstück-Keil, Farbton Mahagoni.",
+rings_h:"Im Lauf der Jahreszeiten",
+rings_p:"Buchenholz bewahrt jede Jahreszeit, Ring um Ring. Dieser zählt die Jahre der Werkstatt.",
+rings_hint:"Tippen Sie auf ein Jahr, um es im Holz zu lesen.",
+y_before:"22 Jahre im Schuhhandwerk: Reparatur, Orthopädie, Reitstiefel und Luxusstiefel.",
+y2005:"Hervé Brunelle eröffnet seine Werkstatt in Troësnes bei Villers-Cotterêts. Preis des Départements der Société d’Encouragement aux Métiers d’Art.",
+y2007:"Auszeichnung Entreprise du Patrimoine Vivant (EPV) als letzter Leisten- und Spannermacher Frankreichs.",
+y2011:"Beginn der Zusammenarbeit mit dem Leistenmacher Christophe Varraud.",
+ynow:"30 bis 35 Stück im Monat, in die ganze Welt verschickt.",
+yr_before:"Vor 2005",yr_now:"Heute",
+rings_cta:"Die Werkstatt betreten",
+two_h:"Zwei Handwerke, ein Holz",
+lasts_h:"Schuhleisten",
+lasts_p:"Für Maßschuhmacher, Orthopädieschuhmacher, Designer und Prototypenbauer: der Leisten, auf dem der Schuh entsteht, aus Buche oder Hainbuche gedrechselt.",
+lasts_cta:"Die Leisten ansehen",
+trees_h:"Reiseschuhspanner",
+trees_p:"Für Schuhe, Stiefeletten, Schnürstiefel und Stiefel: Der Spanner bewahrt Volumen, Linie und Lebensdauer des Schuhs.",
+trees_cta:"Die Spanner ansehen",
+forests_h:"Acht Spanner, acht Wälder",
+forests_p:"Jedes Modell trägt den Namen eines Waldes. Vom einfachsten, dem Boscodon, bis zum schönsten, dem Retz.",
+forests_cta:"Die acht Modelle vergleichen",
+wax_h:"Dreiundzwanzig Wachse",
+wax_p:"Von farblos bis violett ist jeder Ton ein wasserlösliches Wachs, nie ein Lack: Das Holz nimmt weiter die Feuchtigkeit des Schuhs auf.",
+wax_cta:"Einen Farbton ausprobieren",
+video_h:"Das Handwerk im Video",
+video_p:"Ein paar Minuten in der Werkstatt, an der Drehbank.",
+video_play:"Video abspielen",video_note:"Das Video wird über YouTube abgespielt.",
+press_h:"Auszeichnungen und Presse",
+press_epv:"Entreprise du Patrimoine Vivant (EPV)",
+press_cma:"Meister im Kunsthandwerk · CMA Hauts-de-France",
+press_region:"Region Hauts-de-France: „der letzte Leisten- und Spannermacher“",
+press_f3:"France 3 Hauts-de-France: zwei Handwerker aus dem Aisne auf der Route des Handwerks",
+strip_h:"Sprechen wir über Ihre Schuhe",
+strip_p:"Jedes Projekt beginnt mit einer Prüfung, bevor etwas zugesagt wird.",
+tr_h:"Schuhspanner",
+tr_intro:"Aus Buche gedrechselt, manchmal aus Erle oder Ahorn, nie aus Nadelholz. Ein Maßspanner entsteht immer aus dem Leisten, auf dem Ihre Schuhe gebaut wurden: Er füllt sie genau aus.",
+sub_shoes:"Schuhe",sub_low:"Stiefeletten",sub_boots:"Stiefel",sub_wax:"Farbtöne",
+shoes_h:"Spanner für Schuhe",
+shoes_p:"Auch Reisespanner genannt. Schnitt und Aushöhlung werden auf Wunsch gewählt.",
+m_aigoual:"Der Vorfuß wird nach dem Zuschnitt des Brandsohlenblocks ausgehöhlt, dann wieder eingesetzt und gelocht, damit das Holz atmet.",
+m_ardennes:"Sein Zuschnitt umfasst einen gebogenen Griff hinten. Für Stiefeletten nicht empfohlen.",
+m_boscodon:"Der einfachste. Nicht ausgehöhlt, daher schwerer: Er bleibt eher zu Hause als auf Reisen und hält dasselbe Volumen wie die anderen.",
+m_broceliande:"Der Spanner mit Scharnier und dem klassischsten Schnitt, verfeinert durch die Aushöhlung am Spann.",
+m_loudeac:"Mit Scharnier und ausgewogenen Quartieren. Die ungefärbte Aushöhlung reicht bis zur Mitte des Gelenks. Messingring.",
+m_retz:"Dreiteilig, Seifenstück-Keil: unser schönstes Modell, für Liebhaber schöner Dinge.",
+m_sherwood:"Eine Variante des Ardennes mit gebohrter Ferse.",
+m_troncais:"Mit Scharnier und abgerundeter Ferse: eine ganz sanfte Linie.",
+m_shown:"Gezeigt in: {c}",m_photos:"{n} Fotos",m_choose:"Dieses Modell wählen",m_open:"Fotos ansehen",
+low_h:"Spanner für Stiefeletten",
+low_p:"Komplett von Hand aus Buche gefertigt, mit einer dem Stiefelettenmodell eigenen Wölbung. Vier Teile: Hinterteil, Keil, Vorderteil und der mit Zapfen verbundene Fuß.",
+low_p2:"Balmoral, Derby, Grand Cambré oder Jodhpur: eine klassische Linie, mit denselben Wachsen gefärbt, mit Seifenstück-Keil oder Ringen.",
+boots_h:"Stiefelspanner",boots_sub:"Polo, Reiten, Jagd und Parforcejagd",
+boots_p:"Sie werden meist vor den Stiefeln nach den Maßen des Stiefelmachers gedrechselt und dienen zum Formen des Schafts. Sie können auch für fertige, sogar getragene Stiefel gefertigt werden.",
+b_func_h:"Zweck",b_func:"Den Stiefel in Form halten und seine ursprünglichen Maße bewahren: Davon hängen Lebensdauer und Aussehen ab.",
+b_trans_h:"Tragen",b_trans:"Der Griff, in Verlängerung des Mittelkeils ausgehöhlt, trägt Stiefel und Spanner zusammen. Er kann durch einen polierten oder verchromten Messingring ersetzt werden.",
+b_fab_h:"Fertigung",b_fab:"Je nach Stiefel: geschnürt, mit Reißverschluss, Polo, Reiten, Jagd oder Parforcejagd. Für Reiten und Jagd geben sie dem Schaft auch die Form: Saumur, Chantilly, englisch oder halbenglisch.",
+wax_page_h:"Wahl des Farbtons",
+wax_page_p:"Von farblos über klassische Holztöne bis zu kräftigen Farben. Wasserlösliche Wachse statt Lack: Der Spanner behält seine Hauptaufgabe, Feuchtigkeit aufzunehmen.",
+f_all:"Alle",f_noyer:"Nussbaum, Mahagoni",f_merisier:"Kirsche, Eiche",f_sienne:"Siena, Ocker",f_jaune:"Gelb, Rot",f_bleu:"Violett, Blau, Grün",f_noir:"Schwarz, Grau",
+c_incolore:"Farblos",c_blanc:"Weiß",c_noyer_fonce:"Nussbaum dunkel",c_noyer:"Nussbaum",c_acajou:"Mahagoni",c_merisier:"Kirsche",c_chene_fonce:"Eiche dunkel",c_chene_moyen:"Eiche mittel",c_chene_clair:"Eiche hell",c_sienne_calcinee:"Siena gebrannt",c_sienne_naturelle:"Siena natur",c_ocre:"Ocker",c_jaune:"Gelb",c_orange:"Orange",c_rouge:"Rot",c_rouge_oxyde:"Oxidrot",c_bordeau:"Bordeaux",c_violet:"Violett",c_bleu:"Blau",c_vert:"Grün",c_vert_olive:"Olivgrün",c_vert_tilleul:"Lindgrün",c_vert_moutarde:"Senfgrün",c_noir:"Schwarz",c_gris:"Grau",
+fo_h:"Schuhleisten",
+fo_intro:"Ich drechsle Holz statt Kunststoff, aus technischen Gründen und aus Überzeugung. Buche und Hainbuche werden den Ansprüchen der Handwerker besser gerecht und lassen sich besser von Hand bearbeiten. Jeder Leisten wird auf einer Pantographen-Drehbank kopiert und dann in Weiten und Größen abgewandelt.",
+fo_what_h:"Der Schuhleisten",fo_what:"Auf ihm baut der Maßschuhmacher oder Orthopädieschuhmacher den fertigen Schuh.",
+fo_no:"Aus technischen Gründen fertige ich keine beschlagenen Leisten für die Zwickarbeit mit Täcksen.",
+fo_create_h:"Die Entwicklung",fo_create:"Es geht nicht nur um Aussehen oder Passform: Der Leisten braucht ausgewogene Standlinien und Volumen, die dem Bedarf entsprechen.",
+fo_fit_h:"Die Feinabstimmung der Passform",fo_fit:"Der heikle Punkt beim Maßschuh. Die Passform eines Leistens kann erhalten und sein Aussehen geändert werden, in Absprache mit dem Schuhmacher.",
+fo_sty_h:"Mit Designern und Prototypenbauern",fo_sty:"Ich höre auf ihre Wünsche; meine Erfahrung lenkt den Leisten zur passendsten Lösung für das Endprodukt.",
+fo_types_h:"Vier Leistenarbeiten",
+t_cambrure_h:"Änderung der Absatzhöhe",t_cambrure:"Für Damenleisten, ausgehend vom mitgelieferten Absatz des Modellleistens. Von 3 auf 9 oder 10 cm zu gehen kann mehrere Drehgänge erfordern; danach fertigt der Schuhmacher einen neuen Probeschuh.",
+t_sciage_h:"Der Schnitt",t_sciage:"Zwei Schnitte zur Wahl: der klassische Keil, der das Maß am Spann freigibt, oder der schräge „System“-Schnitt vom Gelenkansatz bis zur Mitte des Spanns, der zuerst die Ferse und dann den Vorfuß freigibt.",
+t_bout_h:"Die ungedrehte Spitze",t_bout:"Ein vorhandener Leisten wird auf die Maße des Kunden gedrechselt, ohne die Spitze fertigzustellen. Der Schuhmacher gibt ihr ein anderes Aussehen bei gleicher Passform: mehrere Spitzen, derselbe Komfort.",
+t_proto_h:"Der Prototypenbau",t_proto:"Gemeinsam mit dem Designer erfordert er viele Arbeitsstunden und Anproben.",
+fo_cta_h:"Ein Leistenprojekt?",fo_cta_p:"Wir antworten mit einer Prüfung, bevor wir ein Projekt annehmen.",
+at_h:"Die Werkstatt in Troësnes",at_lead:"Ein Handwerker im Dienst der Handwerker.",
+at_p1:"Im Süden des Aisne, nahe Villers-Cotterêts, gründete Hervé Brunelle 2005 seine Werkstatt, um dieses Können zu bewahren.",
+at_p2:"Die Herstellung von Leisten war für kleine Werkstätten ein echtes Problem. Er wählte eine andere Arbeitsweise als die damaligen Werkstätten, um den Ansprüchen des Schuhmachers gerecht zu werden.",
+at_exp_h:"Erfahrung",at_exp:"22 Jahre Schuhreparatur, Orthopädieschuhtechnik, Reitstiefel und Luxusstiefel, bevor er sich ganz Leisten und Schuhspannern widmete.",
+at_prize_h:"Preis und Auszeichnung",at_prize:"Preis des Départements der Société d’Encouragement aux Métiers d’Art 2005. Seit 2007 Entreprise du Patrimoine Vivant, als letzter Leisten- und Spannermacher Frankreichs.",
+at_sup_h:"Weitergabe",at_sup:"Seit 2011 begleitet er den Leistenmacher Christophe Varraud bei dessen Gründung. Sie arbeiten eng zusammen und ergänzen sich.",
+at_sup_link:"Website von Christophe Varraud",
+ledger_h:"Das Werkstattbuch",
+l1:"Jahre im Schuhhandwerk vor der Werkstattgründung",l2:"verkaufte Stücke pro Monat, weltweit",l3:"Preis und Auszeichnung",l4:"Arbeitsstunden pro Woche, im Schnitt",v2:"30 bis 35",
+at_quote:"Ein überliefertes Können bewahren und den Schuh durch die Arbeit am Holz veredeln.",
+cf_h:"Mein Schuhspanner nach Maß",
+cf_p:"Sie wählen, Hervé prüft. Ihre Auswahl wird der Anfrage beigefügt; unverbindlich.",
+cf_s1:"Für welche Schuhe?",o_shoes:"Schuhe",o_low:"Stiefeletten, Schnürstiefel",o_boots:"Stiefel",
+cf_s2:"Das Modell",cf_key:"Der Keil",o_key_soap:"Seifenstück-Keil",o_key_rings:"Ringe",
+cf_boot_type:"Die Stiefel",o_polo:"Polo",o_ride:"Reiten",o_hunt:"Jagd",o_venery:"Parforcejagd",o_zip:"Mit Reißverschluss",o_lace:"Geschnürt",
+cf_galbe:"Die Schaftform",o_saumur:"Saumur",o_chantilly:"Chantilly",o_anglais:"Englisch",o_demi:"Halbenglisch",o_galbe_na:"Nach Rat des Stiefelmachers",
+cf_s3:"Der Farbton",cf_s4:"Der Griff",o_handle:"Ausgehöhlter Griff",o_brass:"Polierter Messingring",o_chrome:"Verchromter Ring",
+cf_s5:"Das Holz",o_hetre:"Buche",o_aulne:"Erle",o_erable:"Ahorn",
+cf_base:"Ihre Schuhe",o_base_last:"Maßgefertigt: Der Schuhmacher hat den Leisten",o_base_finished:"Fertige Stiefel, auch getragen",o_base_unknown:"Weiß ich nicht",
+cf_sum:"Ihre Auswahl",cf_send:"Meiner Anfrage beifügen",cf_reset:"Neu beginnen",
+cf_note:"Ein Maßspanner für Schuhe entsteht aus dem Leisten Ihrer Schuhe. Für fertige, auch getragene Stiefel ist es ebenfalls möglich.",
+cf_price:"Preis und Lieferzeit: nach der Prüfung.",cf_na:"Je nach Stiefelettenmodell",
+ct_h:"Kontakt",ct_p:"Wir antworten auf Ihre Wünsche mit einer Prüfung, bevor wir ein Projekt annehmen.",
+ct_phone:"Telefon",ct_mail:"E-Mail",ct_addr:"Werkstatt",ct_map:"Auf der Karte ansehen",
+fm_name:"Vor- und Nachname",fm_email:"E-Mail",fm_who:"Sie sind",o_pro:"Schuhmacher oder Orthopädieschuhmacher",o_style:"Designer oder Prototypenbauer",o_private:"Privatkunde",
+fm_subject:"Ihr Anliegen",o_s_tree:"Schuhspanner",o_s_last:"Schuhleisten",o_s_other:"Anderes",
+fm_msg:"Nachricht",fm_sel:"Beigefügte Auswahl",fm_remove:"Entfernen",fm_send:"Nachricht senden",
+fm_ok:"Danke, Ihre Anfrage ist bereit. In diesem Entwurf ist der Versand noch nicht mit dem Postfach der Werkstatt verbunden.",
+fm_err:"Bitte geben Sie Ihren Namen, eine gültige E-Mail und Ihre Nachricht ein.",
+fm_rgpd:"Ihre Daten dienen nur der Antwort und werden nie an Dritte weitergegeben.",
+me_h:"Impressum",me_owner_h:"Herausgeber",me_capital:"SAS mit einem Kapital von 1.500 €",me_webmaster:"Pflege der Website: Hervé Brunelle.",
+me_creator_h:"Erstellung der aktuellen Website",me_host_h:"Hosting",
+me_service_h:"Leistungen",me_service:"Diese Website stellt die Arbeit von Hervé Brunelle vor, Meister-Leisten- und Spannermacher seit 2005. Die Angaben sind so genau wie möglich; sie können sich ändern und sind nicht abschließend.",
+me_ip_h:"Geistiges Eigentum",me_ip:"Texte, Bilder und Videos gehören Hervé Brunelle. Jede Vervielfältigung, Änderung oder Bearbeitung ohne Erlaubnis ist verboten und stellt eine Verletzung dar (Artikel L.335-2 ff. des französischen Gesetzbuchs über geistiges Eigentum).",
+me_links_h:"Links und Cookies",me_links:"Die Website verlinkt auf Partner- und Informationsseiten, deren Inhalt sie nicht kontrolliert. Cookies können gesetzt werden, um die Navigation zu erleichtern und Besuche zu messen; Sie können sie im Browser deaktivieren.",
+me_rgpd_h:"Personenbezogene Daten",me_rgpd:"Formulardaten dienen nur der Antwort und werden nie an Dritte weitergegeben. Sie haben ein Recht auf Auskunft, Berichtigung, Löschung und Widerspruch (französisches Gesetz vom 6. Januar 1978): schreiben Sie an brunelle.herve@wanadoo.fr.",
+ft_line:"Traditionelle Schuhleisten und Maßschuhspanner für Schuhe, Stiefeletten und Stiefel, in Troësnes (Aisne, Frankreich).",
+ft_pages:"Seitenübersicht",ft_legal:"Impressum",ft_labels:"Auszeichnungen und Presse",ft_demo:"Entwurf einer neuen Website von Neovera Studio",
+ai_name:"Brunelle Conseil",ai_tag:"Ich helfe bei der Wahl",ai_virtual:"Virtueller Assistent",
+ai_hello:"Guten Tag, ich bin Brunelle Conseil, der virtuelle Assistent der Werkstatt. Ich helfe Ihnen, einen Spanner oder Farbton zu wählen oder eine Leistenanfrage vorzubereiten.",
+ai_invite:"Ein Spanner für welche Schuhe? Ich berate Sie gern.",ai_close:"Schließen",ai_ph:"Ihre Frage …",ai_send:"Senden",
+q_travel:"Ein Spanner für Reisen",q_luxe:"Das schönste Modell",q_boots:"Für Reitstiefel",q_wax:"Welcher Farbton?",q_last:"Ich bin Schuhmacher: ein Leisten",q_price:"Preis und Lieferzeit",
+a_travel:"Für Reisen wählen Sie ein ausgehöhltes, leichteres Modell: den Aigoual (ausgehöhlter, belüfteter Vorfuß) oder den Brocéliande, Loudéac oder Tronçais mit Scharnier. Der nicht ausgehöhlte Boscodon bleibt besser zu Hause.",
+a_luxe:"Der Retz: dreiteilig, Seifenstück-Keil, unser schönstes Modell. Gezeigt in Mahagoni.",
+a_boots:"Für Reiten, Jagd oder Parforcejagd gibt der Spanner auch die Schaftform: Saumur, Chantilly, englisch oder halbenglisch. Er wird nach den Maßen des Stiefelmachers gedrechselt oder für fertige, auch getragene Stiefel.",
+a_wax:"Dreiundzwanzig Wachse, von farblos bis violett. Für einen klassischen Schuh: Nussbaum, Mahagoni, Kirsche oder Eiche. Wasserlösliche Wachse, nie Lack, damit das Holz Feuchtigkeit aufnimmt.",
+a_last:"Hervé drechselt Leisten aus Buche oder Hainbuche: Entwicklung, Passform-Anpassung, Änderung der Absatzhöhe, ungedrehte Spitze, Keil- oder „System“-Schnitt, Prototypen. Keine beschlagenen Leisten für Täcksarbeit.",
+a_price:"Preise und Lieferzeiten werden nicht veröffentlicht: Jedes Projekt beginnt mit einer Prüfung. Am einfachsten: +33 3 23 96 97 04 anrufen oder an brunelle.herve@wanadoo.fr schreiben.",
+a_custom:"Ein Maßspanner für Schuhe entsteht aus dem Leisten Ihrer Schuhe, den Ihr Schuhmacher aufbewahrt. Für fertige, auch getragene Stiefel ist es ebenfalls möglich.",
+a_bottines:"Für Stiefeletten (Balmoral, Derby, Grand Cambré, Jodhpur): ein vierteiliger Spanner mit Seifenstück-Keil oder Ringen. Der Ardennes wird für Stiefeletten nicht empfohlen.",
+a_wood:"Meist Buche, auch Erle oder Ahorn; nie Nadelholz. Schuhleisten sind aus Buche oder Hainbuche.",
+a_contact:"Werkstatt: 5 place de la Mairie, 02460 Troësnes, Frankreich. Telefon: +33 3 23 96 97 04. E-Mail: brunelle.herve@wanadoo.fr.",
+a_hours:"Öffnungszeiten stehen nicht auf der Website, und ich möchte Ihnen keine falsche Zeit nennen. Bitte rufen Sie vor einem Besuch an: +33 3 23 96 97 04.",
+a_ship:"Die Werkstatt verkauft 30 bis 35 Stück im Monat weltweit. Versandbedingungen sind nicht veröffentlicht: Fragen Sie bei der Prüfung danach.",
+a_epv:"Hervé Brunelle erhielt 2005 den Preis des Départements der Société d’Encouragement aux Métiers d’Art und 2007 die Auszeichnung Entreprise du Patrimoine Vivant als letzter Leisten- und Spannermacher Frankreichs.",
+a_varraud:"Seit 2011 begleitet Hervé den Leistenmacher Christophe Varraud: Sie arbeiten zusammen und ergänzen sich.",
+a_unknown:"Darauf kann ich nicht sicher antworten. Hervé antwortet Ihnen direkt: +33 3 23 96 97 04 oder brunelle.herve@wanadoo.fr.",
+go_cf:"Meinen Spanner gestalten",go_contact:"Prüfung anfragen",go_trees:"Modelle ansehen",go_lasts:"Leisten ansehen",
+close:"Schließen",prev:"Vorheriges Foto",next:"Nächstes Foto",
+kw:{travel:["reise","leicht","koffer"],luxe:["schönst","luxus","geschenk","bestes"],boots:["stiefel ","reitstiefel","reiten","pferd","jagd","polo"],wax:["farbe","farbton","wachs","lack"],last:["leisten","schuhmacher","absatz","prototyp"],price:["preis","teuer","kosten","kostet","lieferzeit","wie viel"],custom:["nach maß","maß","größe"],bottines:["stiefelette","jodhpur","derby","balmoral","schnürstiefel"],wood:["holz","buche","erle","ahorn","hainbuche"],contact:["adresse","telefon","e-mail","kontakt","wo "],hours:["öffnungszeit","geöffnet","besuch"],ship:["versand","ausland","international","schicken"],epv:["auszeichnung","preis des","patrimoine"],varraud:["varraud","christophe"]}
+};
+T.it={
+lang_name:"Italiano",lang_label:"Lingua",skip:"Vai al contenuto",
+nav_home:"Home",nav_trees:"Tendiscarpe",nav_lasts:"Forme da calzolaio",nav_atelier:"Il laboratorio",nav_bespoke:"Su misura",nav_contact:"Contatti",
+brand_sub:"Forme & tendiscarpe · Troësnes",
+cta_study:"Richiedere uno studio",cta_compose:"Comporre il mio tendiscarpe",cta_call:"Chiamare",
+hero_h:"L’ultimo artigiano di forme e tendiscarpe di Francia.",
+hero_p:"Forme da calzolaio e tendiscarpe su misura, torniti in faggio a Troësnes (Aisne) dal 2005.",
+hero_tag:"Impresa del Patrimonio Vivente · Maestro artigiano",
+hero_cap:"Il Retz: tre pezzi, chiave a saponetta, tinta mogano.",
+rings_h:"Al ritmo delle stagioni",
+rings_p:"Il faggio conserva la traccia di ogni stagione, anello dopo anello. Questo conta gli anni del laboratorio.",
+rings_hint:"Tocchi un anno per leggerlo nel legno.",
+y_before:"22 anni nella calzatura: riparazione, ortopedia, stivali da equitazione e stivali di lusso.",
+y2005:"Hervé Brunelle apre il suo laboratorio a Troësnes, vicino a Villers-Cotterêts. Premio dipartimentale della Société d’Encouragement aux Métiers d’Art.",
+y2007:"Marchio Impresa del Patrimonio Vivente (EPV), come ultimo artigiano di forme e tendiscarpe di Francia.",
+y2011:"Inizio del lavoro in coppia con il formista Christophe Varraud.",
+ynow:"Da 30 a 35 pezzi al mese, spediti in tutto il mondo.",
+yr_before:"Prima del 2005",yr_now:"Oggi",
+rings_cta:"Entrare nel laboratorio",
+two_h:"Due mestieri, un solo legno",
+lasts_h:"Forme da calzolaio",
+lasts_p:"Per calzolai su misura, tecnici ortopedici, stilisti e prototipisti: la forma su cui nasce la scarpa, tornita in faggio o carpino.",
+lasts_cta:"Vedere le forme",
+trees_h:"Tendiscarpe da viaggio",
+trees_p:"Per scarpe, stivaletti, anfibi e stivali: il tendiscarpe conserva il volume della scarpa, la sua linea e la sua durata.",
+trees_cta:"Vedere i tendiscarpe",
+forests_h:"Otto tendiscarpe, otto foreste",
+forests_p:"Ogni modello porta il nome di una foresta. Dal più semplice, il Boscodon, al più bello, il Retz.",
+forests_cta:"Confrontare gli otto modelli",
+wax_h:"Ventitré cere",
+wax_p:"Dall’incolore al viola, ogni tinta è una cera idrosolubile, mai una vernice: il legno continua ad assorbire l’umidità della scarpa.",
+wax_cta:"Provare una tinta",
+video_h:"Il mestiere, in video",
+video_p:"Qualche minuto in laboratorio, davanti al tornio.",
+video_play:"Avviare il video",video_note:"Il video viene riprodotto da YouTube.",
+press_h:"Marchi e stampa",
+press_epv:"Impresa del Patrimonio Vivente (EPV)",
+press_cma:"Maestro artigiano nei mestieri d’arte · CMA Hauts-de-France",
+press_region:"Regione Hauts-de-France: «l’ultimo artigiano di forme e tendiscarpe»",
+press_f3:"France 3 Hauts-de-France: due artigiani dell’Aisne sulla strada dell’artigianato",
+strip_h:"Parliamo delle sue scarpe",
+strip_p:"Ogni progetto inizia con uno studio, prima di qualsiasi accettazione.",
+tr_h:"I tendiscarpe",
+tr_intro:"Torniti in faggio, talvolta in ontano o acero, mai in resinosa. Un tendiscarpe su misura nasce sempre dalla forma su cui sono state fatte le sue scarpe: le riempie con esattezza.",
+sub_shoes:"Scarpe",sub_low:"Stivaletti e anfibi",sub_boots:"Stivali",sub_wax:"Tinte",
+shoes_h:"Tendiscarpe per scarpe",
+shoes_p:"Chiamato anche tendiscarpe da viaggio. Taglio e scavatura si scelgono su richiesta.",
+m_aigoual:"L’avampiede viene scavato dopo il taglio del blocco del sottopiede, poi rimesso al suo posto e forato per far respirare il legno.",
+m_ardennes:"Il suo taglio include una maniglia curva sul retro. Sconsigliato per gli stivaletti.",
+m_boscodon:"Il più semplice. Non scavato, quindi più pesante: resta a casa più che in viaggio, e mantiene lo stesso volume degli altri.",
+m_broceliande:"Il tendiscarpe a cerniera dal taglio più classico, affinato dalla scavatura del collo del piede.",
+m_loudeac:"A cerniera, con quarti equilibrati. La scavatura, non tinta, arriva a metà del fiosso. Anello in ottone.",
+m_retz:"Tre pezzi, chiave a saponetta: il nostro modello più bello, per gli amanti dei begli oggetti.",
+m_sherwood:"Una versione dell’Ardennes con il tallone forato.",
+m_troncais:"A cerniera, con tallone arrotondato: una linea tutta morbidezza.",
+m_shown:"Presentato in: {c}",m_photos:"{n} foto",m_choose:"Scegliere questo modello",m_open:"Vedere le foto",
+low_h:"Tendiscarpe per stivaletti",
+low_p:"Interamente fatti a mano in faggio, con una curva propria del modello di stivaletto. Quattro parti: il retro, la chiave, l’avanti e il piede articolato a tenone e mortasa.",
+low_p2:"Balmoral, Derby, Grand Cambré o Jodhpur: una linea classica, tinta con le stesse cere, con chiave a saponetta o anelli.",
+boots_h:"Tendistivali",boots_sub:"Polo, equitazione, caccia e caccia alla muta",
+boots_p:"Di solito si torniscono prima degli stivali, sulle misure dello stivalaio, e servono a modellare il gambale. Si possono fare anche per stivali finiti, perfino già portati.",
+b_func_h:"Funzione",b_func:"Tenere lo stivale in forma conservandone le misure originali: ne dipendono durata ed estetica.",
+b_trans_h:"Trasporto",b_trans:"La maniglia, scavata nel prolungamento della chiave centrale, porta stivali e tendistivali. Può essere sostituita da un anello in ottone lucido o cromato.",
+b_fab_h:"Fabbricazione",b_fab:"Secondo lo stivale: con lacci, con cerniera, polo, equitazione, caccia o caccia alla muta. Per equitazione e caccia danno anche la forma del gambale: Saumur, Chantilly, inglese o mezzo inglese.",
+wax_page_h:"Personalizzazione delle tinte",
+wax_page_p:"Dall’incolore ai legni tradizionali e ai colori vivaci. Cere idrosolubili e non vernici: il tendiscarpe conserva la sua funzione, assorbire l’umidità.",
+f_all:"Tutte",f_noyer:"Noce, mogano",f_merisier:"Ciliegio, rovere",f_sienne:"Terra di Siena, ocra",f_jaune:"Giallo, rosso",f_bleu:"Viola, blu, verde",f_noir:"Nero, grigio",
+c_incolore:"Incolore",c_blanc:"Bianco",c_noyer_fonce:"Noce scuro",c_noyer:"Noce",c_acajou:"Mogano",c_merisier:"Ciliegio",c_chene_fonce:"Rovere scuro",c_chene_moyen:"Rovere medio",c_chene_clair:"Rovere chiaro",c_sienne_calcinee:"Terra di Siena bruciata",c_sienne_naturelle:"Terra di Siena naturale",c_ocre:"Ocra",c_jaune:"Giallo",c_orange:"Arancione",c_rouge:"Rosso",c_rouge_oxyde:"Rosso ossido",c_bordeau:"Bordeaux",c_violet:"Viola",c_bleu:"Blu",c_vert:"Verde",c_vert_olive:"Verde oliva",c_vert_tilleul:"Verde tiglio",c_vert_moutarde:"Verde senape",c_noir:"Nero",c_gris:"Grigio",
+fo_h:"Le forme da calzolaio",
+fo_intro:"Tornisco il legno e non la plastica, per ragioni tecniche e per scelta. Faggio e carpino rispondono meglio alle esigenze degli artigiani e si lavorano meglio a mano. Ogni forma è copiata su un tornio a pantografo, poi declinata in larghezze e misure.",
+fo_what_h:"La forma da calzolaio",fo_what:"È su di essa che il calzolaio su misura o il tecnico ortopedico monta la scarpa definitiva.",
+fo_no:"Per ragioni tecniche, non fabbrico forme ferrate per il montaggio a semenze.",
+fo_create_h:"La creazione",fo_create:"Non si limita all’estetica o alla calzata: la forma deve avere appiombi proporzionati e volumi che rispondano al bisogno.",
+fo_fit_h:"La messa a punto della calzata",fo_fit:"Il punto delicato del su misura. Si può conservare la calzata di una forma e cambiarne l’estetica, insieme al calzolaio.",
+fo_sty_h:"Con stilisti e prototipisti",fo_sty:"Ascolto le loro richieste; la mia gamma di lavori orienta la forma verso la soluzione più giusta per il prodotto finale.",
+fo_types_h:"Quattro lavori sulla forma",
+t_cambrure_h:"Il cambio di altezza del tacco",t_cambrure:"Per la forma donna, a partire dal tacco fornito con la forma modello. Passare da 3 a 9 o 10 cm può richiedere più torniture; poi il calzolaio rifà una prova.",
+t_sciage_h:"Il taglio",t_sciage:"Due tagli a scelta: il cuneo tradizionale, che libera la misura dal collo del piede, o il taglio «sistema», obliquo, dalla base del fiosso a metà collo del piede, che libera il tallone e poi l’avampiede.",
+t_bout_h:"La punta non tornita",t_bout:"Una forma esistente viene tornita sulle misure del cliente senza finire la punta. Il calzolaio le dà un’altra estetica mantenendo la calzata: più punte, la stessa comodità.",
+t_proto_h:"La prototipazione",t_proto:"Condotta con lo stilista, richiede molte ore di lavoro e di prove.",
+fo_cta_h:"Un progetto di forma?",fo_cta_p:"Rispondiamo con uno studio prima di accettare qualsiasi progetto.",
+at_h:"Il laboratorio di Troësnes",at_lead:"Un artigiano al servizio degli artigiani.",
+at_p1:"Nel sud dell’Aisne, vicino a Villers-Cotterêts, Hervé Brunelle ha creato il suo laboratorio nel 2005, per tramandare questo saper fare.",
+at_p2:"Fabbricare le forme era un vero problema per i laboratori artigiani. Ha adottato un metodo di lavoro diverso da quello dei laboratori di allora, per rispondere alle esigenze del calzolaio.",
+at_exp_h:"Esperienza",at_exp:"22 anni di riparazione calzature, ortopedia, stivali da equitazione e stivali di lusso, prima di dedicarsi alla forma da calzolaio e al tendiscarpe.",
+at_prize_h:"Premio e marchio",at_prize:"Premio dipartimentale della Société d’Encouragement aux Métiers d’Art nel 2005. Marchio Impresa del Patrimonio Vivente dal 2007, come ultimo artigiano di forme e tendiscarpe di Francia.",
+at_sup_h:"Trasmissione",at_sup:"Dal 2011 accompagna l’avvio del formista Christophe Varraud. Lavorano in stretta collaborazione e si completano.",
+at_sup_link:"Il sito di Christophe Varraud",
+ledger_h:"Il registro del laboratorio",
+l1:"anni nella calzatura prima di aprire il laboratorio",l2:"pezzi venduti ogni mese, in tutto il mondo",l3:"premio e marchio ricevuti",l4:"ore di lavoro a settimana, in media",v2:"da 30 a 35",
+at_quote:"Tramandare un saper fare tradizionale, esaltare la scarpa con il lavoro del legno.",
+cf_h:"Il mio tendiscarpe su misura",
+cf_p:"Lei sceglie, Hervé studia. La sua selezione viene allegata alla richiesta di studio; senza impegno.",
+cf_s1:"Per quali calzature?",o_shoes:"Scarpe",o_low:"Stivaletti, anfibi",o_boots:"Stivali",
+cf_s2:"Il modello",cf_key:"La chiave",o_key_soap:"Chiave a saponetta",o_key_rings:"Anelli",
+cf_boot_type:"Gli stivali",o_polo:"Polo",o_ride:"Equitazione",o_hunt:"Caccia",o_venery:"Caccia alla muta",o_zip:"Con cerniera",o_lace:"Con lacci",
+cf_galbe:"La forma del gambale",o_saumur:"Saumur",o_chantilly:"Chantilly",o_anglais:"Inglese",o_demi:"Mezzo inglese",o_galbe_na:"Secondo lo stivalaio",
+cf_s3:"La tinta",cf_s4:"La presa",o_handle:"Maniglia scavata",o_brass:"Anello in ottone lucido",o_chrome:"Anello cromato",
+cf_s5:"Il legno",o_hetre:"Faggio",o_aulne:"Ontano",o_erable:"Acero",
+cf_base:"Le sue calzature",o_base_last:"Su misura: il calzolaio ha la forma",o_base_finished:"Stivali finiti, anche già portati",o_base_unknown:"Non lo so",
+cf_sum:"La sua selezione",cf_send:"Allegare alla mia richiesta",cf_reset:"Ricominciare",
+cf_note:"Un tendiscarpe su misura per scarpe nasce dalla forma delle sue scarpe. Per stivali finiti, anche già portati, è possibile lo stesso.",
+cf_price:"Prezzo e tempi: dopo lo studio.",cf_na:"Secondo il modello di stivaletto",
+ct_h:"Contatti",ct_p:"Rispondiamo alle sue esigenze con uno studio prima di accettare qualsiasi progetto.",
+ct_phone:"Telefono",ct_mail:"E-mail",ct_addr:"Laboratorio",ct_map:"Vedere sulla mappa",
+fm_name:"Nome e cognome",fm_email:"E-mail",fm_who:"Lei è",o_pro:"Calzolaio, stivalaio o tecnico ortopedico",o_style:"Stilista o prototipista",o_private:"Privato",
+fm_subject:"La sua richiesta",o_s_tree:"Tendiscarpe",o_s_last:"Forme da calzolaio",o_s_other:"Altro",
+fm_msg:"Messaggio",fm_sel:"Selezione allegata",fm_remove:"Togliere",fm_send:"Inviare il messaggio",
+fm_ok:"Grazie, la sua richiesta è pronta. In questa bozza l’invio non è ancora collegato alla posta del laboratorio.",
+fm_err:"Indichi il nome, un’e-mail valida e il messaggio.",
+fm_rgpd:"I suoi dati servono solo per risponderle. Non vengono mai ceduti a terzi.",
+me_h:"Note legali",me_owner_h:"Editore",me_capital:"SAS con capitale di 1.500 €",me_webmaster:"Aggiornamento del sito: Hervé Brunelle.",
+me_creator_h:"Creazione del sito attuale",me_host_h:"Hosting",
+me_service_h:"Servizi",me_service:"Questo sito presenta il lavoro di Hervé Brunelle, maestro artigiano di forme e tendiscarpe dal 2005. Le informazioni sono le più precise possibile; possono cambiare e non sono esaustive.",
+me_ip_h:"Proprietà intellettuale",me_ip:"Testi, immagini e video appartengono a Hervé Brunelle. Ogni riproduzione, modifica o adattamento senza autorizzazione è vietato e costituisce contraffazione (articoli L.335-2 e seguenti del Codice francese della proprietà intellettuale).",
+me_links_h:"Link e cookie",me_links:"Il sito rimanda a siti partner o informativi di cui non controlla il contenuto. Possono essere installati cookie per facilitare la navigazione e misurare le visite; può disattivarli nel browser.",
+me_rgpd_h:"Dati personali",me_rgpd:"Le informazioni dei moduli servono solo per risponderle e non sono mai comunicate a terzi. Ha diritto di accesso, rettifica, cancellazione e opposizione (legge francese del 6 gennaio 1978): scriva a brunelle.herve@wanadoo.fr.",
+ft_line:"Forme da calzolaio tradizionali e tendiscarpe su misura per scarpe, stivaletti e stivali, a Troësnes (Aisne, Francia).",
+ft_pages:"Mappa del sito",ft_legal:"Note legali",ft_labels:"Marchi e stampa",ft_demo:"Bozza di nuovo sito proposta da Neovera Studio",
+ai_name:"Brunelle Conseil",ai_tag:"La aiuto a scegliere",ai_virtual:"Assistente virtuale",
+ai_hello:"Buongiorno, sono Brunelle Conseil, l’assistente virtuale del laboratorio. La aiuto a scegliere un tendiscarpe o una tinta, o a preparare una richiesta di forma.",
+ai_invite:"Un tendiscarpe, per quali scarpe? Posso orientarla.",ai_close:"Chiudere",ai_ph:"La sua domanda…",ai_send:"Inviare",
+q_travel:"Un tendiscarpe per viaggiare",q_luxe:"Il modello più bello",q_boots:"Per stivali da equitazione",q_wax:"Quale tinta scegliere?",q_last:"Sono calzolaio: una forma",q_price:"Prezzo e tempi",
+a_travel:"Per viaggiare scelga un modello scavato, quindi leggero: l’Aigoual (avampiede scavato e aerato), oppure il Brocéliande, il Loudéac o il Tronçais, a cerniera. Il Boscodon, non scavato, è meglio a casa.",
+a_luxe:"Il Retz: tre pezzi, chiave a saponetta, il nostro modello più bello. È presentato in mogano.",
+a_boots:"Per equitazione, caccia o caccia alla muta, il tendistivali dà anche la forma del gambale: Saumur, Chantilly, inglese o mezzo inglese. Si tornisce sulle misure dello stivalaio, o per stivali finiti, anche già portati.",
+a_wax:"Ventitré cere, dall’incolore al viola. Per una scarpa classica: noce, mogano, ciliegio o rovere. Sono cere idrosolubili, mai vernici, perché il legno assorba l’umidità.",
+a_last:"Hervé tornisce forme in faggio o carpino: creazione, messa a punto della calzata, cambio di tacco, punta non tornita, taglio a cuneo o «sistema», prototipi. Niente forme ferrate per il montaggio a semenze.",
+a_price:"Prezzi e tempi non sono pubblicati: ogni progetto inizia con uno studio. La cosa più semplice: chiamare il +33 3 23 96 97 04 o scrivere a brunelle.herve@wanadoo.fr.",
+a_custom:"Un tendiscarpe su misura nasce dalla forma delle sue scarpe, che conserva il suo calzolaio. Per stivali finiti, anche già portati, è possibile lo stesso.",
+a_bottines:"Per gli stivaletti (Balmoral, Derby, Grand Cambré, Jodhpur): un tendiscarpe in quattro parti, con chiave a saponetta o anelli. L’Ardennes non è consigliato per gli stivaletti.",
+a_wood:"Soprattutto faggio, anche ontano o acero; mai resinose. Le forme da calzolaio sono in faggio o carpino.",
+a_contact:"Laboratorio: 5 place de la Mairie, 02460 Troësnes, Francia. Telefono: +33 3 23 96 97 04. E-mail: brunelle.herve@wanadoo.fr.",
+a_hours:"Gli orari non sono indicati sul sito e non voglio darle un orario sbagliato. Chiami prima di passare: +33 3 23 96 97 04.",
+a_ship:"Il laboratorio vende da 30 a 35 pezzi al mese in tutto il mondo. Le condizioni di spedizione non sono pubblicate: le chieda durante lo studio.",
+a_epv:"Hervé Brunelle ha ricevuto il premio dipartimentale della Société d’Encouragement aux Métiers d’Art nel 2005, poi il marchio Impresa del Patrimonio Vivente nel 2007, come ultimo artigiano di forme e tendiscarpe di Francia.",
+a_varraud:"Dal 2011 Hervé accompagna il formista Christophe Varraud: lavorano insieme e si completano.",
+a_unknown:"Non so rispondere con certezza. Hervé le risponderà direttamente: +33 3 23 96 97 04 o brunelle.herve@wanadoo.fr.",
+go_cf:"Comporre il mio tendiscarpe",go_contact:"Richiedere uno studio",go_trees:"Vedere i modelli",go_lasts:"Vedere le forme",
+close:"Chiudere",prev:"Foto precedente",next:"Foto successiva",
+kw:{travel:["viaggi","leggero","valigia"],luxe:["più bello","lusso","regalo","migliore"],boots:["stival","equitazione","cavallo","caccia","polo"],wax:["tinta","colore","cera","vernice"],last:["forma da","calzolaio","tacco","prototip"],price:["prezzo","costo","costa","quanto","tempi"],custom:["su misura","misura","taglia"],bottines:["stivalett","anfibi","jodhpur","derby","balmoral"],wood:["legno","faggio","ontano","acero","carpino"],contact:["indirizzo","telefono","e-mail","contatt","dove"],hours:["orari","aperto","chiuso","visita"],ship:["spedizion","estero","internazionale","inviare"],epv:["marchio","patrimonio","premio"],varraud:["varraud","christophe"]}
+};
+T.ja={
+lang_name:"日本語",lang_label:"言語",skip:"本文へ",
+nav_home:"ホーム",nav_trees:"シューツリー",nav_lasts:"木型（ラスト）",nav_atelier:"工房",nav_bespoke:"オーダーメイド",nav_contact:"お問い合わせ",
+brand_sub:"木型とシューツリー · トロエーヌ",
+cta_study:"ご相談・お見積り",cta_compose:"シューツリーを選ぶ",cta_call:"電話する",
+hero_h:"フランス最後の木型・シューツリー職人。",
+hero_p:"2005年からエーヌ県トロエーヌで、ブナ材を削り出して作る木型（ラスト）とオーダーメイドのシューツリー。",
+hero_tag:"無形文化財企業（EPV）· 伝統工芸マイスター",
+hero_cap:"レッツ：3ピース、ソープキー、マホガニー仕上げ。",
+rings_h:"季節をかさねて",
+rings_p:"ブナは季節ごとに年輪を刻みます。この年輪は、工房の歩んだ年月です。",
+rings_hint:"年をタップすると、木の中に印がつきます。",
+y_before:"靴の世界で22年：靴修理、整形靴、乗馬ブーツ、高級ブーツ。",
+y2005:"エルヴェ・ブリュネル、ヴィレール＝コトレ近くのトロエーヌに工房を開く。工芸奨励協会（SEMA）県賞を受賞。",
+y2007:"フランス最後の木型・シューツリー職人として、無形文化財企業（EPV）に認定。",
+y2011:"木型職人クリストフ・ヴァロとの協働が始まる。",
+ynow:"月に30〜35点を製作し、世界中へ届けています。",
+yr_before:"2005年以前",yr_now:"現在",
+rings_cta:"工房をのぞく",
+two_h:"ふたつの仕事、ひとつの木",
+lasts_h:"木型（ラスト）",
+lasts_p:"ビスポーク靴職人、整形靴技術者、デザイナー、試作担当の方へ。靴が生まれる木型を、ブナまたはシデで削り出します。",
+lasts_cta:"木型を見る",
+trees_h:"トラベル用シューツリー",
+trees_p:"短靴、ブーツ、ワークブーツ、ロングブーツに。シューツリーは靴のボリュームとラインを保ち、長持ちさせます。",
+trees_cta:"シューツリーを見る",
+forests_h:"8つのシューツリー、8つの森",
+forests_p:"どのモデルにも森の名前がついています。いちばんシンプルなボスコドンから、いちばん美しいレッツまで。",
+forests_cta:"8モデルを比べる",
+wax_h:"23色のワックス",
+wax_p:"無色からバイオレットまで、すべて水溶性ワックスで、ニスは使いません。木が靴の湿気を吸い続けるためです。",
+wax_cta:"色を試す",
+video_h:"仕事の様子を動画で",
+video_p:"旋盤の前で、工房の数分間。",
+video_play:"動画を再生",video_note:"動画はYouTubeで再生されます。",
+press_h:"認定とメディア",
+press_epv:"無形文化財企業（EPV）",
+press_cma:"伝統工芸マイスター · オー＝ド＝フランス手工業会議所",
+press_region:"オー＝ド＝フランス地域圏：「最後の木型・シューツリー職人」",
+press_f3:"France 3 オー＝ド＝フランス：手仕事の道をゆくエーヌ県の職人ふたり",
+strip_h:"あなたの靴について、お話しください",
+strip_p:"どの仕事も、お引き受けの前にまず検討から始めます。",
+tr_h:"シューツリー",
+tr_intro:"ブナ材、ときにハンノキやカエデ。針葉樹は使いません。オーダーメイドのシューツリーは、靴を作った木型から作るので、靴にぴったり収まります。",
+sub_shoes:"短靴",sub_low:"ブーツ・ワークブーツ",sub_boots:"ロングブーツ",sub_wax:"仕上げ色",
+shoes_h:"短靴用シューツリー",
+shoes_p:"トラベル用シューツリーとも呼ばれます。カットとくり抜きはご希望で選べます。",
+m_aigoual:"中底ブロックを切り出したあと前足部をくり抜き、元に戻して通気用の穴をあけます。",
+m_ardennes:"後部にカーブした持ち手を含むカット。ブーツには不向きです。",
+m_boscodon:"いちばんシンプルなモデル。くり抜きがないぶん重く、旅よりも家に置くのに向きます。ボリュームは他と同じです。",
+m_broceliande:"もっともクラシックなカットのヒンジ式。甲のくり抜きで繊細な印象に。",
+m_loudeac:"ヒンジ式で、腰まわりのバランスがよいモデル。着色しないくり抜きが土踏まずの中ほどまで続きます。真鍮リング付き。",
+m_retz:"3ピース、ソープキー。美しいものを愛する方のための、いちばん美しいモデルです。",
+m_sherwood:"アルデンヌのかかとに穴をあけたバリエーション。",
+m_troncais:"ヒンジ式で、丸みのあるかかと。やわらかなライン。",
+m_shown:"写真の色：{c}",m_photos:"写真{n}枚",m_choose:"このモデルを選ぶ",m_open:"写真を見る",
+low_h:"ブーツ用シューツリー",
+low_p:"すべてブナ材の手作りで、ブーツのモデルに合わせた曲線に仕上げます。後部、キー、前部、ほぞ継ぎの足部の4パーツ。",
+low_p2:"バルモラル、ダービー、グラン・カンブレ、ジョッパー。同じワックスで仕上げ、ソープキーかリングを選べます。",
+boots_h:"ロングブーツ用ツリー",boots_sub:"ポロ、乗馬、狩猟、ヴェヌリー（猟犬狩り）",
+boots_p:"多くはブーツより先に、靴職人の採寸をもとに削り出し、筒の成形に使います。完成品のブーツ、履き込んだブーツにも作れます。",
+b_func_h:"役割",b_func:"ブーツの元の寸法を保ったまま形を支えます。寿命と美しさはそこで決まります。",
+b_trans_h:"持ち運び",b_trans:"中央のキーの延長にくり抜いた持ち手で、ブーツとツリーをまとめて運べます。磨き真鍮またはクロームのリングにも替えられます。",
+b_fab_h:"製作",b_fab:"ブーツの種類に合わせて：レースアップ、ファスナー、ポロ、乗馬、狩猟、ヴェヌリー。乗馬・狩猟用は筒の形も決めます：ソミュール、シャンティイ、イングリッシュ、セミイングリッシュ。",
+wax_page_h:"仕上げ色を選ぶ",
+wax_page_p:"無色から伝統的な木の色、鮮やかな色まで。ニスではなく水溶性ワックスなので、湿気を吸うというシューツリー本来の役割を保ちます。",
+f_all:"すべて",f_noyer:"ウォルナット・マホガニー",f_merisier:"チェリー・オーク",f_sienne:"シエナ・オーカー",f_jaune:"イエロー・レッド",f_bleu:"バイオレット・ブルー・グリーン",f_noir:"ブラック・グレー",
+c_incolore:"無色",c_blanc:"ホワイト",c_noyer_fonce:"ダークウォルナット",c_noyer:"ウォルナット",c_acajou:"マホガニー",c_merisier:"チェリー",c_chene_fonce:"ダークオーク",c_chene_moyen:"ミディアムオーク",c_chene_clair:"ライトオーク",c_sienne_calcinee:"バーントシエナ",c_sienne_naturelle:"ローシエナ",c_ocre:"オーカー",c_jaune:"イエロー",c_orange:"オレンジ",c_rouge:"レッド",c_rouge_oxyde:"オキサイドレッド",c_bordeau:"ボルドー",c_violet:"バイオレット",c_bleu:"ブルー",c_vert:"グリーン",c_vert_olive:"オリーブグリーン",c_vert_tilleul:"ライムグリーン",c_vert_moutarde:"マスタードグリーン",c_noir:"ブラック",c_gris:"グレー",
+fo_h:"木型（ラスト）",
+fo_intro:"技術的な理由と自分の選択から、樹脂ではなく木を削っています。ブナとシデは職人の要求によく応え、手作業にも向いています。木型はパンタグラフ旋盤で複製し、ワイズとサイズを展開します。",
+fo_what_h:"木型とは",fo_what:"靴職人や整形靴技術者が、仕上がりの靴を吊り込むための型です。",
+fo_no:"技術的な理由から、釘打ち吊り込み用の鉄板付き木型は製作していません。",
+fo_create_h:"木型の創作",fo_create:"見た目やフィットだけではありません。釣り合いのとれた立ち姿と、用途に合ったボリュームが必要です。",
+fo_fit_h:"フィットの調整",fo_fit:"ビスポークでいちばん繊細な部分。靴職人と相談しながら、木型のフィットを保ったままデザインを変えることができます。",
+fo_sty_h:"デザイナー・試作担当の方と",fo_sty:"ご要望をよく伺い、これまでの経験から最終製品にもっとも合う木型へ導きます。",
+fo_types_h:"木型の4つの仕事",
+t_cambrure_h:"ヒール高の変更",t_cambrure:"婦人用の木型で、モデル木型に付属のヒールをもとに行います。3cmから9〜10cmへ変えるには何度か削り直しが必要なこともあり、その後、靴職人が仮縫い靴を作り直します。",
+t_sciage_h:"木型のカット",t_sciage:"2種類から選べます。甲から寸法を逃がす伝統的なくさび型と、土踏まずの付け根から甲の中ほどへ斜めに切る「システム」カット。後者はかかと、次に前足部の順に抜けます。",
+t_bout_h:"つま先を削らない木型",t_bout:"既存の木型をお客様の寸法に合わせて削り、つま先だけ仕上げずに残します。靴職人はフィットを保ったまま別のデザインを作れます。つま先はいくつでも、履き心地は同じ。",
+t_proto_h:"試作",t_proto:"デザイナーとともに進め、多くの作業時間と試し履きを重ねます。",
+fo_cta_h:"木型のご相談は？",fo_cta_p:"お引き受けの前に、まず検討のうえお返事します。",
+at_h:"トロエーヌの工房",at_lead:"職人のための職人。",
+at_p1:"エルヴェ・ブリュネルは2005年、エーヌ県南部、ヴィレール＝コトレ近くに工房を開き、この技を受け継いできました。",
+at_p2:"木型づくりは小さな工房にとって大きな悩みでした。靴職人の要求に応えるため、当時の工房とは違う仕事のやり方を選びました。",
+at_exp_h:"経歴",at_exp:"靴修理、整形靴、乗馬ブーツ、高級ブーツで22年を過ごしたのち、木型とシューツリーに専念。",
+at_prize_h:"受賞と認定",at_prize:"2005年に工芸奨励協会（SEMA）県賞。2007年から、フランス最後の木型・シューツリー職人として無形文化財企業（EPV）に認定。",
+at_sup_h:"技の継承",at_sup:"2011年から木型職人クリストフ・ヴァロの独立を支えています。ふたりは密に協力し、互いを補い合っています。",
+at_sup_link:"クリストフ・ヴァロのサイト",
+ledger_h:"工房の記録",
+l1:"工房を開く前の、靴の世界での年数",l2:"毎月の販売数（世界中へ）",l3:"受賞と認定",l4:"週あたりの平均作業時間",v2:"30〜35",
+at_quote:"伝統の技を受け継ぎ、木の仕事で靴をいっそう美しく。",
+cf_h:"わたしのオーダーメイド・シューツリー",
+cf_p:"お選びいただいた内容をもとに、エルヴェが検討します。選択内容はご相談に添付され、この時点で契約にはなりません。",
+cf_s1:"どの靴に？",o_shoes:"短靴",o_low:"ブーツ・ワークブーツ",o_boots:"ロングブーツ",
+cf_s2:"モデル",cf_key:"キー",o_key_soap:"ソープキー",o_key_rings:"リング",
+cf_boot_type:"ブーツの種類",o_polo:"ポロ",o_ride:"乗馬",o_hunt:"狩猟",o_venery:"ヴェヌリー",o_zip:"ファスナー付き",o_lace:"レースアップ",
+cf_galbe:"筒の形",o_saumur:"ソミュール",o_chantilly:"シャンティイ",o_anglais:"イングリッシュ",o_demi:"セミイングリッシュ",o_galbe_na:"靴職人の判断で",
+cf_s3:"仕上げ色",cf_s4:"持ち手",o_handle:"くり抜き持ち手",o_brass:"磨き真鍮リング",o_chrome:"クロームリング",
+cf_s5:"木材",o_hetre:"ブナ",o_aulne:"ハンノキ",o_erable:"カエデ",
+cf_base:"お手持ちの靴",o_base_last:"オーダーメイド：靴職人が木型を保管",o_base_finished:"完成品のブーツ（履き込んだものも可）",o_base_unknown:"わからない",
+cf_sum:"選択内容",cf_send:"ご相談に添付する",cf_reset:"最初から",
+cf_note:"短靴用のオーダーメイド・シューツリーは、その靴の木型から作ります。完成品のブーツ（履き込んだものも）にも対応できます。",
+cf_price:"価格と納期：検討のあとにお知らせします。",cf_na:"ブーツのモデルによる",
+ct_h:"お問い合わせ",ct_p:"お引き受けの前に、まず検討のうえお返事します。",
+ct_phone:"電話",ct_mail:"メール",ct_addr:"工房",ct_map:"地図で見る",
+fm_name:"お名前",fm_email:"メールアドレス",fm_who:"ご職業",o_pro:"靴職人・修理職人・整形靴技術者",o_style:"デザイナー・試作担当",o_private:"個人のお客様",
+fm_subject:"ご用件",o_s_tree:"シューツリー",o_s_last:"木型",o_s_other:"その他",
+fm_msg:"メッセージ",fm_sel:"添付された選択内容",fm_remove:"削除",fm_send:"メッセージを送信",
+fm_ok:"ありがとうございます。送信の準備ができました。このデモ版では、工房のメールとはまだつながっていません。",
+fm_err:"お名前、正しいメールアドレス、メッセージをご記入ください。",
+fm_rgpd:"いただいた情報はお返事のためだけに使い、第三者に渡すことはありません。",
+me_h:"法的情報",me_owner_h:"運営者",me_capital:"SAS（資本金1,500ユーロ）",me_webmaster:"サイト更新：エルヴェ・ブリュネル",
+me_creator_h:"現行サイトの制作",me_host_h:"ホスティング",
+me_service_h:"サービス",me_service:"このサイトは、2005年から木型・シューツリーのマイスター職人として活動するエルヴェ・ブリュネルの仕事を紹介しています。情報はできるかぎり正確に記載していますが、変更されることがあり、すべてを網羅するものではありません。",
+me_ip_h:"知的財産",me_ip:"文章、画像、動画はエルヴェ・ブリュネルに帰属します。無断での複製、改変、翻案は禁止されており、権利侵害となります（フランス知的財産法典L.335-2条以下）。",
+me_links_h:"リンクとクッキー",me_links:"本サイトは、内容を管理していない提携サイトや情報サイトへリンクしています。閲覧を快適にし訪問数を計測するためクッキーを使う場合があります。ブラウザで無効にできます。",
+me_rgpd_h:"個人情報",me_rgpd:"フォームの情報はお返事のためだけに使い、第三者には提供しません。アクセス、訂正、削除、異議申し立ての権利があります（1978年1月6日のフランス法）。brunelle.herve@wanadoo.fr までご連絡ください。",
+ft_line:"エーヌ県トロエーヌで、伝統的な木型と、短靴・ブーツ・ロングブーツ用のオーダーメイド・シューツリーを製作しています。",
+ft_pages:"サイトマップ",ft_legal:"法的情報",ft_labels:"認定とメディア",ft_demo:"Neovera Studio による新サイトのデモ",
+ai_name:"Brunelle Conseil",ai_tag:"お選びのお手伝い",ai_virtual:"バーチャルアシスタント",
+ai_hello:"こんにちは。工房のバーチャルアシスタント、Brunelle Conseil です。シューツリーや仕上げ色の選び方、木型のご相談の準備をお手伝いします。",
+ai_invite:"どんな靴のシューツリーをお探しですか？ご案内します。",ai_close:"閉じる",ai_ph:"ご質問をどうぞ…",ai_send:"送信",
+q_travel:"旅行用のシューツリー",q_luxe:"いちばん美しいモデル",q_boots:"乗馬ブーツ用",q_wax:"色の選び方",q_last:"靴職人です：木型について",q_price:"価格と納期",
+a_travel:"旅行には、くり抜いた軽いモデルを。前足部をくり抜き通気させたエグアル、ヒンジ式のブロセリアンド、ルデアック、トロンセがおすすめです。くり抜きのないボスコドンは家置き向きです。",
+a_luxe:"レッツです。3ピース、ソープキーの、いちばん美しいモデル。写真はマホガニー仕上げです。",
+a_boots:"乗馬・狩猟・ヴェヌリー用は、筒の形も決めます：ソミュール、シャンティイ、イングリッシュ、セミイングリッシュ。靴職人の採寸から、または完成品のブーツ（履き込んだものも）から作ります。",
+a_wax:"無色からバイオレットまで23色。クラシックな靴には、ウォルナット、マホガニー、チェリー、オークを。木が湿気を吸えるよう、ニスではなく水溶性ワックスです。",
+a_last:"エルヴェはブナまたはシデで木型を削ります。新規製作、フィット調整、ヒール高の変更、つま先を削らない木型、くさび型・「システム」カット、試作。釘打ち用の鉄板付き木型は作っていません。",
+a_price:"価格と納期は公開していません。どの仕事も検討から始まります。お電話（+33 3 23 96 97 04）か、brunelle.herve@wanadoo.fr へのメールがいちばん確実です。",
+a_custom:"短靴用のオーダーメイド・シューツリーは、靴職人が保管するその靴の木型から作ります。完成品のブーツ（履き込んだものも）にも対応できます。",
+a_bottines:"ブーツ（バルモラル、ダービー、グラン・カンブレ、ジョッパー）には、ソープキーかリングの4パーツ構成を。アルデンヌはブーツには向きません。",
+a_wood:"主にブナ、ほかにハンノキやカエデ。針葉樹は使いません。木型はブナまたはシデです。",
+a_contact:"工房：5 place de la Mairie, 02460 Troësnes, France。電話：+33 3 23 96 97 04。メール：brunelle.herve@wanadoo.fr",
+a_hours:"営業時間はサイトに記載がなく、まちがった時間をお伝えしたくありません。お越しの前にお電話ください：+33 3 23 96 97 04。",
+a_ship:"工房は世界中へ月に30〜35点を販売しています。発送条件は公開していないので、ご相談のときにお尋ねください。",
+a_epv:"エルヴェ・ブリュネルは2005年に工芸奨励協会（SEMA）県賞を受け、2007年にフランス最後の木型・シューツリー職人として無形文化財企業（EPV）に認定されました。",
+a_varraud:"2011年から、エルヴェは木型職人クリストフ・ヴァロを支え、ともに仕事をしています。",
+a_unknown:"確かなお答えができません。エルヴェが直接お返事します：+33 3 23 96 97 04、または brunelle.herve@wanadoo.fr。",
+go_cf:"シューツリーを選ぶ",go_contact:"ご相談・お見積り",go_trees:"モデルを見る",go_lasts:"木型を見る",
+close:"閉じる",prev:"前の写真",next:"次の写真",
+kw:{travel:["旅","軽い","出張"],luxe:["美しい","高級","贈り物","ギフト","レッツ"],boots:["ロングブーツ","乗馬","馬","狩猟","ポロ"],wax:["色","ワックス","ニス","仕上げ"],last:["木型","ラスト","靴職人","ヒール","試作"],price:["価格","値段","料金","いくら","納期"],custom:["オーダー","サイズ","寸法"],bottines:["ショートブーツ","ワークブーツ","ジョッパー","ダービー","バルモラル"],wood:["木材","ブナ","カエデ","ハンノキ","シデ"],contact:["住所","電話","メール","連絡","場所"],hours:["営業時間","開いて","見学","訪問"],ship:["発送","配送","海外","日本"],epv:["認定","文化財","受賞","賞"],varraud:["ヴァロ","クリストフ","varraud"]}
+};
+
+const I=id=>'img/'+id+'.jpg';
+const TEL='03 23 96 97 04',TELH='tel:+33323969704',MAIL='brunelle.herve@wanadoo.fr';
+const LANGS=['fr','en','es','de','it','ja'].filter(l=>T[l]);
+const MODELES=[
+ {id:'aigoual',nom:'Aigoual',c:'noyer',n:4},{id:'ardennes',nom:'Ardennes',c:'incolore',n:4},{id:'boscodon',nom:'Boscodon',c:'chene_clair',n:5},
+ {id:'broceliande',nom:'Brocéliande',c:'merisier',n:3},{id:'loudeac',nom:'Loudéac',c:'chene_moyen',n:3},{id:'retz',nom:'Retz',c:'acajou',n:5},
+ {id:'sherwood',nom:'Sherwood',c:'blanc',n:4},{id:'troncais',nom:'Tronçais',c:'chene_fonce',n:4}];
+const CIRES=[['noyer-fonce','noyer'],['noyer','noyer'],['acajou','noyer'],['merisier','merisier'],['chene-fonce','merisier'],['chene-moyen','merisier'],['chene-clair','merisier'],['sienne-calcinee','sienne'],['sienne-naturelle','sienne'],['ocre','sienne'],['jaune','jaune'],['orange','jaune'],['rouge','jaune'],['rouge-oxyde','jaune'],['bordeau','jaune'],['violet','bleu'],['bleu','bleu'],['vert','bleu'],['vert-olive','bleu'],['vert-tilleul','bleu'],['vert-moutarde','bleu'],['noir','noir'],['gris','noir']];
+const BOTTINES=['bottine-femme-1','bottine-femme-2','bottine-femme-3','brodequin-1','brodequin-3','brodequin-4','bottine-homme-1','bottine-homme-2','bottine-poignee'];
+const BOTTES=['botte-1','botte-2','botte-3','botte-5','botte-4','botte-6'];
+const PRESSE=[['entreprise-du-patrimoine-vivant','press_epv','http://www.patrimoine-vivant.com/fr/showcompany/6129'],['maitre-artisan-hauts-de-france','press_cma','https://www.cma-hautsdefrance.fr'],['region-hauts-de-france','press_region','https://www.hautsdefrance.fr/herve-brunelle-le-dernier-des-formier-embauchoiristes/'],['france3','press_f3','https://france3-regions.francetvinfo.fr/hauts-de-france/aisne/deux-artisans-aisne-honneur-serie-route-artisanat-1659550.html']];
+let L='fr';try{const s=localStorage.getItem('hb_lang');if(LANGS.includes(s))L=s}catch(e){}
+const t=(k,v)=>{let s=(T[L]&&T[L][k])!=null?T[L][k]:T.fr[k];if(s==null)return k;if(v)for(const x in v)s=s.split('{'+x+'}').join(v[x]);return s};
+const cn=k=>t('c_'+k.replace(/-/g,'_'));
+const esc=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const ICO={tel:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M5 3.5h3.2l1.6 4.2-2.1 1.3a11.5 11.5 0 0 0 7.3 7.3l1.3-2.1 4.2 1.6V19a1.6 1.6 0 0 1-1.7 1.6A16.6 16.6 0 0 1 3.4 5.2 1.6 1.6 0 0 1 5 3.5z"/></svg>',
+mail:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><rect x="3" y="5.5" width="18" height="13" rx="1.5"/><path d="m3.5 6.5 8.5 6.5 8.5-6.5"/></svg>',
+fleche:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M4 12h15m-5-5 5 5-5 5"/></svg>',
+play:'<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5.5v13l10.5-6.5z"/></svg>',
+x:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18"/></svg>',
+g:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="m15 5-7 7 7 7"/></svg>',
+d:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="m9 5 7 7-7 7"/></svg>',
+globe:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.6 2.8 3.8 5.8 3.8 9s-1.2 6.2-3.8 9c-2.6-2.8-3.8-5.8-3.8-9S9.4 5.8 12 3z"/></svg>',
+embauchoir:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M2.5 16.5c0-2 2.2-3.2 5.6-3.9l4.6-1 .9-3.6h3.6c1.2 0 1.9.8 1.9 1.9v1.4l1.6 1.1v3.2c0 1-.8 1.8-1.8 1.8H4.4c-1 0-1.9-.4-1.9-.9z"/><path d="M14 8v8.5"/></svg>'};
+const PAGES=['accueil','embauchoirs','formes','atelier','sur-mesure','contact','mentions'];
+const NAVK={accueil:'nav_home',embauchoirs:'nav_trees',formes:'nav_lasts',atelier:'nav_atelier','sur-mesure':'nav_bespoke',contact:'nav_contact'};
+let cur='accueil';
+/* ---------- gabarits ---------- */
+function coordBtns(){return `<div class="coord"><a class="btn laiton" href="${TELH}">${ICO.tel}${t('cta_call')} · ${TEL}</a><a class="btn trait" href="#contact" data-go="contact">${ICO.mail}${t('cta_study')}</a></div>`}
+function pAccueil(){
+ return `<div class="hero"><div class="wrap grid">
+ <div><h1>${t('hero_h')}</h1><p class="lead">${t('hero_p')}</p>
+ <div class="acts"><a class="btn plein" href="#sur-mesure" data-go="sur-mesure">${t('cta_compose')}${ICO.fleche}</a><a class="btn trait" href="#contact" data-go="contact">${t('cta_study')}</a></div>
+ <div class="tag"><img src="${I('l-entreprise-du-patrimoine-vivant')}" alt="${esc(t('press_epv'))}" width="118" height="59"><img src="${I('l-maitre-artisan-hauts-de-france')}" alt="${esc(t('press_cma'))}" width="118" height="59"><span class="cote">${t('hero_tag')}</span></div></div>
+ <figure><img src="${I('m-retz')}" alt="${esc(t('hero_cap'))}" width="960" height="721" fetchpriority="high"><figcaption>${t('hero_cap')}</figcaption></figure>
+ </div></div>
+ <section class="band noyer cernes" aria-labelledby="h-cernes"><div class="wrap grid">
+  <div class="disque" id="disque"></div>
+  <div><h2 id="h-cernes">${t('rings_h')}</h2><p class="lead" style="margin-top:.6em">${t('rings_p')}</p>
+  <ul class="annees" id="annees">${[['before','yr_before','y_before'],['2005','2005','y2005'],['2007','2007','y2007'],['2011','2011','y2011'],['now','yr_now','ynow']].map(([k,a,b],i)=>`<li><button type="button" data-an="${k}" aria-pressed="${i==4}"><span class="an">${/^\d/.test(a)?a:t(a)}</span><span>${t(b)}</span></button></li>`).join('')}</ul>
+  <a class="btn trait" href="#atelier" data-go="atelier">${t('rings_cta')}${ICO.fleche}</a></div>
+ </div></section>
+ <section class="band" aria-labelledby="h-duo"><div class="wrap"><h2 id="h-duo">${t('two_h')}</h2>
+  <div class="duo"><article><img src="${I('f-forme-montage-sciage-systeme')}" alt="${esc(t('t_sciage_h'))}" width="960" height="721"><h3>${t('lasts_h')}</h3><p>${t('lasts_p')}</p><a href="#formes" data-go="formes">${t('lasts_cta')} →</a></article>
+  <article><img src="${I('b-bottine-homme-1')}" alt="${esc(t('low_h'))}" width="728" height="500"><h3>${t('trees_h')}</h3><p>${t('trees_p')}</p><a href="#embauchoirs" data-go="embauchoirs">${t('trees_cta')} →</a></article></div>
+ </div></section>
+ <section class="band gris" aria-labelledby="h-forets"><div class="wrap"><h2 id="h-forets">${t('forests_h')}</h2><p class="lead" style="margin-top:.5em">${t('forests_p')}</p>
+  <div class="forets">${MODELES.map(m=>`<button class="foret" type="button" data-modele="${m.id}"><img src="${I('m-'+m.id)}" alt="" width="960" height="721"><b>${m.nom}</b><span>${t('m_shown',{c:cn(m.c)})}</span></button>`).join('')}</div>
+  <p style="margin-top:26px"><a class="btn plein" href="#embauchoirs" data-go="embauchoirs">${t('forests_cta')}${ICO.fleche}</a></p>
+ </div></section>
+ <section class="band" aria-labelledby="h-cires"><div class="wrap"><h2 id="h-cires">${t('wax_h')}</h2><p class="lead" style="margin-top:.5em">${t('wax_p')}</p>
+  <div class="cires">${CIRES.map(([c])=>`<button class="cire" type="button" data-cire="${c}" aria-pressed="false"><img src="${I('c-'+c)}" alt="" width="420" height="401">${cn(c)}</button>`).join('')}</div>
+  <a class="btn plein" href="#sur-mesure" data-go="sur-mesure">${t('wax_cta')}${ICO.fleche}</a>
+ </div></section>
+ <section class="band noyer" aria-labelledby="h-video"><div class="wrap"><div class="deux"><div><h2 id="h-video">${t('video_h')}</h2></div><p class="lead">${t('video_p')}</p></div>
+  ${videoBlock()}</div></section>
+ <section class="band" aria-labelledby="h-presse"><div class="wrap"><h2 id="h-presse">${t('press_h')}</h2>${presse()}</div></section>
+ <section class="band copeau" aria-labelledby="h-strip"><div class="wrap strip"><div><h2 id="h-strip">${t('strip_h')}</h2><p style="margin:.6em 0 0">${t('strip_p')}</p></div>${coordBtns()}</div></section>`}
+function videoBlock(){return `<div class="video" id="video"><img src="${I('s-slide-herve-brunelle-formier-embauchoiriste')}" alt="" width="1600" height="900"><button class="btn laiton" type="button" id="playv">${ICO.play}${t('video_play')}</button></div><p class="muted" style="font-size:.85rem;margin-top:10px">${t('video_note')}</p>`}
+function presse(){return `<div class="presse">${PRESSE.map(([i,k,u])=>`<a href="${u}" target="_blank" rel="noopener"><img src="${I('l-'+i)}" alt="" width="118" height="59"><span>${t(k)}</span></a>`).join('')}</div>`}
+function pEmbauchoirs(){
+ return `<div class="phead"><div class="wrap"><h1>${t('tr_h')}</h1><p class="lead">${t('tr_intro')}</p>
+ <nav class="sousnav" aria-label="${esc(t('tr_h'))}"><a href="#souliers" data-ancre="souliers">${t('sub_shoes')}</a><a href="#bottines" data-ancre="bottines">${t('sub_low')}</a><a href="#bottes" data-ancre="bottes">${t('sub_boots')}</a><a href="#teintes" data-ancre="teintes">${t('sub_wax')}</a></nav></div></div>
+ <section class="band" id="souliers" style="padding-top:30px"><div class="wrap"><h2>${t('shoes_h')}</h2><p class="lead" style="margin-top:.5em">${t('shoes_p')}</p>
+ <div class="modeles">${MODELES.map(m=>{const g=[...Array(m.n)].map((_,i)=>`g-${m.id}-${i+1}`);return `<article class="modele" id="m-${m.id}"><div class="vues"><img class="principale" src="${I('m-'+m.id)}" alt="${esc(m.nom)}" width="960" height="721" data-lb="${['m-'+m.id,...g].join(',')}" data-i="0">${g.map((x,i)=>`<button type="button" data-lb="${['m-'+m.id,...g].join(',')}" data-i="${i+1}" aria-label="${esc(m.nom)} ${i+1}/${m.n}"><img src="${I(x)}" alt="" width="960" height="657"></button>`).join('')}</div>
+ <div><h3>${m.nom}</h3><span class="cote">${t('m_shown',{c:cn(m.c)})} · ${t('m_photos',{n:m.n+1})}</span><p>${t('m_'+m.id)}</p><a class="btn plein" href="#sur-mesure" data-go="sur-mesure" data-pre="${m.id}">${t('m_choose')}${ICO.fleche}</a></div></article>`}).join('')}</div></div></section>
+ <section class="band gris" id="bottines"><div class="wrap"><div class="deux"><div><h2>${t('low_h')}</h2></div><div><p>${t('low_p')}</p><p>${t('low_p2')}</p></div></div>
+ <div class="galerie">${BOTTINES.map((b,i)=>`<button type="button" data-lb="${BOTTINES.map(x=>'b-'+x).join(',')}" data-i="${i}" aria-label="${esc(t('low_h'))} ${i+1}/${BOTTINES.length}"><img src="${I('b-'+b)}" alt=""></button>`).join('')}</div></div></section>
+ <section class="band" id="bottes"><div class="wrap"><div class="deux"><div><h2>${t('boots_h')}</h2><p class="cote" style="margin-top:12px;color:var(--acajou)">${t('boots_sub')}</p></div><p>${t('boots_p')}</p></div>
+ <div class="galerie">${BOTTES.map((b,i)=>`<button type="button" data-lb="${BOTTES.map(x=>'b-'+x).join(',')}" data-i="${i}" aria-label="${esc(t('boots_h'))} ${i+1}/${BOTTES.length}"><img src="${I('b-'+b)}" alt=""></button>`).join('')}</div>
+ <div class="trio"><div><h3>${t('b_func_h')}</h3><p>${t('b_func')}</p></div><div><h3>${t('b_trans_h')}</h3><p>${t('b_trans')}</p></div><div><h3>${t('b_fab_h')}</h3><p>${t('b_fab')}</p></div></div></div></section>
+ <section class="band gris" id="teintes"><div class="wrap"><h2>${t('wax_page_h')}</h2><p class="lead" style="margin-top:.5em">${t('wax_page_p')}</p>
+ <div class="filtres" role="group">${['all','noyer','merisier','sienne','jaune','bleu','noir'].map((f,i)=>`<button type="button" data-filtre="${f}" aria-pressed="${i==0}">${t('f_'+f)}</button>`).join('')}</div>
+ <div class="cires" id="nuancier">${CIRES.map(([c,f],i)=>`<button class="cire" type="button" data-f="${f}" data-lb="${CIRES.map(x=>'c-'+x[0]).join(',')}" data-i="${i}"><img src="${I('c-'+c)}" alt="" width="420" height="401">${cn(c)}</button>`).join('')}</div>
+ <a class="btn plein" href="#sur-mesure" data-go="sur-mesure">${t('wax_cta')}${ICO.fleche}</a></div></section>`}
+function pFormes(){
+ const tr=[['cambrure','f-forme-montage-changement-cambrure-femme'],['sciage','f-forme-montage-sciage-systeme'],['bout','f-forme-montage-bout-non-tourne'],['proto','f-forme-montage-prototypage']];
+ return `<div class="phead"><div class="wrap deux"><div><h1>${t('fo_h')}</h1></div><p class="lead">${t('fo_intro')}</p></div></div>
+ <section class="band" style="padding-top:20px"><div class="wrap"><img src="${I('s-slide-forme-montage-homme')}" alt="${esc(t('fo_what_h'))}" width="1600" height="851" style="width:100%;aspect-ratio:2.2/1;object-fit:cover;border-radius:var(--r)">
+ <div class="points"><div><h3>${t('fo_what_h')}</h3><p>${t('fo_what')}</p></div><div><h3>${t('fo_create_h')}</h3><p>${t('fo_create')}</p></div><div><h3>${t('fo_fit_h')}</h3><p>${t('fo_fit')}</p></div></div>
+ <div class="deux" style="margin-top:10px"><div><h3 style="font-size:1.2rem;margin-bottom:.4em">${t('fo_sty_h')}</h3><p>${t('fo_sty')}</p></div><p class="note">${t('fo_no')}</p></div></div></section>
+ <section class="band gris"><div class="wrap"><h2>${t('fo_types_h')}</h2><div class="travaux">${tr.map(([k,im])=>`<article><img src="${I(im)}" alt="${esc(t('t_'+k+'_h'))}" width="960" height="721"><h3>${t('t_'+k+'_h')}</h3><p>${t('t_'+k)}</p></article>`).join('')}</div></div></section>
+ <section class="band copeau"><div class="wrap strip"><div><h2>${t('fo_cta_h')}</h2><p style="margin:.6em 0 0">${t('fo_cta_p')}</p></div>${coordBtns()}</div></section>`}
+function pAtelier(){
+ return `<div class="phead"><div class="wrap"><h1>${t('at_h')}</h1><p class="lead">${t('at_lead')}</p></div></div>
+ <section class="band" style="padding-top:20px"><div class="wrap deux"><div class="portrait"><img src="${I('s-herve-brunelle-formier-embauchoiriste')}" alt="Hervé Brunelle" width="1000" height="812"></div>
+ <div><p>${t('at_p1')}</p><p>${t('at_p2')}</p><h3 style="margin:1.2em 0 .4em">${t('at_exp_h')}</h3><p>${t('at_exp')}</p><h3 style="margin:1.2em 0 .4em">${t('at_prize_h')}</h3><p>${t('at_prize')}</p><h3 style="margin:1.2em 0 .4em">${t('at_sup_h')}</h3><p>${t('at_sup')}</p><p><a href="https://christophe-varraud-formier.fr/" target="_blank" rel="noopener">${t('at_sup_link')} ↗</a></p></div></div></section>
+ <section class="band noyer"><div class="wrap deux"><div><h2>${t('ledger_h')}</h2><blockquote style="margin-top:30px">${t('at_quote')}</blockquote></div>
+ <table class="registre"><tbody><tr><td>22</td><td>${t('l1')}</td></tr><tr><td>${t('v2')}</td><td>${t('l2')}</td></tr><tr><td>2</td><td>${t('l3')}</td></tr><tr><td>70</td><td>${t('l4')}</td></tr></tbody></table></div></section>
+ <section class="band"><div class="wrap"><h2>${t('video_h')}</h2>${videoBlock()}</div></section>
+ <section class="band gris"><div class="wrap"><h2>${t('press_h')}</h2>${presse()}</div></section>`}
+let CF={type:'shoes',modele:'retz',cle:'soap',botte:'ride',galbe:'na',cire:'acajou',prise:'handle',bois:'hetre',base:'last'};
+function radio(name,opts,val){return `<div class="choix">${opts.map(([v,k])=>`<label><input type="radio" name="${name}" value="${v}" ${v==val?'checked':''}><span>${k.startsWith('#')?k.slice(1):t(k)}</span></label>`).join('')}</div>`}
+function pSurMesure(){
+ return `<div class="phead"><div class="wrap"><h1>${t('cf_h')}</h1><p class="lead">${t('cf_p')}</p></div></div>
+ <section class="band" style="padding-top:10px"><div class="wrap cf"><form id="cf" onsubmit="return false">
+ <fieldset><legend>${t('cf_s1')}</legend>${radio('type',[['shoes','o_shoes'],['low','o_low'],['boots','o_boots']],CF.type)}</fieldset>
+ <fieldset id="cf-modele"></fieldset>
+ <fieldset><legend>${t('cf_s3')}</legend><div class="cires">${[['incolore'],...CIRES].map(([c])=>`<button class="cire" type="button" data-cf-cire="${c}" aria-pressed="${CF.cire==c}">${c=='incolore'?'<span class="vide"></span>':`<img src="${I('c-'+c)}" alt="" width="420" height="401">`}${cn(c)}</button>`).join('')}</div></fieldset>
+ <fieldset><legend>${t('cf_s4')}</legend>${radio('prise',[['handle','o_handle'],['brass','o_brass'],['chrome','o_chrome']],CF.prise)}</fieldset>
+ <fieldset><legend>${t('cf_s5')}</legend>${radio('bois',[['hetre','o_hetre'],['aulne','o_aulne'],['erable','o_erable']],CF.bois)}</fieldset>
+ <fieldset><legend>${t('cf_base')}</legend>${radio('base',[['last','o_base_last'],['finished','o_base_finished'],['unknown','o_base_unknown']],CF.base)}</fieldset>
+ <p class="muted" style="font-size:.92rem">${t('cf_note')}</p>
+ </form><aside class="apercu" aria-live="polite" id="apercu"></aside></div></section>`}
+function cfModele(){const f=document.getElementById('cf-modele');if(!f)return;
+ if(CF.type=='shoes')f.innerHTML=`<legend>${t('cf_s2')}</legend>${radio('modele',MODELES.map(m=>[m.id,'#'+m.nom]),CF.modele)}`;
+ else if(CF.type=='low')f.innerHTML=`<legend>${t('cf_key')}</legend>${radio('cle',[['soap','o_key_soap'],['rings','o_key_rings']],CF.cle)}`;
+ else f.innerHTML=`<legend>${t('cf_boot_type')}</legend>${radio('botte',[['polo','o_polo'],['ride','o_ride'],['hunt','o_hunt'],['venery','o_venery'],['zip','o_zip'],['lace','o_lace']],CF.botte)}<p style="margin:18px 0 10px;font:560 1.1rem var(--titre)">${t('cf_galbe')}</p>${radio('galbe',[['saumur','o_saumur'],['chantilly','o_chantilly'],['anglais','o_anglais'],['demi','o_demi'],['na','o_galbe_na']],CF.galbe)}`}
+function cfResume(raw){const m=MODELES.find(x=>x.id==CF.modele);const rows=[[t('cf_s1'),t({shoes:'o_shoes',low:'o_low',boots:'o_boots'}[CF.type])]];
+ if(CF.type=='shoes')rows.push([t('cf_s2'),m.nom]);else if(CF.type=='low')rows.push([t('cf_key'),t(CF.cle=='soap'?'o_key_soap':'o_key_rings')]);else{rows.push([t('cf_boot_type'),t({polo:'o_polo',ride:'o_ride',hunt:'o_hunt',venery:'o_venery',zip:'o_zip',lace:'o_lace'}[CF.botte])]);rows.push([t('cf_galbe'),t({saumur:'o_saumur',chantilly:'o_chantilly',anglais:'o_anglais',demi:'o_demi',na:'o_galbe_na'}[CF.galbe])])}
+ rows.push([t('cf_s3'),cn(CF.cire)],[t('cf_s4'),t({handle:'o_handle',brass:'o_brass',chrome:'o_chrome'}[CF.prise])],[t('cf_s5'),t('o_'+CF.bois)],[t('cf_base'),t({last:'o_base_last',finished:'o_base_finished',unknown:'o_base_unknown'}[CF.base])]);
+ return raw?rows.map(r=>r.join(' : ')).join(' · '):rows}
+function cfApercu(){const a=document.getElementById('apercu');if(!a)return;const img=CF.type=='shoes'?'m-'+CF.modele:CF.type=='low'?(CF.cle=='rings'?'b-brodequin-4':'b-bottine-homme-1'):'b-botte-2';
+ a.innerHTML=`<p class="cote" style="margin:0 0 10px">${t('cf_sum')}</p><div class="img"><img src="${I(img)}" alt="">${CF.cire!='incolore'?`<img class="pastille" src="${I('c-'+CF.cire)}" alt="${esc(cn(CF.cire))}">`:''}</div><dl>${cfResume().map(([a,b])=>`<dt>${a}</dt><dd>${esc(b)}</dd>`).join('')}</dl><p class="muted" style="font-size:.88rem">${t('cf_price')}</p><div style="display:grid;gap:8px"><button class="btn plein" type="button" id="cf-send">${t('cf_send')}${ICO.fleche}</button><button class="btn trait" type="button" id="cf-reset">${t('cf_reset')}</button></div>`}
+let SEL='';
+function pContact(){
+ return `<div class="phead"><div class="wrap"><h1>${t('ct_h')}</h1><p class="lead">${t('ct_p')}</p></div></div>
+ <section class="band" style="padding-top:10px"><div class="wrap ct"><div><dl><dt class="cote">${t('ct_phone')}</dt><dd><a href="${TELH}">${TEL}</a></dd><dt class="cote">${t('ct_mail')}</dt><dd><a href="mailto:${MAIL}">${MAIL}</a></dd><dt class="cote">${t('ct_addr')}</dt><dd>5 place de la Mairie<br>02460 Troësnes, France</dd></dl>
+ <p style="margin-top:16px"><a href="https://www.google.com/maps/search/?api=1&query=5+place+de+la+Mairie+02460+Troesnes" target="_blank" rel="noopener">${t('ct_map')} ↗</a></p>
+ <img src="${I('b-bottine-poignee')}" alt="" width="852" height="585" style="margin-top:26px;border-radius:var(--r)"></div>
+ <form class="f" id="fm" novalidate><div class="duo2"><label>${t('fm_name')}<input name="nom" autocomplete="name" required></label><label>${t('fm_email')}<input name="email" type="email" autocomplete="email" required></label></div>
+ <div class="duo2"><label>${t('fm_who')}<select name="qui"><option>${t('o_pro')}</option><option>${t('o_style')}</option><option>${t('o_private')}</option></select></label><label>${t('fm_subject')}<select name="objet"><option>${t('o_s_tree')}</option><option>${t('o_s_last')}</option><option>${t('o_s_other')}</option></select></label></div>
+ <div id="fm-sel"></div><label>${t('fm_msg')}<textarea name="msg" required></textarea></label>
+ <p class="muted" style="font-size:.85rem;margin:0">${t('fm_rgpd')}</p><div><button class="btn plein" type="submit">${t('fm_send')}${ICO.fleche}</button></div><p id="fm-out" role="status" aria-live="polite" style="margin:0"></p></form></div></section>`}
+function selBox(){const b=document.getElementById('fm-sel');if(!b)return;b.innerHTML=SEL?`<div class="sel"><div><b>${t('fm_sel')}</b><br>${esc(SEL)}</div><button type="button" id="sel-x">${t('fm_remove')}</button></div>`:''}
+function pMentions(){return `<div class="phead"><div class="wrap"><h1>${t('me_h')}</h1></div></div><section class="band mentions" style="padding-top:0"><div class="wrap">
+ <h2>${t('me_owner_h')}</h2><p>Hervé Brunelle — ${t('me_capital')}<br>5 place de la Mairie, 02460 Troësnes, France<br>${t('ct_phone')} : ${TEL} · ${t('ct_mail')} : ${MAIL}<br>SIRET 847 791 126 00018 · TVA FR847791126<br>${t('me_webmaster')}</p>
+ <h2>${t('me_creator_h')}</h2><p>Pierre Viéville, 38 route de Chevreux, 02200 Soissons, France · contact@pierrevieville.fr · <a href="https://www.pierrevieville.fr" target="_blank" rel="noopener">pierrevieville.fr</a></p>
+ <h2>${t('me_host_h')}</h2><p>OVH, 2 rue Kellermann, 59100 Roubaix, France.</p>
+ <h2>${t('me_service_h')}</h2><p>${t('me_service')}</p><h2>${t('me_ip_h')}</h2><p>${t('me_ip')}</p><h2>${t('me_links_h')}</h2><p>${t('me_links')}</p><h2>${t('me_rgpd_h')}</h2><p>${t('me_rgpd')}</p></div></section>`}
+const REND={accueil:pAccueil,embauchoirs:pEmbauchoirs,formes:pFormes,atelier:pAtelier,'sur-mesure':pSurMesure,contact:pContact,mentions:pMentions};
+/* ---------- coquille ---------- */
+function coquille(){
+ document.documentElement.lang=L;document.title=L=='fr'?'Hervé Brunelle — Formes et embauchoirs sur mesure · Proposition Neovera Studio':'Hervé Brunelle — '+t('nav_lasts')+' · '+t('nav_trees');
+ document.getElementById('skip').textContent=t('skip');
+ document.getElementById('brand-sub').textContent=t('brand_sub');
+ document.getElementById('nav').innerHTML=Object.entries(NAVK).map(([p,k])=>`<li><a href="#${p}" data-go="${p}">${t(k)}</a></li>`).join('')+`<li><a href="#conseil" class="ai-link" data-ai="1">${t('ai_name')}</a></li>`;
+ document.getElementById('lang').innerHTML=LANGS.map(l=>`<option value="${l}" ${l==L?'selected':''}>${T[l].lang_name}</option>`).join('');
+ document.getElementById('lang').setAttribute('aria-label',t('lang_label'));
+ document.getElementById('top-cta').innerHTML=t('cta_study');
+ document.getElementById('top-tel').setAttribute('aria-label',t('cta_call')+' '+TEL);
+ document.getElementById('pied').innerHTML=`<div class="wrap"><div class="cols"><div><p style="font:600 1.4rem var(--titre);color:var(--sur-noyer);margin-bottom:8px">Hervé Brunelle</p><p>${t('ft_line')}</p><p>5 place de la Mairie, 02460 Troësnes, France<br><a href="${TELH}">${TEL}</a> · <a href="mailto:${MAIL}">${MAIL}</a></p></div>
+ <div><h4>${t('ft_pages')}</h4><ul>${PAGES.map(p=>`<li><a href="#${p}" data-go="${p}">${p=='mentions'?t('ft_legal'):t(NAVK[p])}</a></li>`).join('')}</ul></div>
+ <div><h4>${t('lang_label')}</h4><ul>${LANGS.map(l=>`<li><a href="#" data-lang="${l}">${T[l].lang_name}</a></li>`).join('')}</ul></div>
+ <div><h4>${t('ft_labels')}</h4><ul>${PRESSE.map(([i,k,u])=>`<li><a href="${u}" target="_blank" rel="noopener">${t(k).split(' : ')[0].split('：')[0]}</a></li>`).join('')}<li><a href="https://christophe-varraud-formier.fr/" target="_blank" rel="noopener">Christophe Varraud</a></li></ul></div></div>
+ <div class="bas"><span>© 2026 Hervé Brunelle</span><span>${t('ft_demo')}</span></div></div>`;
+ aiShell();
+}
+function go(p,ancre,noscroll){if(!REND[p])p='accueil';cur=p;
+ const m=document.getElementById('main');m.innerHTML=PAGES.map(x=>`<section class="page${x==p?' on':''}" data-page="${x}">${x==p?REND[x]():''}</section>`).join('');
+ document.querySelectorAll('#nav a[data-go]').forEach(a=>{if(a.dataset.go==p)a.setAttribute('aria-current','page');else a.removeAttribute('aria-current')});
+ if(p=='accueil')cernes();
+ if(p=='sur-mesure'){cfModele();cfApercu()}
+ if(p=='contact')selBox();
+ if(ancre){const e=document.getElementById(ancre);if(e)setTimeout(()=>e.scrollIntoView({behavior:matchMedia('(prefers-reduced-motion:reduce)').matches?'auto':'smooth'}),60)}else if(!noscroll)scrollTo(0,0);
+ try{history.replaceState(null,'','#'+p)}catch(e){}}
+/* ---------- geste : les cernes du hêtre ---------- */
+function bruit(seed){let s=seed;return()=>{s=(s*16807)%2147483647;return s/2147483647}}
+function cernes(){const box=document.getElementById('disque');if(!box)return;
+ const R=bruit(1981),cx=300,cy=300,ox=-14,oy=10;const N=22;/* 2005 → 2026 */
+ const ph=[...Array(5)].map(()=>R()*6.28);const amp=[...Array(5)].map((_,i)=>(0.016+R()*0.02)/(i+1));
+ const larg=[...Array(N)].map((_,i)=>0.7+R()*0.75+(i==2||i==6?.35:0));const tot=larg.reduce((a,b)=>a+b,0);
+ const inner=34,outer=262;let r=inner,paths=[],rayons='',fill='';
+ const pt=(rad,a,k)=>{let f=1;for(let j=0;j<5;j++)f+=amp[j]*Math.sin((j+2)*a+ph[j]+k*.05);const ex=1-k/N;return [cx+ox*ex+Math.cos(a)*rad*f,cy+oy*ex+Math.sin(a)*rad*f*0.97]};
+ const ring=(rad,k)=>{let d='';for(let s=0;s<=96;s++){const a=s/96*6.2832;const [x,y]=pt(rad,a,k);d+=(s?'L':'M')+x.toFixed(1)+' '+y.toFixed(1)}return d+'Z'};
+ paths.push({d:ring(inner*0.55,0),an:'before',w:1});paths.push({d:ring(inner,0),an:'before'});
+ for(let k=0;k<N;k++){r+=larg[k]/tot*(outer-inner);paths.push({d:ring(r,k+1),an:String(2005+k)})}
+ const ecorce=ring(outer+14,N+1);
+ for(let j=0;j<46;j++){const a=R()*6.2832,r0=inner+R()*60,r1=r0+40+R()*(outer-r0-40);const [x0,y0]=pt(r0,a,0),[x1,y1]=pt(r1,a,N);rayons+=`<path class="rayon" d="M${x0.toFixed(1)} ${y0.toFixed(1)}L${x1.toFixed(1)} ${y1.toFixed(1)}"/>`}
+ const marq={before:1,'2005':2,'2007':4,'2011':8,now:paths.length-1};
+ box.innerHTML=`<svg viewBox="0 0 600 600" role="img" aria-label="${esc(t('rings_h'))}"><defs><radialGradient id="bois" cx="47%" cy="52%" r="55%"><stop offset="0" stop-color="#D9B98E"/><stop offset=".72" stop-color="#C9A274"/><stop offset="1" stop-color="#A97E52"/></radialGradient></defs>
+ <path d="${ecorce}" fill="#4A372A"/><path d="${ring(outer+3,N)}" fill="url(#bois)"/><path d="${ring(outer-8,N-1)}" fill="none" stroke="#E6CDA4" stroke-width="10" opacity=".35"/><path d="${paths[9].d}" fill="#8E5A3A" opacity=".16"/>${rayons}
+ ${paths.map((p,i)=>`<path class="cerne" data-k="${i}" d="${p.d}"/>`).join('')}<circle cx="${cx+ox}" cy="${cy+oy}" r="4" fill="#7A5634"/>
+ <g id="etiq" font-family="Spline Sans Mono, monospace" font-size="15" fill="#F3E7D3"></g></svg>`;
+ const ps=[...box.querySelectorAll('.cerne')];
+ const montrer=an=>{const k=marq[an];ps.forEach((p,i)=>p.classList.toggle('fort',i==k));document.querySelectorAll('#annees button').forEach(b=>b.setAttribute('aria-pressed',b.dataset.an==an));
+  const e=box.querySelector('#etiq');const p=ps[k];if(!p)return;const L2=p.getTotalLength(),q=p.getPointAtLength(L2*0.13);const lab=an=='before'?t('yr_before'):an=='now'?t('yr_now'):an;
+  e.innerHTML=`<circle cx="${q.x}" cy="${q.y}" r="5" fill="#D8BB78"/><rect x="${q.x+10}" y="${q.y-28}" width="${lab.length*9.6+18}" height="26" rx="2" fill="#251912" opacity=".88"/><text x="${q.x+19}" y="${q.y-10}">${esc(lab)}</text>`};
+ document.querySelectorAll('#annees button').forEach(b=>b.onclick=()=>montrer(b.dataset.an));
+ ps.forEach((p,i)=>{p.style.cursor='pointer';p.style.pointerEvents='stroke';p.style.strokeWidth='';p.addEventListener('click',()=>{const an=Object.entries(marq).reduce((best,[a,k])=>Math.abs(k-i)<Math.abs(marq[best]-i)?a:best,'now');montrer(an)})});
+ const reduit=matchMedia('(prefers-reduced-motion:reduce)').matches;
+ if(reduit){montrer('now');return}
+ ps.forEach(p=>{const l=p.getTotalLength();p.style.strokeDasharray=l;p.style.strokeDashoffset=l});
+ const io=new IntersectionObserver(es=>{es.forEach(e=>{if(!e.isIntersecting)return;io.disconnect();
+  ps.forEach((p,i)=>{p.style.transition=`stroke-dashoffset 1.1s cubic-bezier(.16,1,.3,1) ${i*0.085}s`;requestAnimationFrame(()=>p.style.strokeDashoffset=0)});
+  setTimeout(()=>montrer('now'),ps.length*85+700)})},{threshold:.35});io.observe(box)}
+/* ---------- visionneuse ---------- */
+let LB=[],LBi=0;
+function lbOpen(list,i){LB=list;LBi=i;const b=document.getElementById('lb');b.classList.add('on');lbShow();b.querySelector('.x').focus()}
+function lbShow(){const b=document.getElementById('lb');b.querySelector('img').src=I(LB[LBi]);b.querySelector('.c').textContent=(LBi+1)+' / '+LB.length;b.querySelector('img').alt=''}
+function lbClose(){document.getElementById('lb').classList.remove('on')}
+/* ---------- conseiller ---------- */
+const INT={travel:['a_travel','go_trees','embauchoirs'],luxe:['a_luxe','go_cf','sur-mesure'],boots:['a_boots','go_cf','sur-mesure'],wax:['a_wax','go_cf','sur-mesure'],last:['a_last','go_lasts','formes'],price:['a_price','go_contact','contact'],custom:['a_custom','go_contact','contact'],bottines:['a_bottines','go_cf','sur-mesure'],wood:['a_wood','go_trees','embauchoirs'],contact:['a_contact','go_contact','contact'],hours:['a_hours','go_contact','contact'],ship:['a_ship','go_contact','contact'],epv:['a_epv',null,'atelier'],varraud:['a_varraud',null,'atelier']};
+const ORDRE=['price','hours','ship','varraud','epv','last','bottines','boots','travel','luxe','wax','wood','custom','contact'];
+function aiShell(){
+ document.getElementById('ai-fab').innerHTML=`<span class="pic">${ICO.embauchoir}</span><span><b>${t('ai_name')}</b><small>${t('ai_tag')}</small></span>`;
+ document.getElementById('ai-bulle').innerHTML=`<b style="display:block;margin-bottom:4px">${t('ai_name')} · <span class="cote" style="color:var(--acajou)">${t('ai_virtual')}</span></b>${t('ai_invite')}<button type="button" aria-label="${esc(t('close'))}">${ICO.x}</button>`;
+ const a=document.getElementById('ai');a.setAttribute('aria-label',t('ai_name'));
+ a.innerHTML=`<header><span class="pic" style="width:36px;height:36px;border-radius:50%;background:var(--laiton);display:grid;place-items:center;color:var(--noyer)">${ICO.embauchoir.replace('<svg','<svg width="20" height="20"')}</span><div><b>${t('ai_name')}</b><small>${t('ai_virtual')}</small></div><button type="button" id="ai-x" aria-label="${esc(t('ai_close'))}">${ICO.x}</button></header>
+ <div class="fil" id="fil" aria-live="polite"></div><div class="puces">${['travel','luxe','boots','wax','last','price'].map(k=>`<button type="button" data-q="${k}">${t('q_'+k)}</button>`).join('')}</div>
+ <form id="ai-f"><input id="ai-in" autocomplete="off" placeholder="${esc(t('ai_ph'))}" aria-label="${esc(t('ai_ph'))}"><button type="submit">${t('ai_send')}</button></form>`;
+ const fil=document.getElementById('fil');fil.innerHTML='';direIA(t('ai_hello'))}
+function direIA(txt,go){const f=document.getElementById('fil');const d=document.createElement('div');d.className='msg ia';d.textContent=txt;if(go){const b=document.createElement('button');b.className='go';b.type='button';b.textContent=t(go[0])+' →';b.onclick=()=>{go_(go[1]);};d.appendChild(document.createElement('br'));d.appendChild(b)}f.appendChild(d);f.scrollTop=f.scrollHeight}
+function go_(p){if(matchMedia('(max-width:700px)').matches)aiOpen(false);go(p)}
+function direMoi(txt){const f=document.getElementById('fil');const d=document.createElement('div');d.className='msg moi';d.textContent=txt;f.appendChild(d);f.scrollTop=f.scrollHeight}
+function norm(s){return s.toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g,'')}
+function repondre(q){const n=norm(q);const kws=Object.assign({},T.fr.kw);LANGS.forEach(l=>{if(T[l].kw)for(const k in T[l].kw)kws[k]=(kws[k]||[]).concat(T[l].kw[k])});
+ const ms=MODELES.filter(x=>n.includes(norm(x.nom)));
+ const has=w=>{w=norm(w).trim();if(!w)return false;if(w.length<=3&&/^[a-z]+$/.test(w))return new RegExp('(^|[^a-z])'+w+'([^a-z]|$)').test(n);return n.includes(w)};
+ let hit=ORDRE.find(k=>(kws[k]||[]).some(has));
+ if(ms.length&&(!hit||['luxe','travel','wax'].includes(hit)&&ms.length>1)){ms.forEach((m,i)=>direIA(m.nom+' — '+t('m_'+m.id)+' '+t('m_shown',{c:cn(m.c)})+'.',i==ms.length-1?['m_choose','sur-mesure']:null));CF.type='shoes';CF.modele=ms[0].id;return}
+ if(!hit){direIA(t('a_unknown'),['go_contact','contact']);return}
+ const [a,g,p]=INT[hit];direIA(t(a),g?[g,p]:null)}
+function aiOpen(on){document.getElementById('ai').classList.toggle('on',on);document.getElementById('ai-fab').style.display=on?'none':'flex';document.getElementById('ai-bulle').classList.remove('on');if(on)setTimeout(()=>document.getElementById('ai-in').focus(),50)}
+/* ---------- événements ---------- */
+document.addEventListener('click',e=>{
+ const lg=e.target.closest('[data-lang]');if(lg){e.preventDefault();setLang(lg.dataset.lang);return}
+ const g=e.target.closest('[data-go]');if(g){e.preventDefault();if(g.dataset.pre){CF.type='shoes';CF.modele=g.dataset.pre}go(g.dataset.go);return}
+ const an=e.target.closest('[data-ancre]');if(an){e.preventDefault();document.getElementById(an.dataset.ancre).scrollIntoView({behavior:'smooth'});return}
+ const fo=e.target.closest('[data-modele]');if(fo){go('embauchoirs','m-'+fo.dataset.modele);return}
+ const ci=e.target.closest('.cire[data-cire]');if(ci){CF.cire=ci.dataset.cire;document.querySelectorAll('.cire[data-cire]').forEach(b=>b.setAttribute('aria-pressed',b==ci));setTimeout(()=>go('sur-mesure'),250);return}
+ const cc=e.target.closest('[data-cf-cire]');if(cc){CF.cire=cc.dataset.cfCire;document.querySelectorAll('[data-cf-cire]').forEach(b=>b.setAttribute('aria-pressed',b==cc));cfApercu();return}
+ const lb=e.target.closest('[data-lb]');if(lb){lbOpen(lb.dataset.lb.split(','),+lb.dataset.i);return}
+ const fl=e.target.closest('[data-filtre]');if(fl){document.querySelectorAll('[data-filtre]').forEach(b=>b.setAttribute('aria-pressed',b==fl));document.querySelectorAll('#nuancier .cire').forEach(c=>c.hidden=!(fl.dataset.filtre=='all'||c.dataset.f==fl.dataset.filtre));return}
+ if(e.target.closest('#playv')){const v=document.getElementById('video');v.innerHTML='<iframe src="https://www.youtube-nocookie.com/embed/_GGHiFNK5TU?autoplay=1&rel=0" title="Hervé Brunelle" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe>';return}
+ if(e.target.closest('#cf-send')){SEL=cfResume(true);go('contact');return}
+ if(e.target.closest('#cf-reset')){CF={type:'shoes',modele:'retz',cle:'soap',botte:'ride',galbe:'na',cire:'acajou',prise:'handle',bois:'hetre',base:'last'};go('sur-mesure',null,true);return}
+ if(e.target.closest('#sel-x')){SEL='';selBox();return}
+ if(e.target.closest('[data-ai]')||e.target.closest('#ai-fab')){e.preventDefault();aiOpen(true);return}
+ if(e.target.closest('#ai-x')){aiOpen(false);return}
+ if(e.target.closest('#ai-bulle button')){document.getElementById('ai-bulle').classList.remove('on');return}
+ const pq=e.target.closest('[data-q]');if(pq){direMoi(t('q_'+pq.dataset.q));const [a,g2,p]=INT[pq.dataset.q];setTimeout(()=>direIA(t(a),g2?[g2,p]:null),250);return}
+ if(e.target.closest('#lb .x')||e.target.id=='lb'){lbClose();return}
+ if(e.target.closest('#lb .p')){LBi=(LBi-1+LB.length)%LB.length;lbShow();return}
+ if(e.target.closest('#lb .n')){LBi=(LBi+1)%LB.length;lbShow();return}
+});
+document.addEventListener('change',e=>{const f=e.target.closest('#cf');if(!f)return;const n=e.target.name;if(n){CF[n]=e.target.value;if(n=='type')cfModele();cfApercu()}});
+document.addEventListener('submit',e=>{if(e.target.id=='ai-f'){e.preventDefault();const i=document.getElementById('ai-in');const q=i.value.trim();if(!q)return;i.value='';direMoi(q);setTimeout(()=>repondre(q),250)}
+ if(e.target.id=='fm'){e.preventDefault();const f=e.target,o=document.getElementById('fm-out');const ok=f.nom.value.trim()&&/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(f.email.value)&&f.msg.value.trim();o.className=ok?'ok':'err';o.textContent=ok?t('fm_ok'):t('fm_err');if(ok)f.querySelector('button[type=submit]').disabled=true}});
+document.addEventListener('keydown',e=>{const b=document.getElementById('lb');if(b.classList.contains('on')){if(e.key=='Escape')lbClose();if(e.key=='ArrowRight'){LBi=(LBi+1)%LB.length;lbShow()}if(e.key=='ArrowLeft'){LBi=(LBi-1+LB.length)%LB.length;lbShow()}}else if(e.key=='Escape'&&document.getElementById('ai').classList.contains('on'))aiOpen(false)});
+function setLang(l){L=l;try{localStorage.setItem('hb_lang',l)}catch(e){}coquille();go(cur,null,true)}
+document.getElementById('lang').addEventListener('change',e=>setLang(e.target.value));
+coquille();go((location.hash||'#accueil').slice(1).split('?')[0],null,true);
+setTimeout(()=>{try{if(sessionStorage.getItem('hb_bulle'))return;sessionStorage.setItem('hb_bulle','1')}catch(e){}if(!document.getElementById('ai').classList.contains('on'))document.getElementById('ai-bulle').classList.add('on')},4000);
+window.go=go;
+</script>
+<script id="nv-track">(function(){try{if(location.protocol!=='https:')return;if(/[?&]moi\b/.test(location.search)){localStorage.setItem('nv_moi','1');addEventListener('load',function(){var d=document.createElement('div');d.textContent='✓ Appareil reconnu : vos visites ne sont plus comptées';d.style.cssText='position:fixed;left:50%;bottom:24px;transform:translateX(-50%);z-index:2147483647;background:#1E3A2B;color:#fff;font:600 14px/1.3 system-ui,sans-serif;padding:12px 18px;border-radius:999px;box-shadow:0 8px 24px rgba(0,0,0,.25)';document.body.appendChild(d);setTimeout(function(){d.remove()},6000)})}if(localStorage.getItem('nv_moi')||navigator.webdriver)return;}catch(x){}
+var m=location.pathname.split('/').filter(Boolean)[0]||'';if(!m)return;var s=Math.random().toString(36).slice(2,12),t0=Date.now(),u='/_t.php',last='home',seen={};
+function send(e,p){var b=JSON.stringify({m:m,e:e,s:s,p:p||'',t:Math.round((Date.now()-t0)/1000),l:(document.documentElement.lang||'').slice(0,2)});try{if(navigator.sendBeacon)navigator.sendBeacon(u,new Blob([b],{type:'text/plain'}));else fetch(u,{method:'POST',body:b,keepalive:true})}catch(x){}}
+function once(k){k=String(k).toLowerCase().replace(/[^a-z0-9_-]/g,'').slice(0,24);if(!k||seen[k])return;seen[k]=1;send('ev',k)}
+send('open');setInterval(function(){if(document.visibilityState==='visible')send('ping')},45000);
+document.addEventListener('visibilitychange',function(){if(document.visibilityState==='hidden')send('ping')});
+window.__nvView=function(p){p=String(p||'');if(p&&p!==last){last=p;send('view',p)}};
+addEventListener('scroll',function(){var h=document.documentElement,max=h.scrollHeight-innerHeight;if(max<200)return;var r=(scrollY/max)*100;[25,50,75,100].forEach(function(q){if(r>=q-2)once('defil'+q+'-'+last)})},{passive:true});
+document.addEventListener('click',function(e){var el=e.target.closest('a,button,[data-add],[data-go],[role=button],summary');if(!el)return;var t=((el.getAttribute('aria-label')||'')+' '+(el.textContent||'')+' '+(el.className||'')+' '+(el.id||'')).toLowerCase(),h=el.getAttribute&&el.getAttribute('href')||'';
+if(el.hasAttribute('data-add')||/ajouter|add to|añadir|hinzuf|aggiungi|加入/.test(t))once('panier-'+(el.getAttribute('data-add')||'ajout')),send('ev','panier');
+else if(/conseil|advisor|assistant|chat/.test(t))once('conseiller');
+else if(/instagram|facebook|youtube|pinterest|linkedin|tiktok/.test(h))once('reseau-'+(h.match(/instagram|facebook|youtube|pinterest|linkedin|tiktok/)||[''])[0]);
+else if(/réserv|reserv|visite|book/.test(t))once('reservation');
+else if(/coffret|gift|cadeau/.test(t))once('coffret')},true);
+document.addEventListener('play',function(e){if(e.target&&e.target.tagName==='VIDEO'&&!e.target.muted)once('video-son')},true);
+try{new MutationObserver(function(){var l=(document.documentElement.lang||'').slice(0,2);if(l&&l!=='fr')once('langue-'+l)}).observe(document.documentElement,{attributes:true,attributeFilter:['lang']})}catch(x){}
+addEventListener('load',function(){try{if(typeof window.go==='function'&&!window.go.__nv){var g=window.go;window.go=function(v){try{window.__nvView(v)}catch(x){}return g.apply(this,arguments)};window.go.__nv=1}}catch(x){}});})();</script>
+</body>
+</html>
