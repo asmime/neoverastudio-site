@@ -131,6 +131,7 @@ main>section.page{display:none}main>section.page.on{display:block;animation:entr
 .filtres{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}
 .filtres button{font:500 .88rem var(--corps);border:1px solid var(--atelier-3);background:transparent;padding:8px 13px;border-radius:30px;cursor:pointer;color:var(--encre-2)}
 .filtres button[aria-pressed=true]{background:var(--noyer);color:var(--sur-noyer);border-color:var(--noyer)}
+.cire[hidden]{display:none!important}
 /* vidéo */
 .video{position:relative;aspect-ratio:16/9;background:#000;border-radius:var(--r);overflow:hidden;margin-top:28px}
 .video img{width:100%;height:100%;object-fit:cover;opacity:.78}
@@ -162,7 +163,7 @@ main>section.page{display:none}main>section.page.on{display:block;animation:entr
 .vues button img{aspect-ratio:3/2;object-fit:cover;width:100%;opacity:.88;transition:opacity .25s}
 .vues button:hover img{opacity:1}.vues button:focus-visible{outline:2px solid var(--laiton)}
 .modele h3{font-size:clamp(1.8rem,3vw,2.6rem);margin-bottom:.3em}
-.modele .cote{color:var(--acajou);margin-bottom:14px;display:block}
+.modele .cote{color:var(--acajou);margin-bottom:14px;display:block;font:500 .92rem var(--corps);letter-spacing:0;text-transform:none}
 @media(max-width:820px){.modele,.modele:nth-child(even){grid-template-columns:1fr}.modele:nth-child(even) .vues{order:0}}
 .galerie{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:8px;margin-top:26px}
 .galerie button{all:unset;cursor:zoom-in;background:#F2F1EE}
@@ -195,7 +196,7 @@ blockquote{margin:0;font:italic 500 clamp(1.4rem,2.6vw,2.1rem)/1.3 var(--titre);
 .choix{display:flex;flex-wrap:wrap;gap:8px}
 .choix label{position:relative;cursor:pointer}
 .choix input{position:absolute;opacity:0;inset:0;margin:0;cursor:pointer}
-.choix span{display:block;padding:10px 15px;border:1px solid var(--atelier-3);border-radius:var(--r);font-size:.93rem;background:#F4F2EE;transition:all .2s}
+.choix span{display:block;padding:12px 15px;min-height:44px;border:1px solid var(--atelier-3);border-radius:var(--r);font-size:.93rem;background:#F4F2EE;transition:all .2s}
 .choix input:checked+span{background:var(--noyer);color:var(--sur-noyer);border-color:var(--noyer)}
 .choix input:focus-visible+span{outline:2px solid var(--laiton);outline-offset:2px}
 .choix label:hover span{border-color:var(--encre-2)}
@@ -232,7 +233,7 @@ footer .bas{margin-top:40px;padding-top:18px;border-top:1px solid var(--noyer-3)
 .lb{position:fixed;inset:0;background:rgba(20,13,9,.94);z-index:80;display:none;align-items:center;justify-content:center;padding:60px 16px}
 .lb.on{display:flex}
 .lb img{max-height:82vh;max-width:min(1100px,92vw);object-fit:contain;background:#eee}
-.lb button{position:absolute;background:rgba(236,234,230,.12);color:#fff;border:0;width:48px;height:48px;border-radius:50%;cursor:pointer;display:grid;place-items:center}
+.lb button{position:absolute;background:rgba(236,234,230,.25);color:#fff;border:0;width:48px;height:48px;border-radius:50%;cursor:pointer;display:grid;place-items:center}
 .lb button:hover{background:rgba(236,234,230,.25)}
 .lb .x{top:14px;right:14px}.lb .p{left:12px;top:50%}.lb .n{right:12px;top:50%}
 .lb .c{position:absolute;bottom:18px;left:0;right:0;text-align:center;color:#D9CDBB;font:500 .85rem var(--cote)}
@@ -423,8 +424,8 @@ a_epv:"Hervé Brunelle a reçu le Prix départemental de la Société d’Encour
 a_varraud:"Depuis 2011, Hervé accompagne le formier Christophe Varraud : ils travaillent ensemble et se complètent.",
 a_unknown:"Je ne sais pas répondre à cela avec certitude. Hervé vous répondra directement : 03 23 96 97 04 ou brunelle.herve@wanadoo.fr.",
 go_cf:"Composer mon embauchoir",go_contact:"Demander une étude",go_trees:"Voir les modèles",go_lasts:"Voir les formes",
-close:"Fermer",prev:"Photo précédente",next:"Photo suivante",
-kw:{travel:["voyag","léger","leger","valise"],luxe:["beau","luxe","retz","cadeau","prestige"],boots:["botte","équitation","equitation","cheval","chasse","vénerie","venerie","polo","galbe"],wax:["teinte","couleur","cire","vernis","noyer","acajou"],last:["forme","bottier","cambrure","sciage","prototyp","pantograph","podo"],price:["prix","tarif","coût","cout","combien","délai","delai","€"],custom:["sur mesure","mesure","pointure","taille"],bottines:["bottine","brodequin","jodhpur","derby","balmoral"],wood:["bois","essence","hêtre","hetre","charme","aulne","érable"],contact:["adresse","téléphone","telephone","mail","contacter","joindre","où","venir"],hours:["horaire","heure","ouvert","fermé","visite"],ship:["livr","envoi","expédi","étranger","international","japon"],epv:["epv","label","patrimoine","prix","récompense"],varraud:["varraud","christophe","apprenti","transmission"]}
+a_nopub:"Ce point n’est pas publié sur le site : je préfère ne pas inventer. Hervé vous le précisera lors de l’étude : 03 23 96 97 04 ou brunelle.herve@wanadoo.fr.",a_hello:"Bonjour ! Dites-moi pour quelles chaussures vous cherchez un embauchoir, ou posez votre question sur les formes de montage.",a_ai:"Oui : je suis un assistant virtuel, pas Hervé. Je réponds d’après les informations du site ; pour tout le reste, Hervé répond lui-même.",a_wax_pick:"Bon choix : la teinte {c} est retenue dans votre embauchoir sur mesure. Les cires sont solubles à l’eau, jamais du vernis.",close:"Fermer",prev:"Photo précédente",next:"Photo suivante",
+kw:{nopub:["pointure", "paiement", "payer", "paypal", "virement", "garantie", "plastique", "diabet", "stock"],hello:["bonjour", "salut", "bonsoir"],ai:["robot", "humain", "intelligence artificielle", "une ia", "un bot"],travel:["voyag","léger","leger","valise"],luxe:["beau","luxe","retz","cadeau","prestige"],boots:["botte","équitation","equitation","cheval","chasse","vénerie","venerie","polo","galbe"],wax:["teinte","couleur","cire","vernis","noyer","acajou"],last:["forme","bottier","cambrure","sciage","prototyp","pantograph","podo"],price:["prix","tarif","coût","cout","combien","délai","delai","€"],custom:["sur mesure","mesure"],bottines:["bottine","brodequin","jodhpur","derby","balmoral"],wood:["bois","essence","hêtre","hetre","charme","aulne","érable"],contact:["adresse","téléphone","telephone","mail","contacter","joindre","venir"],hours:["horaire","heure","ouvert","fermé","visite"],ship:["livr","envoi","expédi","étranger","international","japon"],epv:["dernier","epv","label","patrimoine","prix","récompense"],varraud:["varraud","christophe","apprenti","transmission"]}
 };
 T.en={
 lang_name:"English",lang_label:"Language",skip:"Skip to content",
@@ -565,8 +566,8 @@ a_epv:"Hervé Brunelle received the departmental prize of the Société d’Enco
 a_varraud:"Since 2011, Hervé has supported lastmaker Christophe Varraud: they work together and complement each other.",
 a_unknown:"I can’t answer that with certainty. Hervé will answer you directly: +33 3 23 96 97 04 or brunelle.herve@wanadoo.fr.",
 go_cf:"Design my shoe tree",go_contact:"Request a study",go_trees:"See the models",go_lasts:"See the lasts",
-close:"Close",prev:"Previous photo",next:"Next photo",
-kw:{travel:["travel","light","trip","suitcase"],luxe:["finest","best","luxury","beautiful","gift"],boots:["boot","riding","horse","hunting","polo","venery"],wax:["colour","color","finish","wax","varnish","stain"],last:["last","bootmaker","cobbler","prototype","heel height"],price:["price","cost","how much","lead time","delivery time"],custom:["measure","size","bespoke","custom"],bottines:["ankle","jodhpur","derby","balmoral","work boot"],wood:["wood","beech","alder","maple","hornbeam"],contact:["address","phone","email","contact","where"],hours:["hours","open","closed","visit"],ship:["ship","abroad","international","post","japan","usa"],epv:["label","heritage","award","prize"],varraud:["varraud","christophe","apprentice"]}
+a_nopub:"That isn’t published on the site, and I’d rather not make it up. Hervé will tell you during the study: +33 3 23 96 97 04 or brunelle.herve@wanadoo.fr.",a_hello:"Hello! Tell me which shoes you need a shoe tree for, or ask me about shoe lasts.",a_ai:"Yes: I’m a virtual assistant, not Hervé. I answer from the information on this site; for everything else, Hervé answers himself.",a_wax_pick:"Good choice: {c} is now selected for your made-to-measure shoe tree. The waxes are water-soluble, never varnish.",close:"Close",prev:"Previous photo",next:"Next photo",
+kw:{nopub:["shoe size", "payment", "paypal", "bank transfer", "warranty", "guarantee", "plastic", "diabet", "stock"],hello:["hello", "good morning"],ai:["robot", "human", "an ai", "artificial intelligence", "a bot"],travel:["travel","light","trip","suitcase"],luxe:["finest","best","luxury","beautiful","gift"],boots:["boot","riding","horse","hunting","polo","venery"],wax:["colour","color","finish","wax","varnish","stain"],last:["last","bootmaker","cobbler","prototype","heel height"],price:["price","cost","how much","lead time","delivery time"],custom:["measure","bespoke","custom"],bottines:["ankle","jodhpur","derby","balmoral","work boot"],wood:["wood","beech","alder","maple","hornbeam"],contact:["address","phone","email","contact","where is"],hours:["hours","open","closed","visit"],ship:["ship","abroad","international","post","japan","usa"],epv:["the last","label","heritage","award","prize"],varraud:["varraud","christophe","apprentice"]}
 };
 T.es={
 lang_name:"Español",lang_label:"Idioma",skip:"Ir al contenido",
@@ -707,8 +708,8 @@ a_epv:"Hervé Brunelle recibió el premio departamental de la Société d’Enco
 a_varraud:"Desde 2011, Hervé acompaña al hormero Christophe Varraud: trabajan juntos y se complementan.",
 a_unknown:"No puedo responder a eso con certeza. Hervé le responderá directamente: +33 3 23 96 97 04 o brunelle.herve@wanadoo.fr.",
 go_cf:"Diseñar mi horma",go_contact:"Solicitar un estudio",go_trees:"Ver los modelos",go_lasts:"Ver las hormas de montado",
-close:"Cerrar",prev:"Foto anterior",next:"Foto siguiente",
-kw:{travel:["viaj","ligera","maleta"],luxe:["bello","bonito","lujo","regalo","mejor"],boots:["bota ","botas","equitación","caballo","caza","montería","polo"],wax:["tono","color","cera","barniz","tinte"],last:["horma de montado","zapatero","tacón","prototip","pantógrafo"],price:["precio","cuánto","cuesta","plazo","tarifa"],custom:["a medida","talla","medida"],bottines:["botín","botines","borceguí","jodhpur","derby"],wood:["madera","haya","aliso","arce","carpe"],contact:["dirección","teléfono","correo","contacto","dónde"],hours:["horario","abierto","cerrado","visita"],ship:["envío","enviar","extranjero","internacional"],epv:["sello","patrimonio","premio"],varraud:["varraud","christophe"]}
+a_nopub:"Eso no está publicado en el sitio y prefiero no inventarlo. Hervé se lo indicará en el estudio: +33 3 23 96 97 04 o brunelle.herve@wanadoo.fr.",a_hello:"¡Hola! Dígame para qué zapatos busca una horma, o pregúnteme por las hormas de montado.",a_ai:"Sí: soy un asistente virtual, no Hervé. Respondo con la información del sitio; para lo demás, responde el propio Hervé.",a_wax_pick:"Buena elección: el tono {c} queda seleccionado en su horma a medida. Son ceras solubles en agua, nunca barniz.",close:"Cerrar",prev:"Foto anterior",next:"Foto siguiente",
+kw:{nopub:["número de pie", "pago", "pagar", "paypal", "transferencia", "garantía", "plástico", "diabet"],hello:["hola", "buenos días"],ai:["robot", "humano", "inteligencia artificial", "una ia"],travel:["viaj","ligera","maleta"],luxe:["bello","bonito","lujo","regalo","mejor"],boots:["bota ","botas","equitación","caballo","caza","montería","polo"],wax:["tono","color","cera","barniz","tinte"],last:["horma de montado","zapatero","tacón","prototip","pantógrafo"],price:["precio","cuánto","cuesta","plazo","tarifa"],custom:["a medida","medida"],bottines:["botín","botines","borceguí","jodhpur","derby"],wood:["madera","haya","aliso","arce","carpe"],contact:["dirección","teléfono","correo","contacto","dónde está"],hours:["horario","abierto","cerrado","visita"],ship:["envío","enviar","extranjero","internacional"],epv:["sello","patrimonio","premio"],varraud:["varraud","christophe"]}
 };
 T.de={
 lang_name:"Deutsch",lang_label:"Sprache",skip:"Zum Inhalt",
@@ -849,8 +850,8 @@ a_epv:"Hervé Brunelle erhielt 2005 den Preis des Départements der Société d�
 a_varraud:"Seit 2011 begleitet Hervé den Leistenmacher Christophe Varraud: Sie arbeiten zusammen und ergänzen sich.",
 a_unknown:"Darauf kann ich nicht sicher antworten. Hervé antwortet Ihnen direkt: +33 3 23 96 97 04 oder brunelle.herve@wanadoo.fr.",
 go_cf:"Meinen Spanner gestalten",go_contact:"Prüfung anfragen",go_trees:"Modelle ansehen",go_lasts:"Leisten ansehen",
-close:"Schließen",prev:"Vorheriges Foto",next:"Nächstes Foto",
-kw:{travel:["reise","leicht","koffer"],luxe:["schönst","luxus","geschenk","bestes"],boots:["stiefel ","reitstiefel","reiten","pferd","jagd","polo"],wax:["farbe","farbton","wachs","lack"],last:["leisten","schuhmacher","absatz","prototyp"],price:["preis","teuer","kosten","kostet","lieferzeit","wie viel"],custom:["nach maß","maß","größe"],bottines:["stiefelette","jodhpur","derby","balmoral","schnürstiefel"],wood:["holz","buche","erle","ahorn","hainbuche"],contact:["adresse","telefon","e-mail","kontakt","wo "],hours:["öffnungszeit","geöffnet","besuch"],ship:["versand","ausland","international","schicken"],epv:["auszeichnung","preis des","patrimoine"],varraud:["varraud","christophe"]}
+a_nopub:"Das steht nicht auf der Website, und ich möchte nichts erfinden. Hervé sagt es Ihnen bei der Prüfung: +33 3 23 96 97 04 oder brunelle.herve@wanadoo.fr.",a_hello:"Guten Tag! Sagen Sie mir, für welche Schuhe Sie einen Spanner suchen, oder fragen Sie nach Schuhleisten.",a_ai:"Ja: Ich bin ein virtueller Assistent, nicht Hervé. Ich antworte anhand der Website; alles andere beantwortet Hervé selbst.",a_wax_pick:"Gute Wahl: Der Farbton {c} ist für Ihren Maßspanner ausgewählt. Wasserlösliche Wachse, nie Lack.",close:"Schließen",prev:"Vorheriges Foto",next:"Nächstes Foto",
+kw:{nopub:["schuhgröße", "zahlung", "bezahlen", "paypal", "überweisung", "garantie", "kunststoff", "diabet"],hello:["hallo", "guten tag"],ai:["roboter", "mensch", "künstliche intelligenz", "eine ki"],travel:["reise","leicht","koffer"],luxe:["schönst","luxus","geschenk","bestes"],boots:["stiefel ","reitstiefel","reiten","pferd","jagd","polo"],wax:["farbe","farbton","wachs","lack"],last:["leisten","schuhmacher","absatz","prototyp"],price:["preis","teuer","kosten","kostet","lieferzeit","wie viel"],custom:["nach maß","maß","größe"],bottines:["stiefelette","jodhpur","derby","balmoral","schnürstiefel"],wood:["holz","buche","erle","ahorn","hainbuche"],contact:["adresse","telefon","e-mail","kontakt","wo ist"],hours:["öffnungszeit","geöffnet","besuch"],ship:["versand","ausland","international","schicken"],epv:["auszeichnung","preis des","patrimoine"],varraud:["varraud","christophe"]}
 };
 T.it={
 lang_name:"Italiano",lang_label:"Lingua",skip:"Vai al contenuto",
@@ -991,8 +992,8 @@ a_epv:"Hervé Brunelle ha ricevuto il premio dipartimentale della Société d’
 a_varraud:"Dal 2011 Hervé accompagna il formista Christophe Varraud: lavorano insieme e si completano.",
 a_unknown:"Non so rispondere con certezza. Hervé le risponderà direttamente: +33 3 23 96 97 04 o brunelle.herve@wanadoo.fr.",
 go_cf:"Comporre il mio tendiscarpe",go_contact:"Richiedere uno studio",go_trees:"Vedere i modelli",go_lasts:"Vedere le forme",
-close:"Chiudere",prev:"Foto precedente",next:"Foto successiva",
-kw:{travel:["viaggi","leggero","valigia"],luxe:["più bello","lusso","regalo","migliore"],boots:["stival","equitazione","cavallo","caccia","polo"],wax:["tinta","colore","cera","vernice"],last:["forma da","calzolaio","tacco","prototip"],price:["prezzo","costo","costa","quanto","tempi"],custom:["su misura","misura","taglia"],bottines:["stivalett","anfibi","jodhpur","derby","balmoral"],wood:["legno","faggio","ontano","acero","carpino"],contact:["indirizzo","telefono","e-mail","contatt","dove"],hours:["orari","aperto","chiuso","visita"],ship:["spedizion","estero","internazionale","inviare"],epv:["marchio","patrimonio","premio"],varraud:["varraud","christophe"]}
+a_nopub:"Questo non è pubblicato sul sito e preferisco non inventarlo. Hervé glielo dirà durante lo studio: +33 3 23 96 97 04 o brunelle.herve@wanadoo.fr.",a_hello:"Buongiorno! Mi dica per quali scarpe cerca un tendiscarpe, o mi chieda delle forme da calzolaio.",a_ai:"Sì: sono un assistente virtuale, non Hervé. Rispondo con le informazioni del sito; per il resto risponde Hervé di persona.",a_wax_pick:"Ottima scelta: la tinta {c} è selezionata per il suo tendiscarpe su misura. Cere idrosolubili, mai vernici.",close:"Chiudere",prev:"Foto precedente",next:"Foto successiva",
+kw:{nopub:["numero di scarpa", "pagamento", "pagare", "paypal", "bonifico", "garanzia", "plastica", "diabet"],hello:["ciao", "buongiorno", "salve"],ai:["robot", "umano", "intelligenza artificiale", "una ia"],travel:["viaggi","leggero","valigia"],luxe:["più bello","lusso","regalo","migliore"],boots:["stival","equitazione","cavallo","caccia","polo"],wax:["tinta","colore","cera","vernice"],last:["forma da","calzolaio","tacco","prototip"],price:["prezzo","costo","costa","quanto","tempi"],custom:["su misura","misura"],bottines:["stivalett","anfibi","jodhpur","derby","balmoral"],wood:["legno","faggio","ontano","acero","carpino"],contact:["indirizzo","telefono","e-mail","contatt","dove si"],hours:["orari","aperto","chiuso","visita"],ship:["spedizion","estero","internazionale","inviare"],epv:["marchio","patrimonio","premio"],varraud:["varraud","christophe"]}
 };
 T.ja={
 lang_name:"日本語",lang_label:"言語",skip:"本文へ",
@@ -1133,8 +1134,8 @@ a_epv:"エルヴェ・ブリュネルは2005年に工芸奨励協会（SEMA）�
 a_varraud:"2011年から、エルヴェは木型職人クリストフ・ヴァロを支え、ともに仕事をしています。",
 a_unknown:"確かなお答えができません。エルヴェが直接お返事します：+33 3 23 96 97 04、または brunelle.herve@wanadoo.fr。",
 go_cf:"シューツリーを選ぶ",go_contact:"ご相談・お見積り",go_trees:"モデルを見る",go_lasts:"木型を見る",
-close:"閉じる",prev:"前の写真",next:"次の写真",
-kw:{travel:["旅","軽い","出張"],luxe:["美しい","高級","贈り物","ギフト","レッツ"],boots:["ロングブーツ","乗馬","馬","狩猟","ポロ"],wax:["色","ワックス","ニス","仕上げ"],last:["木型","ラスト","靴職人","ヒール","試作"],price:["価格","値段","料金","いくら","納期"],custom:["オーダー","サイズ","寸法"],bottines:["ショートブーツ","ワークブーツ","ジョッパー","ダービー","バルモラル"],wood:["木材","ブナ","カエデ","ハンノキ","シデ"],contact:["住所","電話","メール","連絡","場所"],hours:["営業時間","開いて","見学","訪問"],ship:["発送","配送","海外","日本"],epv:["認定","文化財","受賞","賞"],varraud:["ヴァロ","クリストフ","varraud"]}
+a_nopub:"その点はサイトに記載がないため、推測でお答えするのは控えます。ご相談の際にエルヴェがお伝えします：+33 3 23 96 97 04、brunelle.herve@wanadoo.fr。",a_hello:"こんにちは。どんな靴のシューツリーをお探しか、または木型についてお気軽にどうぞ。",a_ai:"はい、わたしはバーチャルアシスタントで、エルヴェ本人ではありません。サイトの情報をもとにお答えし、それ以外はエルヴェが直接お答えします。",a_wax_pick:"いい選択です。{c}をオーダーメイド・シューツリーの色に設定しました。ニスではなく水溶性ワックスです。",close:"閉じる",prev:"前の写真",next:"次の写真",
+kw:{nopub:["支払", "ペイパル", "振込", "保証", "プラスチック", "在庫"],hello:["こんにちは", "こんばんは"],ai:["ロボット", "人間", "AI", "エーアイ"],travel:["旅","軽い","出張"],luxe:["美しい","高級","贈り物","ギフト","レッツ"],boots:["ロングブーツ","乗馬","馬","狩猟","ポロ"],wax:["色","ワックス","ニス","仕上げ"],last:["木型","ラスト","靴職人","ヒール","試作"],price:["価格","値段","料金","いくら","納期"],custom:["オーダー","寸法"],bottines:["ショートブーツ","ワークブーツ","ジョッパー","ダービー","バルモラル"],wood:["木材","ブナ","カエデ","ハンノキ","シデ"],contact:["住所","電話","メール","連絡","場所"],hours:["営業時間","開いて","見学","訪問"],ship:["発送","配送","海外","日本"],epv:["認定","文化財","受賞","賞"],varraud:["ヴァロ","クリストフ","varraud"]}
 };
 
 const I=id=>'img/'+id+'.jpg';
@@ -1148,7 +1149,7 @@ const CIRES=[['noyer-fonce','noyer'],['noyer','noyer'],['acajou','noyer'],['meri
 const BOTTINES=['bottine-femme-1','bottine-femme-2','bottine-femme-3','brodequin-1','brodequin-3','brodequin-4','bottine-homme-1','bottine-homme-2','bottine-poignee'];
 const BOTTES=['botte-1','botte-2','botte-3','botte-5','botte-4','botte-6'];
 const PRESSE=[['entreprise-du-patrimoine-vivant','press_epv','http://www.patrimoine-vivant.com/fr/showcompany/6129'],['maitre-artisan-hauts-de-france','press_cma','https://www.cma-hautsdefrance.fr'],['region-hauts-de-france','press_region','https://www.hautsdefrance.fr/herve-brunelle-le-dernier-des-formier-embauchoiristes/'],['france3','press_f3','https://france3-regions.francetvinfo.fr/hauts-de-france/aisne/deux-artisans-aisne-honneur-serie-route-artisanat-1659550.html']];
-let L='fr';try{const s=localStorage.getItem('hb_lang');if(LANGS.includes(s))L=s}catch(e){}
+let L='fr';try{const s=localStorage.getItem('hb_lang');if(LANGS.includes(s))L=s;else{const n=(navigator.language||'fr').slice(0,2);if(LANGS.includes(n))L=n}}catch(e){}
 const t=(k,v)=>{let s=(T[L]&&T[L][k])!=null?T[L][k]:T.fr[k];if(s==null)return k;if(v)for(const x in v)s=s.split('{'+x+'}').join(v[x]);if(L=='fr'&&typeof s=='string')s=s.replace(/ ([?!;»])/g,'\u202f$1').replace(/ :/g,'\u00a0:').replace(/« /g,'«\u00a0');return s};
 const cn=k=>t('c_'+k.replace(/-/g,'_'));
 const esc=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
@@ -1204,10 +1205,10 @@ function pEmbauchoirs(){
  <div class="modeles">${MODELES.map(m=>{const g=[...Array(m.n)].map((_,i)=>`g-${m.id}-${i+1}`);return `<article class="modele" id="m-${m.id}"><div class="vues"><img class="principale" src="${I('m-'+m.id)}" alt="${esc(m.nom)}" width="960" height="721" data-lb="${['m-'+m.id,...g].join(',')}" data-i="0">${g.map((x,i)=>`<button type="button" data-lb="${['m-'+m.id,...g].join(',')}" data-i="${i+1}" aria-label="${esc(m.nom)} ${i+1}/${m.n}"><img src="${I(x)}" alt="" width="960" height="657"></button>`).join('')}</div>
  <div><h3>${m.nom}</h3><span class="cote">${t('m_shown',{c:cn(m.c)})} · ${t('m_photos',{n:m.n+1})}</span><p>${t('m_'+m.id)}</p><a class="btn plein" href="#sur-mesure" data-go="sur-mesure" data-pre="${m.id}">${t('m_choose')}${ICO.fleche}</a></div></article>`}).join('')}</div></div></section>
  <section class="band gris" id="bottines"><div class="wrap"><div class="deux"><div><h2>${t('low_h')}</h2></div><div><p>${t('low_p')}</p><p>${t('low_p2')}</p></div></div>
- <div class="galerie">${BOTTINES.map((b,i)=>`<button type="button" data-lb="${BOTTINES.map(x=>'b-'+x).join(',')}" data-i="${i}" aria-label="${esc(t('low_h'))} ${i+1}/${BOTTINES.length}"><img src="${I('b-'+b)}" alt=""></button>`).join('')}</div></div></section>
+ <p style="margin-top:6px"><a class="btn plein" href="#sur-mesure" data-go="sur-mesure" data-type="low">${t('cta_compose')}${ICO.fleche}</a></p><div class="galerie">${BOTTINES.map((b,i)=>`<button type="button" data-lb="${BOTTINES.map(x=>'b-'+x).join(',')}" data-i="${i}" aria-label="${esc(t('low_h'))} ${i+1}/${BOTTINES.length}"><img src="${I('b-'+b)}" alt=""></button>`).join('')}</div></div></section>
  <section class="band" id="bottes"><div class="wrap"><div class="deux"><div><h2>${t('boots_h')}</h2><p class="cote" style="margin-top:12px;color:var(--acajou)">${t('boots_sub')}</p></div><p>${t('boots_p')}</p></div>
  <div class="galerie">${BOTTES.map((b,i)=>`<button type="button" data-lb="${BOTTES.map(x=>'b-'+x).join(',')}" data-i="${i}" aria-label="${esc(t('boots_h'))} ${i+1}/${BOTTES.length}"><img src="${I('b-'+b)}" alt=""></button>`).join('')}</div>
- <div class="trio"><div><h3>${t('b_func_h')}</h3><p>${t('b_func')}</p></div><div><h3>${t('b_trans_h')}</h3><p>${t('b_trans')}</p></div><div><h3>${t('b_fab_h')}</h3><p>${t('b_fab')}</p></div></div></div></section>
+ <p style="margin-top:22px"><a class="btn plein" href="#sur-mesure" data-go="sur-mesure" data-type="boots">${t('cta_compose')}${ICO.fleche}</a></p><div class="trio"><div><h3>${t('b_func_h')}</h3><p>${t('b_func')}</p></div><div><h3>${t('b_trans_h')}</h3><p>${t('b_trans')}</p></div><div><h3>${t('b_fab_h')}</h3><p>${t('b_fab')}</p></div></div></div></section>
  <section class="band gris" id="teintes"><div class="wrap"><h2>${t('wax_page_h')}</h2><p class="lead" style="margin-top:.5em">${t('wax_page_p')}</p>
  <div class="filtres" role="group">${['all','noyer','merisier','sienne','jaune','bleu','noir'].map((f,i)=>`<button type="button" data-filtre="${f}" aria-pressed="${i==0}">${t('f_'+f)}</button>`).join('')}</div>
  <div class="cires" id="nuancier">${CIRES.map(([c,f],i)=>`<button class="cire" type="button" data-f="${f}" data-lb="${CIRES.map(x=>'c-'+x[0]).join(',')}" data-i="${i}"><img src="${I('c-'+c)}" alt="" width="420" height="401">${cn(c)}</button>`).join('')}</div>
@@ -1285,7 +1286,7 @@ function coquille(){
  <div class="bas"><span>© 2026 Hervé Brunelle</span><span>${t('ft_demo')}</span></div></div>`;
  aiShell();
 }
-function go(p,ancre,noscroll){if(!REND[p])p='accueil';cur=p;
+function go(p,ancre,noscroll){if(!REND[p])p='accueil';cur=p;document.getElementById('ai-bulle').classList.remove('on');document.title='Hervé Brunelle — '+(p=='accueil'?t('nav_lasts')+' · '+t('nav_trees'):p=='mentions'?t('me_h'):t(NAVK[p]))+' · Proposition Neovera Studio';
  const m=document.getElementById('main');m.innerHTML=PAGES.map(x=>`<section class="page${x==p?' on':''}" data-page="${x}">${x==p?REND[x]():''}</section>`).join('');
  document.querySelectorAll('#nav a[data-go]').forEach(a=>{if(a.dataset.go==p)a.setAttribute('aria-current','page');else a.removeAttribute('aria-current')});
  if(p=='accueil')cernes();
@@ -1325,13 +1326,14 @@ function cernes(){const box=document.getElementById('disque');if(!box)return;
   ps.forEach((p,i)=>{p.style.transition=`stroke-dashoffset 1.1s cubic-bezier(.16,1,.3,1) ${i*0.085}s`;requestAnimationFrame(()=>p.style.strokeDashoffset=0)});
   setTimeout(()=>montrer('now'),ps.length*85+700)})},{threshold:.35});io.observe(box)}
 /* ---------- visionneuse ---------- */
-let LB=[],LBi=0;
-function lbOpen(list,i){LB=list;LBi=i;const b=document.getElementById('lb');b.classList.add('on');lbShow();b.querySelector('.x').focus()}
-function lbShow(){const b=document.getElementById('lb');b.querySelector('img').src=I(LB[LBi]);b.querySelector('.c').textContent=(LBi+1)+' / '+LB.length;b.querySelector('img').alt=''}
-function lbClose(){document.getElementById('lb').classList.remove('on')}
+let LB=[],LBi=0,LBorig=null;
+const capOf=id=>{let m;if(m=id.match(/^c-(.+)$/))return cn(m[1]);if(m=id.match(/^[mg]-([a-z]+)/)){const x=MODELES.find(y=>y.id==m[1]);if(x)return x.nom}if(/^b-botte/.test(id))return t('boots_h');if(/^b-/.test(id))return t('low_h');return ''};
+function lbOpen(list,i){LBorig=document.activeElement;LB=list;LBi=i;const b=document.getElementById('lb');b.classList.add('on');lbShow();b.querySelector('.x').focus()}
+function lbShow(){const b=document.getElementById('lb');b.querySelector('img').src=I(LB[LBi]);const c=capOf(LB[LBi]);b.querySelector('.c').textContent=(c?c+' · ':'')+(LBi+1)+' / '+LB.length;b.querySelector('img').alt=c;b.querySelector('.x').setAttribute('aria-label',t('close'));b.querySelector('.p').setAttribute('aria-label',t('prev'));b.querySelector('.n').setAttribute('aria-label',t('next'))}
+function lbClose(){document.getElementById('lb').classList.remove('on');if(LBorig&&LBorig.focus)LBorig.focus()}
 /* ---------- conseiller ---------- */
-const INT={travel:['a_travel','go_trees','embauchoirs'],luxe:['a_luxe','go_cf','sur-mesure'],boots:['a_boots','go_cf','sur-mesure'],wax:['a_wax','go_cf','sur-mesure'],last:['a_last','go_lasts','formes'],price:['a_price','go_contact','contact'],custom:['a_custom','go_contact','contact'],bottines:['a_bottines','go_cf','sur-mesure'],wood:['a_wood','go_trees','embauchoirs'],contact:['a_contact','go_contact','contact'],hours:['a_hours','go_contact','contact'],ship:['a_ship','go_contact','contact'],epv:['a_epv',null,'atelier'],varraud:['a_varraud',null,'atelier']};
-const ORDRE=['price','hours','ship','varraud','epv','last','bottines','boots','travel','luxe','wax','wood','custom','contact'];
+const INT={travel:['a_travel','go_trees','embauchoirs'],luxe:['a_luxe','go_cf','sur-mesure'],boots:['a_boots','go_cf','sur-mesure'],wax:['a_wax','go_cf','sur-mesure'],last:['a_last','go_lasts','formes'],price:['a_price','go_contact','contact'],custom:['a_custom','go_contact','contact'],bottines:['a_bottines','go_cf','sur-mesure'],wood:['a_wood','go_trees','embauchoirs'],contact:['a_contact','go_contact','contact'],hours:['a_hours','go_contact','contact'],ship:['a_ship','go_contact','contact'],epv:['a_epv',null,'atelier'],varraud:['a_varraud',null,'atelier'],nopub:['a_nopub','go_contact','contact'],hello:['a_hello',null,null],ai:['a_ai',null,null]};
+const ORDRE=['ai','nopub','ship','price','hours','varraud','epv','last','bottines','boots','travel','luxe','wax','wood','custom','contact'];
 function aiShell(){
  document.getElementById('ai-fab').innerHTML=`<span class="pic">${ICO.embauchoir}</span><span><b>${t('ai_name')}</b><small>${t('ai_tag')}</small></span>`;
  document.getElementById('ai-bulle').innerHTML=`<b style="display:block;margin-bottom:4px">${t('ai_name')} · <span class="cote" style="color:var(--acajou)">${t('ai_virtual')}</span></b>${t('ai_invite')}<button type="button" aria-label="${esc(t('close'))}">${ICO.x}</button>`;
@@ -1347,15 +1349,17 @@ function norm(s){return s.toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g,'')}
 function repondre(q){const n=norm(q);const kws=Object.assign({},T.fr.kw);LANGS.forEach(l=>{if(T[l].kw)for(const k in T[l].kw)kws[k]=(kws[k]||[]).concat(T[l].kw[k])});
  const ms=MODELES.filter(x=>n.includes(norm(x.nom)));
  const has=w=>{w=norm(w).trim();if(!w)return false;if(w.length<=3&&/^[a-z]+$/.test(w))return new RegExp('(^|[^a-z])'+w+'([^a-z]|$)').test(n);return n.includes(w)};
- let hit=ORDRE.find(k=>(kws[k]||[]).some(has));
- if(ms.length&&(!hit||['luxe','travel','wax'].includes(hit)&&ms.length>1)){ms.forEach((m,i)=>direIA(m.nom+' — '+t('m_'+m.id)+' '+t('m_shown',{c:cn(m.c)})+'.',i==ms.length-1?['m_choose','sur-mesure']:null));CF.type='shoes';CF.modele=ms[0].id;return}
+ let hit=ORDRE.find(k=>(kws[k]||[]).some(has))||((kws.hello||[]).some(has)?'hello':null);
+ const col=[['incolore'],...CIRES].map(c=>c[0]).sort((a,b)=>b.length-a.length).find(c=>LANGS.some(l=>{const nm=T[l]['c_'+c.replace(/-/g,'_')];return nm&&n.includes(norm(nm))}));
+ if(col&&(!hit||hit=='wax')){CF.cire=col;direIA(t('a_wax_pick',{c:cn(col)}),['go_cf','sur-mesure']);return}
+ if(ms.length&&(!hit||['luxe','travel','wax'].includes(hit)&&ms.length>1)){ms.forEach((m,i)=>direIA(m.nom+' — '+t('m_'+m.id)+' '+t('m_shown',{c:cn(m.c)})+'.',i==ms.length-1?['m_choose','sur-mesure']:null));CF.type='shoes';CF.modele=ms[ms.length-1].id;return}
  if(!hit){direIA(t('a_unknown'),['go_contact','contact']);return}
  const [a,g,p]=INT[hit];direIA(t(a),g?[g,p]:null)}
 function aiOpen(on){document.getElementById('ai').classList.toggle('on',on);document.getElementById('ai-fab').style.display=on?'none':'flex';document.getElementById('ai-bulle').classList.remove('on');if(on)setTimeout(()=>document.getElementById('ai-in').focus(),50)}
 /* ---------- événements ---------- */
 document.addEventListener('click',e=>{
  const lg=e.target.closest('[data-lang]');if(lg){e.preventDefault();setLang(lg.dataset.lang);return}
- const g=e.target.closest('[data-go]');if(g){e.preventDefault();if(g.dataset.pre){CF.type='shoes';CF.modele=g.dataset.pre}go(g.dataset.go);return}
+ const g=e.target.closest('[data-go]');if(g){e.preventDefault();if(g.dataset.pre){CF.type='shoes';CF.modele=g.dataset.pre}if(g.dataset.type)CF.type=g.dataset.type;go(g.dataset.go);return}
  const an=e.target.closest('[data-ancre]');if(an){e.preventDefault();document.getElementById(an.dataset.ancre).scrollIntoView({behavior:'smooth'});return}
  const fo=e.target.closest('[data-modele]');if(fo){go('embauchoirs','m-'+fo.dataset.modele);return}
  const ci=e.target.closest('.cire[data-cire]');if(ci){CF.cire=ci.dataset.cire;document.querySelectorAll('.cire[data-cire]').forEach(b=>b.setAttribute('aria-pressed',b==ci));setTimeout(()=>go('sur-mesure'),250);return}
@@ -1381,8 +1385,9 @@ document.addEventListener('keydown',e=>{const b=document.getElementById('lb');if
 function setLang(l){L=l;try{localStorage.setItem('hb_lang',l)}catch(e){}coquille();go(cur,null,true)}
 document.getElementById('lang').addEventListener('change',e=>setLang(e.target.value));
 coquille();go((location.hash||'#accueil').slice(1).split('?')[0],null,true);
-setTimeout(()=>{try{if(sessionStorage.getItem('hb_bulle'))return;sessionStorage.setItem('hb_bulle','1')}catch(e){}if(!document.getElementById('ai').classList.contains('on')&&!matchMedia('(max-width:700px)').matches)document.getElementById('ai-bulle').classList.add('on')},4000);
+setTimeout(()=>{try{if(sessionStorage.getItem('hb_bulle'))return;sessionStorage.setItem('hb_bulle','1')}catch(e){}if(cur=='accueil'&&!document.getElementById('ai').classList.contains('on')&&!matchMedia('(max-width:700px)').matches){document.getElementById('ai-bulle').classList.add('on');setTimeout(()=>document.getElementById('ai-bulle').classList.remove('on'),12000)}},4000);
 window.go=go;
+(()=>{let x0=null;const b=document.getElementById('lb');b.addEventListener('touchstart',e=>{x0=e.touches[0].clientX},{passive:true});b.addEventListener('touchend',e=>{if(x0==null)return;const d=e.changedTouches[0].clientX-x0;if(Math.abs(d)>40){LBi=(LBi+(d<0?1:-1)+LB.length)%LB.length;lbShow()}x0=null})})();
 </script>
 <script id="nv-track">(function(){try{if(location.protocol!=='https:')return;if(/[?&]moi\b/.test(location.search)){localStorage.setItem('nv_moi','1');addEventListener('load',function(){var d=document.createElement('div');d.textContent='✓ Appareil reconnu : vos visites ne sont plus comptées';d.style.cssText='position:fixed;left:50%;bottom:24px;transform:translateX(-50%);z-index:2147483647;background:#1E3A2B;color:#fff;font:600 14px/1.3 system-ui,sans-serif;padding:12px 18px;border-radius:999px;box-shadow:0 8px 24px rgba(0,0,0,.25)';document.body.appendChild(d);setTimeout(function(){d.remove()},6000)})}if(localStorage.getItem('nv_moi')||navigator.webdriver)return;}catch(x){}
 var m=location.pathname.split('/').filter(Boolean)[0]||'';if(!m)return;var s=Math.random().toString(36).slice(2,12),t0=Date.now(),u='/_t.php',last='home',seen={};
