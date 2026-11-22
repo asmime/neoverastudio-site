@@ -43,7 +43,7 @@ header.top{position:sticky;top:0;z-index:40;background:rgba(246,245,242,.96);bor
 .bar{display:flex;align-items:center;gap:18px;min-height:66px}
 .brand{display:flex;flex-direction:column;line-height:1.05;text-decoration:none;color:var(--schiste);flex:0 0 auto}
 .brand b{font:600 18px/1.1 var(--titre);letter-spacing:-.01em}
-.brand span{font:500 11px/1.3 var(--num);color:var(--texte-2);letter-spacing:.04em}
+.brand span{font:500 12px/1.3 var(--titre);color:var(--texte-2);letter-spacing:.02em;white-space:nowrap}
 nav.menu{flex:1;min-width:0}
 nav.menu ul{display:flex;gap:2px;list-style:none;margin:0;padding:0;justify-content:center}
 nav.menu a{display:block;padding:9px 11px;border-radius:4px;text-decoration:none;color:var(--schiste);font:500 15px/1.2 var(--titre);white-space:nowrap}
@@ -69,17 +69,17 @@ section{padding:clamp(64px,9vw,120px) 0}
 .hero{position:relative;padding:0;background:var(--schiste)}
 .hero-photo{position:relative;height:min(78vh,720px);min-height:520px;overflow:hidden}
 .hero-photo img{width:100%;height:100%;object-fit:cover;object-position:50% 55%}
-.hero-photo::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(43,36,40,.55) 0%,rgba(43,36,40,.12) 55%,rgba(43,36,40,0) 100%)}
+.hero-photo::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(43,36,40,.72) 0%,rgba(43,36,40,.35) 50%,rgba(43,36,40,.05) 100%)}
 .hero-in{position:absolute;inset:0;display:flex;align-items:center;z-index:2}
-.plaque{background:linear-gradient(180deg,#fbfaf8,#efece7);color:var(--schiste);border-radius:3px;padding:30px 34px 26px;width:min(520px,100%);box-shadow:0 1px 0 #fff inset,0 -1px 0 rgba(0,0,0,.08) inset,0 24px 50px -20px rgba(0,0,0,.55);position:relative}
+.plaque{--lux:30%;background:linear-gradient(115deg,rgba(255,255,255,0) calc(var(--lux) - 18%),rgba(255,255,255,.55) var(--lux),rgba(255,255,255,0) calc(var(--lux) + 18%)),repeating-linear-gradient(90deg,rgba(255,255,255,.07) 0 1px,rgba(0,0,0,.035) 1px 2px,rgba(255,255,255,0) 2px 3px),linear-gradient(180deg,#d9d2c4,#bfb5a3 55%,#cbc2b1);color:#3a3128;border-radius:3px;padding:30px 34px 26px;width:min(520px,100%);box-shadow:0 1px 0 #fff inset,0 -1px 0 rgba(0,0,0,.08) inset,0 24px 50px -20px rgba(0,0,0,.55);position:relative}
 .plaque::before,.plaque::after{content:"";position:absolute;width:9px;height:9px;border-radius:50%;background:radial-gradient(circle at 35% 35%,#fff,#b9b2ac 60%,#8d857f);top:12px;left:12px}
 .plaque::after{left:auto;right:12px}
 .plaque .vis2{position:absolute;bottom:12px;left:12px;width:9px;height:9px;border-radius:50%;background:radial-gradient(circle at 35% 35%,#fff,#b9b2ac 60%,#8d857f)}
 .plaque .vis3{position:absolute;bottom:12px;right:12px;width:9px;height:9px;border-radius:50%;background:radial-gradient(circle at 35% 35%,#fff,#b9b2ac 60%,#8d857f)}
 .plaque .names{font:600 clamp(19px,2.2vw,24px)/1.25 var(--titre);letter-spacing:.01em;display:block;padding-bottom:10px;border-bottom:1.5px solid var(--schiste)}
-.plaque .names{display:grid;grid-template-columns:1fr 1fr;gap:2px 18px}.plaque .names span{display:block}
-.plaque .role{font:500 12.5px/1.3 var(--num);letter-spacing:.12em;text-transform:uppercase;color:var(--texte-2);margin:10px 0 4px}
-.plaque .meta{font:500 12.5px/1.5 var(--num);color:var(--texte-2)}
+.plaque .names{display:grid;grid-template-columns:1fr 1fr;gap:8px 22px;border-bottom-color:rgba(58,49,40,.55)!important}.plaque .names span{display:block;text-shadow:0 1px 0 rgba(255,255,255,.55),0 -1px 0 rgba(0,0,0,.25)}.plaque .names em{display:block;font:500 11.5px/1.3 var(--corps);font-style:normal;color:#5d5246;text-shadow:none;margin-top:2px}
+.plaque .role{font:600 12.5px/1.3 var(--titre);letter-spacing:.16em;text-transform:uppercase;color:#4b4137;margin:10px 0 4px;text-shadow:0 1px 0 rgba(255,255,255,.5)}
+.plaque .meta{font:400 13.5px/1.5 var(--corps);color:#4b4137}
 .hero-copy{margin-top:22px;color:#fff;max-width:560px}
 .hero-copy h1{color:#fff;font-size:clamp(34px,4.6vw,58px);line-height:1.02;font-weight:600}
 .hero-copy p{font-size:18.5px;color:rgba(255,255,255,.92);margin-top:14px;text-shadow:0 1px 12px rgba(0,0,0,.3)}
@@ -92,9 +92,9 @@ section{padding:clamp(64px,9vw,120px) 0}
 .statut .sep{color:var(--texte-2)}
 /* L'arcade (geste signature) */
 .arcade{background:var(--blanc)}
-.arc-grid{display:grid;grid-template-columns:minmax(260px,360px) 1fr;gap:clamp(24px,4vw,56px);align-items:start;margin-top:34px}
+.arc-col{display:flex;flex-direction:column;gap:16px}.arc-grid{display:grid;grid-template-columns:minmax(280px,400px) 1fr;gap:clamp(24px,4vw,56px);align-items:start;margin-top:34px}
 .sits{display:flex;flex-direction:column;gap:6px}
-.sits h3{font:500 12px/1 var(--num);letter-spacing:.12em;text-transform:uppercase;color:var(--texte-2);margin-bottom:8px}
+
 .sit{all:unset;box-sizing:border-box;cursor:pointer;padding:12px 14px;border:1px solid var(--trait);border-radius:4px;font:500 16px/1.3 var(--titre);color:var(--schiste);display:flex;justify-content:space-between;gap:10px;align-items:center;background:var(--chaux);transition:border-color .2s,background .2s}
 .sit::after{content:"";width:8px;height:8px;border-right:1.5px solid currentColor;border-top:1.5px solid currentColor;transform:rotate(45deg);flex:0 0 auto;opacity:.5}
 .sit:hover{border-color:var(--schiste-3);background:#fff}
@@ -103,15 +103,15 @@ section{padding:clamp(64px,9vw,120px) 0}
 .arc-stage{position:relative}
 .arc-svg{width:100%;height:auto;display:block;touch-action:manipulation}
 .arc-svg .strate{fill:none;stroke-linecap:round;stroke-linejoin:round}
-.arc-svg .dent{cursor:pointer;transition:fill .25s,stroke .25s;fill:#fff;stroke:var(--schiste-2);stroke-width:1.4}
+.arc-svg .dent{cursor:pointer;transition:fill .25s,stroke .25s;fill:#fff;stroke:var(--schiste-2);stroke-width:1.5;stroke-linejoin:round}
 .arc-svg .dent:hover,.arc-svg .dent:focus{fill:var(--chene-c);outline:none}
 .arc-svg .dent.lit{fill:var(--fauteuil-c);stroke:var(--fauteuil)}
 .arc-svg .dent.sel{fill:var(--fauteuil);stroke:var(--fauteuil-f)}
-.arc-svg .num{font:500 10px var(--num);fill:var(--schiste-3);pointer-events:none}
-.arc-svg .lbl{font:500 11px var(--num);fill:var(--texte-2);letter-spacing:.12em}
-.verdict{margin-top:18px;border-left:3px solid var(--fauteuil);background:var(--chaux);padding:18px 20px;border-radius:0 4px 4px 0;min-height:132px}
+.arc-svg .num{font:600 10.5px var(--titre);fill:var(--schiste-3);pointer-events:none;font-variant-numeric:tabular-nums}
+.arc-svg .lbl{font:600 12px var(--titre);fill:var(--chene-f);letter-spacing:.14em}
+.verdict{background:var(--chaux);padding:18px 20px;border-radius:6px;border-top:1px solid var(--trait)}
 .verdict h4{font:600 20px/1.2 var(--titre)}
-.verdict .k{font:500 11.5px var(--num);letter-spacing:.1em;text-transform:uppercase;color:var(--texte-2);margin:12px 0 4px;display:block}
+.verdict .k{font:600 14px var(--titre);color:var(--texte-2);margin:12px 0 6px;display:block}
 .verdict p{margin:.4em 0}
 .verdict .act{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
 .whos{display:flex;flex-wrap:wrap;gap:8px}
@@ -122,13 +122,13 @@ section{padding:clamp(64px,9vw,120px) 0}
 .reg{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1.4fr) 44px;gap:24px;align-items:center;padding:22px 4px;border-bottom:1px solid var(--trait);text-decoration:none;color:inherit;position:relative;transition:background .25s,padding .25s}
 .reg:hover{background:#fff;padding-left:16px}
 .reg h3{font-size:clamp(22px,2.4vw,30px)}
-.reg small{display:block;font:500 12px var(--num);letter-spacing:.08em;color:var(--texte-2);text-transform:uppercase;margin-top:6px}
+.reg small{display:block;font:400 15px var(--corps);color:var(--chene-f);margin-top:4px}
 .reg p{margin:0;color:var(--texte-2)}
 .reg .fl{width:40px;height:40px;border-radius:50%;border:1.5px solid var(--schiste);display:grid;place-items:center;transition:background .2s}
 .reg:hover .fl{background:var(--schiste);color:#fff}
 .reg .fl svg{width:16px;height:16px}
 /* Équipe : contre le mur */
-.mur{background:var(--schiste);color:#efe9ea}
+.mur{background:linear-gradient(rgba(43,36,40,.86),rgba(43,36,40,.92)),url(img/lieu4.jpg) center/cover;color:#efe9ea}
 .mur h2,.mur h3{color:#fff}
 .mur .lead{color:#d6cdd1}
 .praticiens{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:34px}
@@ -169,7 +169,7 @@ form.demande .note{font-size:14px;color:var(--texte-2)}
 /* Contact */
 .horaires{width:100%;border-collapse:collapse;margin-top:10px;font-size:16px}
 .horaires td{padding:9px 0;border-bottom:1px solid var(--trait)}
-.horaires td:last-child{text-align:right;font-family:var(--num);font-size:14px}
+.horaires td:last-child{text-align:right;font-variant-numeric:tabular-nums}
 .horaires tr.auj td{color:var(--fauteuil-f);font-weight:700}
 .cartes{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border-top:1.5px solid var(--schiste);margin-top:30px}
 .cartes>div{padding:22px 20px 22px 0;border-bottom:1px solid var(--trait)}
@@ -189,20 +189,20 @@ form.demande .note{font-size:14px;color:var(--texte-2)}
 .bloc{padding:0 0 34px;margin-bottom:34px;border-bottom:1px solid var(--trait);scroll-margin-top:100px}
 .bloc:last-child{border:0}
 .bloc h2{font-size:clamp(26px,3vw,36px)}
-.bloc .sub{font:500 12.5px var(--num);letter-spacing:.08em;text-transform:uppercase;color:var(--fauteuil-f);margin:8px 0 16px;display:block}
+.bloc .sub{font:500 17px var(--titre);color:var(--chene-f);margin:6px 0 14px;display:block}
 .bloc figure{margin:20px 0 0;background:#fff;border:1px solid var(--trait);border-radius:4px;padding:12px}
 .soin-img{margin-top:28px;border-radius:4px;overflow:hidden;background:#fff;border:1px solid var(--trait);max-width:860px}
-.soin-img img{width:100%;max-height:340px;object-fit:contain}
-.soin-img.photo img{object-fit:cover;max-height:380px}
+.soin-img img{width:100%;max-height:340px;object-fit:contain;filter:grayscale(1) sepia(.35) hue-rotate(270deg) saturate(.55) contrast(1.05)}.bloc figure img{filter:grayscale(1) sepia(.35) hue-rotate(270deg) saturate(.55) contrast(1.05)}
+.soin-img.photo img{object-fit:cover;max-height:380px;filter:none}
 .pour{background:var(--fauteuil-c);border-radius:4px;padding:16px 18px;margin-top:18px;display:flex;gap:14px;align-items:center;max-width:720px}
 .pour img{width:58px;height:58px;border-radius:50%;object-fit:cover;object-position:50% 20%}
 .note-ajout{font-size:14.5px;color:var(--texte-2);border:1px dashed var(--chene);border-radius:4px;padding:12px 14px;margin-top:18px;max-width:720px;background:#fffaf2}
 .suite{display:flex;flex-wrap:wrap;gap:10px;margin-top:20px}
 /* Pied */
 footer{background:var(--schiste);color:#d8cfd3;padding:46px 0 96px;font-size:15px}
-footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px}
+footer .wrap{display:flex;flex-direction:column;gap:26px}.foot{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;line-height:1.7}.foot b{font-family:var(--titre);color:#fff}.foot small{color:#a99ea4;font-size:13px;line-height:1.4;display:block;margin-top:6px}@media(max-width:820px){.foot{grid-template-columns:1fr}}
 footer a{color:#fff}
-footer .np{font:500 12px var(--num);color:#a99ea4;letter-spacing:.04em}
+footer .np{font:500 13px var(--titre);color:#a99ea4;border-top:1px solid rgba(255,255,255,.12);padding-top:16px}
 /* Conseiller */
 .cons-btn{position:fixed;right:18px;bottom:18px;z-index:60;display:flex;align-items:center;gap:10px;background:var(--schiste);color:#fff;border:0;border-radius:40px;padding:8px 18px 8px 8px;cursor:pointer;box-shadow:0 14px 30px -10px rgba(0,0,0,.45);text-align:left}
 .cons-btn .av{width:40px;height:40px;border-radius:50%;background:var(--fauteuil);display:grid;place-items:center;flex:0 0 auto}
@@ -253,7 +253,6 @@ footer .np{font:500 12px var(--num);color:#a99ea4;letter-spacing:.04em}
  .top .btn-main .t{display:none}.top .btn-main{padding:10px 11px}
  .brand{flex:1 1 0;min-width:0}.tools{gap:6px}.brand b{font-size:15px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.brand span{font-size:9.5px}.lang{padding:7px 26px 7px 8px;font-size:13px}
  nav.menu{margin:0 -16px;padding:0 16px}
- .plaque .names{grid-template-columns:1fr}
  footer{padding-bottom:150px}
  .hero-photo{height:auto;min-height:0}
  .hero-photo img{position:absolute;inset:0}
@@ -266,8 +265,10 @@ footer .np{font:500 12px var(--num);color:#a99ea4;letter-spacing:.04em}
  .appel-mob{display:flex;position:fixed;left:0;right:0;bottom:0;z-index:55;background:#fff;border-top:1px solid var(--trait);padding:8px 10px;gap:8px}
  .appel-mob .btn{flex:1;justify-content:center;padding:12px 8px;font-size:14.5px}
  .cons-btn{bottom:72px;right:12px;padding:6px 14px 6px 6px}.cons-btn .av{width:34px;height:34px}.cons-btn small{display:none}
- .invite{bottom:130px;right:12px}
+ .invite{bottom:124px;right:12px;left:12px;max-width:none;font-size:14px}
+ .plaque{padding:18px 18px 14px}.plaque .names{font-size:16px;gap:6px 14px;grid-template-columns:1fr 1fr!important}.plaque .names em{font-size:10.5px}.plaque .meta{font-size:12.5px}.hero-copy{margin-top:16px}
  .bande img{height:220px}
+ .arc-svg .num{display:none}.arc-stage{margin:0 -8px}
 }
 @media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
 </style>
@@ -277,20 +278,20 @@ footer .np{font:500 12px var(--num);color:#a99ea4;letter-spacing:.04em}
 <header class="top">
  <div class="wrap bar">
   <a class="brand" href="#/accueil"><b>Cabinet Dentaire de la Doutre</b><span>Drs Franco · Libeau · Minard · Wicks</span></a>
-  <nav class="menu" aria-label="Menu principal"><ul id="menu"></ul></nav>
+  <nav class="menu" aria-label="Menu principal" data-ta="ariaMenu"><ul id="menu"></ul></nav>
   <div class="tools">
-   <select class="lang" id="lang" aria-label="Langue / Language"></select>
+   <select class="lang" id="lang" aria-label="Langue" data-ta="ariaLang"></select>
    <a class="btn btn-main" href="tel:+33241203838"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg><span class="t" data-t="callShort">Appeler</span></a>
   </div>
  </div>
 </header>
 <main id="contenu"></main>
-<footer><div class="wrap"><div id="foot"></div><div class="np" data-t="proposal">Proposition de site par Neovera Studio</div></div></footer>
+<footer><div class="wrap"><div id="foot" class="foot"></div><div class="np" data-t="proposal">Proposition de site par Neovera Studio</div></div></footer>
 <div class="appel-mob"><a class="btn btn-main" href="tel:+33241203838" data-t="callShort">Appeler</a><a class="btn btn-line" href="#/rendez-vous" data-t="rdv">Prendre rendez-vous</a></div>
-<div class="invite" id="invite" role="status"><span data-t="advInvite"></span><button type="button" aria-label="Fermer" id="invX">×</button></div>
+<div class="invite" id="invite" role="status"><span data-t="advInvite"></span><button type="button" aria-label="Fermer" data-ta="close" id="invX">×</button></div>
 <button class="cons-btn" id="consBtn" type="button" aria-haspopup="dialog"><span class="av"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8"><path d="M7 4c-2 0-3 1.6-3 4 0 3 1 5 1.6 8.5.3 1.6 1 3.5 2 3.5 1.2 0 1.4-2.6 2-4.5.4-1.2 1.6-1.2 2 0 .6 1.9.8 4.5 2 4.5 1 0 1.7-1.9 2-3.5C17 13 20 11 20 8c0-2.4-1-4-3-4-1.7 0-2.6 1-5 1S8.7 4 7 4z"/></svg></span><span><b>Doutre Conseil</b><small data-t="advHelp">Je vous aide à choisir</small></span></button>
 <div class="chat" id="chat" role="dialog" aria-label="Doutre Conseil">
- <div class="chat-h"><div><b>Doutre Conseil</b><small data-t="advHelp"></small></div><button type="button" id="chatX" aria-label="Fermer">×</button></div>
+ <div class="chat-h"><div><b>Doutre Conseil</b><small data-t="advHelp"></small></div><button type="button" id="chatX" aria-label="Fermer" data-ta="close">×</button></div>
  <div class="chat-b" id="chatB" aria-live="polite"></div>
  <div class="chips" id="chips"></div>
  <form class="chat-f" id="chatF"><input id="chatI" autocomplete="off"><button type="submit" data-t="advSend">Envoyer</button></form>
@@ -933,6 +934,90 @@ bot:{
 kw:{rdv:["预约","挂号","就诊"],rage:["疼","痛","急","肿","脓"],horaires:["时间","几点","营业","开门","关门","周六","周日"],adresse:["地址","在哪","怎么去","地图","位置"],libeau:["libeau","根管专科","转诊"],implant:["种植","钛","植骨","缺牙","缺了"],gencive:["牙龈","出血","牙周"],detartrage:["洗牙","牙石","洁牙"],carie:["龋","蛀","刷牙","预防","糖"],facette:["贴面","美白","美学","颜色"],couronne:["牙冠","嵌体","断","裂"],devit:["根管","神经","死髓"],equipe:["团队","牙医","医生","助理","秘书","franco","minard","wicks"],mail:["邮件","邮箱","写信"],tarif:["价格","费用","多少钱","医保","报销","报价","€"],hello:["你好","您好","hello"],merci:["谢谢"]}
 };
 
+(function(){
+const P={
+fr:{ui:{heroTitle:"Quatre dentistes derrière le mur de schiste de la Doutre.",heroLead:"Trois dentistes pour vos soins, un endodontiste qui reçoit sur adressage. Dites-nous ce qui vous amène : on vous oriente vers le bon soin et le bon praticien.",where:"Où avez-vous mal ?",
+ formNote:"Le formulaire prépare un e-mail au praticien choisi ; vous l'envoyez depuis votre messagerie. Le site n'enregistre rien.",
+ estheNote:"Pour un éclaircissement des dents, parlez-en à votre praticien lors d'un rendez-vous : il vous dira ce qui est possible dans votre cas.",
+ verdictEmpty:"Choisissez une dent ou une situation : nous vous indiquons le soin, le praticien et comment prendre rendez-vous.",
+ seeTeam:"Voir toute l'équipe",seePlace:"Visiter le cabinet",ariaMenu:"Menu principal",close:"Fermer",ariaLang:"Langue",
+ rolesPlate:["soins dentaires, implantologie","endodontie, sur adressage","soins dentaires","soins dentaires"],
+ privacy:"Le formulaire n'enregistre aucune donnée : la demande part de votre propre messagerie.",writeBtn:"Écrire",footHours:"Secrétariat",footFind:"Nous trouver"},
+ bot:{urgence:"Une joue gonflée, de la fièvre ou une douleur qui empêche de dormir : appelez le secrétariat au 02 41 20 38 38 dès son ouverture et signalez-le. En dehors des horaires, appelez le 15 : il vous orientera.",
+  blanch:"Je ne sais pas si le cabinet pratique l'éclaircissement des dents. Posez la question au secrétariat (02 41 20 38 38) ou à votre praticien.",
+  dispo:"Je n'ai pas accès aux agendas des praticiens. Pour connaître les disponibilités, appelez le secrétariat au 02 41 20 38 38.",
+  weekend:"Non, le cabinet est fermé le samedi et le dimanche. Le secrétariat répond du lundi au vendredi, au 02 41 20 38 38."},
+ kw:{urgence:["gonfl","fièvre","fievre","joue","dormir","abcès","abces","nuit","week-end urgence"],blanch:["blanchi","blanchiment","éclairc","eclairc","blanches"],dispo:["disponib","demain","cette semaine","libre","délai","delai","quand puis"],weekend:["samedi","dimanche","week-end","weekend"]},
+ drop:{facette:["blanch","éclairc","eclairc"],horaires:["samedi","dimanche"],rage:["gonfl","abcès","abces"]}},
+en:{ui:{heroTitle:"Four dentists behind the Doutre's schist wall.",heroLead:"Three dentists for your care, plus an endodontist who sees patients on referral. Tell us what brings you in: we'll point you to the right treatment and the right dentist.",where:"Where does it hurt?",
+ formNote:"The form prepares an email to the chosen dentist; you send it from your own email app. The website stores nothing.",
+ estheNote:"For tooth whitening, ask your dentist at an appointment: they will tell you what is possible in your case.",
+ verdictEmpty:"Pick a tooth or a situation: we'll show you the treatment, the dentist and how to book.",
+ seeTeam:"Meet the whole team",seePlace:"Visit the practice",ariaMenu:"Main menu",close:"Close",ariaLang:"Language",
+ rolesPlate:["general dentistry, implants","endodontics, on referral","general dentistry","general dentistry"],
+ privacy:"The form stores no data: the request leaves from your own email.",writeBtn:"Email",footHours:"Front desk",footFind:"Find us"},
+ bot:{urgence:"A swollen cheek, a fever or pain that keeps you awake: call the front desk on +33 2 41 20 38 38 as soon as it opens and say so. Outside opening hours, call 15 (French emergency line): they will direct you.",
+  blanch:"I don't know whether the practice offers tooth whitening. Ask the front desk (+33 2 41 20 38 38) or your dentist.",
+  dispo:"I can't see the dentists' diaries. To find out about availability, call the front desk on +33 2 41 20 38 38.",
+  weekend:"No, the practice is closed on Saturday and Sunday. The front desk answers Monday to Friday on +33 2 41 20 38 38."},
+ kw:{urgence:["swollen","swelling","fever","cheek","sleep","abscess","night"],blanch:["whiten","bleach"],dispo:["availab","tomorrow","this week","free slot","waiting","soon"],weekend:["saturday","sunday","weekend"]},
+ drop:{facette:["whiten","white"],horaires:["saturday","sunday"],rage:["swollen","abscess"]}},
+es:{ui:{heroTitle:"Cuatro dentistas tras el muro de pizarra de la Doutre.",heroLead:"Tres dentistas para sus tratamientos y un endodoncista que atiende por derivación. Cuéntenos qué le trae: le orientamos hacia el tratamiento y el dentista adecuados.",where:"¿Dónde le duele?",
+ formNote:"El formulario prepara un correo al dentista elegido; usted lo envía desde su propio correo. La web no guarda nada.",
+ estheNote:"Para un blanqueamiento dental, consúltelo con su dentista en una cita: le dirá qué es posible en su caso.",
+ verdictEmpty:"Elija un diente o una situación: le indicamos el tratamiento, el dentista y cómo pedir cita.",
+ seeTeam:"Ver todo el equipo",seePlace:"Visitar la clínica",ariaMenu:"Menú principal",close:"Cerrar",ariaLang:"Idioma",
+ rolesPlate:["odontología general, implantes","endodoncia, por derivación","odontología general","odontología general"],
+ privacy:"El formulario no guarda ningún dato: la solicitud sale de su propio correo.",writeBtn:"Escribir",footHours:"Secretaría",footFind:"Cómo llegar"},
+ bot:{urgence:"Mejilla hinchada, fiebre o un dolor que no le deja dormir: llame a la secretaría al +33 2 41 20 38 38 en cuanto abra y avíselo. Fuera del horario, llame al 15 (emergencias en Francia): le orientarán.",
+  blanch:"No sé si la clínica realiza blanqueamientos. Pregunte en secretaría (+33 2 41 20 38 38) o a su dentista.",
+  dispo:"No tengo acceso a las agendas de los dentistas. Para conocer la disponibilidad, llame a la secretaría al +33 2 41 20 38 38.",
+  weekend:"No, la clínica cierra el sábado y el domingo. La secretaría atiende de lunes a viernes en el +33 2 41 20 38 38."},
+ kw:{urgence:["hinch","fiebre","mejilla","dormir","absceso","noche"],blanch:["blanque"],dispo:["disponib","mañana","esta semana","hueco","pronto"],weekend:["sábado","sabado","domingo","fin de semana"]},
+ drop:{facette:["blanque"],horaires:["sábado","domingo"],rage:["hinchado","absceso"]}},
+de:{ui:{heroTitle:"Vier Zahnärzte hinter der Schiefermauer der Doutre.",heroLead:"Drei Zahnärzte für Ihre Behandlung und ein Endodontologe, der auf Überweisung behandelt. Sagen Sie uns, was Sie zu uns führt: Wir zeigen Ihnen die passende Behandlung und den passenden Zahnarzt.",where:"Wo tut es weh?",
+ formNote:"Das Formular bereitet eine E-Mail an den gewählten Zahnarzt vor; Sie senden sie aus Ihrem eigenen Postfach. Die Website speichert nichts.",
+ estheNote:"Zum Bleaching fragen Sie Ihren Zahnarzt bei einem Termin: Er sagt Ihnen, was in Ihrem Fall möglich ist.",
+ verdictEmpty:"Wählen Sie einen Zahn oder eine Situation: Wir zeigen Ihnen Behandlung, Zahnarzt und den Weg zum Termin.",
+ seeTeam:"Das ganze Team",seePlace:"Die Praxis ansehen",ariaMenu:"Hauptmenü",close:"Schließen",ariaLang:"Sprache",
+ rolesPlate:["Zahnheilkunde, Implantologie","Endodontie, auf Überweisung","Zahnheilkunde","Zahnheilkunde"],
+ privacy:"Das Formular speichert keine Daten: Die Anfrage geht aus Ihrem eigenen Postfach.",writeBtn:"E-Mail",footHours:"Empfang",footFind:"Anfahrt"},
+ bot:{urgence:"Geschwollene Wange, Fieber oder Schmerzen, die Sie nicht schlafen lassen: Rufen Sie den Empfang unter +33 2 41 20 38 38 gleich bei Öffnung an und sagen Sie es dazu. Außerhalb der Zeiten wählen Sie die 15 (französischer Notruf): Dort hilft man Ihnen weiter.",
+  blanch:"Ich weiß nicht, ob die Praxis Bleaching anbietet. Fragen Sie den Empfang (+33 2 41 20 38 38) oder Ihren Zahnarzt.",
+  dispo:"Ich habe keinen Zugriff auf die Terminkalender. Freie Termine erfahren Sie am Empfang unter +33 2 41 20 38 38.",
+  weekend:"Nein, die Praxis ist samstags und sonntags geschlossen. Der Empfang ist Montag bis Freitag unter +33 2 41 20 38 38 erreichbar."},
+ kw:{urgence:["geschwollen","schwellung","fieber","wange","schlafen","abszess","nacht"],blanch:["bleach","aufhell"],dispo:["frei","morgen","diese woche","wartezeit","bald"],weekend:["samstag","sonntag","wochenende"]},
+ drop:{facette:["bleach","weiß","weiss"],horaires:["samstag","sonntag"],rage:["geschwollen","abszess"]}},
+it:{ui:{heroTitle:"Quattro dentisti dietro il muro di scisto della Doutre.",heroLead:"Tre dentisti per le sue cure e un endodontista che riceve su invio. Ci dica cosa la porta qui: la indirizziamo verso la cura e il dentista giusti.",where:"Dove le fa male?",
+ formNote:"Il modulo prepara un'e-mail al dentista scelto; la invia lei dalla sua posta. Il sito non salva nulla.",
+ estheNote:"Per uno sbiancamento dei denti, ne parli con il suo dentista durante un appuntamento: le dirà cosa è possibile nel suo caso.",
+ verdictEmpty:"Scelga un dente o una situazione: le indichiamo la cura, il dentista e come prendere appuntamento.",
+ seeTeam:"Tutto il team",seePlace:"Visitare lo studio",ariaMenu:"Menu principale",close:"Chiudi",ariaLang:"Lingua",
+ rolesPlate:["odontoiatria generale, implantologia","endodonzia, su invio","odontoiatria generale","odontoiatria generale"],
+ privacy:"Il modulo non salva alcun dato: la richiesta parte dalla sua posta.",writeBtn:"Scrivere",footHours:"Segreteria",footFind:"Dove siamo"},
+ bot:{urgence:"Guancia gonfia, febbre o un dolore che non la fa dormire: chiami la segreteria al +33 2 41 20 38 38 appena apre e lo segnali. Fuori orario, chiami il 15 (emergenze in Francia): la indirizzeranno.",
+  blanch:"Non so se lo studio esegue lo sbiancamento. Chieda in segreteria (+33 2 41 20 38 38) o al suo dentista.",
+  dispo:"Non ho accesso alle agende dei dentisti. Per le disponibilità, chiami la segreteria al +33 2 41 20 38 38.",
+  weekend:"No, lo studio è chiuso il sabato e la domenica. La segreteria risponde dal lunedì al venerdì al +33 2 41 20 38 38."},
+ kw:{urgence:["gonfi","febbre","guancia","dormire","ascesso","notte"],blanch:["sbianc"],dispo:["disponib","domani","questa settimana","libero","presto"],weekend:["sabato","domenica","fine settimana","weekend"]},
+ drop:{facette:["sbianc"],horaires:["sabato","domenica"],rage:["gonfi","ascesso"]}},
+zh:{ui:{heroTitle:"杜特尔板岩墙后的四位牙医。",heroLead:"三位牙医负责日常诊疗，另有一位根管专科医生接受转诊。告诉我们您的情况：我们为您指引合适的治疗和合适的医生。",where:"哪里疼？",
+ formNote:"表单会为所选医生生成一封邮件，由您从自己的邮箱发送。网站不保存任何信息。",
+ estheNote:"如需牙齿美白，请在就诊时咨询您的医生：他会告诉您是否适合。",
+ verdictEmpty:"选择一颗牙或一种情况：我们告诉您治疗项目、接诊医生和预约方式。",
+ seeTeam:"查看全部团队",seePlace:"参观诊所",ariaMenu:"主菜单",close:"关闭",ariaLang:"语言",
+ rolesPlate:["综合牙科、种植","根管治疗，需转诊","综合牙科","综合牙科"],
+ privacy:"表单不保存任何数据：申请从您自己的邮箱发出。",writeBtn:"写邮件",footHours:"前台",footFind:"交通"},
+ bot:{urgence:"脸颊肿胀、发烧或疼得睡不着：请在前台开门后立即致电 +33 2 41 20 38 38 并说明情况。非工作时间请拨打 15（法国急救电话），他们会为您指引。",
+  blanch:"我不确定诊所是否提供牙齿美白。请咨询前台（+33 2 41 20 38 38）或您的医生。",
+  dispo:"我无法查看医生的日程。想了解可预约时间，请致电前台 +33 2 41 20 38 38。",
+  weekend:"不，诊所周六和周日休息。前台周一至周五接听电话：+33 2 41 20 38 38。"},
+ kw:{urgence:["肿","发烧","睡不着","脓","晚上"],blanch:["美白","漂白"],dispo:["有空","明天","这周","空档","多久"],weekend:["周六","周日","周末","星期六","星期天"]},
+ drop:{facette:["美白"],horaires:["周六","周日"],rage:["肿","脓"]}}
+};
+for(const l in P){const X=P[l],T=LANGS[l];Object.assign(T.ui,X.ui);Object.assign(T.bot,X.bot);for(const k in X.drop)T.kw[k]=T.kw[k].filter(w=>!X.drop[k].includes(w));Object.assign(T.kw,X.kw);}
+})();
+
 
 const img=id=>'img/'+id+'.jpg';
 const MAILS={cabinet:"cabinetdentairedeladoutre@gmail.com",franco:"docteur.t.franco@hotmail.fr",libeau:"dr.libeau@gmail.com",wicks:"pro.wicks.matthieu@gmail.com",minard:"drfminard@gmail.com"};
@@ -945,31 +1030,32 @@ const MAILI='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-w
 let lang='fr';try{const s=localStorage.getItem('doutre-lang');if(s&&LANGS[s])lang=s}catch(e){}
 const L=()=>LANGS[lang],U=()=>LANGS[lang].ui;
 const esc=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
-const fmt=m=>{const h=Math.floor(m/60),mn=m%60;return lang==='en'?((h%12||12)+(mn?':'+String(mn).padStart(2,'0'):'')+(h<12?' am':' pm')):h+' h'+(mn?' '+String(mn).padStart(2,'0'):'')};
+const fmt=m=>{const h=Math.floor(m/60),mn=m%60;return lang==='en'?((h%12||12)+(mn?':'+String(mn).padStart(2,'0'):'')+(h<12?' am':' pm')):lang==='fr'?h+' h'+(mn?' '+String(mn).padStart(2,'0'):''):h+':'+String(mn).padStart(2,'0')};
+function paris(){try{const p=new Intl.DateTimeFormat('en-GB',{timeZone:'Europe/Paris',weekday:'short',hour:'2-digit',minute:'2-digit',hour12:false}).formatToParts(new Date());const g=k=>p.find(x=>x.type===k).value;return{d:['Mon','Tue','Wed','Thu','Fri','Sat','Sun'].indexOf(g('weekday')),m:(+g('hour')%24)*60+(+g('minute'))}}catch(e){const n=new Date();return{d:(n.getDay()+6)%7,m:n.getHours()*60+n.getMinutes()}}}
 const plage=d=>HOURS[d].length?HOURS[d].map(p=>fmt(p[0])+' – '+fmt(p[1])).join(' · '):U().closedDay;
-function etat(){const n=new Date(),d=(n.getDay()+6)%7,m=n.getHours()*60+n.getMinutes();const ouv=HOURS[d].some(p=>m>=p[0]&&m<p[1]);if(ouv)return{ok:1,t:U().open};
+function etat(){const{d,m}=paris();const ouv=HOURS[d].some(p=>m>=p[0]&&m<p[1]);if(ouv)return{ok:1,t:U().open};
  for(let i=0;i<8;i++){const dd=(d+i)%7;const p=HOURS[dd].find(p=>i>0||p[0]>m);if(p)return{ok:0,t:U().closed+' · '+U().opensAt+' '+(i===0?U().today:i===1?U().tomorrow:U().days[dd].toLowerCase())+' '+U().at+' '+fmt(p[0])}}return{ok:0,t:U().closed}}
 function whoChip(k){const t=L().team[k];return `<a class="who" href="#/equipe"><img src="${img(k)}" alt="">${esc(t.n)}</a>`}
 /* ---------- Pages ---------- */
 function pAccueil(){const u=U(),e=etat();return `
 <section class="hero" aria-label="${esc(u.heroTitle)}"><div class="hero-photo"><img src="${img('lieu4')}" alt="${esc(L().alt.hero)}" fetchpriority="high">
-<div class="hero-in"><div class="wrap"><div class="plaque"><i class="vis2"></i><i class="vis3"></i><span class="names"><span>Dr Thomas Franco</span><span>Dr Théodore Libeau</span><span>Dr François Minard</span><span>Dr Matthieu Wicks</span></span><div class="role">${esc(u.plateRole)}</div><div class="meta">${esc(u.plateAddr)}<br>${esc(u.plateHours)}</div></div>
-<div class="hero-copy"><h1>${esc(u.heroTitle)}</h1><p>${esc(u.heroLead)}</p><div class="hero-cta"><a class="btn btn-main" href="tel:+33241203838">${TEL}${esc(u.call)}</a><a class="btn btn-light" href="#arcade">${esc(u.where)}</a></div></div></div></div></div></section>
+<div class="hero-in"><div class="wrap"><div class="plaque"><i class="vis2"></i><i class="vis3"></i><span class="names">${["Thomas Franco","Théodore Libeau","François Minard","Matthieu Wicks"].map((n,i)=>`<span>Dr ${n}<em>${esc(u.rolesPlate[i])}</em></span>`).join("")}</span><div class="role">${esc(u.plateRole)}</div><div class="meta">${esc(u.plateAddr)}<br>${esc(u.plateHours)}</div></div>
+<div class="hero-copy"><h1>${esc(u.heroTitle)}</h1><p>${esc(u.heroLead)}</p><div class="hero-cta"><a class="btn btn-main" href="tel:+33241203838">${TEL}${esc(u.call)}</a><a class="btn btn-light" href="#arcade" onclick="event.preventDefault();document.getElementById('arcade').scrollIntoView({behavior:'smooth'})">${esc(u.where)}</a></div></div></div></div></div></section>
 <div class="statut"><div class="wrap"><span><i class="dot ${e.ok?'ok':''}"></i><b>${esc(e.t)}</b></span><span class="sep">9 bd Henri-Arnauld, Angers</span><a href="#/rendez-vous">${esc(u.rdv)} →</a></div></div>
 <section class="arcade" id="arcade"><div class="wrap"><h2>${esc(u.archTitle)}</h2><p class="lead" style="margin-top:14px">${esc(u.archLead)}</p>
-<div class="arc-grid"><div class="sits" role="group" aria-label="${esc(u.archPick)}"><h3>${esc(u.archPick)}</h3>${L().sit.map(s=>`<button class="sit" type="button" aria-pressed="false" data-s="${s.k}">${esc(s.l)}</button>`).join('')}</div>
-<div class="arc-stage"><svg class="arc-svg" id="arcSvg" viewBox="0 0 800 520" role="img" aria-label="${esc(u.archTitle)}"></svg><div class="verdict" id="verdict" aria-live="polite"><p>${esc(u.archLead)}</p></div></div></div></div></section>
+<div class="arc-grid"><div class="arc-col"><div class="sits" role="group" aria-label="${esc(u.archPick)}">${L().sit.map(s=>`<button class="sit" type="button" aria-pressed="false" data-s="${s.k}">${esc(s.l)}</button>`).join('')}</div><div class="verdict" id="verdict" aria-live="polite"><p>${esc(u.verdictEmpty)}</p></div></div>
+<div class="arc-stage"><svg class="arc-svg" id="arcSvg" viewBox="40 10 720 500" role="img" aria-label="${esc(u.archTitle)}"></svg></div></div></div></section>
 <section><div class="wrap"><h2>${esc(u.soinsTitle)}</h2><p class="lead" style="margin-top:14px">${esc(u.soinsLead)}</p>${registre()}</div></section>
 ${blocEquipe(true)}
-<section><div class="wrap"><h2>${esc(u.placeTitle)}</h2><p class="lead" style="margin-top:14px">${esc(u.placeLead)}</p><div class="bande">${[3,5,1,2,7,8,9].map(i=>`<img loading="lazy" src="${img('lieu'+i)}" alt="${esc(L().alt.lieu)}">`).join('')}</div><div class="suite"><a class="btn btn-line" href="#/cabinet">${esc(u.placeTitle)} ${ARW}</a></div></div></section>
+<section><div class="wrap"><h2>${esc(u.placeTitle)}</h2><p class="lead" style="margin-top:14px">${esc(u.placeLead)}</p><div class="bande">${[3,5,1,2,7,8,9].map(i=>`<img loading="lazy" src="${img('lieu'+i)}" alt="${esc(L().alt.lieu)}">`).join('')}</div><div class="suite"><a class="btn btn-line" href="#/cabinet">${esc(u.seePlace)} ${ARW}</a></div></div></section>
 ${blocRdv()}`}
 function registre(){return `<div class="registre">${L().order.map(k=>{const s=L().soins[k];return `<a class="reg" href="#/soins/${k}"><div><h3>${esc(s.n)}</h3><small>${esc(s.s)}</small></div><p>${esc(s.lead)}</p><span class="fl" aria-hidden="true">${ARW}</span></a>`}).join('')}</div>`}
 function blocEquipe(court){const u=U(),T=L().team;return `<section class="mur"><div class="wrap"><h2>${esc(u.teamTitle)}</h2><p class="lead" style="margin-top:14px">${esc(u.teamLead)}</p>
 <div class="praticiens">${PRATS.map(k=>`<a class="prat" href="#/equipe"><img loading="lazy" src="${img(k)}" alt="${esc(T[k].n)}"><div class="cap"><b>${esc(T[k].n)}</b><span>${esc(T[k].r)}</span></div></a>`).join('')}</div>
-${court?`<div class="suite"><a class="btn btn-light" href="#/equipe">${esc(u.teamTitle)} ${ARW}</a></div>`:''}</div></section>`}
+${court?`<div class="suite"><a class="btn btn-light" href="#/equipe">${esc(u.seeTeam)} ${ARW}</a></div>`:''}</div></section>`}
 function pEquipe(){const u=U(),T=L().team;return `<section class="mur"><div class="wrap"><h1 style="color:#fff;font-size:clamp(38px,5.4vw,68px)">${esc(u.teamTitle)}</h1><p class="lead" style="margin-top:14px">${esc(u.teamLead)}</p>
 <h2 style="font-size:24px;margin-top:44px">${esc(u.praticiens)}</h2>
-<div class="praticiens">${PRATS.map(k=>`<article class="prat"><img loading="lazy" src="${img(k)}" alt="${esc(T[k].n)}"><div class="cap"><b>${esc(T[k].n)}</b><span>${esc(T[k].r)}</span><ul style="margin:10px 0 0;padding-left:18px;font-size:14px;color:#e3dbdf">${T[k].d.map(d=>`<li>${esc(d)}</li>`).join('')}</ul><p style="font-size:14px;margin:10px 0 0">${k==='libeau'?esc(u.byReferral):`<a style="color:#fff" href="mailto:${MAILS[k]}">${MAILS[k]}</a>`}</p></div></article>`).join('')}</div>
+<div class="praticiens">${PRATS.map(k=>`<article class="prat"><img loading="lazy" src="${img(k)}" alt="${esc(T[k].n)}"><div class="cap"><b>${esc(T[k].n)}</b><span>${esc(T[k].r)}</span><ul style="margin:10px 0 0;padding-left:18px;font-size:14px;color:#e3dbdf">${T[k].d.map(d=>`<li>${esc(d)}</li>`).join('')}</ul><p style="font-size:14px;margin:10px 0 0">${k==='libeau'?esc(u.byReferral)+'<br>':''}<a style="color:#fff" href="mailto:${MAILS[k]}">${MAILS[k]}</a></p></div></article>`).join('')}</div>
 <h2 style="font-size:24px;margin-top:44px">${esc(u.assist)}</h2>
 <div class="equipe-s">${ASS.map(k=>`<div class="ass"><img loading="lazy" src="${img(k)}" alt="${esc(T[k].n)}"><div><b>${esc(T[k].n)}</b><span>${esc(T[k].r)}</span></div></div>`).join('')}</div></div></section>${blocRdv()}`}
 function pCabinet(){const u=U();return `<section><div class="wrap"><h1 style="font-size:clamp(38px,5.4vw,68px)">${esc(u.placeTitle)}</h1><p class="lead" style="margin-top:14px">${esc(u.placeLead)}</p>
@@ -983,8 +1069,8 @@ function blocRdv(){const u=U();return `<section style="background:#fff;border-to
 <div class="champ"><label for="ft">${esc(u.fTel)}</label><input id="ft" type="tel" autocomplete="tel"></div>
 <div class="champ"><label for="fm">${esc(u.fWhy)}</label><select id="fm">${L().sit.map(s=>`<option>${esc(s.l)}</option>`).join('')}</select></div>
 <div class="champ"><label for="fd">${esc(u.fWhen)}</label><textarea id="fd"></textarea></div>
-<button class="btn btn-main" type="submit" style="margin-top:16px">${MAILI}${esc(u.fSend)}</button><p class="msg" role="status"></p></form></div></div></section>`}
-function pContact(){const u=U(),d=(new Date().getDay()+6)%7;return `<section><div class="wrap"><h1 style="font-size:clamp(38px,5.4vw,68px)">${esc(u.contactTitle)}</h1>
+<p class="note" style="margin-top:12px">${esc(u.privacy)}</p><button class="btn btn-main" type="submit" style="margin-top:8px">${MAILI}${esc(u.fSend)}</button><p class="msg" role="status"></p></form></div></div></section>`}
+function pContact(){const u=U(),d=paris().d;return `<section><div class="wrap"><h1 style="font-size:clamp(38px,5.4vw,68px)">${esc(u.contactTitle)}</h1>
 <div class="cartes"><div><span class="k">${esc(u.addr)}</span><span class="v">9 boulevard Henri-Arnauld<br>49100 Angers</span><p style="margin-top:8px"><a href="https://www.google.com/maps/search/?api=1&query=9+boulevard+Henri+Arnauld+49100+Angers" target="_blank" rel="noopener">${esc(u.map)}</a></p></div>
 <div><span class="k">${esc(u.phone)}</span><span class="v"><a href="tel:+33241203838" style="color:inherit">02 41 20 38 38</a></span></div>
 <div><span class="k">${esc(u.mail)}</span><span class="v" style="font-size:16px;word-break:break-all"><a href="mailto:${MAILS.cabinet}">${MAILS.cabinet}</a></span></div></div>
@@ -1001,36 +1087,49 @@ ${k==='esth'?`<p class="note-ajout">${esc(u.estheNote)}</p>`:''}
 <div>${s.b.map((b,j)=>`<article class="bloc" id="b${j}"><h2>${esc(b.h)}</h2><span class="sub">${esc(b.sub)}</span>${b.p.map(p=>`<p>${esc(p)}</p>`).join('')}${b.img?`<figure><img loading="lazy" src="${img(b.img)}" alt="${esc(b.h)}"></figure>`:''}</article>`).join('')}
 <div class="suite"><a class="btn btn-main" href="tel:+33241203838">${TEL}${esc(u.call)}</a><a class="btn btn-line" href="#/soins/${nx}">${esc(L().soins[nx].n)} ${ARW}</a></div></div></div>`}
 /* ---------- Arcade : les lits de schiste deviennent l'arcade dentaire ---------- */
-const W8=[.86,.7,.8,.76,.76,1.12,1.02,.92];
+const TW={1:[22,26],2:[18,24],3:[20,28],4:[21,24],5:[21,24],6:[29,28],7:[27,27],8:[24,25]};
 const QUAD={1:{arc:'up',side:-1},2:{arc:'up',side:1},3:{arc:'lo',side:1},4:{arc:'lo',side:-1}};
 const SIT_TEETH={rage:[36,46,26,16,37,47],devit:[36,46,16,26],manque:[36,46,15,25],gencive:[31,32,41,42,11,21],casse:[16,26,36,46,15,25,35,45],carie:[17,27,37,47,16,26],esth:[11,12,13,21,22,23]};
-const SIT_SOIN={rage:'endo',devit:'endo',manque:'impl',gencive:'paro',casse:'proth',carie:'cons',esth:'esth'};
-function ell(cx,cy,rx,ry,a){return [cx+rx*Math.cos(a),cy+ry*Math.sin(a)]}
-const ARC={up:{cx:400,cy:262,rx:300,ry:200,a0:Math.PI*1.04,a1:Math.PI*1.96},lo:{cx:400,cy:282,rx:282,ry:190,a0:Math.PI*.96,a1:Math.PI*.04}};
-function teeth(){const out=[];[1,2,3,4].forEach(q=>{const Q=QUAD[q],A=ARC[Q.arc];const tot=W8.reduce((a,b)=>a+b,0);const mid=(A.a0+A.a1)/2;let acc=0;for(let i=0;i<8;i++){const w=W8[i];const f=(acc+w/2)/tot;acc+=w;const half=(A.a1-A.a0)/2;const a=Q.side<0?mid-f*half:mid+f*half;const [x,y]=ell(A.cx,A.cy,A.rx,A.ry,a);const ang=Math.atan2(A.ry*Math.cos(a),-A.rx*Math.sin(a))*180/Math.PI;out.push({n:q*10+i+1,x,y,ang,w,q,i})}});return out}
+const ARC={up:{y0:62,H:148,W:300,dir:1},lo:{y0:458,H:148,W:300,dir:-1}};
+function apt(A,u){return [400+u*A.W,A.y0+A.dir*A.H*u*u]}
+function anorm(A,u){const dx=A.W,dy=A.dir*2*A.H*u,l=Math.hypot(dx,dy);return [-dy/l*A.dir*-1,dx/l*A.dir*-1]}
+function aOut(A,u){/* unit normal pointing outward (away from tongue) */const dx=A.W,dy=A.dir*2*A.H*u,l=Math.hypot(dx,dy);let nx=dy/l,ny=-dx/l;if(A.dir<0){nx=-nx;ny=-ny}return [nx,ny]}
+function alen(A){const N=400,L=[0];let p=apt(A,-1);for(let i=1;i<=N;i++){const q=apt(A,-1+2*i/N);L.push(L[i-1]+Math.hypot(q[0]-p[0],q[1]-p[1]));p=q}return L}
+function uAt(A,L,d){const N=L.length-1;let i=L.findIndex(v=>v>=d);if(i<=0)return -1;const f=(d-L[i-1])/(L[i]-L[i-1]);return -1+2*(i-1+f)/N}
+function teeth(){const out=[];['up','lo'].forEach(k=>{const A=ARC[k],L=alen(A),tot=L[L.length-1];const seq=[8,7,6,5,4,3,2,1,1,2,3,4,5,6,7,8];const gap=3;const raw=seq.reduce((a,i)=>a+TW[i][0]+gap,0);const f=.93*tot/raw;let d=(tot-raw*f)/2;
+ seq.forEach((i,j)=>{const w=TW[i][0]*f,hh=TW[i][1]*f*.9;const u=uAt(A,L,d+w/2);d+=w+gap*f;const [x,y]=apt(A,u);const tg=Math.atan2(A.dir*2*A.H*u,A.W)*180/Math.PI;const left=j<8;const q=k==='up'?(left?1:2):(left?4:3);const [nx,ny]=aOut(A,u);out.push({n:q*10+i,i,x,y,ang:tg,nx,ny,q,arc:k,w,hh})})});return out}
 const TEETH=teeth();
-function strata(){const lines=[];const ys=[96,170,246,322,402,470];ys.forEach((y0,li)=>{const pts=[];for(let j=0;j<=60;j++){const x=30+j*(740/60);const y=y0+Math.sin(j*.55+li*1.7)*4+Math.sin(j*.17+li)*7+(j%7===0?2:0);pts.push([x,y])}lines.push(pts)});return lines}
-function arcTargets(){const offs=[['up',1.16],['up',1.0],['up',.84],['lo',.84],['lo',1.0],['lo',1.16]];return offs.map(([k,s])=>{const A=ARC[k];const pts=[];for(let j=0;j<=60;j++){const a=A.a0+(A.a1-A.a0)*(j/60);pts.push(ell(A.cx,A.cy,A.rx*s,A.ry*s,a))}return pts})}
+function toothPath(i,w,h){const a=w/2,b=h/2;
+ if(i<=2)return `M${-a} ${-b+5}Q${-a} ${-b} ${-a+5} ${-b}H${a-5}Q${a} ${-b} ${a} ${-b+5}V${b-7}Q${a} ${b} ${a-7} ${b}H${-a+7}Q${-a} ${b} ${-a} ${b-7}Z`;
+ if(i===3)return `M0 ${-b}Q${a} ${-b+4} ${a} ${-b+11}V${b-8}Q${a} ${b} ${a-6} ${b}H${-a+6}Q${-a} ${b} ${-a} ${b-8}V${-b+11}Q${-a} ${-b+4} 0 ${-b}Z`;
+ if(i<=5)return `M${-a} 0C${-a} ${-b} ${a} ${-b} ${a} 0S${-a} ${b} ${-a} 0Z`.replace(/S.*/,`C${a} ${b} ${-a} ${b} ${-a} 0Z`);
+ return `M${-a+6} ${-b}H${a-6}Q${a} ${-b} ${a} ${-b+6}V${b-6}Q${a} ${b} ${a-6} ${b}H${-a+6}Q${-a} ${b} ${-a} ${b-6}V${-b+6}Q${-a} ${-b} ${-a+6} ${-b}Z`}
+function strata(){const lines=[];const ys=[70,150,226,300,378,452];ys.forEach((y0,li)=>{const pts=[];for(let j=0;j<=60;j++){const x=40+j*(720/60);const y=y0+Math.sin(j*.55+li*1.7)*4+Math.sin(j*.17+li)*7;pts.push([x,y])}lines.push(pts)});return lines}
+function arcTargets(){const offs=[['up',0],['up',38],['up',-36],['lo',-36],['lo',38],['lo',0]];return offs.map(([k,o])=>{const A=ARC[k];const pts=[];for(let j=0;j<=60;j++){const u=-.985+1.97*(j/60);const [x,y]=apt(A,u),[nx,ny]=aOut(A,u);pts.push([x+nx*o,y+ny*o])}return pts})}
 const STRA=strata(),TARG=arcTargets();
-const COLS=['#8C8288','#5E535A','#C3955A','#C3955A','#5E535A','#8C8288'],SW=[1.4,2.4,1.6,1.6,2.4,1.4];
+const COLS=['#C3955A','#5E535A','#8C8288','#8C8288','#5E535A','#C3955A'],SW0=[2.2,1.6,1.4,1.4,1.6,2.2],SW1=[66,1.4,1.2,1.2,1.4,66],OP1=[.2,.55,.45,.45,.55,.2];
 const ease=t=>t<.5?4*t*t*t:1-Math.pow(-2*t+2,3)/2;
 function dPath(p){return 'M'+p.map(q=>q[0].toFixed(1)+' '+q[1].toFixed(1)).join(' L')}
 function drawArc(t){const svg=document.getElementById('arcSvg');if(!svg)return;const e=ease(t);
- const paths=svg.querySelectorAll('.strate');paths.forEach((pth,li)=>{const p=STRA[li].map((s,j)=>{const d=TARG[li][j];return [s[0]+(d[0]-s[0])*e,s[1]+(d[1]-s[1])*e]});pth.setAttribute('d',dPath(p));pth.style.opacity=(li===2||li===3)?(1-e*.7):(1-e*.35)});
- svg.querySelectorAll('.dent-g').forEach((g,k)=>{const o=Math.max(0,Math.min(1,(t-.55)*3.2-(k%16)*.04));g.style.opacity=o;g.setAttribute('transform',`translate(${g.dataset.x} ${g.dataset.y}) rotate(${g.dataset.a}) scale(${.6+.4*o})`)})}
+ svg.querySelectorAll('.strate').forEach((pth,li)=>{const p=STRA[li].map((s,j)=>{const d=TARG[li][j];return [s[0]+(d[0]-s[0])*e,s[1]+(d[1]-s[1])*e]});pth.setAttribute('d',dPath(p));pth.setAttribute('stroke-width',(SW0[li]+(SW1[li]-SW0[li])*e).toFixed(2));pth.style.opacity=(1+(OP1[li]-1)*e).toFixed(3)});
+ svg.querySelectorAll('.dent-g').forEach((g,k)=>{const o=Math.max(0,Math.min(1,(t-.5)*3.2-(Math.abs((k%16)-7.5))*.035));g.style.opacity=o;g.setAttribute('transform',`translate(${g.dataset.x} ${g.dataset.y}) rotate(${g.dataset.a}) scale(${.7+.3*o})`)});
+ svg.querySelectorAll('.num,.lbl').forEach(n=>n.style.opacity=Math.max(0,(t-.8)*5))}
 function buildArc(){const svg=document.getElementById('arcSvg');if(!svg)return;const u=U();let h='';
- STRA.forEach((p,li)=>{h+=`<path class="strate" d="${dPath(p)}" stroke="${COLS[li]}" stroke-width="${SW[li]}"/>`});
- h+=`<text class="lbl" x="400" y="40" text-anchor="middle">${esc(u.upper.toUpperCase())}</text><text class="lbl" x="400" y="506" text-anchor="middle">${esc(u.lower.toUpperCase())}</text>`;
- TEETH.forEach(d=>{const rx=13*d.w+3,ry=17;const lx=Math.cos((d.ang-90)*Math.PI/180),ly=Math.sin((d.ang-90)*Math.PI/180);const up=d.q<3?1:-1;
-  h+=`<g class="dent-g" data-x="${d.x.toFixed(1)}" data-y="${d.y.toFixed(1)}" data-a="${(d.ang+(d.q<3?0:180)).toFixed(1)}"><rect class="dent" data-n="${d.n}" x="${-rx}" y="${-ry}" width="${2*rx}" height="${2*ry}" rx="${Math.min(rx,ry)*.8}" tabindex="0" role="button" aria-label="${u.toothWord} ${d.n}"/><text class="num" x="0" y="${ry+13}" text-anchor="middle" transform="rotate(${d.q<3?0:180} 0 ${ry+9})">${d.n}</text></g>`});
+ STRA.forEach((p,li)=>{h+=`<path class="strate" d="${dPath(p)}" stroke="${COLS[li]}" stroke-width="${SW0[li]}"/>`});
+ h+=`<text class="lbl" x="400" y="170" text-anchor="middle">${esc(u.upper.toUpperCase())}</text><text class="lbl" x="400" y="360" text-anchor="middle">${esc(u.lower.toUpperCase())}</text>`;
+ TEETH.forEach(d=>{const w=d.w-2,hh=d.hh;h+=`<g class="dent-g" data-x="${d.x.toFixed(1)}" data-y="${d.y.toFixed(1)}" data-a="${d.ang.toFixed(1)}"><path class="dent" data-n="${d.n}" d="${toothPath(d.i,w,hh)}" tabindex="0" role="button" aria-label="${u.toothWord} ${d.n}"/></g><text class="num" x="${(d.x+d.nx*(d.hh/2+13)).toFixed(1)}" y="${(d.y+d.ny*(d.hh/2+13)+3.5).toFixed(1)}" text-anchor="middle">${d.n}</text>`});
  svg.innerHTML=h;svg.querySelectorAll('.dent').forEach(r=>{const f=()=>pickTooth(+r.dataset.n);r.addEventListener('click',f);r.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();f()}})});
  const red=matchMedia('(prefers-reduced-motion: reduce)').matches;if(red||window.__arcDone){drawArc(1);return}drawArc(0);
- const io=new IntersectionObserver(es=>{if(es[0].isIntersecting){io.disconnect();const t0=performance.now(),D=2200;const step=n=>{const t=Math.min(1,(n-t0)/D);drawArc(t);if(t<1)requestAnimationFrame(step);else window.__arcDone=1};requestAnimationFrame(step)}},{threshold:.35});io.observe(svg)}
+ const io=new IntersectionObserver(es=>{if(es[0].isIntersecting){io.disconnect();const t0=performance.now(),D=2400;const step=n=>{const t=Math.min(1,(n-t0)/D);drawArc(t);if(t<1)requestAnimationFrame(step);else window.__arcDone=1};requestAnimationFrame(step)}},{threshold:.35});io.observe(svg)}
 function lightTeeth(list,sel){document.querySelectorAll('#arcSvg .dent').forEach(r=>{const n=+r.dataset.n;r.classList.toggle('lit',list.includes(n));r.classList.toggle('sel',n===sel)})}
-function verdictHTML(title,txt,soin,who){const u=U(),s=L().soins[soin];return `<h4>${esc(title)}</h4><p>${esc(txt)}</p><span class="k">${esc(u.who)}</span><div class="whos">${who.map(whoChip).join('')}</div><div class="act"><a class="btn btn-main" href="${who.length===1&&who[0]==='libeau'?'#/rendez-vous':'tel:+33241203838'}">${who.length===1&&who[0]==='libeau'?esc(u.how):TEL+esc(u.call)}</a><a class="btn btn-line" href="#/soins/${soin}">${esc(u.seeSoin)} : ${esc(s.n)}</a></div>`}
-function pickSit(k){const s=L().sit.find(x=>x.k===k);document.querySelectorAll('.sit').forEach(b=>b.setAttribute('aria-pressed',b.dataset.s===k));if(!window.__arcDone)drawArc(1),window.__arcDone=1;lightTeeth(SIT_TEETH[k],null);document.getElementById('verdict').innerHTML=verdictHTML(s.l,s.t,s.s,s.w)}
-function pickTooth(n){const u=U(),q=Math.floor(n/10),i=n%10;const front=i<=3;const name=`${u.toothWord} ${n} · ${u.tooth[i]} ${q<3?u.upper:u.lower} ${(q===1||q===4)?u.right:u.left}`;document.querySelectorAll('.sit').forEach(b=>b.setAttribute('aria-pressed','false'));lightTeeth([],n);
- const soin=front?'esth':'cons';const sx=front?['cons','proth','esth','impl']:['cons','proth','endo','impl'];document.getElementById('verdict').innerHTML=`<h4>${esc(name)}</h4><p>${esc(front?u.toothFront:u.toothBack)}</p><span class="k">${esc(u.seeSoin)}</span><div class="whos">${sx.map(k=>`<a class="who" style="padding-left:12px" href="#/soins/${k}">${esc(L().soins[k].n)}</a>`).join('')}</div><div class="act"><a class="btn btn-main" href="tel:+33241203838">${TEL}${esc(u.call)}</a></div>`}
+function actions(who){const u=U();if(who.length===1&&who[0]==='libeau')return `<a class="btn btn-main" href="#/rendez-vous">${esc(u.how)}</a>`;return `<a class="btn btn-main" href="tel:+33241203838">${TEL}${esc(u.callShort)}</a><a class="btn btn-line" href="#/rendez-vous">${MAILI}${esc(u.writeBtn)}</a>`}
+function verdictHTML(title,txt,soin,who){const u=U(),s=L().soins[soin];return `<h4>${esc(title)}</h4><p>${esc(txt)}</p><span class="k">${esc(u.who)}</span><div class="whos">${who.map(whoChip).join('')}</div><p style="margin-top:10px"><a href="#/soins/${soin}">${esc(u.seeSoin)} : ${esc(s.n)} →</a></p><div class="act">${actions(who)}</div>`}
+function calme(){document.getElementById('invite').classList.remove('on');try{sessionStorage.setItem('doutre-inv','1')}catch(e){}}
+function pickSit(k){calme();const s=L().sit.find(x=>x.k===k);document.querySelectorAll('.sit').forEach(b=>b.setAttribute('aria-pressed',b.dataset.s===k));if(!window.__arcDone){drawArc(1);window.__arcDone=1}lightTeeth(SIT_TEETH[k],null);document.getElementById('verdict').innerHTML=verdictHTML(s.l,s.t,s.s,s.w)}
+function pickTooth(n){calme();const u=U(),q=Math.floor(n/10),i=n%10;const front=i<=3;const name=`${u.toothWord} ${n} · ${u.tooth[i]} ${q<3?u.upper:u.lower} ${(q===1||q===4)?u.right:u.left}`;document.querySelectorAll('.sit').forEach(b=>b.setAttribute('aria-pressed','false'));lightTeeth([],n);
+ const sx=front?['cons','esth','proth','impl']:['cons','proth','endo','impl'];const who=['franco','minard','wicks'];
+ document.getElementById('verdict').innerHTML=`<h4>${esc(name)}</h4><p>${esc(front?u.toothFront:u.toothBack)}</p><span class="k">${esc(u.seeSoin)}</span><div class="whos">${sx.map(k=>`<a class="who" style="padding-left:12px" href="#/soins/${k}">${esc(L().soins[k].n)}</a>`).join('')}</div><span class="k">${esc(u.who)}</span><div class="whos">${who.map(whoChip).join('')}</div><div class="act">${actions(who)}</div>`;
+ if(innerWidth<821)document.getElementById('verdict').scrollIntoView({behavior:'smooth',block:'nearest'})}
 /* ---------- Routeur ---------- */
 function render(){const h=(location.hash||'#/accueil').slice(2).split('/');let r=h[0]||'accueil';if(!ROUTES.includes(r)&&r!=='soins')r='accueil';const m=document.getElementById('contenu');
  let html=r==='accueil'?pAccueil():r==='soins'?(h[1]?pSoin(h[1]):pSoins()):r==='equipe'?pEquipe():r==='cabinet'?pCabinet():r==='rendez-vous'?blocRdv():r==='contact'?pContact():pAccueil();
@@ -1046,10 +1145,10 @@ const fw=f.querySelector('#fw');fw.addEventListener('change',()=>{msg.className=
   if(!g('#fn')||!g('#ft')){msg.className='msg err';msg.textContent=U().fNeed;return}
   const body=`${g('#fn')}\n${g('#ft')}\n\n${g('#fm')}\n\n${g('#fd')}`;location.href=`mailto:${MAILS[fw.value]}?cc=${MAILS.cabinet}&subject=${encodeURIComponent(U().rdvTitle+' — '+g('#fn'))}&body=${encodeURIComponent(body)}`;msg.className='msg ok';msg.textContent=U().fOk})}
 /* ---------- Langue ---------- */
-function applyLang(){const u=U();document.documentElement.lang=lang==='zh'?'zh-Hans':lang;document.querySelectorAll('[data-t]').forEach(e=>{const v=u[e.dataset.t];if(v!=null)e.textContent=v});
+function applyLang(){const u=U();document.documentElement.lang=lang==='zh'?'zh-Hans':lang;document.querySelectorAll('[data-t]').forEach(e=>{const v=u[e.dataset.t];if(v!=null)e.textContent=v});document.querySelectorAll('[data-ta]').forEach(e=>e.setAttribute('aria-label',u[e.dataset.ta]));
  document.getElementById('menu').innerHTML=u.nav.map((n,i)=>`<li><a href="#/${ROUTES[i]}">${esc(n)}</a></li>`).join('')+`<li><a class="adv-link" href="#" id="advNav">${esc(u.adv)}</a></li>`;
  document.getElementById('advNav').addEventListener('click',e=>{e.preventDefault();openChat()});
- document.getElementById('foot').textContent=u.footer;document.getElementById('chatI').placeholder=u.advPlaceholder;
+ document.getElementById('foot').innerHTML=`<div><b>Cabinet Dentaire de la Doutre</b><br>9 bd Henri-Arnauld, 49100 Angers<br><a href="https://www.google.com/maps/search/?api=1&query=9+boulevard+Henri+Arnauld+49100+Angers" target="_blank" rel="noopener">${esc(u.map)}</a></div><div><b>${esc(u.footHours)}</b><br>${esc(u.days[0])} – ${esc(u.days[4])}<br><a href="tel:+33241203838">02 41 20 38 38</a></div><div><b>${esc(u.mail)}</b><br><a href="mailto:${MAILS.cabinet}">${MAILS.cabinet}</a><br><small>${esc(u.privacy)}</small></div>`;document.getElementById('chatI').placeholder=u.advPlaceholder;
  document.getElementById('chips').innerHTML=u.chips.map(c=>`<button type="button">${esc(c)}</button>`).join('');document.querySelectorAll('#chips button').forEach(b=>b.addEventListener('click',()=>ask(b.textContent)));
  const b=document.getElementById('chatB');b.innerHTML='';hello();render()}
 const sel=document.getElementById('lang');sel.innerHTML=Object.keys(LANGS).map(k=>`<option value="${k}">${LANGS[k].name}</option>`).join('');sel.value=lang;
@@ -1060,7 +1159,7 @@ function bul(t,who,tag){const d=document.createElement('div');d.className='bul '
 function hello(){bul(U().advHello,'bot',U().va)}
 function norm(s){return s.toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g,'')}
 function ask(q){if(!q.trim())return;bul(q,'moi');const n=' '+norm(q)+' ',K=L().kw,B=L().bot;let best=null,sc=0;
- const nn=' '+n.replace(/['’\-?!.,;:]/g,' ');for(const k in K){let s=0;K[k].forEach(w=>{const x=norm(w);if(lang==='zh'||/^[^a-z]/.test(x)?n.includes(x):nn.includes(' '+x))s+=w.length>4?2:1});if(k==='tarif')s*=1.6;if(s>sc){sc=s;best=k}}
+ const nn=' '+n.replace(/['’\-?!.,;:]/g,' ');for(const k in K){let s=0;K[k].forEach(w=>{const x=norm(w);if(lang==='zh'||/^[^a-z]/.test(x)?n.includes(x):nn.includes(' '+x))s+=w.length>4?2:1});if(k==='tarif'||k==='urgence'||k==='blanch'||k==='dispo'||k==='weekend')s*=1.6;if(s>sc){sc=s;best=k}}
  setTimeout(()=>bul(best?B[best]:B.unknown,'bot'),350)}
 function openChat(){chat.classList.add('on');document.getElementById('invite').classList.remove('on');document.getElementById('chatI').focus()}
 document.getElementById('consBtn').addEventListener('click',openChat);document.getElementById('chatX').addEventListener('click',()=>chat.classList.remove('on'));
@@ -1068,7 +1167,8 @@ document.getElementById('chatF').addEventListener('submit',e=>{e.preventDefault(
 document.getElementById('invX').addEventListener('click',()=>document.getElementById('invite').classList.remove('on'));
 let vu=false;try{vu=sessionStorage.getItem('doutre-inv')}catch(e){}
 if(!vu)setTimeout(()=>{if(!chat.classList.contains('on'))document.getElementById('invite').classList.add('on');try{sessionStorage.setItem('doutre-inv','1')}catch(e){}},4000);
-window.addEventListener('hashchange',render);
+window.addEventListener('hashchange',render);addEventListener('scroll',()=>document.body.classList.toggle('defile',scrollY>500),{passive:true});
+if(!matchMedia('(prefers-reduced-motion: reduce)').matches)addEventListener('scroll',()=>{const p=document.querySelector('.plaque');if(p)p.style.setProperty('--lux',(30+Math.min(60,scrollY/6))+'%')},{passive:true});
 applyLang();
 </script>
 <script id="nv-track">(function(){try{if(location.protocol!=='https:')return;if(/[?&]moi\b/.test(location.search)){localStorage.setItem('nv_moi','1');addEventListener('load',function(){var d=document.createElement('div');d.textContent='✓ Appareil reconnu : vos visites ne sont plus comptées';d.style.cssText='position:fixed;left:50%;bottom:24px;transform:translateX(-50%);z-index:2147483647;background:#1E3A2B;color:#fff;font:600 14px/1.3 system-ui,sans-serif;padding:12px 18px;border-radius:999px;box-shadow:0 8px 24px rgba(0,0,0,.25)';document.body.appendChild(d);setTimeout(function(){d.remove()},6000)})}if(localStorage.getItem('nv_moi')||navigator.webdriver)return;}catch(x){}
