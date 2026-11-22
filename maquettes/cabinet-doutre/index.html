@@ -26,6 +26,7 @@ html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
 body{margin:0;background:var(--chaux);color:var(--texte);font:400 17px/1.6 var(--corps);overflow-x:hidden}
 :lang(zh) body,body:lang(zh){font-family:var(--corps),"PingFang SC","Microsoft YaHei","Noto Sans SC",sans-serif}
 img{max-width:100%;display:block}
+a[href^="tel:"],.horaires,.statut,.mails{font-family:var(--titre)}
 a{color:var(--fauteuil-f);text-decoration-thickness:1px;text-underline-offset:3px}
 a:hover{text-decoration-color:var(--chene)}
 ::selection{background:var(--chene-c);color:var(--schiste)}
@@ -68,10 +69,10 @@ section{padding:clamp(64px,9vw,120px) 0}
 /* Héros : la plaque */
 .hero{position:relative;padding:0;background:var(--schiste)}
 .hero-photo{position:relative;height:min(78vh,720px);min-height:520px;overflow:hidden}
-.hero-photo img{width:100%;height:100%;object-fit:cover;object-position:50% 55%}
+.hero-photo>img{width:100%;height:100%;object-fit:cover;object-position:50% 55%}
 .hero-photo::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(43,36,40,.72) 0%,rgba(43,36,40,.35) 50%,rgba(43,36,40,.05) 100%)}
 .hero-in{position:absolute;inset:0;display:flex;align-items:center;z-index:2}
-.plaque{--lux:30%;background:linear-gradient(115deg,rgba(255,255,255,0) calc(var(--lux) - 18%),rgba(255,255,255,.55) var(--lux),rgba(255,255,255,0) calc(var(--lux) + 18%)),repeating-linear-gradient(90deg,rgba(255,255,255,.07) 0 1px,rgba(0,0,0,.035) 1px 2px,rgba(255,255,255,0) 2px 3px),linear-gradient(180deg,#d9d2c4,#bfb5a3 55%,#cbc2b1);color:#3a3128;border-radius:3px;padding:30px 34px 26px;width:min(520px,100%);box-shadow:0 1px 0 #fff inset,0 -1px 0 rgba(0,0,0,.08) inset,0 24px 50px -20px rgba(0,0,0,.55);position:relative}
+.plaque{--lux:30%;background:linear-gradient(115deg,rgba(255,255,255,0) calc(var(--lux) - 18%),rgba(255,255,255,.32) var(--lux),rgba(255,255,255,0) calc(var(--lux) + 18%)),repeating-linear-gradient(90deg,rgba(255,255,255,.07) 0 1px,rgba(0,0,0,.035) 1px 2px,rgba(255,255,255,0) 2px 3px),linear-gradient(180deg,#d9d2c4,#bfb5a3 55%,#cbc2b1);color:#3a3128;border-radius:3px;padding:30px 34px 26px;width:min(520px,100%);box-shadow:0 1px 0 #fff inset,0 -1px 0 rgba(0,0,0,.08) inset,0 24px 50px -20px rgba(0,0,0,.55);position:relative}
 .plaque::before,.plaque::after{content:"";position:absolute;width:9px;height:9px;border-radius:50%;background:radial-gradient(circle at 35% 35%,#fff,#b9b2ac 60%,#8d857f);top:12px;left:12px}
 .plaque::after{left:auto;right:12px}
 .plaque .vis2{position:absolute;bottom:12px;left:12px;width:9px;height:9px;border-radius:50%;background:radial-gradient(circle at 35% 35%,#fff,#b9b2ac 60%,#8d857f)}
@@ -84,11 +85,12 @@ section{padding:clamp(64px,9vw,120px) 0}
 .hero-copy h1{color:#fff;font-size:clamp(34px,4.6vw,58px);line-height:1.02;font-weight:600}
 .hero-copy p{font-size:18.5px;color:rgba(255,255,255,.92);margin-top:14px;text-shadow:0 1px 12px rgba(0,0,0,.3)}
 .hero-cta{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
+.visages{display:inline-flex;align-items:center;gap:12px;margin-top:20px;color:#fff;text-decoration:none;font:600 15px var(--titre)}.visages .vs{display:flex}.visages img{width:42px;height:42px;border-radius:50%;object-fit:cover;object-position:50% 18%;border:2px solid rgba(255,255,255,.85);margin-left:-10px}.visages img:first-child{margin-left:0}.visages:hover span:last-child{text-decoration:underline}
 .statut{background:var(--blanc);border-bottom:1px solid var(--trait)}
 .statut .wrap{display:flex;flex-wrap:wrap;gap:12px 34px;align-items:center;padding:18px 0;font-size:15.5px}
 .dot{display:inline-block;width:9px;height:9px;border-radius:50%;background:var(--schiste-3);margin-right:8px;vertical-align:1px}
 .dot.ok{background:var(--fauteuil);box-shadow:0 0 0 4px var(--fauteuil-c)}
-.statut b{font-family:var(--titre)}
+.statut b{font-family:var(--titre)}.statut .urg{color:#8a2f2a;font-weight:700}
 .statut .sep{color:var(--texte-2)}
 /* L'arcade (geste signature) */
 .arcade{background:var(--blanc)}
@@ -137,7 +139,7 @@ section{padding:clamp(64px,9vw,120px) 0}
 .prat:hover img{transform:scale(1.03)}
 .prat .cap{padding:14px 14px 16px}
 .prat .cap b{font:600 18px/1.2 var(--titre);display:block}
-.prat .cap span{font-size:14px;color:#cfc5c9}
+.prat .cap span{font-size:14px;color:#cfc5c9}.prat a{overflow-wrap:anywhere}
 .equipe-s{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:16px}
 .ass{display:flex;gap:12px;align-items:center;background:rgba(255,255,255,.06);border-radius:4px;padding:10px}
 .ass img{width:64px;height:64px;border-radius:50%;object-fit:cover;object-position:50% 20%}
@@ -165,7 +167,7 @@ form.demande .note{font-size:14px;color:var(--texte-2)}
 .champ input,.champ select,.champ textarea{font:inherit;font-size:16px;color:var(--texte);border:1.5px solid #cfc9c4;border-radius:4px;padding:11px 12px;background:#fff;width:100%}
 .champ input:focus,.champ select:focus,.champ textarea:focus{border-color:var(--fauteuil);outline:none;box-shadow:0 0 0 3px var(--fauteuil-c)}
 .champ textarea{min-height:84px;resize:vertical}
-.msg{font-size:14.5px;margin-top:12px;min-height:1.4em}.msg.err{color:#a3332e}.msg.ok{color:var(--fauteuil-f)}
+.msg{font-size:14.5px;margin-top:12px;min-height:1.4em}.copie{white-space:pre-wrap;background:var(--chaux);border:1px solid var(--trait);border-radius:4px;padding:10px;font:14px/1.5 var(--corps);color:var(--texte);margin:10px 0}#arcade{scroll-margin-top:80px}.msg.err{color:#a3332e}.msg.ok{color:var(--fauteuil-f)}
 /* Contact */
 .horaires{width:100%;border-collapse:collapse;margin-top:10px;font-size:16px}
 .horaires td{padding:9px 0;border-bottom:1px solid var(--trait)}
@@ -252,16 +254,17 @@ footer .np{font:500 13px var(--titre);color:#a99ea4;border-top:1px solid rgba(25
  .wrap{width:calc(100% - 32px)}
  .top .btn-main .t{display:none}.top .btn-main{padding:10px 11px}
  .brand{flex:1 1 0;min-width:0}.tools{gap:6px}.brand b{font-size:15px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.brand span{font-size:9.5px}.lang{padding:7px 26px 7px 8px;font-size:13px}
- nav.menu{margin:0 -16px;padding:0 16px}
+ nav.menu{margin:0 -16px;padding:0 16px}nav.menu a{padding:12px 11px}
  footer{padding-bottom:150px}
  .hero-photo{height:auto;min-height:0}
- .hero-photo img{position:absolute;inset:0}
+ .hero-photo>img{position:absolute;inset:0}
  .hero-in{position:relative;padding:28px 0 34px}
  .hero-photo::after{background:linear-gradient(180deg,rgba(43,36,40,.35),rgba(43,36,40,.78))}
  .plaque{padding:24px 22px 20px}
  .hero-cta .btn{flex:1 1 100%;justify-content:center}
  .praticiens{gap:10px}.prat .cap b{font-size:15.5px}.prat .cap span{font-size:13px}
  .equipe-s{grid-template-columns:1fr}
+ .praticiens.full{grid-template-columns:1fr}.praticiens.full .prat img{aspect-ratio:4/3}
  .appel-mob{display:flex;position:fixed;left:0;right:0;bottom:0;z-index:55;background:#fff;border-top:1px solid var(--trait);padding:8px 10px;gap:8px}
  .appel-mob .btn{flex:1;justify-content:center;padding:12px 8px;font-size:14.5px}
  .cons-btn{bottom:72px;right:12px;padding:6px 14px 6px 6px}.cons-btn .av{width:34px;height:34px}.cons-btn small{display:none}
@@ -1018,6 +1021,80 @@ zh:{ui:{heroTitle:"杜特尔板岩墙后的四位牙医。",heroLead:"三位牙�
 for(const l in P){const X=P[l],T=LANGS[l];Object.assign(T.ui,X.ui);Object.assign(T.bot,X.bot);for(const k in X.drop)T.kw[k]=T.kw[k].filter(w=>!X.drop[k].includes(w));Object.assign(T.kw,X.kw);}
 })();
 
+(function(){
+const P={
+fr:{ui:{urgHors:"Urgence en dehors des horaires : appelez le 15",fOk:"Votre messagerie devrait s'ouvrir avec la demande prête. Si rien ne s'ouvre, copiez le texte ci-dessous et envoyez-le à l'adresse indiquée, ou appelez le 02 41 20 38 38.",copy:"Copier le texte",copied:"Texte copié",
+ confTitle:"Vous êtes chirurgien-dentiste ?",confText:"Pour adresser un patient au Dr Libeau (endodontie), envoyez votre courrier d'adressage au cabinet, 9 boulevard Henri-Arnauld, 49100 Angers, ou par e-mail :",yourDentists:"Vos dentistes",title:"Cabinet Dentaire de la Doutre, Angers",
+ alts:["Le mur de schiste du couloir","Couloir aux portraits en noir et blanc, parquet clair","Salle de soin au fauteuil vert","Mur de pierre et luminaires à l'accueil","Le couloir du cabinet, le long du mur de schiste","Un soin en cours dans la salle bleue","Le couloir vers la salle d'attente","Couloir entre deux murs de pierre","Salle de soin équipée pour la chirurgie","Couloir lumineux aux portes vitrées"]},
+ sitRage:"Souvent une pulpite : la pulpe est enflammée. Appelez le secrétariat pour un rendez-vous. En dehors des horaires, appelez le 15.",
+ bot:{weekend:"Le cabinet est fermé le samedi et le dimanche. Le secrétariat répond du lundi au vendredi, au 02 41 20 38 38. Pour une urgence le week-end, appelez le 15.",
+  medical:"C'est une question médicale : je ne peux pas y répondre. Appelez le secrétariat au 02 41 20 38 38 avant votre rendez-vous, et signalez-le au praticien.",
+  franco:"Dr Thomas Franco : chirurgien-dentiste, diplômé de la Faculté d'Odontologie de Nantes et d'un diplôme universitaire d'implantologie. Rendez-vous au 02 41 20 38 38 ou à docteur.t.franco@hotmail.fr.",
+  minard:"Dr François Minard : chirurgien-dentiste, diplômé de la Faculté de Chirurgie dentaire de Nantes. Rendez-vous au 02 41 20 38 38 ou à drfminard@gmail.com.",
+  wicks:"Dr Matthieu Wicks : chirurgien-dentiste, diplômé de la Faculté de Chirurgie dentaire de Nantes. Rendez-vous au 02 41 20 38 38 ou à pro.wicks.matthieu@gmail.com."},
+ kw:{medical:["enceinte","grossesse","allaite","allergi","anticoagul","diabète","diabete","traitement médical","médicament","medicament","enfant","bébé","bebe"],franco:["franco"],minard:["minard"],wicks:["wicks"],urgence:["gonfl","fièvre","fievre","joue","dormir","abcès","abces","nuit","très mal","tres mal","insupportable"],adresse:["adresse ","où se","où est","où êtes","venir","situé","situe","plan","accès","acces","quartier"]},
+ add:{libeau:["adresser","adressage","adressé au","adressé par","adressée au","adressée par"]},drop:{tarif:["rembours","mutuelle"],equipe:["franco","minard","wicks"]}},
+en:{ui:{urgHors:"Emergency outside opening hours: call 15",fOk:"Your email app should open with the request ready. If nothing opens, copy the text below and send it to the address shown, or call +33 2 41 20 38 38.",copy:"Copy the text",copied:"Text copied",
+ confTitle:"Are you a dentist?",confText:"To refer a patient to Dr Libeau (endodontics), send your referral letter to the practice, 9 boulevard Henri-Arnauld, 49100 Angers, or by email:",yourDentists:"Your dentists",title:"Cabinet Dentaire de la Doutre, Angers",
+ alts:["The schist wall in the corridor","Corridor with black-and-white portraits, pale wooden floor","Treatment room with the green chair","Stone wall and lights at reception","The practice corridor along the schist wall","A treatment under way in the blue room","The corridor to the waiting room","Corridor between two stone walls","Treatment room equipped for surgery","Bright corridor with glass doors"]},
+ sitRage:"Often pulpitis: the pulp is inflamed. Call the front desk for an appointment. Outside opening hours, call 15.",
+ bot:{weekend:"The practice is closed on Saturday and Sunday. The front desk answers Monday to Friday on +33 2 41 20 38 38. For a weekend emergency, call 15.",
+  medical:"That is a medical question: I can't answer it. Call the front desk on +33 2 41 20 38 38 before your appointment, and tell the dentist.",
+  franco:"Dr Thomas Franco: dental surgeon, graduate of the Nantes Faculty of Dentistry, with a university diploma in implantology. Appointments on +33 2 41 20 38 38 or at docteur.t.franco@hotmail.fr.",
+  minard:"Dr François Minard: dental surgeon, graduate of the Nantes Faculty of Dental Surgery. Appointments on +33 2 41 20 38 38 or at drfminard@gmail.com.",
+  wicks:"Dr Matthieu Wicks: dental surgeon, graduate of the Nantes Faculty of Dental Surgery. Appointments on +33 2 41 20 38 38 or at pro.wicks.matthieu@gmail.com."},
+ kw:{medical:["pregnan","breastfeed","allerg","anticoagul","blood thinner","diabet","medication","child","children","baby"],franco:["franco"],minard:["minard"],wicks:["wicks"],urgence:["swollen","swelling","fever","cheek","sleep","abscess","night","really hurts","unbearable"]},
+ add:{libeau:["referred","refer"]},drop:{tarif:["insurance","refund"],equipe:["franco","minard","wicks"]}},
+es:{ui:{urgHors:"Urgencia fuera de horario: llame al 15",fOk:"Su correo debería abrirse con la solicitud lista. Si no se abre, copie el texto de abajo y envíelo a la dirección indicada, o llame al +33 2 41 20 38 38.",copy:"Copiar el texto",copied:"Texto copiado",
+ confTitle:"¿Es usted dentista?",confText:"Para derivar a un paciente al Dr. Libeau (endodoncia), envíe su carta de derivación a la clínica, 9 boulevard Henri-Arnauld, 49100 Angers, o por correo electrónico:",yourDentists:"Sus dentistas",title:"Cabinet Dentaire de la Doutre, Angers",
+ alts:["El muro de pizarra del pasillo","Pasillo con retratos en blanco y negro, suelo de madera clara","Gabinete con el sillón verde","Muro de piedra y lámparas en la recepción","El pasillo de la clínica junto al muro de pizarra","Un tratamiento en curso en la sala azul","El pasillo hacia la sala de espera","Pasillo entre dos muros de piedra","Gabinete equipado para cirugía","Pasillo luminoso con puertas de cristal"]},
+ sitRage:"A menudo es una pulpitis: la pulpa está inflamada. Llame a la secretaría para pedir cita. Fuera de horario, llame al 15.",
+ bot:{weekend:"La clínica cierra el sábado y el domingo. La secretaría atiende de lunes a viernes en el +33 2 41 20 38 38. Para una urgencia en fin de semana, llame al 15.",
+  medical:"Es una pregunta médica: no puedo responderla. Llame a la secretaría al +33 2 41 20 38 38 antes de su cita y coménteselo al dentista.",
+  franco:"Dr. Thomas Franco: cirujano dentista, titulado por la Facultad de Odontología de Nantes, con diploma universitario de implantología. Citas en el +33 2 41 20 38 38 o en docteur.t.franco@hotmail.fr.",
+  minard:"Dr. François Minard: cirujano dentista, titulado por la Facultad de Cirugía Dental de Nantes. Citas en el +33 2 41 20 38 38 o en drfminard@gmail.com.",
+  wicks:"Dr. Matthieu Wicks: cirujano dentista, titulado por la Facultad de Cirugía Dental de Nantes. Citas en el +33 2 41 20 38 38 o en pro.wicks.matthieu@gmail.com."},
+ kw:{medical:["embaraz","lactancia","alergi","anticoagul","diabet","medicament","niño","nino","niña","bebé","bebe"],franco:["franco"],minard:["minard"],wicks:["wicks"],urgence:["hinch","fiebre","mejilla","dormir","absceso","noche","mucho dolor","insoportable"]},
+ add:{libeau:["derivado","derivada","derivar"]},drop:{tarif:["seguro","reembolso"],equipe:["franco","minard","wicks"]}},
+de:{ui:{urgHors:"Notfall außerhalb der Zeiten: 15 anrufen",fOk:"Ihr E-Mail-Programm sollte sich mit der fertigen Anfrage öffnen. Falls nicht, kopieren Sie den Text unten und senden Sie ihn an die angegebene Adresse, oder rufen Sie +33 2 41 20 38 38 an.",copy:"Text kopieren",copied:"Text kopiert",
+ confTitle:"Sie sind Zahnarzt?",confText:"Um einen Patienten an Dr. Libeau (Endodontie) zu überweisen, senden Sie Ihre Überweisung an die Praxis, 9 boulevard Henri-Arnauld, 49100 Angers, oder per E-Mail:",yourDentists:"Ihre Zahnärzte",title:"Cabinet Dentaire de la Doutre, Angers",
+ alts:["Die Schiefermauer im Flur","Flur mit Schwarz-Weiß-Porträts, heller Holzboden","Behandlungsraum mit dem grünen Stuhl","Steinmauer und Leuchten am Empfang","Der Praxisflur entlang der Schiefermauer","Eine Behandlung im blauen Raum","Der Flur zum Wartezimmer","Flur zwischen zwei Steinmauern","Für Chirurgie ausgestatteter Behandlungsraum","Heller Flur mit Glastüren"]},
+ sitRage:"Oft eine Pulpitis: Der Zahnnerv ist entzündet. Rufen Sie den Empfang für einen Termin an. Außerhalb der Zeiten wählen Sie die 15.",
+ bot:{weekend:"Die Praxis ist samstags und sonntags geschlossen. Der Empfang ist Montag bis Freitag unter +33 2 41 20 38 38 erreichbar. Bei einem Notfall am Wochenende wählen Sie die 15.",
+  medical:"Das ist eine medizinische Frage, die ich nicht beantworten kann. Rufen Sie vor Ihrem Termin den Empfang unter +33 2 41 20 38 38 an und sagen Sie es dem Zahnarzt.",
+  franco:"Dr. Thomas Franco: Zahnarzt, Absolvent der Zahnmedizinischen Fakultät Nantes, mit Universitätsdiplom in Implantologie. Termine unter +33 2 41 20 38 38 oder an docteur.t.franco@hotmail.fr.",
+  minard:"Dr. François Minard: Zahnarzt, Absolvent der Fakultät für Zahnchirurgie Nantes. Termine unter +33 2 41 20 38 38 oder an drfminard@gmail.com.",
+  wicks:"Dr. Matthieu Wicks: Zahnarzt, Absolvent der Fakultät für Zahnchirurgie Nantes. Termine unter +33 2 41 20 38 38 oder an pro.wicks.matthieu@gmail.com."},
+ kw:{medical:["schwanger","stillen","allergi","blutverdünn","gerinnung","diabet","medikament","kind","baby"],franco:["franco"],minard:["minard"],wicks:["wicks"],urgence:["geschwollen","schwellung","fieber","wange","schlafen","abszess","nacht","unerträglich","sehr weh"]},
+ add:{libeau:["überwiesen","uberwiesen"]},drop:{tarif:["versicherung","erstatt"],equipe:["franco","minard","wicks"]}},
+it:{ui:{urgHors:"Urgenza fuori orario: chiami il 15",fOk:"La sua posta dovrebbe aprirsi con la richiesta pronta. Se non si apre nulla, copi il testo qui sotto e lo invii all'indirizzo indicato, oppure chiami il +33 2 41 20 38 38.",copy:"Copia il testo",copied:"Testo copiato",
+ confTitle:"È un dentista?",confText:"Per inviare un paziente al Dr. Libeau (endodonzia), spedisca la sua lettera d'invio allo studio, 9 boulevard Henri-Arnauld, 49100 Angers, oppure via e-mail:",yourDentists:"I suoi dentisti",title:"Cabinet Dentaire de la Doutre, Angers",
+ alts:["Il muro di scisto del corridoio","Corridoio con ritratti in bianco e nero, parquet chiaro","Sala di cura con la poltrona verde","Muro di pietra e lampade all'accoglienza","Il corridoio dello studio lungo il muro di scisto","Una cura in corso nella sala blu","Il corridoio verso la sala d'attesa","Corridoio tra due muri di pietra","Sala di cura attrezzata per la chirurgia","Corridoio luminoso con porte a vetri"]},
+ sitRage:"Spesso è una pulpite: la polpa è infiammata. Chiami la segreteria per un appuntamento. Fuori orario, chiami il 15.",
+ bot:{weekend:"Lo studio è chiuso il sabato e la domenica. La segreteria risponde dal lunedì al venerdì al +33 2 41 20 38 38. Per un'urgenza nel fine settimana, chiami il 15.",
+  medical:"È una domanda medica: non posso rispondere. Chiami la segreteria al +33 2 41 20 38 38 prima dell'appuntamento e lo segnali al dentista.",
+  franco:"Dr. Thomas Franco: medico dentista, laureato alla Facoltà di Odontoiatria di Nantes, con diploma universitario di implantologia. Appuntamenti al +33 2 41 20 38 38 o a docteur.t.franco@hotmail.fr.",
+  minard:"Dr. François Minard: medico dentista, laureato alla Facoltà di Chirurgia dentale di Nantes. Appuntamenti al +33 2 41 20 38 38 o a drfminard@gmail.com.",
+  wicks:"Dr. Matthieu Wicks: medico dentista, laureato alla Facoltà di Chirurgia dentale di Nantes. Appuntamenti al +33 2 41 20 38 38 o a pro.wicks.matthieu@gmail.com."},
+ kw:{medical:["incinta","gravidanza","allatt","allergi","anticoagul","diabet","farmac","bambin","neonat"],franco:["franco"],minard:["minard"],wicks:["wicks"],urgence:["gonfi","febbre","guancia","dormire","ascesso","notte","molto male","insopportabile"]},
+ add:{libeau:["inviato","inviata"]},drop:{tarif:["assicura","rimbors"],equipe:["franco","minard","wicks"]}},
+zh:{ui:{urgHors:"非工作时间急诊：请拨打 15",fOk:"您的邮箱应已打开并备好申请。如果没有打开，请复制下面的文字发送到所示地址，或致电 +33 2 41 20 38 38。",copy:"复制文字",copied:"已复制",
+ confTitle:"您是牙科医生？",confText:"如需将病人转诊给 Libeau 医生（根管治疗），请将转诊信寄到诊所：9 boulevard Henri-Arnauld, 49100 Angers，或发送电子邮件至：",yourDentists:"您的牙医",title:"Cabinet Dentaire de la Doutre, Angers",
+ alts:["走廊里的板岩墙","挂着黑白肖像的走廊，浅色木地板","配有绿色牙椅的诊室","前台的石墙和灯具","沿着板岩墙的诊所走廊","蓝色诊室里正在进行治疗","通往候诊室的走廊","两面石墙之间的走廊","配备手术设备的诊室","明亮的走廊和玻璃门"]},
+ sitRage:"常见原因是牙髓炎：牙髓发炎了。请致电前台预约。非工作时间请拨打 15。",
+ bot:{weekend:"诊所周六和周日休息。前台周一至周五接听电话：+33 2 41 20 38 38。周末急诊请拨打 15。",
+  medical:"这是医疗问题，我无法回答。请在就诊前致电前台 +33 2 41 20 38 38，并告知医生。",
+  franco:"Thomas Franco 医生：牙科医生，毕业于南特牙医学院，拥有种植学大学文凭。预约电话 +33 2 41 20 38 38，邮箱 docteur.t.franco@hotmail.fr。",
+  minard:"François Minard 医生：牙科医生，毕业于南特牙科外科学院。预约电话 +33 2 41 20 38 38，邮箱 drfminard@gmail.com。",
+  wicks:"Matthieu Wicks 医生：牙科医生，毕业于南特牙科外科学院。预约电话 +33 2 41 20 38 38，邮箱 pro.wicks.matthieu@gmail.com。"},
+ kw:{medical:["怀孕","孕","哺乳","过敏","抗凝","糖尿病","药","孩子","儿童","宝宝"],franco:["franco"],minard:["minard"],wicks:["wicks"],urgence:["肿","发烧","睡不着","脓","晚上","受不了"]},
+ add:{libeau:["转诊"]},drop:{tarif:["医保","报销"],equipe:["franco","minard","wicks"]}}
+};
+for(const l in P){const X=P[l],T=LANGS[l];Object.assign(T.ui,X.ui);Object.assign(T.bot,X.bot);T.sit[0].t=X.sitRage;for(const k in X.drop)T.kw[k]=T.kw[k].filter(w=>!X.drop[k].includes(w));for(const k in X.add)T.kw[k]=T.kw[k].concat(X.add[k]);Object.assign(T.kw,X.kw);}
+const S={fr:["rembours","mutuelle","carte vitale","conventionn","tiers payant","sécu","secu"],en:["refund","insurance","reimburs","covered","health card"],es:["reembols","seguro","mutua","cubre"],de:["erstatt","versicher","krankenkasse"],it:["rimbors","assicura","mutua","tessera sanitaria"],zh:["报销","医保","保险"]};
+for(const l in S){LANGS[l].bot.secu=LANGS[l].bot.unknown;LANGS[l].kw.secu=S[l];}
+})();
+
 
 const img=id=>'img/'+id+'.jpg';
 const MAILS={cabinet:"cabinetdentairedeladoutre@gmail.com",franco:"docteur.t.franco@hotmail.fr",libeau:"dr.libeau@gmail.com",wicks:"pro.wicks.matthieu@gmail.com",minard:"drfminard@gmail.com"};
@@ -1040,14 +1117,14 @@ function whoChip(k){const t=L().team[k];return `<a class="who" href="#/equipe"><
 function pAccueil(){const u=U(),e=etat();return `
 <section class="hero" aria-label="${esc(u.heroTitle)}"><div class="hero-photo"><img src="${img('lieu4')}" alt="${esc(L().alt.hero)}" fetchpriority="high">
 <div class="hero-in"><div class="wrap"><div class="plaque"><i class="vis2"></i><i class="vis3"></i><span class="names">${["Thomas Franco","Théodore Libeau","François Minard","Matthieu Wicks"].map((n,i)=>`<span>Dr ${n}<em>${esc(u.rolesPlate[i])}</em></span>`).join("")}</span><div class="role">${esc(u.plateRole)}</div><div class="meta">${esc(u.plateAddr)}<br>${esc(u.plateHours)}</div></div>
-<div class="hero-copy"><h1>${esc(u.heroTitle)}</h1><p>${esc(u.heroLead)}</p><div class="hero-cta"><a class="btn btn-main" href="tel:+33241203838">${TEL}${esc(u.call)}</a><a class="btn btn-light" href="#arcade" onclick="event.preventDefault();document.getElementById('arcade').scrollIntoView({behavior:'smooth'})">${esc(u.where)}</a></div></div></div></div></div></section>
-<div class="statut"><div class="wrap"><span><i class="dot ${e.ok?'ok':''}"></i><b>${esc(e.t)}</b></span><span class="sep">9 bd Henri-Arnauld, Angers</span><a href="#/rendez-vous">${esc(u.rdv)} →</a></div></div>
+<div class="hero-copy"><h1>${esc(u.heroTitle)}</h1><p>${esc(u.heroLead)}</p><div class="hero-cta"><a class="btn btn-main" href="tel:+33241203838">${TEL}${esc(u.call)}</a><a class="btn btn-light" href="#arcade" onclick="event.preventDefault();document.getElementById('arcade').scrollIntoView({behavior:'smooth'})">${esc(u.where)}</a></div><a class="visages" href="#/equipe"><span class="vs">${PRATS.map(k=>`<img src="${img(k)}" alt="">`).join('')}</span><span>${esc(u.yourDentists)} →</span></a></div></div></div></div></section>
+<div class="statut"><div class="wrap"><span><i class="dot ${e.ok?'ok':''}"></i><b>${esc(e.t)}</b></span>${e.ok?'':`<span class="urg">${esc(u.urgHors)}</span>`}<span class="sep">9 bd Henri-Arnauld, Angers</span><a href="#/rendez-vous">${esc(u.rdv)} →</a></div></div>
 <section class="arcade" id="arcade"><div class="wrap"><h2>${esc(u.archTitle)}</h2><p class="lead" style="margin-top:14px">${esc(u.archLead)}</p>
 <div class="arc-grid"><div class="arc-col"><div class="sits" role="group" aria-label="${esc(u.archPick)}">${L().sit.map(s=>`<button class="sit" type="button" aria-pressed="false" data-s="${s.k}">${esc(s.l)}</button>`).join('')}</div><div class="verdict" id="verdict" aria-live="polite"><p>${esc(u.verdictEmpty)}</p></div></div>
 <div class="arc-stage"><svg class="arc-svg" id="arcSvg" viewBox="40 10 720 500" role="img" aria-label="${esc(u.archTitle)}"></svg></div></div></div></section>
 <section><div class="wrap"><h2>${esc(u.soinsTitle)}</h2><p class="lead" style="margin-top:14px">${esc(u.soinsLead)}</p>${registre()}</div></section>
 ${blocEquipe(true)}
-<section><div class="wrap"><h2>${esc(u.placeTitle)}</h2><p class="lead" style="margin-top:14px">${esc(u.placeLead)}</p><div class="bande">${[3,5,1,2,7,8,9].map(i=>`<img loading="lazy" src="${img('lieu'+i)}" alt="${esc(L().alt.lieu)}">`).join('')}</div><div class="suite"><a class="btn btn-line" href="#/cabinet">${esc(u.seePlace)} ${ARW}</a></div></div></section>
+<section><div class="wrap"><h2>${esc(u.placeTitle)}</h2><p class="lead" style="margin-top:14px">${esc(u.placeLead)}</p><div class="bande">${[3,5,1,2,7,8,9].map(i=>`<img loading="lazy" src="${img('lieu'+i)}" alt="${esc(u.alts[i])}">`).join('')}</div><div class="suite"><a class="btn btn-line" href="#/cabinet">${esc(u.seePlace)} ${ARW}</a></div></div></section>
 ${blocRdv()}`}
 function registre(){return `<div class="registre">${L().order.map(k=>{const s=L().soins[k];return `<a class="reg" href="#/soins/${k}"><div><h3>${esc(s.n)}</h3><small>${esc(s.s)}</small></div><p>${esc(s.lead)}</p><span class="fl" aria-hidden="true">${ARW}</span></a>`}).join('')}</div>`}
 function blocEquipe(court){const u=U(),T=L().team;return `<section class="mur"><div class="wrap"><h2>${esc(u.teamTitle)}</h2><p class="lead" style="margin-top:14px">${esc(u.teamLead)}</p>
@@ -1055,12 +1132,12 @@ function blocEquipe(court){const u=U(),T=L().team;return `<section class="mur"><
 ${court?`<div class="suite"><a class="btn btn-light" href="#/equipe">${esc(u.seeTeam)} ${ARW}</a></div>`:''}</div></section>`}
 function pEquipe(){const u=U(),T=L().team;return `<section class="mur"><div class="wrap"><h1 style="color:#fff;font-size:clamp(38px,5.4vw,68px)">${esc(u.teamTitle)}</h1><p class="lead" style="margin-top:14px">${esc(u.teamLead)}</p>
 <h2 style="font-size:24px;margin-top:44px">${esc(u.praticiens)}</h2>
-<div class="praticiens">${PRATS.map(k=>`<article class="prat"><img loading="lazy" src="${img(k)}" alt="${esc(T[k].n)}"><div class="cap"><b>${esc(T[k].n)}</b><span>${esc(T[k].r)}</span><ul style="margin:10px 0 0;padding-left:18px;font-size:14px;color:#e3dbdf">${T[k].d.map(d=>`<li>${esc(d)}</li>`).join('')}</ul><p style="font-size:14px;margin:10px 0 0">${k==='libeau'?esc(u.byReferral)+'<br>':''}<a style="color:#fff" href="mailto:${MAILS[k]}">${MAILS[k]}</a></p></div></article>`).join('')}</div>
+<div class="praticiens full">${PRATS.map(k=>`<article class="prat"><img loading="lazy" src="${img(k)}" alt="${esc(T[k].n)}"><div class="cap"><b>${esc(T[k].n)}</b><span>${esc(T[k].r)}</span><ul style="margin:10px 0 0;padding-left:18px;font-size:14px;color:#e3dbdf">${T[k].d.map(d=>`<li>${esc(d)}</li>`).join('')}</ul><p style="font-size:14px;margin:10px 0 0">${k==='libeau'?esc(u.byReferral)+'<br>':''}<a style="color:#fff" href="mailto:${MAILS[k]}">${MAILS[k]}</a></p></div></article>`).join('')}</div>
 <h2 style="font-size:24px;margin-top:44px">${esc(u.assist)}</h2>
 <div class="equipe-s">${ASS.map(k=>`<div class="ass"><img loading="lazy" src="${img(k)}" alt="${esc(T[k].n)}"><div><b>${esc(T[k].n)}</b><span>${esc(T[k].r)}</span></div></div>`).join('')}</div></div></section>${blocRdv()}`}
 function pCabinet(){const u=U();return `<section><div class="wrap"><h1 style="font-size:clamp(38px,5.4vw,68px)">${esc(u.placeTitle)}</h1><p class="lead" style="margin-top:14px">${esc(u.placeLead)}</p>
-<div class="galerie">${[0,4,5,1,2,3,6,7,8,9].map((i,j)=>`<figure class="g${j+1}"><img loading="lazy" src="${img('lieu'+i)}" alt="${esc(L().alt.lieu)}"></figure>`).join('')}</div></div></section>${blocRdv()}`}
-function blocRdv(){const u=U();return `<section style="background:#fff;border-top:1px solid var(--trait)"><div class="wrap"><h2>${esc(u.rdvTitle)}</h2><p class="lead" style="margin-top:14px">${esc(u.rdvLead)}</p>
+<div class="galerie">${[0,4,5,1,2,3,6,7,8,9].map((i,j)=>`<figure class="g${j+1}"><img loading="lazy" src="${img('lieu'+i)}" alt="${esc(u.alts[i])}"></figure>`).join('')}</div></div></section>${blocRdv()}`}
+function blocRdv(page){const u=U();return `<section style="background:#fff;border-top:1px solid var(--trait)"><div class="wrap">${page?`<h1 style="font-size:clamp(38px,5.4vw,68px)">${esc(u.rdvTitle)}</h1>`:`<h2>${esc(u.rdvTitle)}</h2>`}<p class="lead" style="margin-top:14px">${esc(u.rdvLead)}</p>
 <div class="rdv-grid"><div><div class="regle"><span class="n"></span><div>${esc(u.rdvRule1)}</div></div><div class="regle"><span class="n"></span><div>${esc(u.rdvRule2)}</div></div>
 <ul class="mails"><li><b>${esc(u.phone)}</b><a href="tel:+33241203838">02 41 20 38 38</a></li><li><b>${esc(u.mail)}</b><a href="mailto:${MAILS.cabinet}">${MAILS.cabinet}</a></li>${["franco","minard","wicks"].map(k=>`<li><b>${esc(L().team[k].n)}</b><a href="mailto:${MAILS[k]}">${MAILS[k]}</a></li>`).join('')}</ul></div>
 <form class="demande" novalidate><h3>${esc(u.formTitle)}</h3><p class="note">${esc(u.formNote)}</p>
@@ -1076,7 +1153,8 @@ function pContact(){const u=U(),d=paris().d;return `<section><div class="wrap"><
 <div><span class="k">${esc(u.mail)}</span><span class="v" style="font-size:16px;word-break:break-all"><a href="mailto:${MAILS.cabinet}">${MAILS.cabinet}</a></span></div></div>
 <div class="rdv-grid"><div><h2 style="font-size:28px">${esc(u.hours)}</h2><table class="horaires">${u.days.map((n,i)=>`<tr class="${i===d?'auj':''}"><td>${esc(n)}</td><td>${plage(i)}</td></tr>`).join('')}</table></div>
 <div><h2 style="font-size:28px">${esc(u.rdvTitle)}</h2><div class="regle"><span class="n"></span><div>${esc(u.rdvRule1)}</div></div><div class="regle"><span class="n"></span><div>${esc(u.rdvRule2)}</div></div>
-<ul class="mails">${PRATS.map(k=>`<li><b>${esc(L().team[k].n)}</b><a href="mailto:${MAILS[k]}">${MAILS[k]}</a></li>`).join('')}</ul></div></div></div></section>`}
+<ul class="mails">${PRATS.map(k=>`<li><b>${esc(L().team[k].n)}</b><a href="mailto:${MAILS[k]}">${MAILS[k]}</a></li>`).join('')}</ul></div></div></div></section>${conf()}`}
+function conf(){const u=U();return `<section style="padding:48px 0;background:var(--chene-c)"><div class="wrap"><h2 style="font-size:26px">${esc(u.confTitle)}</h2><p style="margin-top:10px">${esc(u.confText)} <a href="mailto:${MAILS.libeau}">${MAILS.libeau}</a></p></div></section>`}
 function pSoins(){const u=U();return `<section><div class="wrap"><h1 style="font-size:clamp(38px,5.4vw,68px)">${esc(u.soinsTitle)}</h1><p class="lead" style="margin-top:14px">${esc(u.soinsLead)}</p>${registre()}</div></section>`}
 function pSoin(k){const u=U(),s=L().soins[k];if(!s)return pSoins();const i=L().order.indexOf(k),nx=L().order[(i+1)%6];const photo=/^lieu/.test(s.img);
 return `<div class="soin-head"><div class="wrap"><div class="fil"><a href="#/soins">${esc(u.nav[1])}</a> / ${esc(s.n)}</div><h1>${esc(s.n)}</h1><p class="lead">${esc(s.lead)}</p>
@@ -1132,7 +1210,7 @@ function pickTooth(n){calme();const u=U(),q=Math.floor(n/10),i=n%10;const front=
  if(innerWidth<821)document.getElementById('verdict').scrollIntoView({behavior:'smooth',block:'nearest'})}
 /* ---------- Routeur ---------- */
 function render(){const h=(location.hash||'#/accueil').slice(2).split('/');let r=h[0]||'accueil';if(!ROUTES.includes(r)&&r!=='soins')r='accueil';const m=document.getElementById('contenu');
- let html=r==='accueil'?pAccueil():r==='soins'?(h[1]?pSoin(h[1]):pSoins()):r==='equipe'?pEquipe():r==='cabinet'?pCabinet():r==='rendez-vous'?blocRdv():r==='contact'?pContact():pAccueil();
+ let html=r==='accueil'?pAccueil():r==='soins'?(h[1]?pSoin(h[1]):pSoins()):r==='equipe'?pEquipe():r==='cabinet'?pCabinet():r==='rendez-vous'?blocRdv(1)+conf():r==='contact'?pContact():pAccueil();
  if(r==='rendez-vous')html=`<div style="padding-top:10px">${html}</div>`;
  m.innerHTML=`<div class="page on">${html}</div>`;
  document.querySelectorAll('#menu a').forEach((a,i)=>a.setAttribute('aria-current',ROUTES[i]===r?'page':'false'));
@@ -1143,9 +1221,9 @@ function bindForm(){const f=document.querySelector('form.demande');if(!f)return;
 const fw=f.querySelector('#fw');fw.addEventListener('change',()=>{msg.className='msg';msg.textContent=fw.value==='libeau'?U().fLibeau:''});
  f.addEventListener('submit',e=>{e.preventDefault();const g=id=>f.querySelector(id).value.trim();if(fw.value==='libeau'){msg.className='msg err';msg.textContent=U().fLibeau;return}
   if(!g('#fn')||!g('#ft')){msg.className='msg err';msg.textContent=U().fNeed;return}
-  const body=`${g('#fn')}\n${g('#ft')}\n\n${g('#fm')}\n\n${g('#fd')}`;location.href=`mailto:${MAILS[fw.value]}?cc=${MAILS.cabinet}&subject=${encodeURIComponent(U().rdvTitle+' — '+g('#fn'))}&body=${encodeURIComponent(body)}`;msg.className='msg ok';msg.textContent=U().fOk})}
+  const body=`${g('#fn')}\n${g('#ft')}\n\n${g('#fm')}\n\n${g('#fd')}`;location.href=`mailto:${MAILS[fw.value]}?cc=${MAILS.cabinet}&subject=${encodeURIComponent(U().rdvTitle+' — '+g('#fn'))}&body=${encodeURIComponent(body)}`;msg.className='msg ok';msg.innerHTML=`${esc(U().fOk)}<pre class="copie">${esc(MAILS[fw.value]+'\n\n'+body)}</pre><button type="button" class="btn btn-line cp">${esc(U().copy)}</button>`;msg.querySelector('.cp').addEventListener('click',e=>{try{navigator.clipboard.writeText(MAILS[fw.value]+'\n\n'+body);e.target.textContent=U().copied}catch(x){}})})}
 /* ---------- Langue ---------- */
-function applyLang(){const u=U();document.documentElement.lang=lang==='zh'?'zh-Hans':lang;document.querySelectorAll('[data-t]').forEach(e=>{const v=u[e.dataset.t];if(v!=null)e.textContent=v});document.querySelectorAll('[data-ta]').forEach(e=>e.setAttribute('aria-label',u[e.dataset.ta]));
+function applyLang(){const u=U();document.title=u.title+' — Proposition Neovera Studio';document.documentElement.lang=lang==='zh'?'zh-Hans':lang;document.querySelectorAll('[data-t]').forEach(e=>{const v=u[e.dataset.t];if(v!=null)e.textContent=v});document.querySelectorAll('[data-ta]').forEach(e=>e.setAttribute('aria-label',u[e.dataset.ta]));
  document.getElementById('menu').innerHTML=u.nav.map((n,i)=>`<li><a href="#/${ROUTES[i]}">${esc(n)}</a></li>`).join('')+`<li><a class="adv-link" href="#" id="advNav">${esc(u.adv)}</a></li>`;
  document.getElementById('advNav').addEventListener('click',e=>{e.preventDefault();openChat()});
  document.getElementById('foot').innerHTML=`<div><b>Cabinet Dentaire de la Doutre</b><br>9 bd Henri-Arnauld, 49100 Angers<br><a href="https://www.google.com/maps/search/?api=1&query=9+boulevard+Henri+Arnauld+49100+Angers" target="_blank" rel="noopener">${esc(u.map)}</a></div><div><b>${esc(u.footHours)}</b><br>${esc(u.days[0])} – ${esc(u.days[4])}<br><a href="tel:+33241203838">02 41 20 38 38</a></div><div><b>${esc(u.mail)}</b><br><a href="mailto:${MAILS.cabinet}">${MAILS.cabinet}</a><br><small>${esc(u.privacy)}</small></div>`;document.getElementById('chatI').placeholder=u.advPlaceholder;
@@ -1159,7 +1237,7 @@ function bul(t,who,tag){const d=document.createElement('div');d.className='bul '
 function hello(){bul(U().advHello,'bot',U().va)}
 function norm(s){return s.toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g,'')}
 function ask(q){if(!q.trim())return;bul(q,'moi');const n=' '+norm(q)+' ',K=L().kw,B=L().bot;let best=null,sc=0;
- const nn=' '+n.replace(/['’\-?!.,;:]/g,' ');for(const k in K){let s=0;K[k].forEach(w=>{const x=norm(w);if(lang==='zh'||/^[^a-z]/.test(x)?n.includes(x):nn.includes(' '+x))s+=w.length>4?2:1});if(k==='tarif'||k==='urgence'||k==='blanch'||k==='dispo'||k==='weekend')s*=1.6;if(s>sc){sc=s;best=k}}
+ const nn=' '+n.replace(/['’\-?!.,;:]/g,' ');for(const k in K){let s=0;[...new Set(K[k].map(norm))].forEach(x=>{const w=x;if(lang==='zh'||/^[^a-z]/.test(x)?n.includes(x):nn.includes(' '+x))s+=w.length>4?2:1});if(['tarif','urgence','blanch','dispo','weekend','libeau','medical','franco','minard','wicks','secu'].includes(k))s*=1.6;if(k==='medical'||k==='secu')s*=1.5;if(s>sc){sc=s;best=k}}
  setTimeout(()=>bul(best?B[best]:B.unknown,'bot'),350)}
 function openChat(){chat.classList.add('on');document.getElementById('invite').classList.remove('on');document.getElementById('chatI').focus()}
 document.getElementById('consBtn').addEventListener('click',openChat);document.getElementById('chatX').addEventListener('click',()=>chat.classList.remove('on'));
